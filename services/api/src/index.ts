@@ -1,4 +1,5 @@
 import { createClerkClient } from '@clerk/backend'
+import { reverificationErrorResponse } from '@clerk/shared/authorization-errors'
 import { AwsClient } from 'aws4fetch'
 
 interface Env { DB:D1Database; CLERK_SECRET_KEY:string; CLERK_PUBLISHABLE_KEY:string; B2_KEY_ID:string; B2_APPLICATION_KEY:string; B2_ENDPOINT:string; B2_BUCKET:string; WEB_ORIGIN?:string; WEB_ORIGINS?:string }
@@ -15,7 +16,7 @@ const origins=(env:Env)=>(env.WEB_ORIGINS||env.WEB_ORIGIN||'').split(',').map(va
 
 function signer(env:Env){return new AwsClient({accessKeyId:env.B2_KEY_ID,secretAccessKey:env.B2_APPLICATION_KEY,service:'s3',region:new URL(env.B2_ENDPOINT).hostname.split('.')[1]})}
 async function b2Url(env:Env,key:string){const endpoint=env.B2_ENDPOINT.replace(/\/$/,'');const path=`${env.B2_BUCKET}/${key.split('/').map(encodeURIComponent).join('/')}`;return(await signer(env).sign(`${endpoint}/${path}?X-Amz-Expires=300`,{aws:{signQuery:true}})).url}
-async function authorize(request:Request,env:Env){const clerk=createClerkClient({secretKey:env.CLERK_SECRET_KEY,publishableKey:env.CLERK_PUBLISHABLE_KEY});return(await clerk.authenticateRequest(request,{authorizedParties:origins(env)})).toAuth()?.userId||null}
+async function authorize(request:Request,env:Env){const clerk=createClerkClient({secretKey:env.CLERK_SECRET_KEY,publishableKey:env.CLERK_PUBLISHABLE_KEY});return(await clerk.authenticateRequest(request,{authorizedParties:origins(env)})).toAuth()}
 async function pinKey(env:Env,usage:KeyUsage[]){return crypto.subtle.importKey('raw',encoder.encode(env.CLERK_SECRET_KEY),{name:'HMAC',hash:'SHA-256'},false,usage)}
 function pinData(pin:string,salt:Uint8Array){const value=new Uint8Array(salt.length+1+pin.length);value.set(salt);value[salt.length]=58;value.set(encoder.encode(pin),salt.length+1);return value}
 async function pinHash(env:Env,pin:string,salt:Uint8Array){return new Uint8Array(await crypto.subtle.sign('HMAC',await pinKey(env,['sign']),pinData(pin,salt)))}
@@ -27,8 +28,12 @@ async function authorizedProfile(request:Request,env:Env,userId:string,profileId
 export default{async fetch(request:Request,env:Env):Promise<Response>{
   const origin=request.headers.get('Origin');const cors:Record<string,string>={'Access-Control-Allow-Headers':'Authorization, Content-Type, X-Profile-Token','Access-Control-Allow-Methods':'GET, POST, DELETE, OPTIONS',Vary:'Origin'};if(origin&&origins(env).includes(origin))cors['Access-Control-Allow-Origin']=origin;if(request.method==='OPTIONS')return new Response(null,{headers:cors})
   try{
-    const userId=await authorize(request,env);if(!userId)return withCors(json({error:'Unauthorized'},401),cors)
+    const auth=await authorize(request,env),userId=auth?.userId;if(!userId)return withCors(json({error:'Unauthorized'},401),cors)
     const url=new URL(request.url),path=url.pathname
+    if(path==='/api/manage-access'&&request.method==='POST'){
+      if(!auth.has({reverification:{level:'first_factor',afterMinutes:1}}))return withCors(reverificationErrorResponse({level:'first_factor',afterMinutes:1}),cors)
+      return withCors(json({ok:true}),cors)
+    }
     if(path==='/api/profiles'&&request.method==='GET'){const rows=await env.DB.prepare('SELECT id,name,pin_hash IS NOT NULL AS hasPin,is_kids AS isKids FROM profiles WHERE user_id=? ORDER BY created_at').bind(userId).all();return withCors(json(rows.results.map(row=>({...row,hasPin:Boolean(row.hasPin),isKids:Boolean(row.isKids)}))),cors)}
     if(path==='/api/profiles'&&request.method==='POST'){
       const body=await request.json()as{name?:string;pin?:string;isKids?:boolean};const name=body.name?.trim(),pin=body.pin?.trim()||''

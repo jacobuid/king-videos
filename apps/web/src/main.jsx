@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton, useAuth } from '@clerk/clerk-react'
+import { ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton, useAuth, useReverification } from '@clerk/clerk-react'
 import './style.css'
 
 const key=import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
@@ -18,6 +18,8 @@ function App(){
   const[media,setMedia]=useState([]),[selected,setSelected]=useState(null),[query,setQuery]=useState('')
   const[error,setError]=useState(''),[busy,setBusy]=useState(false)
   async function request(path,options={}){const token=await getToken();const response=await fetch(`${api}${path}`,{...options,headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json',...(profileToken?{'X-Profile-Token':profileToken}:{}),...options.headers}});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(data.error||`Request failed: ${response.status}`);return data}
+  const enterManage=useReverification(async()=>{const token=await getToken();const response=await fetch(`${api}/api/manage-access`,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'}});return response.json()})
+  async function openManage(){try{setError('');const result=await enterManage();if(result?.ok)setView('manage')}catch(e){if(e?.name!=='ClerkRuntimeError')setError(e.message||'Password verification was cancelled.')}}
   useEffect(()=>{request('/api/profiles').then(setProfiles).catch(e=>setError(e.message))},[])
   useEffect(()=>{if(profile&&profileToken)request(`/api/library?profileId=${encodeURIComponent(profile.id)}`).then(setMedia).catch(e=>setError(e.message))},[profile,profileToken])
   function resetForm(){setForm({name:'',pin:'',isKids:false,removePin:false})}
@@ -31,7 +33,7 @@ function App(){
   function switchProfile(){setProfile(null);setProfileToken('');setSelected(null);setMedia([]);setQuery('');setError('');setView('select')}
   const profilePicker=<div className="profile-grid">{profiles.map(item=><button className="profile-card" key={item.id} onClick={()=>begin(item,view==='manage'?'edit':'watch')}><span className="avatar-wrap"><Avatar profile={item}/>{view==='manage'&&<span className="edit-mark">✎</span>}</span><span className="profile-name">{item.name}</span><span className="profile-tags">{item.isKids&&<small>Kids</small>}{item.hasPin&&<small>PIN</small>}</span></button>)}</div>
   return <main className={view==='library'?'app-main':'profile-shell'}><header className="site-header"><h1>King Videos</h1><UserButton/></header>{error&&<p role="alert">{error}</p>}
-    {view==='select'&&<section className="profile-stage"><h2>Who's watching?</h2>{profilePicker}<button className="outline-button" onClick={()=>{setError('');setView('manage')}}>Manage Profiles</button></section>}
+    {view==='select'&&<section className="profile-stage"><h2>Who's watching?</h2>{profilePicker}<button className="outline-button" onClick={openManage}>Manage Profiles</button></section>}
     {view==='manage'&&<section className="profile-stage"><h2>Manage Profiles</h2>{profilePicker}<button className="profile-card add-card" onClick={()=>{resetForm();setError('');setView('create')}}><Avatar add/><span className="profile-name">Add Profile</span></button><div className="stage-actions"><button className="primary-button" onClick={()=>setView('select')}>Done</button></div></section>}
     {view==='create'&&<ProfileForm title="Add Profile" form={form} setForm={setForm} onSubmit={addProfile} onCancel={()=>{resetForm();setError('');setView('manage')}} busy={busy}/>}
     {view==='edit'&&<ProfileForm title={`Edit ${profile.name}`} form={form} setForm={setForm} onSubmit={saveProfile} onCancel={()=>{setProfile(null);setProfileToken('');resetForm();setError('');setView('manage')}} onDelete={deleteProfile} hasPin={profile.hasPin} busy={busy}/>}
