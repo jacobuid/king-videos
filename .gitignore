@@ -145,4 +145,5 @@ vite.config.ts.timestamp-*
 .npm-cache/
 .dev.vars
 .pulumi/
+.wrangler/
 services/api/.deployment-secrets.json

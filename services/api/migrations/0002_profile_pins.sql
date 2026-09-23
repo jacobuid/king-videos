@@ -1,0 +1,5 @@
+ALTER TABLE profiles ADD COLUMN pin_hash TEXT;
+ALTER TABLE profiles ADD COLUMN pin_salt TEXT;
+ALTER TABLE profiles ADD COLUMN pin_version INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE profiles ADD COLUMN failed_attempts INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE profiles ADD COLUMN locked_until INTEGER;
