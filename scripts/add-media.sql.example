@@ -1,0 +1,4 @@
+-- Replace the ID, title, and object keys, then run with Wrangler D1 execute.
+-- Object keys are relative to the private B2 bucket and must begin with movies/.
+INSERT INTO media (id,title,description,category,video_key,thumbnail_key,mime_type)
+VALUES ('christmas-2025','Christmas 2025','','Family','movies/christmas-2025/file.mp4','movies/christmas-2025/thumb.jpg','video/mp4');

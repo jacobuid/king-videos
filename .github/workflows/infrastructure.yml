@@ -1,0 +1,57 @@
+name: Provision infrastructure
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  provision:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Provision D1
+        id: pulumi
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: prod
+          work-dir: infrastructure/pulumi
+          upsert: true
+          config-map: |
+            cloudflareAccountId:
+              value: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - name: Provision Backblaze
+        id: b2
+        run: node scripts/provision-b2.mjs
+        env:
+          B2_BOOTSTRAP_KEY_ID: ${{ secrets.B2_BOOTSTRAP_KEY_ID }}
+          B2_BOOTSTRAP_APPLICATION_KEY: ${{ secrets.B2_BOOTSTRAP_APPLICATION_KEY }}
+          B2_BUCKET: king-videos
+          WEB_ORIGIN: https://jacobuid.github.io
+      - name: Configure deployment
+        run: node scripts/configure-deployment.mjs
+        env:
+          D1_DATABASE_ID: ${{ steps.pulumi.outputs.databaseId }}
+          B2_ENDPOINT: ${{ steps.b2.outputs.endpoint }}
+          B2_KEY_ID: ${{ steps.b2.outputs.key_id }}
+          B2_APPLICATION_KEY: ${{ steps.b2.outputs.application_key }}
+          CLERK_SECRET_KEY: ${{ secrets.CLERK_SECRET_KEY }}
+          CLERK_PUBLISHABLE_KEY: ${{ secrets.CLERK_PUBLISHABLE_KEY }}
+      - name: Apply database migrations
+        run: npx wrangler d1 migrations apply king-videos-prod --remote --config services/api/wrangler.jsonc
+        env: &cloudflare
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Deploy API
+        run: npm run deploy -w services/api
+        env: *cloudflare
+      - name: Install API secrets
+        run: npx wrangler secret bulk services/api/.deployment-secrets.json --config services/api/wrangler.jsonc
+        env: *cloudflare
