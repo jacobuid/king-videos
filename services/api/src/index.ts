@@ -38,6 +38,7 @@ export default{async fetch(request:Request,env:Env):Promise<Response>{
     if(path==='/api/profiles'&&request.method==='POST'){
       const body=await request.json()as{name?:string;pin?:string;isKids?:boolean};const name=body.name?.trim(),pin=body.pin?.trim()||''
       if(!name||name.length>40)return withCors(json({error:'Enter a profile name up to 40 characters.'},400),cors)
+      if(body.isKids&&pin)return withCors(json({error:'Kids profiles cannot have a PIN.'},400),cors)
       if(pin&&!validPin(pin))return withCors(json({error:'PIN must contain exactly four digits.'},400),cors)
       const id=crypto.randomUUID();let hash:string|null=null,saltValue:string|null=null
       if(pin){const salt=crypto.getRandomValues(new Uint8Array(16));saltValue=base64url(salt);hash=base64url(await pinHash(env,pin,salt))}
@@ -56,6 +57,7 @@ export default{async fetch(request:Request,env:Env):Promise<Response>{
       if(!await authorizedProfile(request,env,userId,profile.id))return withCors(json({error:'Unlock this profile first.'},403),cors)
       if(profileMatch[2]==='type'){const isKids=Boolean((body as {isKids?:boolean}).isKids);await env.DB.prepare('UPDATE profiles SET is_kids=? WHERE id=?').bind(isKids?1:0,profile.id).run();return withCors(json({isKids}),cors)}
       const pin=body.pin?.trim()||'';if(pin&&!validPin(pin))return withCors(json({error:'PIN must contain exactly four digits.'},400),cors)
+      if(profile.is_kids&&pin)return withCors(json({error:'Kids profiles cannot have a PIN.'},400),cors)
       let hash:string|null=null,saltValue:string|null=null;if(pin){const salt=crypto.getRandomValues(new Uint8Array(16));saltValue=base64url(salt);hash=base64url(await pinHash(env,pin,salt))}
       await env.DB.prepare('UPDATE profiles SET pin_hash=?,pin_salt=?,pin_version=pin_version+1,failed_attempts=0,locked_until=NULL WHERE id=?').bind(hash,saltValue,profile.id).run();return withCors(json({hasPin:Boolean(pin)}),cors)
     }
@@ -64,8 +66,11 @@ export default{async fetch(request:Request,env:Env):Promise<Response>{
       if(!await authorizedProfile(request,env,userId,profileIdMatch[1]))return withCors(json({error:'Unlock this profile first.'},403),cors)
       const body=await request.json()as{name?:string;isKids?:boolean};const name=body.name?.trim()
       if(!name||name.length>40)return withCors(json({error:'Enter a profile name up to 40 characters.'},400),cors)
-      await env.DB.prepare('UPDATE profiles SET name=?,is_kids=? WHERE id=? AND user_id=?').bind(name,body.isKids?1:0,profileIdMatch[1],userId).run()
-      return withCors(json({id:profileIdMatch[1],name,isKids:Boolean(body.isKids)}),cors)
+      const existing=await env.DB.prepare('SELECT is_kids FROM profiles WHERE id=? AND user_id=?').bind(profileIdMatch[1],userId).first<{is_kids:number}>()
+      if(existing?.is_kids&&!body.isKids&&!auth.has({reverification:{level:'first_factor',afterMinutes:1}}))return withCors(reverificationErrorResponse({level:'first_factor',afterMinutes:1}),cors)
+      if(body.isKids)await env.DB.prepare('UPDATE profiles SET name=?,is_kids=1,pin_hash=NULL,pin_salt=NULL,pin_version=pin_version+1,failed_attempts=0,locked_until=NULL WHERE id=? AND user_id=?').bind(name,profileIdMatch[1],userId).run()
+      else await env.DB.prepare('UPDATE profiles SET name=?,is_kids=0 WHERE id=? AND user_id=?').bind(name,profileIdMatch[1],userId).run()
+      return withCors(json({id:profileIdMatch[1],name,isKids:Boolean(body.isKids),hasPin:body.isKids?false:undefined}),cors)
     }
     if(profileIdMatch&&request.method==='DELETE'){
       if(!await authorizedProfile(request,env,userId,profileIdMatch[1]))return withCors(json({error:'Unlock this profile first.'},403),cors)
