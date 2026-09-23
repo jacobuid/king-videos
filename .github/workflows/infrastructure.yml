@@ -37,11 +37,12 @@ jobs:
           B2_BOOTSTRAP_KEY_ID: ${{ secrets.B2_BOOTSTRAP_KEY_ID }}
           B2_BOOTSTRAP_APPLICATION_KEY: ${{ secrets.B2_BOOTSTRAP_APPLICATION_KEY }}
           B2_BUCKET: king-videos
-          WEB_ORIGIN: https://jacobuid.github.io
+          WEB_ORIGINS: https://jacobuid.github.io,http://localhost:5173
       - name: Configure deployment
         run: node scripts/configure-deployment.mjs
         env:
           D1_DATABASE_ID: ${{ steps.pulumi.outputs.databaseId }}
+          WEB_ORIGINS: https://jacobuid.github.io,http://localhost:5173
           B2_ENDPOINT: ${{ steps.b2.outputs.endpoint }}
           B2_KEY_ID: ${{ steps.b2.outputs.key_id }}
           B2_APPLICATION_KEY: ${{ steps.b2.outputs.application_key }}

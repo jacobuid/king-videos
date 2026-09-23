@@ -3,7 +3,7 @@ import { appendFileSync } from 'node:fs'
 const keyId = process.env.B2_BOOTSTRAP_KEY_ID
 const applicationKey = process.env.B2_BOOTSTRAP_APPLICATION_KEY
 const bucketName = process.env.B2_BUCKET || 'king-videos'
-const webOrigin = process.env.WEB_ORIGIN || 'https://jacobuid.github.io'
+const webOrigins = (process.env.WEB_ORIGINS || process.env.WEB_ORIGIN || 'https://jacobuid.github.io,http://localhost:5173').split(',').map(value => value.trim()).filter(Boolean)
 if (!keyId || !applicationKey) throw new Error('Backblaze bootstrap credentials are missing')
 
 const basic = Buffer.from(`${keyId}:${applicationKey}`).toString('base64')
@@ -26,7 +26,7 @@ const listed = await api('b2_list_buckets', { accountId: auth.accountId, bucketN
 let bucket = listed.buckets?.find(item => item.bucketName === bucketName)
 const corsRules = [{
   corsRuleName: 'kingVideosWebPlayback',
-  allowedOrigins: [webOrigin],
+  allowedOrigins: webOrigins,
   allowedHeaders: ['range'],
   allowedOperations: ['b2_download_file_by_id', 'b2_download_file_by_name'],
   exposeHeaders: ['content-length', 'content-range', 'content-type'],

@@ -1,7 +1,7 @@
 import { createClerkClient } from '@clerk/backend'
 import { AwsClient } from 'aws4fetch'
 
-interface Env { DB: D1Database; CLERK_SECRET_KEY: string; CLERK_PUBLISHABLE_KEY: string; B2_KEY_ID: string; B2_APPLICATION_KEY: string; B2_ENDPOINT: string; B2_BUCKET: string; WEB_ORIGIN: string }
+interface Env { DB: D1Database; CLERK_SECRET_KEY: string; CLERK_PUBLISHABLE_KEY: string; B2_KEY_ID: string; B2_APPLICATION_KEY: string; B2_ENDPOINT: string; B2_BUCKET: string; WEB_ORIGIN?: string; WEB_ORIGINS?: string }
 type Media = { id: string; title: string; description: string; category: string; video_key: string; thumbnail_key: string | null; mime_type: string; created_at: string }
 
 const json = (data: unknown, status = 200) => new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json' } })
@@ -15,13 +15,16 @@ async function b2Url(env: Env, key: string) {
 }
 async function authorize(request: Request, env: Env) {
   const clerk = createClerkClient({ secretKey: env.CLERK_SECRET_KEY, publishableKey: env.CLERK_PUBLISHABLE_KEY })
-  const state = await clerk.authenticateRequest(request, { authorizedParties: [env.WEB_ORIGIN] })
+  const state = await clerk.authenticateRequest(request, { authorizedParties: origins(env) })
   return state.toAuth()?.userId || null
 }
+function origins(env: Env) { return (env.WEB_ORIGINS || env.WEB_ORIGIN || '').split(',').map(value => value.trim()).filter(Boolean) }
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const origin = request.headers.get('Origin')
-    const cors = { 'Access-Control-Allow-Origin': origin === env.WEB_ORIGIN ? origin : env.WEB_ORIGIN, 'Access-Control-Allow-Headers': 'Authorization, Content-Type', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Vary': 'Origin' }
+    const allowedOrigins = origins(env)
+    const cors: Record<string,string> = { 'Access-Control-Allow-Headers': 'Authorization, Content-Type', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Vary': 'Origin' }
+    if (origin && allowedOrigins.includes(origin)) cors['Access-Control-Allow-Origin'] = origin
     if (request.method === 'OPTIONS') return new Response(null, { headers: cors })
     try {
       const userId = await authorize(request, env)

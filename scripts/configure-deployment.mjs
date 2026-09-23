@@ -4,6 +4,7 @@ const path = 'services/api/wrangler.jsonc'
 const config = JSON.parse(readFileSync(path, 'utf8'))
 config.d1_databases[0].database_id = process.env.D1_DATABASE_ID
 if (process.env.B2_ENDPOINT) config.vars.B2_ENDPOINT = process.env.B2_ENDPOINT
+if (process.env.WEB_ORIGINS) config.vars.WEB_ORIGINS = process.env.WEB_ORIGINS
 writeFileSync(path, `${JSON.stringify(config, null, 2)}\n`)
 
 if (process.env.WRITE_SECRETS !== 'true') process.exit(0)

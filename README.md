@@ -8,7 +8,7 @@ Private family video catalog. The full plan is in [plan.md](plan.md).
 2. Copy `apps/web/.env.example` to `apps/web/.env.local` and enter the Clerk publishable key and Worker URL.
 3. Copy `services/api/.dev.vars.example` to `services/api/.dev.vars` and enter the Clerk and Backblaze keys. Use a bucket-scoped B2 key with read access.
 4. Replace the D1 database ID in `services/api/wrangler.jsonc` after creating the database. For local development, run `npx wrangler d1 migrations apply king-videos --local --config services/api/wrangler.jsonc`.
-5. Run `npm run dev:api` and `npm run dev:web` in separate terminals. Set `WEB_ORIGIN` to the local web origin for development.
+5. Run `npm run dev:web`. The local app can use the deployed API; `http://localhost:5173` is included in the API and media CORS allowlists. Run `npm run dev:api` separately only when changing the Worker itself.
 
 ## Cloud setup
 
