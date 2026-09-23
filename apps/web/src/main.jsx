@@ -5,77 +5,39 @@ import './style.css'
 
 const key=import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 const api=import.meta.env.VITE_API_URL
+const colors=['#e50914','#0f9d8f','#6b38d1','#1773e8','#e67e22','#27952c','#c2185b','#0086a8']
+function initials(name){return name.trim().split(/\s+/).slice(0,2).map(part=>part[0]).join('').toUpperCase()}
+function profileColor(profile){let value=0;for(const char of profile.id)value=(value*31+char.charCodeAt(0))>>>0;return colors[value%colors.length]}
+function Avatar({profile,add=false}){return <span className={`avatar${add?' add-avatar':''}`} style={add?undefined:{'--avatar-color':profileColor(profile)}} aria-hidden="true">{add?'+':<><span className="avatar-eyes">••</span><span className="avatar-smile">⌣</span><span className="avatar-initials">{initials(profile.name)}</span></>}</span>}
 
 function App(){
   const{getToken}=useAuth()
-  const[profiles,setProfiles]=useState([])
-  const[profile,setProfile]=useState(null)
-  const[profileToken,setProfileToken]=useState('')
-  const[pendingProfile,setPendingProfile]=useState(null)
-  const[pin,setPin]=useState('')
-  const[createOpen,setCreateOpen]=useState(false)
-  const[newName,setNewName]=useState('')
-  const[newPin,setNewPin]=useState('')
-  const[newIsKids,setNewIsKids]=useState(false)
-  const[pinOpen,setPinOpen]=useState(false)
-  const[media,setMedia]=useState([])
-  const[selected,setSelected]=useState(null)
-  const[query,setQuery]=useState('')
-  const[error,setError]=useState('')
-  async function request(path,options={}){
-    const token=await getToken()
-    const response=await fetch(`${api}${path}`,{...options,headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json',...(profileToken?{'X-Profile-Token':profileToken}:{}),...options.headers}})
-    const data=await response.json().catch(()=>({}))
-    if(!response.ok)throw new Error(data.error||`Request failed: ${response.status}`)
-    return data
-  }
+  const[profiles,setProfiles]=useState([]),[profile,setProfile]=useState(null),[profileToken,setProfileToken]=useState('')
+  const[view,setView]=useState('select'),[pending,setPending]=useState(null),[pin,setPin]=useState('')
+  const[form,setForm]=useState({name:'',pin:'',isKids:false,removePin:false})
+  const[media,setMedia]=useState([]),[selected,setSelected]=useState(null),[query,setQuery]=useState('')
+  const[error,setError]=useState(''),[busy,setBusy]=useState(false)
+  async function request(path,options={}){const token=await getToken();const response=await fetch(`${api}${path}`,{...options,headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json',...(profileToken?{'X-Profile-Token':profileToken}:{}),...options.headers}});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(data.error||`Request failed: ${response.status}`);return data}
   useEffect(()=>{request('/api/profiles').then(setProfiles).catch(e=>setError(e.message))},[])
   useEffect(()=>{if(profile&&profileToken)request(`/api/library?profileId=${encodeURIComponent(profile.id)}`).then(setMedia).catch(e=>setError(e.message))},[profile,profileToken])
-  async function unlock(selectedProfile,enteredPin=''){
-    try{
-      setError('')
-      const result=await request(`/api/profiles/${selectedProfile.id}/unlock`,{method:'POST',body:JSON.stringify({pin:enteredPin}),headers:{'X-Profile-Token':''}})
-      setProfileToken(result.token);setProfile(selectedProfile);setPendingProfile(null);setPin('')
-    }catch(e){setError(e.message)}
-  }
-  function chooseProfile(selectedProfile){selectedProfile.hasPin?setPendingProfile(selectedProfile):unlock(selectedProfile)}
-  async function addProfile(event){
-    event.preventDefault()
-    try{const created=await request('/api/profiles',{method:'POST',body:JSON.stringify({name:newName,pin:newPin,isKids:newIsKids})});setProfiles([...profiles,created]);setNewName('');setNewPin('');setNewIsKids(false);setCreateOpen(false);setError('')}catch(e){setError(e.message)}
-  }
-  async function updatePin(event){
-    event.preventDefault()
-    try{const result=await request(`/api/profiles/${profile.id}/pin`,{method:'POST',body:JSON.stringify({pin})});setProfiles(profiles.map(p=>p.id===profile.id?{...p,hasPin:result.hasPin}:p));setProfile({...profile,hasPin:result.hasPin});setProfileToken('');setProfile(null);setPin('');setPinOpen(false);setError('PIN updated. Unlock the profile again.')}catch(e){setError(e.message)}
-  }
-  async function play(item){try{setSelected({...item,...await request(`/api/media/${item.id}/play`,{method:'POST',body:JSON.stringify({profileId:profile.id})})})}catch(e){setError(e.message)}}
-  async function toggleKids(){try{const result=await request(`/api/profiles/${profile.id}/type`,{method:'POST',body:JSON.stringify({isKids:!profile.isKids})});const updated={...profile,isKids:result.isKids};setProfile(updated);setProfiles(profiles.map(p=>p.id===profile.id?updated:p));setMedia([]);const library=await request(`/api/library?profileId=${encodeURIComponent(profile.id)}`);setMedia(library);setError('')}catch(e){setError(e.message)}}
+  function resetForm(){setForm({name:'',pin:'',isKids:false,removePin:false})}
+  function begin(item,action){setError('');if(item.hasPin){setPending({profile:item,action});setPin('')}else unlock(item,'',action)}
+  async function unlock(item,enteredPin,action){try{setBusy(true);setError('');const result=await request(`/api/profiles/${item.id}/unlock`,{method:'POST',body:JSON.stringify({pin:enteredPin}),headers:{'X-Profile-Token':''}});setProfileToken(result.token);setPending(null);setPin('');if(action==='edit'){setProfile(item);setForm({name:item.name,pin:'',isKids:item.isKids,removePin:false});setView('edit')}else{setProfile(item);setView('library')}}catch(e){setError(e.message)}finally{setBusy(false)}}
+  async function addProfile(event){event.preventDefault();try{setBusy(true);setError('');const created=await request('/api/profiles',{method:'POST',body:JSON.stringify({name:form.name,pin:form.pin,isKids:form.isKids})});setProfiles(current=>[...current,created]);resetForm();setView('manage')}catch(e){setError(e.message)}finally{setBusy(false)}}
+  async function saveProfile(event){event.preventDefault();try{setBusy(true);setError('');await request(`/api/profiles/${profile.id}`,{method:'POST',body:JSON.stringify({name:form.name,isKids:form.isKids})});let hasPin=profile.hasPin;if(form.pin||form.removePin){const result=await request(`/api/profiles/${profile.id}/pin`,{method:'POST',body:JSON.stringify({pin:form.removePin?'':form.pin})});hasPin=result.hasPin}const updated={...profile,name:form.name.trim(),isKids:form.isKids,hasPin};setProfiles(current=>current.map(item=>item.id===profile.id?updated:item));setProfile(null);setProfileToken('');resetForm();setView('manage')}catch(e){setError(e.message)}finally{setBusy(false)}}
+  async function deleteProfile(){if(!window.confirm(`Delete ${profile.name}? Their viewing progress will also be deleted.`))return;try{setBusy(true);setError('');await request(`/api/profiles/${profile.id}`,{method:'DELETE'});setProfiles(current=>current.filter(item=>item.id!==profile.id));setProfile(null);setProfileToken('');resetForm();setView('manage')}catch(e){setError(e.message)}finally{setBusy(false)}}
+  async function play(item){try{setError('');setSelected({...item,...await request(`/api/media/${item.id}/play`,{method:'POST',body:JSON.stringify({profileId:profile.id})})})}catch(e){setError(e.message)}}
   async function saveProgress(event){if(!selected||!profile||!Number.isFinite(event.target.currentTime))return;try{await request('/api/progress',{method:'POST',body:JSON.stringify({profileId:profile.id,mediaId:selected.id,positionSeconds:Math.floor(event.target.currentTime)})})}catch(e){setError(e.message)}}
-  function switchProfile(){setProfile(null);setProfileToken('');setSelected(null);setMedia([]);setPinOpen(false);setError('')}
-
-  return <main>
-    <header><h1>King Videos</h1><UserButton/></header>
-    {error&&<p role="alert">{error}</p>}
-    {!profile?<section>
-      <h2>Who's watching?</h2>
-      <div className="grid">{profiles.map(p=><button key={p.id} onClick={()=>chooseProfile(p)}>{p.name}{p.isKids&&<small> Kids</small>}{p.hasPin&&<small> PIN</small>}</button>)}<button onClick={()=>setCreateOpen(true)}>Add profile</button></div>
-      {pendingProfile&&<form className="dialog" onSubmit={event=>{event.preventDefault();unlock(pendingProfile,pin)}}>
-        <h3>Enter PIN for {pendingProfile.name}</h3><input autoFocus inputMode="numeric" type="password" maxLength="4" pattern="[0-9]{4}" value={pin} onChange={e=>setPin(e.target.value.replace(/\D/g,''))} aria-label="Four digit PIN"/>
-        <div><button type="submit">Unlock</button> <button type="button" onClick={()=>{setPendingProfile(null);setPin('')}}>Cancel</button></div>
-      </form>}
-      {createOpen&&<form className="dialog" onSubmit={addProfile}>
-        <h3>Add profile</h3><label>Name<input autoFocus maxLength="40" required value={newName} onChange={e=>setNewName(e.target.value)}/></label>
-        <label>Optional four digit PIN<input inputMode="numeric" type="password" maxLength="4" pattern="[0-9]{4}" value={newPin} onChange={e=>setNewPin(e.target.value.replace(/\D/g,''))}/></label>
-        <label className="check"><input type="checkbox" checked={newIsKids} onChange={e=>setNewIsKids(e.target.checked)}/> Kids profile</label>
-        <div><button type="submit">Create</button> <button type="button" onClick={()=>setCreateOpen(false)}>Cancel</button></div>
-      </form>}
-    </section>:<>
-      <nav><button onClick={switchProfile}>Switch profile</button><span>{profile.name}{profile.isKids?' · Kids':''}</span><button onClick={toggleKids}>{profile.isKids?'Make standard':'Make Kids'}</button><button onClick={()=>{setPin('');setPinOpen(true)}}>{profile.hasPin?'Change PIN':'Set PIN'}</button></nav>
-      {pinOpen&&<form className="dialog" onSubmit={updatePin}><h3>{profile.hasPin?'Change or remove PIN':'Set profile PIN'}</h3><label>New four digit PIN<input autoFocus inputMode="numeric" type="password" maxLength="4" pattern="[0-9]{4}" value={pin} onChange={e=>setPin(e.target.value.replace(/\D/g,''))}/></label>{profile.hasPin&&<small>Leave blank to remove the PIN.</small>}<div><button type="submit">Save</button> <button type="button" onClick={()=>setPinOpen(false)}>Cancel</button></div></form>}
-      <input aria-label="Search movies" placeholder="Search movies" value={query} onChange={e=>setQuery(e.target.value)}/>
-      {selected&&<section><h2>{selected.title}</h2><video controls autoPlay src={selected.url} onPause={saveProgress} onEnded={saveProgress} onSeeked={saveProgress}/><button onClick={()=>setSelected(null)}>Close</button></section>}
-      <section><h2>Library</h2><div className="grid">{media.filter(m=>m.title.toLowerCase().includes(query.toLowerCase())).map(m=><button className="card" key={m.id} onClick={()=>play(m)}>{m.thumbnailUrl&&<img src={m.thumbnailUrl} alt=""/>}<strong>{m.title}</strong><small>{m.category||'Movie'}</small></button>)}</div>{!media.length&&<p>No media yet. Add a movie to the catalog to begin.</p>}</section>
-    </>}
+  function switchProfile(){setProfile(null);setProfileToken('');setSelected(null);setMedia([]);setQuery('');setError('');setView('select')}
+  const profilePicker=<div className="profile-grid">{profiles.map(item=><button className="profile-card" key={item.id} onClick={()=>begin(item,view==='manage'?'edit':'watch')}><span className="avatar-wrap"><Avatar profile={item}/>{view==='manage'&&<span className="edit-mark">✎</span>}</span><span className="profile-name">{item.name}</span><span className="profile-tags">{item.isKids&&<small>Kids</small>}{item.hasPin&&<small>PIN</small>}</span></button>)}</div>
+  return <main className={view==='library'?'app-main':'profile-shell'}><header className="site-header"><h1>King Videos</h1><UserButton/></header>{error&&<p role="alert">{error}</p>}
+    {view==='select'&&<section className="profile-stage"><h2>Who's watching?</h2>{profilePicker}<button className="outline-button" onClick={()=>{setError('');setView('manage')}}>Manage Profiles</button></section>}
+    {view==='manage'&&<section className="profile-stage"><h2>Manage Profiles</h2>{profilePicker}<button className="profile-card add-card" onClick={()=>{resetForm();setError('');setView('create')}}><Avatar add/><span className="profile-name">Add Profile</span></button><div className="stage-actions"><button className="primary-button" onClick={()=>setView('select')}>Done</button></div></section>}
+    {view==='create'&&<ProfileForm title="Add Profile" form={form} setForm={setForm} onSubmit={addProfile} onCancel={()=>{resetForm();setError('');setView('manage')}} busy={busy}/>}
+    {view==='edit'&&<ProfileForm title={`Edit ${profile.name}`} form={form} setForm={setForm} onSubmit={saveProfile} onCancel={()=>{setProfile(null);setProfileToken('');resetForm();setError('');setView('manage')}} onDelete={deleteProfile} hasPin={profile.hasPin} busy={busy}/>}
+    {pending&&<div className="modal-backdrop"><form className="dialog" onSubmit={event=>{event.preventDefault();unlock(pending.profile,pin,pending.action)}}><h3>Enter PIN</h3><p>Enter the four digit PIN for {pending.profile.name}.</p><input autoFocus inputMode="numeric" type="password" maxLength="4" pattern="[0-9]{4}" required value={pin} onChange={e=>setPin(e.target.value.replace(/\D/g,''))} aria-label="Four digit PIN"/><div className="form-actions"><button className="primary-button" type="submit" disabled={busy}>Continue</button><button type="button" onClick={()=>{setPending(null);setPin('');setError('')}}>Cancel</button></div></form></div>}
+    {view==='library'&&<><nav className="library-nav"><button onClick={switchProfile}>Switch Profile</button><span className="current-profile"><Avatar profile={profile}/><span>{profile.name}{profile.isKids&&<small>Kids</small>}</span></span></nav><input className="search" aria-label="Search videos" placeholder="Search videos" value={query} onChange={e=>setQuery(e.target.value)}/>{selected&&<section className="player"><div><h2>{selected.title}</h2><button onClick={()=>setSelected(null)}>Close</button></div><video controls autoPlay src={selected.url} onPause={saveProgress} onEnded={saveProgress} onSeeked={saveProgress}/></section>}<section><h2>Library</h2><div className="media-grid">{media.filter(item=>item.title.toLowerCase().includes(query.toLowerCase())).map(item=><button className="media-card" key={item.id} onClick={()=>play(item)}>{item.thumbnailUrl?<img src={item.thumbnailUrl} alt=""/>:<span className="poster-placeholder">▶</span>}<strong>{item.title}</strong><small>{item.category||'Video'}</small></button>)}</div>{!media.length&&<p>No videos yet. Add a video to the catalog to begin.</p>}</section></>}
   </main>
 }
-
-createRoot(document.getElementById('root')).render(key&&api?<ClerkProvider publishableKey={key}><SignedOut><main><h1>King Videos</h1><SignInButton mode="modal"><button>Sign in</button></SignInButton></main></SignedOut><SignedIn><App/></SignedIn></ClerkProvider>:<main><h1>King Videos</h1><p>Set VITE_CLERK_PUBLISHABLE_KEY and VITE_API_URL to configure this app.</p></main>)
+function ProfileForm({title,form,setForm,onSubmit,onCancel,onDelete,hasPin=false,busy}){const change=values=>setForm(current=>({...current,...values}));return <form className="profile-form" onSubmit={onSubmit}><h2>{title}</h2><label>Profile name<input autoFocus maxLength="40" required value={form.name} onChange={e=>change({name:e.target.value})}/></label><label className="check"><input type="checkbox" checked={form.isKids} onChange={e=>change({isKids:e.target.checked})}/><span><strong>Kids profile</strong><small>Only videos marked as suitable for kids will appear.</small></span></label><label>{hasPin?'New PIN':'Optional PIN'}<input inputMode="numeric" type="password" maxLength="4" pattern="[0-9]{4}" value={form.pin} disabled={form.removePin} onChange={e=>change({pin:e.target.value.replace(/\D/g,'')})} placeholder={hasPin?'Leave blank to keep current PIN':'Four digits'}/></label>{hasPin&&<label className="check"><input type="checkbox" checked={form.removePin} onChange={e=>change({removePin:e.target.checked,pin:''})}/><span><strong>Remove PIN</strong><small>Anyone using this account will be able to open the profile.</small></span></label>}<div className="form-actions"><button className="primary-button" type="submit" disabled={busy}>{busy?'Saving…':'Save'}</button><button type="button" onClick={onCancel}>Cancel</button>{onDelete&&<button className="danger-button" type="button" onClick={onDelete} disabled={busy}>Delete Profile</button>}</div></form>}
+createRoot(document.getElementById('root')).render(key&&api?<ClerkProvider publishableKey={key}><SignedOut><main className="signed-out"><h1>King Videos</h1><p>Your private video library.</p><SignInButton mode="modal"><button className="primary-button">Sign in</button></SignInButton></main></SignedOut><SignedIn><App/></SignedIn></ClerkProvider>:<main className="signed-out"><h1>King Videos</h1><p>Set VITE_CLERK_PUBLISHABLE_KEY and VITE_API_URL to configure this app.</p></main>)

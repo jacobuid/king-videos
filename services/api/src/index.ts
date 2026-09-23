@@ -25,7 +25,7 @@ async function decodeProfileToken(env:Env,token:string):Promise<ProfileToken|nul
 async function authorizedProfile(request:Request,env:Env,userId:string,profileId:string|undefined|null){if(!profileId)return null;const token=await decodeProfileToken(env,request.headers.get('X-Profile-Token')||'');if(!token||token.userId!==userId||token.profileId!==profileId)return null;const profile=await env.DB.prepare('SELECT pin_version,is_kids FROM profiles WHERE id=? AND user_id=?').bind(profileId,userId).first<{pin_version:number;is_kids:number}>();return profile&&profile.pin_version===token.version?profile:null}
 
 export default{async fetch(request:Request,env:Env):Promise<Response>{
-  const origin=request.headers.get('Origin');const cors:Record<string,string>={'Access-Control-Allow-Headers':'Authorization, Content-Type, X-Profile-Token','Access-Control-Allow-Methods':'GET, POST, OPTIONS',Vary:'Origin'};if(origin&&origins(env).includes(origin))cors['Access-Control-Allow-Origin']=origin;if(request.method==='OPTIONS')return new Response(null,{headers:cors})
+  const origin=request.headers.get('Origin');const cors:Record<string,string>={'Access-Control-Allow-Headers':'Authorization, Content-Type, X-Profile-Token','Access-Control-Allow-Methods':'GET, POST, DELETE, OPTIONS',Vary:'Origin'};if(origin&&origins(env).includes(origin))cors['Access-Control-Allow-Origin']=origin;if(request.method==='OPTIONS')return new Response(null,{headers:cors})
   try{
     const userId=await authorize(request,env);if(!userId)return withCors(json({error:'Unauthorized'},401),cors)
     const url=new URL(request.url),path=url.pathname
@@ -53,6 +53,19 @@ export default{async fetch(request:Request,env:Env):Promise<Response>{
       const pin=body.pin?.trim()||'';if(pin&&!validPin(pin))return withCors(json({error:'PIN must contain exactly four digits.'},400),cors)
       let hash:string|null=null,saltValue:string|null=null;if(pin){const salt=crypto.getRandomValues(new Uint8Array(16));saltValue=base64url(salt);hash=base64url(await pinHash(env,pin,salt))}
       await env.DB.prepare('UPDATE profiles SET pin_hash=?,pin_salt=?,pin_version=pin_version+1,failed_attempts=0,locked_until=NULL WHERE id=?').bind(hash,saltValue,profile.id).run();return withCors(json({hasPin:Boolean(pin)}),cors)
+    }
+    const profileIdMatch=path.match(/^\/api\/profiles\/([^/]+)$/)
+    if(profileIdMatch&&request.method==='POST'){
+      if(!await authorizedProfile(request,env,userId,profileIdMatch[1]))return withCors(json({error:'Unlock this profile first.'},403),cors)
+      const body=await request.json()as{name?:string;isKids?:boolean};const name=body.name?.trim()
+      if(!name||name.length>40)return withCors(json({error:'Enter a profile name up to 40 characters.'},400),cors)
+      await env.DB.prepare('UPDATE profiles SET name=?,is_kids=? WHERE id=? AND user_id=?').bind(name,body.isKids?1:0,profileIdMatch[1],userId).run()
+      return withCors(json({id:profileIdMatch[1],name,isKids:Boolean(body.isKids)}),cors)
+    }
+    if(profileIdMatch&&request.method==='DELETE'){
+      if(!await authorizedProfile(request,env,userId,profileIdMatch[1]))return withCors(json({error:'Unlock this profile first.'},403),cors)
+      await env.DB.batch([env.DB.prepare('DELETE FROM progress WHERE profile_id=?').bind(profileIdMatch[1]),env.DB.prepare('DELETE FROM favorites WHERE profile_id=?').bind(profileIdMatch[1]),env.DB.prepare('DELETE FROM profiles WHERE id=? AND user_id=?').bind(profileIdMatch[1],userId)])
+      return withCors(json({ok:true}),cors)
     }
     if((path==='/api/library'||path==='/api/home'||path==='/api/search')&&request.method==='GET'){const profile=await authorizedProfile(request,env,userId,url.searchParams.get('profileId'));if(!profile)return withCors(json({error:'Profile is locked.'},403),cors);const search=(url.searchParams.get('q')||'').slice(0,100);const rows=await env.DB.prepare('SELECT * FROM media WHERE title LIKE ? AND (?=0 OR kids_allowed=1) ORDER BY created_at DESC LIMIT 200').bind(`%${search}%`,profile.is_kids).all<Media>();const result=await Promise.all(rows.results.map(async m=>({id:m.id,title:m.title,description:m.description,category:m.category,mimeType:m.mime_type,createdAt:m.created_at,thumbnailUrl:m.thumbnail_key&&allowedKey(m.thumbnail_key)?await b2Url(env,m.thumbnail_key):null})));return withCors(json(result),cors)}
     const mediaMatch=path.match(/^\/api\/media\/([^/]+)(\/play)?$/)
