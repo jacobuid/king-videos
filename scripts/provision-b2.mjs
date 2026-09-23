@@ -59,6 +59,13 @@ const runtimeKey = await api('b2_create_key', {
   bucketIds: [bucket.bucketId],
 })
 
+const keys = await api('b2_list_keys', { accountId: auth.accountId, maxKeyCount: 10000 })
+for (const key of keys.keys || []) {
+  if (key.keyName?.startsWith('king-videos-worker-') && key.applicationKeyId !== runtimeKey.applicationKeyId) {
+    await api('b2_delete_key', { applicationKeyId: key.applicationKeyId })
+  }
+}
+
 const output = process.env.GITHUB_OUTPUT
 if (!output) throw new Error('GITHUB_OUTPUT is unavailable')
 appendFileSync(output, `key_id=${runtimeKey.applicationKeyId}\n`)
