@@ -54,7 +54,7 @@ function Home({media,progress,favorites,toggleFavorite,profile,selected,setSelec
   useEffect(()=>{window.history.replaceState({kingVideos:true,section:'home',series:null,season:null},'');const restore=event=>{if(!event.state?.kingVideos)return;setSection(event.state.section);setSelectedSeries(event.state.series||null);setSelectedSeason(event.state.season??null)};window.addEventListener('popstate',restore);return()=>window.removeEventListener('popstate',restore)},[])
   const featured=media[0]
   const positions=useMemo(()=>new Map(progress.map(item=>[item.mediaId,item.positionSeconds])),[progress])
-  const filtered=media.filter(item=>item.title.toLowerCase().includes(query.toLowerCase()))
+  const filtered=media.filter(item=>[item.title,item.seriesTitle,...(item.genres||[])].filter(Boolean).some(value=>value.toLowerCase().includes(query.toLowerCase())))
   const continuing=filtered.filter(item=>positions.has(item.id))
   const categories=[...new Set(filtered.map(item=>item.category).filter(Boolean))]
   const tvItems=filtered.filter(item=>/tv|series|show/i.test(item.category))
@@ -66,7 +66,8 @@ function Home({media,progress,favorites,toggleFavorite,profile,selected,setSelec
   const genreRows=categories.map(category=>({title:category,items:filtered.filter(item=>item.category===category)}))
   const movieRows=[{title:'Movies',items:filtered.filter(item=>!item.category||/movie/i.test(item.category))}]
   const tvRows=[{title:'TV Shows',items:tvCards}]
-  const searchRows=[{title:query?`Results for "${query}"`:'All Titles',items:filtered}]
+  const searchItems=[...tvCards,...filtered.filter(item=>!/tv|series|show/i.test(item.category))]
+  const searchRows=[{title:query?`Results for "${query}"`:'All Titles',items:searchItems}]
   const links=[['home','Home'],['genres','Genres'],['movies','Movies'],['tv','TV']]
   function navigate(path,seriesId=null,season=null){window.history.pushState({kingVideos:true,section:path,series:seriesId,season},'');setSelectedSeries(seriesId);setSelectedSeason(season);setSection(path)}
   function openMedia(item){if(item.isSeries)navigate('series',item.seriesId);else play(item)}
@@ -77,7 +78,7 @@ function Home({media,progress,favorites,toggleFavorite,profile,selected,setSelec
     {section==='movies'&&<BrowsePage title="Movies" rows={movieRows} media={media} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={play}/>}
     {section==='tv'&&<BrowsePage title="TV" rows={tvRows} media={media} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/>}
     {section==='series'&&<SeriesPage series={episodes} selectedSeason={selectedSeason} positions={positions} play={play} onBack={()=>window.history.back()} onSelectSeason={season=>navigate('series',selectedSeries,season)}/>}
-    {section==='search'&&<><section className="search-page"><h1>Search</h1><div className="home-search"><FontAwesomeIcon icon={faMagnifyingGlass}/><input autoFocus aria-label="Search videos" placeholder="Search titles" value={query} onChange={event=>setQuery(event.target.value)}/></div></section><Shelves rows={searchRows} media={media} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={play}/></>}
+    {section==='search'&&<><section className="search-page"><h1>Search</h1><div className="home-search"><FontAwesomeIcon icon={faMagnifyingGlass}/><input autoFocus aria-label="Search videos" placeholder="Search titles" value={query} onChange={event=>setQuery(event.target.value)}/></div></section><Shelves rows={searchRows} media={media} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/></>}
     {selected&&<section className="player-overlay"><div className="player-bar"><h2>{selected.title}</h2><button className="icon-button" onClick={()=>setSelected(null)}><FontAwesomeIcon icon={faXmark}/>Close</button></div><video controls autoPlay src={selected.url} onPause={saveProgress} onEnded={saveProgress} onSeeked={saveProgress}/></section>}
   </>
 }
