@@ -29,12 +29,12 @@ The repository includes the initial web catalog, Clerk sign-in, profile selectio
 
 Local video folders must be uploaded from the computer that contains the files.
 
-1. Copy `upload.env.example` to `upload.env`.
-2. Fill in the four blank Backblaze and Cloudflare credentials. `upload.env` is ignored by Git.
+1. Copy `.env.example` to `.env`.
+2. Fill in the required credentials. `.env` is ignored by Git and is the local source for Clerk, Cloudflare, Backblaze, Pulumi, and deployment configuration.
 3. Run:
 
    ```powershell
-   node --env-file=upload.env scripts/import-b2-series.mjs media-imports/bluey/media.json
+   node --env-file=.env scripts/import-b2-series.mjs media-imports/bluey/media.json
    ```
 
 The importer skips known duplicate variants, uploads each MP4 to the private Backblaze bucket, and writes its series, season, and episode metadata to D1. It can be run again safely after an interrupted upload.
