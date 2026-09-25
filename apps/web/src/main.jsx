@@ -62,7 +62,7 @@ function Home({media,progress,favorites,toggleFavorite,profile,selected,setSelec
   const tvCards=useMemo(()=>{const grouped=new Map(),standalone=[];for(const item of tvItems){if(!item.seriesId){standalone.push(item);continue}if(!grouped.has(item.seriesId)){const episodes=series.get(item.seriesId)||[item];grouped.set(item.seriesId,{...item,id:`series:${item.seriesId}`,title:item.seriesTitle||item.seriesId,episodeCount:episodes.length,isSeries:true})}}return [...grouped.values(),...standalone]},[tvItems,series])
   const favoriteSet=new Set(favorites)
   const favoriteItems=[...tvCards.filter(item=>item.isSeries&&favoriteSet.has(item.id)),...filtered.filter(item=>favoriteSet.has(item.id))]
-  const homeRows=[{title:'Continue Watching',items:continuing},{title:'My List',items:favoriteItems},...categories.slice(0,2).map(category=>({title:category,items:filtered.filter(item=>item.category===category)}))]
+  const homeRows=[{title:'Continue Watching',items:continuing},{title:'My List',items:favoriteItems},...categories.slice(0,2).map(category=>({title:category,items:/tv|series|show/i.test(category)?tvCards:filtered.filter(item=>item.category===category)}))]
   const genreRows=categories.map(category=>({title:category,items:filtered.filter(item=>item.category===category)}))
   const movieRows=[{title:'Movies',items:filtered.filter(item=>!item.category||/movie/i.test(item.category))}]
   const tvRows=[{title:'TV Shows',items:tvCards}]
