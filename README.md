@@ -48,6 +48,12 @@ Local video folders must be uploaded from the computer that contains the files.
 
 The importer skips known duplicate variants, uploads each MP4 to the private Backblaze bucket, and writes its series, season, and episode metadata to D1. It can be run again safely after an interrupted upload. The second command matches uploaded titles to a Wikipedia episode list and refreshes their episode descriptions. For Blue's Clues, run `node --env-file=.env scripts/sync-wikipedia-synopses.mjs blues-clues "List of Blue's Clues episodes"`.
 
+Place English subtitles beside their matching video as either `Video name.en.srt` or `Video name.srt`. The importer converts SRT files to browser-compatible WebVTT. To add subtitles to videos that are already uploaded without uploading the videos again, run:
+
+```powershell
+node --env-file=.env scripts/import-b2-series.mjs media-imports/bluey/media.json --subtitles-only
+```
+
 Compress a local series into a separate resumable output folder before uploading:
 
 ```powershell
