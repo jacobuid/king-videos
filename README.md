@@ -16,6 +16,14 @@ The manual `Provision infrastructure` GitHub workflow creates the D1 database wi
 
 Configure GitHub repository secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `CLERK_SECRET_KEY`, `CLERK_PUBLISHABLE_KEY`, `B2_BOOTSTRAP_KEY_ID`, `B2_BOOTSTRAP_APPLICATION_KEY`, and `PULUMI_ACCESS_TOKEN`. Configure repository variables `VITE_CLERK_PUBLISHABLE_KEY` and, after the first API deployment, `VITE_API_URL`. Enable GitHub Pages with GitHub Actions as the source.
 
+Public Clerk sign-up is restricted to invited or allowlisted users. Apply the same restriction after changing Clerk instances with:
+
+```powershell
+node --env-file=.env scripts/configure-clerk-access.mjs
+```
+
+Create or invite users from the Clerk Dashboard under **Users**. Existing users can continue signing in after sign-up restrictions are enabled.
+
 Upload videos with the B2 CLI under `movies/<slug>/file.mp4` and thumbnails under `movies/<slug>/thumb.jpg`. Add catalog records using `scripts/add-media.sql.example` and `wrangler d1 execute king-videos --remote --file <your-sql-file> --config services/api/wrangler.jsonc`. The bucket stays private; the API returns short-lived signed URLs after Clerk verification.
 
 Media can use either private Backblaze objects or trusted Internet Archive URLs. Import an Internet Archive folder manifest with the manual `Import media` GitHub workflow. The importer enumerates episode MP4s and streams them from Archive.org while uploading their shared thumbnail to Backblaze. Existing Backblaze media continues to use private objects and short lived signed playback URLs.
