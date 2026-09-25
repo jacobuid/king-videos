@@ -38,6 +38,13 @@ jobs:
           B2_BOOTSTRAP_APPLICATION_KEY: ${{ secrets.B2_BOOTSTRAP_APPLICATION_KEY }}
           B2_BUCKET: king-videos
           WEB_ORIGINS: https://jacobuid.github.io,http://localhost:5173
+      - name: Configure Backblaze S3 CORS
+        run: node scripts/configure-b2-s3-cors.mjs
+        env:
+          B2_BOOTSTRAP_KEY_ID: ${{ secrets.B2_BOOTSTRAP_KEY_ID }}
+          B2_BOOTSTRAP_APPLICATION_KEY: ${{ secrets.B2_BOOTSTRAP_APPLICATION_KEY }}
+          B2_BUCKET: king-videos
+          WEB_ORIGINS: https://jacobuid.github.io,http://localhost:5173
       - name: Configure deployment
         run: node scripts/configure-deployment.mjs
         env:
