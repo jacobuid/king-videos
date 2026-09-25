@@ -3,7 +3,7 @@
   "title": "Bluey",
   "description": "Bluey is a lovable and energetic Blue Heeler puppy who lives with her mum, dad, and little sister Bingo.",
   "category": "tv",
-  "genres": ["Cartoon", "Family"],
+  "genres": ["Adventure", "Cartoon", "Family"],
   "rating": "TV-Y",
   "kids": true,
   "thumbnail": "thumb.jpg",
