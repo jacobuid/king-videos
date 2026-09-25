@@ -3,7 +3,6 @@ import { readFileSync, writeFileSync } from 'node:fs'
 const path = 'services/api/wrangler.jsonc'
 const config = JSON.parse(readFileSync(path, 'utf8'))
 config.d1_databases[0].database_id = process.env.D1_DATABASE_ID
-if (process.env.B2_ENDPOINT) config.vars.B2_ENDPOINT = process.env.B2_ENDPOINT
 if (process.env.WEB_ORIGINS) config.vars.WEB_ORIGINS = process.env.WEB_ORIGINS
 writeFileSync(path, `${JSON.stringify(config, null, 2)}\n`)
 
@@ -13,6 +12,7 @@ const secrets = {
   CLERK_PUBLISHABLE_KEY: process.env.CLERK_PUBLISHABLE_KEY,
   B2_KEY_ID: process.env.B2_KEY_ID,
   B2_APPLICATION_KEY: process.env.B2_APPLICATION_KEY,
+  B2_ENDPOINT: process.env.B2_ENDPOINT,
 }
 for (const [name, value] of Object.entries(secrets)) if (!value) throw new Error(`${name} is missing`)
 writeFileSync('services/api/.deployment-secrets.json', JSON.stringify(secrets))
