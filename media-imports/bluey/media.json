@@ -1,0 +1,11 @@
+{
+  "id": "bluey",
+  "title": "Bluey",
+  "description": "Bluey is a lovable and energetic Blue Heeler puppy who lives with her mum, dad, and little sister Bingo.",
+  "category": "tv",
+  "genres": ["Animation", "Family", "Kids"],
+  "rating": "TV-Y",
+  "kids": true,
+  "featured": false,
+  "localFolder": "D:\\Google - WD Sync\\02 - TV Shows\\Bluey"
+}

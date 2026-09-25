@@ -25,3 +25,16 @@ Media can use either private Backblaze objects or trusted Internet Archive URLs.
 ## Current scope
 
 The repository includes the initial web catalog, Clerk sign-in, profile selection, playback, progress writes, D1 schema, B2 signed playback, and deployment workflows. Roku, richer browsing, favorites UI, and automatic media import remain later phases of the plan.
+# Upload a local TV series
+
+Local video folders must be uploaded from the computer that contains the files.
+
+1. Copy `upload.env.example` to `upload.env`.
+2. Fill in the four blank Backblaze and Cloudflare credentials. `upload.env` is ignored by Git.
+3. Run:
+
+   ```powershell
+   node --env-file=upload.env scripts/import-b2-series.mjs media-imports/bluey/media.json
+   ```
+
+The importer skips known duplicate variants, uploads each MP4 to the private Backblaze bucket, and writes its series, season, and episode metadata to D1. It can be run again safely after an interrupted upload.
