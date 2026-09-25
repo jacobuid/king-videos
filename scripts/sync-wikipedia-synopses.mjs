@@ -26,5 +26,5 @@ async function query(sql,params=[]){const resultResponse=await fetch(`https://ap
 const media=await query('SELECT id,title FROM media WHERE series_id=?',[seriesId])
 const descriptions=new Map(episodes.map(item=>[normalize(item.title),item.description]))
 let updated=0
-for(const item of media){const key=normalize(item.title),description=descriptions.get(key)||(key==='postmanandgroundslava'?[descriptions.get('postman'),descriptions.get('groundslava')].filter(Boolean).join(' '):null);if(!description){console.log(`No Wikipedia match: ${item.title}`);continue}await query('UPDATE media SET description=? WHERE id=?',[description,item.id]);updated++}
+for(const item of media){const key=normalize(item.title),alias=key==='postmanandgroundslava'?[...descriptions].find(([candidate])=>candidate.includes('postmanandgroundslava'))?.[1]:key==='crazychristmas'?[...descriptions].find(([candidate])=>candidate.startsWith('crazychristmas'))?.[1]:null,description=descriptions.get(key)||alias;if(!description){console.log(`No Wikipedia match: ${item.title}`);continue}await query('UPDATE media SET description=? WHERE id=?',[description,item.id]);updated++}
 console.log(`Updated ${updated} of ${media.length} ${seriesId} records from ${source}`)

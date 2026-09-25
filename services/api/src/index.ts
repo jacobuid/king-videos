@@ -4,12 +4,13 @@ import { AwsClient } from 'aws4fetch'
 
 interface Env { DB:D1Database; CLERK_SECRET_KEY:string; CLERK_PUBLISHABLE_KEY:string; B2_KEY_ID:string; B2_APPLICATION_KEY:string; B2_ENDPOINT:string; B2_BUCKET:string; WEB_ORIGIN?:string; WEB_ORIGINS?:string }
 type Media={id:string;title:string;description:string;category:string;video_key:string;source_url:string|null;thumbnail_key:string|null;subtitle_key:string|null;subtitle_url:string|null;mime_type:string;created_at:string;kids_allowed:number;series_id:string|null;series_title:string|null;season_number:number|null;episode_number:number|null;release_date:string|null;year:number|null;genres:string;rating:string|null;duration_seconds:number|null;featured:number}
-type Profile={id:string;user_id:string;name:string;pin_hash:string|null;pin_salt:string|null;pin_version:number;failed_attempts:number;locked_until:number|null;is_kids:number}
+type Profile={id:string;user_id:string;name:string;pin_hash:string|null;pin_salt:string|null;pin_version:number;failed_attempts:number;locked_until:number|null;is_kids:number;avatar:string|null}
 type ProfileToken={userId:string;profileId:string;version:number;expires:number}
 const encoder=new TextEncoder()
 const json=(data:unknown,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json'}})
 const allowedKey=(key:string)=>key.startsWith('movies/')&&!key.includes('..')
 const validPin=(pin:string)=>/^\d{4}$/.test(pin)
+const validAvatar=(avatar:string)=>/^(amy|bingo|blue|bluey|daphane|fred|knuckles|magenta|scoobydoo|shadow|shaggy|sonic|tails|velma)\.(png|jpg)$/.test(avatar)
 const base64url=(bytes:Uint8Array)=>btoa(String.fromCharCode(...bytes)).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'')
 const fromBase64url=(value:string)=>Uint8Array.from(atob(value.replaceAll('-','+').replaceAll('_','/')+'='.repeat((4-value.length%4)%4)),char=>char.charCodeAt(0))
 const origins=(env:Env)=>(env.WEB_ORIGINS||env.WEB_ORIGIN||'').split(',').map(value=>value.trim()).filter(Boolean)
@@ -35,16 +36,17 @@ export default{async fetch(request:Request,env:Env):Promise<Response>{
       if(!auth.has({reverification:{level:'first_factor',afterMinutes:1}}))return withCors(reverificationErrorResponse({level:'first_factor',afterMinutes:1}),cors)
       return withCors(json({ok:true}),cors)
     }
-    if(path==='/api/profiles'&&request.method==='GET'){const rows=await env.DB.prepare('SELECT id,name,pin_hash IS NOT NULL AS hasPin,is_kids AS isKids FROM profiles WHERE user_id=? ORDER BY created_at').bind(userId).all();return withCors(json(rows.results.map(row=>({...row,hasPin:Boolean(row.hasPin),isKids:Boolean(row.isKids)}))),cors)}
+    if(path==='/api/profiles'&&request.method==='GET'){const rows=await env.DB.prepare('SELECT id,name,pin_hash IS NOT NULL AS hasPin,is_kids AS isKids,avatar FROM profiles WHERE user_id=? ORDER BY created_at').bind(userId).all();return withCors(json(rows.results.map(row=>({...row,hasPin:Boolean(row.hasPin),isKids:Boolean(row.isKids)}))),cors)}
     if(path==='/api/profiles'&&request.method==='POST'){
-      const body=await request.json()as{name?:string;pin?:string;isKids?:boolean};const name=body.name?.trim(),pin=body.pin?.trim()||''
+      const body=await request.json()as{name?:string;pin?:string;isKids?:boolean;avatar?:string};const name=body.name?.trim(),pin=body.pin?.trim()||'',avatar=body.avatar?.trim()||'bluey.png'
       if(!name||name.length>40)return withCors(json({error:'Enter a profile name up to 40 characters.'},400),cors)
       if(body.isKids&&pin)return withCors(json({error:'Kids profiles cannot have a PIN.'},400),cors)
       if(pin&&!validPin(pin))return withCors(json({error:'PIN must contain exactly four digits.'},400),cors)
+      if(!validAvatar(avatar))return withCors(json({error:'Choose a valid profile picture.'},400),cors)
       const id=crypto.randomUUID();let hash:string|null=null,saltValue:string|null=null
       if(pin){const salt=crypto.getRandomValues(new Uint8Array(16));saltValue=base64url(salt);hash=base64url(await pinHash(env,pin,salt))}
-      await env.DB.prepare('INSERT INTO profiles(id,user_id,name,pin_hash,pin_salt,is_kids) VALUES(?,?,?,?,?,?)').bind(id,userId,name,hash,saltValue,body.isKids?1:0).run()
-      return withCors(json({id,name,hasPin:Boolean(pin),isKids:Boolean(body.isKids)},201),cors)
+      await env.DB.prepare('INSERT INTO profiles(id,user_id,name,pin_hash,pin_salt,is_kids,avatar) VALUES(?,?,?,?,?,?,?)').bind(id,userId,name,hash,saltValue,body.isKids?1:0,avatar).run()
+      return withCors(json({id,name,hasPin:Boolean(pin),isKids:Boolean(body.isKids),avatar},201),cors)
     }
     const profileMatch=path.match(/^\/api\/profiles\/([^/]+)\/(unlock|pin|type)$/)
     if(profileMatch&&request.method==='POST'){
@@ -65,13 +67,14 @@ export default{async fetch(request:Request,env:Env):Promise<Response>{
     const profileIdMatch=path.match(/^\/api\/profiles\/([^/]+)$/)
     if(profileIdMatch&&request.method==='POST'){
       if(!await authorizedProfile(request,env,userId,profileIdMatch[1]))return withCors(json({error:'Unlock this profile first.'},403),cors)
-      const body=await request.json()as{name?:string;isKids?:boolean};const name=body.name?.trim()
+      const body=await request.json()as{name?:string;isKids?:boolean;avatar?:string};const name=body.name?.trim(),avatar=body.avatar?.trim()||'bluey.png'
       if(!name||name.length>40)return withCors(json({error:'Enter a profile name up to 40 characters.'},400),cors)
+      if(!validAvatar(avatar))return withCors(json({error:'Choose a valid profile picture.'},400),cors)
       const existing=await env.DB.prepare('SELECT is_kids FROM profiles WHERE id=? AND user_id=?').bind(profileIdMatch[1],userId).first<{is_kids:number}>()
       if(existing?.is_kids&&!body.isKids&&!auth.has({reverification:{level:'first_factor',afterMinutes:1}}))return withCors(reverificationErrorResponse({level:'first_factor',afterMinutes:1}),cors)
-      if(body.isKids)await env.DB.prepare('UPDATE profiles SET name=?,is_kids=1,pin_hash=NULL,pin_salt=NULL,pin_version=pin_version+1,failed_attempts=0,locked_until=NULL WHERE id=? AND user_id=?').bind(name,profileIdMatch[1],userId).run()
-      else await env.DB.prepare('UPDATE profiles SET name=?,is_kids=0 WHERE id=? AND user_id=?').bind(name,profileIdMatch[1],userId).run()
-      return withCors(json({id:profileIdMatch[1],name,isKids:Boolean(body.isKids),hasPin:body.isKids?false:undefined}),cors)
+      if(body.isKids)await env.DB.prepare('UPDATE profiles SET name=?,is_kids=1,avatar=?,pin_hash=NULL,pin_salt=NULL,pin_version=pin_version+1,failed_attempts=0,locked_until=NULL WHERE id=? AND user_id=?').bind(name,avatar,profileIdMatch[1],userId).run()
+      else await env.DB.prepare('UPDATE profiles SET name=?,is_kids=0,avatar=? WHERE id=? AND user_id=?').bind(name,avatar,profileIdMatch[1],userId).run()
+      return withCors(json({id:profileIdMatch[1],name,isKids:Boolean(body.isKids),avatar,hasPin:body.isKids?false:undefined}),cors)
     }
     if(profileIdMatch&&request.method==='DELETE'){
       if(!await authorizedProfile(request,env,userId,profileIdMatch[1]))return withCors(json({error:'Unlock this profile first.'},403),cors)
