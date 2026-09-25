@@ -68,7 +68,7 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   const filtered=media
   const searchMatches=media.filter(item=>[item.title,item.seriesTitle,...(item.genres||[])].filter(Boolean).some(value=>value.toLowerCase().includes(query.toLowerCase())))
   const continuing=filtered.filter(item=>positions.has(item.id))
-  const categories=[...new Set(filtered.map(item=>item.category).filter(Boolean))]
+  const categories=[...new Set(filtered.map(item=>item.category).filter(category=>category&&!/tv|series|show/i.test(category)))]
   const tvItems=filtered.filter(item=>/tv|series|show/i.test(item.category))
   const series=useMemo(()=>{const groups=new Map();for(const item of media.filter(item=>/tv|series|show/i.test(item.category)&&item.seriesId)){const group=groups.get(item.seriesId)||[];group.push(item);groups.set(item.seriesId,group)}return groups},[media])
   const tvCards=useMemo(()=>{const grouped=new Map(),standalone=[];for(const item of tvItems){if(!item.seriesId){standalone.push(item);continue}if(!grouped.has(item.seriesId)){const episodes=series.get(item.seriesId)||[item];grouped.set(item.seriesId,{...item,id:`series:${item.seriesId}`,title:item.seriesTitle||item.seriesId,episodeCount:episodes.length,isSeries:true})}}return [...grouped.values(),...standalone]},[tvItems,series])
