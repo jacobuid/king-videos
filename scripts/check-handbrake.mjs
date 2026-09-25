@@ -1,9 +1,15 @@
-import { existsSync, readdirSync, statSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { basename, extname, join } from 'node:path'
 import { spawnSync } from 'node:child_process'
 
-const sourceFolder = process.argv[2] ?? 'D:\\king-videos\\Scooby Doo, Where Are You'
-const outputFolder = process.argv[3] ?? 'D:\\king-videos\\scooby-doo-compressed'
+const statusFile = new URL('../.handbrake-current.json', import.meta.url)
+const currentJob = existsSync(statusFile) ? JSON.parse(readFileSync(statusFile, 'utf8').replace(/^\uFEFF/, '')) : null
+const sourceFolder = process.argv[2] ?? currentJob?.inputFolder
+const outputFolder = process.argv[3] ?? currentJob?.outputFolder
+if (!sourceFolder || !outputFolder) {
+  console.error('No current HandBrake job was found. Start compression or pass source and output folders after --.')
+  process.exit(1)
+}
 const videoExtensions = new Set(['.mp4', '.m4v', '.mkv', '.avi'])
 
 function fail(message) {
@@ -92,6 +98,8 @@ const ratio = matchingSourceBytes > 0 ? completedBytes / matchingSourceBytes : 0
 const estimatedBytes = ratio > 0 ? sourceBytes * ratio : completedBytes
 
 console.log('\nHandBrake compression status\n')
+console.log(`- **Source:** ${sourceFolder}`)
+console.log(`- **Output:** ${outputFolder}`)
 console.log(`- **Currently running:** ${handBrakeIsRunning() ? 'Yes' : 'No'}`)
 console.log(`- **${completedFiles.length} completed files**`)
 console.log(`- **${remainingFiles.length} remaining files**`)

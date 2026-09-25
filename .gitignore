@@ -147,3 +147,4 @@ vite.config.ts.timestamp-*
 .pulumi/
 .wrangler/
 services/api/.deployment-secrets.json
+.handbrake-current.json

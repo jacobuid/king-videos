@@ -5,6 +5,12 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+$statusFile = Join-Path (Split-Path -Parent $PSScriptRoot) '.handbrake-current.json'
+@{
+  inputFolder = $InputFolder
+  outputFolder = $OutputFolder
+  startedAt = (Get-Date).ToString('o')
+} | ConvertTo-Json | Set-Content -LiteralPath $statusFile -Encoding utf8
 $handBrake = (Get-Command HandBrakeCLI.exe -ErrorAction SilentlyContinue).Source
 if (-not $handBrake) {
   $handBrake = Get-ChildItem "$env:LOCALAPPDATA\Microsoft\WinGet\Packages" -Recurse -Filter HandBrakeCLI.exe -File |
