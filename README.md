@@ -81,5 +81,5 @@ npm run handbrake:check -- "D:\king-videos\source" "D:\king-videos\compressed"
 Import a compressed movie and its thumbnail into Backblaze and D1:
 
 ```powershell
-node --env-file=.env scripts/import-b2-movie.mjs media-imports/sonic-the-hedgehog-the-movie/media.json
+node --env-file=.env scripts/import-b2-movie.mjs media-imports/sonic-the-hedgehog-ova/media.json
 ```
