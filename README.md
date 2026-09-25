@@ -38,3 +38,9 @@ Local video folders must be uploaded from the computer that contains the files.
    ```
 
 The importer skips known duplicate variants, uploads each MP4 to the private Backblaze bucket, and writes its series, season, and episode metadata to D1. It can be run again safely after an interrupted upload.
+
+Compress a local series into a separate resumable output folder before uploading:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/compress-series.ps1 -InputFolder D:\king-videos\bluey -OutputFolder D:\king-videos\bluey-compressed
+```
