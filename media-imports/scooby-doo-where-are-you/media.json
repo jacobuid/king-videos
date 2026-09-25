@@ -7,6 +7,7 @@
   "rating": "TV-G",
   "year": 1969,
   "kids": true,
+  "thumbnail": "thumb.jpg",
   "featured": false,
   "localFolder": "D:\\king-videos\\scooby-doo-compressed"
 }
