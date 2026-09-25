@@ -66,11 +66,12 @@ function Home({media,progress,favorites,toggleFavorite,profile,selected,setSelec
   const favoriteSet=new Set(favorites)
   const favoriteItems=[...tvCards.filter(item=>item.isSeries&&favoriteSet.has(item.id)),...filtered.filter(item=>favoriteSet.has(item.id))]
   const homeRows=[{title:'Continue Watching',items:continuing},{title:'My List',items:favoriteItems},...categories.slice(0,2).map(category=>({title:category,items:/tv|series|show/i.test(category)?tvCards:filtered.filter(item=>item.category===category)}))]
-  const movieRows=[{title:'Movies',items:filtered.filter(item=>!item.category||/movie/i.test(item.category))}]
-  const tvRows=[{title:'TV Shows',items:tvCards}]
+  const newestFirst=(a,b)=>(b.year||0)-(a.year||0)||a.title.localeCompare(b.title)
+  const movieRows=[{title:'Movies · Newest to Oldest',items:filtered.filter(item=>!item.category||/movie/i.test(item.category)).sort(newestFirst)}]
+  const tvRows=[{title:'TV Shows · Newest to Oldest',items:tvCards.slice().sort(newestFirst)}]
   const matchingSeries=new Set(searchMatches.map(item=>item.seriesId).filter(Boolean))
   const searchItems=[...tvCards.filter(item=>item.isSeries?matchingSeries.has(item.seriesId):searchMatches.some(match=>match.id===item.id)),...searchMatches.filter(item=>!/tv|series|show/i.test(item.category))]
-  const genreItems=[...tvCards.filter(item=>!genre||(series.get(item.seriesId)||[item]).some(episode=>(episode.genres||[]).includes(genre))),...media.filter(item=>!/tv|series|show/i.test(item.category)&&(!genre||(item.genres||[]).includes(genre)))].sort((a,b)=>(b.year||0)-(a.year||0)||a.title.localeCompare(b.title))
+  const genreItems=[...tvCards.filter(item=>!genre||(series.get(item.seriesId)||[item]).some(episode=>(episode.genres||[]).includes(genre))),...media.filter(item=>!/tv|series|show/i.test(item.category)&&(!genre||(item.genres||[]).includes(genre)))].sort(newestFirst)
   const searchRows=[{title:query?`Results for "${query}"`:'All Titles',items:searchItems}]
   const links=[['home','Home'],['genres','Genres'],['movies','Movies'],['tv','TV']]
   function navigate(path,seriesId=null,season=null,info=null){window.history.pushState({kingVideos:true,section:path,series:seriesId,season,info},'');setSelectedSeries(seriesId);setSelectedSeason(season);setInfoId(info);setSection(path)}
