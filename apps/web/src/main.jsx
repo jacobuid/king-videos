@@ -8,7 +8,7 @@ import './style.css'
 const key=import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 const api=import.meta.env.VITE_API_URL
 const colors=['#e50914','#0f9d8f','#6b38d1','#1773e8','#e67e22','#27952c','#c2185b','#0086a8']
-const profilePictures=['amy.png','bingo.png','blue.png','bluey.png','daphane.png','fred.png','knuckles.jpg','magenta.png','scoobydoo.png','shadow.png','shaggy.png','sonic.jpg','tails.jpg','velma.png']
+const profilePictures=['amy.png','bingo.png','blaze.png','blue.png','bluey.png','bucket-n-shovel.png','bunnie.png','daphane.png','fred.png','julie-su.png','knuckles.png','magenta.png','mailbox.png','sally.png','salt-n-pepper.png','scoobydoo.png','shadow.png','shaggy.png','soapy.png','sonic.png','tails.png','velma.png']
 const genres=['Action','Adventure','Cartoon','Live Action','Animation','Family','Suspense','Science Fiction','Fantasy','Sports','Romance','Comedy','Home Videos']
 const seriesCredits={bluey:{label:'Wikipedia',url:'https://en.wikipedia.org/wiki/List_of_Bluey_episodes'},'blues-clues':{label:'Wikipedia',url:"https://en.wikipedia.org/wiki/List_of_Blue's_Clues_episodes"},'scooby-doo-where-are-you':{label:'Wikipedia',url:'https://en.wikipedia.org/wiki/List_of_Scooby-Doo%2C_Where_Are_You%21_episodes'}}
 function profileColor(profile){let value=0;for(const char of profile.id)value=(value*31+char.charCodeAt(0))>>>0;return colors[value%colors.length]}
