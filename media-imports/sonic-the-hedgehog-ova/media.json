@@ -6,12 +6,9 @@
   "year": 1996,
   "category": "movie",
   "genres": [
+    "Action",
     "Adventure",
-    "Cartoon",
-    "Comedy",
-    "Family",
-    "Fantasy",
-    "Science Fiction"
+    "Cartoon"
   ],
   "rating": "TV-Y7",
   "kids": true,
