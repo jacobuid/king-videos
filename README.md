@@ -59,3 +59,15 @@ Compress a local series into a separate resumable output folder before uploading
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/compress-series.ps1 -InputFolder D:\king-videos\bluey -OutputFolder D:\king-videos\bluey-compressed
 ```
+
+Check the active Scooby-Doo compression job and validate every completed output:
+
+```powershell
+npm run handbrake:check
+```
+
+To check another series, pass its source and output folders after `--`:
+
+```powershell
+npm run handbrake:check -- "D:\king-videos\source" "D:\king-videos\compressed"
+```
