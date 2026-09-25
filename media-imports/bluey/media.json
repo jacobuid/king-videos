@@ -5,6 +5,7 @@
   "category": "tv",
   "genres": ["Adventure", "Cartoon", "Family"],
   "rating": "TV-Y",
+  "year": 2018,
   "kids": true,
   "thumbnail": "thumb.jpg",
   "featured": false,
