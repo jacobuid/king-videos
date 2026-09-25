@@ -18,6 +18,8 @@ Configure GitHub repository secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_
 
 Upload videos with the B2 CLI under `movies/<slug>/file.mp4` and thumbnails under `movies/<slug>/thumb.jpg`. Add catalog records using `scripts/add-media.sql.example` and `wrangler d1 execute king-videos --remote --file <your-sql-file> --config services/api/wrangler.jsonc`. The bucket stays private; the API returns short-lived signed URLs after Clerk verification.
 
+Media can use either private Backblaze objects or trusted Internet Archive URLs. Import an Internet Archive folder manifest with the manual `Import media` GitHub workflow. The importer enumerates episode MP4s and streams them from Archive.org while uploading their shared thumbnail to Backblaze. Existing Backblaze media continues to use private objects and short lived signed playback URLs.
+
 `npm run check` builds the web app and checks the Worker types. The GitHub Pages path is `/king-videos/`, matching the current repository name.
 
 ## Current scope
