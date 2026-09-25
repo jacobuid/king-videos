@@ -27,9 +27,10 @@ if(!metadataResponse.ok)throw new Error(`Internet Archive metadata failed (${met
 const metadata=await metadataResponse.json()
 const files=(metadata.files||[]).filter(file=>file.name?.toLowerCase().endsWith('.mp4')&&!file.name.toLowerCase().endsWith('.ia.mp4'))
 const cloudflareHeaders={Authorization:`Bearer ${process.env.CLOUDFLARE_API_TOKEN}`,'Content-Type':'application/json'}
-const databasesResponse=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database?name=king-videos`,{headers:cloudflareHeaders})
-const databases=await databasesResponse.json(),database=databases.result?.find(item=>item.name==='king-videos')
-if(!database)throw new Error('Cloudflare D1 database king-videos was not found')
+const databaseName=process.env.D1_DATABASE||'king-videos-prod'
+const databasesResponse=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database`,{headers:cloudflareHeaders})
+const databases=await databasesResponse.json(),database=databases.result?.find(item=>item.name===databaseName)
+if(!database)throw new Error(`Cloudflare D1 database ${databaseName} was not found`)
 async function query(sql,params){const response=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database/${database.uuid}/query`,{method:'POST',headers:cloudflareHeaders,body:JSON.stringify({sql,params})});const result=await response.json();if(!response.ok||!result.success)throw new Error(`D1 query failed: ${JSON.stringify(result.errors||result)}`)}
 for(const file of files){
   const match=file.name.match(/S(\d+)E(\d+)([A-D])?\s+(.+)\.mp4$/i);if(!match){console.log(`Skipping unrecognized episode: ${file.name}`);continue}
