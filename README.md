@@ -54,6 +54,12 @@ Place English subtitles beside their matching video as either `Video name.en.srt
 node --env-file=.env scripts/import-b2-series.mjs media-imports/bluey/media.json --subtitles-only
 ```
 
+If an upload stops, resume it without uploading existing Backblaze objects again:
+
+```powershell
+node --env-file=.env scripts/import-b2-series.mjs media-imports/bluey/media.json --resume
+```
+
 Compress a local series into a separate resumable output folder before uploading:
 
 ```powershell

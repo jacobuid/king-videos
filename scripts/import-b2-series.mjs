@@ -3,7 +3,7 @@ import { readdir, readFile } from 'node:fs/promises'
 import { basename, resolve } from 'node:path'
 import process from 'node:process'
 
-const manifestPath=resolve(process.argv[2]||''),subtitlesOnly=process.argv.includes('--subtitles-only'),fileArg=process.argv.indexOf('--file'),onlyFile=fileArg>=0?process.argv[fileArg+1]:null
+const manifestPath=resolve(process.argv[2]||''),subtitlesOnly=process.argv.includes('--subtitles-only'),resume=process.argv.includes('--resume'),fileArg=process.argv.indexOf('--file'),onlyFile=fileArg>=0?process.argv[fileArg+1]:null
 if(!process.argv[2]||(fileArg>=0&&!onlyFile))throw new Error('Usage: node scripts/import-b2-series.mjs <media.json> [--subtitles-only] [--file <filename>]')
 const manifest=JSON.parse(await readFile(manifestPath,'utf8')),folder=resolve(manifest.localFolder||'')
 const required=['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID']
@@ -16,8 +16,10 @@ const auth=await authResponse.json(),storage=auth.apiInfo.storageApi
 async function b2(operation,body){const response=await fetch(`${storage.apiUrl}/b2api/v4/${operation}`,{method:'POST',headers:{Authorization:auth.authorizationToken,'Content-Type':'application/json'},body:JSON.stringify(body)});if(!response.ok)throw new Error(`${operation} failed: ${await response.text()}`);return response.json()}
 const buckets=await b2('b2_list_buckets',{accountId:auth.accountId,bucketName}),bucket=buckets.buckets?.find(item=>item.bucketName===bucketName)
 if(!bucket)throw new Error(`Backblaze bucket ${bucketName} was not found`)
+const existingKeys=new Set()
+if(resume){let startFileName;do{const page=await b2('b2_list_file_names',{bucketId:bucket.bucketId,prefix:`movies/${manifest.id}/`,maxFileCount:10000,...(startFileName?{startFileName}:{})});for(const file of page.files||[])existingKeys.add(file.fileName);startFileName=page.nextFileName}while(startFileName);console.log(`Resume mode: found ${existingKeys.size} existing files in Backblaze`)}
 let upload=await b2('b2_get_upload_url',{bucketId:bucket.bucketId})
-async function uploadBytes(bytes,key,type){const hash=createHash('sha1').update(bytes).digest('hex');for(let attempt=1;attempt<=5;attempt++){try{const response=await fetch(upload.uploadUrl,{method:'POST',headers:{Authorization:upload.authorizationToken,'X-Bz-File-Name':encodeURIComponent(key),'Content-Type':type,'Content-Length':String(bytes.length),'X-Bz-Content-Sha1':hash},body:bytes});if(response.ok)return;if(response.status<500&&response.status!==401)throw new Error(`Upload failed for ${key}: ${await response.text()}`)}catch(error){if(attempt===5)throw error;console.warn(`Upload attempt ${attempt} failed for ${key}; retrying`)}upload=await b2('b2_get_upload_url',{bucketId:bucket.bucketId});await new Promise(resolve=>setTimeout(resolve,attempt*1000))}throw new Error(`Upload failed for ${key} after five attempts`)}
+async function uploadBytes(bytes,key,type){if(resume&&existingKeys.has(key)){console.log(`Already uploaded; skipping ${key}`);return}const hash=createHash('sha1').update(bytes).digest('hex');for(let attempt=1;attempt<=5;attempt++){try{const response=await fetch(upload.uploadUrl,{method:'POST',headers:{Authorization:upload.authorizationToken,'X-Bz-File-Name':encodeURIComponent(key),'Content-Type':type,'Content-Length':String(bytes.length),'X-Bz-Content-Sha1':hash},body:bytes});if(response.ok){existingKeys.add(key);return}if(response.status<500&&response.status!==401)throw new Error(`Upload failed for ${key}: ${await response.text()}`)}catch(error){if(attempt===5)throw error;console.warn(`Upload attempt ${attempt} failed for ${key}; retrying`)}upload=await b2('b2_get_upload_url',{bucketId:bucket.bucketId});await new Promise(resolve=>setTimeout(resolve,attempt*1000))}throw new Error(`Upload failed for ${key} after five attempts`)}
 async function uploadFile(path,key,type){return uploadBytes(await readFile(path),key,type)}
 function srtToVtt(value){return `WEBVTT\n\n${value.replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n').replace(/(\d{2}:\d{2}:\d{2}),(\d{3})/g,'$1.$2').trim()}\n`}
 
