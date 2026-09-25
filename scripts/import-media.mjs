@@ -5,7 +5,7 @@ import process from 'node:process'
 
 const manifestPath=resolve(process.argv[2]||'')
 if(!process.argv[2])throw new Error('Usage: node scripts/import-media.mjs <media.json>')
-const folder=dirname(manifestPath),manifest=JSON.parse(await readFile(manifestPath,'utf8'))
+const folder=dirname(manifestPath),manifest=JSON.parse((await readFile(manifestPath,'utf8')).replace(/^\uFEFF/,''))
 const required=['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID']
 for(const name of required)if(!process.env[name])throw new Error(`${name} is required`)
 const bucketName=process.env.B2_BUCKET||'king-videos'
