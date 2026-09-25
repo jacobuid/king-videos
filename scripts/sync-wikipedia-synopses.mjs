@@ -10,7 +10,7 @@ const response=await fetch(api,{headers:{'User-Agent':'King Videos metadata impo
 if(!response.ok)throw new Error(`Wikipedia request failed (${response.status})`)
 const html=(await response.json()).parse.text['*']
 const text=value=>value.replace(/<[^>]+>/g,' ').replace(/&#(x?[0-9a-f]+);/gi,(_,code)=>String.fromCodePoint(code[0].toLowerCase()==='x'?parseInt(code.slice(1),16):Number(code))).replace(/&quot;/g,'"').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/&#39;|&apos;/g,"'").replace(/\s+/g,' ').trim()
-const normalize=value=>text(value).replace(/^"|"$/g,'').toLowerCase().replace(/^joe's first day.*$/,'joe and tell').replace(/\(part \d+ of \d+\)|\(blue talks\)/g,'').replace(/pyjama/g,'pajama').replace(/\bwants\b/g,'want').replace(/\bms pepper\b/g,'mrs pepper').replace(/\bmovie\b/g,'').replace(/\b2\b/g,'two').replace(/^(a|the) /,'').normalize('NFKD').replace(/[^a-z0-9]+/gi,'')
+const normalize=value=>text(value).replace(/^"|"$/g,'').toLowerCase().replace(/^bluey\s*[:：]\s*/,'').replace(/^joe's first day.*$/,'joe and tell').replace(/\(part \d+ of \d+\)|\(blue talks\)/g,'').replace(/pyjama/g,'pajama').replace(/\bwants\b/g,'want').replace(/\bms pepper\b/g,'mrs pepper').replace(/\bmovie\b/g,'').replace(/\b2\b/g,'two').replace(/^(a|the) /,'').normalize('NFKD').replace(/[^a-z0-9]+/gi,'')
 const episodes=[]
 const pattern=/<tr class="vevent[^]*?<td class="summary"[^>]*>([^]*?)<\/td>[^]*?<\/tr><tr class="expand-child">[^]*?<div class="shortSummaryText"[^>]*>([^]*?)<\/div>/g
 for(const match of html.matchAll(pattern)){const title=text(match[1]).replace(/^"|"$/g,''),description=text(match[2]);if(title&&description)episodes.push({title,description})}
@@ -26,5 +26,5 @@ async function query(sql,params=[]){const resultResponse=await fetch(`https://ap
 const media=await query('SELECT id,title FROM media WHERE series_id=?',[seriesId])
 const descriptions=new Map(episodes.map(item=>[normalize(item.title),item.description]))
 let updated=0
-for(const item of media){const description=descriptions.get(normalize(item.title));if(!description){console.log(`No Wikipedia match: ${item.title}`);continue}await query('UPDATE media SET description=? WHERE id=?',[description,item.id]);updated++}
+for(const item of media){const key=normalize(item.title),description=descriptions.get(key)||(key==='postmanandgroundslava'?[descriptions.get('postman'),descriptions.get('groundslava')].filter(Boolean).join(' '):null);if(!description){console.log(`No Wikipedia match: ${item.title}`);continue}await query('UPDATE media SET description=? WHERE id=?',[description,item.id]);updated++}
 console.log(`Updated ${updated} of ${media.length} ${seriesId} records from ${source}`)

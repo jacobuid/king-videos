@@ -3,8 +3,8 @@ import { readdir, readFile } from 'node:fs/promises'
 import { basename, resolve } from 'node:path'
 import process from 'node:process'
 
-const manifestPath=resolve(process.argv[2]||''),subtitlesOnly=process.argv.includes('--subtitles-only')
-if(!process.argv[2])throw new Error('Usage: node scripts/import-b2-series.mjs <media.json> [--subtitles-only]')
+const manifestPath=resolve(process.argv[2]||''),subtitlesOnly=process.argv.includes('--subtitles-only'),fileArg=process.argv.indexOf('--file'),onlyFile=fileArg>=0?process.argv[fileArg+1]:null
+if(!process.argv[2]||(fileArg>=0&&!onlyFile))throw new Error('Usage: node scripts/import-b2-series.mjs <media.json> [--subtitles-only] [--file <filename>]')
 const manifest=JSON.parse(await readFile(manifestPath,'utf8')),folder=resolve(manifest.localFolder||'')
 const required=['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID']
 for(const name of required)if(!process.env[name])throw new Error(`${name} is required`)
@@ -28,14 +28,15 @@ const dbResponse=await fetch(`https://api.cloudflare.com/client/v4/accounts/${pr
 if(!database)throw new Error(`Cloudflare D1 database ${databaseName} was not found`)
 async function query(sql,params){const response=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database/${database.uuid}/query`,{method:'POST',headers:cfHeaders,body:JSON.stringify({sql,params})});const result=await response.json();if(!response.ok||!result.success)throw new Error(`D1 query failed: ${JSON.stringify(result.errors||result)}`)}
 
-const allNames=await readdir(folder),names=allNames.filter(name=>name.toLowerCase().endsWith('.mp4')&&!/\(1\)|\(AUSLAN\)/i.test(name)).sort(),seenHashes=new Set()
+const allNames=await readdir(folder),names=allNames.filter(name=>name.toLowerCase().endsWith('.mp4')&&!/\(1\)|\(AUSLAN\)/i.test(name)&&(!onlyFile||name.toLowerCase()===onlyFile.toLowerCase())).sort(),seenHashes=new Set()
+if(onlyFile&&!names.length)throw new Error(`Video file was not found: ${onlyFile}`)
 let imported=0,subtitles=0
 for(const name of names){
   const match=name.match(/S(\d+)\s*E(\d+)\s*-\s*(.+)\.mp4$/i),short=name.match(/^Shorts\s*-\s*(.+)\.mp4$/i)
   if(!match&&!short){console.log(`Skipping unrecognized video: ${name}`);continue}
   const season=match?Number(match[1]):0,episode=match?Number(match[2]):imported+1,title=(match?.[3]||short[1]).trim(),slug=title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),id=`${manifest.id}-s${String(season).padStart(2,'0')}e${String(episode).padStart(3,'0')}-${slug}`,videoKey=`movies/${manifest.id}/season-${season}/${id}.mp4`
-  const stem=name.replace(/\.mp4$/i,''),subtitleName=allNames.find(candidate=>candidate.toLowerCase()===`${stem}.en.srt`.toLowerCase())||allNames.find(candidate=>candidate.toLowerCase()===`${stem}.srt`.toLowerCase()),subtitleKey=subtitleName?`movies/${manifest.id}/season-${season}/${id}.en.vtt`:null
-  if(subtitleName){console.log(`Uploading subtitles: ${subtitleName}`);const vtt=Buffer.from(srtToVtt(await readFile(resolve(folder,subtitleName),'utf8')),'utf8');await uploadBytes(vtt,subtitleKey,'text/vtt; charset=utf-8');subtitles++}
+  const stem=name.replace(/\.mp4$/i,''),subtitleName=['.en.srt','.srt','.en.vtt','.vtt'].map(extension=>allNames.find(candidate=>candidate.toLowerCase()===`${stem}${extension}`.toLowerCase())).find(Boolean),subtitleKey=subtitleName?`movies/${manifest.id}/season-${season}/${id}.en.vtt`:null
+  if(subtitleName){console.log(`Uploading subtitles: ${subtitleName}`);const value=await readFile(resolve(folder,subtitleName),'utf8'),vtt=Buffer.from(subtitleName.toLowerCase().endsWith('.srt')?srtToVtt(value):value,'utf8');await uploadBytes(vtt,subtitleKey,'text/vtt; charset=utf-8');subtitles++}
   if(subtitlesOnly){if(subtitleKey)await query('UPDATE media SET subtitle_key=? WHERE series_id=? AND lower(title)=lower(?)',[subtitleKey,manifest.id,title]);continue}
   const bytes=await readFile(resolve(folder,name)),hash=createHash('sha1').update(bytes).digest('hex')
   if(seenHashes.has(hash)){console.log(`Skipping duplicate video: ${name}`);continue}
