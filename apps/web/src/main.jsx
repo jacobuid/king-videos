@@ -53,6 +53,7 @@ function App(){
 
 function Home({media,progress,favorites,toggleFavorite,profile,selected,setSelected,play,saveProgress,switchProfile}){
   const[query,setQuery]=useState(''),[genre,setGenre]=useState(''),[section,setSection]=useState('home'),[selectedSeries,setSelectedSeries]=useState(null),[selectedSeason,setSelectedSeason]=useState(null),[infoId,setInfoId]=useState(null)
+  const player=React.useRef(null),lastCheckpoint=React.useRef(0)
   useEffect(()=>{window.history.replaceState({kingVideos:true,section:'home',series:null,season:null,info:null},'');const restore=event=>{if(!event.state?.kingVideos)return;setSection(event.state.section);setSelectedSeries(event.state.series||null);setSelectedSeason(event.state.season??null);setInfoId(event.state.info||null)};window.addEventListener('popstate',restore);return()=>window.removeEventListener('popstate',restore)},[])
   const positions=useMemo(()=>new Map(progress.map(item=>[item.mediaId,item.positionSeconds])),[progress])
   const lastProgress=progress.slice().filter(item=>item.positionSeconds>0).sort((a,b)=>String(b.updatedAt||'').localeCompare(String(a.updatedAt||'')))[0]
@@ -78,6 +79,8 @@ function Home({media,progress,favorites,toggleFavorite,profile,selected,setSelec
   function navigate(path,seriesId=null,season=null,info=null){window.history.pushState({kingVideos:true,section:path,series:seriesId,season,info},'');setSelectedSeries(seriesId);setSelectedSeason(season);setInfoId(info);setSection(path)}
   function openMedia(item){if(item.isSeries)navigate('series',item.seriesId);else play(item)}
   function openInfo(item){if(item.seriesId)navigate('series',item.seriesId);else navigate('info',null,null,item.id)}
+  function checkpoint(event){const second=Math.floor(event.currentTarget.currentTime);if(second-lastCheckpoint.current>=15){lastCheckpoint.current=second;saveProgress(event)}}
+  function closePlayer(){if(player.current)saveProgress({target:player.current});setSelected(null)}
   const episodes=(series.get(selectedSeries)||[]).slice().sort((a,b)=>(a.seasonNumber||0)-(b.seasonNumber||0)||(a.episodeNumber||0)-(b.episodeNumber||0)||a.title.localeCompare(b.title))
   const infoItem=media.find(item=>item.id===infoId)
   return <><header className="home-header"><Logo/><nav>{links.map(([path,label])=><button key={path} className={section===path?'active':''} onClick={()=>navigate(path)}>{label}</button>)}<button className={section==='search'?'active':''} onClick={()=>navigate('search')}><FontAwesomeIcon icon={faMagnifyingGlass}/> Search</button></nav><button className="active-profile" onClick={switchProfile} aria-label={`Switch from ${profile.name}`}><Avatar profile={profile}/></button></header>
@@ -88,7 +91,7 @@ function Home({media,progress,favorites,toggleFavorite,profile,selected,setSelec
     {section==='series'&&<SeriesPage series={episodes} selectedSeason={selectedSeason} positions={positions} play={play} onBack={()=>window.history.back()} onSelectSeason={season=>navigate('series',selectedSeries,season)}/>}
     {section==='info'&&infoItem&&<InfoPage item={infoItem} saved={favoriteSet.has(infoItem.id)} play={play} toggleFavorite={toggleFavorite} onBack={()=>window.history.back()}/>}
     {section==='search'&&<><section className="search-page"><div className="home-search"><FontAwesomeIcon icon={faMagnifyingGlass}/><input autoFocus aria-label="Search videos" placeholder="Search titles" value={query} onChange={event=>setQuery(event.target.value)}/></div></section><SearchGrid title={searchRows[0].title} query={query} items={searchItems} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/></>}
-    {selected&&<section className="player-overlay"><div className="player-bar"><h2>{selected.title}</h2><button className="icon-button" onClick={()=>setSelected(null)}><FontAwesomeIcon icon={faXmark}/>Close</button></div><video controls autoPlay src={selected.url} onLoadedMetadata={event=>{event.currentTarget.currentTime=selected.startAt||0}} onPause={saveProgress} onEnded={saveProgress} onSeeked={saveProgress}/></section>}
+    {selected&&<section className="player-overlay"><div className="player-bar"><h2>{selected.title}</h2><button className="icon-button" onClick={closePlayer}><FontAwesomeIcon icon={faXmark}/>Close</button></div><video ref={player} controls autoPlay src={selected.url} onLoadedMetadata={event=>{event.currentTarget.currentTime=selected.startAt||0;lastCheckpoint.current=Math.floor(selected.startAt||0)}} onTimeUpdate={checkpoint} onPause={saveProgress} onEnded={saveProgress} onSeeked={saveProgress}/></section>}
   </>
 }
 
