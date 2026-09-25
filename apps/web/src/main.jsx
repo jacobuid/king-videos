@@ -9,7 +9,7 @@ const key=import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 const api=import.meta.env.VITE_API_URL
 const colors=['#e50914','#0f9d8f','#6b38d1','#1773e8','#e67e22','#27952c','#c2185b','#0086a8']
 const genres=['Action','Adventure','Cartoon','Live Action','Animation','Family','Suspense','Science Fiction','Fantasy','Sports','Romance','Comedy','Home Videos']
-const seriesCredits={bluey:{label:'Wikipedia',url:'https://en.wikipedia.org/wiki/List_of_Bluey_episodes'},'blues-clues':{label:'Wikipedia',url:"https://en.wikipedia.org/wiki/List_of_Blue's_Clues_episodes"}}
+const seriesCredits={bluey:{label:'Wikipedia',url:'https://en.wikipedia.org/wiki/List_of_Bluey_episodes'},'blues-clues':{label:'Wikipedia',url:"https://en.wikipedia.org/wiki/List_of_Blue's_Clues_episodes"},'scooby-doo-where-are-you':{label:'Wikipedia',url:'https://en.wikipedia.org/wiki/List_of_Scooby-Doo%2C_Where_Are_You%21_episodes'}}
 function profileColor(profile){let value=0;for(const char of profile.id)value=(value*31+char.charCodeAt(0))>>>0;return colors[value%colors.length]}
 function Avatar({profile,add=false}){return <span className={`avatar${add?' add-avatar':''}`} style={add?undefined:{'--avatar-color':profileColor(profile)}} aria-hidden="true">{add?<FontAwesomeIcon icon={faPlus}/>:<FontAwesomeIcon className="avatar-face" icon={faFaceSmile}/>}</span>}
 function Logo(){return <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo-kingflix.png`} alt="Kingflix"/>}
