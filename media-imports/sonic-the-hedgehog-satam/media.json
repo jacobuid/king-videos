@@ -1,0 +1,229 @@
+{
+  "id": "sonic-the-hedgehog-satam",
+  "title": "Sonic the Hedgehog (SatAM)",
+  "description": "Sonic and Princess Sally lead Knothole's Freedom Fighters in a rebellion against Doctor Robotnik's industrial rule over Mobius.",
+  "category": "tv",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Cartoon"
+  ],
+  "rating": "TV-Y7",
+  "year": 1993,
+  "kids": true,
+  "thumbnail": "thumb.png",
+  "featured": false,
+  "localFolder": "D:\\king-videos\\Sonic SatAM",
+  "excludeEpisodeZero": true,
+  "metadataSource": "https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_(TV_series)",
+  "episodes": [
+    {
+      "season": 1,
+      "episode": 1,
+      "title": "Sonic Boom",
+      "description": "Princess Sally and Antoine follow up on a lead that suggests that her father, King Acorn, may be alive. Meanwhile, Sonic attempts to rescue a captured Freedom Fighter.",
+      "date": "1993-09-25",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 2,
+      "title": "Sonic and Sally",
+      "description": "When the Princess is captured, Robotnik creates a robotic duplicate of her as a means of spying on and sabotaging the Freedom Fighters.",
+      "date": "1993-10-02",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 3,
+      "title": "Ultra Sonic",
+      "description": "Sonic finds his long-lost uncle, Sir Charles, after a failed mission in Robotropolis.",
+      "date": "1993-10-16",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 4,
+      "title": "Sonic and the Secret Scrolls",
+      "description": "The Freedom Fighters embark on a mission to find magical scrolls which may hold the key to unlimited power.",
+      "date": "1993-11-13",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 5,
+      "title": "Super Sonic",
+      "description": "An ancient, formerly evil wizard named Lazar takes away Sonic 's speed, with the promise to return it if Sonic retrieves the wizard's computer archive of spells from Robotnik.",
+      "date": "1993-09-18",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 6,
+      "title": "Sonic Racer",
+      "description": "Robotnik holds a race in Robotropolis in a bid to lure Sonic into a trap. The other Freedom Fighters take advantage of Robotnik's fixation on the race in hopes of destroying the city's power generator.",
+      "date": "1993-12-11",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 7,
+      "title": "Hooked on Sonics",
+      "description": "Antoine goes after Robotnik himself in an attempt to impress Sally and earn personal glory.",
+      "date": "1993-10-09",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 8,
+      "title": "Harmonic Sonic",
+      "description": "Robotnik launches a spy satellite in an effort to locate Knothole Village, the Freedom Fighters' hidden base. Sonic and Rotor head towards the satellite using a makeshift rocket to destroy it.",
+      "date": "1993-11-06",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 9,
+      "title": "Sonic's Nightmare",
+      "description": "Sonic is paralyzed by a recurring nightmare personifying his own personal fears; meanwhile, Robotnik unleashes a machine capable of destroying the world.",
+      "date": "1993-10-23",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 10,
+      "title": "Warp Sonic",
+      "description": "The Freedom Fighters find themselves defending an underground city of Mobian refugees, all the while coming to terms with their own personal relationships.",
+      "date": "1993-10-30",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 11,
+      "title": "Sub-Sonic",
+      "description": "The Freedom Fighters' home, the Great Forest, is dying. In search of magical water that causes plants to grow at an accelerated speed, the Freedom Fighters journey underground where they begin disappearing one by one.",
+      "date": "1993-11-20",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 12,
+      "title": "Sonic Past Cool",
+      "description": "Robotnik has set his eyes on the last living herd of a dinosaur-like species called Terapods. The Freedom Fighters help the creatures navigate through the Great Jungle where Sally has Nicole make use of translators for two Terapods while fighting off the advances of Robotnik's machines.",
+      "date": "1993-12-04",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 13,
+      "title": "Heads or Tails",
+      "description": "Sonic heads to Robotropolis in search of materials to build a defense against an impending invasion by Robotnik. However, the inexperienced Tails is tagging along.",
+      "date": "1993-11-27",
+      "year": 1993
+    },
+    {
+      "season": 2,
+      "episode": 1,
+      "title": "Game Guy",
+      "description": "Sonic and Sally befriend an ally named Ari Ram who claims to be part of another Freedom Fighter group, but he is not what he seems to be.",
+      "date": "1994-09-10",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 2,
+      "title": "Sonic Conversion",
+      "description": "Knothole's de-roboticizer is a success! Bunnie Rabbot and Uncle Chuck are back to their normal selves! But the Freedom Fighters' latest accomplishment seems too good to be true.",
+      "date": "1994-09-17",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 3,
+      "title": "No Brainer",
+      "description": "When Sonic loses his memory, Snively takes advantage and gets the hedgehog to infiltrate Knothole.",
+      "date": "1994-09-24",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 4,
+      "title": "Blast to the Past, Part 1",
+      "description": "The war with Robotnik is going badly. The only hope may lie in a pair of magical Time Stones: using them, Sonic and Sally could travel to Mobotropolis Kingdom's past (prior to Robotnik's takeover) and stop the fight before it begins.",
+      "date": "1994-10-01",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 5,
+      "title": "Blast to the Past, Part 2",
+      "description": "The time-travel mission to stop Robotnik has failed; his armies have already taken Mobotropolis! Also, Sonic and Sally have somehow put their younger selves and the Knothole Village in the Great Forest at risk.",
+      "date": "1994-10-08",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 6,
+      "title": "Fed Up with Antoine / Ghost Busted",
+      "description": "Antoine is appointed king of a biker gang called the Nasty Hyenas, unaware of their cannibalistic tradition. Sonic and Tails investigate a possible ghost problem while camping out with Antoine.",
+      "date": "1994-10-15",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 7,
+      "title": "Dulcy",
+      "description": "Dulcy is summoned to a dragon mating ground as Robotnik seeks to Roboticize the remainder of her species.",
+      "date": "1994-10-22",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 8,
+      "title": "The Void",
+      "description": "When Sally and Bunnie disappear, Sonic and Nicole rush in to rescue them, discovering the Void. Within the Void, they encounter a mysterious wizard named Naugus, the long-lost friend Ari, as well as Sally's father, the long-lost king of Mobotropolis.",
+      "date": "1994-10-29",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 9,
+      "title": "The Odd Couple / Ro-Becca",
+      "description": "Antoine is forced to share his house with Sonic after a failed landing from Dulcy destroys the hedgehog's home. Antoine accidentally activates a robot Rotor was working on. The robot suddenly develops a crush on him.",
+      "date": "1994-11-05",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 10,
+      "title": "Cry of the Wolf",
+      "description": "Sonic and company finally make contact with another Royal Freedom Fighter group. They must work together when a nearly indestructible war-machine arrives to attack.",
+      "date": "1994-11-12",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 11,
+      "title": "Drood Henge",
+      "description": "Sonic and Tails team up in order to thwart Robotnik's scheme to possess the magical Deep Power Stones.",
+      "date": "1994-11-19",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 12,
+      "title": "Spyhog",
+      "description": "Uncle Chuck finds himself increasingly at risk operating as a spy in Robotropolis.",
+      "date": "1994-11-26",
+      "year": 1994
+    },
+    {
+      "season": 2,
+      "episode": 13,
+      "title": "The Doomsday Project",
+      "description": "Robotnik's Doomsday Project begins a week earlier than anyone had anticipated. With all of Mobius in danger, the Freedom Fighters prepare for what may be their final battle.",
+      "date": "1994-12-03",
+      "year": 1994
+    }
+  ]
+}
