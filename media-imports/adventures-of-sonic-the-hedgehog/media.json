@@ -1,0 +1,540 @@
+{
+  "id": "adventures-of-sonic-the-hedgehog",
+  "title": "Adventures of Sonic the Hedgehog",
+  "description": "Sonic and Tails race across Mobius, using speed and quick thinking to stop Doctor Robotnik and his robotic henchmen from conquering their world.",
+  "category": "tv",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Cartoon"
+  ],
+  "rating": "TV-Y7",
+  "year": 1993,
+  "kids": true,
+  "thumbnail": "thumb.png",
+  "featured": false,
+  "localFolder": "D:\\king-videos\\sonic-compressed\\Sonic AoStH",
+  "metadataSource": "https://en.wikipedia.org/wiki/Adventures_of_Sonic_the_Hedgehog#Main_episodes",
+  "episodes": [
+    {
+      "season": 1,
+      "episode": 1,
+      "title": "Super Special Sonic Search & Smash Squad",
+      "description": "When Sonic and Tails are captured by Scratch and Grounder, the former creates a diversion by telling the duo the story of their creation.",
+      "date": "1993-10-06",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 2,
+      "title": "Subterranean Sonic",
+      "description": "Sonic and Tails escape underground from Scratch and Grounder, but they are held captive there by a miserly mole named Spelunk.",
+      "date": "1993-09-16",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 3,
+      "title": "Lovesick Sonic",
+      "description": "When Sonic saves a female hedgehog named Breezie, he falls in love. Little does he know that Breezie is a robot that Robotnik created to keep Sonic occupied while he attempts to flood a village near his fortress.",
+      "date": "1993-09-15",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 4,
+      "title": "Slowwww Going",
+      "description": "Sonic must save a family of sloths from Robotnik's latest invention that can slow down the molecular motion of anything it hits, but when he himself is affected by the device, Tails and the sloths must take action.",
+      "date": "1993-09-28",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 5,
+      "title": "High Stakes Sonic",
+      "description": "Sonic and Tails infiltrate Robotnik's new Casino Night Zone to stop him and his henchmen from scamming some Mobians into becoming the doctor's slaves.",
+      "date": "1993-09-20",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 6,
+      "title": "Sonic Breakout",
+      "description": "Robotnik imprisons a satirical cartoonist for mocking him in his comic book, much to the chagrin of his biggest fan Sonic, who purposely allows his own capture as well, but doesn't expect to be placed in a maximum-security jail cell. Robotnik angrily sends Sonic in the cell for interfering with his plans once again.",
+      "date": "1993-11-02",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 7,
+      "title": "Trail of the Missing Tails",
+      "description": "Robotnik's insane cousin, Doctor Warpnik, kidnaps Tails and lures Sonic into the Warp of Confusion in order to take revenge on the doctor for banishing him there.",
+      "date": "1993-10-01",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 8,
+      "title": "Close Encounter of the Sonic Kind",
+      "description": "Sonic and Tails help an alien prince fix his space shuttle so that he can return to his home planet for his coronation right before his younger brother is crowned in his place and has Mobius destroyed.",
+      "date": "1993-10-20",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 9,
+      "title": "Momma Robotnik's Birthday",
+      "description": "Robotnik's obnoxious and abusive mother visits her son on her birthday and expects a present. After he fails to ravage Mobius' national park as one, however, she decides to capture Sonic as her own gift.",
+      "date": "1993-09-27",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 10,
+      "title": "Big Daddy",
+      "description": "After being exiled by Robotnik, Coconuts finds a lost infantile ape who thinks he is his father and attempts to use it to stop Sonic. The ape's father is under the control of Robotnik and Sonic has to save him. Note : Pierre De Celles, an animation director, described this episode as one he felt \"really proud of,\" though he described the editing as \"poor\". He described that the animation process took \"four times longer than usual\" since the episode's animator was a deaf - mute ; he described his translator as \"just great\". [ 10 ]",
+      "date": "1993-09-23",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 11,
+      "title": "Sonic's Song",
+      "description": "Outraged by a popular song about Sonic, Robotnik outlaws all music in Mobius and takes the song's composer captive with the intent of creating his own song.",
+      "date": "1993-11-19",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 12,
+      "title": "Birth of a Salesman",
+      "description": "Energetic salesman Wes Weasley sells Robotnik numerous gadgets to help Scratch and Grounder capture Sonic. However, Robotnik later comes to regret it when they keep backfiring.",
+      "date": "1993-09-08",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 13,
+      "title": "Best Hedgehog",
+      "description": "Sonic and Tails rescue Lucas, Robotnik's first prisoner, and attempt to reunite him with his and Robotnik's high school sweetheart, Lucinda.",
+      "date": "1993-09-06",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 14,
+      "title": "The Robotnik Express",
+      "description": "En route to stop a runaway train from arriving at Robotnik's munition factory, Sonic and Tails must deal with a duo of bears named Big Griz and Mad Mike after they mistake Scratch and Grounder for them.",
+      "date": "1993-09-24",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 15,
+      "title": "Too Tall Tails",
+      "description": "While Sonic and Tails visit Wienerville, the \"weenie capital of Mobius\", Robotnik attempts to use Professor Von Schlemmer's size enhancement machine for his latest scheme. However, the machine backfires and instead enlarges Tails. Unable to control his appetite, Tails now begins to cause chaos for Wienerville. Sonic must return Tails to his former size when Robotnik tricks the citizens into thinking that Sonic is responsible for the incident, while he is planning to save the town.",
+      "date": "1993-10-05",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 16,
+      "title": "Tails' New Home",
+      "description": "Learning about Sonic's resolve to find Tails a suitable foster home to ensure his safety, Robotnik has two of his Badniks pose as Tails' long-lost parents. Note: For unknown reasons, the entire music in this episode (except for the intro and end credits) is in a lower pitch compared to other episodes in the series.",
+      "date": "1993-09-07",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 17,
+      "title": "Over the Hill Hero",
+      "description": "When former superhero Captain Rescue bungles in his attempts to help Sonic, he grows tired of his incompetence. Robotnik then manipulates Rescue into detaining Sonic in an impenetrable force field and he and Tails must save him.",
+      "date": "1993-09-13",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 18,
+      "title": "Blank-Headed Eagle",
+      "description": "When Scratch develops amnesia that makes him believe he is his television idol, Edgar Eagle, Sonic uses this as an advantage to foil another one of Robotnik's schemes.",
+      "date": "1993-09-21",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 19,
+      "title": "The Mystery of the Missing Hi-tops",
+      "description": "During a fair in his honor, Sonic's shoes are stolen and he and Tails use detective intellect to find the thief.",
+      "date": "1993-11-04",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 20,
+      "title": "So Long Sucker",
+      "description": "Tails adopts a squishy creature from another dimension named Goopster, who can sometimes act like a black hole .",
+      "date": "1993-09-29",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 21,
+      "title": "Sonic Gets Thrashed",
+      "description": "When Robotnik opens up a resort to enslave resident Mobians, Sonic enlists the help of some robots from an area called Scrap Valley.",
+      "date": "1993-10-19",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 22,
+      "title": "Pseudo Sonic",
+      "description": "Plotting to tarnish Sonic's reputation, Robotnik develops a robotic replication of him that he forces his unwilling laboratory rat to operate.",
+      "date": "1993-09-10",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 23,
+      "title": "Grounder the Genius",
+      "description": "Grounder accidentally puts a \"genius chip\" in his head and it makes him too intelligent that he easily captures Sonic and even takes over Robotnik's operations.",
+      "date": "1993-09-17",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 24,
+      "title": "Tails in Charge",
+      "description": "When Scratch and Grounder use Robotnik's latest invention that can turn things to stone against Sonic, Tails attempts to foil the duo to ensure Sonic's safety.",
+      "date": "1993-10-11",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 25,
+      "title": "Sno Problem",
+      "description": "When Robotnik introduces his \"Ultra Freeze-O-Matic\" and announcing a plan to freeze every citizen on Mobius so that he can install \"Servitude Chips\" into the frozen citizens and make them unquestionably obedient, Sonic and Tails must foil it.",
+      "date": "1993-11-22",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 26,
+      "title": "Submerged Sonic",
+      "description": "When Robotnik attacks the city of Submerbia in the Labyrinth Zone with the intent of obtaining its fabled Power Pearls, Sonic and Tails are enlisted by a local citizen to thwart his plot.",
+      "date": "1993-09-09",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 27,
+      "title": "Boogey-Mania",
+      "description": "Robotnik reconfigures Professor Von Schlemmer's machine that can bring figments of dreams into reality and unleashes a dream monster upon Mobius.",
+      "date": "1993-09-22",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 28,
+      "title": "Musta Been a Beautiful Baby",
+      "description": "Robotnik's attempt to cause Sonic to age rapidly with his newest device backfires, turning him and Tails, and later himself, into infants . Now stuck in a daycare, Sonic and Tails must try to keep Robotnik under control, while Scratch and Grounder attempt to rescue him.",
+      "date": "1993-10-12",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 29,
+      "title": "Robotnik, Jr.",
+      "description": "Robotnik constructs a robotic son in order to have carry on his legacy. The son, however, is inspired by Sonic and helps him thwart his latest scheme.",
+      "date": "1993-10-22",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 30,
+      "title": "Full Tilt Tails",
+      "description": "Robotnik makes a special type of chewing gum that makes the consumer as fast as Sonic. However, the gum ends up in Tails' possession.",
+      "date": "1993-11-12",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 31,
+      "title": "MacHopper",
+      "description": "Robotnik attempts to brainwash MacHopper, a friend of Sonic's, into doing his bidding, but an explosion causes his memory to become unstable.",
+      "date": "1993-11-10",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 32,
+      "title": "Momma Robotnik Returns",
+      "description": "Momma Robotnik visits her son, and after he fails once again, she disowns him and decides to adopt Sonic as her own son in order to capture him. In a turn of events, Sonic ends up living the life of Cinderella .",
+      "date": "1993-10-04",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 33,
+      "title": "Spaceman Sonic",
+      "description": "Robotnik sends Scratch and Grounder into space to pillage an asteroid belt, with Sonic and Tails in pursuit. When the spaceship runs out of power, they are stranded at an abandoned space station, pursued by a residing alien.",
+      "date": "1993-11-09",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 34,
+      "title": "Mad Mike, Da Bear Warrior",
+      "description": "Robotnik forces a starving village of rabbits into building a statue of himself. With help from Da Bears, Sonic manages to save the day.",
+      "date": "1993-11-24",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 35,
+      "title": "The Last Resort",
+      "description": "Robotnik seemingly announces his surrender to Sonic and he invites him to a resort. Unbeknownst to Sonic, the resort is just another trap from the doctor.",
+      "date": "1993-10-15",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 36,
+      "title": "Robotnik's Rival",
+      "description": "Robotnik and a rival named Doctor Brandon Quark try to cooperate in capturing Sonic. However, Sonic tricks them into becoming enemies and they eventually try to outdo each other.",
+      "date": "1993-09-30",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 37,
+      "title": "The Magic Hassle",
+      "description": "Coconuts acquires a magic wand and magical gadgets from Wes Weasley, after agreeing to forward all payments to Robotnik, and attempts to master them. Meanwhile, Robotnik tries to reshape the Mobius Mint's Sonic-themed banknotes in his image.",
+      "date": "1993-10-25",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 38,
+      "title": "Sonic the Matchmaker",
+      "description": "Robotnik pursues Breezie and Robotnik Jr. in order to find out why they betrayed him with the intent of building a perpetually loyal robot wife. In a subplot, Junior falls in love with Breezie and enlists Sonic's help in winning her affection.",
+      "date": "1993-10-13",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 39,
+      "title": "Tails Prevails",
+      "description": "On Sonic's birthday, Tails builds a flying bicycle. Realizing Tails' potential with mechanics, Professor Von Schlemmer invites Tails to be his research assistant, but then Robotnik captures and impersonates him to get Tails to build his latest anti-Sonic weapon.",
+      "date": "1993-10-21",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 40,
+      "title": "Zoobotnik",
+      "description": "An intergalactic huntress visits Mobius, capturing various citizens and falling in love with Robotnik.",
+      "date": "1993-10-08",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 41,
+      "title": "Attack on Pinball Fortress",
+      "description": "Robotnik has unleashed his Stupidity Ray on Mobius, knowing that those affected by it will be too unintelligent to stop him. As Sonic and Tails make their way to Robotnik's new lair, the Pinball Fortress, they find themselves competing with Wes Weasley and Sergeant Doberman, both of whom want to capture the device for their own purposes.",
+      "date": "1993-10-14",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 42,
+      "title": "Mass Transit Trouble",
+      "description": "When Robotnik threatens to bomb an airport, a lighthouse and a train station at once, Sonic is forced to travel to all three places in order to remove the bombs. Note : This episode ran for approximately a year and a half before the Oklahoma City bombing forced the episode's withdrawal from circulation. Later, as the incident died down, Toon Disney picked the episode up again, only to have it removed from circulation after about three years of airtime due to the September 11th attacks . [ citation needed ]",
+      "date": "1993-11-08",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 43,
+      "title": "Coachnik",
+      "description": "Robotnik constructs a pushy coach robot in an attempt to increase Scratch and Grounder's fitness. This leaves Robotnik time to create a football-like bomb in order to defeat Sonic by secretly placing it in Grounder's head.",
+      "date": "1993-10-18",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 44,
+      "title": "Untouchable Sonic",
+      "description": "Sonic comes to the rescue of a town that is held for ransom by Robotnik's crime syndicate.",
+      "date": "1993-11-01",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 45,
+      "title": "Super Robotnik",
+      "description": "A chemical accident caused by Coconuts ends up giving superpowers to Robotnik, who quickly uses them to threaten Mobius' world leaders and publicly humiliate Sonic. However, Robotnik isn't completely invincible and Sonic must find a way to exploit a potential weak spot in Robotnik's newfound powers in an Olympics-style gladiator match.",
+      "date": "1993-11-05",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 46,
+      "title": "Robolympics",
+      "description": "An asteroid is heading for Turtle Town and Robotnik offers to save it, but only if Sonic agrees to play in the Robolympics against him and his robots.",
+      "date": "1993-09-14",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 47,
+      "title": "Magnificent Sonic",
+      "description": "Sonic becomes the sheriff of an American frontier -styled town, in hopes of keeping Robotnik's cronies from harassing the locals.",
+      "date": "1993-10-07",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 48,
+      "title": "Black Bot the Pirate",
+      "description": "Robotnik goes time-traveling to find the four Chaos Emeralds that bestow upon the user unlimited power. His first stop is the time of Blackbeard the Pirate, where he enlists the pirate's help to find the first emerald. However, with help from a local scientist, Sonic and Tails go after him, and thwart his attempts to obtain the emerald.",
+      "date": "1993-10-26",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 49,
+      "title": "Hedgehog of the 'Hound' Table",
+      "description": "Robotnik's next stop in his search for the Chaos Emeralds is the Middle Ages , where the second emerald is. Sonic follows him, but Robotnik, with the unwilling help of a local wizard, obtains the emerald and rises to power.",
+      "date": "1993-10-27",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 50,
+      "title": "Robotnik's Pyramid Scheme",
+      "description": "In his next time-travel stop, Robotnik plans on erasing Sonic's family tree while he attempts to get the third emerald in Ancient Mobigypt . Sonic manages to prevent Robotnik from interfering with his ancestors' meeting and then races to the crypt of Robotnik's ancestor, where the emerald is kept.",
+      "date": "1993-10-28",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 51,
+      "title": "Prehistoric Sonic",
+      "description": "Despite the intervention of Sonic and Tails, Robotnik obtains the fourth and final emerald in prehistory. With the emeralds gathered together, Robotnik uses them to become an all-powerful being.",
+      "date": "1993-10-29",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 52,
+      "title": "Baby-Sitter Jitters",
+      "description": "Sonic and Tails babysit a trio of unruly beaver infants who end up being abducted by Scratch and Grounder. Robotnik uses the beavers as bait to capture Sonic and Tails, but the beavers become resourceful and help their friends thwart the doctor.",
+      "date": "1993-11-11",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 53,
+      "title": "Honey, I Shrunk the Hedgehog",
+      "description": "Sonic, Tails and a group of mole miners are hit by Robotnik's shrink ray and must work together to reverse the effects. Note: This episode was inspired by the Honey, I Shrunk the Kids franchise.",
+      "date": "1993-11-18",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 54,
+      "title": "Robotnikland",
+      "description": "Robotnik conquers a local amusement park on Sonic's birthday and uses it in an attempt to defeat him.",
+      "date": "1993-11-25",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 55,
+      "title": "The Mobius 5000",
+      "description": "Sonic and Tails enter a car race in order to save an orphanage that Robotnik threatens to put out of business.",
+      "date": "1993-11-17",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 56,
+      "title": "The Little Merhog",
+      "description": "Sonic and Tails help a mermaid-like hedgehog named Merna save her kingdom from the wrath of an evil sea captain.",
+      "date": "1993-11-26",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 57,
+      "title": "Road Hog",
+      "description": "Sonic and Tails are arrested for speeding as a result of Robotnik's latest creation – artificial pollen that induces brainwashing.",
+      "date": "1993-11-16",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 58,
+      "title": "The Robots' Robot",
+      "description": "Scratch and Grounder build a robot of their own who soon runs away and ends up befriending Sonic.",
+      "date": "1993-12-02",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 59,
+      "title": "Tails' Tale",
+      "description": "When Sonic mysteriously goes missing, Tails, Professor Von Schlemmer and a pilot named William le Due search for him.",
+      "date": "1993-12-01",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 60,
+      "title": "Hero of the Year",
+      "description": "Wes Weasley pretends to host a testimonial event for Sonic that Robotnik uses to force his surrender.",
+      "date": "1993-12-03",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 61,
+      "title": "Fast and Easy",
+      "description": "A pickpocket has stolen Robotnik's Chaos Emerald ring, to his chagrin, as Sonic must keep the former safe so that he can discard the ring.",
+      "date": "1993-11-30",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 62,
+      "title": "Lifestyles of the Sick and Twisted",
+      "description": "When Throbbin Screech features Sonic on his talk show , Lifestyles of the Very Good , Robotnik kidnaps his niece in order to be featured on it.",
+      "date": "1993-11-15",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 63,
+      "title": "Sonic is Running",
+      "description": "When Momma Robotnik threatens her son into campaigning for the Mobius presidency, Sonic decides to run against him.",
+      "date": "1993-11-23",
+      "year": 1993
+    },
+    {
+      "season": 1,
+      "episode": 64,
+      "title": "Robo-Ninjas",
+      "description": "Robotnik captures a martial arts master and uses him to turn Scratch and Grounder into effective ninjas to defeat Sonic.",
+      "date": "1993-11-29",
+      "year": 1993
+    },
+    {
+      "season": 0,
+      "episode": 1,
+      "title": "Sonic Christmas Blast",
+      "description": "Robotnik disguises himself as Santa Claus in order to force him into retirement and con the children out of presents during Christmas. During a visit to Robotropolis, Sonic and Tails rescue the real Santa Claus, who presents Sonic with a speed run test due to a ring Sally Acorn gave him as a gift serving as a key. After passing the test, Santa chooses Sonic to be his successor. Sonic now becomes Sonic Claus. This special includes aspects of the Saturday-morning Sonic TV show , such as Robotropolis and SWATbots (neither of which appear as they did in that series) and Sally Acorn. Said series had aired concurrently with the original run of \"Adventures\", but in a different time slot, and had stopped producing new episodes by the time \"Christmas Blast\" premiered. Despite this, the special maintains the humorous tone of \"Adventures\" rather than the darker one of the Saturday morning series. Note : The letters page of issue #41 of the Sonic the Hedgehog comic book promotes the special as \"An X-Tremely Sonic Christmas\" as this episode was originally going to be a tie in for Sonic X-treme on Sega Saturn . However, the game was cancelled, and the title was changed to tie in with Sonic 3D Blast instead. [ citation needed ]",
+      "date": "1996-11-24",
+      "year": 1996
+    }
+  ]
+}
