@@ -1,7 +1,10 @@
 param(
   [Parameter(Mandatory=$true)][string]$InputFolder,
   [Parameter(Mandatory=$true)][string]$OutputFolder,
-  [ValidateSet('mono','stereo','dpl1','dpl2','5point1','7point1')][string]$Mixdown = 'stereo'
+  [ValidateSet('mono','stereo','dpl1','dpl2','5point1','7point1')][string]$Mixdown = 'stereo',
+  [ValidateRange(0,4320)][int]$MaxHeight = 0,
+  [ValidateRange(0,100000)][int]$VideoBitrate = 0,
+  [ValidateRange(32,1536)][int]$AudioBitrate = 96
 )
 
 $ErrorActionPreference = 'Stop'
@@ -36,7 +39,16 @@ foreach ($video in $videos) {
   }
   Remove-Item -LiteralPath $temporary -Force -ErrorAction SilentlyContinue
   Write-Host "[$index/$($videos.Count)] Compressing: $($video.Name)"
-  & $handBrake -i $video.FullName -o $temporary -f av_mp4 -e x264 -q 23 --encoder-preset slow --optimize -a 1 -E av_aac -B 96 --mixdown $Mixdown
+  $encodeArgs = @('-i', $video.FullName, '-o', $temporary, '-f', 'av_mp4', '-e', 'x264', '--encoder-preset', 'slow', '--optimize', '-a', '1', '-E', 'av_aac', '-B', $AudioBitrate, '--mixdown', $Mixdown)
+  if ($VideoBitrate -gt 0) {
+    $encodeArgs += @('-b', $VideoBitrate, '--multi-pass', '--turbo')
+  } else {
+    $encodeArgs += @('-q', '23')
+  }
+  if ($MaxHeight -gt 0) {
+    $encodeArgs += @('--maxHeight', $MaxHeight, '--keep-display-aspect')
+  }
+  & $handBrake @encodeArgs
   if ($LASTEXITCODE -ne 0) { throw "HandBrake failed for $($video.Name)" }
   Move-Item -LiteralPath $temporary -Destination $output
 }
