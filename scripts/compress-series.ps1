@@ -4,7 +4,8 @@ param(
   [ValidateSet('mono','stereo','dpl1','dpl2','5point1','7point1')][string]$Mixdown = 'stereo',
   [ValidateRange(0,4320)][int]$MaxHeight = 0,
   [ValidateRange(0,100000)][int]$VideoBitrate = 0,
-  [ValidateRange(32,1536)][int]$AudioBitrate = 96
+  [ValidateRange(32,1536)][int]$AudioBitrate = 96,
+  [ValidateSet('ultrafast','superfast','veryfast','faster','fast','medium','slow','slower','veryslow')][string]$EncoderPreset = 'slow'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -39,7 +40,7 @@ foreach ($video in $videos) {
   }
   Remove-Item -LiteralPath $temporary -Force -ErrorAction SilentlyContinue
   Write-Host "[$index/$($videos.Count)] Compressing: $($video.Name)"
-  $encodeArgs = @('-i', $video.FullName, '-o', $temporary, '-f', 'av_mp4', '-e', 'x264', '--encoder-preset', 'slow', '--optimize', '-a', '1', '-E', 'av_aac', '-B', $AudioBitrate, '--mixdown', $Mixdown)
+  $encodeArgs = @('-i', $video.FullName, '-o', $temporary, '-f', 'av_mp4', '-e', 'x264', '--encoder-preset', $EncoderPreset, '--optimize', '-a', '1', '-E', 'av_aac', '-B', $AudioBitrate, '--mixdown', $Mixdown)
   if ($VideoBitrate -gt 0) {
     $encodeArgs += @('-b', $VideoBitrate, '--multi-pass', '--turbo')
   } else {
