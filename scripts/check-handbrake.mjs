@@ -39,6 +39,18 @@ function formatBytes(bytes) {
   return `${(bytes / 1024 ** power).toFixed(power >= 3 ? 2 : 1)} ${units[power]}`
 }
 
+function formatDuration(totalSeconds) {
+  const minutes = Math.max(1, Math.round(totalSeconds / 60))
+  const days = Math.floor(minutes / 1440)
+  const hours = Math.floor((minutes % 1440) / 60)
+  const remainingMinutes = minutes % 60
+  return [
+    days > 0 ? `${days} day${days === 1 ? '' : 's'}` : null,
+    hours > 0 ? `${hours} hr` : null,
+    remainingMinutes > 0 ? `${remainingMinutes} min` : null,
+  ].filter(Boolean).join(' ')
+}
+
 function findHandBrake() {
   if (process.env.HANDBRAKE_PATH && existsSync(process.env.HANDBRAKE_PATH)) return process.env.HANDBRAKE_PATH
 
@@ -96,6 +108,14 @@ const matchingSourceBytes = sourceFiles
   .reduce((total, file) => total + statSync(file).size, 0)
 const ratio = matchingSourceBytes > 0 ? completedBytes / matchingSourceBytes : 0
 const estimatedBytes = ratio > 0 ? sourceBytes * ratio : completedBytes
+const jobStartedAt = currentJob?.startedAt ? Date.parse(currentJob.startedAt) : Number.NaN
+const completedThisRun = Number.isFinite(jobStartedAt)
+  ? completedFiles.filter((file) => statSync(file).mtimeMs >= jobStartedAt - 1000)
+  : []
+const elapsedSeconds = Number.isFinite(jobStartedAt) ? (Date.now() - jobStartedAt) / 1000 : 0
+const estimatedSecondsRemaining = completedThisRun.length > 0
+  ? (elapsedSeconds / completedThisRun.length) * remainingFiles.length
+  : null
 
 console.log('\nHandBrake compression status\n')
 console.log(`- **Source:** ${sourceFolder}`)
@@ -103,6 +123,13 @@ console.log(`- **Output:** ${outputFolder}`)
 console.log(`- **Currently running:** ${handBrakeIsRunning() ? 'Yes' : 'No'}`)
 console.log(`- **${completedFiles.length} completed files**`)
 console.log(`- **${remainingFiles.length} remaining files**`)
+if (remainingFiles.length === 0) {
+  console.log('- Estimated time remaining: **Complete**')
+} else if (estimatedSecondsRemaining !== null) {
+  console.log(`- Estimated time remaining: **${formatDuration(estimatedSecondsRemaining)}** (based on ${completedThisRun.length} completed during this run)`)
+} else {
+  console.log('- Estimated time remaining: **Calculating after the next video completes**')
+}
 console.log(`- **${invalidFiles} invalid files**`)
 console.log(`- **${partialFiles.length} partial files**`)
 if (completedSizes.length > 0) {
@@ -111,10 +138,5 @@ if (completedSizes.length > 0) {
 console.log(`- Total compressed size: **${formatBytes(completedBytes)}**`)
 console.log(`- Before compressed size: **${formatBytes(sourceBytes)}**`)
 console.log(`- Estimated final compressed size: **${formatBytes(estimatedBytes)}**`)
-
-if (remainingFiles.length > 0) {
-  console.log('\nRemaining:')
-  for (const file of remainingFiles) console.log(`- ${basename(file)}`)
-}
 
 if (invalidFiles > 0) process.exitCode = 2
