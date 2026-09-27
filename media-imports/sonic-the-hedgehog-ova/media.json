@@ -1,4 +1,4 @@
-{
+﻿{
   "id": "sonic-the-hedgehog-ova",
   "title": "Sonic the Hedgehog: The Movie",
   "description": "Sonic, Tails, and Knuckles race to stop Dr. Robotnik's scheme and face Hyper Metal Sonic, a powerful machine created with Sonic's abilities and personality.",
@@ -14,7 +14,7 @@
   "kids": true,
   "duration": 3272,
   "video": "Sonic the Hedgehog - The Movie (1996 OVA - 720p WebRip).mp4",
-  "thumbnail": "thumb.png",
+  "thumbnail": "thumb.webp",
   "featured": false,
   "localFolder": "D:\\king-videos\\sonic-the-hedgehog-ova-compressed",
   "metadataSource": "https://en.wikipedia.org/wiki/Sonic_the_Hedgehog:_The_Movie"

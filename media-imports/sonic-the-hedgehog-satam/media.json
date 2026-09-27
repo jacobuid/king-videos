@@ -1,4 +1,4 @@
-{
+﻿{
   "id": "sonic-the-hedgehog-satam",
   "title": "Sonic the Hedgehog (SatAM)",
   "description": "Sonic and Princess Sally lead Knothole's Freedom Fighters in a rebellion against Doctor Robotnik's industrial rule over Mobius.",
@@ -11,7 +11,7 @@
   "rating": "TV-Y7",
   "year": 1993,
   "kids": true,
-  "thumbnail": "thumb.png",
+  "thumbnail": "thumb.webp",
   "featured": false,
   "localFolder": "D:\\king-videos\\Sonic SatAM",
   "excludeEpisodeZero": true,

@@ -7,6 +7,10 @@
     "dev:web": "npm run dev -w apps/web",
     "dev:api": "npm run dev -w services/api",
     "handbrake:check": "node scripts/check-handbrake.mjs",
-    "check": "npm run build && npm run check -w services/api"
+    "check": "npm run build && npm run check -w services/api",
+    "thumbnails:optimize": "node scripts/optimize-thumbnails.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4"
   }
 }

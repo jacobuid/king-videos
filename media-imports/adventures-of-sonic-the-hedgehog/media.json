@@ -1,4 +1,4 @@
-{
+﻿{
   "id": "adventures-of-sonic-the-hedgehog",
   "title": "Adventures of Sonic the Hedgehog",
   "description": "Sonic and Tails race across Mobius, using speed and quick thinking to stop Doctor Robotnik and his robotic henchmen from conquering their world.",
@@ -11,7 +11,7 @@
   "rating": "TV-Y7",
   "year": 1993,
   "kids": true,
-  "thumbnail": "thumb.png",
+  "thumbnail": "thumb.webp",
   "featured": false,
   "localFolder": "D:\\king-videos\\sonic-compressed\\Sonic AoStH",
   "metadataSource": "https://en.wikipedia.org/wiki/Adventures_of_Sonic_the_Hedgehog#Main_episodes",
@@ -468,7 +468,7 @@
       "season": 1,
       "episode": 57,
       "title": "Road Hog",
-      "description": "Sonic and Tails are arrested for speeding as a result of Robotnik's latest creation – artificial pollen that induces brainwashing.",
+      "description": "Sonic and Tails are arrested for speeding as a result of Robotnik's latest creation â€“ artificial pollen that induces brainwashing.",
       "date": "1993-11-16",
       "year": 1993
     },

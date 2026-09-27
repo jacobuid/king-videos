@@ -11,7 +11,7 @@
   "rating": "TV-Y",
   "year": 1996,
   "kids": true,
-  "thumbnail": "thumb.jpg",
+  "thumbnail": "thumb.webp",
   "featured": false,
   "source": {
     "provider": "internet-archive",
