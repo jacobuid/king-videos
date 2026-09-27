@@ -12,10 +12,9 @@
   ],
   "rating": "G",
   "kids": true,
+  "blocked": false,
   "duration": 5100,
   "video": "Rainbow Brite And The Star Stealer.mp4",
   "thumbnail": "thumb.png",
-  "featured": false,
-  "localFolder": "D:\\king-videos\\Rainbow Bright",
   "metadataSource": "https://en.wikipedia.org/wiki/Rainbow_Brite_and_the_Star_Stealer"
 }

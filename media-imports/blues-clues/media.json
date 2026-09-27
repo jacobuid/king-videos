@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "blues-clues",
   "title": "Blue's Clues",
   "description": "Blue leaves paw-print clues for her live-action host and young viewers to follow as they solve playful puzzles together.",
@@ -11,8 +11,8 @@
   "rating": "TV-Y",
   "year": 1996,
   "kids": true,
+  "blocked": false,
   "thumbnail": "thumb.webp",
-  "featured": false,
   "source": {
     "provider": "internet-archive",
     "identifier": "blues-clues-s-03-e-59-blues-big-musical-movie",

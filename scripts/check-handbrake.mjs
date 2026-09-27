@@ -19,9 +19,16 @@ function fail(message) {
 
 function videosIn(folder, includePartial = false) {
   if (!existsSync(folder)) fail(`Folder not found: ${folder}`)
-  return readdirSync(folder, { withFileTypes: true })
-    .filter((entry) => entry.isFile())
-    .map((entry) => join(folder, entry.name))
+  const files = []
+  function walk(current) {
+    for (const entry of readdirSync(current, { withFileTypes: true })) {
+      const path = join(current, entry.name)
+      if (entry.isDirectory()) walk(path)
+      else if (entry.isFile()) files.push(path)
+    }
+  }
+  walk(folder)
+  return files
     .filter((file) => videoExtensions.has(extname(file).toLowerCase()))
     .filter((file) => includePartial || !basename(file).endsWith('.partial.mp4'))
     .filter((file) => !/\(1\)|\(AUSLAN\)/i.test(basename(file)))
@@ -85,7 +92,7 @@ const outputFiles = videosIn(outputFolder)
 const outputNames = new Set(outputFiles.map(baseName))
 const completedFiles = outputFiles.filter((file) => statSync(file).size > 0)
 const remainingFiles = sourceFiles.filter((file) => !outputNames.has(baseName(file)))
-const partialFiles = readdirSync(outputFolder).filter((name) => name.endsWith('.partial.mp4'))
+const partialFiles = videosIn(outputFolder, true).filter((file) => file.endsWith('.partial.mp4'))
 const handBrake = findHandBrake()
 
 if (!handBrake) fail('HandBrakeCLI.exe was not found. Set HANDBRAKE_PATH to its full path.')

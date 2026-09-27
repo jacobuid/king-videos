@@ -1,11 +1,11 @@
 import { createHash } from 'node:crypto'
 import { readFile } from 'node:fs/promises'
-import { basename, extname, resolve } from 'node:path'
+import { basename, dirname, extname, resolve } from 'node:path'
 import process from 'node:process'
 
-const manifestPath=resolve(process.argv[2]||'')
-if(!process.argv[2])throw new Error('Usage: node scripts/import-b2-movie.mjs <media.json>')
-const manifest=JSON.parse((await readFile(manifestPath,'utf8')).replace(/^\uFEFF/,'')),folder=resolve(manifest.localFolder||'')
+const manifestPath=resolve(process.argv[2]||''),folderArg=process.argv.indexOf('--folder')
+if(!process.argv[2]||(folderArg>=0&&!process.argv[folderArg+1]))throw new Error('Usage: node scripts/import-b2-movie.mjs <media.json> [--folder <media-folder>]')
+const manifest=JSON.parse((await readFile(manifestPath,'utf8')).replace(/^\uFEFF/,'')),folder=resolve(folderArg>=0?process.argv[folderArg+1]:dirname(manifestPath))
 for(const name of ['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID'])if(!process.env[name])throw new Error(`${name} is required`)
 if(manifest.category!=='movie'||!manifest.video||!manifest.thumbnail)throw new Error('A movie manifest requires category, video, and thumbnail fields')
 
@@ -27,8 +27,8 @@ await uploadFile(manifest.video,videoKey,'video/mp4')
 const cfHeaders={Authorization:`Bearer ${process.env.CLOUDFLARE_API_TOKEN}`,'Content-Type':'application/json'},databaseName=process.env.D1_DATABASE||'king-videos-prod'
 const dbResponse=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database`,{headers:cfHeaders}),databases=await dbResponse.json(),database=databases.result?.find(item=>item.name===databaseName)
 if(!database)throw new Error(`Cloudflare D1 database ${databaseName} was not found`)
-const sql='INSERT INTO media(id,title,description,category,video_key,thumbnail_key,mime_type,kids_allowed,release_date,year,genres,rating,duration_seconds,featured) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET title=excluded.title,description=excluded.description,category=excluded.category,video_key=excluded.video_key,thumbnail_key=excluded.thumbnail_key,mime_type=excluded.mime_type,kids_allowed=excluded.kids_allowed,release_date=excluded.release_date,year=excluded.year,genres=excluded.genres,rating=excluded.rating,duration_seconds=excluded.duration_seconds,featured=excluded.featured'
-const params=[manifest.id,manifest.title,manifest.description||'','movie',videoKey,thumbnailKey,'video/mp4',manifest.kids?1:0,manifest.date||null,manifest.year||null,JSON.stringify(manifest.genres||[]),manifest.rating||null,manifest.duration||null,manifest.featured?1:0]
+const sql='INSERT INTO media(id,title,description,category,video_key,thumbnail_key,mime_type,kids_allowed,release_date,year,genres,rating,duration_seconds,blocked) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET title=excluded.title,description=excluded.description,category=excluded.category,video_key=excluded.video_key,thumbnail_key=excluded.thumbnail_key,mime_type=excluded.mime_type,kids_allowed=excluded.kids_allowed,release_date=excluded.release_date,year=excluded.year,genres=excluded.genres,rating=excluded.rating,duration_seconds=excluded.duration_seconds,blocked=excluded.blocked'
+const params=[manifest.id,manifest.title,manifest.description||'','movie',videoKey,thumbnailKey,'video/mp4',manifest.kids?1:0,manifest.date||null,manifest.year||null,JSON.stringify(manifest.genres||[]),manifest.rating||null,manifest.duration||null,manifest.blocked?1:0]
 const response=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database/${database.uuid}/query`,{method:'POST',headers:cfHeaders,body:JSON.stringify({sql,params})}),result=await response.json()
 if(!response.ok||!result.success)throw new Error(`D1 query failed: ${JSON.stringify(result.errors||result)}`)
 console.log(`Imported movie: ${manifest.title}`)

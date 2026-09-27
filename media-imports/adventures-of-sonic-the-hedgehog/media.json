@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "adventures-of-sonic-the-hedgehog",
   "title": "Adventures of Sonic the Hedgehog",
   "description": "Sonic and Tails race across Mobius, using speed and quick thinking to stop Doctor Robotnik and his robotic henchmen from conquering their world.",
@@ -11,9 +11,8 @@
   "rating": "TV-Y7",
   "year": 1993,
   "kids": true,
+  "blocked": false,
   "thumbnail": "thumb.webp",
-  "featured": false,
-  "localFolder": "D:\\king-videos\\sonic-compressed\\Sonic AoStH",
   "metadataSource": "https://en.wikipedia.org/wiki/Adventures_of_Sonic_the_Hedgehog#Main_episodes",
   "episodes": [
     {

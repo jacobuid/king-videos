@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "sonic-underground",
   "title": "Sonic Underground",
   "description": "Sonic, Sonia, and Manic form a rock band and resistance group as they search for their mother and fight Doctor Robotnik for the freedom of Mobius.",
@@ -11,9 +11,8 @@
   "rating": "TV-Y7",
   "year": 1999,
   "kids": true,
+  "blocked": false,
   "thumbnail": "thumb.webp",
-  "featured": false,
-  "localFolder": "D:\\king-videos\\sonic-compressed\\Sonic Underground",
   "excludeEpisodeZero": true,
   "metadataSource": "https://en.wikipedia.org/wiki/Sonic_Underground",
   "episodes": [

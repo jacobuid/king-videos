@@ -12,10 +12,9 @@
   ],
   "rating": "TV-G",
   "kids": true,
+  "blocked": false,
   "duration": 4688,
   "video": "Animalympics.mp4",
   "thumbnail": "thumb.png",
-  "featured": false,
-  "localFolder": "D:\\king-videos\\animalympics-compressed",
   "metadataSource": "https://en.wikipedia.org/wiki/Animalympics"
 }

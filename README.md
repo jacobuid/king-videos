@@ -42,7 +42,7 @@ Local video folders must be uploaded from the computer that contains the files.
 3. Run:
 
    ```powershell
-   node --env-file=.env scripts/import-b2-series.mjs media-imports/bluey/media.json
+   node --env-file=.env scripts/import-b2-series.mjs media-imports/bluey/media.json --folder "D:\king-videos\bluey-compressed"
    node --env-file=.env scripts/sync-wikipedia-synopses.mjs bluey "List of Bluey episodes"
    ```
 
@@ -51,13 +51,13 @@ The importer skips known duplicate variants, uploads each MP4 to the private Bac
 Place English subtitles beside their matching video as either `Video name.en.srt` or `Video name.srt`. The importer converts SRT files to browser-compatible WebVTT. To add subtitles to videos that are already uploaded without uploading the videos again, run:
 
 ```powershell
-node --env-file=.env scripts/import-b2-series.mjs media-imports/bluey/media.json --subtitles-only
+node --env-file=.env scripts/import-b2-series.mjs media-imports/bluey/media.json --folder "D:\king-videos\bluey-compressed" --subtitles-only
 ```
 
 If an upload stops, resume it without uploading existing Backblaze objects again:
 
 ```powershell
-node --env-file=.env scripts/import-b2-series.mjs media-imports/bluey/media.json --resume
+node --env-file=.env scripts/import-b2-series.mjs media-imports/bluey/media.json --folder "D:\king-videos\bluey-compressed" --resume
 ```
 
 Compress a local series into a separate resumable output folder before uploading:
@@ -81,5 +81,5 @@ npm run handbrake:check -- "D:\king-videos\source" "D:\king-videos\compressed"
 Import a compressed movie and its thumbnail into Backblaze and D1:
 
 ```powershell
-node --env-file=.env scripts/import-b2-movie.mjs media-imports/sonic-the-hedgehog-ova/media.json
+node --env-file=.env scripts/import-b2-movie.mjs media-imports/sonic-the-hedgehog-ova/media.json --folder "D:\king-videos\sonic-the-hedgehog-ova-compressed"
 ```
