@@ -1,0 +1,341 @@
+﻿{
+    "id":  "sonic-underground",
+    "title":  "Sonic Underground",
+    "description":  "Sonic, Sonia, and Manic form a rock band and resistance group as they search for their mother and fight Doctor Robotnik for the freedom of Mobius.",
+    "category":  "tv",
+    "genres":  [
+                   "Action",
+                   "Adventure",
+                   "Cartoon"
+               ],
+    "rating":  "TV-Y7",
+    "year":  1999,
+    "kids":  true,
+    "thumbnail":  "thumb.png",
+    "featured":  false,
+    "localFolder":  "D:\\king-videos\\sonic-compressed\\Sonic Underground",
+    "excludeEpisodeZero":  true,
+    "metadataSource":  "https://en.wikipedia.org/wiki/Sonic_Underground",
+    "episodes":  [
+                     {
+                         "season":  1,
+                         "episode":  1,
+                         "title":  "Beginnings",
+                         "description":  "Queen Aleena Hedgehog tells the story of how Dr. Robotnik took over planet Mobius and how she had to give up her three children Sonic, Sonia, and Manic to fulfill a prophecy that one day the siblings will be able to rise against Robotnik\u0027s rule and restore peace to the planet.",
+                         "date":  "1999-04-04",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  2,
+                         "title":  "Getting to Know You",
+                         "description":  "The newly reunited Hedgehog siblings must learn to work as a team if they are to do battle with Robotnik.",
+                         "date":  "1999-04-11",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  3,
+                         "title":  "Harmony or Something",
+                         "description":  "Sonic, Sonia and Manic go on a mission to rescue the Oracle from Robotnik.",
+                         "date":  "1999-04-18",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  4,
+                         "title":  "To Catch a Queen",
+                         "description":  "Argus, the former captain of the Queen\u0027s guard, arranges a secret meeting with her but he is soon intercepted by Robotnik\u0027s bounty hunters, Sleet and Dingo, who have every intention of feeding the soldier to the Roboticizer. Then Sonic, Sonia, and Manic attempt to rescue him.",
+                         "date":  "1999-01-10",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  5,
+                         "title":  "Mobodoon",
+                         "description":  "While evading Sleet and Dingo, the hedgehogs find themselves in a town completely untainted by Robotnik where Sonic and his siblings find the people to be nice, and the food is free. After using the Power Stone, the siblings discover that this is where they were born. Manic starts to become attached to the place and reports that this is where he wants to stay.",
+                         "date":  "1999-01-13",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  6,
+                         "title":  "The Price of Freedom",
+                         "description":  "Sonia, after getting dirty on one of her missions, drives to East Mobius; Sonic and Manic follow her after receiving news that Queen Aleena had been spotted there. There, Sonia is reunited with her best friend, Mindy LaTour, and her father. Mindy gives Sonia a watch. Unknown to the girls though, the timepiece is a tracking device designed by Robotnik. Sonia finds out, and soon, Mindy\u0027s estate is swarming with similar wristwatch-style robots, all being programmed to capture the hedgehogs.",
+                         "date":  "1999-01-17",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  7,
+                         "title":  "Underground Masquerade",
+                         "description":  "Sonic and Sonia become concerned after Manic reportedly begins to \"backslide to his old ways\" when he discovers a band of thieves led by Max. Sleet and Dingo are plotting to avoid giving the taxes they are collecting to Robotnik. They choose Manic to frame for a theft.",
+                         "date":  "1999-01-20",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  8,
+                         "title":  "Tangled Webs",
+                         "description":  "Sonic meets up with his friend Cyrus. While Sonic believes that Cyrus has joined the Freedom Fighters, he is actually working for Dr. Robotnik. When he finds out that the Freedom Fighters\u0027 \"sanctuary\" is for children, he destroys Robotnik\u0027s communicator. Sonic, Sonia and Manic try to get him away from Robotnik.",
+                         "date":  "1999-01-24",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  9,
+                         "title":  "The Deepest Fear",
+                         "description":  "On a trip to Port Mobius Sonic, Manic and Sonia are told that ships are sinking due to the Mobian sea-beast Moby Deep. The hedgehogs also meet Captain Squeege who informs them of a scam in which the townspeople must rely on Robotnik for protection from the sea monster. In reality it is Robotnik who is sinking the ships. Sonic is urged to overcome his fear of water and the monster to find the truth and end the fears of the seaside town.",
+                         "date":  "1999-01-27",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  10,
+                         "title":  "Who Do You Think You Are",
+                         "description":  "The Sonic Underground arrive in Tashistan in search of the Queen\u0027s Journal. Sonia loses her memory and meets Raphi, one of the town\u0027s resistance.",
+                         "date":  "1999-01-31",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  11,
+                         "title":  "The Last Resort",
+                         "description":  "While escaping from Sleet and Dingo, Sonic, Sonia, and Manic come across Lake Valley Resort. Lake Valley Resort is led by Stripes, who believes that making deals with Robotnik is safer than fighting Robotnik. When Robotnik asks if there are any new people staying at Lake Valley Resort, he reveals that Sonic and Manic are there, leaving out Sonia.",
+                         "date":  "1999-02-03",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  12,
+                         "title":  "Come Out Wherever You Are",
+                         "description":  "Bartleby, with the aid of Robotnik, invites Sonia to the Debutante Ball. Meanwhile, Robotnik comes out with the Predator, an aircraft that will capture and robotisize all members of the resistance. When the resistance hijacks the craft, Sonia is chosen to lead the captured members of the resistance to safety.",
+                         "date":  "1999-02-07",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  13,
+                         "title":  "Winner Fakes All",
+                         "description":  "Robotnik has created a super-fast robot and he\u0027s organized a race for the top athletes of Mobius and the robot.",
+                         "date":  "1999-02-10",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  14,
+                         "title":  "A Hedgehog\u0027s Home is Her Castle",
+                         "description":  "Sonia inherits a spooky and dilapidated castle and she enjoys the idea of making it the Underground headquarters. They also choose to stay there overnight.",
+                         "date":  "1999-02-14",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  15,
+                         "title":  "Artifact",
+                         "description":  "In order to raise money for his own cause, Robotnik auctions off artifacts from the lost city of Mobupinchu. But these artifacts are actually bombs, and they are about to go off.",
+                         "date":  "1999-02-17",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  16,
+                         "title":  "Bug",
+                         "description":  "The Sonic Underground finds a village that has been destroyed by its Freedom Fighter occupants. The Sonic Underground find that it seems to have something to do with Robotnik\u0027s flybots which are all over the desert, as Manic finds out when one of them injects him with a mind-control toxin, making him a slave to Dr. Robotnik.",
+                         "date":  "1999-02-21",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  17,
+                         "title":  "Sonic Tonic",
+                         "description":  "Using the essence of a rare plant, Robotnik manages to create a potion that could grant Sleet and Dingo the ability to run at the speed of Sonic, but it turns out to have troublesome side-effects just after Sonia and Manic take the serum themselves.",
+                         "date":  "1999-02-24",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  18,
+                         "title":  "Friend or Foe",
+                         "description":  "The band visit the Floating Island in search of their mother. There they meet Knuckles the Echidna, the island\u0027s guardian, who has been falsely told by Sleet and Dingo that the Sonic Underground is after the Chaos Emerald. Knuckles jumps to conclusions and while Knuckles and Sonic battle each other, Sleet and Dingo seek to steal the Emerald.",
+                         "date":  "1999-02-28",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  19,
+                         "title":  "Head Games",
+                         "description":  "Queen Aleena tells Sonic, Sonia, and Manic that they are needed in Speedster Island, where they worship stone heads of Mobian hedgehogs. Sonic, Sonia and Manic discover that Sleet and Dingo are scaring the fish away so people who live on Speedster Island move out. Meanwhile, Bartleby wants to turn Speedster Island into a modern resort for wealthy people, with Sleet and Dingo pretending to help. When Sonic, Sonia, and Manic arrive on Speedster Island, Sleet and Dingo capture the hedgehogs, while breaking the promises they made to Bartleby and the people who live on Speedster Island.",
+                         "date":  "1999-03-03",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  20,
+                         "title":  "When in Rome",
+                         "description":  "As a test of the hedgehogs\u0027 intellect and wit, the Oracle strips them of their powers and sends them into an alternate, Roman-themed reality where a Sleet-look-alike presides as Emperor.",
+                         "date":  "1999-03-07",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  21,
+                         "title":  "The Jewel in the Crown",
+                         "description":  "Queen Aleena\u0027s Royal Jewel can reportedly trace the location of Queen Aleena. Having apparently found the jewel Sonic, Sonia and Manic think they may have found their mother at last. It is actually a trap to capture Robotnik they\u0027ve just fallen into.",
+                         "date":  "1999-03-10",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  22,
+                         "title":  "Three Hedgehogs and a Baby",
+                         "description":  "While in Mobotropolis, Sonic, Sonia and Manic find an abandoned baby hedgehog. While Sonic and Sonia search for its parents, Manic is left to look after it and utilizes his maternal instincts. The baby is actually a robot and Robotnik almost uncovers the Freedom Fighters\u0027 sanctuary.",
+                         "date":  "1999-03-14",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  23,
+                         "title":  "Dunes Day",
+                         "description":  "The Sonic Underground come across a nomadic tribe whilst journeying through the desert. Manic claims to not trust the tribe\u0027s leader \"Ifyoucan\". He sets off to find out the truth and uncovers a shocking secret.",
+                         "date":  "1999-03-17",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  24,
+                         "title":  "Mummy Dearest",
+                         "description":  "The Sonic Underground journey through the treacherous Mobian desert as they try to locate a hidden temple filled with prophecies of Robotnik\u0027s defeat.",
+                         "date":  "1999-03-21",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  25,
+                         "title":  "The Hedgehog in the Iron Mask",
+                         "description":  "The Sonic Underground rescue a prisoner from one of Robotnik\u0027s towers – a hedgehog wearing a mask. The prisoner claims he is the hedgehogs\u0027 uncle and twin brother of Queen Aleena. It is a sinister plot by Robotnik to split the Sonic Underground up.",
+                         "date":  "1999-03-24",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  26,
+                         "title":  "Six Is a Crowd",
+                         "description":  "The hedgehogs visit the Oracle again. He sends them to an alternate dimension where they are tyrannical rulers of Mobius and Robotnik is the leader of the Freedom Fighters. They must defeat their corrupted selves and restore peace to Mobotropolis.",
+                         "date":  "1999-03-28",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  27,
+                         "title":  "Flying Fortress",
+                         "description":  "Robotnik creates a new flying fortress to lay waste to the planet. When the Sonic Underground suspect that a Chaos Emerald is keeping the fortress aloft, they head to the Floating Island to enlist the help of Knuckles. Sleet and Dingo steal the Emerald before the group can reach it, causing the fortress to fall into the sea.",
+                         "date":  "1999-03-31",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  28,
+                         "title":  "No Hedgehog is an Island",
+                         "description":  "After taking off with the Chaos Emerald, Dingo accidentally breaks it, unleashing the chaos energy inside. The Sonic Underground and Knuckles set off to talk to Knuckles\u0027 great-grandfather Athair for advice on handling the situation. Athair advises them to make an alliance with Robotnik.",
+                         "date":  "1999-04-07",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  29,
+                         "title":  "New Echidna in Town",
+                         "description":  "Knuckles bargains with Robotnik in order to recover and repair the Chaos Emerald before Mobius is destroyed, but to acquire the villain\u0027s help, the echidna must betray the hedgehogs. After rescuing his friends from the roboticizer, Knuckles and the Sonic Underground must now combat Dingo transformed by the chaos energy into a monster.",
+                         "date":  "1999-04-14",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  30,
+                         "title":  "Wedding Bell Blues",
+                         "description":  "Dr. Robotnik plots to become the king of Mobius. His first attempt was to marry Queen Aleena, which did not work due to the limited amount of money Robotnik had. His second attempt was to adopt Queen Aleena\u0027s daughter Sonia. In order to do this, he had Sleet and Dingo capture all of the hedgehogs and give Sonia to Robotnik so he could adopt her. Robotnik was almost successful until Queen Aleena demanded Robotnik not to adopt her.",
+                         "date":  "1999-01-06",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  31,
+                         "title":  "Country Crisis",
+                         "description":  "The Sonic Underground are on a mission to stop a group of hillbillies from feuding so they can stop Robotnik\u0027s building project from flooding the countryside.",
+                         "date":  "1999-04-21",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  32,
+                         "title":  "Haircraft in Space",
+                         "description":  "A salon robot is hypnotizing people that go to her salon into revealing deep secrets. When Sonia goes there, she reveals the location of their new base.",
+                         "date":  "1999-04-25",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  33,
+                         "title":  "Healer",
+                         "description":  "A Mobian named Titus creates a machine that can de-robotisize robots called the De-Roboticizer.",
+                         "date":  "1999-04-28",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  34,
+                         "title":  "Sonia\u0027s Choice",
+                         "description":  "Robotnik is about to auction four royal goblets in Anèz. When the hedgehogs take the goblets back, Sonic and Manic are captured. At both ends of the city are Roboticizers with one of Sonia\u0027s brothers inside.",
+                         "date":  "1999-05-02",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  35,
+                         "title":  "The Big Melt",
+                         "description":  "What started as a vacation for Sonic, Sonia and Manic gets ruined by Dr. Robotnik when he comes up with a plan – to melt the polar ice caps. Sonia gets split up from the group and mistaken for Queen Sauna by a group of penguins who are having troubles of their own.",
+                         "date":  "1999-05-05",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  36,
+                         "title":  "Sleepers",
+                         "description":  "Robotnik invents a new dart that induces sleep and sends them after the resistance. The hedgehogs attempt to stop them from the source. Manic is hit by the sleeper darts. After destroying the sleepers, they attempt to destroy the fuel source in the Bad Lands\u0027 Mine.",
+                         "date":  "1999-05-09",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  37,
+                         "title":  "Bartleby the Prisoner",
+                         "description":  "Bartleby is placed under arrest for helping out the resistance.",
+                         "date":  "1999-05-12",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  38,
+                         "title":  "The Art of Destruction",
+                         "description":  "The Sonic Underground come across ARTT (Artificial Robot Thought Technology), Robotnik\u0027s new robot that can think and learn for itself. ARTT soon learns the power of friendship and switches to the Resistance. This gives Sleet the opportunity to finish off ARTT and the hedgehogs before time runs out.",
+                         "date":  "1999-05-16",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  39,
+                         "title":  "The Pendant",
+                         "description":  "While combating Sleet and Dingo in the newly discovered Emerald Peninsula, Sonia finds a magic pendant that threatens to turn her invisible. Sonic and Manic race against time to find the cure to this seemingly irreversible spell before Sonia disappears forever.",
+                         "date":  "1999-05-19",
+                         "year":  1999
+                     },
+                     {
+                         "season":  1,
+                         "episode":  40,
+                         "title":  "Virtual Danger",
+                         "description":  "Sonic and Manic get addicted to a new video game that is hindering Cyrus\u0027 plan to infiltrate Robotnik\u0027s base. Sonic and Manic soon find out Robotnik is behind everything and is ready to eliminate them.",
+                         "date":  "1999-05-23",
+                         "year":  1999
+                     }
+                 ]
+}
