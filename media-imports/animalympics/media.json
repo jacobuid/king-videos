@@ -1,0 +1,21 @@
+{
+  "id": "animalympics",
+  "title": "Animalympics",
+  "description": "Animal athletes from around the world compete in summer and winter events during the first Animal Olympic Games, presented as a lively television sports broadcast.",
+  "date": "1980-02-01",
+  "year": 1980,
+  "category": "movie",
+  "genres": [
+    "Cartoon",
+    "Sports",
+    "Comedy"
+  ],
+  "rating": "TV-G",
+  "kids": true,
+  "duration": 4688,
+  "video": "Animalympics.mp4",
+  "thumbnail": "thumb.png",
+  "featured": false,
+  "localFolder": "D:\\king-videos\\animalympics-compressed",
+  "metadataSource": "https://en.wikipedia.org/wiki/Animalympics"
+}

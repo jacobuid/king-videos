@@ -5,7 +5,7 @@ import { basename, dirname, extname, join, relative, resolve } from 'node:path'
 import process from 'node:process'
 
 const args=process.argv.slice(2),value=name=>{const index=args.indexOf(name);return index>=0?args[index+1]:null},has=name=>args.includes(name)
-const input=resolve(value('--input')||''),output=resolve(value('--output')||''),workers=Number(value('--workers')||2),height=Number(value('--max-height')||0),videoBitrate=Number(value('--video-bitrate')||0),audioBitrate=Number(value('--audio-bitrate')||96),encoder=value('--encoder')||'nvenc_h264',preset=value('--preset')||'medium',excludeEpisodeZero=has('--exclude-episode-zero')
+const input=resolve(value('--input')||''),output=resolve(value('--output')||''),workers=Number(value('--workers')||2),height=Number(value('--max-height')||0),videoBitrate=Number(value('--video-bitrate')||0),audioBitrate=Number(value('--audio-bitrate')||96),encoder=value('--encoder')||'nvenc_h264',preset=value('--preset')||'medium',excludeEpisodeZero=has('--exclude-episode-zero'),statusFile=value('--status-file')
 if(!value('--input')||!value('--output')||!Number.isInteger(workers)||workers<1||workers>4)throw new Error('Usage: node scripts/compress-series-parallel.mjs --input <folder> --output <folder> [--workers 2] [--max-height 480] [--video-bitrate 600] [--audio-bitrate 96] [--encoder nvenc_h264] [--exclude-episode-zero]')
 
 function findHandBrake(){if(process.env.HANDBRAKE_PATH&&existsSync(process.env.HANDBRAKE_PATH))return process.env.HANDBRAKE_PATH;const where=spawnSync('where.exe',['HandBrakeCLI.exe'],{encoding:'utf8',windowsHide:true});const found=where.stdout?.split(/\r?\n/).find(path=>path&&existsSync(path));if(found)return found;const root=join(process.env.LOCALAPPDATA||'','Microsoft','WinGet','Packages');for(const packageName of existsSync(root)?readdirSync(root):[]){const candidate=join(root,packageName,'HandBrakeCLI.exe');if(existsSync(candidate))return candidate}throw new Error('HandBrakeCLI.exe was not found')}
@@ -13,7 +13,7 @@ function run(command,commandArgs,{onData}={}){return new Promise(resolve=>{const
 function episodeZero(name){return /(?:^|\s)E(?:p\.\s*)?00(?:\s|\b)/i.test(name)}
 function duration(seconds){const minutes=Math.max(1,Math.round(seconds/60)),hours=Math.floor(minutes/60);return hours?`${hours}h ${minutes%60}m`:`${minutes}m`}
 
-const handBrake=findHandBrake(),extensions=new Set(['.mp4','.m4v','.mkv','.avi']),statusPath=resolve('.handbrake-current.json'),startedAt=Date.now()
+const handBrake=findHandBrake(),extensions=new Set(['.mp4','.m4v','.mkv','.avi']),statusPath=resolve(statusFile||'.handbrake-current.json'),startedAt=Date.now()
 await mkdir(output,{recursive:true})
 async function scanFolder(folder){const found=[];for(const entry of await readdir(folder,{withFileTypes:true})){const path=join(folder,entry.name);if(entry.isDirectory())found.push(...await scanFolder(path));else found.push(path)}return found}
 const sourceFiles=await scanFolder(input),videos=sourceFiles.filter(path=>extensions.has(extname(path).toLowerCase())&&!/\(1\)|\(AUSLAN\)/i.test(basename(path))&&(!excludeEpisodeZero||!episodeZero(basename(path)))).map(path=>relative(input,path)).sort(),otherFiles=sourceFiles.filter(path=>!extensions.has(extname(path).toLowerCase()))
