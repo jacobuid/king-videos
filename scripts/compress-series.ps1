@@ -5,6 +5,7 @@ param(
   [ValidateRange(0,4320)][int]$MaxHeight = 0,
   [ValidateRange(0,100000)][int]$VideoBitrate = 0,
   [ValidateRange(32,1536)][int]$AudioBitrate = 96,
+  [ValidateSet('x264','nvenc_h264')][string]$VideoEncoder = 'x264',
   [ValidateSet('ultrafast','superfast','veryfast','faster','fast','medium','slow','slower','veryslow')][string]$EncoderPreset = 'slow',
   [switch]$ExcludeEpisodeZero
 )
@@ -42,7 +43,7 @@ foreach ($video in $videos) {
   }
   Remove-Item -LiteralPath $temporary -Force -ErrorAction SilentlyContinue
   Write-Host "[$index/$($videos.Count)] Compressing: $($video.Name)"
-  $encodeArgs = @('-i', $video.FullName, '-o', $temporary, '-f', 'av_mp4', '-e', 'x264', '--encoder-preset', $EncoderPreset, '--optimize', '-a', '1', '-E', 'av_aac', '-B', $AudioBitrate, '--mixdown', $Mixdown)
+  $encodeArgs = @('-i', $video.FullName, '-o', $temporary, '-f', 'av_mp4', '-e', $VideoEncoder, '--encoder-preset', $EncoderPreset, '--optimize', '-a', '1', '-E', 'av_aac', '-B', $AudioBitrate, '--mixdown', $Mixdown)
   if ($VideoBitrate -gt 0) {
     $encodeArgs += @('-b', $VideoBitrate, '--multi-pass', '--turbo')
   } else {
