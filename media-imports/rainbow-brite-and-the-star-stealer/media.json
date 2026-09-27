@@ -1,0 +1,21 @@
+{
+  "id": "rainbow-brite-and-the-star-stealer",
+  "title": "Rainbow Brite and the Star Stealer",
+  "description": "Rainbow Brite must stop an evil princess and her underlings from taking control of the planet Spectra and plunging the universe into darkness.",
+  "date": "1985-11-15",
+  "year": 1985,
+  "category": "movie",
+  "genres": [
+    "Cartoon",
+    "Family",
+    "Fantasy"
+  ],
+  "rating": "G",
+  "kids": true,
+  "duration": 5100,
+  "video": "Rainbow Brite And The Star Stealer.mp4",
+  "thumbnail": "thumb.png",
+  "featured": false,
+  "localFolder": "D:\\king-videos\\Rainbow Bright",
+  "metadataSource": "https://en.wikipedia.org/wiki/Rainbow_Brite_and_the_Star_Stealer"
+}
