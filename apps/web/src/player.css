@@ -1,3 +1,10 @@
+.player-stage {
+  flex: 1;
+  position: relative;
+  display: flex;
+  min-height: 0;
+}
+
 .player-overlay [data-media-player] {
   flex: 1;
   width: 100%;
@@ -13,4 +20,89 @@
   width: 100%;
   height: 100%;
   background: #000;
+}
+
+.next-episode-card {
+  position: absolute;
+  right: clamp(14px, 3vw, 42px);
+  bottom: clamp(70px, 10vh, 110px);
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  width: min(390px, calc(100% - 28px));
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid #ffffff55;
+  border-radius: 8px;
+  background: #171717f2;
+  box-shadow: 0 14px 40px #000c;
+  text-align: left;
+}
+
+.next-episode-card:hover {
+  border-color: #e7ad35;
+  background: #252525fa;
+}
+
+.next-episode-label {
+  grid-column: 1 / -1;
+  padding: 0 2px 8px;
+  color: #e7ad35;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.next-episode-card img,
+.next-episode-placeholder {
+  width: 128px;
+  aspect-ratio: 16 / 9;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.next-episode-placeholder {
+  display: grid;
+  place-items: center;
+  background: #333;
+}
+
+.next-episode-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding-left: 12px;
+}
+
+.next-episode-copy small {
+  color: #aaa;
+}
+
+.next-episode-copy strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.next-episode-copy > span {
+  margin-top: 3px;
+  color: #e7ad35;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .next-episode-card {
+    right: 14px;
+    bottom: 64px;
+    grid-template-columns: 104px minmax(0, 1fr);
+  }
+
+  .next-episode-card img,
+  .next-episode-placeholder {
+    width: 104px;
+  }
 }
