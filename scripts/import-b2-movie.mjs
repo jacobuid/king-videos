@@ -5,7 +5,7 @@ import process from 'node:process'
 
 const manifestPath=resolve(process.argv[2]||'')
 if(!process.argv[2])throw new Error('Usage: node scripts/import-b2-movie.mjs <media.json>')
-const manifest=JSON.parse(await readFile(manifestPath,'utf8')),folder=resolve(manifest.localFolder||'')
+const manifest=JSON.parse((await readFile(manifestPath,'utf8')).replace(/^\uFEFF/,'')),folder=resolve(manifest.localFolder||'')
 for(const name of ['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID'])if(!process.env[name])throw new Error(`${name} is required`)
 if(manifest.category!=='movie'||!manifest.video||!manifest.thumbnail)throw new Error('A movie manifest requires category, video, and thumbnail fields')
 
