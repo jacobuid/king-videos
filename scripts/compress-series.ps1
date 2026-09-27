@@ -5,7 +5,8 @@ param(
   [ValidateRange(0,4320)][int]$MaxHeight = 0,
   [ValidateRange(0,100000)][int]$VideoBitrate = 0,
   [ValidateRange(32,1536)][int]$AudioBitrate = 96,
-  [ValidateSet('ultrafast','superfast','veryfast','faster','fast','medium','slow','slower','veryslow')][string]$EncoderPreset = 'slow'
+  [ValidateSet('ultrafast','superfast','veryfast','faster','fast','medium','slow','slower','veryslow')][string]$EncoderPreset = 'slow',
+  [switch]$ExcludeEpisodeZero
 )
 
 $ErrorActionPreference = 'Stop'
@@ -27,6 +28,7 @@ $videoExtensions = @('.mp4', '.m4v', '.mkv', '.avi')
 $videos = Get-ChildItem -LiteralPath $InputFolder -File |
   Where-Object { $_.Extension.ToLowerInvariant() -in $videoExtensions } |
   Where-Object { $_.Name -notmatch '\(1\)|\(AUSLAN\)' } |
+  Where-Object { -not $ExcludeEpisodeZero -or $_.Name -notmatch '(?:^|\s)E(?:p\.\s*)?00(?:\s|\b)' } |
   Sort-Object Name
 
 $index = 0
