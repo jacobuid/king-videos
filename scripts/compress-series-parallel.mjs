@@ -1,0 +1,32 @@
+import { spawn, spawnSync } from 'node:child_process'
+import { copyFile, mkdir, readdir, rename, rm, stat, writeFile } from 'node:fs/promises'
+import { existsSync, readdirSync } from 'node:fs'
+import { basename, extname, join, resolve } from 'node:path'
+import process from 'node:process'
+
+const args=process.argv.slice(2),value=name=>{const index=args.indexOf(name);return index>=0?args[index+1]:null},has=name=>args.includes(name)
+const input=resolve(value('--input')||''),output=resolve(value('--output')||''),workers=Number(value('--workers')||2),height=Number(value('--max-height')||0),videoBitrate=Number(value('--video-bitrate')||0),audioBitrate=Number(value('--audio-bitrate')||96),encoder=value('--encoder')||'nvenc_h264',preset=value('--preset')||'medium',excludeEpisodeZero=has('--exclude-episode-zero')
+if(!value('--input')||!value('--output')||!Number.isInteger(workers)||workers<1||workers>4)throw new Error('Usage: node scripts/compress-series-parallel.mjs --input <folder> --output <folder> [--workers 2] [--max-height 480] [--video-bitrate 600] [--audio-bitrate 96] [--encoder nvenc_h264] [--exclude-episode-zero]')
+
+function findHandBrake(){if(process.env.HANDBRAKE_PATH&&existsSync(process.env.HANDBRAKE_PATH))return process.env.HANDBRAKE_PATH;const where=spawnSync('where.exe',['HandBrakeCLI.exe'],{encoding:'utf8',windowsHide:true});const found=where.stdout?.split(/\r?\n/).find(path=>path&&existsSync(path));if(found)return found;const root=join(process.env.LOCALAPPDATA||'','Microsoft','WinGet','Packages');for(const packageName of existsSync(root)?readdirSync(root):[]){const candidate=join(root,packageName,'HandBrakeCLI.exe');if(existsSync(candidate))return candidate}throw new Error('HandBrakeCLI.exe was not found')}
+function run(command,commandArgs,{onData}={}){return new Promise(resolve=>{const child=spawn(command,commandArgs,{windowsHide:true});child.stdout.on('data',chunk=>onData?.(String(chunk)));child.stderr.on('data',chunk=>onData?.(String(chunk)));child.on('error',error=>resolve({code:-1,error}));child.on('close',code=>resolve({code}))})}
+function episodeZero(name){return /(?:^|\s)E(?:p\.\s*)?00(?:\s|\b)/i.test(name)}
+function duration(seconds){const minutes=Math.max(1,Math.round(seconds/60)),hours=Math.floor(minutes/60);return hours?`${hours}h ${minutes%60}m`:`${minutes}m`}
+
+const handBrake=findHandBrake(),extensions=new Set(['.mp4','.m4v','.mkv','.avi']),statusPath=resolve('.handbrake-current.json'),startedAt=Date.now()
+await mkdir(output,{recursive:true})
+const entries=await readdir(input,{withFileTypes:true}),videos=entries.filter(entry=>entry.isFile()&&extensions.has(extname(entry.name).toLowerCase())&&!/\(1\)|\(AUSLAN\)/i.test(entry.name)&&(!excludeEpisodeZero||!episodeZero(entry.name))).map(entry=>entry.name).sort(),otherFiles=entries.filter(entry=>entry.isFile()&&!extensions.has(extname(entry.name).toLowerCase()))
+for(const file of otherFiles)await copyFile(join(input,file.name),join(output,file.name))
+
+const queue=[],completed=[],failures=[],workerState=Array.from({length:workers},(_,index)=>({id:index+1,status:'waiting',file:null,progress:0,speed:null,eta:null}))
+for(const name of videos){const destination=join(output,`${basename(name,extname(name))}.mp4`);if(existsSync(destination)){const scan=spawnSync(handBrake,['--scan','-i',destination],{windowsHide:true,stdio:'ignore',timeout:120000});if(scan.status===0){completed.push(name);continue}}queue.push(name)}
+const total=videos.length,initialCompleted=completed.length
+let nextIndex=0,statusWrite=Promise.resolve()
+function saveStatus(){const snapshot=JSON.stringify({inputFolder:input,outputFolder:output,startedAt:new Date(startedAt).toISOString(),parallelJobs:workers,total,completed:completed.length,remaining:Math.max(0,queue.length-nextIndex)+workerState.filter(worker=>worker.status==='encoding'||worker.status==='validating').length,failures,workers:workerState},null,2);statusWrite=statusWrite.then(()=>writeFile(statusPath,snapshot));return statusWrite}
+await saveStatus()
+async function worker(state){while(nextIndex<queue.length){const name=queue[nextIndex++],source=join(input,name),destination=join(output,`${basename(name,extname(name))}.mp4`),partial=`${destination}.partial.mp4`;await rm(partial,{force:true});Object.assign(state,{status:'encoding',file:name,progress:0,speed:null,eta:null});await saveStatus();let buffer='',lastProgressWrite=0;const encodeArgs=['-i',source,'-o',partial,'-f','av_mp4','-e',encoder,'--encoder-preset',preset,'--optimize','-a','1','-E','av_aac','-B',String(audioBitrate),'--mixdown','stereo'];if(videoBitrate>0)encodeArgs.push('-b',String(videoBitrate));else encodeArgs.push('-q','23');if(height>0)encodeArgs.push('--maxHeight',String(height),'--keep-display-aspect');const result=await run(handBrake,encodeArgs,{onData(chunk){buffer=(buffer+chunk).slice(-4000);const progress=[...buffer.matchAll(/Encoding:[^\r\n]*?([\d.]+) %/g)].at(-1),speed=[...buffer.matchAll(/avg ([\d.]+) fps/g)].at(-1),eta=[...buffer.matchAll(/ETA ([^\r\n)]+)/g)].at(-1);if(progress){state.progress=Number(progress[1]);state.speed=speed?Number(speed[1]):state.speed;state.eta=eta?.[1]||state.eta;if(Date.now()-lastProgressWrite>=2000){lastProgressWrite=Date.now();void saveStatus()}}}});if(result.code!==0){failures.push({file:name,stage:'encode',code:result.code});Object.assign(state,{status:'failed',progress:0});await saveStatus();continue}Object.assign(state,{status:'validating',progress:100,eta:null});await saveStatus();const scan=await run(handBrake,['--scan','-i',partial]);if(scan.code!==0){failures.push({file:name,stage:'validation',code:scan.code});Object.assign(state,{status:'failed'});await saveStatus();continue}await rename(partial,destination);completed.push(name);const elapsed=(Date.now()-startedAt)/1000,doneThisRun=completed.length-initialCompleted,remaining=total-completed.length-failures.length;console.log(`[Worker ${state.id}] Completed ${name} (${completed.length}/${total}); estimated ${duration(doneThisRun?elapsed/doneThisRun*remaining:0)} remaining`);Object.assign(state,{status:'waiting',file:null,progress:0,speed:null,eta:null});await saveStatus()}Object.assign(state,{status:'finished',file:null,progress:100,speed:null,eta:null});await saveStatus()}
+
+console.log(`Compressing ${queue.length} remaining videos with ${workers} shared-queue NVENC workers`)
+await Promise.all(workerState.map(worker))
+console.log(`Compression finished: ${completed.length}/${total} completed, ${failures.length} failed`)
+if(failures.length)process.exitCode=2
