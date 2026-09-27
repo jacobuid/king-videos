@@ -104,14 +104,15 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   function closePlayer(){savePlayerProgress();setSelected(null)}
   const episodes=(series.get(selectedSeries)||[]).slice().sort((a,b)=>(a.seasonNumber||0)-(b.seasonNumber||0)||(a.episodeNumber||0)-(b.episodeNumber||0)||a.title.localeCompare(b.title))
   const infoItem=tvCards.find(item=>item.id===infoId)||media.find(item=>item.id===infoId)
+  const infoIsSeries=Boolean(infoItem&&(infoItem.isSeries||String(infoItem.id).startsWith('series:')))
   const infoEpisodes=infoItem?.seriesId?(series.get(infoItem.seriesId)||[]).slice().sort((a,b)=>(a.seasonNumber||0)-(b.seasonNumber||0)||(a.episodeNumber||0)-(b.episodeNumber||0)||a.title.localeCompare(b.title)):[]
   const watchedInfoEpisode=infoEpisodes.length?progress.map(entry=>infoEpisodes.find(item=>item.id===entry.mediaId)).find(Boolean):null
-  const infoPlayable=infoItem?.isSeries?(watchedInfoEpisode||infoEpisodes[0]):infoItem
+  const infoPlayable=infoIsSeries?(watchedInfoEpisode||infoEpisodes[0]):infoItem
   const infoPosition=infoPlayable?positions.get(infoPlayable.id)||0:0
   const nextInfoStart=infoEpisodes.findIndex(item=>item.id===infoPlayable?.id)+1
   const nextInfoEpisodes=infoEpisodes.length?infoEpisodes.slice(Math.max(0,nextInfoStart),Math.max(0,nextInfoStart)+12):[]
   const similarMovies=infoItem&&!infoItem.seriesId&&!infoItem.isSeries?media.filter(item=>item.id!==infoItem.id&&/movie/i.test(item.category||'movie')).map(item=>({...item,matchCount:(item.genres||[]).filter(genre=>(infoItem.genres||[]).includes(genre)).length})).filter(item=>item.matchCount>0).sort((a,b)=>b.matchCount-a.matchCount||(b.year||0)-(a.year||0)).slice(0,12):[]
-  const infoRelatedRows=infoItem?.isSeries?[...new Set(infoEpisodes.map(item=>item.seasonNumber??1))].sort((a,b)=>a-b).map(season=>({title:season===0?'Shorts':`Season ${season}`,items:infoEpisodes.filter(item=>(item.seasonNumber??1)===season)})):[{title:infoItem?.seriesId?'Next Episodes':'Similar Movies',items:infoItem?.seriesId?nextInfoEpisodes:similarMovies}]
+  const infoRelatedRows=infoIsSeries?[...new Set(infoEpisodes.map(item=>item.seasonNumber??1))].sort((a,b)=>a-b).map(season=>({title:season===0?'Shorts':`Season ${season}`,items:infoEpisodes.filter(item=>(item.seasonNumber??1)===season)})):[{title:infoItem?.seriesId?'Next Episodes':'Similar Movies',items:infoItem?.seriesId?nextInfoEpisodes:similarMovies}]
   return <><header className="home-header"><Logo/><nav>{links.map(([path,label])=><button key={path} className={section===path?'active':''} onClick={()=>navigate(path)}>{label}</button>)}<button className={section==='search'?'active':''} onClick={()=>navigate('search')}><FontAwesomeIcon icon={faMagnifyingGlass}/> Search</button></nav><button className="active-profile" onClick={switchProfile} aria-label={`Switch from ${profile.name}`}><Avatar profile={profile}/></button></header>
     {section==='home'&&<><Hero featured={featured} position={lastProgress?.positionSeconds||0} hasProgress={Boolean(lastProgress)} play={play} info={openInfo}/><Shelves rows={homeRows} media={media} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} reorderFavorites={reorderFavorites} onEmptyMyList={()=>navigate('search')} play={openMedia}/></>}
     {section==='genres'&&<GenrePage selected={genre} setSelected={setGenre} items={genreItems} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/>}
