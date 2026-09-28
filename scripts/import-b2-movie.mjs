@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises'
 import { basename, dirname, extname, resolve } from 'node:path'
 import process from 'node:process'
 
-const manifestPath=resolve(process.argv[2]||''),folderArg=process.argv.indexOf('--folder')
+const manifestPath=resolve(process.argv[2]||''),folderArg=process.argv.indexOf('--folder'),uploadOnly=process.argv.includes('--upload-only'),metadataOnly=process.argv.includes('--metadata-only')
 if(!process.argv[2]||(folderArg>=0&&!process.argv[folderArg+1]))throw new Error('Usage: node scripts/import-b2-movie.mjs <media.json> [--folder <media-folder>]')
 const manifest=JSON.parse((await readFile(manifestPath,'utf8')).replace(/^\uFEFF/,'')),folder=resolve(folderArg>=0?process.argv[folderArg+1]:dirname(manifestPath))
 for(const name of ['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID'])if(!process.env[name])throw new Error(`${name} is required`)
@@ -21,9 +21,9 @@ for(const file of listed.files||[])existing.add(file.fileName)
 let upload=await b2('b2_get_upload_url',{bucketId:bucket.bucketId})
 async function uploadFile(file,key,type){if(existing.has(key)){console.log(`Already uploaded; skipping ${key}`);return}const bytes=await readFile(resolve(folder,file)),hash=createHash('sha1').update(bytes).digest('hex');for(let attempt=1;attempt<=5;attempt++){const response=await fetch(upload.uploadUrl,{method:'POST',headers:{Authorization:upload.authorizationToken,'X-Bz-File-Name':encodeURIComponent(key),'Content-Type':type,'Content-Length':String(bytes.length),'X-Bz-Content-Sha1':hash},body:bytes});if(response.ok){console.log(`Uploaded ${file}`);return}if(attempt===5)throw new Error(`Upload failed for ${key}: ${await response.text()}`);upload=await b2('b2_get_upload_url',{bucketId:bucket.bucketId});await new Promise(done=>setTimeout(done,attempt*1000))}}
 const videoKey=`${prefix}${manifest.id}.mp4`,thumbnailKey=`${prefix}${basename(manifest.thumbnail)}`,thumbnailType=extname(manifest.thumbnail).toLowerCase()==='.png'?'image/png':'image/jpeg'
-await uploadFile(manifest.thumbnail,thumbnailKey,thumbnailType)
-await uploadFile(manifest.video,videoKey,'video/mp4')
+if(!metadataOnly){await uploadFile(manifest.thumbnail,thumbnailKey,thumbnailType);await uploadFile(manifest.video,videoKey,'video/mp4')}
 
+if(uploadOnly){console.log(`Uploaded ${manifest.category}: ${manifest.title}`);process.exit(0)}
 const cfHeaders={Authorization:`Bearer ${process.env.CLOUDFLARE_API_TOKEN}`,'Content-Type':'application/json'},databaseName=process.env.D1_DATABASE||'king-videos-prod'
 const dbResponse=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database`,{headers:cfHeaders}),databases=await dbResponse.json(),database=databases.result?.find(item=>item.name===databaseName)
 if(!database)throw new Error(`Cloudflare D1 database ${databaseName} was not found`)
