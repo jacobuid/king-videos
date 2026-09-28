@@ -27,14 +27,14 @@ const episodeMetadata=new Map((manifest.episodes||[]).map(item=>[normalizeTitle(
 const episodeMetadataBySlot=new Map((manifest.episodes||[]).map(item=>[`${item.season}-${item.episode}`,item]))
 
 let thumbnailKey=null
-if(manifest.thumbnail&&!subtitlesOnly){thumbnailKey=`movies/${manifest.id}/${basename(manifest.thumbnail)}`;if(shardIndex===0){const thumbnailType=manifest.thumbnail.toLowerCase().endsWith('.png')?'image/png':'image/jpeg';console.log(`Uploading ${manifest.thumbnail}`);await uploadFile(resolve(folder,manifest.thumbnail),thumbnailKey,thumbnailType)}}
+if(manifest.thumbnail&&!subtitlesOnly){thumbnailKey=`movies/${manifest.id}/${basename(manifest.thumbnail)}`;if(shardIndex===0){const thumbnailType=manifest.thumbnail.toLowerCase().endsWith('.png')?'image/png':'image/jpeg';if(resume&&existingKeys.has(thumbnailKey))console.log(`Thumbnail already exists; skipping ${thumbnailKey}`);else{console.log(`Uploading ${manifest.thumbnail}`);await uploadFile(resolve(folder,manifest.thumbnail),thumbnailKey,thumbnailType)}}}
 let database=null
 const cfHeaders={Authorization:`Bearer ${process.env.CLOUDFLARE_API_TOKEN}`,'Content-Type':'application/json'},databaseName=process.env.D1_DATABASE||'king-videos-prod'
 if(!uploadOnly){const dbResponse=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database`,{headers:cfHeaders}),databases=await dbResponse.json();database=databases.result?.find(item=>item.name===databaseName);if(!database)throw new Error(`Cloudflare D1 database ${databaseName} was not found`)}
 async function query(sql,params){if(uploadOnly)return;const response=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database/${database.uuid}/query`,{method:'POST',headers:cfHeaders,body:JSON.stringify({sql,params})});const result=await response.json();if(!response.ok||!result.success)throw new Error(`D1 query failed: ${JSON.stringify(result.errors||result)}`)}
 
 async function listFiles(directory,prefix=''){const files=[];for(const entry of await readdir(directory,{withFileTypes:true})){const name=prefix?`${prefix}/${entry.name}`:entry.name;if(entry.isDirectory())files.push(...await listFiles(resolve(directory,entry.name),name));else files.push(name)}return files}
-const allNames=await listFiles(folder),eligibleNames=allNames.filter(name=>name.toLowerCase().endsWith('.mp4')&&!/\(1\)|\(AUSLAN\)/i.test(name)&&(!manifest.excludeEpisodeZero||!/(?:^|\s)E00(?:\s|\b)/i.test(name))&&(!onlyFile||name.toLowerCase()===onlyFile.toLowerCase())).sort(),names=eligibleNames.filter((_,index)=>index%shardCount===shardIndex),seenHashes=new Set()
+const allNames=await listFiles(folder),eligibleNames=allNames.filter(name=>name.toLowerCase().endsWith('.mp4')&&!/\.temp\.mp4$|\.f\d+\.mp4$|\(1\)|\(AUSLAN\)/i.test(name)&&(!manifest.excludeEpisodeZero||!/(?:^|\s)E00(?:\s|\b)/i.test(name))&&(!onlyFile||name.toLowerCase()===onlyFile.toLowerCase())).sort(),names=eligibleNames.filter((_,index)=>index%shardCount===shardIndex),seenHashes=new Set()
 if(onlyFile&&!names.length)throw new Error(`Video file was not found: ${onlyFile}`)
 let imported=0,subtitles=0
 async function importName(name,fileIndex){
