@@ -10,7 +10,7 @@ if (!sourceFolder || !outputFolder) {
   console.error('No current HandBrake job was found. Start compression or pass source and output folders after --.')
   process.exit(1)
 }
-const videoExtensions = new Set(['.mp4', '.m4v', '.mkv', '.avi'])
+const videoExtensions = new Set(['.mp4', '.m4v', '.mkv', '.avi', '.mov'])
 
 function fail(message) {
   console.error(`\nHandBrake status check failed: ${message}`)

@@ -13,7 +13,7 @@ function run(command,commandArgs,{onData}={}){return new Promise(resolve=>{const
 function episodeZero(name){return /(?:^|\s)E(?:p\.\s*)?00(?:\s|\b)/i.test(name)}
 function duration(seconds){const minutes=Math.max(1,Math.round(seconds/60)),hours=Math.floor(minutes/60);return hours?`${hours}h ${minutes%60}m`:`${minutes}m`}
 
-const handBrake=findHandBrake(),extensions=new Set(['.mp4','.m4v','.mkv','.avi']),statusPath=resolve(statusFile||'.handbrake-current.json'),startedAt=Date.now()
+const handBrake=findHandBrake(),extensions=new Set(['.mp4','.m4v','.mkv','.avi','.mov']),statusPath=resolve(statusFile||'.handbrake-current.json'),startedAt=Date.now()
 await mkdir(output,{recursive:true})
 async function scanFolder(folder){const found=[];for(const entry of await readdir(folder,{withFileTypes:true})){const path=join(folder,entry.name);if(entry.isDirectory())found.push(...await scanFolder(path));else found.push(path)}return found}
 const sourceFiles=await scanFolder(input),videos=sourceFiles.filter(path=>extensions.has(extname(path).toLowerCase())&&!/\(1\)|\(AUSLAN\)/i.test(basename(path))&&(!excludeEpisodeZero||!episodeZero(basename(path)))).map(path=>relative(input,path)).filter(path=>!onlyFile||path.replaceAll('\\','/').toLowerCase()===onlyFile.toLowerCase()).sort(),otherFiles=sourceFiles.filter(path=>!extensions.has(extname(path).toLowerCase()))
