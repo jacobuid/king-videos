@@ -7,7 +7,7 @@ const manifestPath=resolve(process.argv[2]||''),folderArg=process.argv.indexOf('
 if(!process.argv[2]||(folderArg>=0&&!process.argv[folderArg+1]))throw new Error('Usage: node scripts/import-b2-movie.mjs <media.json> [--folder <media-folder>]')
 const manifest=JSON.parse((await readFile(manifestPath,'utf8')).replace(/^\uFEFF/,'')),folder=resolve(folderArg>=0?process.argv[folderArg+1]:dirname(manifestPath))
 for(const name of ['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID'])if(!process.env[name])throw new Error(`${name} is required`)
-if(manifest.category!=='movie'||!manifest.video||!manifest.thumbnail)throw new Error('A movie manifest requires category, video, and thumbnail fields')
+if(!['movie','short'].includes(manifest.category)||!manifest.video||!manifest.thumbnail)throw new Error('A movie or short manifest requires category, video, and thumbnail fields')
 
 const basic=Buffer.from(`${process.env.B2_BOOTSTRAP_KEY_ID}:${process.env.B2_BOOTSTRAP_APPLICATION_KEY}`).toString('base64')
 const authResponse=await fetch('https://api.backblazeb2.com/b2api/v4/b2_authorize_account',{headers:{Authorization:`Basic ${basic}`}})
@@ -28,7 +28,7 @@ const cfHeaders={Authorization:`Bearer ${process.env.CLOUDFLARE_API_TOKEN}`,'Con
 const dbResponse=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database`,{headers:cfHeaders}),databases=await dbResponse.json(),database=databases.result?.find(item=>item.name===databaseName)
 if(!database)throw new Error(`Cloudflare D1 database ${databaseName} was not found`)
 const sql='INSERT INTO media(id,title,description,category,video_key,thumbnail_key,mime_type,kids_allowed,release_date,year,genres,rating,duration_seconds,blocked) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET title=excluded.title,description=excluded.description,category=excluded.category,video_key=excluded.video_key,thumbnail_key=excluded.thumbnail_key,mime_type=excluded.mime_type,kids_allowed=excluded.kids_allowed,release_date=excluded.release_date,year=excluded.year,genres=excluded.genres,rating=excluded.rating,duration_seconds=excluded.duration_seconds,blocked=excluded.blocked'
-const params=[manifest.id,manifest.title,manifest.description||'','movie',videoKey,thumbnailKey,'video/mp4',manifest.kids?1:0,manifest.date||null,manifest.year||null,JSON.stringify(manifest.genres||[]),manifest.rating||null,manifest.duration||null,manifest.blocked?1:0]
+const params=[manifest.id,manifest.title,manifest.description||'',manifest.category,videoKey,thumbnailKey,'video/mp4',manifest.kids?1:0,manifest.date||null,manifest.year||null,JSON.stringify(manifest.genres||[]),manifest.rating||null,manifest.duration||null,manifest.blocked?1:0]
 const response=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database/${database.uuid}/query`,{method:'POST',headers:cfHeaders,body:JSON.stringify({sql,params})}),result=await response.json()
 if(!response.ok||!result.success)throw new Error(`D1 query failed: ${JSON.stringify(result.errors||result)}`)
-console.log(`Imported movie: ${manifest.title}`)
+console.log(`Imported ${manifest.category}: ${manifest.title}`)

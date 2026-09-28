@@ -82,7 +82,7 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   const filtered=media
   const searchMatches=media.filter(item=>[item.title,item.seriesTitle,...(item.genres||[])].filter(Boolean).some(value=>value.toLowerCase().includes(query.toLowerCase())))
   const continuing=filtered.filter(item=>positions.has(item.id))
-  const categories=[...new Set(filtered.map(item=>item.category).filter(category=>category&&!/tv|series|show/i.test(category)))]
+  const categories=[...new Set(filtered.map(item=>item.category).filter(category=>category&&!/tv|series|show|short/i.test(category)))]
   const tvItems=filtered.filter(item=>/tv|series|show/i.test(item.category))
   const series=useMemo(()=>{const groups=new Map();for(const item of media.filter(item=>/tv|series|show/i.test(item.category)&&item.seriesId)){const group=groups.get(item.seriesId)||[];group.push(item);groups.set(item.seriesId,group)}return groups},[media])
   const nextEpisode=useMemo(()=>{if(!selected?.seriesId)return null;const ordered=(series.get(selected.seriesId)||[]).slice().sort((a,b)=>(a.seasonNumber||0)-(b.seasonNumber||0)||(a.episodeNumber||0)-(b.episodeNumber||0)||a.title.localeCompare(b.title));const index=ordered.findIndex(item=>item.id===selected.id);return index>=0?ordered[index+1]||null:null},[selected,series])
@@ -94,13 +94,15 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   const newestFirst=(a,b)=>(b.year||0)-(a.year||0)||a.title.localeCompare(b.title)
   const latestAdded=(a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||''))||a.title.localeCompare(b.title)
   const movies=filtered.filter(item=>!item.category||/movie/i.test(item.category))
+  const shorts=filtered.filter(item=>/short/i.test(item.category))
   const movieRows=[{title:'Latest Added',items:movies.slice().sort(latestAdded)},{title:'Release Date · Newest to Oldest',items:movies.slice().sort(newestFirst)}]
   const tvRows=[{title:'Latest Added',items:tvCards.slice().sort(latestAdded)},{title:'Release Date · Newest to Oldest',items:tvCards.slice().sort(newestFirst)}]
+  const shortRows=[{title:'Latest Added',items:shorts.slice().sort(latestAdded)},{title:'Release Date · Newest to Oldest',items:shorts.slice().sort(newestFirst)}]
   const matchingSeries=new Set(searchMatches.map(item=>item.seriesId).filter(Boolean))
   const searchItems=[...tvCards.filter(item=>item.isSeries?matchingSeries.has(item.seriesId):searchMatches.some(match=>match.id===item.id)),...searchMatches.filter(item=>!/tv|series|show/i.test(item.category))]
   const genreItems=[...tvCards.filter(item=>!genre||(series.get(item.seriesId)||[item]).some(episode=>(episode.genres||[]).includes(genre))),...media.filter(item=>!/tv|series|show/i.test(item.category)&&(!genre||(item.genres||[]).includes(genre)))].sort(newestFirst)
   const searchRows=[{title:query?`Results for "${query}"`:'All Titles',items:searchItems}]
-  const links=[['home','Home'],['genres','Genres'],['movies','Movies'],['tv','TV']]
+  const links=[['home','Home'],['genres','Genres'],['movies','Movies'],['tv','TV'],['shorts','Shorts']]
   function navigate(path,seriesId=null,season=null,info=null){window.history.pushState({kingVideos:true,section:path,series:seriesId,season,info},'');setSelectedSeries(seriesId);setSelectedSeason(season);setInfoId(info);setSection(path)}
   function openMedia(item){navigate('info',null,null,item.id)}
   function openInfo(item){navigate('info',null,null,item.isSeries?item.id:item.id)}
@@ -116,13 +118,14 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   const infoPosition=infoPlayable?positions.get(infoPlayable.id)||0:0
   const nextInfoStart=infoEpisodes.findIndex(item=>item.id===infoPlayable?.id)+1
   const nextInfoEpisodes=infoEpisodes.length?infoEpisodes.slice(Math.max(0,nextInfoStart),Math.max(0,nextInfoStart)+12):[]
-  const similarMovies=infoItem&&!infoItem.seriesId&&!infoItem.isSeries?media.filter(item=>item.id!==infoItem.id&&/movie/i.test(item.category||'movie')).map(item=>({...item,matchCount:(item.genres||[]).filter(genre=>(infoItem.genres||[]).includes(genre)).length})).filter(item=>item.matchCount>0).sort((a,b)=>b.matchCount-a.matchCount||(b.year||0)-(a.year||0)).slice(0,12):[]
-  const infoRelatedRows=infoIsSeries?[...new Set(infoEpisodes.map(item=>item.seasonNumber??1))].sort((a,b)=>a-b).map(season=>({title:season===0?'Shorts':`Season ${season}`,items:infoEpisodes.filter(item=>(item.seasonNumber??1)===season)})):[{title:infoItem?.seriesId?'Next Episodes':'Similar Movies',items:infoItem?.seriesId?nextInfoEpisodes:similarMovies}]
+  const similarTitles=infoItem&&!infoItem.seriesId&&!infoItem.isSeries?media.filter(item=>item.id!==infoItem.id&&(infoItem.category==='short'?item.category==='short':/movie/i.test(item.category||'movie'))).map(item=>({...item,matchCount:(item.genres||[]).filter(genre=>(infoItem.genres||[]).includes(genre)).length})).filter(item=>item.matchCount>0).sort((a,b)=>b.matchCount-a.matchCount||(b.year||0)-(a.year||0)).slice(0,12):[]
+  const infoRelatedRows=infoIsSeries?[...new Set(infoEpisodes.map(item=>item.seasonNumber??1))].sort((a,b)=>a-b).map(season=>({title:season===0?'Shorts':`Season ${season}`,items:infoEpisodes.filter(item=>(item.seasonNumber??1)===season)})):[{title:infoItem?.seriesId?'Next Episodes':infoItem?.category==='short'?'Similar Shorts':'Similar Movies',items:infoItem?.seriesId?nextInfoEpisodes:similarTitles}]
   return <><header className="home-header"><Logo/><nav>{links.map(([path,label])=><button key={path} className={section===path?'active':''} onClick={()=>navigate(path)}>{label}</button>)}<button className={section==='search'?'active':''} onClick={()=>navigate('search')}><FontAwesomeIcon icon={faMagnifyingGlass}/> Search</button></nav><button className="active-profile" onClick={switchProfile} aria-label={`Switch from ${profile.name}`}><Avatar profile={profile}/></button></header>
     {section==='home'&&<><Hero featured={featured} position={lastProgress?.positionSeconds||0} hasProgress={Boolean(lastProgress)} play={play} info={openInfo} series={featured?.seriesId?()=>navigate('series',featured.seriesId):null}/><Shelves rows={homeRows} media={media} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} reorderFavorites={reorderFavorites} onEmptyMyList={()=>navigate('search')} play={openMedia}/></>}
     {section==='genres'&&<GenrePage selected={genre} setSelected={setGenre} items={genreItems} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/>}
     {section==='movies'&&<BrowsePage title="Movies" rows={movieRows} media={media} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/>}
     {section==='tv'&&<BrowsePage title="TV" rows={tvRows} media={media} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/>}
+    {section==='shorts'&&<BrowsePage title="Shorts" rows={shortRows} media={media} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/>}
     {section==='series'&&<SeriesPage series={episodes} selectedSeason={selectedSeason} positions={positions} play={openMedia} onBack={()=>window.history.back()} onSelectSeason={season=>navigate('series',selectedSeries,season)}/>}
     {section==='info'&&infoItem&&<DetailsPage item={infoItem} playable={infoPlayable} position={infoPosition} relatedRows={infoRelatedRows} positions={positions} favorites={favoriteSet} saved={favoriteSet.has(infoItem.id)} play={play} openDetails={openMedia} openSeries={()=>navigate('series',infoItem.seriesId)} toggleFavorite={toggleFavorite} onBack={()=>window.history.back()}/>}
     {section==='search'&&<><section className="search-page"><div className="home-search"><FontAwesomeIcon icon={faMagnifyingGlass}/><input autoFocus aria-label="Search videos" placeholder="Search titles" value={query} onChange={event=>setQuery(event.target.value)}/></div></section><SearchGrid title={searchRows[0].title} query={query} items={searchItems} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/></>}
