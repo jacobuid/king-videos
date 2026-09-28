@@ -102,7 +102,7 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   const unfilteredSearchItems=[...tvCards.filter(item=>item.isSeries?matchingSeries.has(item.seriesId):searchMatches.some(match=>match.id===item.id)),...searchMatches.filter(item=>!/tv|series|show/i.test(item.category))]
   const searchItems=unfilteredSearchItems.filter(item=>!genre||(item.isSeries?(series.get(item.seriesId)||[]).some(episode=>(episode.genres||[]).includes(genre)):(item.genres||[]).includes(genre)))
   const searchRows=[{title:query?`Results for "${query}"`:'All Titles',items:searchItems}]
-  const links=[['home','Home'],['movies','Movies'],['tv','TV'],['shorts','Shorts']]
+  const links=[['home','Home'],['shorts','Shorts'],['movies','Movies'],['tv','TV']]
   function navigate(path,seriesId=null,season=null,info=null){window.history.pushState({kingVideos:true,section:path,series:seriesId,season,info},'');setSelectedSeries(seriesId);setSelectedSeason(season);setInfoId(info);setSection(path)}
   function openMedia(item){navigate('info',null,null,item.id)}
   function openInfo(item){navigate('info',null,null,item.isSeries?item.id:item.id)}
