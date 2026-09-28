@@ -1,0 +1,600 @@
+{
+  "id": "drake-and-josh",
+  "title": "Drake & Josh",
+  "description": "Two very different teenage stepbrothers navigate family, school, friendships, and increasingly chaotic misadventures together.",
+  "category": "tv",
+  "year": 2004,
+  "genres": [
+    "Comedy",
+    "Family",
+    "Live Action"
+  ],
+  "rating": "TV-Y7",
+  "kids": true,
+  "blocked": false,
+  "thumbnail": "thumb.png",
+  "metadataSource": "https://en.wikipedia.org/wiki/List_of_Drake_%26_Josh_episodes",
+  "episodes": [
+    {
+      "season": 0,
+      "episode": 1,
+      "title": "Drake and Josh Go Hollywood",
+      "file": "DRAKE and JOSH - S00 E01 - Drake and Josh Go Hollywood (360p).mp4",
+      "date": "2006-01-06",
+      "year": 2006,
+      "description": "Josh decides that he needs a great adventure in his life, so Drake promotes him as his band's new manager after Drake fires his old manager for canceling three gigs in a month and having Drake perform at an old folk's home.",
+      "duration": 4396
+    },
+    {
+      "season": 0,
+      "episode": 2,
+      "title": "Merry Christmas, Drake and Josh",
+      "file": "DRAKE and JOSH - S00 E02 - Merry Christmas, Drake and Josh (320p).mp4",
+      "date": "2008-12-05",
+      "year": 2008,
+      "description": "Drake decides to throw a Christmas party on the roof of The Premiere. But when a group of teens trash the place, Josh is mistaken for one of the teens and is subsequently arrested. Later that night, Drake breaks into prison attempting to free Josh, after he promises to provide a little girl named Mary Alice and her foster family the \"best Christmas ever\".",
+      "duration": 5274
+    },
+    {
+      "season": 1,
+      "episode": 1,
+      "title": "Pilot",
+      "file": "DRAKE and JOSH - S01 E01 - Hug Me, Brother, PILOT (480p - AMZN Web-DL).mp4",
+      "date": "2004-01-11",
+      "year": 2004,
+      "description": "Drake Parker (Drake Bell) and Josh Nichols (Josh Peck) are two teenagers who attend the same high school in their hometown of San Diego, California. Drake, an aspiring musician, is a very popular teenager amongst their classmates, while Josh is more of a nerdy teenager, whom Drake wants nothing to do with and describes as \"unusual\".",
+      "duration": 1467
+    },
+    {
+      "season": 1,
+      "episode": 2,
+      "title": "Dune Buggy",
+      "file": "DRAKE and JOSH - S01 E02 - Dune Buggy (480p - Web-DL).mp4",
+      "date": "2004-01-18",
+      "year": 2004,
+      "description": "Drake and Josh receive a dune buggy from Drake's friend Trevor (Taran Killam), only to be disappointed when they find out that the buggy is in dire need of repair. Meanwhile, Drake convinces Josh to lie after Josh accidentally breaks the TV.",
+      "duration": 1464
+    },
+    {
+      "season": 1,
+      "episode": 3,
+      "title": "Believe Me, Brother",
+      "file": "DRAKE and JOSH - S01 E03 - Believe Me, Brother (480p - AMZN Web-DL).mp4",
+      "date": "2004-01-25",
+      "year": 2004,
+      "description": "Drake and Josh are tasked with creating a video for a class project, so the brothers decide to shoot a music video featuring Drake and his band performing their new song, directed by Josh. Meanwhile, Drake's latest girlfriend, Susan (Ashley Drane), begins constantly flirting with Josh behind Drake's back.",
+      "duration": 1462
+    },
+    {
+      "season": 1,
+      "episode": 4,
+      "title": "Two Idiots and a Baby",
+      "file": "DRAKE and JOSH - S01 E04 - Two Idiots and a Baby (480p - AMZN Web-DL).mp4",
+      "date": "2004-02-08",
+      "year": 2004,
+      "description": "Audrey and Walter go out to dinner with Walter's boss, Mr. Galloway, and his wife. Josh has offered to babysit their infant son, Max, much to Drake's chagrin. After Drake and Josh struggle to get Max changed and then put to sleep, Drake leaves to play at a concert, to which Josh angrily chastises him for it.",
+      "duration": 1473
+    },
+    {
+      "season": 1,
+      "episode": 5,
+      "title": "First Crush",
+      "file": "DRAKE and JOSH - S01 E05 - First Crush (480p - AMZN Web-DL).mp4",
+      "date": "2004-02-15",
+      "year": 2004,
+      "description": "Josh develops his first real crush on a classmate named Kathy (Erin Chambers). However, Josh is incapable of approaching her without making things awkward and embarrassing himself. While trying to impress her, Josh accidentally claims he can play the guitar, which he cannot.",
+      "duration": 1473
+    },
+    {
+      "season": 1,
+      "episode": 6,
+      "title": "Grammy",
+      "file": "DRAKE and JOSH - S01 E06 - Grammy (480p - AMZN Web-DL).mp4",
+      "date": "2004-02-22",
+      "year": 2004,
+      "description": "Megan, Audrey, and Walter leave the house for the weekend. Drake and Josh's dreams of a parent-free weekend are then quickly dashed when Josh's grandmother (Randee Heller), whom he affectionately calls Grammy, comes to babysit.",
+      "duration": 1462
+    },
+    {
+      "season": 2,
+      "episode": 1,
+      "title": "The Bet",
+      "file": "DRAKE and JOSH - S02 E01 - The Bet (480p - AMZN Web-DL).mp4",
+      "date": "2004-03-14",
+      "year": 2004,
+      "description": "Drake is heavily addicted to junk food, while Josh is heavily addicted to video games. This lands the boys into serious trouble when they forget to bring Megan home on a rainy day, for which they are both grounded by Audrey.",
+      "duration": 1463
+    },
+    {
+      "season": 2,
+      "episode": 2,
+      "title": "Guitar",
+      "file": "DRAKE and JOSH - S02 E02 - Guitar (480p - IT Web-DL).mp4",
+      "date": "2004-03-21",
+      "year": 2004,
+      "description": "Drake wins concert tickets from a local radio station to see his favorite band, Zero Gravity, as well as receiving backstage passes and an autographed Fender Stratocaster guitar signed by the band's lead guitarist, Devin Malone (Mark Matkevich).",
+      "duration": 1464
+    },
+    {
+      "season": 2,
+      "episode": 3,
+      "title": "Movie Job",
+      "file": "DRAKE and JOSH - S02 E03 - Movie Job (480p - AMZN Web-DL).mp4",
+      "date": "2004-03-28",
+      "year": 2004,
+      "description": "Josh is hired at the Premiere movie theater after unintentionally causing \"Crazy\" Steve (Jerry Trainor) to quit after complaining about his wobbly cup holder. Josh quickly comes to enjoy his new job, buying many new things with his paychecks, which inspires Drake to work at the Premiere as well.",
+      "duration": 1442
+    },
+    {
+      "season": 2,
+      "episode": 4,
+      "title": "Football",
+      "file": "DRAKE and JOSH - S02 E04 - Football (480p - AMZN Web-DL).mp4",
+      "date": "2004-04-04",
+      "year": 2004,
+      "description": "Drake calls Josh uncool after Josh humiliates him in front of a girl (Leah Pipes) with an unsuccessful magic trick, and encourages Josh to try out for the football team in order to become cool. Josh makes the team as the equipment manager, but Drake still thinks he is uncool.",
+      "duration": 1466
+    },
+    {
+      "season": 2,
+      "episode": 5,
+      "title": "Pool Shark",
+      "file": "DRAKE and JOSH - S02 E05 - Pool Shark (480p - AMZN Web-DL).mp4",
+      "date": "2004-04-18",
+      "year": 2004,
+      "description": "Drake discovers that Josh is insanely talented at pool, due to Josh using his knowledge of geometry and physics in order to play the game. Drake then decides to take advantage of this, using Josh to hustle several people behind his back, after being inspired by Megan, who herself hustled Drake while playing darts.",
+      "duration": 1463
+    },
+    {
+      "season": 2,
+      "episode": 6,
+      "title": "Smart Girl",
+      "file": "DRAKE and JOSH - S02 E06 - Smart Girl (480p - AMZN Web-DL).mp4",
+      "date": "2004-04-25",
+      "year": 2004,
+      "description": "Drake unintentionally joins the academic team at school to impress Michelle (Kate Lang Johnson), one of the smartest girls in school. Determined to keep up the ruse, Drake has Josh tutor him for the upcoming academic bowl, however Drake retains little to no information that he is taught.",
+      "duration": 1473
+    },
+    {
+      "season": 2,
+      "episode": 7,
+      "title": "Little Diva",
+      "file": "DRAKE and JOSH - S02 E07 - Little Diva (480p - AMZN Web-DL).mp4",
+      "date": "2004-05-02",
+      "year": 2004,
+      "description": "The Premiere is hosting a world movie premiere starring Ashley Blake (Skyler Samuels), a famous child actress. Helen (Frances Callier) then assigns Josh to be Ashley's personal assistant, much to Josh's dismay due to the frequent and ridiculous requests that Ashley makes.",
+      "duration": 1473
+    },
+    {
+      "season": 2,
+      "episode": 8,
+      "title": "Blues Brothers",
+      "file": "DRAKE and JOSH - S02 E08 - Blues Brothers (480p - IT Web-DL).mp4",
+      "date": "2004-09-12",
+      "year": 2004,
+      "description": "Josh appears on the local news as the assistant weatherman to Walter, only to have a nervous breakdown after Megan reveals that she learned from Walter that Josh suffers from severe stage fright. This causes Josh to twitch heavily and sweat profusely during the live broadcast.",
+      "duration": 1464
+    },
+    {
+      "season": 2,
+      "episode": 9,
+      "title": "Driver's License",
+      "file": "DRAKE and JOSH - S02 E09 - Driver's License (480p - IT Web-DL).mp4",
+      "date": "2004-09-12",
+      "year": 2004,
+      "description": "Drake fails to get his driver's license, while Josh obtains his. However, Josh is soon ticketed for running a stop sign. As Josh fears that Walter will take his license away, Drake offers to pay for the ticket and keep it a secret, on the condition that Josh becomes his personal chauffeur, threatening to reveal his ticket to Walter if he refuses.",
+      "duration": 1464
+    },
+    {
+      "season": 2,
+      "episode": 10,
+      "title": "Number One Fan",
+      "file": "DRAKE and JOSH - S02 E10 - Number One Fan (480p - IT Web-DL).mp4",
+      "date": "2004-09-19",
+      "year": 2004,
+      "description": "A girl from Megan's scout troupe, Wendy (Alyson Stoner), has a massive crush on Drake. Her dream is for Drake to personally play her a song. Impressed with all her knowledge of him, Drake gives her an autograph and a guitar pick.",
+      "duration": 1464
+    },
+    {
+      "season": 2,
+      "episode": 11,
+      "title": "Mean Teacher",
+      "file": "DRAKE and JOSH - S02 E11 - The Mean Teacher (480p - AMZN Web-DL).mp4",
+      "date": "2004-09-26",
+      "year": 2004,
+      "description": "Drake wants to break up with his latest girlfriend Kelly (Chelsea Brummet), due to her habit of obnoxiously laughing in inappropriate situations. However, once Drake finds out that Mrs. Hayfer (Julia Duffy), their school English teacher who hates Drake, is Kelly's mother, Mrs.",
+      "duration": 1463
+    },
+    {
+      "season": 2,
+      "episode": 12,
+      "title": "The Gary Grill",
+      "file": "DRAKE and JOSH - S02 E12 - The Gary Grill (480p - IT Web-DL).mp4",
+      "date": "2004-10-17",
+      "year": 2004,
+      "description": "Drake and Josh receive an offer to sell Gary Coleman grills from two men they meet at The Premiere. Initially, the boys become wildly successful salesmen and make much money, spending it on a bunch of expensive items for their room.",
+      "duration": 1464
+    },
+    {
+      "season": 2,
+      "episode": 13,
+      "title": "Drew & Jerry",
+      "file": "DRAKE and JOSH - S02 E13 - Drew and Jerry (480p - AMZN Web-DL).mp4",
+      "date": "2004-10-24",
+      "year": 2004,
+      "description": "After Drake tells Josh he needs more time to himself, Josh begins hanging out with Drew (James Immekus), a teenager who looks and acts just like Drake. Drake soon becomes jealous of Drew, so he finds a new friend named Jerry (Stephen Markarian), a teenager who looks and acts just like Josh, to make Josh jealous.",
+      "duration": 1463
+    },
+    {
+      "season": 2,
+      "episode": 14,
+      "title": "Honor Council",
+      "file": "DRAKE and JOSH - S02 E14 - Honor Council (480p - AMZN Web-DL).mp4",
+      "date": "2004-11-28",
+      "year": 2004,
+      "description": "Drake is framed for pulling a prank on Mrs. Hayfer when her car is found parked inside her classroom. Although she has no concrete evidence that Drake is the culprit, nonetheless, she suspends him for it. Josh then decides to defend Drake in a trial organized by their school's honor council, in order to prove his brother's innocence.",
+      "duration": 1473
+    },
+    {
+      "season": 3,
+      "episode": 1,
+      "title": "The Drake & Josh Inn",
+      "file": "DRAKE and JOSH - S03 E01 - The Drake and Josh Inn (480p - AMZN Web-DL).mp4",
+      "date": "2005-04-02",
+      "year": 2005,
+      "description": "Audrey and Walter head to Los Angeles for a Spring Break vacation, leaving Drake and Josh in charge of the house. On top of this, the adults leave them $200 strictly for food and emergencies only. However, Drake immediately decides to spend the money on toys and other unnecessary items.",
+      "duration": 1473
+    },
+    {
+      "season": 3,
+      "episode": 2,
+      "title": "Peruvian Puff Pepper",
+      "file": "DRAKE and JOSH - S03 E02 - Peruvian Puff Pepper (480p - AMZN Web-DL).mp4",
+      "date": "2005-04-09",
+      "year": 2005,
+      "description": "Josh enters a salsa making contest and asks Drake to help him in order to win the grand prize – a brand-new, flat-screen television set. Megan also wants to help her brothers win the TV in exchange for sharing it between the whole family.",
+      "duration": 1463
+    },
+    {
+      "season": 3,
+      "episode": 3,
+      "title": "We're Married",
+      "file": "DRAKE and JOSH - S03 E03 - We're Married (480p - AMZN Web-DL).mp4",
+      "date": "2005-04-16",
+      "year": 2005,
+      "description": "Josh's foreign pen pal, Yooka (Anastasia Baranova), comes to visit from her homeland of Yudonia, wherein Drake immediately takes a strong liking to her, spending more time with her than Josh can. Eventually, Drake promises to back off, however he and Josh soon learn that Yooka is homesick.",
+      "duration": 1463
+    },
+    {
+      "season": 3,
+      "episode": 4,
+      "title": "Mindy's Back",
+      "file": "DRAKE and JOSH - S03 E04 - Mindy's Back (480p - AMZN Web-DL).mp4",
+      "date": "2005-04-30",
+      "year": 2005,
+      "description": "Mindy Crenshaw returns to school from a mental institution after her long suspension is lifted, following the events of the episode \"Honor Council\". On top of this, Mindy once again beats Josh in the school's annual science fair.",
+      "duration": 1465
+    },
+    {
+      "season": 3,
+      "episode": 5,
+      "title": "The Affair",
+      "file": "DRAKE and JOSH - S03 E05 - The Affair (480p - AMZN Web-DL).mp4",
+      "date": "2005-05-21",
+      "year": 2005,
+      "description": "Drake and Josh notice that Walter has recently begun to act strangely. After some further eavesdropping, Drake and Josh convince themselves that Walter may be having an affair with another woman. In the hopes of fixing things, the brothers attempt to make Walter fall in love with Audrey all over again by preparing his favorite meal for him, while simultaneously telling Walter that the meal was prepared by Audrey.",
+      "duration": 1471
+    },
+    {
+      "season": 3,
+      "episode": 6,
+      "title": "Playing the Field",
+      "file": "DRAKE and JOSH - S03 E06 - Playing the Field (480p - AMZN Web-DL).mp4",
+      "date": "2005-06-04",
+      "year": 2005,
+      "description": "Drake attempts to break up with Tori (Torrey DeVitto), his latest girlfriend. However, Tori breaks up with Drake first, which seriously confuses Drake (as he is usually the one who ends things when it comes to relationships).",
+      "duration": 1466
+    },
+    {
+      "season": 3,
+      "episode": 7,
+      "title": "Helen's Surgery",
+      "file": "DRAKE and JOSH - S03 E07 - Helen's Surgery (480p - AMZN Web-DL).mp4",
+      "date": "2005-06-11",
+      "year": 2005,
+      "description": "Drake and Josh are tasked with assisting Helen after eye surgery leaves her temporarily blind. After driving her home, Drake and Josh find that Helen's apartment is filled with luxurious accessories, such as a hot tub and a huge flat-screen TV, due to Helen receiving royalties from a sitcom entitled \"Happy Times\", that she starred in as a child.",
+      "duration": 1472
+    },
+    {
+      "season": 3,
+      "episode": 8,
+      "title": "Paging Dr. Drake",
+      "file": "DRAKE and JOSH - S03 E08 - Paging Dr. Drake (480p - AMZN Web-DL).mp4",
+      "date": "2005-10-01",
+      "year": 2005,
+      "description": "While working out, Josh drops a barbell on his left foot and seriously injures it after Drake accidentally shoots him with a potato using a launching gun. Despite this, Josh tries to conceal the injury from Walter and Audrey, as he is scared of going to the hospital.",
+      "duration": 1463
+    },
+    {
+      "season": 3,
+      "episode": 9,
+      "title": "The Foam Finger",
+      "file": "DRAKE and JOSH - S03 E09 - The Foam Finger (480p - AMZN Web-DL).mp4",
+      "date": "2005-10-08",
+      "year": 2005,
+      "description": "While reminiscing, Drake and Josh suddenly remember that they previously met eight years prior to becoming stepbrothers during a San Diego Padres game when they were both children, having fought over buying the last foam finger at the stadium.",
+      "duration": 1463
+    },
+    {
+      "season": 3,
+      "episode": 10,
+      "title": "Girl Power",
+      "file": "DRAKE and JOSH - S03 E10 - Girl Power (480p - AMZN Web-DL).mp4",
+      "date": "2005-10-15",
+      "year": 2005,
+      "description": "Drake plans to break up with his latest girlfriend Lucy (Gabrielle Christian) when he finds out that she is stronger than he is, after Lucy beats up some jocks that were picking on them. However, Drake instead decides to challenge Lucy to a wrestling match to prove that he is tougher than she is.",
+      "duration": 1413
+    },
+    {
+      "season": 3,
+      "episode": 11,
+      "title": "Sheep Thrills",
+      "file": "DRAKE and JOSH - S03 E11 - Sheep Thrills (480p - AMZN Web-DL).mp4",
+      "date": "2005-10-22",
+      "year": 2005,
+      "description": "After investigating a strange noise in their garage, Drake and Josh find that Megan has bought a pet sheep online, which she has named \"Baaahhb\". Megan then convinces Drake and Josh to help her hide the sheep in their bedroom, while she thinks of a way to explain the situation to Walter and Audrey.",
+      "duration": 1465
+    },
+    {
+      "season": 3,
+      "episode": 12,
+      "title": "Megan's New Teacher",
+      "file": "DRAKE and JOSH - S03 E12 - Megan's New Teacher (480p - AMZN Web-DL).mp4",
+      "date": "2006-01-28",
+      "year": 2006,
+      "description": "After being accepted into \"Tomorrow's Teachers Today\", a student-teaching program, Josh becomes Megan's new chemistry teacher temporarily.",
+      "duration": 1414
+    },
+    {
+      "season": 3,
+      "episode": 13,
+      "title": "Little Sibling",
+      "file": "DRAKE and JOSH - S03 E13 - Little Sibling (480p - AMZN Web-DL).mp4",
+      "date": "2006-02-04",
+      "year": 2006,
+      "description": "Mrs. Hayfer attempts to punish Drake for lying to her about being late to class one too many times by sending him to Remedial English, a class filled with unruly and dangerous students. In order to avoid this, Drake agrees to participate in the \"Little Sibling Foundation\", being matched up with a boy named Sammy.",
+      "duration": 1413
+    },
+    {
+      "season": 3,
+      "episode": 14,
+      "title": "Theater Thug",
+      "file": "DRAKE and JOSH - S03 E14 - Theater Thug (480p - AMZN Web-DL).mp4",
+      "date": "2006-02-18",
+      "year": 2006,
+      "description": "Josh lands the role of a notorious robber known as the \"Theater Thug\" for a crime drama television series entitled \"FBI's Most Wanted\", with the re-enactment segment being filmed at The Premiere. However, after the episode airs, Josh is then mistaken by the entirety of San Diego for the actual thief, causing him to be repeatedly beaten up and arrested.",
+      "duration": 1413
+    },
+    {
+      "season": 3,
+      "episode": 15,
+      "title": "The Demonator",
+      "file": "DRAKE and JOSH - S03 E15 - The Demonator (480p - AMZN Web-DL).mp4",
+      "date": "2006-02-25",
+      "year": 2006,
+      "description": "Drake and Josh plan to ride a new roller coaster called \"The Demonator\" on its opening day. However, they instead find out that the ride will actually open that night. Complicating things further, the boys are then tasked by Audrey and Walter to stay home and watch over their great-grandfather, Papa Nichols, who recently had surgery, while Walter and Audrey attend an awards show.",
+      "duration": 1422
+    },
+    {
+      "season": 3,
+      "episode": 16,
+      "title": "Alien Invasion",
+      "file": "DRAKE and JOSH - S03 E16 - Alien Invasion (480p - AMZN Web-DL).mp4",
+      "date": "2006-03-18",
+      "year": 2006,
+      "description": "Megan, who was just gifted a brand new telescope, uses Josh's laptop and Drake's leather jacket without their permission. When Drake and Josh attempt to take their things back from Megan, she gets them sent to their room after convincing Walter that both of them bullied her and pushed her down.",
+      "duration": 1415
+    },
+    {
+      "season": 3,
+      "episode": 17,
+      "title": "Dr. Phyllis Show",
+      "file": "DRAKE and JOSH - S03 E17 - Dr. Phyllis Show (480p - AMZN Web-DL).mp4",
+      "date": "2006-04-08",
+      "year": 2006,
+      "description": "Drake and Josh have been constantly arguing more than usual, including late at night. Fed up with being awoken due to their bickering, Megan books her brothers as guests on the Dr. Phyllis Show (a parody of Dr. Phil), hoping that its eponymous hostess (Gabrielle Carteris) can end their feud once and for all.",
+      "duration": 1413
+    },
+    {
+      "season": 4,
+      "episode": 1,
+      "title": "Josh Runs Into Oprah",
+      "file": "DRAKE and JOSH - S04 E01 - Josh Runs Into Oprah (480p - Web-DL).mp4",
+      "date": "2006-09-24",
+      "year": 2006,
+      "description": "It's Josh's 17th birthday, however Drake forgets and instead plans a surprise birthday party for his latest girlfriend (Summer Bishil). After being confronted by an enraged Josh and realizing his mistake, Drake acquires tickets for he and Josh to see Oprah Winfrey, Josh's idol, as well backstage passes to her show, as she is currently filiming a series of shows in San Diego.",
+      "duration": 1423
+    },
+    {
+      "season": 4,
+      "episode": 2,
+      "title": "Vicious Tiberius",
+      "file": "DRAKE and JOSH - S04 E02 - Vicious Tiberius (480p - Web-DL).mp4",
+      "date": "2006-10-01",
+      "year": 2006,
+      "description": "Mrs. Hayfer is going on vacation for the weekend, to which Josh volunteers to watch over her dog and house while she is away, dragging Drake along with him. Meanwhile, Walter buys an elliptical machine and begins working out to finally beat his arch-nemesis, Bruce Winchill, in their television station's annual 5k run.",
+      "duration": 1423
+    },
+    {
+      "season": 4,
+      "episode": 3,
+      "title": "The Wedding",
+      "file": "DRAKE and JOSH - S04 E03 - The Wedding (480p - Web-DL).mp4",
+      "date": "2006-10-15",
+      "year": 2006,
+      "description": "Drake and Josh are tasked with delivering a wedding cake to their 89-year-old Great Aunt Catherine's wedding on time, in the hopes that the family will inherit her luxurious beach house when she dies.",
+      "duration": 1423
+    },
+    {
+      "season": 4,
+      "episode": 4,
+      "title": "Mindy Loves Josh",
+      "file": "DRAKE and JOSH - S04 E04 - Mindy Loves Josh (480p - Web-DL).mp4",
+      "date": "2006-10-22",
+      "year": 2006,
+      "description": "One night at the Parker-Nichols' home, Josh and Mindy are working on their science fair project. However, after the two slightly butt heads over the project, they mutually agree to each build their own project instead. When Mindy goes to leave for the night, she takes the opportunity to tell Josh for the first time that she loves him.",
+      "duration": 1423
+    },
+    {
+      "season": 4,
+      "episode": 5,
+      "title": "Who's Got Game",
+      "file": "DRAKE and JOSH - S04 E05 - Who's Got Game (480p - Web-DL).mp4",
+      "date": "2006-11-05",
+      "year": 2006,
+      "description": "After a debate, Drake and Josh make a bet to see who can score more dates within the span of a week. The bet seems to go smoothly until Drake meets and falls in love with a girl named Carly (Brittany Curran), an employee at the local record store.",
+      "duration": 1424
+    },
+    {
+      "season": 4,
+      "episode": 6,
+      "title": "The Great Doheny",
+      "file": "DRAKE and JOSH - S04 E06 - The Great Doheny (480p - Web-DL).mp4",
+      "date": "2006-11-12",
+      "year": 2006,
+      "description": "Josh's favorite magician, Henry Doheny (Steve Tom), stops by The Premiere and becomes acquainted with Drake and Josh, however the boys quickly find Doheny and his constant magic tricks irritating. When Doheny then admits to Josh that his popularity has severely dwindled and that nobody wants him around anymore, a sympathetic Josh invites Doheny to come stay with them for two months, which angers Drake even further.",
+      "duration": 1423
+    },
+    {
+      "season": 4,
+      "episode": 7,
+      "title": "I Love Sushi",
+      "file": "DRAKE and JOSH - S04 E07 - I Love Sushi (480p - Web-DL).mp4",
+      "date": "2006-11-26",
+      "year": 2006,
+      "description": "As an anniversary gift for Audrey and Walter, Drake and Josh plan to have their house's living room redecorated by a new television series entitled Pump My Room. However, after Drake and Josh leave the house so that the living room can be redecorated, the boys return later that evening to find that they have been scammed, discovering that the show's \"producers\" have stolen all of their furniture instead.",
+      "duration": 1422
+    },
+    {
+      "season": 4,
+      "episode": 8,
+      "title": "The Storm",
+      "file": "DRAKE and JOSH - S04 E08 - The Storm (480p - Web-DL).mp4",
+      "date": "2007-01-07",
+      "year": 2007,
+      "description": "Due to Walter's poor weather forecasts, Drake's long-awaited hopes of opening up for The Sparks are crushed when a fierce storm approaches, trapping him, as well as his friends and family, inside the Parker-Nichols household.",
+      "duration": 1414
+    },
+    {
+      "season": 4,
+      "episode": 9,
+      "title": "My Dinner with Bobo",
+      "file": "DRAKE and JOSH - S04 E09 - My Dinner With Bobo (480p - Web-DL).mp4",
+      "date": "2007-01-14",
+      "year": 2007,
+      "description": "When Drake and Josh pool their money together in order to buy a car, they find themselves unable to agree on one they both like. Eventually though, Drake takes the money and uses it to buy an orangutan named Bobo from the dealership's owner (Steve Kramer).",
+      "duration": 1415
+    },
+    {
+      "season": 4,
+      "episode": 10,
+      "title": "Tree House",
+      "file": "DRAKE and JOSH - S04 E10 - Tree House (480p - Web-DL).mp4",
+      "date": "2007-01-21",
+      "year": 2007,
+      "description": "After a model rocket shoots off from inside their bedroom and explodes in their next-door neighbors' tree house, Drake, Josh and Megan are forced to rebuild it the next day. To make matters worse, Drake and Josh have a double date scheduled with twin sisters, while Megan has plans to attend her friend Janie's birthday party.",
+      "duration": 1414
+    },
+    {
+      "season": 4,
+      "episode": 11,
+      "title": "Josh Is Done",
+      "file": "DRAKE and JOSH - S04 E11 - Josh is Done (480p - Web-DL).mp4",
+      "date": "2007-02-11",
+      "year": 2007,
+      "description": "When Drake's antics finally go too far and cause Josh to miss an important chemistry exam, Josh decides that he is officially done with Drake, considering him as nothing more than a roommate.",
+      "duration": 1415
+    },
+    {
+      "season": 4,
+      "episode": 12,
+      "title": "Eric Punches Drake",
+      "file": "DRAKE and JOSH - S04 E12 - Eric Punches Drake (480p - Web-DL).mp4",
+      "date": "2007-02-18",
+      "year": 2007,
+      "description": "One day at school, Eric accidentally punches Drake in the eye while demonstrating a kung-fu move to Craig.",
+      "duration": 1415
+    },
+    {
+      "season": 4,
+      "episode": 13,
+      "title": "Megan's Revenge",
+      "file": "DRAKE and JOSH - S04 E13 - Megan's Revenge (480p - Web-DL).mp4",
+      "date": "2007-03-04",
+      "year": 2007,
+      "description": "When Drake and Josh borrow Megan's camera to photograph a supermodel who has stopped by their house looking for directions, Josh decides to take a photo of Megan's pet hamster, Hervay. Hervay then suddenly falls over unconscious, leading the boys to believe that they have killed him.",
+      "duration": 1415
+    },
+    {
+      "season": 4,
+      "episode": 14,
+      "title": "Steered Straight",
+      "file": "DRAKE and JOSH - S04 E14 - Steered Straight (480p - Web-DL).mp4",
+      "date": "2007-03-11",
+      "year": 2007,
+      "description": "Drake obtains fake IDs for himself and Josh, so they can enter an adults-only nightclub to see Josh's favorite band, the Hailstones. The boys are then caught by the police, but are not placed under arrest. Instead of grounding their sons, Audrey and Walter choose to sign Drake and Josh up for the police department's \"Steered Straight\" program, in which juveniles are shown what it is like to be arrested.",
+      "duration": 1415
+    },
+    {
+      "season": 4,
+      "episode": 15,
+      "title": "Megan's First Kiss",
+      "file": "DRAKE and JOSH - S04 E15 - Megan's First Kiss (480p - Web-DL).mp4",
+      "date": "2007-04-07",
+      "year": 2007,
+      "description": "Megan's secretive behavior leads Drake and Josh to believe she is up to something. After spying on her at The Premiere, disguised as Jewish Irishmen, it's revealed that Megan has a new boyfriend named Corey, whom she has been dating for the past seven weeks.",
+      "duration": 1415
+    },
+    {
+      "season": 4,
+      "episode": 16,
+      "title": "The Battle of Panthatar",
+      "file": "DRAKE and JOSH - S04 E16 - The Battle of Panthatar (480p - Web-DL).mp4",
+      "date": "2007-04-15",
+      "year": 2007,
+      "description": "Drake and Josh are invited to their friend Thornton's 16th birthday party at Club Diego, which will air on MTV live. However, their invitations are soon revoked after Thornton catches Drake kissing a girl named Maria, who – unbeknownst to Drake – is Thornton's girlfriend.",
+      "duration": 1414
+    },
+    {
+      "season": 4,
+      "episode": 17,
+      "title": "Really Big Shrimp",
+      "file": "DRAKE and JOSH - S04 E17-E18 - Really Big Shrimp, Part 1-2 (480p - Web-DL).mp4",
+      "episodeEnd": 18,
+      "date": "2007-08-03",
+      "year": 2007,
+      "description": "Drake achieves his lifelong dream and lands a record deal with a label named Spin City Records, with Josh serving as his manager. The record company then makes a deal with the brothers, wherein Drake's new song will be played during a major commercial for a shoe company that is scheduled to air during the Super Bowl.",
+      "duration": 2857
+    },
+    {
+      "season": 4,
+      "episode": 19,
+      "title": "Helicopter",
+      "file": "DRAKE and JOSH - S04 E19 - Helicopter (480p - Web-DL).mp4",
+      "date": "2007-08-05",
+      "year": 2007,
+      "description": "After Drake wins a chance to skydive out of a helicopter, Audrey and Walter, believing it to be too dangerous, completely forbid Drake from doing so. Of course, Drake disobeys his parents and goes skydiving anyway. Josh also tries to stop Drake in the process, which ultimately leads to both brothers boarding the helicopter.",
+      "duration": 1404
+    },
+    {
+      "season": 4,
+      "episode": 20,
+      "title": "Dance Contest",
+      "file": "DRAKE and JOSH - S04 E20 - Dance Contest (480p - Web-DL).mp4",
+      "date": "2007-09-16",
+      "year": 2007,
+      "description": "With the end of the school year approaching and their senior year only three months away, Josh decides to enter a dance contest so that he can secure the spot as the top student of his class, while Drake is threatened to either compete in the dance competition or repeat his junior year.",
+      "duration": 1415
+    }
+  ]
+}
