@@ -1,10 +1,11 @@
 import { createHash } from 'node:crypto'
-import { readFile } from 'node:fs/promises'
+import { readFile, stat } from 'node:fs/promises'
 import { basename, dirname, extname, resolve } from 'node:path'
 import process from 'node:process'
 
-const manifestPath=resolve(process.argv[2]||''),folderArg=process.argv.indexOf('--folder'),uploadOnly=process.argv.includes('--upload-only'),metadataOnly=process.argv.includes('--metadata-only')
-if(!process.argv[2]||(folderArg>=0&&!process.argv[folderArg+1]))throw new Error('Usage: node scripts/import-b2-movie.mjs <media.json> [--folder <media-folder>]')
+const manifestPath=resolve(process.argv[2]||''),folderArg=process.argv.indexOf('--folder'),concurrencyArg=process.argv.indexOf('--concurrency'),uploadOnly=process.argv.includes('--upload-only'),metadataOnly=process.argv.includes('--metadata-only'),resume=process.argv.includes('--resume')
+if(!process.argv[2]||(folderArg>=0&&!process.argv[folderArg+1])||(concurrencyArg>=0&&!process.argv[concurrencyArg+1]))throw new Error('Usage: node scripts/import-b2-movie.mjs <media.json> [--folder <media-folder>] [--concurrency <workers>] [--resume]')
+const concurrency=Math.max(1,Number(concurrencyArg>=0?process.argv[concurrencyArg+1]:1)||1)
 const manifest=JSON.parse((await readFile(manifestPath,'utf8')).replace(/^\uFEFF/,'')),folder=resolve(folderArg>=0?process.argv[folderArg+1]:dirname(manifestPath))
 for(const name of ['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID'])if(!process.env[name])throw new Error(`${name} is required`)
 if(!['movie','short'].includes(manifest.category)||!manifest.video||!manifest.thumbnail)throw new Error('A movie or short manifest requires category, video, and thumbnail fields')
@@ -16,12 +17,11 @@ const auth=await authResponse.json(),storage=auth.apiInfo.storageApi
 async function b2(operation,body){const response=await fetch(`${storage.apiUrl}/b2api/v4/${operation}`,{method:'POST',headers:{Authorization:auth.authorizationToken,'Content-Type':'application/json'},body:JSON.stringify(body)});if(!response.ok)throw new Error(`${operation} failed: ${await response.text()}`);return response.json()}
 const bucketName=process.env.B2_BUCKET||'king-videos',buckets=await b2('b2_list_buckets',{accountId:auth.accountId,bucketName}),bucket=buckets.buckets?.find(item=>item.bucketName===bucketName)
 if(!bucket)throw new Error(`Backblaze bucket ${bucketName} was not found`)
-const prefix=`movies/${manifest.id}/`,existing=new Set(),listed=await b2('b2_list_file_names',{bucketId:bucket.bucketId,prefix,maxFileCount:1000})
-for(const file of listed.files||[])existing.add(file.fileName)
-let upload=await b2('b2_get_upload_url',{bucketId:bucket.bucketId})
-async function uploadFile(file,key,type){if(existing.has(key)){console.log(`Already uploaded; skipping ${key}`);return}const bytes=await readFile(resolve(folder,file)),hash=createHash('sha1').update(bytes).digest('hex');for(let attempt=1;attempt<=5;attempt++){const response=await fetch(upload.uploadUrl,{method:'POST',headers:{Authorization:upload.authorizationToken,'X-Bz-File-Name':encodeURIComponent(key),'Content-Type':type,'Content-Length':String(bytes.length),'X-Bz-Content-Sha1':hash},body:bytes});if(response.ok){console.log(`Uploaded ${file}`);return}if(attempt===5)throw new Error(`Upload failed for ${key}: ${await response.text()}`);upload=await b2('b2_get_upload_url',{bucketId:bucket.bucketId});await new Promise(done=>setTimeout(done,attempt*1000))}}
+const prefix=`movies/${manifest.id}/`,existing=new Map(),listed=await b2('b2_list_file_names',{bucketId:bucket.bucketId,prefix,maxFileCount:1000})
+for(const file of listed.files||[])existing.set(file.fileName,Number(file.contentLength))
+async function uploadFile(file,key,type){const path=resolve(folder,file),size=(await stat(path)).size,remoteSize=existing.get(key);if(remoteSize!==undefined&&(!resume||remoteSize===size)){console.log(`Already uploaded; skipping ${key}${resume?' (size matches)':''}`);return}if(remoteSize!==undefined)console.log(`Remote size differs; replacing ${key}`);const bytes=await readFile(path),hash=createHash('sha1').update(bytes).digest('hex');for(let attempt=1;attempt<=5;attempt++){const upload=await b2('b2_get_upload_url',{bucketId:bucket.bucketId}),response=await fetch(upload.uploadUrl,{method:'POST',headers:{Authorization:upload.authorizationToken,'X-Bz-File-Name':encodeURIComponent(key),'Content-Type':type,'Content-Length':String(bytes.length),'X-Bz-Content-Sha1':hash},body:bytes});if(response.ok){console.log(`Uploaded ${file}`);return}const error=await response.text();if(attempt===5)throw new Error(`Upload failed for ${key}: ${error}`);console.warn(`Upload attempt ${attempt} failed for ${file}; retrying`);await new Promise(done=>setTimeout(done,attempt*1000))}}
 const videoKey=`${prefix}${manifest.id}.mp4`,thumbnailKey=`${prefix}${basename(manifest.thumbnail)}`,thumbnailType=extname(manifest.thumbnail).toLowerCase()==='.png'?'image/png':'image/jpeg'
-if(!metadataOnly){await uploadFile(manifest.thumbnail,thumbnailKey,thumbnailType);await uploadFile(manifest.video,videoKey,'video/mp4')}
+if(!metadataOnly){const tasks=[[manifest.thumbnail,thumbnailKey,thumbnailType],[manifest.video,videoKey,'video/mp4']],workers=Array.from({length:Math.min(concurrency,tasks.length)},async()=>{while(tasks.length){const task=tasks.shift();if(task)await uploadFile(...task)}});await Promise.all(workers)}
 
 if(uploadOnly){console.log(`Uploaded ${manifest.category}: ${manifest.title}`);process.exit(0)}
 const cfHeaders={Authorization:`Bearer ${process.env.CLOUDFLARE_API_TOKEN}`,'Content-Type':'application/json'},databaseName=process.env.D1_DATABASE||'king-videos-prod'

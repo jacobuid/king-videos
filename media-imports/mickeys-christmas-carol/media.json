@@ -1,0 +1,21 @@
+{
+  "id": "mickeys-christmas-carol",
+  "title": "Mickey's Christmas Carol",
+  "description": "Scrooge McDuck takes the role of Ebenezer Scrooge in Disney's animated adaptation of Charles Dickens's Christmas story, with Mickey Mouse as Bob Cratchit and familiar Disney characters as the spirits who guide Scrooge toward redemption.",
+  "date": "1983-12-16",
+  "year": 1983,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Christmas",
+    "Fantasy",
+    "Family"
+  ],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 1527,
+  "video": "Special - Mickey's Christmas Carol [720p].mp4",
+  "thumbnail": "thumb.jpg",
+  "metadataSource": "https://en.wikipedia.org/wiki/Mickey%27s_Christmas_Carol"
+}
