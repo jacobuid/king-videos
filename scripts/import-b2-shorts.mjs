@@ -1,0 +1,32 @@
+import { createHash } from 'node:crypto'
+import { readFile, readdir, stat } from 'node:fs/promises'
+import { basename, dirname, extname, resolve } from 'node:path'
+import process from 'node:process'
+
+const args=process.argv.slice(2),value=name=>{const i=args.indexOf(name);return i>=0?args[i+1]:null},has=name=>args.includes(name)
+const manifestPath=resolve(args[0]||''),folder=resolve(value('--folder')||dirname(manifestPath)),concurrency=Number(value('--concurrency')||3),shardIndex=Number(value('--shard-index')||0),shardCount=Number(value('--shard-count')||1),uploadOnly=has('--upload-only'),metadataOnly=has('--metadata-only')
+if(!args[0]||!Number.isInteger(concurrency)||concurrency<1||concurrency>8||!Number.isInteger(shardIndex)||!Number.isInteger(shardCount)||shardCount<1||shardIndex<0||shardIndex>=shardCount)throw new Error('Usage: node scripts/import-b2-shorts.mjs <media.json> --folder <folder> [--concurrency 1-8] [--shard-index 0-N --shard-count N] [--upload-only|--metadata-only]')
+for(const name of ['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID'])if(!process.env[name])throw new Error(`${name} is required`)
+const manifest=JSON.parse((await readFile(manifestPath,'utf8')).replace(/^\uFEFF/,'')),allItems=manifest.items||[]
+if(manifest.category!=='short'||!manifest.id||!allItems.length)throw new Error('A shorts manifest requires id, category "short", and items')
+const items=allItems.filter((_,index)=>index%shardCount===shardIndex),prefix=`movies/${manifest.id}/`
+
+const basic=Buffer.from(`${process.env.B2_BOOTSTRAP_KEY_ID}:${process.env.B2_BOOTSTRAP_APPLICATION_KEY}`).toString('base64')
+const authResponse=await fetch('https://api.backblazeb2.com/b2api/v4/b2_authorize_account',{headers:{Authorization:`Basic ${basic}`}})
+if(!authResponse.ok)throw new Error(`Backblaze authorization failed: ${await authResponse.text()}`)
+const auth=await authResponse.json(),storage=auth.apiInfo.storageApi
+async function b2(operation,body){const response=await fetch(`${storage.apiUrl}/b2api/v4/${operation}`,{method:'POST',headers:{Authorization:auth.authorizationToken,'Content-Type':'application/json'},body:JSON.stringify(body)});if(!response.ok)throw new Error(`${operation} failed: ${await response.text()}`);return response.json()}
+const bucketName=process.env.B2_BUCKET||'king-videos',buckets=await b2('b2_list_buckets',{accountId:auth.accountId,bucketName}),bucket=buckets.buckets?.find(item=>item.bucketName===bucketName)
+if(!bucket)throw new Error(`Backblaze bucket ${bucketName} was not found`)
+const existing=new Map();let nextFileName
+do{const page=await b2('b2_list_file_names',{bucketId:bucket.bucketId,prefix,maxFileCount:10000,...(nextFileName?{startFileName:nextFileName}:{})});for(const file of page.files||[])existing.set(file.fileName,file.contentLength);nextFileName=page.nextFileName}while(nextFileName)
+console.log(`Shard ${shardIndex+1}/${shardCount}: ${items.length} shorts; ${existing.size} existing B2 objects`)
+
+async function uploadFile(file,key,type){const filePath=resolve(folder,file),size=(await stat(filePath)).size;if(existing.get(key)===size){console.log(`Existing ${key}`);return}const bytes=await readFile(filePath),hash=createHash('sha1').update(bytes).digest('hex');for(let attempt=1;attempt<=5;attempt++){const uploadSlot=await b2('b2_get_upload_url',{bucketId:bucket.bucketId});const response=await fetch(uploadSlot.uploadUrl,{method:'POST',headers:{Authorization:uploadSlot.authorizationToken,'X-Bz-File-Name':encodeURIComponent(key),'Content-Type':type,'Content-Length':String(bytes.length),'X-Bz-Content-Sha1':hash},body:bytes});if(response.ok){existing.set(key,size);console.log(`Uploaded ${file}`);return}if(attempt===5)throw new Error(`Upload failed for ${key}: ${await response.text()}`);await new Promise(done=>setTimeout(done,attempt*1500))}}
+function imageType(file){const ext=extname(file).toLowerCase();return ext==='.png'?'image/png':ext==='.webp'?'image/webp':'image/jpeg'}
+async function uploadItem(item){const videoKey=`${prefix}${item.id}/${item.id}.mp4`,thumbnailKey=`${prefix}${item.id}/${basename(item.thumbnail)}`;await uploadFile(item.video,videoKey,'video/mp4');await uploadFile(item.thumbnail,thumbnailKey,imageType(item.thumbnail))}
+
+if(!metadataOnly){let cursor=0;async function worker(){while(cursor<items.length){const item=items[cursor++];await uploadItem(item)}}await Promise.all(Array.from({length:concurrency},worker))}
+
+if(!uploadOnly){const cfHeaders={Authorization:`Bearer ${process.env.CLOUDFLARE_API_TOKEN}`,'Content-Type':'application/json'},databaseName=process.env.D1_DATABASE||'king-videos-prod',dbResponse=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database`,{headers:cfHeaders}),databases=await dbResponse.json(),database=databases.result?.find(item=>item.name===databaseName);if(!database)throw new Error(`Cloudflare D1 database ${databaseName} was not found`);const sql='INSERT INTO media(id,title,description,category,video_key,thumbnail_key,mime_type,kids_allowed,release_date,year,genres,rating,duration_seconds,blocked) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET title=excluded.title,description=excluded.description,category=excluded.category,video_key=excluded.video_key,thumbnail_key=excluded.thumbnail_key,mime_type=excluded.mime_type,kids_allowed=excluded.kids_allowed,release_date=excluded.release_date,year=excluded.year,genres=excluded.genres,rating=excluded.rating,duration_seconds=excluded.duration_seconds,blocked=excluded.blocked';for(const item of items){const params=[item.id,item.title,item.description||'',manifest.category,`${prefix}${item.id}/${item.id}.mp4`,`${prefix}${item.id}/${basename(item.thumbnail)}`,'video/mp4',item.kids===false?0:1,item.date||null,item.year||null,JSON.stringify(item.genres||manifest.genres||[]),item.rating||manifest.rating||null,item.duration||null,item.blocked?1:0],response=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database/${database.uuid}/query`,{method:'POST',headers:cfHeaders,body:JSON.stringify({sql,params})}),result=await response.json();if(!response.ok||!result.success)throw new Error(`D1 import failed for ${item.id}: ${JSON.stringify(result.errors||result)}`);console.log(`Imported metadata: ${item.title}`)}}
+console.log(`Shard ${shardIndex+1}/${shardCount} complete`)

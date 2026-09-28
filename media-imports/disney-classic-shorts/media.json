@@ -1,0 +1,976 @@
+{
+  "id": "disney-classic-shorts",
+  "title": "Disney Classic Shorts",
+  "category": "short",
+  "genres": [
+    "Cartoon",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "items": [
+    {
+      "id": "disney-short-chicken-in-the-rough",
+      "title": "Chicken in the Rough",
+      "description": "Chip and Dale gather nuts near a chicken coop, where Dale becomes entangled with a newly hatched chick and must fool an angry rooster.",
+      "year": 1951,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Comedy",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 429,
+      "video": "Chip 'n Dale - Chicken in the Rough.mp4",
+      "thumbnail": "Chip 'n Dale - Chicken in the Rough.jpg",
+      "metadataSource": "https://www.google.com/search?q=Chicken%20in%20the%20Rough%20Disney%20short"
+    },
+    {
+      "id": "disney-short-the-lone-chipmunks",
+      "title": "The Lone Chipmunks",
+      "description": "Chip and Dale face outlaw Pete in the Old West after discovering that he has hidden stolen money inside their tree.",
+      "year": 1954,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Comedy",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 387,
+      "video": "Chip 'n Dale - The Lone Chipmunks.mp4",
+      "thumbnail": "Chip 'n Dale - The Lone Chipmunks.jpg",
+      "metadataSource": "https://www.google.com/search?q=The%20Lone%20Chipmunks%20Disney%20short"
+    },
+    {
+      "id": "disney-short-all-in-a-nutshell",
+      "title": "All in a Nutshell",
+      "description": "Donald steals Chip and Dale's nuts and ends up in a lake.",
+      "year": 1949,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Comedy",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 403,
+      "video": "Donald - All in a Nutshell [720p].mp4",
+      "thumbnail": "Donald - All in a Nutshell [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-60af4ef9-156e-40ac-a677-fd52c081ecf7"
+    },
+    {
+      "id": "disney-short-chef-donald",
+      "title": "Chef Donald",
+      "description": "Donald is inspired by a radio program to make waffles.",
+      "year": 1941,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Comedy",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 452,
+      "video": "Donald - Chef Donald [720p].mp4",
+      "thumbnail": "Donald - Chef Donald [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-f739a234-62d4-46a0-b022-c6b39fd6e91e"
+    },
+    {
+      "id": "disney-short-chip-an-dale",
+      "title": "Chip an' Dale",
+      "description": "Chip and Dale have to save their home from Donald Duck.",
+      "year": 1947,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Comedy",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 396,
+      "video": "Donald - Chip an' Dale [720p].mp4",
+      "thumbnail": "Donald - Chip an' Dale [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-ecba57e9-d2cf-47b0-be4a-582192556dbc"
+    },
+    {
+      "id": "disney-short-chips-ahoy",
+      "title": "Chips Ahoy",
+      "description": "Hungry chipmunks Chip and Dale are down to their last acorn.",
+      "year": 1956,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Comedy",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 391,
+      "video": "Donald - Chips Ahoy[720p].mp4",
+      "thumbnail": "Donald - Chips Ahoy[720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-ecd5b7b8-d3d0-4013-9577-c2c8d2a8104e"
+    },
+    {
+      "id": "disney-short-corn-chips",
+      "title": "Corn Chips",
+      "description": "Donald tricks Chip 'n Dale into shoveling snow, but the tables turn.",
+      "year": 1951,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Comedy",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 415,
+      "video": "Donald - Corn Chips [720p].mp4",
+      "thumbnail": "Donald - Corn Chips [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-bd728f57-57cf-4181-b2c5-51067e719896"
+    },
+    {
+      "id": "disney-short-donalds-dog-laundry",
+      "title": "Donald's Dog Laundry",
+      "description": "Donald entices Pluto to try his mechanical dog washer.",
+      "year": 1940,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Comedy",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 489,
+      "video": "Donald - Donald's Dog Laundry [720p].mp4",
+      "thumbnail": "Donald - Donald's Dog Laundry [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-68b5b920-dd8e-4b25-9790-e71c30007a44"
+    },
+    {
+      "id": "disney-short-dragon-around",
+      "title": "Dragon Around",
+      "description": "Chip and Dale defend their home against Donald's dragon-like steam shovel.",
+      "year": 1954,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Comedy",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 423,
+      "video": "Donald - Dragon Around [720p].mp4",
+      "thumbnail": "Donald - Dragon Around [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-86da7ada-42d9-4f5c-9da2-9c3e8da91808"
+    },
+    {
+      "id": "disney-short-early-to-bed",
+      "title": "Early to Bed",
+      "description": "A ticking alarm clock keeps Donald awake.",
+      "year": 1941,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Comedy",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 465,
+      "video": "Donald - Early to Bed [720p].mp4",
+      "thumbnail": "Donald - Early to Bed [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-015604cb-ddef-48ad-b604-1a01d8e74aa0"
+    },
+    {
+      "id": "disney-short-fountain-of-youth",
+      "title": "Don's Fountain of Youth",
+      "description": "Donald's trick at the fountain of youth is cut short by an alligator.",
+      "year": 1953,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 383,
+      "video": "Donald - Fountain of Youth [720p].mp4",
+      "thumbnail": "Donald - Fountain of Youth [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-e63e289a-a6fd-4361-9dc4-e7c5de317cc5"
+    },
+    {
+      "id": "disney-short-golf-game",
+      "title": "Donald's Golf Game",
+      "description": "Donald tries to impress his nephews at golfing.",
+      "year": 1938,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 458,
+      "video": "Donald - Golf Game [720p].mp4",
+      "thumbnail": "Donald - Golf Game [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-b08d4c6a-e1ab-403c-8329-17613f5346e8"
+    },
+    {
+      "id": "disney-short-mr-duck-steps-out",
+      "title": "Mr. Duck Steps Out",
+      "description": "Donald attempts to court Daisy.",
+      "year": 1940,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 487,
+      "video": "Donald - Mr. Duck Steps Out [720p].mp4",
+      "thumbnail": "Donald - Mr. Duck Steps Out [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-b01e4295-9bd1-4987-8196-adc32d720a8f"
+    },
+    {
+      "id": "disney-short-out-of-scale",
+      "title": "Out of Scale",
+      "description": "Donald is having fun with his small train set but removes Chip and Dale's tree after declaring it out of scale. As the chipmunks try to recover their tree, Donald chases them into his miniature town.",
+      "year": 1951,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 438,
+      "video": "Donald - Out of Scale [720p].mp4",
+      "thumbnail": "Donald - Out of Scale [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-0f2d6110-aa2e-405a-bbc8-0b395fd22c99"
+    },
+    {
+      "id": "disney-short-the-hockey-champ",
+      "title": "The Hockey Champ",
+      "description": "Donald and his nephews play Hockey.",
+      "year": 1939,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 445,
+      "video": "Donald - The Hockey Champ [720p].mp4",
+      "thumbnail": "Donald - The Hockey Champ [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-2545cc94-e3be-4294-9733-ef3768cc4e65"
+    },
+    {
+      "id": "disney-short-the-new-neighbor",
+      "title": "The New Neighbor",
+      "description": "Sparks fly when Donald moves next door to Pete and his reckless dog.",
+      "year": 1953,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 436,
+      "video": "Donald - The New Neighbor [720p].mp4",
+      "thumbnail": "Donald - The New Neighbor [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-c96ffde3-4f5e-41a2-996a-df5e353824f8"
+    },
+    {
+      "id": "disney-short-tire-trouble",
+      "title": "Donald's Tire Trouble",
+      "description": "Donald is frustrated in his attempts to fix a flat tire.",
+      "year": 1943,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 446,
+      "video": "Donald - Tire Trouble [720p].mp4",
+      "thumbnail": "Donald - Tire Trouble [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-e7804428-bed9-45c2-8ba9-de8c020d5399"
+    },
+    {
+      "id": "disney-short-toy-tinkers",
+      "title": "Toy Tinkers",
+      "description": "Chip and Dale enter Donald Duck’s home on Christmas and turn his toys into tools for a playful battle over holiday treats.",
+      "year": 1949,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 463,
+      "video": "Donald - Toy Tinkers [720p].mp4",
+      "thumbnail": "Donald - Toy Tinkers [720p].jpg",
+      "metadataSource": "https://www.google.com/search?q=Toy%20Tinkers%20Disney%20short"
+    },
+    {
+      "id": "disney-short-trailer-horn",
+      "title": "Trailer Horn",
+      "description": "Donald heads out for a nice relaxing camping trip.",
+      "year": 1950,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 384,
+      "video": "Donald - Trailer Horn [720p].mp4",
+      "thumbnail": "Donald - Trailer Horn [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-02f6b921-926c-4c78-8167-62eb5951c1ac"
+    },
+    {
+      "id": "disney-short-winter-storage",
+      "title": "Winter Storage",
+      "description": "Donald and Chip and Dale face off over acorns.",
+      "year": 1949,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 412,
+      "video": "Donald - Winter Storage [720p].mp4",
+      "thumbnail": "Donald - Winter Storage [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-202de5d2-0722-4794-a79f-1bde6b04a49b"
+    },
+    {
+      "id": "disney-short-double-dribble",
+      "title": "Double Dribble",
+      "description": "A basketball game of Goofs pits P.U. against U.U., with the players competing furiously and frequently breaking the rules.",
+      "year": 1946,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 432,
+      "video": "Goofy - Double Dribble [720p].mp4",
+      "thumbnail": "Goofy - Double Dribble [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-df4e31fc-132f-4c0d-b309-9812ad871bc5"
+    },
+    {
+      "id": "disney-short-how-to-fish",
+      "title": "How to Fish",
+      "description": "Goofy shows us how to fish… or how not to!",
+      "year": 1942,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 432,
+      "video": "Goofy - How to Fish [720p].mp4",
+      "thumbnail": "Goofy - How to Fish [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-08f3725f-c17c-4843-942f-eba740e8605e"
+    },
+    {
+      "id": "disney-short-how-to-play-baseball",
+      "title": "How to Play Baseball",
+      "description": "Goofy teaches you all about this all-American pastime.",
+      "year": 1942,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 476,
+      "video": "Goofy - How to Play Baseball [720p].mp4",
+      "thumbnail": "Goofy - How to Play Baseball [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-7674d153-9e40-4263-a7ed-75f6c1e48f7a"
+    },
+    {
+      "id": "disney-short-how-to-play-football",
+      "title": "How to Play Football",
+      "description": "Goofy demonstrates the game of football.",
+      "year": 1944,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 458,
+      "video": "Goofy - How to Play Football [720p].mp4",
+      "thumbnail": "Goofy - How to Play Football [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-457a6a6a-46b3-49c0-901b-2b0f6c12a949"
+    },
+    {
+      "id": "disney-short-how-to-play-swim",
+      "title": "How to Swim",
+      "description": "Goofy demonstrates how to swim.",
+      "year": 1942,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 451,
+      "video": "Goofy - How to Play Swim [720p].mp4",
+      "thumbnail": "Goofy - How to Play Swim [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-9b05e833-26a6-4a42-aedf-1f3cde318545"
+    },
+    {
+      "id": "disney-short-knight-for-a-day",
+      "title": "A Knight for a Day",
+      "description": "Goofy jousts for the hand of Penelope, as well as the championship.",
+      "year": 1946,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 421,
+      "video": "Goofy - Knight for a Day [720p].mp4",
+      "thumbnail": "Goofy - Knight for a Day [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-4d83ed4b-f71c-4234-82a4-e7e382c2d9a2"
+    },
+    {
+      "id": "disney-short-the-art-of-skiing",
+      "title": "The Art of Skiing",
+      "description": "Goofy demonstrates the art of skiing.",
+      "year": 1941,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 472,
+      "video": "Goofy - The Art of Skiing [720p].mp4",
+      "thumbnail": "Goofy - The Art of Skiing [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-3df001ac-2bc3-4d0e-9243-919505b959d3"
+    },
+    {
+      "id": "disney-short-the-big-wash",
+      "title": "The Big Wash",
+      "description": "Goofy tries to give a reluctant circus elephant a bath, turning a simple chore into a chaotic struggle.",
+      "year": 1948,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 440,
+      "video": "Goofy - The Big Wash [720p].mp4",
+      "thumbnail": "Goofy - The Big Wash [720p].png",
+      "metadataSource": "https://www.google.com/search?q=The%20Big%20Wash%20Disney%20short"
+    },
+    {
+      "id": "disney-short-the-olympic-champ",
+      "title": "The Olympic Champ",
+      "description": "Goofy demonstrates Olympic events to the narration of their history.",
+      "year": 1942,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 416,
+      "video": "Goofy - The Olympic Champ [720p].mp4",
+      "thumbnail": "Goofy - The Olympic Champ [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-c7021aa5-2fc0-4d07-91ef-d737042b0280"
+    },
+    {
+      "id": "disney-short-boat-builders",
+      "title": "Boat Builders",
+      "description": "Mickey and friends build a boat but it falls apart when christened.",
+      "year": 1938,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 436,
+      "video": "Mickey - Boat Builders [720p].mp4",
+      "thumbnail": "Mickey - Boat Builders [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-d0a10d07-cfa3-4afc-be4d-abee83e1b51b"
+    },
+    {
+      "id": "disney-short-canine-caddy",
+      "title": "Canine Caddy",
+      "description": "Pluto caddies for Mickey on the golf course.",
+      "year": 1941,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 448,
+      "video": "Mickey - Canine Caddy [720p].mp4",
+      "thumbnail": "Mickey - Canine Caddy [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-cc96d704-3afd-4e5e-8838-762b3bf3ffcc"
+    },
+    {
+      "id": "disney-short-clock-cleaners",
+      "title": "Clock Cleaners",
+      "description": "Mickey, Donald and Goofy are trying to clean the clock of a tower.",
+      "year": 1937,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 511,
+      "video": "Mickey - Clock Cleaners [720p].mp4",
+      "thumbnail": "Mickey - Clock Cleaners [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-14007520-9296-4b32-8926-f23041ed1fff"
+    },
+    {
+      "id": "disney-short-down-under",
+      "title": "Mickey Down Under",
+      "description": "Mickey and Pluto vacation in Australia.",
+      "year": 1948,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 398,
+      "video": "Mickey - Down Under [720p].mp4",
+      "thumbnail": "Mickey - Down Under [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-752d22ea-f1e4-47a1-a64d-b76e4817a8cb"
+    },
+    {
+      "id": "disney-short-hawaiian-holiday",
+      "title": "Hawaiian Holiday",
+      "description": "Mickey and gang experience Hawaii through hula dancing and the beach.",
+      "year": 1937,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 501,
+      "video": "Mickey - Hawaiian Holiday [720p].mp4",
+      "thumbnail": "Mickey - Hawaiian Holiday [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-06955cc6-9665-4faf-9ca7-cc2419be25d3"
+    },
+    {
+      "id": "disney-short-lonesome-ghosts",
+      "title": "Lonesome Ghosts",
+      "description": "Mickey Mouse, Donald Duck and Goofy run a ghost exterminating agency.",
+      "year": 1937,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 529,
+      "video": "Mickey - Lonesome Ghosts [720p].mp4",
+      "thumbnail": "Mickey - Lonesome Ghosts [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-15cfab14-1937-47b0-b71e-57af1cacd075"
+    },
+    {
+      "id": "disney-short-mickey-takes-a-trip",
+      "title": "Mr. Mouse Takes a Trip",
+      "description": "Mickey Mouse and Pluto hit the road and run into trouble.",
+      "year": 1940,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 460,
+      "video": "Mickey - Mickey Takes a Trip [720p].mp4",
+      "thumbnail": "Mickey - Mickey Takes a Trip [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-f58efb7a-b712-447f-87e8-d7f55f47f26a"
+    },
+    {
+      "id": "disney-short-mickey-and-the-seal",
+      "title": "Mickey and the Seal",
+      "description": "Mickey and Pluto get into trouble with a mischievous seal.",
+      "year": 1948,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 395,
+      "video": "Mickey - Mickey and the Seal [720p].mp4",
+      "thumbnail": "Mickey - Mickey and the Seal [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-df88df69-c289-4f53-ab67-55acfac7c5d6"
+    },
+    {
+      "id": "disney-short-mickeys-birthday-party",
+      "title": "Mickey's Birthday Party",
+      "description": "The gang gives Mickey a surprise birthday party.",
+      "year": 1942,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 469,
+      "video": "Mickey - Mickey's Birthday Party [720p].mp4",
+      "thumbnail": "Mickey - Mickey's Birthday Party [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-2c24dcd5-969a-421a-8670-f91bb445acdc"
+    },
+    {
+      "id": "disney-short-on-ice",
+      "title": "On Ice",
+      "description": "Mickey and friends enjoy skating on a frozen river.",
+      "year": 1935,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 482,
+      "video": "Mickey - On Ice [720p].mp4",
+      "thumbnail": "Mickey - On Ice [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-5bb5ec9c-3e8b-4fa2-8cd3-a585b806479a"
+    },
+    {
+      "id": "disney-short-plutos-christmas",
+      "title": "Pluto's Christmas Tree",
+      "description": "Pluto and Mickey bring home a special Christmas Tree.",
+      "year": 1952,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 404,
+      "video": "Mickey - Pluto's Christmas [720p].mp4",
+      "thumbnail": "Mickey - Pluto's Christmas [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-fe535c7d-c4aa-421a-8d3b-708e37947418"
+    },
+    {
+      "id": "disney-short-plutos-party",
+      "title": "Pluto's Party",
+      "description": "It's Pluto's birthday party!",
+      "year": 1952,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 385,
+      "video": "Mickey - Pluto's Party [720p].mp4",
+      "thumbnail": "Mickey - Pluto's Party [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-7e021e44-aa3f-4586-a6ba-c049d565b26d"
+    },
+    {
+      "id": "disney-short-simple-things",
+      "title": "The Simple Things",
+      "description": "Mickey and Pluto go fishing at the beach.",
+      "year": 1953,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 419,
+      "video": "Mickey - Simple Things [720p].mp4",
+      "thumbnail": "Mickey - Simple Things [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-b2cc7806-9334-49fe-b748-4da948fffcf7"
+    },
+    {
+      "id": "disney-short-society-dog-show",
+      "title": "Society Dog Show",
+      "description": "Pluto is out of place at a dog show, but he proves to be a hero.",
+      "year": 1939,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 484,
+      "video": "Mickey - Society Dog Show [720p].mp4",
+      "thumbnail": "Mickey - Society Dog Show [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-e62eeb1a-6cfc-4acc-acad-9522c021f7f5"
+    },
+    {
+      "id": "disney-short-the-band-concert",
+      "title": "The Band Concert",
+      "description": "Mickey's concert in the park is disrupted by Donald and a cyclone.",
+      "year": 1935,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 556,
+      "video": "Mickey - The Band Concert [720p].mp4",
+      "thumbnail": "Mickey - The Band Concert [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-0bfa0dce-0f2f-4390-8740-914ed0094d4e"
+    },
+    {
+      "id": "disney-short-the-little-whirlwind",
+      "title": "The Little Whirlwind",
+      "description": "Mickey tries to clean Minnie's yard despite a playful whirlwind.",
+      "year": 1941,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 510,
+      "video": "Mickey - The Little Whirlwind [720p].mp4",
+      "thumbnail": "Mickey - The Little Whirlwind [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-d488eed8-72cd-424d-939c-acddefc2d3f3"
+    },
+    {
+      "id": "disney-short-bone-bandit",
+      "title": "Bone Bandit",
+      "description": "Pluto's efforts to dig up a bone are frustrated by his allergy.",
+      "year": 1948,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 405,
+      "video": "Pluto - Bone Bandit [720p].mp4",
+      "thumbnail": "Pluto - Bone Bandit [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-7d45abd9-b1a7-4dbb-8e6e-4fae6114d181"
+    },
+    {
+      "id": "disney-short-food-for-feudin",
+      "title": "Food for Feudin'",
+      "description": "The chipmunks and Pluto battle over a supply of nuts.",
+      "year": 1950,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 417,
+      "video": "Pluto - Food for Feudin [720p].mp4",
+      "thumbnail": "Pluto - Food for Feudin [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-5edf7edc-aafc-4ec7-99db-5200b19ddd1c"
+    },
+    {
+      "id": "disney-short-lend-a-paw",
+      "title": "Lend a Paw",
+      "description": "Pluto's jealousy of a kitten leaves him conflicted about rescuing it.",
+      "year": 1941,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 488,
+      "video": "Pluto - Lend a Paw [720p].mp4",
+      "thumbnail": "Pluto - Lend a Paw [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-b63a51f5-41fd-4699-9c03-7b2458842c7d"
+    },
+    {
+      "id": "disney-short-mail-dog",
+      "title": "Mail Dog",
+      "description": "Pluto must deliver mail to a remote outpost.",
+      "year": 1947,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 409,
+      "video": "Pluto - Mail Dog [720p].mp4",
+      "thumbnail": "Pluto - Mail Dog [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-44a76a18-6ce2-492e-bace-ecffc95e4da7"
+    },
+    {
+      "id": "disney-short-plutos-purchase",
+      "title": "Pluto's Purchase",
+      "description": "Pluto is in for a surprise when Mickey sends him to buy a salami.",
+      "year": 1948,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 398,
+      "video": "Pluto - Pluto's Purchase [720p].mp4",
+      "thumbnail": "Pluto - Pluto's Purchase [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-1909acc3-0ce5-49d9-92d2-d5f171d0426c"
+    },
+    {
+      "id": "disney-short-plutos-sweater",
+      "title": "Pluto's Sweater",
+      "description": "Pluto hates the sweater that Minnie knits for him.",
+      "year": 1949,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 409,
+      "video": "Pluto - Pluto's Sweater [720p].mp4",
+      "thumbnail": "Pluto - Pluto's Sweater [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-b5cc5eb2-0c0a-43de-847f-a3c082f49bd5"
+    },
+    {
+      "id": "disney-short-rescue-dog",
+      "title": "Rescue Dog",
+      "description": "Rescue dog Pluto must deal with a playful seal pup.",
+      "year": 1947,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 403,
+      "video": "Pluto - Rescue Dog [720p].mp4",
+      "thumbnail": "Pluto - Rescue Dog [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-1d041ac5-f97b-4ccd-96f8-c0eb8bcacc2b"
+    },
+    {
+      "id": "disney-short-surprise-package",
+      "title": "Pluto's Surprise Package",
+      "description": "Pluto tries to bring in the mail, but one parcel refuses to cooperate.",
+      "year": 1949,
+      "date": null,
+      "rating": "TV-G",
+      "genres": [
+        "Cartoon",
+        "Family"
+      ],
+      "kids": true,
+      "blocked": false,
+      "duration": 412,
+      "video": "Pluto - Surprise Package [720p].mp4",
+      "thumbnail": "Pluto - Surprise Package [720p].jpg",
+      "metadataSource": "https://www.disneyplus.com/browse/entity-48156853-656f-4805-bd90-dc31dd76c915"
+    }
+  ]
+}
