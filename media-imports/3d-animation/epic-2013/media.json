@@ -1,0 +1,22 @@
+{
+  "id": "epic-2013",
+  "title": "Epic",
+  "description": "Epic is a 2013 American animated fantasy action adventure, comedy film directed by Chris Wedge. Loosely based on William Joyce's 1996 children's book The Leaf Men and the Brave Good Bugs, it was produced by 20th Century Fox Animation and Blue Sky Studios, and stars Colin Farrell, Josh Hutcherson, Amanda Seyfried, Christoph Waltz, Aziz Ansari, Chris O'Dowd, Pitbull, Jason Sudeikis, Steven Tyler, and Beyoncé Knowles. The story sees a teenager named M.K. (Seyfried) who gets shrunk and involved with a tiny woodland kingdom—mainly with the soldiers called the Leafmen—in their war against an evil army aiming to spread rot across the land.",
+  "date": "2013-05-24",
+  "year": 2013,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Fantasy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 6149,
+  "video": "Epic.2013.720p.BluRay.x264.YIFY.mp4",
+  "thumbnail": "thumb.png",
+  "metadataSource": "https://en.wikipedia.org/wiki/Epic_(2013_film)",
+  "sourceFolder": "Epic (2013)"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "finding-dory",
+  "title": "Finding Dory",
+  "description": "Finding Dory is a 2016 American animated adventure comedy film directed by Andrew Stanton, and written by Stanton and Victoria Strouse. Produced by Pixar Animation Studios for Walt Disney Pictures, the film is both a sequel and spin-off following the events of Finding Nemo (2003). Ellen DeGeneres and Albert Brooks reprise their roles from the first film, with Ed O'Neill, Kaitlin Olson, Hayden Rolence, Ty Burrell, Diane Keaton and Eugene Levy joining the cast. The film focuses on the amnesiac fish Dory (DeGeneres), who journeys to be reunited with her parents.",
+  "date": "2016-06-17",
+  "year": 2016,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5824,
+  "video": "Finding.Dory.2016.720p.BluRay.x264-[YTS.AG].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Finding_Dory",
+  "sourceFolder": "Finding Dory (2016)"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "ice-age-the-meltdown",
+  "title": "Ice Age: The Meltdown",
+  "description": "Ice Age: The Meltdown is a 2006 American animated adventure comedy film directed by Carlos Saldanha and written by Peter Gaulke, Gerry Swallow, and Jim Hecht. Produced by 20th Century Fox Animation and Blue Sky Studios, it is the second installment in the Ice Age film series and the sequel to Ice Age (2002). Ray Romano, John Leguizamo, Denis Leary, and Chris Wedge reprise their roles from the first film, with Seann William Scott, Josh Peck, and Queen Latifah joining the voice cast. In the film, Manny, Sid, and Diego attempt to escape an impending flood, during which Manny finds love.",
+  "date": "2006-03-31",
+  "year": 2006,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5468,
+  "video": "Ice Age The Meltdown.2006.720p.BrRip.x264.YIFY.mp4",
+  "thumbnail": "W1MRGr.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Ice_Age:_The_Meltdown",
+  "sourceFolder": "Ice Age 2 - The Meltdown (2006)"
+}

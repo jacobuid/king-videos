@@ -1,0 +1,22 @@
+{
+  "id": "ice-age",
+  "title": "Ice Age",
+  "description": "Ice Age is a 2002 American animated adventure comedy film directed by Chris Wedge and written by Michael Berg, Michael J. Wilson, and Peter Ackerman. Produced by 20th Century Fox Animation and Blue Sky Studios, it features an ensemble voice cast, including Ray Romano, John Leguizamo, and Denis Leary in their main roles, with Jane Krakowski, Jack Black, and Goran Višnjić in their supporting roles. Set during the days of the Pleistocene ice age, the film centers around an unlikely herd of three mammals—Manny, a no-nonsense woolly mammoth, Sid, a loudmouthed ground sloth, and Diego, a sardonic smilodon—who come across a human baby and work together to return it to its tribe.",
+  "date": "2002-03-15",
+  "year": 2002,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 4865,
+  "video": "Ice Age.2002.720p.BrRip.x264.YIFY.mp4",
+  "thumbnail": "g7x2El.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Ice_Age_(2002_film)",
+  "sourceFolder": "Ice Age (2002)"
+}

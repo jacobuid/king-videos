@@ -1,0 +1,22 @@
+{
+  "id": "cars-2",
+  "title": "Cars 2",
+  "description": "Cars 2 is a 2011 American animated spy comedy film directed by John Lasseter, and written by Ben Queen. Produced by Pixar Animation Studios for Walt Disney Pictures, it is the sequel to Cars (2006) and the second film in the Cars franchise. Owen Wilson, Larry the Cable Guy, Tony Shalhoub, Guido Quaroni, Bonnie Hunt, Paul Dooley, Cheech Marin, Jenifer Lewis, Michael Wallis, Katherine Helmond, and John Ratzenberger reprise their roles from the first film, with Michael Caine, Emily Mortimer, John Turturro and Eddie Izzard joining the voice cast. In the film, Mater unintentionally gets caught up in an espionage mission that risks both his and Lightning McQueen's (Wilson) lives during the World Grand Prix, an international racing event showcasing a new alternative fuel called Allinol.",
+  "date": "2011-06-24",
+  "year": 2011,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Action",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 6422,
+  "video": "Cars.2.2011.720p.BrRip.264.YIFY.mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Cars_2",
+  "sourceFolder": "Cars 2 (2011)"
+}

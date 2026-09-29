@@ -1,0 +1,22 @@
+{
+  "id": "ice-age-continental-drift",
+  "title": "Ice Age: Continental Drift",
+  "description": "Ice Age: Continental Drift is a 2012 American animated adventure comedy film directed by Steve Martino and Michael Thurmeier and written by Michael Berg and Jason Fuchs. Produced by 20th Century Fox Animation and Blue Sky Studios, it is the fourth installment in the Ice Age film series following Ice Age: Dawn of the Dinosaurs (2009). Ray Romano, John Leguizamo, Denis Leary and Queen Latifah reprise their roles from the previous films, with Jennifer Lopez, Drake and Nicki Minaj joining the cast. The film's plot involves Scrat mistakenly sending Manny, Sid and Diego adrift with Sid's grandmother, leading the herd to face a gang of pirates and plan to find a way back home while evading them.",
+  "date": "2012-07-13",
+  "year": 2012,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5265,
+  "video": "Ice.Age.Continental.Drift.2012.720p.BluRay.x264.YIFY.mp4",
+  "thumbnail": "8yMYN8.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Ice_Age:_Continental_Drift",
+  "sourceFolder": "Ice Age 4 - Continental Drift (2012)"
+}

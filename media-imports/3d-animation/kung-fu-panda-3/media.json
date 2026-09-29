@@ -1,0 +1,22 @@
+{
+  "id": "kung-fu-panda-3",
+  "title": "Kung Fu Panda 3",
+  "description": "Kung Fu Panda 3  is a 2016 animated martial arts comedy film directed by Jennifer Yuh Nelson and Alessandro Carloni, and written by Jonathan Aibel and Glenn Berger. Produced by DreamWorks Animation, it is the third installment in the Kung Fu Panda franchise and the sequel to Kung Fu Panda 2 (2011). Jack Black, Dustin Hoffman, Angelina Jolie, Seth Rogen, Lucy Liu, David Cross, James Hong, Jackie Chan, and Jean-Claude Van Damme reprise their roles from the previous films, with Randall Duk Kim reprising his from the first film. They are joined by Bryan Cranston, J. K. Simmons and Kate Hudson as new characters. In the film, Po is reunited with his birth father, and discovers the existence of a secret panda village, but must learn to master chi and prepare the pandas to fight against General Kai, a spirit warrior intent on destroying Master Oogway's legacy.",
+  "date": "2016-01-29",
+  "year": 2016,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Action",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5695,
+  "video": "Kung.Fu.Panda.3.2016.720p.BluRay.x264-[YTS.AG].mp4",
+  "thumbnail": "kfpanda3.jpg",
+  "metadataSource": "https://en.wikipedia.org/wiki/Kung_Fu_Panda_3",
+  "sourceFolder": "Kung Fu Panda 3 (2016)"
+}

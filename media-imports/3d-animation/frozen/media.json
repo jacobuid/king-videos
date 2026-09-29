@@ -1,0 +1,22 @@
+{
+  "id": "frozen",
+  "title": "Frozen",
+  "description": "Frozen is a 2013 American animated musical fantasy film produced by Walt Disney Animation Studios, loosely inspired by Hans Christian Andersen's 1844 fairy tale \"The Snow Queen\". Directed by Chris Buck and Jennifer Lee and written by Lee, it stars the voices of Kristen Bell, Idina Menzel, Jonathan Groff, Josh Gad, and Santino Fontana. The film follows Anna (Bell), the princess of Arendelle, who sets off on a journey with the iceman Kristoff (Groff), his reindeer Sven, and the snowman Olaf (Gad), to find her estranged sister Elsa (Menzel) after she accidentally traps their kingdom in eternal winter with her icy powers.",
+  "date": "2013-11-27",
+  "year": 2013,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Fantasy",
+    "Family",
+    "Music"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 6133,
+  "video": "Frozen[720p].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Frozen_(2013_film)",
+  "sourceFolder": "Frozen (2013) [1080p]"
+}

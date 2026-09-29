@@ -1,0 +1,22 @@
+{
+  "id": "inside-out",
+  "title": "Inside Out",
+  "description": "Inside Out is a 2015 American animated coming-of-age film directed by Pete Docter who co-wrote it with Meg LeFauve and Josh Cooley. Produced by Pixar Animation Studios for Walt Disney Pictures, the film stars the voices of Amy Poehler, Phyllis Smith, Richard Kind, Bill Hader, Lewis Black, Mindy Kaling, Kaitlyn Dias, Diane Lane, and Kyle MacLachlan. Inside Out follows the inner workings of the mind of Riley (Dias), a young girl who adapts to her family's relocation as five personified emotions administer her thoughts and actions.",
+  "date": "2015-06-19",
+  "year": 2015,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5678,
+  "video": "Inside Out [720p].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Inside_Out_(2015_film)",
+  "sourceFolder": "Inside Out (2015)"
+}
