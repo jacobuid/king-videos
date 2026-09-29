@@ -26,7 +26,9 @@ Create or invite users from the Clerk Dashboard under **Users**. Existing users 
 
 Upload videos with the B2 CLI under `movies/<slug>/file.mp4` and thumbnails under `movies/<slug>/thumb.jpg`. Add catalog records using `scripts/add-media.sql.example` and `wrangler d1 execute king-videos --remote --file <your-sql-file> --config services/api/wrangler.jsonc`. The bucket stays private; the API returns short-lived signed URLs after Clerk verification.
 
-Media can use either private Backblaze objects or trusted Internet Archive URLs. Import an Internet Archive folder manifest with the manual `Import media` GitHub workflow. The importer enumerates episode MP4s and streams them from Archive.org while uploading their shared thumbnail to Backblaze. Existing Backblaze media continues to use private objects and short lived signed playback URLs.
+Media can use either private Backblaze objects or trusted Internet Archive URLs. Import an Internet Archive folder manifest with the manual `Import media` GitHub workflow. The importer enumerates episode MP4s and streams them from Archive.org while uploading their shared thumbnail to Backblaze.
+
+Private Backblaze media is delivered through signed Cloudflare Worker URLs. The Worker validates the URL before looking in its cache, caches thumbnails at the edge for one year, and proxies video byte-range requests so seeking continues to work without exposing B2 credentials. The web app also uses an image-only service worker with stale-while-revalidate behavior for same-origin profile pictures, logos, and icons. It intentionally never caches HTML, JavaScript, or CSS, preventing stale deployments from referring to deleted hashed bundles. Inspect `X-Kingflix-Cache` (`HIT` or `MISS`) and `X-Kingflix-Delivery` response headers when validating media delivery.
 
 `npm run check` builds the web app and checks the Worker types. The GitHub Pages path is `/king-videos/`, matching the current repository name.
 

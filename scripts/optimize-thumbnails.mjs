@@ -9,7 +9,7 @@ async function loadEnv(){
 }
 await loadEnv()
 
-let manifestPaths=process.argv.slice(2).map(resolve)
+let manifestPaths=process.argv.slice(2).map(path=>resolve(path))
 if(!manifestPaths.length){for await(const entry of (await import('node:fs/promises')).glob('media-imports/*/media.json'))manifestPaths.push(resolve(entry))}
 const required=['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID']
 for(const name of required)if(!process.env[name])throw new Error(`${name} is required in .env`)

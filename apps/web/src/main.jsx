@@ -13,6 +13,8 @@ import './player.css'
 
 const key=import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 const api=import.meta.env.VITE_API_URL
+window.addEventListener('vite:preloadError',()=>window.location.reload())
+if('serviceWorker'in navigator)window.addEventListener('load',()=>{void navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`,{scope:import.meta.env.BASE_URL})})
 const MediaPlayer=React.forwardRef((props,ref)=><VidstackMediaPlayer ref={ref} controlsDelay={5000} {...props}/>)
 const colors=['#e50914','#0f9d8f','#6b38d1','#1773e8','#e67e22','#27952c','#c2185b','#0086a8']
 const profilePictureGroups=[
