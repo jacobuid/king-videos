@@ -11,6 +11,9 @@
 
 .player-overlay {
   padding: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
 }
 
 .player-overlay [data-media-player] {

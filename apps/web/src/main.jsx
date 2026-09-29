@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { ClerkProvider, SignedIn, SignedOut, SignIn, UserButton, useAuth, useReverification } from '@clerk/clerk-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faCamera, faCheck, faChevronLeft, faChevronRight, faChild, faCircleInfo, faFaceSmile, faGripVertical, faLock, faMagnifyingGlass, faPause, faPen, faPlay, faPlus, faRotateLeft, faRotateRight, faTrashCan, faTriangleExclamation, faUsersGear, faVideo, faXmark } from '@fortawesome/free-solid-svg-icons'
-import { MediaPlayer, MediaProvider, Track } from '@vidstack/react'
+import { MediaPlayer as VidstackMediaPlayer, MediaProvider, Track } from '@vidstack/react'
 import { defaultLayoutIcons, DefaultVideoLayout } from '@vidstack/react/player/layouts/default'
 import '@vidstack/react/player/styles/default/theme.css'
 import '@vidstack/react/player/styles/default/layouts/video.css'
@@ -13,6 +13,7 @@ import './player.css'
 
 const key=import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 const api=import.meta.env.VITE_API_URL
+const MediaPlayer=React.forwardRef((props,ref)=><VidstackMediaPlayer ref={ref} controlsDelay={5000} {...props}/>)
 const colors=['#e50914','#0f9d8f','#6b38d1','#1773e8','#e67e22','#27952c','#c2185b','#0086a8']
 const profilePictureGroups=[
   ['Bluey',['bluey--bingo.png','bluey--bluey.png']],
@@ -86,6 +87,7 @@ function App(){
 
 function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,selected,setSelected,play,saveProgress,switchProfile}){
   const[query,setQuery]=useState(''),[genre,setGenre]=useState(''),[sortBy,setSortBy]=useState('uploaded-desc'),[section,setSection]=useState('home'),[selectedSeries,setSelectedSeries]=useState(null),[selectedSeason,setSelectedSeason]=useState(null),[infoId,setInfoId]=useState(null)
+  const playerOpen=Boolean(selected)
   const[showNextCard,setShowNextCard]=useState(false)
   const player=React.useRef(null),lastCheckpoint=React.useRef(0)
   useEffect(()=>{window.history.replaceState({kingVideos:true,section:'home',series:null,season:null,info:null},'');const restore=event=>{if(!event.state?.kingVideos)return;setSection(event.state.section);setSelectedSeries(event.state.series||null);setSelectedSeason(event.state.season??null);setInfoId(event.state.info||null)};window.addEventListener('popstate',restore);return()=>window.removeEventListener('popstate',restore)},[])
@@ -101,6 +103,7 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   const series=useMemo(()=>{const groups=new Map();for(const item of media.filter(item=>/tv|series|show/i.test(item.category)&&item.seriesId)){const group=groups.get(item.seriesId)||[];group.push(item);groups.set(item.seriesId,group)}return groups},[media])
   const nextEpisode=useMemo(()=>{if(!selected?.seriesId)return null;const ordered=(series.get(selected.seriesId)||[]).slice().sort((a,b)=>(a.seasonNumber||0)-(b.seasonNumber||0)||(a.episodeNumber||0)-(b.episodeNumber||0)||a.title.localeCompare(b.title));const index=ordered.findIndex(item=>item.id===selected.id);return index>=0?ordered[index+1]||null:null},[selected,series])
   useEffect(()=>setShowNextCard(false),[selected?.id])
+  useEffect(()=>{if(!playerOpen)return;const body=document.body,root=document.documentElement,scrollY=window.scrollY,previous={position:body.style.position,top:body.style.top,width:body.style.width,overflow:body.style.overflow,rootOverflow:root.style.overflow};body.style.position='fixed';body.style.top=`-${scrollY}px`;body.style.width='100%';body.style.overflow='hidden';root.style.overflow='hidden';return()=>{body.style.position=previous.position;body.style.top=previous.top;body.style.width=previous.width;body.style.overflow=previous.overflow;root.style.overflow=previous.rootOverflow;window.scrollTo(0,scrollY)}},[playerOpen])
   const tvCards=useMemo(()=>{const grouped=new Map(),standalone=[];for(const item of tvItems){if(!item.seriesId){standalone.push(item);continue}if(!grouped.has(item.seriesId)){const episodes=series.get(item.seriesId)||[item];grouped.set(item.seriesId,{...item,id:`series:${item.seriesId}`,title:item.seriesTitle||item.seriesId,episodeCount:episodes.length,isSeries:true})}}return [...grouped.values(),...standalone]},[tvItems,series])
   const favoriteSet=new Set(favorites)
   const favoriteItems=favorites.map(id=>tvCards.find(item=>item.id===id)||filtered.find(item=>item.id===id)).filter(Boolean)
@@ -126,7 +129,7 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   function savePlayerProgress(){if(player.current)saveProgress(player.current.currentTime)}
   function togglePlayerControls(event){if(event.target.closest?.('.vds-controls,button,input,select,[role="menu"]'))return;player.current?.remoteControl?.toggleControls(event.nativeEvent)}
   async function togglePlayback(event){const button=event?.currentTarget;if(button){window.clearTimeout(button._playFeedbackTimer);button.classList.remove('play-feedback');void button.offsetWidth;button.classList.add('play-feedback');button._playFeedbackTimer=window.setTimeout(()=>button.classList.remove('play-feedback'),550)}try{if(player.current?.paused)await player.current.play();else await player.current?.pause()}catch{}}
-  function skipPlayer(seconds,event){if(!player.current)return;const button=event?.currentTarget;if(button){window.clearTimeout(button._skipFeedbackTimer);button._skipFeedbackTotal=(button._skipFeedbackTotal||0)+seconds;button.dataset.feedback=`${button._skipFeedbackTotal>0?'+':''}${button._skipFeedbackTotal}`;button.classList.remove('skip-feedback');void button.offsetWidth;button.classList.add('skip-feedback');button._skipFeedbackTimer=window.setTimeout(()=>{button.classList.remove('skip-feedback');button._skipFeedbackTotal=0;button.dataset.feedback=seconds>0?'+10':'−10'},700)}const duration=Number.isFinite(player.current.duration)?player.current.duration:Infinity;player.current.currentTime=Math.max(0,Math.min(duration,player.current.currentTime+seconds));savePlayerProgress()}
+  function skipPlayer(seconds,event){if(!player.current)return;const button=event?.currentTarget;if(button){window.clearTimeout(button._skipFeedbackTimer);button._skipFeedbackTotal=(button._skipFeedbackTotal||0)+seconds;button.dataset.feedback=`${button._skipFeedbackTotal>0?'+':''}${button._skipFeedbackTotal}`;button.classList.remove('skip-feedback');void button.offsetWidth;button.classList.add('skip-feedback');button._skipFeedbackTimer=window.setTimeout(()=>{button.classList.remove('skip-feedback');button._skipFeedbackTotal=0;button.dataset.feedback=seconds>0?'+10':'−10'},700)}player.current.remoteControl?.pauseControls(event?.nativeEvent);player.current.remoteControl?.resumeControls(event?.nativeEvent);const duration=Number.isFinite(player.current.duration)?player.current.duration:Infinity;player.current.currentTime=Math.max(0,Math.min(duration,player.current.currentTime+seconds));savePlayerProgress()}
   async function exitPlayerFullscreen(){
     const video=player.current?.querySelector?.('video')
     const nativeFullscreen=Boolean(video?.webkitDisplayingFullscreen||video?.webkitPresentationMode==='fullscreen')
