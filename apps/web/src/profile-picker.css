@@ -1,0 +1,23 @@
+.picture-dialog .avatar-picker {
+  grid-template-columns: 1fr;
+  align-content: start;
+}
+
+.avatar-picker-group h4 {
+  margin: 4px 0 10px;
+  color: #ddd;
+  font-size: 1rem;
+  letter-spacing: .04em;
+}
+
+.avatar-picker-group + .avatar-picker-group {
+  margin-top: 12px;
+  padding-top: 18px;
+  border-top: 1px solid #3b3b3b;
+}
+
+.avatar-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: 12px;
+}
