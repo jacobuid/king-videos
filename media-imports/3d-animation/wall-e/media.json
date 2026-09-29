@@ -1,0 +1,22 @@
+{
+  "id": "wall-e",
+  "title": "WALL-E",
+  "description": "A lonely waste-collecting robot discovers friendship and purpose when a sleek probe arrives on an abandoned Earth.",
+  "date": "2008-06-27",
+  "year": 2008,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Family",
+    "Science Fiction"
+  ],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 5892,
+  "video": "WALL-E [720p].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/WALL-E",
+  "sourceFolder": "WALL-E (2008)"
+}

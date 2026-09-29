@@ -1,0 +1,23 @@
+{
+  "id": "wreck-it-ralph",
+  "title": "Wreck-It Ralph",
+  "description": "A video-game villain leaves his arcade world to prove he can be a hero, setting off chaos across several games.",
+  "date": "2012-11-02",
+  "year": 2012,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family",
+    "Fantasy"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 6074,
+  "video": "Wreck it Ralph[720p].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Wreck-It_Ralph",
+  "sourceFolder": "Wreck-It Ralph (2012)"
+}

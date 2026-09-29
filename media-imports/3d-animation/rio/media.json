@@ -1,0 +1,22 @@
+{
+  "id": "rio",
+  "title": "Rio",
+  "description": "A domesticated macaw travels to Rio de Janeiro, where an unexpected adventure helps him discover courage and freedom.",
+  "date": "2011-04-15",
+  "year": 2011,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 5758,
+  "video": "Rio.2011.720p.BluRay.x264.YIFY.mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Rio_(2011_film)",
+  "sourceFolder": "Rio (2011)"
+}

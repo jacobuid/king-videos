@@ -1,0 +1,22 @@
+{
+  "id": "yogi-bear",
+  "title": "Yogi Bear",
+  "description": "Yogi and Boo Boo join Ranger Smith to save Jellystone Park from being closed and sold.",
+  "date": "2010-12-17",
+  "year": 2010,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 4824,
+  "video": "Yogi Bear [720p].mp4",
+  "thumbnail": "1200x675.jpg",
+  "metadataSource": "https://en.wikipedia.org/wiki/Yogi_Bear_(film)",
+  "sourceFolder": "Yogi Bear (2010)"
+}

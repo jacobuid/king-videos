@@ -1,0 +1,23 @@
+{
+  "id": "the-lego-movie",
+  "title": "The Lego Movie",
+  "description": "An ordinary LEGO figure is mistaken for a legendary hero and joins a team trying to stop a tyrant from freezing their world.",
+  "date": "2014-02-07",
+  "year": 2014,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 6035,
+  "video": "The.Lego.Movie.2014.720p.BluRay.x264.YIFY.mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Lego_Movie",
+  "sourceFolder": "The Lego Movie (2014)"
+}

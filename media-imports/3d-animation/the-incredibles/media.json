@@ -1,0 +1,22 @@
+{
+  "id": "the-incredibles",
+  "title": "The Incredibles",
+  "description": "A family of undercover superheroes returns to action when a powerful new enemy threatens the world.",
+  "date": "2004-11-05",
+  "year": 2004,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Action",
+    "Adventure",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 6926,
+  "video": "The Incredibles 2004.720p.BrRip.x264.YIFY.mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Incredibles",
+  "sourceFolder": "The Incredibles (2004)"
+}

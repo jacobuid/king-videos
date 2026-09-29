@@ -1,0 +1,22 @@
+{
+  "id": "toy-story-4",
+  "title": "Toy Story 4",
+  "description": "Woody and the toys embark on a road-trip adventure that leads him to reconsider what it means to belong.",
+  "date": "2019-06-21",
+  "year": 2019,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 6003,
+  "video": "Toy.Story.4.2019.720p.BluRay.x264-[YTS.LT].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Toy_Story_4",
+  "sourceFolder": "Toy Story 4 (2019) [BluRay] [720p] [YTS.LT]"
+}

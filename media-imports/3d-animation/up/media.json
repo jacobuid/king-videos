@@ -1,0 +1,22 @@
+{
+  "id": "up",
+  "title": "Up",
+  "description": "An elderly widower lifts his home with thousands of balloons and unexpectedly begins an adventure with a young Wilderness Explorer.",
+  "date": "2009-05-29",
+  "year": 2009,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5768,
+  "video": "Up.2009.720p.BluRay.x264.YIFY.mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Up_(2009_film)",
+  "sourceFolder": "Up (2009)"
+}

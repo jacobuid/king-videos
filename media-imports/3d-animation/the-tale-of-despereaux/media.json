@@ -1,0 +1,22 @@
+{
+  "id": "the-tale-of-despereaux",
+  "title": "The Tale of Despereaux",
+  "description": "A brave mouse with unusually large ears sets out to rescue a princess and restore hope to a troubled kingdom.",
+  "date": "2008-12-19",
+  "year": 2008,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Family",
+    "Fantasy"
+  ],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 5615,
+  "video": "The Tale of Despereaux [720p].mp4",
+  "thumbnail": "W1MRzr.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Tale_of_Despereaux_(film)",
+  "sourceFolder": "The Tale of Despereaux (2008)"
+}

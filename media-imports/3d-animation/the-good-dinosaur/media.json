@@ -1,0 +1,22 @@
+{
+  "id": "the-good-dinosaur",
+  "title": "The Good Dinosaur",
+  "description": "A young dinosaur separated from home forms an unlikely friendship with a human child during his journey back to his family.",
+  "date": "2015-11-25",
+  "year": 2015,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Family",
+    "Fantasy"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5619,
+  "video": "The.Good.Dinosaur.2015.720p.BluRay.x264-[YTS.AG].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Good_Dinosaur",
+  "sourceFolder": "The Good Dinosaur (2015) [YTS.AG]"
+}

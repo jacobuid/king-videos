@@ -1,0 +1,22 @@
+{
+  "id": "monsters-inc",
+  "title": "Monsters, Inc.",
+  "description": "Top scarer Sulley and his partner Mike must return a human child to her world after she enters the monster city of Monstropolis.",
+  "date": "2001-11-02",
+  "year": 2001,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Comedy",
+    "Family",
+    "Fantasy"
+  ],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 5536,
+  "video": "Monsters Inc. [720p].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Monsters,_Inc.",
+  "sourceFolder": "Monsters Inc (2001)"
+}

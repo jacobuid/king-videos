@@ -1,0 +1,23 @@
+{
+  "id": "the-lorax",
+  "title": "The Lorax",
+  "description": "A boy searches for a real tree and discovers the story of the Lorax and the choices that transformed his town.",
+  "date": "2012-03-02",
+  "year": 2012,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family",
+    "Fantasy"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5179,
+  "video": "The.Lorax.2012.720p.BluRay.x264.YIFY.mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Lorax_(film)",
+  "sourceFolder": "The Lorax (2012)"
+}

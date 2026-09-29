@@ -1,0 +1,22 @@
+{
+  "id": "rio-2",
+  "title": "Rio 2",
+  "description": "Blu and his family journey into the Amazon and encounter a hidden community of blue macaws.",
+  "date": "2014-04-11",
+  "year": 2014,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 6071,
+  "video": "Rio.2.2014.720p.BluRay.x264.YIFY.mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Rio_2",
+  "sourceFolder": "Rio 2 (2014)"
+}

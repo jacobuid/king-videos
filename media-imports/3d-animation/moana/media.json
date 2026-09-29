@@ -1,0 +1,22 @@
+{
+  "id": "moana",
+  "title": "Moana",
+  "description": "A Polynesian teenager sails across the ocean with the demigod Maui to restore the heart of Te Fiti and save her island.",
+  "date": "2016-11-23",
+  "year": 2016,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Family",
+    "Fantasy"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 6433,
+  "video": "Moana[720p].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Moana_(2016_film)",
+  "sourceFolder": "Moana (2016)"
+}

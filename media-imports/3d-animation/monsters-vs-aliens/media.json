@@ -1,0 +1,22 @@
+{
+  "id": "monsters-vs-aliens",
+  "title": "Monsters vs. Aliens",
+  "description": "A team of unusual monsters becomes Earth’s last defense when an alien invasion threatens the planet.",
+  "date": "2009-03-27",
+  "year": 2009,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Action",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5662,
+  "video": "Monsters vs Aliens [720p].mp4",
+  "thumbnail": "1144482.jpg",
+  "metadataSource": "https://en.wikipedia.org/wiki/Monsters_vs._Aliens",
+  "sourceFolder": "Monsters vs Aliens (2009) [1080p]"
+}

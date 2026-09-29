@@ -1,0 +1,22 @@
+{
+  "id": "the-croods-a-new-age",
+  "title": "The Croods: A New Age",
+  "description": "The Croods meet another prehistoric family whose inventions and lifestyle challenge everything they know.",
+  "date": "2020-11-25",
+  "year": 2020,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5714,
+  "video": "The Croods A New Age [720p].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Croods:_A_New_Age",
+  "sourceFolder": "The Croods A New Age (2020)"
+}

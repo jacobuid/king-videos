@@ -1,0 +1,23 @@
+{
+  "id": "tangled",
+  "title": "Tangled",
+  "description": "A spirited princess with magical hair leaves her tower with a charming outlaw to discover the world beyond it.",
+  "date": "2010-11-24",
+  "year": 2010,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family",
+    "Fantasy"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 6017,
+  "video": "Tangled[720p].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Tangled",
+  "sourceFolder": "Tangled (2010)"
+}
