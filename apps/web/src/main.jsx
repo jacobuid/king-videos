@@ -112,6 +112,11 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   function savePlayerProgress(){if(player.current)saveProgress(player.current.currentTime)}
   async function exitPlayerFullscreen(){
     const video=player.current?.querySelector?.('video')
+    const nativeFullscreen=Boolean(video?.webkitDisplayingFullscreen||video?.webkitPresentationMode==='fullscreen')
+    const nativeExit=nativeFullscreen?new Promise(resolve=>{let finished=false;const done=()=>{if(finished)return;finished=true;video?.removeEventListener?.('webkitendfullscreen',done);resolve()};video?.addEventListener?.('webkitendfullscreen',done,{once:true});window.setTimeout(done,1200)}):Promise.resolve()
+    try{
+      if(typeof player.current?.exitFullscreen==='function')await player.current.exitFullscreen('prefer-media')
+    }catch{}
     try{
       if(video?.webkitDisplayingFullscreen&&typeof video.webkitExitFullscreen==='function')video.webkitExitFullscreen()
       else if(video?.webkitPresentationMode==='fullscreen'&&typeof video.webkitSetPresentationMode==='function')video.webkitSetPresentationMode('inline')
@@ -120,9 +125,10 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
       if(document.fullscreenElement&&typeof document.exitFullscreen==='function')await document.exitFullscreen()
       else if(document.webkitFullscreenElement&&typeof document.webkitExitFullscreen==='function')await document.webkitExitFullscreen()
     }catch{}
+    await nativeExit
   }
   async function finishPlayback(){savePlayerProgress();await exitPlayerFullscreen();setShowNextCard(Boolean(nextEpisode))}
-  function closePlayer(){savePlayerProgress();setSelected(null)}
+  async function closePlayer(){savePlayerProgress();await exitPlayerFullscreen();setSelected(null)}
   const episodes=(series.get(selectedSeries)||[]).slice().sort((a,b)=>(a.seasonNumber||0)-(b.seasonNumber||0)||(a.episodeNumber||0)-(b.episodeNumber||0)||a.title.localeCompare(b.title))
   const infoItem=tvCards.find(item=>item.id===infoId)||media.find(item=>item.id===infoId)
   const infoIsSeries=Boolean(infoItem&&(infoItem.isSeries||String(infoItem.id).startsWith('series:')))
