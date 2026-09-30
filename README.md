@@ -62,6 +62,8 @@ If an upload stops, resume it without uploading existing Backblaze objects again
 node --env-file=.env scripts/import-b2-series.mjs media-imports/bluey/media.json --folder "D:\king-videos\bluey-compressed" --resume
 ```
 
+For long local uploads, add `--status-file <path>` to write a machine-readable JSON progress snapshot. The file reports total, processed, active, remaining, imported, subtitle, and failure counts and can be monitored while the importer runs.
+
 Compress a local series into a separate resumable output folder before uploading:
 
 ```powershell

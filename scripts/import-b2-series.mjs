@@ -1,10 +1,10 @@
 import { createHash } from 'node:crypto'
-import { readdir, readFile } from 'node:fs/promises'
+import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { basename, dirname, resolve } from 'node:path'
 import process from 'node:process'
 
-const manifestPath=resolve(process.argv[2]||''),subtitlesOnly=process.argv.includes('--subtitles-only'),uploadOnly=process.argv.includes('--upload-only'),resume=process.argv.includes('--resume'),fileArg=process.argv.indexOf('--file'),onlyFile=fileArg>=0?process.argv[fileArg+1]:null,folderArg=process.argv.indexOf('--folder'),concurrencyArg=process.argv.indexOf('--concurrency'),concurrency=concurrencyArg>=0?Number(process.argv[concurrencyArg+1]):3,shardIndexArg=process.argv.indexOf('--shard-index'),shardIndex=shardIndexArg>=0?Number(process.argv[shardIndexArg+1]):0,shardCountArg=process.argv.indexOf('--shard-count'),shardCount=shardCountArg>=0?Number(process.argv[shardCountArg+1]):1
-if(!process.argv[2]||(fileArg>=0&&!onlyFile)||(folderArg>=0&&!process.argv[folderArg+1])||!Number.isInteger(concurrency)||concurrency<1||concurrency>8||!Number.isInteger(shardCount)||shardCount<1||!Number.isInteger(shardIndex)||shardIndex<0||shardIndex>=shardCount)throw new Error('Usage: node scripts/import-b2-series.mjs <media.json> [--folder <media-folder>] [--upload-only] [--subtitles-only] [--file <filename>] [--concurrency 1-8] [--shard-index 0-N --shard-count N]')
+const manifestPath=resolve(process.argv[2]||''),subtitlesOnly=process.argv.includes('--subtitles-only'),uploadOnly=process.argv.includes('--upload-only'),resume=process.argv.includes('--resume'),fileArg=process.argv.indexOf('--file'),onlyFile=fileArg>=0?process.argv[fileArg+1]:null,folderArg=process.argv.indexOf('--folder'),concurrencyArg=process.argv.indexOf('--concurrency'),concurrency=concurrencyArg>=0?Number(process.argv[concurrencyArg+1]):3,shardIndexArg=process.argv.indexOf('--shard-index'),shardIndex=shardIndexArg>=0?Number(process.argv[shardIndexArg+1]):0,shardCountArg=process.argv.indexOf('--shard-count'),shardCount=shardCountArg>=0?Number(process.argv[shardCountArg+1]):1,statusArg=process.argv.indexOf('--status-file'),statusPath=statusArg>=0?resolve(process.argv[statusArg+1]||''):null
+if(!process.argv[2]||(fileArg>=0&&!onlyFile)||(folderArg>=0&&!process.argv[folderArg+1])||(statusArg>=0&&!statusPath)||!Number.isInteger(concurrency)||concurrency<1||concurrency>8||!Number.isInteger(shardCount)||shardCount<1||!Number.isInteger(shardIndex)||shardIndex<0||shardIndex>=shardCount)throw new Error('Usage: node scripts/import-b2-series.mjs <media.json> [--folder <media-folder>] [--upload-only] [--subtitles-only] [--file <filename>] [--concurrency 1-8] [--shard-index 0-N --shard-count N] [--status-file <status.json>]')
 const manifest=JSON.parse((await readFile(manifestPath,'utf8')).replace(/^\uFEFF/,'')),folder=resolve(folderArg>=0?process.argv[folderArg+1]:dirname(manifestPath))
 const required=['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY',...(uploadOnly?[]:['CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID'])]
 for(const name of required)if(!process.env[name])throw new Error(`${name} is required`)
@@ -37,7 +37,8 @@ async function query(sql,params){if(uploadOnly)return;const response=await fetch
 async function listFiles(directory,prefix=''){const files=[];for(const entry of await readdir(directory,{withFileTypes:true})){const name=prefix?`${prefix}/${entry.name}`:entry.name;if(entry.isDirectory())files.push(...await listFiles(resolve(directory,entry.name),name));else files.push(name)}return files}
 const allNames=await listFiles(folder),eligibleNames=allNames.filter(name=>name.toLowerCase().endsWith('.mp4')&&!/\.temp\.mp4$|\.f\d+\.mp4$|\(1\)|\(AUSLAN\)/i.test(name)&&(!manifest.excludeEpisodeZero||!/(?:^|\s)E00(?:\s|\b)/i.test(name))&&(!onlyFile||name.toLowerCase()===onlyFile.toLowerCase())).sort(),names=eligibleNames.filter((_,index)=>index%shardCount===shardIndex),seenHashes=new Set()
 if(onlyFile&&!names.length)throw new Error(`Video file was not found: ${onlyFile}`)
-let imported=0,subtitles=0
+let imported=0,subtitles=0,processed=0,active=0,failed=0,statusWrite=Promise.resolve()
+function saveStatus(state='running'){if(!statusPath)return Promise.resolve();const snapshot=JSON.stringify({updatedAt:new Date().toISOString(),seriesId:manifest.id,state,total:names.length,processed,active,remaining:Math.max(0,names.length-processed-active),imported,subtitles,failed},null,2);statusWrite=statusWrite.then(()=>writeFile(statusPath,`${snapshot}\n`));return statusWrite}
 async function importName(name,fileIndex){
   const fileMetadata=episodeMetadataByFile.get(name.replace(/\\/g,'/').toLowerCase()),match=name.match(/S(\d+)\s*E(\d+)\s*-\s*(.+)\.mp4$/i),slot=match||name.match(/(?:^|[\\/])(\d+)x(\d+)\s+(.+?)\s*(?:\(\d+p\))?\.mp4$/i)||name.match(/-\s*(\d+)\.(\d+)\s*-\s*(.+?)\.(?:mp4|mkv)$/i),numbered=name.match(/-\s*Ep\.?\s*(\d+)\s*-\s*(.+?)(?:\s+\(\d+p[^)]*\))?\.mp4$/i),special=name.match(/-\s*SPECIAL\s*-\s*(.+?)(?:\s+\(\d+p[^)]*\))?\.mp4$/i),short=name.match(/^Shorts\s*-\s*(.+)\.mp4$/i)
   if(!fileMetadata&&!slot&&!numbered&&!special&&!short){console.log(`Skipping unrecognized video: ${name}`);return}
@@ -52,7 +53,9 @@ async function importName(name,fileIndex){
   if(!uploadOnly)await query(sql,[id,title,metadata?.description||manifest.description||'',manifest.category||'tv',videoKey,thumbnailKey,subtitleKey,'video/mp4',manifest.kids?1:0,manifest.id,manifest.title,season,episode,metadata?.date||null,metadata?.year||manifest.year||null,JSON.stringify(manifest.genres||[]),manifest.rating||null,metadata?.duration||null,manifest.blocked?1:0]);imported++;console.log(`${uploadOnly?'Uploaded':'Imported'} Season ${season}, Episode ${episode}: ${title}`)
 }
 let nextIndex=0
-async function worker(){while(nextIndex<names.length){const fileIndex=nextIndex++;await importName(names[fileIndex],fileIndex)}}
+async function worker(){while(nextIndex<names.length){const fileIndex=nextIndex++;active++;await saveStatus();try{await importName(names[fileIndex],fileIndex);processed++}catch(error){failed++;throw error}finally{active--;await saveStatus()}}}
 console.log(`Processing ${names.length} videos in shard ${shardIndex+1}/${shardCount} with ${Math.min(concurrency,names.length)} parallel upload workers`)
+await saveStatus()
 await Promise.all(Array.from({length:Math.min(concurrency,names.length)},()=>worker()))
+await saveStatus('complete')
 console.log(subtitlesOnly?`Uploaded ${subtitles} subtitle files for ${manifest.title}`:`${uploadOnly?'Uploaded':'Imported'} ${imported} videos and ${subtitles} subtitle files for ${manifest.title}`)

@@ -1,0 +1,871 @@
+{
+  "id": "batman-the-animated-series",
+  "title": "Batman: The Animated Series",
+  "description": "Batman: The Animated Series (often shortened as Batman TAS or BTAS) is an American animated superhero television series based on the DC Comics superhero Batman. Developed by Bruce Timm and Eric Radomski, and produced by Warner Bros. Animation, it originally aired on Fox Kids from September 5, 1992, to September 15, 1995, with a total of 85 episodes. Mid-way through the series' run, it was re-titled The Adventures of Batman & Robin.\nBatman: The Animated Series has received widespread acclaim since its release and was hailed as a groundbreaking superhero show, receiving praise for its writing, art design, voice acting, orchestrated soundtrack, and modernization of its title character's source material. Its critical success led to the show winning multiple Daytime Emmy Awards, as well as the Primetime Emmy Award for Outstanding Animated Programming.\nAfter the series ended its original run, a follow-up titled The New Batman Adventures began airing on Kids' WB in 1997 as a continuation of the series, featuring a revamped animation style. Airing for 24 episodes, it has often been included in the same syndicated re-run packages and home media releases as the final season. Batman: The Animated Series also became the first in the continuity of the shared DC Animated Universe, which spawned further animated TV series, feature films, comic books, and video games helmed by much of the same creative talent, including the 1993 theatrical film Batman: Mask of the Phantasm.",
+  "category": "tv",
+  "year": 1992,
+  "genres": [
+    "Animation",
+    "Action",
+    "Adventure",
+    "Superhero"
+  ],
+  "rating": "TV-PG",
+  "kids": true,
+  "blocked": false,
+  "thumbnail": "thumb.jpg",
+  "metadataSource": "https://en.wikipedia.org/wiki/Batman:_The_Animated_Series",
+  "episodeMetadataSource": "https://en.wikipedia.org/wiki/List_of_Batman:_The_Animated_Series_episodes",
+  "episodes": [
+    {
+      "season": 1,
+      "episode": 1,
+      "title": "The Cat and The Claw, Part 1",
+      "file": "Batman T.A.S - S01 E01 - The Cat and The Claw, Part 1 (480p).mp4",
+      "date": "1992-09-05",
+      "year": 1992,
+      "description": "Bruce finds himself instantly attracted to the charms and beauty of Selina Kyle, unaware that she works as Catwoman , a cat burglar who has been hitting places across Gotham. However, she also has a fondness for all things feline, and soon becomes concerned when a terrorist group known as The Red Claw builds a base within a mountain lion sanctuary she seeks to protect.",
+      "duration": 1347
+    },
+    {
+      "season": 1,
+      "episode": 2,
+      "title": "On Leather Wings",
+      "file": "Batman T.A.S - S01 E02 - On Leather Wings (480p).mp4",
+      "date": "1992-09-06",
+      "year": 1992,
+      "description": "A mysterious bat-like creature suddenly appears over Gotham City , terrorising both its residents and the city's police. Batman soon finds himself accused of being the creature itself, but the Dark Knight suspects the creature is not natural. His suspicions soon lead him to scientist Kirk Langstrom, whose research with his father-in-law has involved experiments with bats.",
+      "duration": 1348
+    },
+    {
+      "season": 1,
+      "episode": 3,
+      "title": "Heart of Ice",
+      "file": "Batman T.A.S - S01 E03 - Heart of Ice (480p).mp4",
+      "date": "1992-09-07",
+      "year": 1992,
+      "description": "Embittered scientist Victor Fries, suffering a mutation in his DNA that cannot allow him from surviving outside sub-zero temperatures, assumes the name Mr. Freeze , and attacks several divisions of GothCorp for components to build a weapon. Batman investigates the nature of the attacks, and soon discovers Fries is out for revenge against GothCorp's CEO, Ferris Boyle, for presumably killing Fries' terminally ill wife Nora .",
+      "duration": 1348
+    },
+    {
+      "season": 1,
+      "episode": 4,
+      "title": "Feat of Clay, Part 1",
+      "file": "Batman T.A.S - S01 E04 - Feat of Clay, Part 1 (480p).mp4",
+      "date": "1992-09-08",
+      "year": 1992,
+      "description": "Matt Hagen , a skilled actor, is forced by Roland Daggett to help him eliminate executive Lucius Fox , so he can take over Wayne Enterprises. Hagen is forced to receive an addictive face cream known as Renuyu, which can temporarily restore his disfigured face following a car accident years ago. Eager for more, he attempts to steal the cream until Daggett's men force-feed him the stuff as punishment.",
+      "duration": 1318
+    },
+    {
+      "season": 1,
+      "episode": 5,
+      "title": "Feat of Clay, Part 2",
+      "file": "Batman T.A.S - S01 E05 - Feat of Clay, Part 2 (480p).mp4",
+      "date": "1992-09-09",
+      "year": 1992,
+      "description": "Bruce, released from prison on bail regarding Fox's assault, investigates as Batman to discover the culprit. He soon learns of Daggett's involvement, but is shocked when he encounters a shapeshifting mutant called Clayface who is seeking to kill him. When he learns that Hagen is Clayface and is seeking revenge for the transformation caused by the cream's properties, Batman is forced to do all he can to stop him.",
+      "duration": 1350
+    },
+    {
+      "season": 1,
+      "episode": 6,
+      "title": "It's Never Too Late",
+      "file": "Batman T.A.S - S01 E06 - It's Never Too Late (480p).mp4",
+      "date": "1992-09-10",
+      "year": 1992,
+      "description": "Years ago, as a child, mob boss Arnold Stromwell was involved in an accident that cost his brother his leg. Now facing defeat in a mob war with Thorne, he is surprised when Batman intervenes on his brother's behalf to save him from himself. For the first time in his life, Stromwell is forced to see what his life of crime has done to him and face the guilt he has held for his brother's accident.",
+      "duration": 1346
+    },
+    {
+      "season": 1,
+      "episode": 7,
+      "title": "Joker's Favor",
+      "file": "Batman T.A.S - S01 E07 - Joker's Favor (480p).mp4",
+      "date": "1992-09-11",
+      "year": 1992,
+      "description": "Charlie Collins accidentally curses Joker for his bad driving, but is let off on condition he does a small favour for him in the future. Two years later, Joker finally decides to call in Charlie for his favor, which involves sneaking a bomb into an award ceremony that Commissioner Gordon is due to give a speech at. Faced with a moral dilemma, Charlie is forced to find some way to alert Batman to the situation.",
+      "duration": 1350
+    },
+    {
+      "season": 1,
+      "episode": 8,
+      "title": "The Cat and The Claw, Part 2",
+      "file": "Batman T.A.S - S01 E08 - The Cat and The Claw, Part 2 (480p).mp4",
+      "date": "1992-09-12",
+      "year": 1992,
+      "description": "Bruce is shocked to discover Selina's secret identity whilst working as Batman, but soon pairs up with her when both learn the Red Claw has serious plans for Gotham. To their horror, the pair learn the group's leader, a woman calling herself Red Claw, intends to steal a viral plague from a military train and threatens to use it to receive a hefty ransom from the city, prompting Batman and Catwoman to work together to stop this.",
+      "duration": 1346
+    },
+    {
+      "season": 1,
+      "episode": 9,
+      "title": "Pretty Poison",
+      "file": "Batman T.A.S - S01 E09 - Pretty Poison (480p).mp4",
+      "date": "1992-09-14",
+      "year": 1992,
+      "description": "Bruce is surprised when his friend Harvey Dent , the city's District Attorney, announces he has become engaged to his new girlfriend Pamela Isley . After meeting her, Bruce becomes concerned when Dent suddenly collapses in the restaurant, and doctors find he has been poisoned. As Batman, he swiftly works to find the culprit involved in this and secure the antidote needed to cure Harvey, but is shocked when he learns who it is.",
+      "duration": 1343
+    },
+    {
+      "season": 1,
+      "episode": 10,
+      "title": "Nothing to Fear",
+      "file": "Batman T.A.S - S01 E10 - Nothing to Fear (480p).mp4",
+      "date": "1992-09-15",
+      "year": 1992,
+      "description": "Batman finds himself investigating a spate of attacks that have left victims suffering serious panic attacks brought on by fear. His investigation soon leads him to encounter the culprit, the Scarecrow , and to foil his scheme to burn down Gotham University. But in the process of doing so, Batman is exposed to the Scarecrow's fear gas and forced to face his guilt over the death of his parents.",
+      "duration": 1346
+    },
+    {
+      "season": 1,
+      "episode": 11,
+      "title": "Be a Clown",
+      "file": "Batman T.A.S - S01 E11 - Be a Clown (480p).mp4",
+      "date": "1992-09-16",
+      "year": 1992,
+      "description": "Mayor Hamilton Hill 's neglected son Jordan stows away in the truck of a clown his father hired after Hill turns his birthday party into a political gathering. Batman is forced to track him down for his father's sake, after he discovers Joker took the place of the real clown in an attempt to kill Hill for his recent insulting remarks about him in a news interview.",
+      "duration": 1344
+    },
+    {
+      "season": 1,
+      "episode": 12,
+      "title": "Appointment in Crime Alley",
+      "file": "Batman T.A.S - S01 E12 - Appointment in Crime Alley (480p).mp4",
+      "date": "1992-09-17",
+      "year": 1992,
+      "description": "Daggett, once more seeking to expand his business empire, hires a pair of arsonists to help him destroy one of Gotham's poorest neighborhoods, nicknamed \"Crime Alley\". At the same time, Bruce is heading to the area as Batman to see Leslie Thompkins, a doctor who helped him in his youth cope with the loss of his parents, for an annual event he conducts, only to come across Daggett's scheme when Thompkins is kidnapped.",
+      "duration": 1349
+    },
+    {
+      "season": 1,
+      "episode": 13,
+      "title": "P.O.V",
+      "file": "Batman T.A.S - S01 E13 - P.O.V (480p).mp4",
+      "date": "1992-09-18",
+      "year": 1992,
+      "description": "Following a botched police operation, Officers Wilkes and Renee Montoya , along with Harvey Bullock, are questioned by Internal Affairs. All three",
+      "duration": 1341
+    },
+    {
+      "season": 1,
+      "episode": 14,
+      "title": "The Clock King",
+      "file": "Batman T.A.S - S01 E14 - The Clock King (480p).mp4",
+      "date": "1992-09-21",
+      "year": 1992,
+      "description": "Former businessman Temple Fugate, an efficiency expert calling himself the Clock King , seeks revenge on Mayor Hill during his re-election campaign. Years ago, when an attorney, Hill, advised Fugate to change his work routine for once in his life, a decision that cost him his company and his sanity. Batman discovers the Clock King is intent on not only discrediting Hill, but killing him to complete his revenge.",
+      "duration": 1349
+    },
+    {
+      "season": 1,
+      "episode": 15,
+      "title": "The Last Laugh",
+      "file": "Batman T.A.S - S01 E15 - The Last Laugh (480p).mp4",
+      "date": "1992-09-22",
+      "year": 1992,
+      "description": "The Joker once more causes chaos in Gotham City by subjecting people to a cloud of laughing gas, allowing him to plunder the city while the gas's victims are left paralysed with laughter and on the verge of dying. After Bruce's butler, Alfred Pennyworth , is infected with the toxin, he becomes Batman once more to stop the Joker and his crime wave, in hopes of acquiring the means to create an antidote to save Alfred and all of Gotham.",
+      "duration": 1345
+    },
+    {
+      "season": 1,
+      "episode": 16,
+      "title": "Eternal Youth",
+      "file": "Batman T.A.S - S01 E16 - Eternal Youth (480p).mp4",
+      "date": "1992-09-23",
+      "year": 1992,
+      "description": "Bruce is surprised when he receives an invite to the Eternal Youth Health Spa, and gives it to Alfred to enjoy along with his friend Maggie. When both do not return, Bruce discovers several rich industrialists have also disappeared upon visiting the spa. Visiting the spa as Batman, he soon discovers all its guests have been turned into wooden plants by Poison Ivy, who blames their companies for destroying plant life.",
+      "duration": 1349
+    },
+    {
+      "season": 1,
+      "episode": 17,
+      "title": "Two-Face, Part 1",
+      "file": "Batman T.A.S - S01 E17 - Two-Face, Part 1 (480p).mp4",
+      "date": "1992-09-25",
+      "year": 1992,
+      "description": "Mobster Rupert Thorne attempts to prevent Harvey Dent from being a constant problem against him by finding something he can use to blackmail him. In the meantime, Dent is facing increased pressure with his re-election campaign, and slowly turns to a psychiatrist who determines that he is developing a split personality . Thorne soon learns of this and attempts to confront him over it, only to create a series of events that will change Dent for the worse.",
+      "duration": 1347
+    },
+    {
+      "season": 1,
+      "episode": 18,
+      "title": "Two-Face, Part 2",
+      "file": "Batman T.A.S - S01 E18 - Two-Face, Part 2 (480p).mp4",
+      "date": "1992-09-28",
+      "year": 1992,
+      "description": "Dent, now disfigured down one side of his face and lost in his split personality disorder, becomes Two-Face and starts robbing Thorne's illegal business out of revenge, using a two-headed coin to make his decisions. Batman, feeling guilty for not saving him, finds himself trying to stop his former friend before it is too late, upon learning Dent is intent on killing Thorne after humiliating him, even if his former girlfriend is placed in jeopardy.",
+      "duration": 1350
+    },
+    {
+      "season": 1,
+      "episode": 19,
+      "title": "Fear of Victory",
+      "file": "Batman T.A.S - S01 E19 - Fear of Victory (480p).mp4",
+      "date": "1992-09-29",
+      "year": 1992,
+      "description": "Dick Grayson is surprised when a friend of his at college suddenly has a panic attack during a football match. Later that night, Dick, working as Robin, suffers a panic attack when working with Batman. The pair investigate and discover that both he and his friend were subjected to a fear chemical invented by the Scarecrow, who has been using it to fix sporting matches in order make sizeable wagers on them.",
+      "duration": 1347
+    },
+    {
+      "season": 1,
+      "episode": 20,
+      "title": "I've Got Batman in My Basement",
+      "file": "Batman T.A.S - S01 E20 - I've Got Batman in My Basement (480p).mp4",
+      "date": "1992-09-30",
+      "year": 1992,
+      "description": "Amateur detective Sherman Grant and his friend Roberta find themselves coming to Batman's aid when they stumble across him pursuing the Penguin and his men for a stolen Fabergé egg . Forced to help him recover in the basement of his home from poison gas, Sherman and his friends soon have to protect him and the stolen egg from the Penguin when he comes looking for them.",
+      "duration": 1340
+    },
+    {
+      "season": 1,
+      "episode": 21,
+      "title": "Vendetta",
+      "file": "Batman T.A.S - S01 E21 - Vendetta (480p).mp4",
+      "date": "1992-10-05",
+      "year": 1992,
+      "description": "Harvey Bullock is horrified when he is arrested for kidnapping an informant who was helping him on a case. Despite disliking him for his mistrust, Batman believes Bullock to be an honest cop who was set up. Investigating the kidnapping, he discovers the real kidnapper is Killer Croc , whom Bullock once arrested. Finding Croc harbors a vendetta against him for this, and the kidnap victim, Batman, must save them from certain death.",
+      "duration": 1350
+    },
+    {
+      "season": 1,
+      "episode": 22,
+      "title": "Prophecy of Doom",
+      "file": "Batman T.A.S - S01 E22 - Prophecy of Doom (480p).mp4",
+      "date": "1992-10-06",
+      "year": 1992,
+      "description": "Bruce becomes suspicious of a cult a close friend has joined called the Brotherhood, founded by the \"mystic\" Nostromos, who claims to foresee great disasters in the future. As Batman, he swiftly identifies Nostromos as a con artist who is rigging near-fatal accidents to gain the confidence of Gotham's wealthiest citizens. He soon determines Nostromos plans to con them out of their fortune, and is forced to prevent this.",
+      "duration": 1347
+    },
+    {
+      "season": 1,
+      "episode": 23,
+      "title": "Forgotten",
+      "file": "Batman T.A.S - S01 E23 - Forgotten (480p).mp4",
+      "date": "1992-10-08",
+      "year": 1992,
+      "description": "Bruce goes undercover to investigate a spate of disappearances amongst Gotham's homeless, but is ambushed. His kidnappers not only leave him with amnesia , but also imprisoned in a chain gang mining camp. Whilst he attempts to recover his memory, Alfred, using the Batwing, attempts to track him down when he realises he is in trouble and needs his other 'suit'.",
+      "duration": 1347
+    },
+    {
+      "season": 1,
+      "episode": 24,
+      "title": "Mad As A Hatter",
+      "file": "Batman T.A.S - S01 E24 - Mad As A Hatter (480p).mp4",
+      "date": "1992-10-12",
+      "year": 1992,
+      "description": "Jervis Tetch, a scientist developing mind control devices at Wayne Industries, develops a relationship with his office secretary, Alice. But his love for her is ruined when her boyfriend reconciles with her for an earlier argument, and they become engaged. Enraged, Tetch dons the mantle of the Mad Hatter , using his mind-control devices to make Alice his, prompting Batman to stop him.",
+      "duration": 1344
+    },
+    {
+      "season": 1,
+      "episode": 25,
+      "title": "The Cape and Cowl Conspiracy",
+      "file": "Batman T.A.S - S01 E25 - The Cape and Cowl Conspiracy (480p).mp4",
+      "date": "1992-10-14",
+      "year": 1992,
+      "description": "Gordon requests Batman's help to track down a cache of stolen aid bonds that were taken by master trapper Josiah Wormwood. Meanwhile, Josiah is hired by his former friend Baron Jozek, who seeks revenge on Batman for humiliating him during a dinner party he was attending. Batman soon finds Josiah seeking to entrap him, claiming he can only escape certain death if he parts with his cape and cowl.",
+      "duration": 1347
+    },
+    {
+      "season": 1,
+      "episode": 26,
+      "title": "Perchance to Dream",
+      "file": "Batman T.A.S - S01 E26 - Perchance to Dream (480p).mp4",
+      "date": "1992-10-19",
+      "year": 1992,
+      "description": "Batman is investigating a new crime when he suddenly wakes up as Bruce one morning to find his life has been completely changed. Not only are his parents still alive, but his life as Batman no longer exists, and Dick does not live with him, and Selina is engaged to him. Batman exists to fight crime, but is a separate individual. Bruce seems willing to accept this new life until reading the newspaper reveals something is deeply wrong.",
+      "duration": 1343
+    },
+    {
+      "season": 1,
+      "episode": 27,
+      "title": "The Underdwellers",
+      "file": "Batman T.A.S - S01 E27 - The Underdwellers (480p).mp4",
+      "date": "1992-10-21",
+      "year": 1992,
+      "description": "A string of bizarre robberies take place across Gotham, leaving the police baffled about who is involved. Batman decides to investigate and discovers to his shock that all the robberies have involved a band of homeless children living in Gotham's sewers. Delving into the matter deeper, he soon learns the children are doing the crimes at the bidding of one person - a man calling himself the Sewer King.",
+      "duration": 1347
+    },
+    {
+      "season": 1,
+      "episode": 28,
+      "title": "Night of The Ninja",
+      "file": "Batman T.A.S - S01 E28 - Night of The Ninja (480p).mp4",
+      "date": "1992-10-26",
+      "year": 1992,
+      "description": "A mysterious ninja is targeting Wayne Enterprises, whom Batman discovers to be a disgraced martial arts student named Kyodai Ken . Years ago, Bruce and Ken trained in the same dojo under a wise sensei, until Ken tried to rob the dojo. Bruce intervened, leading to Ken being expelled for his dishonourable behaviour. Batman deduces that Ken is robbing his company as vengeance for being dishonored by him.",
+      "duration": 1345
+    },
+    {
+      "season": 1,
+      "episode": 29,
+      "title": "The Strange Secret of Bruce Wayne",
+      "file": "Batman T.A.S - S01 E29 - The Strange Secret of Bruce Wayne (480p).mp4",
+      "date": "1992-10-29",
+      "year": 1992,
+      "description": "Bruce and Alfred travel to Yucca Springs resort, after a close friend, a prominent judge, is injured after thugs try to blackmail her over the contents of a mysterious tape recording. Both find the resort is run by a psychiatrist Hugo Strange , who has developed a machine that exposes a person's darkest secrets. Realizing Strange has uncovered his secret, Bruce works to sabotage his plan to auction this off to Joker, Penguin, and Two-Face.",
+      "duration": 1346
+    },
+    {
+      "season": 1,
+      "episode": 30,
+      "title": "Tyger, Tyger",
+      "file": "Batman T.A.S - S01 E30 - Tyger, Tyger (480p).mp4",
+      "date": "1992-10-30",
+      "year": 1992,
+      "description": "Selina Kyle is kidnapped by the villainous genetic engineer Emile Dorian and transformed into a humanoid cat, providing his man-cat hybrid named Tygrus with a mate. Batman attempts to rescue Selina, but is captured and used to test Dorian's greatest creation, as Tygrus hunts Batman through the island's jungles.",
+      "duration": 1344
+    },
+    {
+      "season": 1,
+      "episode": 31,
+      "title": "Dreams in Darkness",
+      "file": "Batman T.A.S - S01 E31 - Dreams in Darkness (480p).mp4",
+      "date": "1992-11-03",
+      "year": 1992,
+      "description": "Batman finds himself pursuing the Scarecrow, who is planning to poison Gotham's water supply with a new batch of fear toxin. But the Dark Knight becomes subjected to it and is committed to Arkham Asylum for his own safety. With his fears amplified and suffering from dark hallucinations, Batman finds he must overcome the toxin's effects, escape from Arkham, and stop Scarecrow before Gotham suffers a similar fate.",
+      "duration": 1350
+    },
+    {
+      "season": 1,
+      "episode": 32,
+      "title": "Beware The Gray Ghost",
+      "file": "Batman T.A.S - S01 E32 - Beware The Gray Ghost (480p).mp4",
+      "date": "1992-11-04",
+      "year": 1992,
+      "description": "Simon Trent, an actor best known for his role as \"The Gray Ghost\" on television, faces bankruptcy due to his declining career. He is soon shocked when Batman visits him, requesting a copy of an episode from his TV show that could help him discover how a string of recent bombings is being committed. Trent soon joins forces with him as the Gray Ghost, especially when Batman reveals his work was inspired by the show. Guest Star : Adam West as the voice of Simon Trent.",
+      "duration": 1345
+    },
+    {
+      "season": 1,
+      "episode": 33,
+      "title": "Cat Scratch Fever",
+      "file": "Batman T.A.S - S01 E33 - Cat Scratch Fever (480p).mp4",
+      "date": "1992-11-05",
+      "year": 1992,
+      "description": "Catwoman is shocked when her pet cat Isis goes missing, and attempts to look for her. She soon learns Isis was snatched by a group led by Professor Milo , who has designed a viral plague for Daggett to help further his business interests. When the virus infects Catwoman, Batman comes to her aid, intent on finding the antidote needed to save the life of the woman who loves him.",
+      "duration": 1344
+    },
+    {
+      "season": 1,
+      "episode": 34,
+      "title": "I Am The Night",
+      "file": "Batman T.A.S - S01 E34 - I Am The Night (480p).mp4",
+      "date": "1992-11-09",
+      "year": 1992,
+      "description": "On the anniversary of the death of Bruce's parents, Batman accompanies Leslie Thompkins to Crime Alley to place roses on the spot where they were gunned down. Meanwhile, Commissioner Gordon is on a stakeout to arrest Jimmy \"The Jazzman\" Peake during a drug smuggling operation. Batman had promised to be there, but arrived late to find the police caught in a gun battle. He helps defeat the gangsters and arrest the Jazzman, but not before Gordon is severely wounded. The incident traumatises Batman, and he contemplates giving up his crime-fighting career. However, the Jazzman has escaped prison, intending to carry out his vendetta against Gordon, who had sent him to prison six years before.",
+      "duration": 1344
+    },
+    {
+      "season": 1,
+      "episode": 35,
+      "title": "Almost Got 'Im",
+      "file": "Batman T.A.S - S01 E35 - Almost Got 'Im (480p).mp4",
+      "date": "1992-11-10",
+      "year": 1992,
+      "description": "The Joker, Killer Croc, the Penguin, Two-Face, and Poison Ivy meet at a poker table, each telling a tale of a time when they almost defeated Batman. At the same time, Harley Quinn is about to kill Catwoman after she rescues Batman from the Joker's electric chair, and Batman must save her.",
+      "duration": 1345
+    },
+    {
+      "season": 1,
+      "episode": 36,
+      "title": "Moon of the Wolf",
+      "file": "Batman T.A.S - S01 E36 - Moon of the Wolf (480p).mp4",
+      "date": "1992-11-11",
+      "year": 1992,
+      "description": "Batman investigates the appearance of a werewolf -like creature in Gotham, not realizing that the monster happens to be one of Bruce Wayne's associates — Anthony Romulus , ex-Olympic champion. Behind the scheme is twisted chemist Professor Milo.",
+      "duration": 1314
+    },
+    {
+      "season": 1,
+      "episode": 37,
+      "title": "Terror in the Sky",
+      "file": "Batman T.A.S - S01 E37 - Terror in the Sky (480p).mp4",
+      "date": "1992-11-12",
+      "year": 1992,
+      "description": "When a giant bat ransacks a Gotham harbor, Batman suspects that Kirk Langstrom has recreated the forbidden Man-Bat formula and is taking it again. Kirk's wife, Francine, does not share his suspicion of her husband and leaves him. As he investigates, Batman discovers that this Man-Bat is not Kirk after all.",
+      "duration": 1315
+    },
+    {
+      "season": 1,
+      "episode": 38,
+      "title": "Christmas with The Joker",
+      "file": "Batman T.A.S - S01 E38 - Christmas with The Joker (480p).mp4",
+      "date": "1992-11-13",
+      "year": 1992,
+      "description": "After escaping Arkham Asylum on Christmas Eve , the Joker takes over Gotham's airwaves and terrorises the city. He soon challenges Batman and Robin to find his hidden TV studio and free his hostages – Commissioner Gordon , Harvey Bullock , and Summer Gleeson – before he subjects them to a most unwanted gift at midnight.",
+      "duration": 1345
+    },
+    {
+      "season": 1,
+      "episode": 39,
+      "title": "Heart of Steel, Part 1",
+      "file": "Batman T.A.S - S01 E39 - Heart of Steel, Part 1 (480p).mp4",
+      "date": "1992-11-16",
+      "year": 1992,
+      "description": "Several robberies occur at major companies, including Wayne Enterprises, and Bruce Wayne, as Batman, discovers the thief is a walking mechanical briefcase. After failing to catch it, Bruce meets with his old friend Karl Rossum, a robotics expert who lost his daughter to a vehicle accident years ago. He also meets Rossum's assistant, Randa Duane, and Rossum's ultimate creation: a prototype AI known as Holographic Analytical Reciprocating Digital Computer (HARDAC). Bruce invites Duane to dinner. Around the same time, certain important members of the public start acting unlike themselves and become distant. Most surprising is when Duane unexpectedly leaves Wayne Manor while Bruce is on the phone, and the Batcave security system turns on Batman.",
+      "duration": 1351
+    },
+    {
+      "season": 1,
+      "episode": 40,
+      "title": "Heart of Steel, Part 2",
+      "file": "Batman T.A.S - S01 E40 - Heart of Steel, Part 2 (480p).mp4",
+      "date": "1992-11-17",
+      "year": 1992,
+      "description": "Batman manages to free himself from the Batcave's security system and bring it back under his control, although he fails to track down Ms. Duane. Barbara Gordon approaches Batman to inform him of her father's sudden change in behavior. A brutal fight between Batman and Harvey Bullock ensues, during which Batman damages Bullock and discovers him to be an android, revealing that the real Bullock and James Gordon have gone missing. Batman knows who the culprit is: HARDAC. Batman must stop the evil supercomputer before it completes its replacement plan.",
+      "duration": 1346
+    },
+    {
+      "season": 1,
+      "episode": 41,
+      "title": "If You're So Smart, Why Aren't You Rich",
+      "file": "Batman T.A.S - S01 E41 - If You're So Smart, Why Aren't You Rich (480p).mp4",
+      "date": "1992-11-18",
+      "year": 1992,
+      "description": "Edward Nygma creates the popular video game Riddle of the Minotaur for his employer, but his superior, Daniel Mockridge, fires him after he sues for royalties. Nygma vows revenge and adopts the identity of the Riddler . While Batman sympathizes with Nygma's grievance, he and Robin must stop the Riddler before he kills Mockridge in a life-sized version of the Minotaur maze with a working minotaur .",
+      "duration": 1316
+    },
+    {
+      "season": 1,
+      "episode": 42,
+      "title": "Joker's Wild",
+      "file": "Batman T.A.S - S01 E42 - Joker's Wild (480p).mp4",
+      "date": "1992-11-19",
+      "year": 1992,
+      "description": "Cameron Kaiser builds a casino hotel themed around the Joker called \"The Joker's Wild\". From Arkham Asylum, the Joker sees this on the news and is enraged. He escapes from Arkham again with one thought – destroying the casino – unaware that this is exactly what Kaiser wants him to do.",
+      "duration": 1343
+    },
+    {
+      "season": 1,
+      "episode": 43,
+      "title": "His Silicon Soul",
+      "file": "Batman T.A.S - S01 E43 - His Silicon Soul (480p).mp4",
+      "date": "1992-11-20",
+      "year": 1992,
+      "description": "When a robotic Batman impersonator appears in Gotham City, the real Batman deduces that Karl Rossum (from \"Heart of Steel\") is involved and confronts the inventor of HARDAC, who knows nothing of any surviving robots produced by the supercomputer. After the robotic Batman experiences an identity crisis and realises it is not the real Batman, its programming takesover and it begins restoring HARDAC's program so the computer can resume its campaign to replace humans with robots.",
+      "duration": 1343
+    },
+    {
+      "season": 1,
+      "episode": 44,
+      "title": "Off Balance",
+      "file": "Batman T.A.S - S01 E44 - Off Balance (480p).mp4",
+      "date": "1992-11-23",
+      "year": 1992,
+      "description": "While following Count Vertigo 's trail, Batman encounters Talia al Ghul , the daughter of the head of the Society of Shadows , who was sent by her father Ra's al Ghul to prevent the capture of a sonic drill that the Count stole. After his identity is accidentally revealed to Talia, Batman is unsure as to where her true loyalties lie.",
+      "duration": 1340
+    },
+    {
+      "season": 1,
+      "episode": 45,
+      "title": "What Is Reality",
+      "file": "Batman T.A.S - S01 E45 - What Is Reality (480p).mp4",
+      "date": "1992-11-24",
+      "year": 1992,
+      "description": "Seeking to prove that he is the superior mind, the Riddler lures Batman into a riddle-solving contest inside a virtual reality game to save Commissioner Gordon's life. While solving the riddles and escaping the Riddler's traps, Batman learns that he can manipulate the virtual reality landscape much like the Riddler does.",
+      "duration": 1344
+    },
+    {
+      "season": 1,
+      "episode": 46,
+      "title": "The Laughing Fish",
+      "file": "Batman T.A.S - S01 E46 - The Laughing Fish (480p).mp4",
+      "date": "1993-01-10",
+      "year": 1993,
+      "description": "Joker creates a new toxin that affects only fish, mutating them with smiling faces similar to his own, before seeking to get them copyrighted so he can legally claim royalties. When Gotham's copyright offices reveal that they can't do this, Joker targets them for revenge. Batman attempts to prevent this, but when this fails, he attempts to pursue the Joker, especially when Bullock deduces his hideout.",
+      "duration": 1341
+    },
+    {
+      "season": 1,
+      "episode": 47,
+      "title": "Harley and Ivy",
+      "file": "Batman T.A.S - S01 E47 - Harley and Ivy (480p).mp4",
+      "date": "1993-01-18",
+      "year": 1993,
+      "description": "When the Joker fires Harley for her incompetence, she tries going on a crime spree of her own, joining up with Poison Ivy, and the two become Gotham's Queens of Crime, much to the Joker's displeasure.",
+      "duration": 1346
+    },
+    {
+      "season": 1,
+      "episode": 48,
+      "title": "The Mechanic",
+      "file": "Batman T.A.S - S01 E48 - The Mechanic (480p).mp4",
+      "date": "1993-01-24",
+      "year": 1993,
+      "description": "Thanks to an accident during a high-speed chase, the Batmobile is virtually demolished. When Batman takes the car to his mechanic, Earl Cooper, the Penguin discovers the repair shop and tampers with the Batmobile, putting it under his control.",
+      "duration": 1341
+    },
+    {
+      "season": 1,
+      "episode": 49,
+      "title": "The Man Who Killed Batman",
+      "file": "Batman T.A.S - S01 E49 - The Man Who Killed Batman (480p).mp4",
+      "date": "1993-02-01",
+      "year": 1993,
+      "description": "When small-time gang member Sidney \"Sid the Squid\" Debris seemingly kills Batman by accident, his newfound reputation vaults him into the upper stratum of the criminal element in Gotham. He meets the Joker and Rupert Thorne, neither of whom believes his claim that everything happened by pure luck. Sidney soon begins to realise that his reputation is a greater liability than an asset.",
+      "duration": 1346
+    },
+    {
+      "season": 1,
+      "episode": 50,
+      "title": "Zatanna",
+      "file": "Batman T.A.S - S01 E50 - Zatanna (480p).mp4",
+      "date": "1993-02-02",
+      "year": 1993,
+      "description": "When the glamorous magician Zatanna is framed for a robbery during her act, Batman swings to her defense. Zatanna is grateful, though a little puzzled, by Batman's commitment to proving her innocence. Still, the two heroes unite and use the skills her father Zatara taught them to expose and combat the culprit: an evil illusionist named Montague Kane.",
+      "duration": 1346
+    },
+    {
+      "season": 1,
+      "episode": 51,
+      "title": "Robin's Reckoning, Part 1",
+      "file": "Batman T.A.S - S01 E51 - Robin's Reckoning, Part 1 (480p).mp4",
+      "date": "1993-02-07",
+      "year": 1993,
+      "description": "Batman and Robin put a stop to a group of gangsters sabotaging a construction yard as part of an extortion racket. When one of them later reveals their boss is Billy Marin, Batman orders Robin not to accompany him on the search for the culprit. Curious, Robin uses the Batcomputer to find out why, and discovers Marin is the alias of Tony Zucco , the man who killed his parents, John and Mary Grayson.",
+      "duration": 1344
+    },
+    {
+      "season": 1,
+      "episode": 52,
+      "title": "Birds of a Feather",
+      "file": "Batman T.A.S - S01 E52 - Birds of a Feather (480p).mp4",
+      "date": "1993-02-08",
+      "year": 1993,
+      "description": "Veronica Vreeland is looking for a way to create a splash with her next high society party and arrives at the idea of inviting a famous reformed criminal, the Penguin, who she finds to have comical fish-out-of-water mannerisms. Veronica convinces the Penguin to attend her party, intending him to be a laughingstock, but she begins to genuinely like him. For his part, the Penguin falls in love with her until he overhears that he is being used as the butt of a joke.",
+      "duration": 1346
+    },
+    {
+      "season": 1,
+      "episode": 53,
+      "title": "Robin's Reckoning, Part 2",
+      "file": "Batman T.A.S - S01 E53 - Robin's Reckoning, Part 2 (480p).mp4",
+      "date": "1993-02-14",
+      "year": 1993,
+      "description": "Robin, furious at Batman for his deceit, heads out into Gotham to track down Zucco, determined to get vengeance on him. Meanwhile, Batman, whilst searching for Zucco, recalls the memories he had of taking in Dick as an adopted son, helping him with his grief, and his original efforts to find Zucco. Neither he nor Robin has any idea of what will happen when they finally track Zucco down to an old amusement park.",
+      "duration": 1340
+    },
+    {
+      "season": 1,
+      "episode": 54,
+      "title": "Blind as a Batman",
+      "file": "Batman T.A.S - S01 E54 - Blind as a Batman (480p).mp4",
+      "date": "1993-02-22",
+      "year": 1993,
+      "description": "The Penguin steals an experimental helicopter from an air show, causing an explosion that temporarily blinds Bruce Wayne. Batman knows he won't be able to wait until his vision returns to apprehend the Penguin, and builds a high-tech visor to grant him a limited form of vision.",
+      "duration": 1342
+    },
+    {
+      "season": 1,
+      "episode": 55,
+      "title": "Day of The Samurai",
+      "file": "Batman T.A.S - S01 E55 - Day of The Samurai (480p).mp4",
+      "date": "1993-02-23",
+      "year": 1993,
+      "description": "Kyodai Ken kidnaps Kairi Tanaga, star pupil of Yoru-sensei, the martial arts instructor who taught both Kyodai and Bruce. The ninja's ransom for her is a scroll which reveals the location of the fabled Death Touch technique.",
+      "duration": 1347
+    },
+    {
+      "season": 1,
+      "episode": 56,
+      "title": "See No Evil",
+      "file": "Batman T.A.S - S01 E56 - See No Evil (480p).mp4",
+      "date": "1993-02-24",
+      "year": 1993,
+      "description": "Lloyd Ventrix , a con artist recently released from prison, uses a special invisibility suit to pose as his daughter Kimberly's imaginary friend without his ex-wife's knowledge. Batman, investigating a series of recent thefts, learns from the scientist who made the suit's material that prolonged use will drive Ventrix insane, and soon has to rescue Kimberly when he abducts her.",
+      "duration": 1345
+    },
+    {
+      "season": 1,
+      "episode": 57,
+      "title": "The Demon's Quest, Part 1",
+      "file": "Batman T.A.S - S01 E57 - The Demon's Quest, Part 1 (480p).mp4",
+      "date": "1993-05-03",
+      "year": 1993,
+      "description": "Talia al Ghul and Robin are both kidnapped, forcing Batman and Ra's al Ghul into an uneasy truce to rescue them.",
+      "duration": 1344
+    },
+    {
+      "season": 1,
+      "episode": 58,
+      "title": "The Demon's Quest, Part 2",
+      "file": "Batman T.A.S - S01 E58 - The Demon's Quest, Part 2 (480p).mp4",
+      "date": "1993-05-04",
+      "year": 1993,
+      "description": "After freeing Talia from her father's clutches and escaping from an avalanche, Batman and Robin follow their only clue – the word \"Orpheus\". After discovering that \"Orpheus\" is Al Ghul's private satellite that passes over the Sahara, the duo travels to his desert stronghold. There, Batman learns that Al Ghul is planning to detonate bombs in Lazarus Pits throughout the world, killing billions of people in an attempt to restore natural balance.",
+      "duration": 1340
+    },
+    {
+      "season": 1,
+      "episode": 59,
+      "title": "Read My Lips",
+      "file": "Batman T.A.S - S01 E59 - Read My Lips (480p).mp4",
+      "date": "1993-05-10",
+      "year": 1993,
+      "description": "A new gang has made its debut by committing slickly-executed crimes masterminded by gang leader Scarface, but Scarface turns out to be a puppet handled by his \"dummy\", the Ventriloquist .",
+      "duration": 1344
+    },
+    {
+      "season": 1,
+      "episode": 60,
+      "title": "Fire From Olympus",
+      "file": "Batman T.A.S - S01 E60 - Fire From Olympus (480p).mp4",
+      "date": "1993-05-24",
+      "year": 1993,
+      "description": "Believing himself to be the reincarnation of Zeus , Maximillian Zeus steals an experimental electric cannon, planning to use it to rule from his skyscraper, \"Mount Olympus\", high above Gotham City.",
+      "duration": 1341
+    },
+    {
+      "season": 2,
+      "episode": 1,
+      "title": "Shadow of The Bat, Part 1",
+      "file": "Batman T.A.S - S02 E01 - Shadow of The Bat, Part 1 (480p).mp4",
+      "date": "1993-09-13",
+      "year": 1993,
+      "description": "When Commissioner Gordon is framed with allegations of taking bribes from Rupert Thorne, his daughter Barbara pleads with Batman to attend a rally on the commissioner's behalf. But when Batman disappears after finding the person behind the frame-up, Barbara takes the law into her hands as Batgirl .",
+      "duration": 1349
+    },
+    {
+      "season": 2,
+      "episode": 2,
+      "title": "Shadow of The Bat, Part 2",
+      "file": "Batman T.A.S - S02 E02 - Shadow of The Bat, Part 2 (480p).mp4",
+      "date": "1993-09-14",
+      "year": 1993,
+      "description": "Robin discovers that Gil Mason is in league with the underworld and goes to investigate him. He encounters Batgirl, and together they learn that Mason is working with Two-Face to take out Gordon and have Batman (as Matches Malone) captured.",
+      "duration": 1344
+    },
+    {
+      "season": 2,
+      "episode": 3,
+      "title": "Mudslide",
+      "file": "Batman T.A.S - S02 E03 - Mudslide (480p).mp4",
+      "date": "1993-09-15",
+      "year": 1993,
+      "description": "Clayface's body is no longer stable and rapidly falling apart. A scientist he knew from his movie star days is working on a remedy, but Hagen is forced to steal money to pay for the expensive components of the remedy, and one of his targets is Wayne Biomedical Labs.",
+      "duration": 1343
+    },
+    {
+      "season": 2,
+      "episode": 4,
+      "title": "The Worry Men",
+      "file": "Batman T.A.S - S02 E04 - The Worry Men (480p).mp4",
+      "date": "1993-09-16",
+      "year": 1993,
+      "description": "Wealthy socialite Veronica Vreeland returns from Central America, bringing tiny handmade dolls for all her friends. According to native legend, once placed under a pillow, the dolls do the sleeper's worrying for them. However, they are actually made by the Mad Hatter and contain small, mind-controlling microchips.",
+      "duration": 1342
+    },
+    {
+      "season": 2,
+      "episode": 5,
+      "title": "Paging The Crime Doctor",
+      "file": "Batman T.A.S - S02 E05 - Paging The Crime Doctor (480p).mp4",
+      "date": "1993-09-17",
+      "year": 1993,
+      "description": "Matthew Thorne , a doctor who lost his medical license and was subsequently forced into becoming the \"crime doctor\" by his older brother, crime boss Rupert Thorne, must perform delicate surgery on Rupert. He can't do it alone and kidnaps Leslie Thompkins to assist. Batman discovers Leslie's disappearance and rushes to track her down – and has an additional interest in Matthew because he was a medical school classmate of Bruce Wayne's father, Thomas.",
+      "duration": 1342
+    },
+    {
+      "season": 2,
+      "episode": 6,
+      "title": "House and Garden",
+      "file": "Batman T.A.S - S02 E06 - House and Garden (480p).mp4",
+      "date": "1994-05-02",
+      "year": 1994,
+      "description": "Poison Ivy has not only been released from Arkham Asylum but has also married her doctor and settled down to help him raise his two sons. It would appear that Ivy has gone straight and that her old days as a criminal are over, but wealthy bachelors are being struck down by an unknown toxin, leaving Batman questioning Ivy's innocence.",
+      "duration": 1345
+    },
+    {
+      "season": 2,
+      "episode": 7,
+      "title": "Sideshow",
+      "file": "Batman T.A.S - S02 E07 - Sideshow (480p).mp4",
+      "date": "1994-05-03",
+      "year": 1994,
+      "description": "En route to an upstate prison, Killer Croc escapes and leads Batman on a dangerous chase through the wilderness. After throwing Batman temporarily off his trail, the reptile-man takes refuge with a group of retired circus freaks and befriends them under false pretenses. When Batman arrives, Croc and the performers band together to capture him.",
+      "duration": 1344
+    },
+    {
+      "season": 2,
+      "episode": 8,
+      "title": "Avatar",
+      "file": "Batman T.A.S - S02 E08 - Avatar (480p).mp4",
+      "date": "1994-05-09",
+      "year": 1994,
+      "description": "Ra's al Ghul steals a mystic Egyptian scroll donated to the Gotham Museum by Bruce Wayne. Batman and Talia must join forces to prevent her mentally unstable father from unlocking the scroll's mystic secrets of life and death. Their quest takes them to a hidden temple deep beneath the Egyptian desert where Batman battles an ancient sorceress.",
+      "duration": 1344
+    },
+    {
+      "season": 2,
+      "episode": 9,
+      "title": "Trial",
+      "file": "Batman T.A.S - S02 E09 - Trial (480p).mp4",
+      "date": "1994-05-16",
+      "year": 1994,
+      "description": "Gotham's new district attorney Janet Van Dorn is no fan of vigilante Batman, but both end up captured by Batman's rogues gallery after a prison riot in Arkham Asylum. They are then put on trial by the Joker (judge) and Two-Face (prosecutor) with the Ventriloquist as bailiff and a plainly biased jury of Poison Ivy, Harley Quinn, the Mad Hatter, Killer Croc, the Scarecrow, and the Riddler. Though clearly a kangaroo trial , Van Dorn is told that if she serves as Batman's defense attorney and proves that Batman is not the cause of these villains' criminal behavior, they will both be set free. But the villains have little intention of following through on their deal.",
+      "duration": 1341
+    },
+    {
+      "season": 2,
+      "episode": 10,
+      "title": "Harlequinade",
+      "file": "Batman T.A.S - S02 E10 - Harlequinade (480p).mp4",
+      "date": "1994-05-23",
+      "year": 1994,
+      "description": "The Joker steals an atomic bomb and it is up to Batman and Robin to find and stop him, with Harley Quinn's help.",
+      "duration": 1343
+    },
+    {
+      "season": 3,
+      "episode": 1,
+      "title": "Bane",
+      "file": "Batman T.A.S - S03 E01 - Bane (480p).mp4",
+      "date": "1994-09-10",
+      "year": 1994,
+      "description": "Batman comes face-to-face with his most powerful adversary yet: the chemically-enhanced assassin Bane . Originally hired by Rupert Thorne to kill Batman, Bane plans to control Thorne's criminal empire once Batman is destroyed.",
+      "duration": 1280
+    },
+    {
+      "season": 3,
+      "episode": 2,
+      "title": "Second Chance",
+      "file": "Batman T.A.S - S03 E02 - Second Chance (480p).mp4",
+      "date": "1994-09-17",
+      "year": 1994,
+      "description": "Just before Harvey Dent is to undergo surgery to fix the damage to his face in the hopes that it will give him the mental stability needed to erase his Two-Face persona, he is kidnapped by a gang with an unknown leader. Batman and Robin split up to find who abducted Bruce Wayne's old friend, suspecting that the Penguin or Rupert Thorne may be behind the kidnapping.",
+      "duration": 1276
+    },
+    {
+      "season": 3,
+      "episode": 3,
+      "title": "Riddler's Reform",
+      "file": "Batman T.A.S - S03 E03 - Riddler's Reform (480p).mp4",
+      "date": "1994-09-24",
+      "year": 1994,
+      "description": "Vowing to turn over a new leaf, the Riddler is hired to work for a toy company. But Batman suspects that the Riddler is still obsessed with outsmarting and defeating him.",
+      "duration": 1274
+    },
+    {
+      "season": 3,
+      "episode": 4,
+      "title": "Baby-Doll",
+      "file": "Batman T.A.S - S03 E04 - Baby-Doll (480p).mp4",
+      "date": "1994-10-01",
+      "year": 1994,
+      "description": "A washed-up actress named Mary Louise Dahl has become bitter and insane after falling into obscurity and having a condition that prevents her body from growing to adulthood . She kidnaps her former co-stars, resentful of their continued success, and holds them prisoner on the abandoned stage of her old show. While Robin works fast to free the actors from Mary's explosive death trap, Batman pursues her through a deadly carnival funhouse.",
+      "duration": 1275
+    },
+    {
+      "season": 3,
+      "episode": 5,
+      "title": "Time Out of Joint",
+      "file": "Batman T.A.S - S03 E05 - Time Out of Joint (480p).mp4",
+      "date": "1994-10-08",
+      "year": 1994,
+      "description": "The Clock King returns to continue his vendetta against Mayor Hill. This time, the time-obsessed criminal hopes to murder Hill with the help of a stolen invention that allows him to warp time and travel at super speed. Securing a second device from its creator, Batman and Robin takes on the Clock King in a furious high-speed battle for the mayor's life.",
+      "duration": 1280
+    },
+    {
+      "season": 3,
+      "episode": 6,
+      "title": "Harley's Holiday",
+      "file": "Batman T.A.S - S03 E06 - Harley's Holiday (480p).mp4",
+      "date": "1994-10-15",
+      "year": 1994,
+      "description": "Harley Quinn is released back into society after being given a clean bill of mental health by Arkham Asylum. However, a misunderstanding at a clothing store leads to her returning to crime. Batman and Robin attempt to help her before she lands herself back in confinement.",
+      "duration": 1272
+    },
+    {
+      "season": 3,
+      "episode": 7,
+      "title": "Make 'Em Laugh",
+      "file": "Batman T.A.S - S03 E07 - Make 'Em Laugh (480p).mp4",
+      "date": "1994-11-05",
+      "year": 1994,
+      "description": "Using microchips stolen from the Mad Hatter, the Joker brainwashes famous comedians into committing crimes to ruin their reputations. The comedians had served as the judges who tossed the Joker out of the Gotham Comedy Competition the year before, and the Clown Prince of Crime wants revenge.",
+      "duration": 1277
+    },
+    {
+      "season": 3,
+      "episode": 8,
+      "title": "Batgirl Returns",
+      "file": "Batman T.A.S - S03 E08 - Batgirl Returns (480p).mp4",
+      "date": "1994-11-12",
+      "year": 1994,
+      "description": "While Bruce is in Europe on a Wayne Enterprises business trip, the theft of a jade cat statue occurs at Gotham State University. Barbara Gordon investigates as Batgirl, only to run into Catwoman, who claims she is also investigating and that the theft was not her style. The two team up to find the statue, with Robin tailing them, and Roland Daggett is revealed to be involved.",
+      "duration": 1276
+    },
+    {
+      "season": 3,
+      "episode": 9,
+      "title": "Lock-Up",
+      "file": "Batman T.A.S - S03 E09 - Lock-Up (480p).mp4",
+      "date": "1994-11-19",
+      "year": 1994,
+      "description": "Lyle Bolton , the new head of security at Arkham, is fired for his atrocious mistreatment of the inmates. Six months later, Bolton becomes the vigilante Lock-Up and decides to put behind bars those who he feels are responsible for the city's ruin.",
+      "duration": 1276
+    },
+    {
+      "season": 3,
+      "episode": 10,
+      "title": "Deep Freeze",
+      "file": "Batman T.A.S - S03 E10 - Deep Freeze (480p).mp4",
+      "date": "1994-11-26",
+      "year": 1994,
+      "description": "Mr. Freeze is sprung from Arkham by aging billionaire Grant Walker, who is looking to replicate his immortality. Batman and Robin infiltrate the billionaire's underwater city and combat both high-tech robots and Mr. Freeze himself, who has decided to do Walker's bidding and cover the Earth in a new ice age.",
+      "duration": 1275
+    },
+    {
+      "season": 4,
+      "episode": 1,
+      "title": "The Terrible Trio",
+      "file": "Batman T.A.S - S04 E01 - The Terrible Trio (480p).mp4",
+      "date": "1995-09-11",
+      "year": 1995,
+      "description": "Three wealthy, bored youths seek new thrills by becoming master criminals. As animal-themed robbers Fox, Shark, and Vulture (masters of land, sea, and air), the Terrible Trio pick Gotham clean until they come to the attention of Batman.",
+      "duration": 1277
+    },
+    {
+      "season": 4,
+      "episode": 2,
+      "title": "Showdown",
+      "file": "Batman T.A.S - S04 E02 - Showdown (480p).mp4",
+      "date": "1995-09-12",
+      "year": 1995,
+      "description": "Ra's al Ghul remembers a time in his past (the Wild West of the 1880s) in which Jonah Hex stopped him and his son Arkady Duvall's plan to destroy the transcontinental railroad using a war blimp.",
+      "duration": 1275
+    },
+    {
+      "season": 4,
+      "episode": 3,
+      "title": "Catwalk",
+      "file": "Batman T.A.S - S04 E03 - Catwalk (480p).mp4",
+      "date": "1995-09-13",
+      "year": 1995,
+      "description": "Anxious to take up her old ways as Catwoman, Selina Kyle joins the Ventriloquist to humiliate Veronica Vreeland. But the real victim is Catwoman herself, who Scarface has secretly set up to take the fall for another robbery.",
+      "duration": 1277
+    },
+    {
+      "season": 4,
+      "episode": 4,
+      "title": "A Bullet for Bullock",
+      "file": "Batman T.A.S - S04 E04 - A Bullet for Bullock (480p).mp4",
+      "date": "1995-09-14",
+      "year": 1995,
+      "description": "Someone has put a hit out on Gotham's toughest cop, Harvey Bullock. After surviving several near hits, Bullock realizes he has no choice but to ask his arch-rival Batman to help him discover who is behind the murder attempts. During their investigation, Bullock learns that his gruff and mean-spirited manner has created enemies in the unlikeliest people.",
+      "duration": 1276
+    },
+    {
+      "season": 4,
+      "episode": 5,
+      "title": "The Lion and The Unicorn",
+      "file": "Batman T.A.S - S04 E05 - The Lion and The Unicorn (480p).mp4",
+      "date": "1995-09-15",
+      "year": 1995,
+      "description": "The Red Claw organization kidnaps Alfred, seeking a code for arming a weapon of mass destruction that he knows from his days as a British secret agent.",
+      "duration": 1288
+    }
+  ]
+}
