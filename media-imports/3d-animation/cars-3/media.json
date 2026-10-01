@@ -1,0 +1,23 @@
+{
+  "id": "cars-3",
+  "title": "Cars 3",
+  "description": "Lightning McQueen trains with a young racing technician while preparing to compete against a new generation of high-tech racers.",
+  "date": "2017-06-16",
+  "year": 2017,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family",
+    "Sports"
+  ],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 6145,
+  "video": "Cars.3.2017.720p.BluRay.x264-[YTS.AG].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Cars_3",
+  "sourceFolder": "Cars 3 (2017) [YTS.AG]"
+}

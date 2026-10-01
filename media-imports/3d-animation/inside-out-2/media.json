@@ -1,0 +1,22 @@
+{
+  "id": "inside-out-2",
+  "title": "Inside Out 2",
+  "description": "Riley enters her teenage years as new emotions arrive and disrupt life inside Headquarters.",
+  "date": "2024-06-14",
+  "year": 2024,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5781,
+  "video": "Inside.Out.2.2024.720p.WEBRip.x264.AAC-[YTS.MX].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Inside_Out_2",
+  "sourceFolder": "Inside Out 2 (2024) [720p] [WEBRip] [YTS.MX]"
+}

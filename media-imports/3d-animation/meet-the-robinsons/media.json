@@ -1,0 +1,23 @@
+{
+  "id": "meet-the-robinsons",
+  "title": "Meet the Robinsons",
+  "description": "A young inventor travels to the future and discovers an unusual family while confronting a mysterious villain.",
+  "date": "2007-03-30",
+  "year": 2007,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family",
+    "Science Fiction"
+  ],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 0,
+  "video": "Meet.The.Robinsons.2007.720p.BRrip.x264.YIFY.mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Meet_the_Robinsons",
+  "sourceFolder": "Meet The Robinsons (2007)"
+}

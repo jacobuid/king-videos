@@ -1,0 +1,22 @@
+{
+  "id": "madagascar",
+  "title": "Madagascar",
+  "description": "Four animals from the Central Park Zoo unexpectedly find themselves trying to survive in Madagascar.",
+  "date": "2005-05-27",
+  "year": 2005,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 5158,
+  "video": "Madagascar.2005.720p.BrRip.x264.YIFY.mp4",
+  "thumbnail": "HD-wallpaper-movie-madagascar-thumbnail.jpg",
+  "metadataSource": "https://en.wikipedia.org/wiki/Madagascar_(2005_film)",
+  "sourceFolder": "Madagascar (2005)"
+}

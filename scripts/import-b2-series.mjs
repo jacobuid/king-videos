@@ -2,6 +2,12 @@ import { createHash } from 'node:crypto'
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { basename, dirname, resolve } from 'node:path'
 import process from 'node:process'
+import { Agent, setGlobalDispatcher } from 'undici'
+
+// B2 returns response headers only after receiving the complete object. Large
+// videos on slower upstream connections can exceed Undici's five-minute
+// default, even though the upload is still healthy.
+setGlobalDispatcher(new Agent({ headersTimeout: 30 * 60 * 1000, bodyTimeout: 30 * 60 * 1000 }))
 
 const manifestPath=resolve(process.argv[2]||''),subtitlesOnly=process.argv.includes('--subtitles-only'),uploadOnly=process.argv.includes('--upload-only'),resume=process.argv.includes('--resume'),fileArg=process.argv.indexOf('--file'),onlyFile=fileArg>=0?process.argv[fileArg+1]:null,folderArg=process.argv.indexOf('--folder'),concurrencyArg=process.argv.indexOf('--concurrency'),concurrency=concurrencyArg>=0?Number(process.argv[concurrencyArg+1]):3,shardIndexArg=process.argv.indexOf('--shard-index'),shardIndex=shardIndexArg>=0?Number(process.argv[shardIndexArg+1]):0,shardCountArg=process.argv.indexOf('--shard-count'),shardCount=shardCountArg>=0?Number(process.argv[shardCountArg+1]):1,statusArg=process.argv.indexOf('--status-file'),statusPath=statusArg>=0?resolve(process.argv[statusArg+1]||''):null
 if(!process.argv[2]||(fileArg>=0&&!onlyFile)||(folderArg>=0&&!process.argv[folderArg+1])||(statusArg>=0&&!statusPath)||!Number.isInteger(concurrency)||concurrency<1||concurrency>8||!Number.isInteger(shardCount)||shardCount<1||!Number.isInteger(shardIndex)||shardIndex<0||shardIndex>=shardCount)throw new Error('Usage: node scripts/import-b2-series.mjs <media.json> [--folder <media-folder>] [--upload-only] [--subtitles-only] [--file <filename>] [--concurrency 1-8] [--shard-index 0-N --shard-count N] [--status-file <status.json>]')
@@ -13,7 +19,7 @@ const bucketName=process.env.B2_BUCKET||'king-videos',basic=Buffer.from(`${proce
 const authResponse=await fetch('https://api.backblazeb2.com/b2api/v4/b2_authorize_account',{headers:{Authorization:`Basic ${basic}`}})
 if(!authResponse.ok)throw new Error(`Backblaze authorization failed (${authResponse.status})`)
 const auth=await authResponse.json(),storage=auth.apiInfo.storageApi
-async function b2(operation,body){const response=await fetch(`${storage.apiUrl}/b2api/v4/${operation}`,{method:'POST',headers:{Authorization:auth.authorizationToken,'Content-Type':'application/json'},body:JSON.stringify(body)});if(!response.ok)throw new Error(`${operation} failed: ${await response.text()}`);return response.json()}
+async function b2(operation,body){for(let attempt=1;attempt<=5;attempt++){try{const response=await fetch(`${storage.apiUrl}/b2api/v4/${operation}`,{method:'POST',headers:{Authorization:auth.authorizationToken,'Content-Type':'application/json'},body:JSON.stringify(body)});if(response.ok)return response.json();if(response.status<500&&response.status!==429)throw new Error(`${operation} failed: ${await response.text()}`)}catch(error){if(attempt===5)throw error;console.warn(`${operation} attempt ${attempt} failed; retrying`)}await new Promise(resolve=>setTimeout(resolve,attempt*2000))}throw new Error(`${operation} failed after five attempts`)}
 const buckets=await b2('b2_list_buckets',{accountId:auth.accountId,bucketName}),bucket=buckets.buckets?.find(item=>item.bucketName===bucketName)
 if(!bucket)throw new Error(`Backblaze bucket ${bucketName} was not found`)
 const existingKeys=new Map()

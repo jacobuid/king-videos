@@ -1,0 +1,17 @@
+{
+  "id": "superman-brainiac-attacks",
+  "title": "Superman: Brainiac Attacks",
+  "description": "Superman battles Brainiac and Lex Luthor while racing to save Lois Lane from a deadly alien infection.",
+  "date": "2006-06-20",
+  "year": 2006,
+  "category": "movie",
+  "genres": ["Animation", "Action", "Science Fiction", "Superhero"],
+  "rating": "TV-Y7",
+  "kids": true,
+  "blocked": false,
+  "duration": 4620,
+  "video": "SUPERMAN T.A.S. - S00 E01 - Brainiac Attacks (2006 - 720p BluRay).mp4",
+  "thumbnail": "thumb (1).jpg",
+  "metadataSource": "https://en.wikipedia.org/wiki/Superman:_Brainiac_Attacks",
+  "sourceFolder": "Specials (2006-08)"
+}

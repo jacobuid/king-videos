@@ -1,4 +1,6 @@
-Purpose is to get the new movies in D:\king-videos uploaded to backblaze B2.
+Purpose is to get the new movies  uploaded to backblaze B2 from: 
+
+ D:\king-videos
 
 Handbrake Compression Configuration:
 - Use two NVIDIA GPU NVENC Workers sharing one queue
@@ -24,6 +26,16 @@ BEFORE BEGINNING
 3. Start Compression
     - Audio: 96 kbps AAC minimal
     - Video: 680 kbps NVENC minimal
+
+If the episodes are 4:3 standard definition, I recommend:
+- Resolution: 480p
+- Video: H.264 NVENC at 1,100 kbps
+- Audio: AAC at 96 kbps
+- Workers: Two parallel NVENC workers
+If the sources are genuinely 16:9 HD:
+- Resolution: 720p
+- Video: H.264 NVENC at 1,600 kbps
+- Audio: AAC at 96–128 kbps
 
 
 --------------------------------------------------------------

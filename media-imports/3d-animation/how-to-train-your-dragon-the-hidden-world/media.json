@@ -1,0 +1,23 @@
+{
+  "id": "how-to-train-your-dragon-the-hidden-world",
+  "title": "How to Train Your Dragon: The Hidden World",
+  "description": "Hiccup and Toothless search for a hidden dragon sanctuary while confronting a ruthless dragon hunter.",
+  "date": "2019-02-22",
+  "year": 2019,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Action",
+    "Adventure",
+    "Family",
+    "Fantasy"
+  ],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 6246,
+  "video": "How to Train Your Dragon - The Hidden World [720p].mp4",
+  "thumbnail": "HowToTrainYourDragonTheHiddenWorld_keyart_mobile_3840x2160.jpg",
+  "metadataSource": "https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon:_The_Hidden_World",
+  "sourceFolder": "How To Train Your Dragon - The Hidden World (2019)"
+}

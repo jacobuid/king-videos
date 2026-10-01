@@ -1,0 +1,17 @@
+{
+  "id": "superman-doomsday",
+  "title": "Superman: Doomsday",
+  "description": "After Superman falls in battle against the monstrous Doomsday, Metropolis mourns its hero while a darker replacement emerges.",
+  "date": "2007-09-18",
+  "year": 2007,
+  "category": "movie",
+  "genres": ["Animation", "Action", "Science Fiction", "Superhero"],
+  "rating": "PG-13",
+  "kids": false,
+  "blocked": false,
+  "duration": 4620,
+  "video": "SUPERMAN T.A.S. - S00 E02 - Doomsday (2006 - 720p BluRay).mp4",
+  "thumbnail": "thumb (2).jpg",
+  "metadataSource": "https://en.wikipedia.org/wiki/Superman:_Doomsday",
+  "sourceFolder": "Specials (2006-08)"
+}

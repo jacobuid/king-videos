@@ -1,0 +1,373 @@
+{
+  "id": "justice-league-unlimited",
+  "title": "Justice League Unlimited",
+  "description": "The Justice League expands into a global organization whose growing roster confronts threats across Earth and beyond.",
+  "category": "tv",
+  "year": 2004,
+  "genres": [
+    "Animation",
+    "Action",
+    "Adventure",
+    "Science Fiction",
+    "Superhero"
+  ],
+  "rating": "TV-Y7",
+  "blocked": false,
+  "minAge": 12,
+  "thumbnail": "thumb.jpg",
+  "metadataSource": "https://en.wikipedia.org/wiki/Justice_League_Unlimited",
+  "episodeMetadataSource": "https://en.wikipedia.org/wiki/List_of_Justice_League_episodes",
+  "episodes": [
+    {
+      "season": 1,
+      "episode": 1,
+      "title": "Initiation",
+      "file": "Season 1/Justice League Unlimited 01x01 Initiation.mp4",
+      "date": "2004-07-31",
+      "year": 2004,
+      "description": "The Justice League reforms in a new satellite headquarters and adds a new expanded roster of members. They then recruit Green Arrow to aid Green Lantern, Captain Atom, and Supergirl in defeating a nuclear monster in China."
+    },
+    {
+      "season": 1,
+      "episode": 2,
+      "title": "For the Man Who Has Everything",
+      "file": "Season 1/Justice League Unlimited 01x02 For The Man Who Has Everything.mp4",
+      "date": "2004-08-07",
+      "year": 2004,
+      "description": "Batman and Wonder Woman deliver presents to Superman at the Fortress of Solitude for his birthday, but find he's been immobilized by a special \"gift\" courtesy of the world-conquering Mongul."
+    },
+    {
+      "season": 1,
+      "episode": 3,
+      "title": "Kid Stuff",
+      "file": "Season 1/Justice League Unlimited 01x03 Kid Stuff.mp4",
+      "date": "2004-08-14",
+      "year": 2004,
+      "description": "When Mordred banishes all adults into Limbo, Superman, Batman, Wonder Woman and Green Lantern must make a deal with his mother Morgaine to transform into 8-year-olds in a desperate attempt to defeat the boy-wizard."
+    },
+    {
+      "season": 1,
+      "episode": 4,
+      "title": "Hawk and Dove",
+      "file": "Season 1/Justice League Unlimited 01x04 Hawk And Dove.mp4",
+      "date": "2004-08-21",
+      "year": 2004,
+      "description": "Two superhero brothers, Dove (a pacifist) and Hawk (an aggressive fighter), join Wonder Woman to stop a civil war in Kaznia, but it turns out that the war is being instigated by the Greek god Ares as part of his plan to spread misery and conflict."
+    },
+    {
+      "season": 1,
+      "episode": 5,
+      "title": "This Little Piggy",
+      "file": "Season 1/Justice League Unlimited 01x05 This Little Piggy.mp4",
+      "date": "2004-08-28",
+      "year": 2004,
+      "description": "Batman turns to Zatanna for help to defeat the evil sorceress Circe and save a transformed teammate."
+    },
+    {
+      "season": 1,
+      "episode": 6,
+      "title": "Fearful Symmetry",
+      "file": "Season 1/Justice League Unlimited 01x06 Fearful Symmetry.mp4",
+      "date": "2004-09-04",
+      "year": 2004,
+      "description": "When Supergirl is plagued by disturbing dreams, she turns to Green Arrow and The Question for help, but they soon learn that she may not be dreaming after all."
+    },
+    {
+      "season": 1,
+      "episode": 7,
+      "title": "The Greatest Story Never Told",
+      "file": "Season 1/Justice League Unlimited 01x07 The Greatest Story Never Told.mp4",
+      "date": "2004-09-11",
+      "year": 2004,
+      "description": "While the sorcerer Mordru invades Metropolis and the League must attack en masse to stop him, gloryhound and erstwhile superhero Booster Gold ends up \"\"crowd control\"\" and does some world-saving of his own."
+    },
+    {
+      "season": 1,
+      "episode": 8,
+      "title": "The Return",
+      "file": "Season 1/Justice League Unlimited 01x08 The Return.mp4",
+      "date": "2004-09-18",
+      "year": 2004,
+      "description": "After the power-asborbing android Amazo destroys the home planet of the Guardians of the Universe, the League must intercept him before he reaches Earth and achieves his goal: murdering the recently reformed Lex Luthor."
+    },
+    {
+      "season": 1,
+      "episode": 9,
+      "title": "Ultimatum",
+      "file": "Season 1/Justice League Unlimited 01x09 Ultimatum.mp4",
+      "date": "2004-12-04",
+      "year": 2004,
+      "description": "A new team of heroes, the Ultimen, help the Justice League defeat fire monsters that are attacking an oil rig. But the Ultimen soon discover that a dark secret lies at the heart of their origins and their sponsorship and turn against the League."
+    },
+    {
+      "season": 1,
+      "episode": 10,
+      "title": "Dark Heart",
+      "file": "Season 1/Justice League Unlimited 01x10 Dark Heart.mp4",
+      "date": "2004-12-11",
+      "year": 2004,
+      "description": "When nanotech-based alien robots land in the American southwest and overwhelm the League, only the Atom, a microscopic super hero, can defeat them."
+    },
+    {
+      "season": 1,
+      "episode": 11,
+      "title": "Wake the Dead",
+      "file": "Season 1/Justice League Unlimited 01x11 Wake The Dead.mp4",
+      "date": "2004-12-18",
+      "year": 2004,
+      "description": "Solomon Grundy rises from the grave as a mindless berserker, and when the Justice League can't stop him, they turn to a reluctant Hawkgirl for assistance."
+    },
+    {
+      "season": 1,
+      "episode": 12,
+      "title": "The Once and Future Thing: Weird Western Tales, Part 1",
+      "file": "Season 1/Justice League Unlimited 01x12 The Once And Future Thing Weird Western Tales, Part 1.mp4",
+      "date": "2005-01-22",
+      "year": 2005,
+      "description": "Batman, Wonder Woman, and Green Lantern chase a time-traveling thief into the past and team up with some local \"\"superheroes\"\" of the era to deal with an outlaw who has used the thief's futuristic technology to take over an Old West town."
+    },
+    {
+      "season": 1,
+      "episode": 13,
+      "title": "The Once and Future Thing: Time, Warped, Part 2",
+      "file": "Season 1/Justice League Unlimited 01x13 The Once And Future Thing Time, Warped, Part 2.mp4",
+      "date": "2005-01-29",
+      "year": 2005,
+      "description": "In pursuit of a time-traveling thief, Batman, Green Lantern, and Wonder Woman arrive in a futuristic Gotham City twisted horribly awry by alterations to the time-stream, and must join forces with the future Batman and the Justice League Unlimited."
+    },
+    {
+      "season": 2,
+      "episode": 1,
+      "title": "The Cat and the Canary",
+      "file": "Season 2/Justice League Unlimited 02x01 The Cat And The Canary.mp4",
+      "date": "2005-02-05",
+      "year": 2005,
+      "description": "Black Canary asks Green Arrow to help save her mentor, Wildcat, from an underground super-powered fight club known as Meta-Brawl."
+    },
+    {
+      "season": 2,
+      "episode": 2,
+      "title": "The Ties That Bind",
+      "file": "Season 2/Justice League Unlimited 02x02 The Ties That Bind.mp4",
+      "date": "2005-02-12",
+      "year": 2005,
+      "description": "When escape artist and superhero Mr. Miracle can't get help from the rest of the League, the Flash volunteers to help him break out a special prisoner from an inescapable prison on Darkseid's homeworld of Apokolips."
+    },
+    {
+      "season": 2,
+      "episode": 3,
+      "title": "The Doomsday Sanction",
+      "file": "Season 2/Justice League Unlimited 02x03 The Doomsday Sanction.mp4",
+      "date": "2005-02-19",
+      "year": 2005,
+      "description": "While Batman investigates the Cadmus conspiracy headed by Amanda Waller, Superman battles a resurrected Doomsday in the heart of a volcano."
+    },
+    {
+      "season": 2,
+      "episode": 4,
+      "title": "Task Force X",
+      "file": "Season 2/Justice League Unlimited 02x04 Task Force X.mp4",
+      "date": "2005-05-21",
+      "year": 2005,
+      "description": "Four incarcerated villains are released from prison by Cadmus to undertake an impossible mission: steal a powerful mystic artifact from the JLU Watchtower under the noses of the League."
+    },
+    {
+      "season": 2,
+      "episode": 5,
+      "title": "The Balance",
+      "file": "Season 2/Justice League Unlimited 02x05 The Balance.mp4",
+      "date": "2005-05-28",
+      "year": 2005,
+      "description": "When Felix Faust escapes the magical mirror in which he was imprisoned by Tala, Wonder Woman and Hawkgirl must go to Tartarus where Faust has overthrown Lord Hades and claimed the place as his own."
+    },
+    {
+      "season": 2,
+      "episode": 6,
+      "title": "Double Date",
+      "file": "Season 2/Justice League Unlimited 02x06 Double Date.mp4",
+      "date": "2005-06-04",
+      "year": 2005,
+      "description": "Green Arrow and Black Canary must stop the Question and the Huntress from killing organized crime lord Steven Mandragora."
+    },
+    {
+      "season": 2,
+      "episode": 7,
+      "title": "Clash",
+      "file": "Season 2/Justice League Unlimited 02x07 Clash.mp4",
+      "date": "2005-06-11",
+      "year": 2005,
+      "description": "Captain Marvel, the World's Mightiest Mortal, joins the Justice League as Lex Luthor initiates a new plot."
+    },
+    {
+      "season": 2,
+      "episode": 8,
+      "title": "Hunter's Moon",
+      "file": "Season 2/Justice League Unlimited 02x08 Hunter'S Moon.mp4",
+      "date": "2005-06-18",
+      "year": 2005,
+      "description": "When Shayera, Vigilante, and Vixen respond to a deep space distress call, they're led into a deadly trap."
+    },
+    {
+      "season": 2,
+      "episode": 9,
+      "title": "Question Authority",
+      "file": "Season 2/Justice League Unlimited 02x09 Question Authority.mp4",
+      "date": "2005-06-25",
+      "year": 2005,
+      "description": "While investigating Cadmus, the Question discovers a secret that threatens to shake the very foundations of the Justice League."
+    },
+    {
+      "season": 2,
+      "episode": 10,
+      "title": "Flashpoint",
+      "file": "Season 2/Justice League Unlimited 02x10 Flashpoint.mp4",
+      "date": "2005-07-02",
+      "year": 2005,
+      "description": "After an unexpected battle, Superman considers declaring war on Cadmus."
+    },
+    {
+      "season": 2,
+      "episode": 11,
+      "title": "Panic in the Sky",
+      "file": "Season 2/Justice League Unlimited 02x11 Panic In The Sky.mp4",
+      "date": "2005-07-09",
+      "year": 2005,
+      "description": "When the founding members are taken out of action, the remaining League members fight to survive Cadmus' ultimate attack on the team."
+    },
+    {
+      "season": 2,
+      "episode": 12,
+      "title": "Divided We Fall",
+      "file": "Season 2/Justice League Unlimited 02x12 Divided We Fall.mp4",
+      "date": "2005-07-16",
+      "year": 2005,
+      "description": "When most of the Justice League is incapacitated, the League's deadliest enemies emerge to take advantage of the chaos."
+    },
+    {
+      "season": 2,
+      "episode": 13,
+      "title": "Epilogue",
+      "file": "Season 2/Justice League Unlimited 02x13 Epilogue.mp4",
+      "date": "2005-07-23",
+      "year": 2005,
+      "description": "Sixty-five years in the future, the history of the Justice League is the key to Batman's darkest secret...and his final destiny."
+    },
+    {
+      "season": 3,
+      "episode": 1,
+      "title": "I Am Legion",
+      "file": "Season 3/Justice League Unlimited 03x01 I Am Legion.mp4",
+      "date": "2005-09-17",
+      "year": 2005,
+      "description": "Lex Luthor is rescued from prison by a new villainous organization - the Legion of Doom!"
+    },
+    {
+      "season": 3,
+      "episode": 2,
+      "title": "Shadow of the Hawk",
+      "file": "Season 3/Justice League Unlimited 03x02 Shadow Of The Hawk.mp4",
+      "date": "2005-09-17",
+      "year": 2005,
+      "description": "Batman doesn't like the looks of Carter Hall, Shayara's new boyfriend, when he learns that Carter Hall has connections to Thanagar."
+    },
+    {
+      "season": 3,
+      "episode": 3,
+      "title": "Chaos at the Earth's Core",
+      "file": "Season 3/Justice League Unlimited 03x03 Chaos At The Earth's Core.mp4",
+      "date": "2005-09-24",
+      "year": 2005,
+      "description": "Green Lantern leads Stargirl, S.T.R.I.P.E., and Supergirl to Skartaris, a fantastic world where they meet a new hero, The Warlord."
+    },
+    {
+      "season": 3,
+      "episode": 4,
+      "title": "To Another Shore",
+      "file": "Season 3/Justice League Unlimited 03x04 To Another Shore.mp4",
+      "date": "2005-09-24",
+      "year": 2005,
+      "description": "Wonder Woman learns of a plot to steal the powers of the 3,000 year-old corpse of The Viking Prince."
+    },
+    {
+      "season": 3,
+      "episode": 5,
+      "title": "Flash and Substance",
+      "file": "Season 3/Justice League Unlimited 03x05 Flash And Substance.mp4",
+      "date": "2006-02-11",
+      "year": 2006,
+      "description": "The Flash must handle an onslaught of super-villains during the opening of a museum in his honor."
+    },
+    {
+      "season": 3,
+      "episode": 6,
+      "title": "Dead Reckoning",
+      "file": "Season 3/Justice League Unlimited 03x06 Dead Reckoning.mp4",
+      "date": "2006-02-18",
+      "year": 2006,
+      "description": "The League comes to the aid of Boston Brand, the ghost of a deceased circus acrobat, who needs their help in recovering the souls of members of a monastic order."
+    },
+    {
+      "season": 3,
+      "episode": 7,
+      "title": "Patriot Act",
+      "file": "Season 3/Justice League Unlimited 03x07 Patriot Act.mp4",
+      "date": "2006-02-25",
+      "year": 2006,
+      "description": "Green Arrow must lead a team of non-powered superheroes against a berserk super-soldier attacking Metropolis."
+    },
+    {
+      "season": 3,
+      "episode": 8,
+      "title": "The Great Brain Robbery",
+      "file": "Season 3/Justice League Unlimited 03x08 The Great Brain Robbery.mp4",
+      "date": "2006-03-04",
+      "year": 2006,
+      "description": "A mystic artifact causes Lex Luthor and the Flash to switch bodies."
+    },
+    {
+      "season": 3,
+      "episode": 9,
+      "title": "Grudge Match",
+      "file": "Season 3/Justice League Unlimited 03x09 Grudge Match.mp4",
+      "date": "2006-03-11",
+      "year": 2006,
+      "description": "Roulette returns with a new version of Metabrawl...and plans to use the Justice League to boost her ratings."
+    },
+    {
+      "season": 3,
+      "episode": 10,
+      "title": "Far from Home",
+      "file": "Season 3/Justice League Unlimited 03x10 Far From Home.mp4",
+      "date": "2006-04-15",
+      "year": 2006,
+      "description": "Supergirl is abducted to the 31st century to aid a futuristic group of super-heroes...and where it is destined she will never return."
+    },
+    {
+      "season": 3,
+      "episode": 11,
+      "title": "Ancient History",
+      "file": "Season 3/Justice League Unlimited 03x11 Ancient History.mp4",
+      "date": "2006-03-25",
+      "year": 2006,
+      "description": "The Hawkman and Shadow Thief (from \"Shadow of the Hawk\") return."
+    },
+    {
+      "season": 3,
+      "episode": 12,
+      "title": "Alive!",
+      "file": "Season 3/Justice League Unlimited 03x12 Alive!.mp4",
+      "date": "2006-04-01",
+      "year": 2006,
+      "description": "The Justice League take on their opposite numbers in the Legion of Doom in a final battle revealing the Legion's secret sponsor and the mystery behind their ultimate plans."
+    },
+    {
+      "season": 3,
+      "episode": 13,
+      "title": "Destroyer",
+      "file": "Season 3/Justice League Unlimited 03x13 Destroyer.mp4",
+      "date": "2006-04-08",
+      "year": 2006,
+      "description": "Faced with a common enemy, Lex Luthor and his criminals offer the League to join."
+    }
+  ]
+}

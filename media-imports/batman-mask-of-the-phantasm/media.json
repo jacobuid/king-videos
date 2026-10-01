@@ -1,0 +1,18 @@
+{
+  "id": "batman-mask-of-the-phantasm",
+  "title": "Batman: Mask of the Phantasm",
+  "description": "Batman confronts a mysterious vigilante targeting Gotham's crime bosses while the return of a former love forces Bruce Wayne to face his past.",
+  "date": "1993-12-25",
+  "year": 1993,
+  "category": "movie",
+  "genres": ["Animation", "Action", "Mystery", "Superhero"],
+  "rating": "PG",
+  "kids": true,
+  "minAge": 12,
+  "blocked": false,
+  "duration": 4588,
+  "video": "Batman - Mask of The Phantasm, Theatrical Version (1993 - 1080p BluRay).mp4",
+  "thumbnail": "thumb.jpg",
+  "metadataSource": "https://en.wikipedia.org/wiki/Batman:_Mask_of_the_Phantasm",
+  "sourceFolder": "Batman and Mask of The Phantasm"
+}

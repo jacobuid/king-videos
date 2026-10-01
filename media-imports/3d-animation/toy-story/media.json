@@ -1,0 +1,22 @@
+{
+  "id": "toy-story",
+  "title": "Toy Story",
+  "description": "A cowboy doll feels threatened when a new space-ranger toy becomes his owner’s favorite.",
+  "date": "1995-11-22",
+  "year": 1995,
+  "category": "movie",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 4864,
+  "video": "Toy Story[720p].mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Toy_Story",
+  "sourceFolder": "Toy Story (1995)"
+}
