@@ -32,6 +32,30 @@
   display: none;
 }
 
+/* Vidstack's compact portrait layout puts captions, settings, and volume in
+   the top-right corner. Keep that corner clear for the close control and
+   place the utility row above the timeline instead. */
+@media (orientation: portrait) and (max-width: 600px) {
+  .player-overlay .vds-video-layout[data-sm] .vds-controls-group:first-child {
+    position: absolute;
+    top: auto;
+    right: max(8px, env(safe-area-inset-right));
+    bottom: calc(max(8px, env(safe-area-inset-bottom)) + 72px);
+    left: auto;
+    width: max-content;
+    padding: 0;
+  }
+
+  .player-overlay .vds-video-layout[data-sm] .vds-controls-group:first-child > .vds-controls-spacer {
+    display: none;
+  }
+
+  .player-overlay .vds-video-layout[data-sm] .vds-volume-popup {
+    top: auto;
+    bottom: calc(100% + var(--gap));
+  }
+}
+
 .player-close {
   position: absolute;
   z-index: 30;
