@@ -212,6 +212,27 @@
   background: transparent;
 }
 
+/* Mobile Safari can paint controls over its landscape video layer slightly
+   above the DOM hit-test box. Keep the icon and button on one layer and give
+   the touch target extra vertical tolerance without moving the artwork. */
+@media (orientation: landscape) and (max-height: 560px) {
+  .player-center-play::before,
+  .player-skip::before {
+    position: absolute;
+    top: -32px;
+    right: -8px;
+    bottom: -16px;
+    left: -8px;
+    content: "";
+  }
+
+  .player-center-play svg,
+  .player-skip svg,
+  .player-skip b {
+    filter: none;
+  }
+}
+
 @keyframes skip-pulse {
   0% { transform: scale(1); }
   35% { transform: scale(1.16); }
