@@ -158,7 +158,8 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   const favoriteSet=new Set(favorites)
   const favoriteItems=favorites.map(id=>tvCards.find(item=>item.id===id)||filtered.find(item=>item.id===id)).filter(Boolean)
   const homeRows=[{title:'Continue Watching',items:continuing},{title:'My List',items:favoriteItems},...categories.filter(category=>!/movie/i.test(category)).slice(0,2).map(category=>({title:category,items:/tv|series|show/i.test(category)?tvCards:filtered.filter(item=>item.category===category)}))]
-  const newestFirst=(a,b)=>(b.year||0)-(a.year||0)||a.title.localeCompare(b.title)
+  const releaseOrder=item=>{const match=String(item.releaseDate||'').match(/^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?/);return match?Number(match[1])*10000+Number(match[2]||0)*100+Number(match[3]||0):(item.year||0)*10000}
+  const newestFirst=(a,b)=>releaseOrder(b)-releaseOrder(a)||a.title.localeCompare(b.title)
   const latestAdded=(a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||''))||a.title.localeCompare(b.title)
   const movies=filtered.filter(item=>!item.category||/movie/i.test(item.category))
   const shorts=filtered.filter(item=>/short/i.test(item.category))
@@ -168,7 +169,7 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   const matchingSeries=new Set(searchMatches.map(item=>item.seriesId).filter(Boolean))
   const unfilteredSearchItems=[...tvCards.filter(item=>item.isSeries?matchingSeries.has(item.seriesId):searchMatches.some(match=>match.id===item.id)),...searchMatches.filter(item=>!/tv|series|show/i.test(item.category))]
   const availableGenres=[...new Set(media.flatMap(item=>item.genres||[]))].sort((a,b)=>a.localeCompare(b))
-  const searchSorters={'uploaded-desc':latestAdded,'release-desc':newestFirst,'release-asc':(a,b)=>(a.year||9999)-(b.year||9999)||a.title.localeCompare(b.title),'title-asc':(a,b)=>a.title.localeCompare(b.title),'title-desc':(a,b)=>b.title.localeCompare(a.title)}
+  const searchSorters={'uploaded-desc':latestAdded,'release-desc':newestFirst,'release-asc':(a,b)=>{const aDate=releaseOrder(a),bDate=releaseOrder(b);return !aDate&&!bDate?a.title.localeCompare(b.title):!aDate?1:!bDate?-1:aDate-bDate||a.title.localeCompare(b.title)},'title-asc':(a,b)=>a.title.localeCompare(b.title),'title-desc':(a,b)=>b.title.localeCompare(a.title)}
   const searchItems=unfilteredSearchItems.filter(item=>{const category=item.category||'';if(contentType==='shorts'&&!/short/i.test(category))return false;if(contentType==='tv'&&!item.isSeries&&!/tv|series|show/i.test(category))return false;if(contentType==='movies'&&(item.isSeries||/tv|series|show|short/i.test(category)))return false;return !genre||(item.isSeries?(series.get(item.seriesId)||[]).some(episode=>(episode.genres||[]).includes(genre)):(item.genres||[]).includes(genre))}).sort(searchSorters[sortBy])
   const searchRows=[{title:query?`Results for "${query}"`:'All Titles',items:searchItems}]
   const links=[['movies','Movies'],['tv','TV']]
