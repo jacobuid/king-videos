@@ -87,3 +87,6 @@ Import a compressed movie and its thumbnail into Backblaze and D1:
 ```powershell
 node --env-file=.env scripts/import-b2-movie.mjs media-imports/sonic-the-hedgehog-ova/media.json --folder "D:\king-videos\sonic-the-hedgehog-ova-compressed"
 ```
+
+The birthday screen plays the licensed `movies/specials/happy-birthday/happy-birthday.mp4` asset through the authenticated B2 delivery route.
+Its multi-color celebration combines [tsParticles Confetti](https://confetti.js.org/) effects inspired by School Pride and Snow with [tsParticles Ribbons](https://ribbons.js.org/).

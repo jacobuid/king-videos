@@ -12,7 +12,8 @@ const json=(data:unknown,status=200)=>new Response(JSON.stringify(data),{status,
 const allowedKey=(key:string)=>key.startsWith('movies/')&&!key.includes('..')
 const validPin=(pin:string)=>/^\d{4}$/.test(pin)
 const validBirthDate=(value:string)=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(value))return false;const date=new Date(`${value}T00:00:00Z`),today=new Date();return !Number.isNaN(date.getTime())&&date.toISOString().slice(0,10)===value&&value>='1900-01-01'&&date<=today}
-const ageFromBirthDate=(value:string|null)=>{if(!value||!validBirthDate(value))return null;const today=new Date(),[year,month,day]=value.split('-').map(Number);let age=today.getUTCFullYear()-year;if(today.getUTCMonth()+1<month||(today.getUTCMonth()+1===month&&today.getUTCDate()<day))age--;return age}
+const householdDateParts=(date=new Date())=>Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'numeric',day:'numeric'}).formatToParts(date).filter(part=>part.type!=='literal').map(part=>[part.type,Number(part.value)]))as Record<'year'|'month'|'day',number>
+const ageFromBirthDate=(value:string|null,date=new Date())=>{if(!value||!validBirthDate(value))return null;const today=householdDateParts(date),[year,month,day]=value.split('-').map(Number);let age=today.year-year;if(today.month<month||(today.month===month&&today.day<day))age--;return age}
 const validAvatar=(avatar:string)=>/^(?:[a-z0-9-]+--[a-z0-9-]+|amy|apple-jack|bingo|blaze|blue|bluey|bucket-n-shovel|bunnie|daphane|diego|donald|drake|fluttershy|fred|gigi|goofy|josh|julie-su|knuckles|magenta|mailbox|manic|manny|max|mickey|peaches|pinky-pie|rainbow-dash|rarity|rotor|sally|salt-n-pepper|scoobydoo|shadow|shaggy|sid|soapy|sonia|sonic|superman-fleisher|tails|twilight-sparkle|velma)\.png$/.test(avatar)
 const base64url=(bytes:Uint8Array)=>btoa(String.fromCharCode(...bytes)).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'')
 const fromBase64url=(value:string)=>Uint8Array.from(atob(value.replaceAll('-','+').replaceAll('_','/')+'='.repeat((4-value.length%4)%4)),char=>char.charCodeAt(0))
@@ -55,6 +56,7 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
     const requestUrl=new URL(request.url),contentMatch=requestUrl.pathname.match(/^\/content\/([^/]+)$/);if(contentMatch&&(request.method==='GET'||request.method==='HEAD'))return serveContent(request,env,context,contentMatch[1])
     const auth=await authorize(request,env),userId=auth?.userId;if(!userId)return withCors(json({error:'Unauthorized'},401),cors)
     const url=new URL(request.url),path=url.pathname
+    if(path==='/api/birthday-video'&&request.method==='GET')return withCors(json({url:await contentUrl(request,env,'movies/specials/happy-birthday/happy-birthday.mp4','video',Date.now()+28800000),mimeType:'video/mp4'}),cors)
     if(path==='/api/manage-access'&&request.method==='POST'){
       if(!auth.has({reverification:{level:'first_factor',afterMinutes:1}}))return withCors(reverificationErrorResponse({level:'first_factor',afterMinutes:1}),cors)
       return withCors(json({ok:true,token:await encodeManageToken(env,{userId,expires:Date.now()+43200000})}),cors)
