@@ -4,6 +4,7 @@
 .birthday-dialog h2 strong{color:#ffe56d}
 .birthday-video{width:min(990px,90%);aspect-ratio:16/9;background:#000}
 .birthday-video video{display:block;width:100%;height:100%;border:0;background:#000;object-fit:contain}.birthday-video p{display:grid;height:100%;place-items:center;margin:0;color:#fff;font-size:1.1rem}
+.birthday-dialog.finished .birthday-heading{animation:birthday-heading-away .55s ease forwards}.birthday-dialog.finished .birthday-video{animation:birthday-video-away .9s ease forwards}.birthday-finale{position:fixed;z-index:2;inset:0;display:grid;place-items:center;pointer-events:none}.birthday-finale h2{margin:0;padding:24px;opacity:0;transform:translateY(-28vh) scale(.82);animation:birthday-finale-arrive 1.15s cubic-bezier(.2,.85,.3,1.15) .55s forwards}@keyframes birthday-heading-away{to{opacity:0;transform:translateY(-40px)}}@keyframes birthday-video-away{70%{opacity:0;transform:scale(.94)}100%{visibility:hidden;opacity:0;transform:scale(.9)}}@keyframes birthday-finale-arrive{0%{opacity:0;transform:translateY(-28vh) scale(.82)}35%{opacity:1}100%{opacity:1;transform:translateY(0) scale(1)}}
 .birthday-ribbons{position:fixed!important;z-index:3!important;inset:0!important;width:100%!important;height:100%!important;pointer-events:none}
 .birthday-confetti{position:fixed!important;z-index:4!important;inset:0!important;width:100%!important;height:100%!important;pointer-events:none}
 .birthday-close{position:fixed;z-index:4;top:max(18px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right));display:grid;width:56px;height:56px;place-items:center;padding:0;border:0;background:transparent;color:#fff;font-size:2.1rem;filter:drop-shadow(0 2px 5px #000)}
@@ -12,4 +13,4 @@
 .birthday-replay{display:grid;width:52px;height:52px;place-items:center;padding:0;border:0;border-radius:0;background:transparent;color:#fff;font-size:1.7rem;filter:drop-shadow(0 2px 4px #000);transition:transform .18s,color .18s}
 .birthday-replay:hover,.birthday-replay:focus-visible{background:transparent;color:#e7ad35;transform:scale(1.12)}
 @media(max-width:600px){.birthday-backdrop{padding:78px 10px 24px}.birthday-dialog h2{margin-bottom:22px}.birthday-close{width:48px;height:48px;font-size:1.8rem}}
-@media(prefers-reduced-motion:reduce){.birthday-confetti,.birthday-ribbons{display:none!important}}
+@media(prefers-reduced-motion:reduce){.birthday-confetti,.birthday-ribbons{display:none!important}.birthday-dialog.finished .birthday-heading,.birthday-dialog.finished .birthday-video,.birthday-finale h2{animation-duration:.01ms;animation-delay:0s}}
