@@ -1,0 +1,17 @@
+{
+  "id": "tinker-bell-lost-treasure",
+  "title": "Tinker Bell and the Lost Treasure",
+  "description": "Tinker Bell journeys beyond Pixie Hollow to repair a magical moonstone and restore the supply of pixie dust.",
+  "date": "2009-10-27",
+  "year": 2009,
+  "category": "movie",
+  "genres": ["Animation", "Adventure", "Family", "Fantasy"],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 4815,
+  "video": "Tinker.Bell.And.The.Lost.Treasure.2009.720p.BRrip.x264.GAZ.YIFY.mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Tinker_Bell_and_the_Lost_Treasure",
+  "sourceFolder": "Tinker Bell And The Lost Treasure (2009)"
+}

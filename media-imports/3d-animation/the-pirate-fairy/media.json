@@ -1,0 +1,17 @@
+{
+  "id": "the-pirate-fairy",
+  "title": "The Pirate Fairy",
+  "description": "Tinker Bell and her friends pursue a dust-keeper fairy who joins a band of pirates after stealing Pixie Hollow's blue pixie dust.",
+  "date": "2014-04-01",
+  "year": 2014,
+  "category": "movie",
+  "genres": ["Animation", "Adventure", "Family", "Fantasy"],
+  "rating": "G",
+  "kids": true,
+  "blocked": false,
+  "duration": 4683,
+  "video": "Tinker Bell and the Pirate Fairy 2014 1080p MA WEB-DL H 264 DDP5 1-HHWEB.mp4",
+  "thumbnail": "compose.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Pirate_Fairy",
+  "sourceFolder": "Tinker Bell and the Pirate Fairy"
+}

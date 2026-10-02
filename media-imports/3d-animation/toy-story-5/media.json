@@ -1,0 +1,17 @@
+{
+  "id": "toy-story-5",
+  "title": "Toy Story 5",
+  "description": "Woody, Buzz, Jessie, and the toys confront a new challenge when a tablet changes how Bonnie plays.",
+  "date": "2026-06-19",
+  "year": 2026,
+  "category": "movie",
+  "genres": ["Animation", "Adventure", "Comedy", "Family"],
+  "rating": "PG",
+  "kids": true,
+  "blocked": false,
+  "duration": 6207,
+  "video": "Toy Story 5 2026 720p AMZN WEB-DL DDP5 1 H 264-KyoGo.mp4",
+  "thumbnail": "thumbnail.jpg",
+  "metadataSource": "https://www.pixar.com/toy-story-5",
+  "sourceFolder": "Toy Story 5"
+}
