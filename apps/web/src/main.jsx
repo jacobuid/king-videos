@@ -101,10 +101,8 @@ function App(){
 function BirthdayDialog({profile,dismiss,request}){
   const ribbonCanvas=useRef(null)
   const confettiCanvas=useRef(null)
-  const videoElement=useRef(null)
   const[video,setVideo]=useState(null)
   const[videoError,setVideoError]=useState('')
-  const[videoNeedsTap,setVideoNeedsTap]=useState(true)
   const[videoEnded,setVideoEnded]=useState(false)
   useEffect(()=>{let active=true;void request('/api/birthday-video').then(result=>{if(active)setVideo(result)}).catch(error=>{if(active)setVideoError(error.message)});return()=>{active=false}},[])
   useEffect(()=>{
@@ -135,8 +133,7 @@ function BirthdayDialog({profile,dismiss,request}){
     void startCelebration().catch(error=>console.error('Unable to start birthday effects',error))
     return()=>{active=false;window.clearInterval(ribbonTimer);window.clearInterval(celebrationTimer);ribbonContainer?.destroy();confettiContainer?.destroy()}
   },[])
-  function attemptVideoPlayback(){const result=videoElement.current?.play();if(result)void result.then(()=>setVideoNeedsTap(false)).catch(()=>setVideoNeedsTap(true))}
-  return <div className="modal-backdrop birthday-backdrop"><section className={`birthday-dialog${videoEnded?' finished':''}`} role="dialog" aria-modal="true" aria-labelledby="birthday-title"><canvas ref={ribbonCanvas} className="birthday-ribbons" aria-hidden="true"/><canvas ref={confettiCanvas} className="birthday-confetti" aria-hidden="true"/><button className="birthday-close" type="button" onClick={dismiss} aria-label="Close birthday greeting"><FontAwesomeIcon icon={faXmark}/></button><h2 id="birthday-title" className="birthday-heading">Happy Birthday, <strong>{profile.name}!</strong></h2><div className="birthday-video">{video?<><video ref={videoElement} autoPlay playsInline preload="auto" onLoadedMetadata={attemptVideoPlayback} onPlaying={()=>setVideoNeedsTap(false)} onEnded={()=>setVideoEnded(true)} onError={()=>setVideoError('The birthday video could not be loaded.')}><source src={video.url} type={video.mimeType}/></video>{videoNeedsTap&&<button className="birthday-video-start" type="button" onClick={attemptVideoPlayback}><FontAwesomeIcon icon={faPlay}/> Play birthday video</button>}</>:<p>{videoError||'Loading your birthday surprise…'}</p>}</div>{videoEnded&&<div className="birthday-finale" aria-hidden="true"><h2>Happy Birthday, <strong>{profile.name}!</strong></h2></div>}</section></div>}
+  return <div className="modal-backdrop birthday-backdrop"><section className={`birthday-dialog${videoEnded?' finished':''}`} role="dialog" aria-modal="true" aria-labelledby="birthday-title"><canvas ref={ribbonCanvas} className="birthday-ribbons" aria-hidden="true"/><canvas ref={confettiCanvas} className="birthday-confetti" aria-hidden="true"/><button className="birthday-close" type="button" onClick={dismiss} aria-label="Close birthday greeting"><FontAwesomeIcon icon={faXmark}/></button><h2 id="birthday-title" className="birthday-heading">Happy Birthday, <strong>{profile.name}!</strong></h2><div className="birthday-video">{video?<video autoPlay controls playsInline preload="metadata" onEnded={()=>setVideoEnded(true)} onError={()=>setVideoError('The birthday video could not be loaded.')}><source src={video.url} type={video.mimeType}/></video>:<p>{videoError||'Loading your birthday surprise…'}</p>}</div>{videoEnded&&<div className="birthday-finale" aria-hidden="true"><h2>Happy Birthday, <strong>{profile.name}!</strong></h2></div>}</section></div>}
 
 function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,selected,setSelected,play,saveProgress,switchProfile,replayBirthday}){
   const[query,setQuery]=useState(''),[genre,setGenre]=useState(''),[sortBy,setSortBy]=useState('uploaded-desc'),[section,setSection]=useState('home'),[selectedSeries,setSelectedSeries]=useState(null),[selectedSeason,setSelectedSeason]=useState(null),[infoId,setInfoId]=useState(null)
