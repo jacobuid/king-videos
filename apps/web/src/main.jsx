@@ -40,7 +40,7 @@ function profileColor(profile){let value=0;for(const char of profile.id)value=(v
 function profileAge(dateOfBirth){if(!dateOfBirth)return null;const[year,month,day]=dateOfBirth.split('-').map(Number),today=new Date();let age=today.getFullYear()-year;if(today.getMonth()+1<month||(today.getMonth()+1===month&&today.getDate()<day))age--;return age>=0?age:null}
 function localDateInputValue(){const today=new Date(),offset=today.getTimezoneOffset()*60000;return new Date(today.getTime()-offset).toISOString().slice(0,10)}
 function birthdayToday(dateOfBirth){if(!dateOfBirth)return false;const[,month,day]=dateOfBirth.split('-').map(Number),today=new Date();return today.getMonth()+1===month&&today.getDate()===day}
-function birthdayAvailable(dateOfBirth){return import.meta.env.DEV||birthdayToday(dateOfBirth)}
+function birthdayAvailable(dateOfBirth){return birthdayToday(dateOfBirth)}
 function profilePicture(name){return `${import.meta.env.BASE_URL}profiles/${encodeURIComponent(legacyProfilePictures[name]||name)}`}
 function mediaCrossOrigin(url){try{return new URL(url).hostname.endsWith('.backblazeb2.com')?'anonymous':undefined}catch{return undefined}}
 function finishLoading(setter,startedAt){setTimeout(()=>setter(false),Math.max(0,900-(Date.now()-startedAt)))}
