@@ -104,7 +104,7 @@ function BirthdayDialog({profile,dismiss,request}){
   const videoElement=useRef(null)
   const[video,setVideo]=useState(null)
   const[videoError,setVideoError]=useState('')
-  const[videoNeedsTap,setVideoNeedsTap]=useState(false)
+  const[videoNeedsTap,setVideoNeedsTap]=useState(true)
   const[videoEnded,setVideoEnded]=useState(false)
   useEffect(()=>{let active=true;void request('/api/birthday-video').then(result=>{if(active)setVideo(result)}).catch(error=>{if(active)setVideoError(error.message)});return()=>{active=false}},[])
   useEffect(()=>{
