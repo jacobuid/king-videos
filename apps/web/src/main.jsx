@@ -157,7 +157,7 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   const tvCards=useMemo(()=>{const grouped=new Map(),standalone=[];for(const item of tvItems){if(!item.seriesId){standalone.push(item);continue}if(!grouped.has(item.seriesId)){const episodes=series.get(item.seriesId)||[item];grouped.set(item.seriesId,{...item,id:`series:${item.seriesId}`,title:item.seriesTitle||item.seriesId,episodeCount:episodes.length,isSeries:true})}}return [...grouped.values(),...standalone]},[tvItems,series])
   const favoriteSet=new Set(favorites)
   const favoriteItems=favorites.map(id=>tvCards.find(item=>item.id===id)||filtered.find(item=>item.id===id)).filter(Boolean)
-  const homeRows=[{title:'Continue Watching',items:continuing},{title:'My List',items:favoriteItems},...categories.filter(category=>!/movie/i.test(category)).slice(0,2).map(category=>({title:category,items:/tv|series|show/i.test(category)?tvCards:filtered.filter(item=>item.category===category)}))]
+  const homeRows=[{title:'Continue Watching',items:continuing},{title:'My List',items:favoriteItems},...categories.filter(category=>!/movie|home[- ]?videos?/i.test(category)).slice(0,2).map(category=>({title:category,items:/tv|series|show/i.test(category)?tvCards:filtered.filter(item=>item.category===category)}))]
   const releaseOrder=item=>{const match=String(item.releaseDate||'').match(/^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?/);return match?Number(match[1])*10000+Number(match[2]||0)*100+Number(match[3]||0):(item.year||0)*10000}
   const newestFirst=(a,b)=>releaseOrder(b)-releaseOrder(a)||a.title.localeCompare(b.title)
   const latestAdded=(a,b)=>String(b.createdAt||'').localeCompare(String(a.createdAt||''))||a.title.localeCompare(b.title)
