@@ -13,6 +13,11 @@ export const collections = [
       'justice-league',
       'justice-league-unlimited',
     ],
-    mediaIds: [],
+    mediaIds: [
+      'superman-brainiac-attacks',
+      'superman-doomsday',
+      'batman-mask-of-the-phantasm',
+      'batman-mr-freeze-subzero',
+    ],
   },
 ]
