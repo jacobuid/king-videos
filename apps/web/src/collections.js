@@ -48,4 +48,18 @@ export const collections = [
     ],
     mediaIds: ['sonic-the-hedgehog-ova'],
   },
+  {
+    id: 'toy-story',
+    title: 'Toy Story',
+    thumbnail: 'series/toy-story.webp',
+    description: 'Join Woody, Buzz, and their friends on their toy-sized adventures.',
+    showIds: [],
+    mediaIds: [
+      'toy-story',
+      'toy-story-2',
+      'toy-story-3',
+      'toy-story-4',
+      'toy-story-5',
+    ],
+  },
 ]
