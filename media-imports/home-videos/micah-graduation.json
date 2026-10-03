@@ -1,0 +1,22 @@
+{
+  "id": "home-videos",
+  "title": "Home Videos",
+  "category": "home-videos",
+  "description": "Family home videos organized by recording date.",
+  "genres": [
+    "Home Videos"
+  ],
+  "rating": "NR",
+  "minAge": 0,
+  "episodes": [
+    {
+      "file": "20210521_110200 - Micah's Graduation.mp4",
+      "title": "Micah's Graduation",
+      "season": 2021,
+      "episode": 1,
+      "date": "2021-05-21",
+      "year": 2021,
+      "duration": 25
+    }
+  ]
+}
