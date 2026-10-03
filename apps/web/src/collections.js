@@ -20,4 +20,18 @@ export const collections = [
       'batman-mr-freeze-subzero',
     ],
   },
+  {
+    id: 'ice-age',
+    title: 'Ice Age',
+    thumbnail: 'series/ice-age.webp',
+    description: 'Join Manny, Sid, and Diego on their prehistoric adventures.',
+    showIds: [],
+    mediaIds: [
+      'ice-age',
+      'ice-age-the-meltdown',
+      'ice-age-dawn-of-the-dinosaurs',
+      'ice-age-continental-drift',
+      'ice-age-collision-course',
+    ],
+  },
 ]
