@@ -62,4 +62,32 @@ export const collections = [
       'toy-story-5',
     ],
   },
+  {
+    id: 'neverland',
+    title: 'Neverland',
+    thumbnail: 'series/neverland.webp',
+    description: 'Peter Pan, Tinker Bell, and their adventures in Neverland.',
+    showIds: [],
+    mediaIds: [
+      'peter-pan',
+      'return-to-never-land',
+      'tinker-bell',
+      'tinker-bell-lost-treasure',
+      'tinker-bell-great-fairy-rescue',
+      'the-pirate-fairy',
+    ],
+  },
+  {
+    id: 'kung-fu-panda',
+    title: 'Kung Fu Panda',
+    thumbnail: 'series/kung-fu-panda.webp',
+    description: 'Po and the Furious Five bring kung fu adventure to the big screen.',
+    showIds: [],
+    mediaIds: [
+      'kung-fu-panda',
+      'kung-fu-panda-2',
+      'kung-fu-panda-3',
+      'kung-fu-panda-4',
+    ],
+  },
 ]
