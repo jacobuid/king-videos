@@ -1,11 +1,12 @@
-Purpose is to get the new movies  uploaded to backblaze B2 from: 
 
- D:\king-videos
+Purpose is to get the new movies encoded and uploaded to backblaze B2.
 
-Handbrake Compression Configuration:
+**IMPORTANT** - Ask user for directory where movies are.
+
+Handbrake encoding Configuration:
 - Use two NVIDIA GPU NVENC Workers sharing one queue
 - Scan the input folder.
-- Exclude duplicates and episode-zero files when requested.
+- Exclude duplicates and call make user aware of any special episodes or movies in input folder
 - Skip valid completed outputs.
 - Place remaining files into one shared queue.
 - Start two HandBrake processes.
@@ -15,6 +16,7 @@ Handbrake Compression Configuration:
 - Finish only when both workers are idle and the queue is empty.
 - Leave failed videos in a failure list without stopping the other worker.
 - Temporary files: write as .partial.mp4, then rename after successful validation
+- Place Temporary files in "C:\Users\jacob\Downloads\KINGFLIX\"
 
 BEFORE BEGINNING
 1. Check if ratio is 16:9 or 4:3
@@ -24,19 +26,15 @@ BEFORE BEGINNING
     - If already optimized/compressed good; report ratio, resolution, before/after file size and recommendation. -> Pause
     - If not optimized/compressed, compress 1 test video and report result. For most videos i wan it to be 720p, but some older ones can be 480p.
 3. Start Compression
-    - Audio: 96 kbps AAC minimal
-    - Video: 680 kbps NVENC minimal
-
-If the episodes are 4:3 standard definition, I recommend:
-- Resolution: 480p
-- Video: H.264 NVENC at 1,100 kbps
-- Audio: AAC at 96 kbps
-- Workers: Two parallel NVENC workers
-If the sources are genuinely 16:9 HD:
-- Resolution: 720p
-- Video: H.264 NVENC at 1,600 kbps
-- Audio: AAC at 96–128 kbps
-
+    If the episodes are 4:3 old standard definition, I recommend:
+    - Resolution: 480p
+    - Video: H.264 NVENC at 1,100 kbps
+    - Audio: AAC at 96 kbps
+    - Workers: Two parallel NVENC workers
+    If the sources are genuinely 16:9 HD:
+    - Resolution: 720p
+    - Video: H.264 NVENC at 1,600 kbps
+    - Audio: AAC at 96–128 kbps
 
 --------------------------------------------------------------
 
@@ -54,4 +52,4 @@ Parallel Backblaze B2 deployment configuration
 2. Check [wikipedia link] for meta data and update/create `media.json`.
 3. check in and push.
 
-Note: B2 upload can be running in bakground while you are creating metadata and checking that in. 
+Note: B2 upload can be running in bakground while you are creating metadata and checking that in.
