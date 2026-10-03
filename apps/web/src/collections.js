@@ -34,4 +34,18 @@ export const collections = [
       'ice-age-collision-course',
     ],
   },
+  {
+    id: 'sonic',
+    title: 'Sonic',
+    thumbnail: 'series/sonic.webp',
+    description: 'Sonic and friends race into action across their shows and movie.',
+    showIds: [
+      'adventures-of-sonic-the-hedgehog',
+      'sonic-the-hedgehog-satam',
+      'sonic-underground',
+      'sonic-x',
+      'sonic-prime',
+    ],
+    mediaIds: ['sonic-the-hedgehog-ova'],
+  },
 ]
