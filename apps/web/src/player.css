@@ -28,10 +28,6 @@
   --media-focus: #e7ad35;
 }
 
-.player-overlay .vds-fullscreen-button {
-  display: none;
-}
-
 /* Vidstack's compact portrait layout puts captions, settings, and volume in
    the top-right corner. Keep that corner clear for the close control and
    place the utility row above the timeline instead. */
