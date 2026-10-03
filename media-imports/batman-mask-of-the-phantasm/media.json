@@ -7,7 +7,6 @@
   "category": "movie",
   "genres": ["Animation", "Action", "Mystery", "Superhero"],
   "rating": "PG",
-  "kids": true,
   "minAge": 12,
   "blocked": false,
   "duration": 4588,

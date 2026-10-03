@@ -7,7 +7,6 @@
   "category": "movie",
   "genres": ["Animation", "Action", "Adventure", "Superhero"],
   "rating": "NR",
-  "kids": true,
   "minAge": 12,
   "blocked": false,
   "duration": 3995,

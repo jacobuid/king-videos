@@ -12,7 +12,6 @@
     "Superhero"
   ],
   "rating": "TV-PG",
-  "kids": true,
   "blocked": false,
   "thumbnail": "thumb.jpg",
   "metadataSource": "https://en.wikipedia.org/wiki/The_New_Batman_Adventures",
