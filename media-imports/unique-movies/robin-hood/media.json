@@ -1,0 +1,20 @@
+{
+  "id": "robin-hood",
+  "title": "Robin Hood",
+  "description": "Robin Hood and Little John outwit Prince John and his sheriff while helping the struggling people of Nottingham.",
+  "category": "movie",
+  "year": 1973,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy"
+  ],
+  "duration": 4985,
+  "video": "Robin Hood (1973).mp4",
+  "videoKey": "movies/robin-hood/robin-hood.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/robin-hood/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Robin_Hood_(1973_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

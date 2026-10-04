@@ -1,0 +1,19 @@
+{
+  "id": "winnie-the-pooh",
+  "title": "Winnie the Pooh",
+  "description": "Pooh's search for honey becomes a busy day of helping Eeyore find his tail and trying to rescue Christopher Robin.",
+  "category": "movie",
+  "year": 2011,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 3784,
+  "video": "Winnie the Pooh (2011).mp4",
+  "videoKey": "movies/winnie-the-pooh/winnie-the-pooh.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/winnie-the-pooh/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Winnie_the_Pooh_(2011_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

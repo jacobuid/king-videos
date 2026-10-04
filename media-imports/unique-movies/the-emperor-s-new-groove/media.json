@@ -1,0 +1,19 @@
+{
+  "id": "the-emperor-s-new-groove",
+  "title": "The Emperor's New Groove",
+  "description": "A selfish emperor transformed into a llama must trust a kindhearted villager to reclaim his throne.",
+  "category": "movie",
+  "year": 2000,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 4511,
+  "video": "The Emperor's New Groove.mp4",
+  "videoKey": "movies/the-emperor-s-new-groove/the-emperor-s-new-groove.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-emperor-s-new-groove/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Emperor's_New_Groove",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

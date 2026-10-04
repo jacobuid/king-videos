@@ -1,0 +1,18 @@
+{
+  "id": "pocahontas",
+  "title": "Pocahontas",
+  "description": "Pocahontas befriends an English explorer as distrust between settlers and her people threatens to become war.",
+  "category": "movie",
+  "year": 1995,
+  "date": null,
+  "genres": [
+    "Animation"
+  ],
+  "duration": 4869,
+  "video": "Pocahontas (1995).mp4",
+  "videoKey": "movies/pocahontas/pocahontas.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/pocahontas/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Pocahontas_(1995_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

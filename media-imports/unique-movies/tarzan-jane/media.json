@@ -1,0 +1,19 @@
+{
+  "id": "tarzan-jane",
+  "title": "Tarzan & Jane",
+  "description": "As their first anniversary approaches, Jane recalls adventures with Tarzan while searching for a way to celebrate.",
+  "category": "movie",
+  "year": 2002,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure"
+  ],
+  "duration": 4338,
+  "video": "Tarzan & Jane.mp4",
+  "videoKey": "movies/tarzan-jane/tarzan-jane.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/tarzan-jane/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Tarzan_%26_Jane",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

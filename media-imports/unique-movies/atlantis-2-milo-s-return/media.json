@@ -1,0 +1,21 @@
+{
+  "id": "atlantis-2-milo-s-return",
+  "title": "Atlantis: Milo's Return",
+  "description": "Milo, Kida, and their fellow explorers investigate mysterious events connected to the ancient civilization of Atlantis.",
+  "category": "movie",
+  "year": 2003,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Fantasy",
+    "Action"
+  ],
+  "duration": 4629,
+  "video": "Atlantis 2 Milo's Return.mp4",
+  "videoKey": "movies/atlantis-2-milo-s-return/atlantis-2-milo-s-return.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/atlantis-2-milo-s-return/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Atlantis%3A_Milo's_Return",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

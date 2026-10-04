@@ -1,0 +1,18 @@
+{
+  "id": "the-fox-and-the-hound",
+  "title": "The Fox and the Hound",
+  "description": "A fox and a hunting dog become childhood friends, but growing up places them on opposite sides of a dangerous divide.",
+  "category": "movie",
+  "year": 1981,
+  "date": null,
+  "genres": [
+    "Animation"
+  ],
+  "duration": 4758,
+  "video": "The Fox and the Hound.mp4",
+  "videoKey": "movies/the-fox-and-the-hound/the-fox-and-the-hound.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-fox-and-the-hound/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Fox_and_the_Hound",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

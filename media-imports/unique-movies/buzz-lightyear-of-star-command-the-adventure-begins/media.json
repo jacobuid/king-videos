@@ -1,0 +1,20 @@
+{
+  "id": "buzz-lightyear-of-star-command-the-adventure-begins",
+  "title": "Buzz Lightyear of Star Command: The Adventure Begins",
+  "description": "Buzz Lightyear assembles a new team of Space Rangers to stop Emperor Zurg from conquering the galaxy.",
+  "category": "movie",
+  "year": 2000,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy"
+  ],
+  "duration": 4186,
+  "video": "Buzz Lightyear Of Star Command, The Adventure Begins.mp4",
+  "videoKey": "movies/buzz-lightyear-of-star-command-the-adventure-begins/buzz-lightyear-of-star-command-the-adventure-begins.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/buzz-lightyear-of-star-command-the-adventure-begins/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Buzz_Lightyear_of_Star_Command%3A_The_Adventure_Begins",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

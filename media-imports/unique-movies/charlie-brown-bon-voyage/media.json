@@ -1,0 +1,19 @@
+{
+  "id": "charlie-brown-bon-voyage",
+  "title": "Bon Voyage, Charlie Brown (and Don't Come Back!!)",
+  "description": "Charlie Brown and his friends travel to France as exchange students, where an unexpected invitation leads to a family mystery.",
+  "category": "movie",
+  "year": 1980,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 4559,
+  "video": "Charlie Brown - Bon Voyage.mp4",
+  "videoKey": "movies/charlie-brown-bon-voyage/charlie-brown-bon-voyage.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/charlie-brown-bon-voyage/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Bon_Voyage%2C_Charlie_Brown_(and_Don't_Come_Back!!)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

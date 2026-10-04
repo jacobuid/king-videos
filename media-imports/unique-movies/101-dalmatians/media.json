@@ -1,0 +1,20 @@
+{
+  "id": "101-dalmatians",
+  "title": "One Hundred and One Dalmatians",
+  "description": "Pongo and Perdita set out to rescue their puppies from Cruella de Vil, whose scheme threatens dalmatians across London.",
+  "category": "movie",
+  "year": 1961,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy"
+  ],
+  "duration": 4576,
+  "video": "101 Dalmatians.mp4",
+  "videoKey": "movies/101-dalmatians/101-dalmatians.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/101-dalmatians/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/One_Hundred_and_One_Dalmatians",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

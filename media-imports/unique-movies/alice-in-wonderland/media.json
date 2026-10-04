@@ -1,0 +1,20 @@
+{
+  "id": "alice-in-wonderland",
+  "title": "Alice in Wonderland",
+  "description": "Alice follows a white rabbit into a strange world filled with talking animals, impossible rules, and an unpredictable queen.",
+  "category": "movie",
+  "year": 1951,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy",
+    "Fantasy"
+  ],
+  "duration": 4516,
+  "video": "Alice in Wonderland (1951).mp4",
+  "videoKey": "movies/alice-in-wonderland/alice-in-wonderland.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/alice-in-wonderland/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Alice_in_Wonderland_(1951_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

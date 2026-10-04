@@ -1,0 +1,21 @@
+{
+  "id": "101-dalmatians-2-patch-s-london-adventure",
+  "title": "101 Dalmatians II: Patch's London Adventure",
+  "description": "Patch meets his television hero Thunderbolt and gets a chance to prove himself when Cruella threatens the puppies again.",
+  "category": "movie",
+  "year": 2003,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "duration": 4247,
+  "video": "101 Dalmatians 2 - Patch's London Adventure.mp4",
+  "videoKey": "movies/101-dalmatians-2-patch-s-london-adventure/101-dalmatians-2-patch-s-london-adventure.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/101-dalmatians-2-patch-s-london-adventure/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/101_Dalmatians_II%3A_Patch's_London_Adventure",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

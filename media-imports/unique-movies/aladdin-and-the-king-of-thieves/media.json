@@ -1,0 +1,20 @@
+{
+  "id": "aladdin-and-the-king-of-thieves",
+  "title": "Aladdin and the King of Thieves",
+  "description": "Aladdin discovers that his missing father leads the Forty Thieves, drawing them both into a search for a legendary golden treasure.",
+  "category": "movie",
+  "year": 1996,
+  "date": "1996-08-13",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Fantasy"
+  ],
+  "duration": 4902,
+  "video": "Aladdin and the King of Thieves (1996).mp4",
+  "videoKey": "movies/aladdin-and-the-king-of-thieves/aladdin-and-the-king-of-thieves.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/aladdin-and-the-king-of-thieves/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Aladdin_and_the_King_of_Thieves",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

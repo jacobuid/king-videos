@@ -1,0 +1,20 @@
+{
+  "id": "peter-pan",
+  "title": "Peter Pan",
+  "description": "Peter Pan takes Wendy and her brothers to Never Land, where they encounter the Lost Boys and Captain Hook.",
+  "category": "movie",
+  "year": 1953,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Fantasy"
+  ],
+  "duration": 4607,
+  "video": "Peter Pan (1953).mp4",
+  "videoKey": "movies/peter-pan/peter-pan.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/peter-pan/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Peter_Pan_(1953_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

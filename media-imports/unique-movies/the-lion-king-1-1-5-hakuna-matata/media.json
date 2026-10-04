@@ -1,0 +1,19 @@
+{
+  "id": "the-lion-king-1-1-5-hakuna-matata",
+  "title": "The Lion King 1½",
+  "description": "Timon and Pumbaa tell their own story, revealing how their search for an easy life crossed paths with Simba's journey.",
+  "category": "movie",
+  "year": 2004,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 4579,
+  "video": "The Lion King 1-1.5 - Hakuna Matata.mp4",
+  "videoKey": "movies/the-lion-king-1-1-5-hakuna-matata/the-lion-king-1-1-5-hakuna-matata.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-lion-king-1-1-5-hakuna-matata/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Lion_King_1%C2%BD",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "a-goofy-movie",
+  "title": "A Goofy Movie",
+  "description": "Goofy takes Max on a fishing trip, while Max hopes to reach a concert and impress the girl he likes.",
+  "category": "movie",
+  "year": 1995,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 4661,
+  "video": "A Goofy Movie.mp4",
+  "videoKey": "movies/a-goofy-movie/a-goofy-movie.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/a-goofy-movie/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/A_Goofy_Movie",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

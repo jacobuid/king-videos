@@ -1,0 +1,19 @@
+{
+  "id": "the-land-before-time",
+  "title": "The Land Before Time",
+  "description": "Five young dinosaurs overcome their differences while searching for a safe valley and their surviving families.",
+  "category": "movie",
+  "year": 1988,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure"
+  ],
+  "duration": 4129,
+  "video": "The Land Before Time (1988).mp4",
+  "videoKey": "movies/the-land-before-time/the-land-before-time.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-land-before-time/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Land_Before_Time_(film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

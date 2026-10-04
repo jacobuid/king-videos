@@ -1,0 +1,20 @@
+{
+  "id": "lady-and-the-tramp-ii-scamp-s-adventure",
+  "title": "Lady and the Tramp II: Scamp's Adventure",
+  "description": "Lady and Tramp's son Scamp runs away to join a pack of strays, then discovers the value of his family.",
+  "category": "movie",
+  "year": 2001,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy"
+  ],
+  "duration": 3973,
+  "video": "Lady And The Tramp II - Scamp's Adventure.mp4",
+  "videoKey": "movies/lady-and-the-tramp-ii-scamp-s-adventure/lady-and-the-tramp-ii-scamp-s-adventure.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/lady-and-the-tramp-ii-scamp-s-adventure/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Lady_and_the_Tramp_II%3A_Scamp's_Adventure",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "the-little-mermaid",
+  "title": "The Little Mermaid",
+  "description": "Ariel trades her voice for a chance to live among humans, leaving her vulnerable to a sea witch's plan.",
+  "category": "movie",
+  "year": 1989,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Fantasy"
+  ],
+  "duration": 4950,
+  "video": "The Little Mermaid (1989).mp4",
+  "videoKey": "movies/the-little-mermaid/the-little-mermaid.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-little-mermaid/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Little_Mermaid_(1989_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

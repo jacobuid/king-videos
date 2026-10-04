@@ -1,0 +1,18 @@
+{
+  "id": "charlie-brown-christmastime-again",
+  "title": "It's Christmastime Again, Charlie Brown",
+  "description": "The Peanuts gang faces Christmas shopping, school performances, and holiday preparations in a collection of seasonal stories.",
+  "category": "movie",
+  "year": 1992,
+  "date": null,
+  "genres": [
+    "Animation"
+  ],
+  "duration": 1381,
+  "video": "Charlie Brown - Christmastime Again.mp4",
+  "videoKey": "movies/charlie-brown-christmastime-again/charlie-brown-christmastime-again.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/charlie-brown-christmastime-again/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/It's_Christmastime_Again%2C_Charlie_Brown",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

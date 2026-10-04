@@ -1,0 +1,19 @@
+{
+  "id": "the-little-mermaid-ariel-s-beginning",
+  "title": "The Little Mermaid: Ariel's Beginning",
+  "description": "Ariel discovers an underground music club and challenges a royal ban on music in Atlantica.",
+  "category": "movie",
+  "year": 2008,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Fantasy"
+  ],
+  "duration": 4653,
+  "video": "The Little Mermaid - Ariel's Beginning.mp4",
+  "videoKey": "movies/the-little-mermaid-ariel-s-beginning/the-little-mermaid-ariel-s-beginning.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-little-mermaid-ariel-s-beginning/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Little_Mermaid%3A_Ariel's_Beginning",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

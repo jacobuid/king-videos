@@ -1,0 +1,18 @@
+{
+  "id": "peanuts-we-need-a-blockbuster-charlie-brown",
+  "title": "We Need a Blockbuster, Charlie Brown",
+  "description": "A documentary featurette explores the creation of It’s the Great Pumpkin, Charlie Brown through interviews with members of its production team.",
+  "category": "movie",
+  "year": 2008,
+  "date": "2008-09-02",
+  "genres": [
+    "Documentary"
+  ],
+  "duration": 838,
+  "video": "Peanuts - We Need a Blockbuster, Charlie Brown.mp4",
+  "videoKey": "movies/peanuts-we-need-a-blockbuster-charlie-brown/peanuts-we-need-a-blockbuster-charlie-brown.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/peanuts-we-need-a-blockbuster-charlie-brown/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Peanuts_filmography",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "the-many-adventures-of-winnie-the-pooh",
+  "title": "The Many Adventures of Winnie the Pooh",
+  "description": "Pooh and his friends share honey hunts, blustery weather, and unexpected visitors in the Hundred Acre Wood.",
+  "category": "movie",
+  "year": 1977,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Fantasy"
+  ],
+  "duration": 4440,
+  "video": "The Many Adventures of Winnie the Pooh.mp4",
+  "videoKey": "movies/the-many-adventures-of-winnie-the-pooh/the-many-adventures-of-winnie-the-pooh.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-many-adventures-of-winnie-the-pooh/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Many_Adventures_of_Winnie_the_Pooh",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

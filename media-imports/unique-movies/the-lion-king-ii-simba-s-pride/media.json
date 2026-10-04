@@ -1,0 +1,18 @@
+{
+  "id": "the-lion-king-ii-simba-s-pride",
+  "title": "The Lion King II: Simba's Pride",
+  "description": "Simba's daughter Kiara falls for Kovu, a lion raised by an exiled pride bent on revenge.",
+  "category": "movie",
+  "year": 1998,
+  "date": null,
+  "genres": [
+    "Animation"
+  ],
+  "duration": 4850,
+  "video": "The Lion King 2 (1998).mp4",
+  "videoKey": "movies/the-lion-king-ii-simba-s-pride/the-lion-king-ii-simba-s-pride.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-lion-king-ii-simba-s-pride/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Lion_King_II%3A_Simba's_Pride",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

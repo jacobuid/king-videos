@@ -1,0 +1,20 @@
+{
+  "id": "tarzan-ii",
+  "title": "Tarzan II",
+  "description": "Young Tarzan leaves his family after feeling that he does not belong and seeks help discovering who he is.",
+  "category": "movie",
+  "year": 2005,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy"
+  ],
+  "duration": 4269,
+  "video": "Tarzan II.mp4",
+  "videoKey": "movies/tarzan-ii/tarzan-ii.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/tarzan-ii/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Tarzan_II",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

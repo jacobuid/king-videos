@@ -1,0 +1,21 @@
+{
+  "id": "dinosaur",
+  "title": "Dinosaur",
+  "description": "A dinosaur raised by lemurs joins a migrating herd after a meteor strike destroys his home.",
+  "category": "movie",
+  "year": 2000,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Family",
+    "Action"
+  ],
+  "duration": 4723,
+  "video": "Dinosaur.mp4",
+  "videoKey": "movies/dinosaur/dinosaur.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/dinosaur/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Dinosaur_(2000_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

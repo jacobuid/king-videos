@@ -1,0 +1,19 @@
+{
+  "id": "cinderella",
+  "title": "Cinderella",
+  "description": "With help from her animal friends and a fairy godmother, Cinderella attends a royal ball and changes her future.",
+  "category": "movie",
+  "year": 1950,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Fantasy"
+  ],
+  "duration": 4469,
+  "video": "Cinderella (1950).mp4",
+  "videoKey": "movies/cinderella/cinderella.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/cinderella/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Cinderella_(1950_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

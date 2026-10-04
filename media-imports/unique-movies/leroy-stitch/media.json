@@ -1,0 +1,19 @@
+{
+  "id": "leroy-stitch",
+  "title": "Leroy & Stitch",
+  "description": "Lilo, Stitch, and their friends reunite to stop a new experiment and an army of clones created for Dr. Hämsterviel.",
+  "category": "movie",
+  "year": 2006,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 4186,
+  "video": "Leroy & Stitch.mp4",
+  "videoKey": "movies/leroy-stitch/leroy-stitch.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/leroy-stitch/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Leroy_%26_Stitch",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

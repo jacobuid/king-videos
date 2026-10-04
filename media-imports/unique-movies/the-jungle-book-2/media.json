@@ -1,0 +1,19 @@
+{
+  "id": "the-jungle-book-2",
+  "title": "The Jungle Book 2",
+  "description": "Mowgli returns to the jungle to see Baloo, drawing his village friends into another confrontation with Shere Khan.",
+  "category": "movie",
+  "year": 2003,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure"
+  ],
+  "duration": 4158,
+  "video": "The Jungle Book 2.mp4",
+  "videoKey": "movies/the-jungle-book-2/the-jungle-book-2.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-jungle-book-2/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Jungle_Book_2",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

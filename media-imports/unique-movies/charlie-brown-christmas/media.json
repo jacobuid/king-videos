@@ -1,0 +1,18 @@
+{
+  "id": "charlie-brown-christmas",
+  "title": "A Charlie Brown Christmas",
+  "description": "Charlie Brown searches for the meaning of Christmas as the Peanuts gang prepares a holiday play.",
+  "category": "movie",
+  "year": 1965,
+  "date": null,
+  "genres": [
+    "Animation"
+  ],
+  "duration": 1529,
+  "video": "Charlie Brown - Christmas.mp4",
+  "videoKey": "movies/charlie-brown-christmas/charlie-brown-christmas.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/charlie-brown-christmas/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/A_Charlie_Brown_Christmas",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

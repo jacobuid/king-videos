@@ -1,0 +1,19 @@
+{
+  "id": "the-rescuers",
+  "title": "The Rescuers",
+  "description": "Two mice from an international rescue organization travel to a swamp to save a kidnapped orphan.",
+  "category": "movie",
+  "year": 1977,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure"
+  ],
+  "duration": 4442,
+  "video": "The Rescuers.mp4",
+  "videoKey": "movies/the-rescuers/the-rescuers.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-rescuers/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Rescuers",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

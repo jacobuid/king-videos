@@ -1,0 +1,18 @@
+{
+  "id": "bambi",
+  "title": "Bambi",
+  "description": "A young deer grows up in the forest, discovering friendship and love while learning to survive its dangers.",
+  "category": "movie",
+  "year": 1942,
+  "date": null,
+  "genres": [
+    "Animation"
+  ],
+  "duration": 4191,
+  "video": "Bambi (1942).mp4",
+  "videoKey": "movies/bambi/bambi.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/bambi/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Bambi",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

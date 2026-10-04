@@ -1,0 +1,19 @@
+{
+  "id": "chicken-little",
+  "title": "Chicken Little",
+  "description": "After an embarrassing false alarm, Chicken Little must win his town's trust when he discovers a real threat from space.",
+  "category": "movie",
+  "year": 2005,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 4856,
+  "video": "Chicken Little.mp4",
+  "videoKey": "movies/chicken-little/chicken-little.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/chicken-little/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Chicken_Little_(2005_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

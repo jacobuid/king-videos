@@ -1,0 +1,20 @@
+{
+  "id": "return-to-never-land",
+  "title": "Return to Never Land",
+  "description": "Wendy's daughter Jane is taken to Never Land, where Peter Pan needs her help against Captain Hook.",
+  "category": "movie",
+  "year": 2002,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Fantasy"
+  ],
+  "duration": 4175,
+  "video": "Return to Never Land.mp4",
+  "videoKey": "movies/return-to-never-land/return-to-never-land.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/return-to-never-land/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Return_to_Never_Land",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

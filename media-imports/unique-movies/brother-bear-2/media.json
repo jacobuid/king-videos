@@ -1,0 +1,21 @@
+{
+  "id": "brother-bear-2",
+  "title": "Brother Bear 2",
+  "description": "Kenai reunites with his childhood friend Nita, and a journey to break an old bond brings them closer together.",
+  "category": "movie",
+  "year": 2006,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy",
+    "Fantasy"
+  ],
+  "duration": 4218,
+  "video": "Brother Bear 2.mp4",
+  "videoKey": "movies/brother-bear-2/brother-bear-2.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/brother-bear-2/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Brother_Bear_2",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

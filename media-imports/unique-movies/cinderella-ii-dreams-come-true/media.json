@@ -1,0 +1,19 @@
+{
+  "id": "cinderella-ii-dreams-come-true",
+  "title": "Cinderella II: Dreams Come True",
+  "description": "Cinderella adjusts to royal life, helps her friends, and encourages a new romance in three stories set after her wedding.",
+  "category": "movie",
+  "year": 2002,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Fantasy"
+  ],
+  "duration": 4228,
+  "video": "Cinderella II - Dreams Come True.mp4",
+  "videoKey": "movies/cinderella-ii-dreams-come-true/cinderella-ii-dreams-come-true.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/cinderella-ii-dreams-come-true/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Cinderella_II%3A_Dreams_Come_True",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

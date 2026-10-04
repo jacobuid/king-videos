@@ -1,0 +1,20 @@
+{
+  "id": "lady-and-the-tramp",
+  "title": "Lady and the Tramp",
+  "description": "A pampered household dog and a streetwise stray form an unlikely romance while navigating life beyond the backyard.",
+  "category": "movie",
+  "year": 1955,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "duration": 4522,
+  "video": "Lady And The Tramp (1955).mp4",
+  "videoKey": "movies/lady-and-the-tramp/lady-and-the-tramp.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/lady-and-the-tramp/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Lady_and_the_Tramp",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "the-fox-and-the-hound-2",
+  "title": "The Fox and the Hound 2",
+  "description": "Copper joins a musical group of stray dogs, testing his friendship with Tod and the loyalties of his new companions.",
+  "category": "movie",
+  "year": 2006,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure"
+  ],
+  "duration": 4160,
+  "video": "The Fox and the Hound 2.mp4",
+  "videoKey": "movies/the-fox-and-the-hound-2/the-fox-and-the-hound-2.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-fox-and-the-hound-2/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Fox_and_the_Hound_2",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

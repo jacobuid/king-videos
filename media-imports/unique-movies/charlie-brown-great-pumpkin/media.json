@@ -1,0 +1,18 @@
+{
+  "id": "charlie-brown-great-pumpkin",
+  "title": "It's the Great Pumpkin, Charlie Brown",
+  "description": "Linus waits in a pumpkin patch for a Halloween visitor while Charlie Brown and the gang celebrate the holiday.",
+  "category": "movie",
+  "year": 1966,
+  "date": null,
+  "genres": [
+    "Animation"
+  ],
+  "duration": 1517,
+  "video": "Charlie Brown - Great Pumpkin.mp4",
+  "videoKey": "movies/charlie-brown-great-pumpkin/charlie-brown-great-pumpkin.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/charlie-brown-great-pumpkin/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/It's_the_Great_Pumpkin%2C_Charlie_Brown",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

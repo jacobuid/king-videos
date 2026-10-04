@@ -1,0 +1,21 @@
+{
+  "id": "the-pagemaster",
+  "title": "The Pagemaster",
+  "description": "A timid boy takes refuge in a library and enters a world where personified books guide him through literary adventures.",
+  "category": "movie",
+  "year": 1994,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Fantasy",
+    "Action"
+  ],
+  "duration": 4528,
+  "video": "The Pagemaster (1994).mp4",
+  "videoKey": "movies/the-pagemaster/the-pagemaster.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-pagemaster/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Pagemaster",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "frosty-the-snowman",
+  "title": "Frosty the Snowman",
+  "description": "A magic hat brings a snowman to life, sending him and a young girl on a journey to escape the warming weather.",
+  "category": "movie",
+  "year": 1969,
+  "date": null,
+  "genres": [
+    "Animation"
+  ],
+  "duration": 1522,
+  "video": "Frosty the Snowman (1969).mp4",
+  "videoKey": "movies/frosty-the-snowman/frosty-the-snowman.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/frosty-the-snowman/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Frosty_the_Snowman_(TV_special)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

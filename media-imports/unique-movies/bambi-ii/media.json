@@ -1,0 +1,18 @@
+{
+  "id": "bambi-ii",
+  "title": "Bambi II",
+  "description": "After losing his mother, Bambi struggles to connect with his father, the reserved Great Prince of the Forest.",
+  "category": "movie",
+  "year": 2006,
+  "date": null,
+  "genres": [
+    "Animation"
+  ],
+  "duration": 4342,
+  "video": "Bambi II.mp4",
+  "videoKey": "movies/bambi-ii/bambi-ii.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/bambi-ii/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Bambi_II",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

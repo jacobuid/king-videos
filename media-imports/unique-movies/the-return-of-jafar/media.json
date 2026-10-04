@@ -1,0 +1,19 @@
+{
+  "id": "the-return-of-jafar",
+  "title": "The Return of Jafar",
+  "description": "Jafar escapes his lamp and plots revenge on Aladdin, while Iago tries to build a new life in Agrabah.",
+  "category": "movie",
+  "year": 1994,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Fantasy"
+  ],
+  "duration": 4146,
+  "video": "The Return of Jafar (1994).mp4",
+  "videoKey": "movies/the-return-of-jafar/the-return-of-jafar.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-return-of-jafar/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Return_of_Jafar",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

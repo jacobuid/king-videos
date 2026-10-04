@@ -1,0 +1,19 @@
+{
+  "id": "an-extremely-goofy-movie",
+  "title": "An Extremely Goofy Movie",
+  "description": "Max begins college, but his plans for independence unravel when Goofy enrolls at the same school.",
+  "category": "movie",
+  "year": 2000,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 4747,
+  "video": "An Extremely Goofy Movie (2000).mp4",
+  "videoKey": "movies/an-extremely-goofy-movie/an-extremely-goofy-movie.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/an-extremely-goofy-movie/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/An_Extremely_Goofy_Movie",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

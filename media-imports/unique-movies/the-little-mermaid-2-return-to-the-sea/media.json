@@ -1,0 +1,19 @@
+{
+  "id": "the-little-mermaid-2-return-to-the-sea",
+  "title": "The Little Mermaid II: Return to the Sea",
+  "description": "Ariel's daughter Melody longs to explore the sea and becomes entangled in a scheme against her family.",
+  "category": "movie",
+  "year": 2000,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Fantasy"
+  ],
+  "duration": 4522,
+  "video": "The Little Mermaid 2-Return to the Sea.mp4",
+  "videoKey": "movies/the-little-mermaid-2-return-to-the-sea/the-little-mermaid-2-return-to-the-sea.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-little-mermaid-2-return-to-the-sea/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Little_Mermaid_II%3A_Return_to_the_Sea",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

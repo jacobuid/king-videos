@@ -1,0 +1,20 @@
+{
+  "id": "the-aristocats",
+  "title": "The Aristocats",
+  "description": "A Parisian cat and her kittens receive help from an alley cat after a jealous butler abandons them in the countryside.",
+  "category": "movie",
+  "year": 1970,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "duration": 4536,
+  "video": "The Aristocats.mp4",
+  "videoKey": "movies/the-aristocats/the-aristocats.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-aristocats/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Aristocats",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

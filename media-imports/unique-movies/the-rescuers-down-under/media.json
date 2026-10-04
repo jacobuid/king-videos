@@ -1,0 +1,19 @@
+{
+  "id": "the-rescuers-down-under",
+  "title": "The Rescuers Down Under",
+  "description": "Bernard and Bianca journey to Australia to rescue a boy and a rare eagle from a poacher.",
+  "category": "movie",
+  "year": 1990,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure"
+  ],
+  "duration": 4628,
+  "video": "The Rescuers Down Under (1990).mp4",
+  "videoKey": "movies/the-rescuers-down-under/the-rescuers-down-under.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-rescuers-down-under/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Rescuers_Down_Under",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

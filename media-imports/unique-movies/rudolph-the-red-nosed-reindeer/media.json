@@ -1,0 +1,19 @@
+{
+  "id": "rudolph-the-red-nosed-reindeer",
+  "title": "Rudolph the Red-Nosed Reindeer",
+  "description": "An outcast reindeer and an aspiring dentist search for a place to belong before Rudolph finds a special role on Christmas Eve.",
+  "category": "movie",
+  "year": 1964,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Fantasy"
+  ],
+  "duration": 3106,
+  "video": "Rudolph the Red-Nosed Reindeer (1964).mp4",
+  "videoKey": "movies/rudolph-the-red-nosed-reindeer/rudolph-the-red-nosed-reindeer.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/rudolph-the-red-nosed-reindeer/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Rudolph_the_Red-Nosed_Reindeer_(TV_special)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

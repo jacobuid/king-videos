@@ -1,0 +1,18 @@
+{
+  "id": "charlie-brown-thanksgiving",
+  "title": "A Charlie Brown Thanksgiving",
+  "description": "An unexpected Thanksgiving invitation leaves Charlie Brown and Snoopy preparing an unusual feast for their friends.",
+  "category": "movie",
+  "year": 1973,
+  "date": null,
+  "genres": [
+    "Animation"
+  ],
+  "duration": 1522,
+  "video": "Charlie Brown - Thanksgiving.mp4",
+  "videoKey": "movies/charlie-brown-thanksgiving/charlie-brown-thanksgiving.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/charlie-brown-thanksgiving/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/A_Charlie_Brown_Thanksgiving",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

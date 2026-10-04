@@ -1,0 +1,19 @@
+{
+  "id": "oliver-company",
+  "title": "Oliver & Company",
+  "description": "An orphaned kitten joins a gang of street dogs in New York and finds himself caught between a new home and a criminal scheme.",
+  "category": "movie",
+  "year": 1988,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 4234,
+  "video": "Oliver & Company.mp4",
+  "videoKey": "movies/oliver-company/oliver-company.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/oliver-company/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Oliver_%26_Company",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}
