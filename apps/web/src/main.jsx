@@ -277,7 +277,7 @@ function CollectionsPage({selectedCollection,tvCards,media,positions,favorites,t
 function SortControl({value,onChange}){return <label className="sort-control">Sort by<select value={value} onChange={event=>onChange(event.target.value)}><option value="uploaded-desc">Recently uploaded</option><option value="release-desc">Release date: newest</option><option value="release-asc">Release date: oldest</option><option value="title-asc">Title: A–Z</option><option value="title-desc">Title: Z–A</option></select></label>}
 function BrowsePage({title,items,sorters,positions,favorites,toggleFavorite,play}){
   const[sortBy,setSortBy]=useState('uploaded-desc')
-  const latestItems=items.slice().sort(sorters['uploaded-desc']).slice(0,5)
+  const latestItems=items.slice().sort(sorters['uploaded-desc']).slice(0,10)
   const browseItems=items.slice().sort(sorters[sortBy])
   return <><section className="browse-heading"><h1>{title}</h1></section><Shelves rows={[{title:'Latest Added',items:latestItems}]} media={items} positions={positions} favorites={favorites} toggleFavorite={toggleFavorite} play={play}/><SearchGrid title="Browse" headerAction={<SortControl value={sortBy} onChange={setSortBy}/>} query={title+'|'+sortBy} items={browseItems} positions={positions} favorites={favorites} toggleFavorite={toggleFavorite} play={play}/></>
 }
