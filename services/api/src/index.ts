@@ -64,8 +64,8 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
     }
     if(path==='/api/manage-media'&&request.method==='GET'){
       if(!await authorizedManage(request,env,userId))return withCors(json({error:'Enter your password to manage videos.'},403),cors)
-      const search=(url.searchParams.get('q')||'').slice(0,100),limit=Math.min(500,Math.max(1,Number(url.searchParams.get('limit'))||500)),offset=Math.max(0,Number(url.searchParams.get('offset'))||0)
-      const rows=await env.DB.prepare('SELECT * FROM media WHERE title LIKE ? OR COALESCE(series_title,\'\') LIKE ? ORDER BY created_at DESC LIMIT ? OFFSET ?').bind(`%${search}%`,`%${search}%`,limit,offset).all<Media>()
+      const search=(url.searchParams.get('q')||'').slice(0,100),rating=(url.searchParams.get('rating')||'').slice(0,20),limit=Math.min(500,Math.max(1,Number(url.searchParams.get('limit'))||500)),offset=Math.max(0,Number(url.searchParams.get('offset'))||0)
+      const rows=await env.DB.prepare("SELECT * FROM media WHERE (title LIKE ? OR COALESCE(series_title,'') LIKE ?) AND (?='' OR (?='missing' AND COALESCE(TRIM(rating),'')='') OR rating=?) ORDER BY created_at DESC LIMIT ? OFFSET ?").bind(`%${search}%`,`%${search}%`,rating,rating,rating,limit,offset).all<Media>()
       const imageExpires=(Math.floor(Date.now()/15552000000)+2)*15552000000,result=await Promise.all(rows.results.map(async m=>({id:m.id,title:m.title,description:m.description,category:m.category,seriesId:m.series_id,seriesTitle:m.series_title,seasonNumber:m.season_number,episodeNumber:m.episode_number,year:m.year,genres:JSON.parse(m.genres||'[]'),rating:m.rating,blocked:Boolean(m.blocked),minAge:m.min_age,thumbnailUrl:m.thumbnail_key&&allowedKey(m.thumbnail_key)?await contentUrl(request,env,m.thumbnail_key,'image',imageExpires):null})))
       return withCors(json(result),cors)
     }

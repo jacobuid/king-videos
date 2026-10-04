@@ -40,6 +40,10 @@
 .card-details{display:flex;align-items:center;gap:8px}
 .card-details-text{min-width:0;overflow:hidden;text-overflow:ellipsis}
 .card-rating{flex-shrink:0;padding:1px 4px;border:1px solid #777;border-radius:3px;color:#eee;font-size:.7rem;line-height:1.2}
+.manage-video-search input{width:0}
+.manage-rating-filter{display:flex;align-items:center;gap:8px;flex-shrink:0;color:#aaa;font-size:.82rem}
+.manage-rating-filter select{max-width:170px;padding:10px;border:1px solid #555;border-radius:5px;background:#181818;color:#fff;font:inherit}
+@media(max-width:500px){.manage-video-search{flex-wrap:wrap}.manage-video-search input{flex-basis:calc(100% - 40px)}.manage-rating-filter{width:100%;padding:0 0 6px}.manage-rating-filter select{flex:1;max-width:none}}
 .card-captions{flex-shrink:0;margin-left:auto;color:#d0d0d0;font-size:1rem;line-height:1}
 .loading-screen{animation:loading-fade-in 200ms ease-out both}
 .loading-screen.loading-screen-exiting{animation:loading-fade-out 250ms ease-in both}
