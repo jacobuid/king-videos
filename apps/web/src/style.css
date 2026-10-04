@@ -36,3 +36,4 @@
 .browse-grid-heading h2{font-size:clamp(1.25rem,2vw,1.7rem);font-weight:700;color:inherit}
 /* Keep snap positions and scroll overflow stable while hovering shelf cards. */
 .shelf-track>.shelf-card:hover{transform:none}
+.latest-added-track{scroll-snap-type:none}
