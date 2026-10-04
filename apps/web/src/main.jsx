@@ -271,7 +271,30 @@ function MediaRow({title,items,positions,favorites,toggleFavorite,reorderFavorit
   const track=React.useRef(null),snapTimer=React.useRef(null),cardRefs=React.useRef(new Map()),dragOrigin=React.useRef(null),dragGhost=React.useRef(null),dragOffset=React.useRef({x:0,y:0})
   const[edges,setEdges]=useState({start:true,end:true}),[draggedId,setDraggedId]=useState(null),[previewItems,setPreviewItems]=useState(items),isMyList=title==='My List'
   useEffect(()=>{if(!draggedId)setPreviewItems(items)},[items,draggedId])
-  useEffect(()=>{const node=track.current;if(!node)return;const measure=()=>{const first=node.firstElementChild,last=node.lastElementChild,viewport=node.getBoundingClientRect(),firstBox=first?.getBoundingClientRect(),lastBox=last?.getBoundingClientRect();return{start:!firstBox||firstBox.right>viewport.left+2,end:!lastBox||lastBox.left<viewport.right-2,max:Math.max(0,node.scrollWidth-node.clientWidth)}},update=()=>{const{start,end}=measure();setEdges({start,end})},settle=()=>{clearTimeout(snapTimer.current);snapTimer.current=setTimeout(()=>{const{start,end,max}=measure();if(start&&node.scrollLeft>1)node.scrollTo({left:0,behavior:'smooth'});else if(end&&max-node.scrollLeft>1)node.scrollTo({left:max,behavior:'smooth'})},140)},onScroll=()=>{update();settle()};update();node.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',update);return()=>{clearTimeout(snapTimer.current);node.removeEventListener('scroll',onScroll);window.removeEventListener('resize',update)}},[items.length,title])
+  useEffect(()=>{
+    const node=track.current
+    if(!node)return
+    const measure=()=>{
+      const first=node.firstElementChild,last=node.lastElementChild,viewport=node.getBoundingClientRect(),firstBox=first?.getBoundingClientRect(),lastBox=last?.getBoundingClientRect()
+      return{start:!firstBox||firstBox.right>viewport.left+2,end:!lastBox||lastBox.left<viewport.right-2,max:Math.max(0,node.scrollWidth-node.clientWidth)}
+    }
+    const update=()=>{const{start,end}=measure();setEdges({start,end})}
+    const settle=()=>{
+      clearTimeout(snapTimer.current)
+      snapTimer.current=setTimeout(()=>{
+        const{start,end,max}=measure()
+        if(max<=1)return
+        // A short shelf can show both ends. Always settle toward the nearest one.
+        const target=start&&end?(node.scrollLeft<=max/2?0:max):start?0:end?max:null
+        if(target!==null&&Math.abs(target-node.scrollLeft)>1)node.scrollTo({left:target,behavior:'smooth'})
+      },140)
+    }
+    const onScroll=()=>{update();settle()}
+    update()
+    node.addEventListener('scroll',onScroll,{passive:true})
+    window.addEventListener('resize',update)
+    return()=>{clearTimeout(snapTimer.current);node.removeEventListener('scroll',onScroll);window.removeEventListener('resize',update)}
+  },[items.length,title])
   const cardPositions=()=>new Map([...cardRefs.current].map(([id,node])=>[id,node?.getBoundingClientRect()]))
   function animateCards(before,duration,skipId=null){requestAnimationFrame(()=>requestAnimationFrame(()=>{for(const[id,node]of cardRefs.current){if(!node||id===skipId)continue;const old=before.get(id),now=node.getBoundingClientRect(),x=(old?.left||now.left)-now.left;if(Math.abs(x)>1)node.animate([{transform:`translateX(${x}px)`},{transform:'translateX(0)'}],{duration,easing:'cubic-bezier(.22,1,.36,1)'})}}))}
   function previewMove(targetId,pointerX){if(!draggedId||draggedId===targetId)return;const from=previewItems.findIndex(item=>item.id===draggedId),to=previewItems.findIndex(item=>item.id===targetId),targetBox=cardRefs.current.get(targetId)?.getBoundingClientRect();if(from<0||to<0||from===to||targetBox&&(from<to&&pointerX<targetBox.left+targetBox.width*.3||from>to&&pointerX>targetBox.left+targetBox.width/2))return;const before=cardPositions(),next=previewItems.slice(),[moved]=next.splice(from,1);next.splice(to,0,moved);setPreviewItems(next);animateCards(before,320,draggedId)}
