@@ -16,5 +16,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/herbie-rides-again/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Herbie_Rides_Again",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/herbie-rides-again"
 }

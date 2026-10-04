@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/rudolph-the-red-nosed-reindeer/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Rudolph_the_Red-Nosed_Reindeer_(TV_special)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "TV-G",
+  "ratingSource": "https://play.google.com/store/tv/show/Rudolph_the_Red_Nosed_Reindeer?hl=en_US&id=dvZnYgLbk2g"
 }

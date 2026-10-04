@@ -16,5 +16,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/mulan/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Mulan_(1998_film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/mulan"
 }

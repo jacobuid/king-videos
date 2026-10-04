@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/the-little-mermaid-ariel-s-beginning/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Little_Mermaid%3A_Ariel's_Beginning",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/the-little-mermaid-ariels-beginning"
 }

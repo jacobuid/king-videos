@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/charlie-brown-thanksgiving/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/A_Charlie_Brown_Thanksgiving",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "TV-G",
+  "ratingSource": "https://www.rottentomatoes.com/m/charlie_brown_thanksgiving"
 }

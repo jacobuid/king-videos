@@ -16,5 +16,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/return-to-never-land/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Return_to_Never_Land",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/return-to-never-land"
 }

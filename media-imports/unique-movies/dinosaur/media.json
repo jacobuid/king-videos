@@ -17,5 +17,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/dinosaur/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Dinosaur_(2000_film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://movies.disney.com/dinosaur"
 }

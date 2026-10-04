@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/bambi/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Bambi",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/bambi"
 }

@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/treasure-planet/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Treasure_Planet",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://movies.disney.com/treasure-planet"
 }

@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/whisper-of-the-heart/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Whisper_of_the_Heart",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/whisper_of_the_heart"
 }

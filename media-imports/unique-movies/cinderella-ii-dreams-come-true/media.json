@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/cinderella-ii-dreams-come-true/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Cinderella_II%3A_Dreams_Come_True",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/cinderella_ii_dreams_come_true"
 }

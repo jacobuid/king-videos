@@ -16,5 +16,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/aladdin-and-the-king-of-thieves/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Aladdin_and_the_King_of_Thieves",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/aladdin-and-the-king-of-thieves"
 }

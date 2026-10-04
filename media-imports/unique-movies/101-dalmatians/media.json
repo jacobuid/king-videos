@@ -16,5 +16,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/101-dalmatians/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/One_Hundred_and_One_Dalmatians",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/101-dalmatians-1961"
 }

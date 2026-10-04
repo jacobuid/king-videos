@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/my-neighbors-the-yamadas/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/My_Neighbors_the_Yamadas",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://movies.disney.com/my-neighbors-the-yamadas"
 }

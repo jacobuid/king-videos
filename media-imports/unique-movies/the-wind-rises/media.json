@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/the-wind-rises/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Wind_Rises",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG-13",
+  "ratingSource": "https://www.rottentomatoes.com/m/the_wind_rises"
 }

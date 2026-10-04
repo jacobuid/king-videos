@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/the-little-mermaid-2-return-to-the-sea/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Little_Mermaid_II%3A_Return_to_the_Sea",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/the-little-mermaid-2-return-to-the-sea"
 }

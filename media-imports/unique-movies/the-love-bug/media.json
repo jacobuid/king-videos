@@ -17,5 +17,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/the-love-bug/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Love_Bug",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/the-love-bug"
 }

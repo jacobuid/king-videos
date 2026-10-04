@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/the-fox-and-the-hound-2/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Fox_and_the_Hound_2",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/the-fox-and-the-hound-2"
 }

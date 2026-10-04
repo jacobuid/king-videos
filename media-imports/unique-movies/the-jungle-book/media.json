@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/the-jungle-book/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Jungle_Book_(1967_film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/the_jungle_book_1967"
 }

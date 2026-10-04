@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/frosty-the-snowman/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Frosty_the_Snowman_(TV_special)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "TV-G",
+  "ratingSource": "https://www.disneyplus.com/es-us/browse/entity-d45c7fcd-1b93-4634-bf27-b6d30e3c3ec3"
 }

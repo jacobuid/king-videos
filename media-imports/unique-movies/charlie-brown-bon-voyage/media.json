@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/charlie-brown-bon-voyage/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Bon_Voyage%2C_Charlie_Brown_(and_Don't_Come_Back!!)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://static.rottentomatoes.com/m/bon_voyage_charlie_brown_1980"
 }

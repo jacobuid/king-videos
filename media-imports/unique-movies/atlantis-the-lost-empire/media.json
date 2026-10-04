@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/atlantis-the-lost-empire/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Atlantis%3A_The_Lost_Empire",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://movies.disney.com/atlantis-the-lost-empire"
 }

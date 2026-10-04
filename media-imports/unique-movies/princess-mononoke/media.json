@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/princess-mononoke/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Princess_Mononoke",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG-13",
+  "ratingSource": "https://www.rottentomatoes.com/m/princess_mononoke"
 }

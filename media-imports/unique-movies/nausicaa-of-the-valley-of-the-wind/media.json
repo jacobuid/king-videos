@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/nausicaa-of-the-valley-of-the-wind/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Nausica%C3%A4_of_the_Valley_of_the_Wind_(film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/nausicaa_of_the_valley_of_the_wind"
 }

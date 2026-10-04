@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/home-on-the-range/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Home_on_the_Range_(2004_film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://movies.disney.com/home-on-the-range"
 }

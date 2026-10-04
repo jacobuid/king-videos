@@ -16,5 +16,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/winnie-the-pooh-s-most-grand-adventure/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Pooh's_Grand_Adventure%3A_The_Search_for_Christopher_Robin",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/poohs-grand-adventure-the-search-for-christopher-robin"
 }

@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/g-i-joe-the-movie/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/G.I._Joe%3A_The_Movie",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "TV-PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/gi_joe_the_movie"
 }

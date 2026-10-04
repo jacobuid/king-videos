@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/the-return-of-jafar/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Return_of_Jafar",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/the_return_of_jafar"
 }

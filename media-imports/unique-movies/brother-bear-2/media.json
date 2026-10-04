@@ -17,5 +17,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/brother-bear-2/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Brother_Bear_2",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/brother-bear-2"
 }

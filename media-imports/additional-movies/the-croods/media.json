@@ -1,0 +1,20 @@
+{
+  "id": "the-croods",
+  "title": "The Croods",
+  "description": "A prehistoric family leaves its cave and ventures into an unfamiliar world with help from an inventive young traveler.",
+  "category": "movie",
+  "year": 2013,
+  "date": "2013-03-22",
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy"
+  ],
+  "duration": 5917,
+  "video": "the-croods.mp4",
+  "thumbnail": "thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Croods",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\encoded-videos\\the-croods",
+  "rating": "PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/the_croods"
+}

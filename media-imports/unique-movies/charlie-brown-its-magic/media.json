@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/charlie-brown-its-magic/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/It's_Magic%2C_Charlie_Brown",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "NR",
+  "ratingSource": "https://newportlibraryri.org/wp-content/uploads/2020/09/unlv_av_cataloging.pdf"
 }

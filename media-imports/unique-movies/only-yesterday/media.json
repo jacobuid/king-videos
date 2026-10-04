@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/only-yesterday/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Only_Yesterday_(1991_film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/only_yesterday_1991"
 }

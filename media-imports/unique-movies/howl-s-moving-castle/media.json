@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/howl-s-moving-castle/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Howl's_Moving_Castle_(film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/howls_moving_castle"
 }

@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/the-transformers-the-movie/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Transformers%3A_The_Movie",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://catalog.afi.com/Catalog/MovieDetails/57500"
 }

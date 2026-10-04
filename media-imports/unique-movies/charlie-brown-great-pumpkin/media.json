@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/charlie-brown-great-pumpkin/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/It's_the_Great_Pumpkin%2C_Charlie_Brown",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "TV-G",
+  "ratingSource": "https://tv.apple.com/us/movie/its-the-great-pumpkin-charlie-brown/umc.cmc.1c5nvp802hos5t3u0umlukkwh"
 }

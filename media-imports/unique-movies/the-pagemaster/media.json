@@ -17,5 +17,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/the-pagemaster/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Pagemaster",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/pagemaster"
 }

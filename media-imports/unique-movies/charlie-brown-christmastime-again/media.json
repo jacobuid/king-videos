@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/charlie-brown-christmastime-again/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/It's_Christmastime_Again%2C_Charlie_Brown",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "NR",
+  "ratingSource": "https://retrospekt.com/products/its-christmastime-again-charlie-brown-vhs-tape"
 }

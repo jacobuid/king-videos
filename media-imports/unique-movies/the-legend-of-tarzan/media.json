@@ -16,5 +16,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/the-legend-of-tarzan/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Legend_of_Tarzan_(film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG-13",
+  "ratingSource": "https://www.rottentomatoes.com/m/the_legend_of_tarzan"
 }

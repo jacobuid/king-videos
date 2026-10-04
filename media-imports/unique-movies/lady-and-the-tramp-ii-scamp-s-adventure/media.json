@@ -16,5 +16,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/lady-and-the-tramp-ii-scamp-s-adventure/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Lady_and_the_Tramp_II%3A_Scamp's_Adventure",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/lady_and_the_tramp_ii_scamps_adventure"
 }

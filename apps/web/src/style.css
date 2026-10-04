@@ -39,6 +39,7 @@
 .latest-added-track{scroll-snap-type:none}
 .card-details{display:flex;align-items:center;gap:8px}
 .card-details-text{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.card-rating{flex-shrink:0;padding:1px 4px;border:1px solid #777;border-radius:3px;color:#eee;font-size:.7rem;line-height:1.2}
 .card-captions{flex-shrink:0;margin-left:auto;color:#d0d0d0;font-size:1rem;line-height:1}
 .loading-screen{animation:loading-fade-in 200ms ease-out both}
 .loading-screen.loading-screen-exiting{animation:loading-fade-out 250ms ease-in both}

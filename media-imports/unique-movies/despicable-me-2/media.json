@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/despicable-me-2/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Despicable_Me_2",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/despicable_me_2"
 }

@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/tales-from-earthsea/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Tales_from_Earthsea_(film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG-13",
+  "ratingSource": "https://www.rottentomatoes.com/m/tales_from_earthsea"
 }

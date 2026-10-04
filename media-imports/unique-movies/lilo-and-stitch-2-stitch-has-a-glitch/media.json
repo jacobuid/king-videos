@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/lilo-and-stitch-2-stitch-has-a-glitch/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Lilo_%26_Stitch_2%3A_Stitch_Has_a_Glitch",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://movies.disney.com/lilo-stitch-2-stitch-has-a-glitch"
 }

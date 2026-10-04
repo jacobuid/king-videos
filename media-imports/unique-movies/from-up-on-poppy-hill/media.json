@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/from-up-on-poppy-hill/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/From_Up_on_Poppy_Hill",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/from_up_on_poppy_hill"
 }

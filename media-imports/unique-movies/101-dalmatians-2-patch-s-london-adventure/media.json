@@ -17,5 +17,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/101-dalmatians-2-patch-s-london-adventure/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/101_Dalmatians_II%3A_Patch's_London_Adventure",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/101_dalmatians_ii_patchs_london_adventure"
 }

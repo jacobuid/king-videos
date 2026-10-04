@@ -16,5 +16,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/buzz-lightyear-of-star-command-the-adventure-begins/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Buzz_Lightyear_of_Star_Command%3A_The_Adventure_Begins",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "NR",
+  "ratingSource": "https://disney.go.com/disneyvideos/newsletter/sep2002/spotlight_03.html"
 }

@@ -16,5 +16,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/20-000-leagues-under-the-sea/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/20%2C000_Leagues_Under_the_Sea_(1954_film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/20000-leagues-under-the-sea"
 }

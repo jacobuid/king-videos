@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/cinderella-iii-a-twist-in-time/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Cinderella_III%3A_A_Twist_in_Time",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/cinderella_iii_a_twist_in_time"
 }

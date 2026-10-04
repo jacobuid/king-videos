@@ -14,5 +14,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/pocahontas-ii-journey-to-a-new-world/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Pocahontas_II%3A_Journey_to_a_New_World",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/pocahontas-2-journey-to-a-new-world"
 }

@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/the-many-adventures-of-winnie-the-pooh/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Many_Adventures_of_Winnie_the_Pooh",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "TV-G",
+  "ratingSource": "https://www.rottentomatoes.com/m/the_many_adventures_of_winnie_the_pooh"
 }

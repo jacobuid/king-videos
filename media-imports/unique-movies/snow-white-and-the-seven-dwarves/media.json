@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/snow-white-and-the-seven-dwarves/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/snow_white_and_the_seven_dwarfs"
 }

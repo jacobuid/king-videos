@@ -1,0 +1,20 @@
+{
+  "id": "the-lego-batman-movie",
+  "title": "The LEGO Batman Movie",
+  "description": "Batman must work with Robin, Batgirl and Alfred to stop the Joker from taking over Gotham City.",
+  "category": "movie",
+  "year": 2017,
+  "date": "2017-02-10",
+  "genres": [
+    "Animation",
+    "Action",
+    "Comedy"
+  ],
+  "duration": 6270,
+  "video": "the-lego-batman-movie.mp4",
+  "thumbnail": "thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Lego_Batman_Movie",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\encoded-videos\\the-lego-batman-movie",
+  "rating": "PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/the_lego_batman_movie"
+}

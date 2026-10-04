@@ -16,5 +16,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/ducktales-the-movie-treasure-of-the-lost-lamp/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/DuckTales_the_Movie%3A_Treasure_of_the_Lost_Lamp",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/ducktales-the-movie-treasure-of-the-lost-lamp"
 }

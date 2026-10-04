@@ -17,5 +17,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/darby-o-gill-and-the-little-people/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Darby_O'Gill_and_the_Little_People",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/darby_ogill_and_the_little_people"
 }

@@ -15,5 +15,7 @@
   "thumbnail": "thumbnail.webp",
   "thumbnailKey": "movies/beauty-and-the-beast/thumbnail.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Beauty_and_the_Beast_(1991_film)",
-  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
+  "rating": "G",
+  "ratingSource": "https://movies.disney.com/beauty-and-the-beast"
 }
