@@ -1,0 +1,18 @@
+{
+  "id": "the-lion-king",
+  "title": "The Lion King",
+  "description": "A young lion prince flees after his father's death and must eventually confront his past to reclaim his kingdom.",
+  "category": "movie",
+  "year": 1994,
+  "date": null,
+  "genres": [
+    "Cartoon"
+  ],
+  "duration": 5304,
+  "video": "The Lion King (1994).mp4",
+  "videoKey": "movies/the-lion-king/the-lion-king.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-lion-king/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Lion_King",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "only-yesterday",
+  "title": "Only Yesterday",
+  "description": "A woman visiting the countryside reflects on her childhood and reconsiders the direction of her adult life.",
+  "category": "movie",
+  "year": 1991,
+  "date": null,
+  "genres": [
+    "Cartoon"
+  ],
+  "duration": 7155,
+  "video": "13 - Only Yesterday (1991).mp4",
+  "videoKey": "movies/only-yesterday/only-yesterday.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/only-yesterday/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Only_Yesterday_(1991_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

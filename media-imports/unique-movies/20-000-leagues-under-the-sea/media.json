@@ -1,0 +1,20 @@
+{
+  "id": "20-000-leagues-under-the-sea",
+  "title": "20,000 Leagues Under the Sea",
+  "description": "Three survivors taken aboard Captain Nemo's extraordinary submarine discover the wonders and dangers of his undersea world.",
+  "category": "movie",
+  "year": 1954,
+  "date": null,
+  "genres": [
+    "Live Action",
+    "Adventure",
+    "Classic"
+  ],
+  "duration": 7614,
+  "video": "20,000 Leagues Under the Sea.mp4",
+  "videoKey": "movies/20-000-leagues-under-the-sea/20-000-leagues-under-the-sea.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/20-000-leagues-under-the-sea/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/20%2C000_Leagues_Under_the_Sea_(1954_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

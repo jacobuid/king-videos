@@ -1,0 +1,19 @@
+{
+  "id": "pom-poko",
+  "title": "Pom Poko",
+  "description": "Shape-shifting tanuki unite to defend their woodland home against expanding suburban development.",
+  "category": "movie",
+  "year": 1994,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 7151,
+  "video": "07 - Pom Poko (1994).mp4",
+  "videoKey": "movies/pom-poko/pom-poko.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/pom-poko/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Pom_Poko",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

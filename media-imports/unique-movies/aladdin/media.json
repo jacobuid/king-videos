@@ -1,0 +1,19 @@
+{
+  "id": "aladdin",
+  "title": "Aladdin",
+  "description": "A streetwise young man discovers a magic lamp and tries to win a princess's heart while a scheming vizier seeks its power.",
+  "category": "movie",
+  "year": 1992,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 5203,
+  "video": "Aladdin (1992).mp4",
+  "videoKey": "movies/aladdin/aladdin.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/aladdin/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Aladdin_(1992_Disney_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

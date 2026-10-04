@@ -1,0 +1,18 @@
+{
+  "id": "polar-express",
+  "title": "The Polar Express",
+  "description": "A boy questioning his belief in Santa boards a mysterious train bound for the North Pole on Christmas Eve.",
+  "category": "movie",
+  "year": 2004,
+  "date": null,
+  "genres": [
+    "Live Action"
+  ],
+  "duration": 5997,
+  "video": "Polar Express (2004).mp4",
+  "videoKey": "movies/polar-express/polar-express.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/polar-express/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Polar_Express",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

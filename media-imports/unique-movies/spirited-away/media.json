@@ -1,0 +1,19 @@
+{
+  "id": "spirited-away",
+  "title": "Spirited Away",
+  "description": "A girl trapped in a spirit world must work in a magical bathhouse to rescue her parents and find a way home.",
+  "category": "movie",
+  "year": 2001,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 7475,
+  "video": "01- Spirited Away (2001).mp4",
+  "videoKey": "movies/spirited-away/spirited-away.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/spirited-away/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Spirited_Away",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

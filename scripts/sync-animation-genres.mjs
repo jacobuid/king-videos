@@ -6,7 +6,7 @@ import { classicGenres } from './media-genres.mjs'
 // Use reviewed import groups to identify 2D titles; preserve every other genre.
 const apply=process.argv.includes('--apply')
 const threeDExceptions=new Set(['sonic-prime','chicken-little','dinosaur','rudolph-the-red-nosed-reindeer','a-bug-s-life','bolt','despicable-me','despicable-me-2','despicable-me-3','polar-express','the-polar-express'])
-const twoD=new Set(),manifests=[]
+const twoD=new Set(),threeD=new Set(),manifests=[]
 async function visit(folder){
   for(const entry of await readdir(folder,{withFileTypes:true})){
     const path=join(folder,entry.name)
@@ -18,6 +18,10 @@ async function visit(folder){
       const id=item.id||inheritedId
       const year=item.year||Number((item.date||'').slice(0,4))||inheritedYear
       if(Array.isArray(item.genres))item.genres=item.genres.filter(genre=>genre!=='Home Videos')
+      if(isThreeD&&Array.isArray(item.genres)&&item.genres.some(g=>g==='Animation'||g==='Cartoon')){
+        if(id)threeD.add(id)
+        item.genres=[...new Set(item.genres.map(g=>g==='Cartoon'?'Animation':g))]
+      }
       if(!isThreeD&&Array.isArray(item.genres)&&item.genres.some(g=>g==='Animation'||g==='Cartoon')){
         if(id)twoD.add(id)
         item.genres=[...new Set(item.genres.map(g=>g==='Animation'?'Cartoon':g))]
@@ -45,6 +49,7 @@ const query=(sql,params=[])=>request(`${base}/${database.uuid}/query`,{method:'P
 const rows=(await query('SELECT id,title,series_id,category,year,release_date,genres FROM media')).result.flatMap(r=>r.results)
 const changes=rows.map(row=>{
   let genres=JSON.parse(row.genres).filter(genre=>genre!=='Home Videos')
+  if(threeD.has(row.series_id||row.id))genres=[...new Set(genres.map(g=>g==='Cartoon'?'Animation':g))]
   if(twoD.has(row.series_id||row.id))genres=[...new Set(genres.map(g=>g==='Animation'?'Cartoon':g))]
   if(row.category!=='home-videos')genres=classicGenres(genres,row.year||Number((row.release_date||'').slice(0,4)))
   return {...row,newGenres:JSON.stringify(genres)}

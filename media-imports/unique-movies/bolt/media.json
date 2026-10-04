@@ -1,0 +1,20 @@
+{
+  "id": "bolt",
+  "title": "Bolt",
+  "description": "A television-star dog who believes his fictional powers are real crosses the country to find his owner.",
+  "category": "movie",
+  "year": 2008,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Adventure",
+    "Comedy"
+  ],
+  "duration": 5780,
+  "video": "Bolt.mp4",
+  "videoKey": "movies/bolt/bolt.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/bolt/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Bolt_(2008_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "howl-s-moving-castle",
+  "title": "Howl's Moving Castle",
+  "description": "A young woman cursed with old age finds shelter in a wizard's walking castle and becomes involved in his struggle against war.",
+  "category": "movie",
+  "year": 2004,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 7149,
+  "video": "06 - Howl's Moving Castle (2004).mp4",
+  "videoKey": "movies/howl-s-moving-castle/howl-s-moving-castle.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/howl-s-moving-castle/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Howl's_Moving_Castle_(film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

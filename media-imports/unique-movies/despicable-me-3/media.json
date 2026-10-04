@@ -1,0 +1,19 @@
+{
+  "id": "despicable-me-3",
+  "title": "Despicable Me 3",
+  "description": "Gru meets his long-lost twin brother while a former child star turned criminal plots revenge on the world.",
+  "category": "movie",
+  "year": 2017,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 5380,
+  "video": "Despicable Me 3 (2017).mp4",
+  "videoKey": "movies/despicable-me-3/despicable-me-3.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/despicable-me-3/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Despicable_Me_3",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "old-yeller",
+  "title": "Old Yeller",
+  "description": "A frontier boy learns about loyalty and responsibility through his bond with a stray dog that becomes his family's protector.",
+  "category": "movie",
+  "year": 1957,
+  "date": null,
+  "genres": [
+    "Live Action",
+    "Classic"
+  ],
+  "duration": 5035,
+  "video": "Old Yeller.mp4",
+  "videoKey": "movies/old-yeller/old-yeller.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/old-yeller/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Old_Yeller",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

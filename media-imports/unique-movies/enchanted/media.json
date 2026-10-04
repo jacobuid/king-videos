@@ -1,0 +1,21 @@
+{
+  "id": "enchanted",
+  "title": "Enchanted",
+  "description": "A fairy-tale princess is banished to modern New York, where her ideas about romance meet the realities of everyday life.",
+  "category": "movie",
+  "year": 2007,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Comedy",
+    "Fantasy",
+    "Action"
+  ],
+  "duration": 6447,
+  "video": "Enchanted.mp4",
+  "videoKey": "movies/enchanted/enchanted.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/enchanted/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Enchanted_(film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,6 +1,21 @@
 // Curated collections: add TV show IDs or individual media IDs explicitly.
 export const collections = [
   {
+    id: 'studio-ghibli',
+    title: 'Studio Ghibli',
+    thumbnail: 'series/studio-ghibli.webp',
+    description: 'Discover the worlds of Studio Ghibli and Nausicaä of the Valley of the Wind.',
+    showIds: [],
+    mediaIds: [
+      'my-neighbor-totoro', 'from-up-on-poppy-hill', 'porco-rosso',
+      'when-marnie-was-there', 'ponyo', 'kiki-s-delivery-service',
+      'my-neighbors-the-yamadas', 'whisper-of-the-heart', 'tales-from-earthsea',
+      'nausicaa-of-the-valley-of-the-wind', 'howl-s-moving-castle', 'pom-poko',
+      'only-yesterday', 'laputa-castle-in-the-sky', 'spirited-away',
+      'the-wind-rises', 'princess-mononoke',
+    ],
+  },
+  {
     id: 'dc-universe',
     title: 'DC Universe',
     thumbnail: 'series/dc-universe.webp',

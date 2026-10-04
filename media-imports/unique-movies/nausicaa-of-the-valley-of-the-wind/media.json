@@ -1,0 +1,19 @@
+{
+  "id": "nausicaa-of-the-valley-of-the-wind",
+  "title": "Nausicaä of the Valley of the Wind",
+  "description": "A compassionate princess seeks peace between rival nations and the creatures of a toxic forest in a damaged world.",
+  "category": "movie",
+  "year": 1984,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 7022,
+  "video": "10 - Nausicaa of the Valley of the Wind (1984).mp4",
+  "videoKey": "movies/nausicaa-of-the-valley-of-the-wind/nausicaa-of-the-valley-of-the-wind.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/nausicaa-of-the-valley-of-the-wind/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Nausica%C3%A4_of_the_Valley_of_the_Wind_(film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

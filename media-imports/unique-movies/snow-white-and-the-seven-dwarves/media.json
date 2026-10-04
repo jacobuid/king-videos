@@ -1,0 +1,19 @@
+{
+  "id": "snow-white-and-the-seven-dwarves",
+  "title": "Snow White and the Seven Dwarfs",
+  "description": "A princess takes refuge with seven dwarfs while a jealous queen plots to remain the fairest in the land.",
+  "category": "movie",
+  "year": 1937,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 5013,
+  "video": "Snow White and the Seven Dwarves.mp4",
+  "videoKey": "movies/snow-white-and-the-seven-dwarves/snow-white-and-the-seven-dwarves.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/snow-white-and-the-seven-dwarves/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "swiss-family-robinson",
+  "title": "Swiss Family Robinson",
+  "description": "A shipwrecked family builds a new life on a tropical island and prepares to defend it from pirates.",
+  "category": "movie",
+  "year": 1960,
+  "date": null,
+  "genres": [
+    "Live Action",
+    "Adventure",
+    "Family",
+    "Classic"
+  ],
+  "duration": 7582,
+  "video": "Swiss Family Robinson.mp4",
+  "videoKey": "movies/swiss-family-robinson/swiss-family-robinson.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/swiss-family-robinson/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Swiss_Family_Robinson_(1960_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

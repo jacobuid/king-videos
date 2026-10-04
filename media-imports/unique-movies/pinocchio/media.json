@@ -1,0 +1,19 @@
+{
+  "id": "pinocchio",
+  "title": "Pinocchio",
+  "description": "A wooden puppet brought to life must learn courage, honesty, and kindness on his journey to become a real boy.",
+  "category": "movie",
+  "year": 1940,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 5044,
+  "video": "Pinocchio.mp4",
+  "videoKey": "movies/pinocchio/pinocchio.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/pinocchio/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Pinocchio_(1940_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

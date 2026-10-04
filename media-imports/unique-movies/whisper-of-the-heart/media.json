@@ -1,0 +1,18 @@
+{
+  "id": "whisper-of-the-heart",
+  "title": "Whisper of the Heart",
+  "description": "A book-loving teenager meets an aspiring violin maker and finds the courage to explore her own creative ambitions.",
+  "category": "movie",
+  "year": 1995,
+  "date": null,
+  "genres": [
+    "Cartoon"
+  ],
+  "duration": 6651,
+  "video": "17 - Whisper of the Heart (1995).mp4",
+  "videoKey": "movies/whisper-of-the-heart/whisper-of-the-heart.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/whisper-of-the-heart/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Whisper_of_the_Heart",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

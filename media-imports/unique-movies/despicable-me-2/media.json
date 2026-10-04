@@ -1,0 +1,19 @@
+{
+  "id": "despicable-me-2",
+  "title": "Despicable Me 2",
+  "description": "Gru is recruited to investigate a stolen chemical weapon while juggling family life and a new partnership.",
+  "category": "movie",
+  "year": 2013,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 5879,
+  "video": "Despicable Me 2 (2013).mp4",
+  "videoKey": "movies/despicable-me-2/despicable-me-2.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/despicable-me-2/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Despicable_Me_2",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

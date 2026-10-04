@@ -1,0 +1,18 @@
+{
+  "id": "the-wind-rises",
+  "title": "The Wind Rises",
+  "description": "An aspiring aircraft designer pursues his dreams amid personal loss and the growing turmoil of prewar Japan.",
+  "category": "movie",
+  "year": 2013,
+  "date": null,
+  "genres": [
+    "Cartoon"
+  ],
+  "duration": 7591,
+  "video": "14 - The Wind Rises (2013).mp4",
+  "videoKey": "movies/the-wind-rises/the-wind-rises.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-wind-rises/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Wind_Rises",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

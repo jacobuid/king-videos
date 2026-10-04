@@ -1,0 +1,18 @@
+{
+  "id": "despicable-me",
+  "title": "Despicable Me",
+  "description": "A supervillain adopts three orphaned girls as part of a grand scheme, only to find that fatherhood changes his priorities.",
+  "category": "movie",
+  "year": 2010,
+  "date": null,
+  "genres": [
+    "Animation"
+  ],
+  "duration": 5682,
+  "video": "Despicable Me (2010).mp4",
+  "videoKey": "movies/despicable-me/despicable-me.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/despicable-me/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Despicable_Me",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

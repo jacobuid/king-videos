@@ -1,0 +1,19 @@
+{
+  "id": "ponyo",
+  "title": "Ponyo",
+  "description": "A young boy befriends a magical fish who longs to become human, setting off changes that threaten the balance of their coastal world.",
+  "category": "movie",
+  "year": 2008,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 6050,
+  "video": "12 - Ponyo (2008).mp4",
+  "videoKey": "movies/ponyo/ponyo.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/ponyo/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Ponyo",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

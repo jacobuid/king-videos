@@ -1,0 +1,19 @@
+{
+  "id": "my-neighbors-the-yamadas",
+  "title": "My Neighbors the Yamadas",
+  "description": "A Japanese family navigates everyday mishaps and small joys in a collection of humorous stories.",
+  "category": "movie",
+  "year": 1999,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Comedy"
+  ],
+  "duration": 6220,
+  "video": "09 - My Neighbors the Yamadas (1999).mp4",
+  "videoKey": "movies/my-neighbors-the-yamadas/my-neighbors-the-yamadas.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/my-neighbors-the-yamadas/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/My_Neighbors_the_Yamadas",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

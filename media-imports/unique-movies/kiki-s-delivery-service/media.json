@@ -1,0 +1,19 @@
+{
+  "id": "kiki-s-delivery-service",
+  "title": "Kiki's Delivery Service",
+  "description": "A young witch moves to a seaside city and starts a flying delivery service while learning to live independently.",
+  "category": "movie",
+  "year": 1989,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 6183,
+  "video": "08 - Kiki's Delivery Service (1989).mp4",
+  "videoKey": "movies/kiki-s-delivery-service/kiki-s-delivery-service.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/kiki-s-delivery-service/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Kiki's_Delivery_Service",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

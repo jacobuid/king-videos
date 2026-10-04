@@ -1,0 +1,19 @@
+{
+  "id": "tales-from-earthsea",
+  "title": "Tales from Earthsea",
+  "description": "A troubled prince joins a wandering wizard as they investigate a disturbance threatening the balance of their world.",
+  "category": "movie",
+  "year": 2006,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 6933,
+  "video": "21 - Tales from Earthsea (Dub).mp4",
+  "videoKey": "movies/tales-from-earthsea/tales-from-earthsea.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/tales-from-earthsea/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Tales_from_Earthsea_(film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

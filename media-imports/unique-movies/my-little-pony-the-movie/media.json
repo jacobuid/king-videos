@@ -1,0 +1,19 @@
+{
+  "id": "my-little-pony-the-movie",
+  "title": "My Little Pony: The Movie",
+  "description": "Twilight Sparkle and her friends travel beyond Equestria to find help after an invading army captures their home.",
+  "category": "movie",
+  "year": 2017,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 5918,
+  "video": "My Little Pony - The Movie (2017).mp4",
+  "videoKey": "movies/my-little-pony-the-movie/my-little-pony-the-movie.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/my-little-pony-the-movie/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/My_Little_Pony%3A_The_Movie_(2017_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

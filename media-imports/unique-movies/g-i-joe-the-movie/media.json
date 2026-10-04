@@ -1,0 +1,19 @@
+{
+  "id": "g-i-joe-the-movie",
+  "title": "G.I. Joe: The Movie",
+  "description": "The G.I. Joe team faces a new enemy whose alliance with Cobra threatens humanity with a biological weapon.",
+  "category": "movie",
+  "year": 1987,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Action"
+  ],
+  "duration": 5603,
+  "video": "G.I. Joe The Movie (1987).mp4",
+  "videoKey": "movies/g-i-joe-the-movie/g-i-joe-the-movie.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/g-i-joe-the-movie/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/G.I._Joe%3A_The_Movie",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "lilo-and-stitch",
+  "title": "Lilo & Stitch",
+  "description": "A lonely Hawaiian girl adopts an escaped alien experiment, and their unlikely friendship gives them both a new family.",
+  "category": "movie",
+  "year": 2002,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Comedy"
+  ],
+  "duration": 5030,
+  "video": "Lilo And Stitch.mp4",
+  "videoKey": "movies/lilo-and-stitch/lilo-and-stitch.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/lilo-and-stitch/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Lilo_%26_Stitch",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "mary-poppins",
+  "title": "Mary Poppins",
+  "description": "A magical nanny brings adventure and a new perspective to two children and their distracted parents in Edwardian London.",
+  "category": "movie",
+  "year": 1964,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Comedy",
+    "Family",
+    "Action"
+  ],
+  "duration": 8354,
+  "video": "Mary Poppins.mp4",
+  "videoKey": "movies/mary-poppins/mary-poppins.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/mary-poppins/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Mary_Poppins_(film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

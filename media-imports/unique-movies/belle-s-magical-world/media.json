@@ -1,0 +1,19 @@
+{
+  "id": "belle-s-magical-world",
+  "title": "Belle's Magical World",
+  "description": "Belle and the enchanted household learn about forgiveness, friendship, and kindness in several stories set inside the Beast's castle.",
+  "category": "movie",
+  "year": 1998,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Fantasy"
+  ],
+  "duration": 5285,
+  "video": "Belle's Magical World.mp4",
+  "videoKey": "movies/belle-s-magical-world/belle-s-magical-world.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/belle-s-magical-world/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Belle's_Magical_World",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

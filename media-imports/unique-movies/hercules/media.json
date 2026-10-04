@@ -1,0 +1,20 @@
+{
+  "id": "hercules",
+  "title": "Hercules",
+  "description": "The son of Zeus trains to become a hero, hoping to regain his place among the gods while Hades plots against him.",
+  "category": "movie",
+  "year": 1997,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Comedy",
+    "Fantasy"
+  ],
+  "duration": 5567,
+  "video": "Hercules (1997).mp4",
+  "videoKey": "movies/hercules/hercules.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/hercules/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Hercules_(1997_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "the-love-bug",
+  "title": "The Love Bug",
+  "description": "A struggling race-car driver discovers that his Volkswagen has a mind of its own and an extraordinary talent for winning.",
+  "category": "movie",
+  "year": 1968,
+  "date": null,
+  "genres": [
+    "Live Action",
+    "Adventure",
+    "Comedy",
+    "Classic"
+  ],
+  "duration": 6194,
+  "video": "The Love Bug.mp4",
+  "videoKey": "movies/the-love-bug/the-love-bug.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-love-bug/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Love_Bug",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

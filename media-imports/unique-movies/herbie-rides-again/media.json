@@ -1,0 +1,20 @@
+{
+  "id": "herbie-rides-again",
+  "title": "Herbie Rides Again",
+  "description": "A spirited Volkswagen helps an elderly woman resist a developer determined to demolish her home.",
+  "category": "movie",
+  "year": 1974,
+  "date": null,
+  "genres": [
+    "Live Action",
+    "Comedy",
+    "Classic"
+  ],
+  "duration": 5093,
+  "video": "Herbie Rides Again.mp4",
+  "videoKey": "movies/herbie-rides-again/herbie-rides-again.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/herbie-rides-again/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Herbie_Rides_Again",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

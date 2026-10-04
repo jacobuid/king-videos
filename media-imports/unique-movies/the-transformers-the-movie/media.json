@@ -1,0 +1,19 @@
+{
+  "id": "the-transformers-the-movie",
+  "title": "The Transformers: The Movie",
+  "description": "The Autobots face a devastating Decepticon attack and a planet-sized threat, forcing a new generation of heroes to rise.",
+  "category": "movie",
+  "year": 1986,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Action"
+  ],
+  "duration": 5101,
+  "video": "The Transformers The Movie (1986).mp4",
+  "videoKey": "movies/the-transformers-the-movie/the-transformers-the-movie.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/the-transformers-the-movie/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Transformers%3A_The_Movie",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

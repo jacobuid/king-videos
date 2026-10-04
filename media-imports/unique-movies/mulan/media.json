@@ -1,0 +1,20 @@
+{
+  "id": "mulan",
+  "title": "Mulan",
+  "description": "A young woman disguises herself as a soldier to take her father's place in the army and defend China from invasion.",
+  "category": "movie",
+  "year": 1998,
+  "date": null,
+  "genres": [
+    "Cartoon",
+    "Adventure",
+    "Action"
+  ],
+  "duration": 5270,
+  "video": "Mulan (1998).mp4",
+  "videoKey": "movies/mulan/mulan.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/mulan/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/Mulan_(1998_film)",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

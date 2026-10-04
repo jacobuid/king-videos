@@ -1,0 +1,19 @@
+{
+  "id": "a-bug-s-life",
+  "title": "A Bug's Life",
+  "description": "An inventive ant recruits a troupe of circus bugs to help his colony stand up to bullying grasshoppers.",
+  "category": "movie",
+  "year": 1998,
+  "date": null,
+  "genres": [
+    "Animation",
+    "Comedy"
+  ],
+  "duration": 5462,
+  "video": "A Bug's Life.mp4",
+  "videoKey": "movies/a-bug-s-life/a-bug-s-life.mp4",
+  "thumbnail": "thumbnail.webp",
+  "thumbnailKey": "movies/a-bug-s-life/thumbnail.webp",
+  "metadataSource": "https://en.wikipedia.org/wiki/A_Bug's_Life",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies"
+}

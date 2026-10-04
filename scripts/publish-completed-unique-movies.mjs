@@ -8,6 +8,7 @@ import { classicGenres } from './media-genres.mjs'
 // First prepare/review manifests; --publish uploads their thumbnails and adds D1 rows.
 const publish = process.argv.includes('--publish')
 const preparedOnly = process.argv.includes('--prepared')
+const newOnly = process.argv.includes('--new-only')
 const root = 'media-imports/unique-movies'
 const json = async path => JSON.parse((await readFile(path, 'utf8')).replace(/^\uFEFF/, ''))
 const queue = await json('logs/unique-movies-upload-queue.json')
@@ -15,10 +16,10 @@ const encoding = await json('logs/unique-movies-queue.json')
 const audit = await json('logs/unique-movies-thumbnail-audit.json')
 const synopses = await json(join(root, 'synopses.json'))
 function animationGenre(id, extract = '') {
-  if (['chicken-little', 'dinosaur', 'rudolph-the-red-nosed-reindeer'].includes(id)) return 'Animation'
+  if (['chicken-little', 'dinosaur', 'rudolph-the-red-nosed-reindeer', 'a-bug-s-life', 'bolt', 'despicable-me', 'despicable-me-2', 'despicable-me-3', 'polar-express'].includes(id)) return 'Animation'
   if (['buzz-lightyear-of-star-command-the-adventure-begins', 'winnie-the-pooh'].includes(id)) return 'Cartoon'
   if (/traditionally.animated|traditional animation|hand.drawn/i.test(extract)) return 'Cartoon'
-  if (/computer.animated|computer.generated|CGI|stop.motion/i.test(extract)) return 'Animation'
+  if (/computer.animated|computer.generated|computer animation|CGI|stop.motion/i.test(extract)) return 'Animation'
   return /animated|animation/i.test(extract) ? 'Cartoon' : 'Live Action'
 }
 const basic = Buffer.from(`${process.env.B2_BOOTSTRAP_KEY_ID}:${process.env.B2_BOOTSTRAP_APPLICATION_KEY}`).toString('base64')
@@ -71,6 +72,21 @@ const overrides = {
   'Home On The Range': 'Home on the Range',
   '101 Dalmatians': 'One Hundred and One Dalmatians',
   'Charlie Brown - Bon Voyage': 'Bon Voyage, Charlie Brown (and Don\'t Come Back!!)',
+  'Lilo And Stitch': 'Lilo & Stitch',
+  "Belle's Magical World": "Beauty and the Beast: Belle's Magical World",
+  'Origins': 'Pokémon Origins',
+  '10 - Nausicaa of the Valley of the Wind (1984)': 'Nausicaä of the Valley of the Wind',
+  '05 - Laputa Castle in the Sky (1986)': 'Castle in the Sky',
+  '21 - Tales from Earthsea (Dub)': 'Tales from Earthsea',
+  '20,000 Leagues Under the Sea': '20,000 Leagues Under the Sea',
+  'The Legend Of Tarzan (2016)': 'The Legend of Tarzan',
+  'That Darn Cat': 'That Darn Cat!',
+  'My Little Pony - The Movie (2017)': 'My Little Pony: The Movie',
+  '18 - From Up on Poppy Hill (2011)': 'From Up on Poppy Hill',
+  'G.I. Joe The Movie (1987)': 'G.I. Joe: The Movie',
+  'The Transformers The Movie (1986)': 'The Transformers: The Movie',
+  'Atlantis The Lost Empire': 'Atlantis: The Lost Empire',
+  'Polar Express (2004)': 'The Polar Express',
 }
 const articleOverrides = {
   'Frosty the Snowman': 'Frosty the Snowman (TV special)',
@@ -90,6 +106,23 @@ const articleOverrides = {
   'Winnie the Pooh': 'Winnie the Pooh (2011 film)',
   'Aladdin': 'Aladdin (1992 Disney film)',
   'Pinocchio': 'Pinocchio (1940 film)',
+  'The Transformers The Movie': 'The Transformers: The Movie',
+  'The Transformers The Movie (1986)': 'The Transformers: The Movie',
+  'The Love Bug': 'The Love Bug',
+  '20,000 Leagues Under the Sea': '20,000 Leagues Under the Sea (1954 film)',
+  'Swiss Family Robinson': 'Swiss Family Robinson (1960 film)',
+  'That Darn Cat!': 'That Darn Cat! (1965 film)',
+  'Enchanted': 'Enchanted (film)',
+  'Hercules': 'Hercules (1997 film)',
+  'Mulan': 'Mulan (1998 film)',
+  'The Lion King': 'The Lion King (1994 film)',
+  'Tarzan': 'Tarzan (1999 film)',
+  'Bolt': 'Bolt (2008 film)',
+  'Atlantis The Lost Empire': 'Atlantis: The Lost Empire',
+  'My Little Pony: The Movie': 'My Little Pony: The Movie (2017 film)',
+  'Tales from Earthsea': 'Tales from Earthsea (film)',
+  'Only Yesterday': 'Only Yesterday (1991 film)',
+  'Mary Poppins': 'Mary Poppins (film)',
 }
 const episodes = [
   ['mayflower', 'The Mayflower Voyagers', '1988-10-21', 'The Peanuts gang joins the Pilgrims on their voyage to America and learns about the first Thanksgiving.'],
@@ -129,7 +162,17 @@ async function wikipedia(title, year) {
   throw new Error(`No verified Wikipedia article: ${title} (${year || 'unknown year'})`)
 }
 const manifests = [], held = []
-const uploaded = queue.tasks.filter(task => files.has(task.key))
+const uploadedAll = queue.tasks.filter(task => files.has(task.key))
+let catalogKeys = new Set()
+if (newOnly) {
+  const headers = { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`, 'Content-Type': 'application/json' }
+  const base = `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database`
+  const database = (await request(base, { headers })).result.find(db => db.name === (process.env.D1_DATABASE || 'king-videos-prod'))
+  if (!database) throw new Error('D1 database not found')
+  const result = await request(`${base}/${database.uuid}/query`, { method: 'POST', headers, body: JSON.stringify({ sql: 'SELECT video_key FROM media' }) })
+  catalogKeys = new Set(result.result.flatMap(r => r.results).map(r => r.video_key))
+}
+const uploaded = uploadedAll.filter(task => !catalogKeys.has(task.key))
 for (const task of uploaded) {
   try {
     let path = task.path
@@ -174,7 +217,7 @@ for (const task of uploaded) {
     await sharp(join(dirname(path), mapping.thumbnail)).rotate().resize({ width: 1280, withoutEnlargement: true }).webp({ quality: 85 }).toFile(join(folder, 'thumbnail.webp'))
     const manifest = {
       id, title, description: synopses[id] || (episode ? episode[3] : wiki.extract.split('\n')[0]),
-      category: isEpisode ? 'tv' : 'movie', year: featurette ? 2008 : episode ? Number(episode[2].slice(0, 4)) : year || Number(wiki.extract.match(/(?:19|20)\d{2}/)?.[0]) || null,
+      category: isEpisode || task.title === 'Origins' ? 'tv' : 'movie', year: featurette ? 2008 : episode ? Number(episode[2].slice(0, 4)) : year || Number(wiki.extract.match(/(?:19|20)\d{2}/)?.[0]) || null,
       date: featurette ? '2008-09-02' : episode ? episode[2] : null,
       genres: featurette ? ['Documentary'] : [
         episode ? 'Cartoon' : animationGenre(id, wiki.extract),
@@ -191,7 +234,7 @@ for (const task of uploaded) {
     console.log(`Prepared ${title}`)
   } catch (error) { held.push({ title: task.title, reason: error.message }); console.warn(`Held: ${task.title}: ${error.message}`) }
 }
-const report = { checkedAt: new Date().toISOString(), queued: queue.tasks.length, uploaded: uploaded.length, prepared: manifests.length, held, published: 0 }
+const report = { checkedAt: new Date().toISOString(), queued: queue.tasks.length, uploaded: uploadedAll.length, alreadyPublished: uploadedAll.length-uploaded.length, prepared: manifests.length, held, published: 0 }
 await writeFile('logs/unique-movies-publication.json', JSON.stringify(report, null, 2))
 if (publish) {
   const cfHeaders = { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`, 'Content-Type': 'application/json' }
