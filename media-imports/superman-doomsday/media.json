@@ -5,7 +5,12 @@
   "date": "2007-09-18",
   "year": 2007,
   "category": "movie",
-  "genres": ["Animation", "Action", "Science Fiction", "Superhero"],
+  "genres": [
+    "Cartoon",
+    "Action",
+    "Science Fiction",
+    "Superhero"
+  ],
   "rating": "PG-13",
   "blocked": false,
   "duration": 4620,

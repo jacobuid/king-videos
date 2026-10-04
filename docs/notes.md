@@ -1,6 +1,10 @@
 
 Purpose is to get the new movies encoded and uploaded to backblaze B2.
 
+KINGFLIX genre definitions: `Animation` is for 3D animation; `Cartoon` is for 2D animation. Classify hybrid titles by their main animation style and preserve other genre tags. Documentary featurettes use `Documentary`.
+
+`Classic` replaces `Classic Television` and applies to non-animated movies and TV shows released before 1990. Titles tagged `Animation` or `Cartoon` do not qualify.
+
 **IMPORTANT** - Ask user for directory where movies are.
 
 Handbrake encoding Configuration:

@@ -5,7 +5,12 @@
   "date": "1998-03-17",
   "year": 1998,
   "category": "movie",
-  "genres": ["Animation", "Action", "Adventure", "Superhero"],
+  "genres": [
+    "Cartoon",
+    "Action",
+    "Adventure",
+    "Superhero"
+  ],
   "rating": "NR",
   "minAge": 12,
   "blocked": false,

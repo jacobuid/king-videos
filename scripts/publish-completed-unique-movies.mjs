@@ -2,6 +2,7 @@ import { readFile, writeFile, mkdir, stat } from 'node:fs/promises'
 import { basename, dirname, join } from 'node:path'
 import { createHash } from 'node:crypto'
 import sharp from 'sharp'
+import { classicGenres } from './media-genres.mjs'
 
 // Publish a verified snapshot, without touching the video upload workers.
 // First prepare/review manifests; --publish uploads their thumbnails and adds D1 rows.
@@ -13,6 +14,13 @@ const queue = await json('logs/unique-movies-upload-queue.json')
 const encoding = await json('logs/unique-movies-queue.json')
 const audit = await json('logs/unique-movies-thumbnail-audit.json')
 const synopses = await json(join(root, 'synopses.json'))
+function animationGenre(id, extract = '') {
+  if (['chicken-little', 'dinosaur', 'rudolph-the-red-nosed-reindeer'].includes(id)) return 'Animation'
+  if (['buzz-lightyear-of-star-command-the-adventure-begins', 'winnie-the-pooh'].includes(id)) return 'Cartoon'
+  if (/traditionally.animated|traditional animation|hand.drawn/i.test(extract)) return 'Cartoon'
+  if (/computer.animated|computer.generated|CGI|stop.motion/i.test(extract)) return 'Animation'
+  return /animated|animation/i.test(extract) ? 'Cartoon' : 'Live Action'
+}
 const basic = Buffer.from(`${process.env.B2_BOOTSTRAP_KEY_ID}:${process.env.B2_BOOTSTRAP_APPLICATION_KEY}`).toString('base64')
 async function request(url, options = {}) {
   const response = await fetch(url, { ...options, signal: AbortSignal.timeout(60000) })
@@ -168,12 +176,16 @@ for (const task of uploaded) {
       id, title, description: synopses[id] || (episode ? episode[3] : wiki.extract.split('\n')[0]),
       category: isEpisode ? 'tv' : 'movie', year: featurette ? 2008 : episode ? Number(episode[2].slice(0, 4)) : year || Number(wiki.extract.match(/(?:19|20)\d{2}/)?.[0]) || null,
       date: featurette ? '2008-09-02' : episode ? episode[2] : null,
-      genres: featurette ? ['Documentary'] : ['Animation', ...['Adventure', 'Comedy', 'Fantasy', 'Romance', 'Family', 'Action'].filter(genre => new RegExp(`\\b${genre}\\b`, 'i').test(wiki.extract || ''))], duration: Math.round(Number(source?.Seconds)) || null,
+      genres: featurette ? ['Documentary'] : [
+        episode ? 'Cartoon' : animationGenre(id, wiki.extract),
+        ...['Adventure', 'Comedy', 'Fantasy', 'Romance', 'Family', 'Action'].filter(genre => new RegExp(`\\b${genre}\\b`, 'i').test(wiki.extract || '')),
+      ], duration: Math.round(Number(source?.Seconds)) || null,
       video: basename(path), videoKey: task.key, thumbnail: 'thumbnail.webp',
       thumbnailKey: isEpisode ? 'movies/this-is-america-charlie-brown/thumbnail.webp' : `${dirname(task.key).replaceAll('\\', '/')}/thumbnail.webp`,
       metadataSource: wiki.content_urls.desktop.page, sourceFolder: dirname(path),
       ...(episode ? { seriesId: 'this-is-america-charlie-brown', seriesTitle: 'This Is America, Charlie Brown', seasonNumber: 1, episodeNumber: episodes.indexOf(episode) + 1 } : {}),
     }
+    manifest.genres = classicGenres(manifest.genres, manifest.year)
     await writeFile(join(folder, 'media.json'), JSON.stringify(manifest, null, 2) + '\n')
     manifests.push(manifest)
     console.log(`Prepared ${title}`)

@@ -5,7 +5,12 @@
   "date": "2006-06-20",
   "year": 2006,
   "category": "movie",
-  "genres": ["Animation", "Action", "Science Fiction", "Superhero"],
+  "genres": [
+    "Cartoon",
+    "Action",
+    "Science Fiction",
+    "Superhero"
+  ],
   "rating": "TV-Y7",
   "blocked": false,
   "duration": 4620,

@@ -5,7 +5,12 @@
   "date": "1993-12-25",
   "year": 1993,
   "category": "movie",
-  "genres": ["Animation", "Action", "Mystery", "Superhero"],
+  "genres": [
+    "Cartoon",
+    "Action",
+    "Mystery",
+    "Superhero"
+  ],
   "rating": "PG",
   "minAge": 12,
   "blocked": false,
