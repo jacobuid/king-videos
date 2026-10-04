@@ -12,6 +12,6 @@ const files=(await scan(input)).filter(path=>!/^\((?:Front|Main)\).*Katie.*Caleb
 for(const item of items){const key=item.year||0,list=byYear.get(key)||[];list.push(item);byYear.set(key,list)}
 const episodes=[]
 for(const[year,list]of [...byYear].sort((a,b)=>a[0]-b[0]))list.sort((a,b)=>String(a.date||'').localeCompare(String(b.date||''))||a.title.localeCompare(b.title)).forEach((item,index)=>episodes.push({file:item.file,title:item.title,season:year,episode:index+1,date:item.date,year:item.year,duration:item.duration}))
-const manifest={id:'home-videos',title:'Home Videos',category:'home-videos',description:'Family home videos organized by recording date.',genres:['Home Videos'],rating:'NR',minAge:0,episodes}
+const manifest={id:'home-videos',title:'Home Videos',category:'home-videos',description:'Family home videos organized by recording date.',genres:[],rating:'NR',minAge:0,episodes}
 await mkdir(dirname(output),{recursive:true});await writeFile(output,`${JSON.stringify(manifest,null,2)}\n`)
 console.log(`Wrote ${episodes.length} Home Video records to ${output}; ${episodes.filter(item=>/^\d{4}-\d{2}-\d{2}$/.test(item.date||'')).length} include month and day.`)

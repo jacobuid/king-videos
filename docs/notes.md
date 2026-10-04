@@ -5,6 +5,8 @@ KINGFLIX genre definitions: `Animation` is for 3D animation; `Cartoon` is for 2D
 
 `Classic` replaces `Classic Television` and applies to non-animated movies and TV shows released before 1990. Titles tagged `Animation` or `Cartoon` do not qualify.
 
+`Home Videos` is a content type (`home-videos`), not a genre. Home-video manifests use an empty genres list unless other actual genres are assigned.
+
 **IMPORTANT** - Ask user for directory where movies are.
 
 Handbrake encoding Configuration:

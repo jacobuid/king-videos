@@ -17,6 +17,7 @@ async function visit(folder){
     function update(item,inheritedId,inheritedYear){
       const id=item.id||inheritedId
       const year=item.year||Number((item.date||'').slice(0,4))||inheritedYear
+      if(Array.isArray(item.genres))item.genres=item.genres.filter(genre=>genre!=='Home Videos')
       if(!isThreeD&&Array.isArray(item.genres)&&item.genres.some(g=>g==='Animation'||g==='Cartoon')){
         if(id)twoD.add(id)
         item.genres=[...new Set(item.genres.map(g=>g==='Animation'?'Cartoon':g))]
@@ -43,7 +44,7 @@ if(!database)throw Error('D1 database not found')
 const query=(sql,params=[])=>request(`${base}/${database.uuid}/query`,{method:'POST',body:JSON.stringify({sql,params})})
 const rows=(await query('SELECT id,title,series_id,category,year,release_date,genres FROM media')).result.flatMap(r=>r.results)
 const changes=rows.map(row=>{
-  let genres=JSON.parse(row.genres)
+  let genres=JSON.parse(row.genres).filter(genre=>genre!=='Home Videos')
   if(twoD.has(row.series_id||row.id))genres=[...new Set(genres.map(g=>g==='Animation'?'Cartoon':g))]
   if(row.category!=='home-videos')genres=classicGenres(genres,row.year||Number((row.release_date||'').slice(0,4)))
   return {...row,newGenres:JSON.stringify(genres)}

@@ -3,9 +3,7 @@
   "title": "Home Videos",
   "category": "home-videos",
   "description": "Family home videos organized by recording date.",
-  "genres": [
-    "Home Videos"
-  ],
+  "genres": [],
   "rating": "NR",
   "minAge": 0,
   "episodes": [
