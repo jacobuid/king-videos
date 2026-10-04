@@ -53,6 +53,7 @@ export const collections = [
       'superman-doomsday',
       'batman-mask-of-the-phantasm',
       'batman-mr-freeze-subzero',
+      'the-lego-batman-movie',
     ],
   },
   {
