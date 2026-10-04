@@ -1,6 +1,26 @@
 // Curated collections: add TV show IDs or individual media IDs explicitly.
 export const collections = [
   {
+    id: 'princesses',
+    title: 'Princesses',
+    thumbnail: 'series/princesses.webp',
+    description: 'Disney princess adventures, from classic fairy tales to Frozen and Moana.',
+    showIds: [],
+    mediaIds: [
+      'snow-white-and-the-seven-dwarves', 'cinderella',
+      'cinderella-ii-dreams-come-true', 'cinderella-iii-a-twist-in-time',
+      'sleeping-beauty', 'the-little-mermaid',
+      'the-little-mermaid-2-return-to-the-sea', 'the-little-mermaid-ariel-s-beginning',
+      'beauty-and-the-beast', 'beauty-and-the-beast-the-enchanted-christmas',
+      'belle-s-magical-world', 'aladdin', 'the-return-of-jafar',
+      'aladdin-and-the-king-of-thieves', 'pocahontas',
+      'pocahontas-ii-journey-to-a-new-world', 'mulan', 'mulan-ii',
+      'disney-princess-enchanted-tales-follow-your-dreams', 'enchanted',
+      'tangled', 'brave', 'frozen', 'frozen-2',
+      'moana', 'moana-2', 'raya-and-the-last-dragon',
+    ],
+  },
+  {
     id: 'studio-ghibli',
     title: 'Studio Ghibli',
     thumbnail: 'series/studio-ghibli.webp',
