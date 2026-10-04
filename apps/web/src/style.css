@@ -37,3 +37,8 @@
 /* Keep snap positions and scroll overflow stable while hovering shelf cards. */
 .shelf-track>.shelf-card:hover{transform:none}
 .latest-added-track{scroll-snap-type:none}
+.loading-screen{animation:loading-fade-in 200ms ease-out both}
+.loading-screen.loading-screen-exiting{animation:loading-fade-out 250ms ease-in both}
+@keyframes loading-fade-in{from{opacity:0}to{opacity:1}}
+@keyframes loading-fade-out{from{opacity:1}to{opacity:0}}
+@media(prefers-reduced-motion:reduce){.loading-screen{animation:none}.loading-screen.loading-screen-exiting{opacity:0}}

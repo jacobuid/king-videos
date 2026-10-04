@@ -47,7 +47,16 @@ function mediaCrossOrigin(url){try{return new URL(url).hostname.endsWith('.backb
 function finishLoading(setter,startedAt){setTimeout(()=>setter(false),Math.max(0,900-(Date.now()-startedAt)))}
 function Avatar({profile,add=false}){return <span className={`avatar${add?' add-avatar':''}`} style={add?undefined:{'--avatar-color':profileColor(profile)}} aria-hidden="true">{add?<FontAwesomeIcon icon={faPlus}/>:profile.avatar?<img src={profilePicture(profile.avatar)} alt=""/>:<FontAwesomeIcon className="avatar-face" icon={faFaceSmile}/>}</span>}
 function Logo(){return <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo-kingflix.png`} alt="Kingflix"/>}
-function LoadingScreen(){return <div className="loading-screen" role="status" aria-live="polite"><Logo/><span>Loading...</span></div>}
+function LoadingScreen({active=true}){
+  const[visible,setVisible]=useState(active)
+  useEffect(()=>{
+    if(active){setVisible(true);return}
+    const timer=setTimeout(()=>setVisible(false),250)
+    return()=>clearTimeout(timer)
+  },[active])
+  if(!active&&!visible)return null
+  return <div className={`loading-screen${active?'':' loading-screen-exiting'}`} role="status" aria-live="polite"><Logo/><span>Loading...</span></div>
+}
 
 function App(){
   const{getToken}=useAuth()
@@ -112,8 +121,8 @@ function App(){
   function switchProfile(){setProfile(null);setProfileToken('');setSelected(null);setMedia([]);setProgress([]);setFavorites([]);setError('');setView('select')}
   function dismissBirthday(){if(birthdayProfile)localStorage.setItem(`kingflix-birthday-${birthdayProfile.id}-${localDateInputValue()}`,'dismissed');setBirthdayProfile(null)}
   const profilePicker=<div className="profile-groups">{[false,true].map(minor=>{const group=profiles.filter(item=>(profileAge(item.dateOfBirth)??18)<18===minor);return group.length?<div className="profile-grid" key={minor?'minors':'adults'}>{group.map(item=><div className="profile-card-wrap" key={item.id}><button className="profile-card" onClick={()=>begin(item,view==='manage'?'edit':'watch')}><span className="avatar-wrap"><Avatar profile={item}/>{item.hasPin&&<span className="profile-corner" title="PIN protected"><FontAwesomeIcon icon={faLock}/></span>}<strong className="profile-age" title={`${profileAge(item.dateOfBirth)??'Unknown'} years old`}>{profileAge(item.dateOfBirth)??'—'}</strong>{view==='manage'&&<span className="edit-mark"><FontAwesomeIcon icon={faPen}/></span>}</span><span className="profile-name">{item.name}</span></button>{view==='select'&&<button className="avatar-change" type="button" onClick={()=>choosePicture(item)} aria-label={`Change ${item.name}'s profile picture`} title="Change profile picture"><FontAwesomeIcon icon={faCamera}/></button>}</div>)}</div>:null})}</div>
-  if(profilesLoading||unlockLoading||(view==='library'&&libraryLoading))return <LoadingScreen/>
-  return <main className={view==='library'?'home-page':'profile-shell'}>
+  const loading=profilesLoading||unlockLoading||(view==='library'&&libraryLoading)
+  return <><LoadingScreen active={loading}/>{!loading&&<main className={view==='library'?'home-page':'profile-shell'}>
     {view==='select'&&<header className="site-header"><Logo/><UserButton/></header>}
     {error&&<p role="alert">{error}</p>}
     {view==='select'&&<section className="profile-stage"><h2>Who's watching?</h2>{profilePicker}<div className="manage-buttons"><button className="outline-button icon-button" onClick={()=>openManage('manage')}><FontAwesomeIcon icon={faUsersGear}/>Manage Profiles</button><button className="outline-button icon-button" onClick={()=>openManage('manage-videos')}><FontAwesomeIcon icon={faVideo}/>Manage Videos</button></div></section>}
@@ -125,7 +134,7 @@ function App(){
     {pending&&<PinDialog profile={pending.profile} pin={pin} setPin={setPin} busy={busy} submit={value=>unlock(pending.profile,value,pending.action)} cancel={()=>{setPending(null);setPin('');setError('')}}/>}
     {birthdayProfile&&<BirthdayDialog profile={birthdayProfile} dismiss={dismissBirthday} request={request}/>} 
     {view==='library'&&<Home media={media} progress={progress} favorites={favorites} toggleFavorite={toggleFavorite} reorderFavorites={reorderFavorites} profile={profile} selected={selected} setSelected={setSelected} play={play} saveProgress={saveProgress} switchProfile={switchProfile} replayBirthday={()=>setBirthdayProfile(profile)}/>}
-  </main>
+  </main>}</>
 }
 
 function BirthdayDialog({profile,dismiss,request}){
