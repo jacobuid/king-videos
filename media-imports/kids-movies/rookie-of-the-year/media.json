@@ -1,10 +1,10 @@
 {
   "id": "rookie-of-the-year",
-  "title": "Rookie Of The Year",
+  "title": "Rookie of the Year",
   "category": "movie",
   "year": 1993,
   "date": null,
-  "description": "",
+  "description": "A boy discovers that his healed arm can throw extraordinary fastballs and joins a major-league baseball team.",
   "genres": [
     "Live Action",
     "Family"
@@ -15,8 +15,7 @@
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Rookie Of The Year (1993)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Rookie Of The Year (1993)\\Rookie Of The Year [720p].mp4",
   "processing": "unchanged",
-  "metadataSource": null,
+  "metadataSource": "https://en.wikipedia.org/wiki/Rookie_of_the_Year_(film)",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/rookie_of_the_year",
-  "metadataReview": true
+  "ratingSource": "https://www.rottentomatoes.com/m/rookie_of_the_year"
 }

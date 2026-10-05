@@ -1,10 +1,10 @@
 {
   "id": "anne-of-green-gables",
-  "title": "Anne Of Green Gables",
+  "title": "Anne of Green Gables (Partial)",
   "category": "movie",
   "year": 1985,
   "date": null,
-  "description": "",
+  "description": "An imaginative orphan finds a home with the Cuthberts on Prince Edward Island. This file contains approximately 97 minutes of the 1985 production; it is incomplete.",
   "genres": [
     "Live Action",
     "Family",
@@ -16,7 +16,7 @@
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Anne Of Green Gables (1985)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Anne Of Green Gables (1985)\\Anne Of Green Gables [1080p].mp4",
   "processing": "unchanged",
-  "metadataSource": null,
+  "metadataSource": "https://en.wikipedia.org/wiki/Anne_of_Green_Gables_(1985_film)",
   "metadataReview": true,
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Anne Of Green Gables (1985)\\Anne Of Green Gables [1080p].mp4-English.srt"
 }

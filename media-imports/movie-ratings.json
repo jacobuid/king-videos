@@ -770,5 +770,12 @@
   "peanuts-we-need-a-blockbuster-charlie-brown": {
     "rating": "NR",
     "source": "https://newportlibraryri.org/wp-content/uploads/2020/09/unlv_av_cataloging.pdf"
+  },
+  "it-s-a-wonderful-life": {
+    "rating": "PG",
+    "source": "https://www.rottentomatoes.com/m/its_a_wonderful_life",
+    "sourceTitle": "It's a Wonderful Life",
+    "sourceDate": "1946-01-07",
+    "year": 1946
   }
 }

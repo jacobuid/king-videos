@@ -1,10 +1,10 @@
 {
   "id": "dennis-the-menace",
-  "title": "Dennis The Menace",
+  "title": "Dennis the Menace",
   "category": "movie",
   "year": 1993,
   "date": null,
-  "description": "",
+  "description": "Mischievous young Dennis Mitchell causes endless trouble for his grumpy neighbor, Mr. Wilson.",
   "genres": [
     "Live Action",
     "Family"
@@ -15,8 +15,7 @@
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Dennis The Menace (1993)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Dennis The Menace (1993)\\Dennis The Menace [720p].mp4",
   "processing": "unchanged",
-  "metadataSource": null,
+  "metadataSource": "https://en.wikipedia.org/wiki/Dennis_the_Menace_(film)",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/dennis_the_menace",
-  "metadataReview": true
+  "ratingSource": "https://www.rottentomatoes.com/m/dennis_the_menace"
 }

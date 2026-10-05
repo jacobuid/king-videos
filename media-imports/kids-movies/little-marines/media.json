@@ -4,7 +4,7 @@
   "category": "movie",
   "year": 1990,
   "date": null,
-  "description": "",
+  "description": "Three young friends set off on an outdoor adventure.",
   "genres": [
     "Live Action",
     "Family"
@@ -15,6 +15,5 @@
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Marines",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Marines\\Little.Marines(1991).mp4",
   "processing": "unchanged",
-  "metadataSource": null,
-  "metadataReview": true
+  "metadataSource": "https://www.rottentomatoes.com/m/little_marines"
 }

@@ -1,10 +1,10 @@
 {
   "id": "alvin-and-the-chipmunks",
-  "title": "Alvin And The Chipmunks",
+  "title": "Alvin and the Chipmunks",
   "category": "movie",
   "year": 2007,
   "date": null,
-  "description": "",
+  "description": "Three singing chipmunks turn a struggling songwriter’s life upside down as they become music stars.",
   "genres": [
     "Live Action",
     "Family"
@@ -15,8 +15,7 @@
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Alvin And The Chipmunks (2007)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Alvin And The Chipmunks (2007)\\Alvin And The Chipmunks [720p].mp4",
   "processing": "unchanged",
-  "metadataSource": null,
+  "metadataSource": "https://en.wikipedia.org/wiki/Alvin_and_the_Chipmunks_(film)",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/alvin_and_the_chipmunks",
-  "metadataReview": true
+  "ratingSource": "https://www.rottentomatoes.com/m/alvin_and_the_chipmunks"
 }

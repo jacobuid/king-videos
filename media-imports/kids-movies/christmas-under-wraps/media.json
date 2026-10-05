@@ -4,7 +4,7 @@
   "category": "movie",
   "year": 2014,
   "date": null,
-  "description": "",
+  "description": "A doctor takes a job in a small Alaskan town, where romance and Christmas surprises challenge her plans.",
   "genres": [
     "Live Action",
     "Family"
@@ -15,9 +15,8 @@
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Hallmark - Christmas Under Wraps (2014)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Hallmark - Christmas Under Wraps (2014)\\Christmas Under Wraps [720p].mp4",
   "processing": "unchanged",
-  "metadataSource": null,
+  "metadataSource": "https://www.hallmarkchannel.com/christmas-under-wraps/about",
   "rating": "TV-G",
   "ratingSource": "https://www.rottentomatoes.com/m/christmas_under_wraps",
-  "metadataReview": true,
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Hallmark - Christmas Under Wraps (2014)\\Christmas Under Wraps [720p].srt"
 }
