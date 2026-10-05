@@ -21,7 +21,8 @@ const rows=await query("SELECT id,title,year,category,series_id,series_title,sea
 writeFileSync('logs/subtitles-catalog.json',JSON.stringify(rows,null,2));
 const existing=rows.filter(r=>r.subtitle_key||r.subtitle_url).length;
 const ignoredShort=r=>r.id.startsWith('disney-short-')||r.video_key?.startsWith('movies/disney-classic-shorts/');
-const jobs=rows.filter(r=>!ignoredShort(r)&&!r.subtitle_key&&!r.subtitle_url&&(!only||r.id===only)).slice(0,limit);
+const retryRuntimeOnly=process.argv.includes('--retry-runtime-only');
+const jobs=rows.filter(r=>!ignoredShort(r)&&!r.subtitle_key&&!r.subtitle_url&&(!only||r.id===only)&&(!retryRuntimeOnly||(r.duration_seconds&&results.get(r.id)?.reason==='Combined video or missing video/runtime metadata'))).slice(0,limit);
 const state={startedAt:new Date().toISOString(),total:jobs.length,alreadyCaptioned:existing,ignoredDisneyShorts:rows.filter(ignoredShort).length,completed:0,added:0,notFound:0,review:0,failures:[],workers:[{id:1,status:'idle'},{id:2,status:'idle'}]};
 function save(){state.updatedAt=new Date().toISOString();state.remaining=state.total-state.completed;writeFileSync(statePath,JSON.stringify(state,null,2));writeFileSync(reportPath,JSON.stringify({updatedAt:state.updatedAt,results:[...results.values()]},null,2));}
 save();
