@@ -11,18 +11,46 @@ const manifest=JSON.parse((await readFile(manifestPath,'utf8')).replace(/^\uFEFF
 for(const name of ['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID'])if(!process.env[name])throw new Error(`${name} is required`)
 if(!['movie','short'].includes(manifest.category)||!manifest.video||!manifest.thumbnail)throw new Error('A movie or short manifest requires category, video, and thumbnail fields')
 
+async function networkFetch(url,options){
+  for(let attempt=1;attempt<=24;attempt++){
+    try{const response=await fetch(url,{...options,signal:AbortSignal.timeout(60000)});if(response.status!==429&&response.status<500)return response;await response.body?.cancel();if(attempt===24)throw new Error('B2 service temporarily unavailable')}
+    catch(error){if(attempt===24)throw error;console.log('KINGFLIX_UPLOAD_WAIT '+JSON.stringify({attempt,error:error.cause?.code||error.message}))}
+    await new Promise(done=>setTimeout(done,Math.min(60000,attempt*10000)));
+  }
+}
 const basic=Buffer.from(`${process.env.B2_BOOTSTRAP_KEY_ID}:${process.env.B2_BOOTSTRAP_APPLICATION_KEY}`).toString('base64')
-const authResponse=await fetch('https://api.backblazeb2.com/b2api/v4/b2_authorize_account',{headers:{Authorization:`Basic ${basic}`}})
+const authResponse=await networkFetch('https://api.backblazeb2.com/b2api/v4/b2_authorize_account',{headers:{Authorization:`Basic ${basic}`}})
 if(!authResponse.ok)throw new Error(`Backblaze authorization failed: ${await authResponse.text()}`)
 const auth=await authResponse.json(),storage=auth.apiInfo.storageApi
-async function b2(operation,body){const response=await fetch(`${storage.apiUrl}/b2api/v4/${operation}`,{method:'POST',headers:{Authorization:auth.authorizationToken,'Content-Type':'application/json'},body:JSON.stringify(body)});if(!response.ok)throw new Error(`${operation} failed: ${await response.text()}`);return response.json()}
+async function b2(operation,body){const response=await networkFetch(`${storage.apiUrl}/b2api/v4/${operation}`,{method:'POST',headers:{Authorization:auth.authorizationToken,'Content-Type':'application/json'},body:JSON.stringify(body)});if(!response.ok)throw new Error(`${operation} failed: ${await response.text()}`);return response.json()}
 const bucketName=process.env.B2_BUCKET||'king-videos',buckets=await b2('b2_list_buckets',{accountId:auth.accountId,bucketName}),bucket=buckets.buckets?.find(item=>item.bucketName===bucketName)
 if(!bucket)throw new Error(`Backblaze bucket ${bucketName} was not found`)
 const prefix=`movies/${manifest.id}/`,existing=new Map(),listed=await b2('b2_list_file_names',{bucketId:bucket.bucketId,prefix,maxFileCount:1000})
 for(const file of listed.files||[])existing.set(file.fileName,Number(file.contentLength))
 async function fileSha1(path){const hash=createHash('sha1');for await(const chunk of createReadStream(path))hash.update(chunk);return hash.digest('hex')}
-async function* progressBody(path,key,total){let sent=0,last=0;for await(const chunk of createReadStream(path)){sent+=chunk.length;if(Date.now()-last>=2000||sent===total){last=Date.now();console.log('KINGFLIX_UPLOAD_PROGRESS '+JSON.stringify({key,bytesSent:sent,totalBytes:total,progress:Math.round(sent/total*10000)/100}));}yield chunk;}}
-async function uploadFile(file,key,type){const path=resolve(folder,file),size=(await stat(path)).size,remoteSize=existing.get(key);if(remoteSize!==undefined&&(!resume||remoteSize===size)){console.log(`Already uploaded; skipping ${key}${resume?' (size matches)':''}`);return}if(remoteSize!==undefined)console.log(`Remote size differs; replacing ${key}`);const hash=await fileSha1(path);for(let attempt=1;attempt<=5;attempt++){try{const upload=await b2('b2_get_upload_url',{bucketId:bucket.bucketId}),response=await fetch(upload.uploadUrl,{method:'POST',headers:{Authorization:upload.authorizationToken,'X-Bz-File-Name':encodeURIComponent(key),'Content-Type':type,'Content-Length':String(size),'X-Bz-Content-Sha1':hash},body:progressBody(path,key,size),duplex:'half'});if(response.ok){console.log(`Uploaded ${file}`);return}const error=await response.text();if(attempt===5)throw new Error(`Upload failed for ${key}: ${error}`);console.warn(`Upload attempt ${attempt} failed for ${file}; retrying`)}catch(error){if(attempt===5)throw error;console.warn(`Upload attempt ${attempt} failed for ${file}: ${error.message}; retrying`)}await new Promise(done=>setTimeout(done,attempt*2000))}}
+async function* progressBody(path,key,total,signal){
+  const stream=createReadStream(path,{signal});let sent=0,last=0;
+  try{for await(const chunk of stream){sent+=chunk.length;if(Date.now()-last>=2000||sent===total){last=Date.now();console.log('KINGFLIX_UPLOAD_PROGRESS '+JSON.stringify({key,bytesSent:sent,totalBytes:total,progress:Math.round(sent/total*10000)/100}));}yield chunk;}}finally{stream.destroy()}
+}
+async function uploadFile(file,key,type){
+  const path=resolve(folder,file),size=(await stat(path)).size,remoteSize=existing.get(key);
+  if(remoteSize!==undefined&&(!resume||remoteSize===size)){console.log('Already uploaded; skipping '+key+(resume?' (size matches)':''));return}
+  const hash=await fileSha1(path);
+  for(let attempt=1;attempt<=24;attempt++){
+    const controller=new AbortController();
+    try{
+      const upload=await b2('b2_get_upload_url',{bucketId:bucket.bucketId});
+      const response=await fetch(upload.uploadUrl,{method:'POST',headers:{Authorization:upload.authorizationToken,'X-Bz-File-Name':encodeURIComponent(key),'Content-Type':type,'Content-Length':String(size),'X-Bz-Content-Sha1':hash},body:progressBody(path,key,size,controller.signal),signal:controller.signal,duplex:'half'});
+      if(!response.ok){const details=await response.text();const error=new Error('Upload HTTP '+response.status+': '+details);error.permanent=response.status>=400&&response.status<500&&![401,408,429].includes(response.status);throw error}
+      const result=await response.json();if(result.contentLength!==size||result.contentSha1!==hash)throw new Error('Upload checksum or size mismatch');
+      console.log('Uploaded '+file);return;
+    }catch(error){
+      controller.abort();if(error.permanent||attempt===24)throw error;
+      const delay=Math.min(60000,attempt*10000);console.log('KINGFLIX_UPLOAD_WAIT '+JSON.stringify({key,attempt,retrySeconds:delay/1000,error:error.cause?.code||error.message}));
+      await new Promise(done=>setTimeout(done,delay));
+    }finally{controller.abort()}
+  }
+}
 async function uploadBytes(value,key,type){const size=value.byteLength,remoteSize=existing.get(key);if(resume&&remoteSize===size){console.log(`Already uploaded; skipping ${key} (size matches)`);return}const hash=createHash('sha1').update(value).digest('hex');for(let attempt=1;attempt<=5;attempt++){try{const upload=await b2('b2_get_upload_url',{bucketId:bucket.bucketId}),response=await fetch(upload.uploadUrl,{method:'POST',headers:{Authorization:upload.authorizationToken,'X-Bz-File-Name':encodeURIComponent(key),'Content-Type':type,'Content-Length':String(size),'X-Bz-Content-Sha1':hash},body:value});if(response.ok){console.log(`Uploaded subtitles: ${key}`);existing.set(key,size);return}const error=await response.text();if(attempt===5)throw new Error(`Upload failed for ${key}: ${error}`)}catch(error){if(attempt===5)throw error;console.warn(`Subtitle upload attempt ${attempt} failed: ${error.message}; retrying`)}await new Promise(done=>setTimeout(done,attempt*2000))}}
 async function filesUnder(path){const found=[];for(const entry of await readdir(path,{withFileTypes:true})){const child=resolve(path,entry.name);if(entry.isDirectory())found.push(...await filesUnder(child));else found.push(child)}return found}
 function srtToVtt(value){return `WEBVTT\n\n${value.replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n').replace(/(\d{2}:\d{2}:\d{2}),(\d{3})/g,'$1.$2').trim()}\n`}
