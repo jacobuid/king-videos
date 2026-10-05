@@ -1,0 +1,21 @@
+{
+  "id": "air-bud-golden-receiver",
+  "title": "Air Bud: Golden Receiver",
+  "category": "movie",
+  "year": 1998,
+  "date": null,
+  "description": "Air Bud: Golden Receiver is a 1998 sports comedy film directed by Richard Martin.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "duration": 5425,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\air-bud-golden-receiver\\air-bud-golden-receiver.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\air-bud-golden-receiver\\thumbnail.webp",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\air-bud-golden-receiver",
+  "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Air Bud 2 - Golden Receiver (1998)\\Air Bud - Golden Receiver [720p].avi",
+  "processing": "encode",
+  "metadataSource": "https://en.wikipedia.org/wiki/Air_Bud%3A_Golden_Receiver",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/air_bud_golden_receiver"
+}

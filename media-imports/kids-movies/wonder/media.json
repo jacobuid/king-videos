@@ -1,0 +1,21 @@
+{
+  "id": "wonder",
+  "title": "Wonder",
+  "category": "movie",
+  "year": 2017,
+  "date": null,
+  "description": "Wonder is a 2017 American coming-of-age family comedy drama film directed by Stephen Chbosky, who co-wrote the screenplay with Steven Conrad and Jack Thorne.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "duration": 6791,
+  "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Wonder\\Wonder (2017).mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\wonder\\thumbnail.webp",
+  "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Wonder",
+  "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Wonder\\Wonder (2017).mp4",
+  "processing": "unchanged",
+  "metadataSource": "https://en.wikipedia.org/wiki/Wonder_(film)",
+  "rating": "PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/wonder"
+}

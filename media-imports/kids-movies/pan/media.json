@@ -1,0 +1,20 @@
+{
+  "id": "pan",
+  "title": "Pan",
+  "category": "movie",
+  "year": 2015,
+  "date": null,
+  "description": "Pan is a 2015 American fantasy film directed by Joe Wright and written by Jason Fuchs.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "duration": 6692,
+  "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Pan (2015)\\Pan [720p].mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\pan\\thumbnail.webp",
+  "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Pan (2015)",
+  "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Pan (2015)\\Pan [720p].mp4",
+  "processing": "unchanged",
+  "metadataSource": "https://en.wikipedia.org/wiki/Pan_(2015_film)",
+  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Pan (2015)\\Pan [720p].srt"
+}
