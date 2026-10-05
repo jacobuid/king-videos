@@ -11,11 +11,12 @@
   ],
   "duration": 6174,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Smurfs (2011)\\The Smurfs [720p].mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\the-smurfs\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\the-smurfs\\thumbnail-2cbfe5d1f96d.webp",
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Smurfs (2011)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Smurfs (2011)\\The Smurfs [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Smurfs_(film)",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/the_smurfs"
+  "ratingSource": "https://www.rottentomatoes.com/m/the_smurfs",
+  "thumbnailSource": "The Smurfs (2011).jpg"
 }

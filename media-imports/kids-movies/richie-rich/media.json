@@ -11,11 +11,12 @@
   ],
   "duration": 5671,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Richie Rich (1994)\\Richie Rich [720p].mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\richie-rich\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\richie-rich\\thumbnail-8a2ce78090f7.webp",
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Richie Rich (1994)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Richie Rich (1994)\\Richie Rich [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Richie_Rich_(film)",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/richie_rich"
+  "ratingSource": "https://www.rottentomatoes.com/m/richie_rich",
+  "thumbnailSource": "Richie Rich (1994).jpg"
 }

@@ -12,11 +12,12 @@
   ],
   "duration": 5023,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Space Jam (1996)\\Space Jam [720p].mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\space-jam\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\space-jam\\thumbnail-2372f7170fd0.webp",
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Space Jam (1996)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Space Jam (1996)\\Space Jam [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Space_Jam",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/space_jam"
+  "ratingSource": "https://www.rottentomatoes.com/m/space_jam",
+  "thumbnailSource": "Space Jam (1996).webp"
 }

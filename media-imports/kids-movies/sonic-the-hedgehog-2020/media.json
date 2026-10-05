@@ -11,9 +11,10 @@
   ],
   "duration": 5933,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Sonic The Hedgehog (2020)\\Sonic The Hedgehog [720p].mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\sonic-the-hedgehog-2020\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\sonic-the-hedgehog-2020\\thumbnail-dee2e1bb01f9.webp",
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Sonic The Hedgehog (2020)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Sonic The Hedgehog (2020)\\Sonic The Hedgehog [720p].mp4",
   "processing": "unchanged",
-  "metadataSource": "https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_(film)"
+  "metadataSource": "https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_(film)",
+  "thumbnailSource": "Sonic the Hedgehog (2020).jpg"
 }

@@ -11,11 +11,12 @@
   ],
   "duration": 4512,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Inspector Gadget (1999)\\Inspector Gadget [720p].mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\inspector-gadget-1999\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\inspector-gadget-1999\\thumbnail-10413d48be01.webp",
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Inspector Gadget (1999)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Inspector Gadget (1999)\\Inspector Gadget [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Inspector_Gadget_(film)",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/inspector_gadget"
+  "ratingSource": "https://www.rottentomatoes.com/m/inspector_gadget",
+  "thumbnailSource": "Inspector Gadget (1999).jpg"
 }

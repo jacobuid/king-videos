@@ -11,11 +11,12 @@
   ],
   "duration": 6362,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Giants (1994)\\Little Giants [720p].mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\little-giants\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\little-giants\\thumbnail-bd3455b559fb.webp",
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Giants (1994)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Giants (1994)\\Little Giants [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Little_Giants",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/little_giants"
+  "ratingSource": "https://www.rottentomatoes.com/m/little_giants",
+  "thumbnailSource": "Little Giants (1994).jpg"
 }

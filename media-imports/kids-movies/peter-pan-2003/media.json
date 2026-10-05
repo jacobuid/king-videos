@@ -11,9 +11,10 @@
   ],
   "duration": 6802,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Peter Pan (2003)\\Peter Pan [720p].mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\peter-pan-2003\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\peter-pan-2003\\thumbnail-dc7e7f85b18c.webp",
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Peter Pan (2003)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Peter Pan (2003)\\Peter Pan [720p].mp4",
   "processing": "unchanged",
-  "metadataSource": "https://en.wikipedia.org/wiki/Peter_Pan_(2003_film)"
+  "metadataSource": "https://en.wikipedia.org/wiki/Peter_Pan_(2003_film)",
+  "thumbnailSource": "peterpan 2003.png"
 }

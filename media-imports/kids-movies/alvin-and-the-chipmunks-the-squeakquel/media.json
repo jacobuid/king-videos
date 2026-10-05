@@ -11,9 +11,10 @@
   ],
   "duration": 5098,
   "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\alvin-and-the-chipmunks-the-squeakquel\\alvin-and-the-chipmunks-the-squeakquel.mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\alvin-and-the-chipmunks-the-squeakquel\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\alvin-and-the-chipmunks-the-squeakquel\\thumbnail-ae5770587649.webp",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\alvin-and-the-chipmunks-the-squeakquel",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Alvin and the Chipmunks 2 - The Squeakquel (2009)\\Alvin and the Chipmunks 2 - The Squeakquel [720p].avi",
   "processing": "encode",
-  "metadataSource": "https://en.wikipedia.org/wiki/Alvin_and_the_Chipmunks%3A_The_Squeakquel"
+  "metadataSource": "https://en.wikipedia.org/wiki/Alvin_and_the_Chipmunks%3A_The_Squeakquel",
+  "thumbnailSource": "alvin2.webp"
 }

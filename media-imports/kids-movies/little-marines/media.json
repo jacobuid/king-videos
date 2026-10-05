@@ -11,9 +11,10 @@
   ],
   "duration": 5244,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Marines\\Little.Marines(1991).mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\little-marines\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\little-marines\\thumbnail-641bf3ef88c4.webp",
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Marines",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Marines\\Little.Marines(1991).mp4",
   "processing": "unchanged",
-  "metadataSource": "https://www.rottentomatoes.com/m/little_marines"
+  "metadataSource": "https://www.rottentomatoes.com/m/little_marines",
+  "thumbnailSource": "Little Marines.png"
 }

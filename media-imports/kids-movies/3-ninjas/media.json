@@ -11,11 +11,12 @@
   ],
   "duration": 5745,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\3 Ninjas (1992)\\3 Ninjas [720p].mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\3-ninjas\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\3-ninjas\\thumbnail-b8fe8d0d2e97.webp",
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\3 Ninjas (1992)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\3 Ninjas (1992)\\3 Ninjas [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/3_Ninjas_(film)",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/3_ninjas"
+  "ratingSource": "https://www.rottentomatoes.com/m/3_ninjas",
+  "thumbnailSource": "3 Ninjas.png"
 }

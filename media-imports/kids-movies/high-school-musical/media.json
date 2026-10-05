@@ -11,11 +11,12 @@
   ],
   "duration": 5875,
   "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\high-school-musical\\high-school-musical.mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\high-school-musical\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\high-school-musical\\thumbnail-b1ecf8a40a19.webp",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\high-school-musical",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\High School Musical (2006)\\High School Musical [720p].mkv",
   "processing": "remux",
   "metadataSource": "https://en.wikipedia.org/wiki/High_School_Musical",
   "rating": "TV-G",
-  "ratingSource": "https://www.rottentomatoes.com/m/high_school_musical"
+  "ratingSource": "https://www.rottentomatoes.com/m/high_school_musical",
+  "thumbnailSource": "highschool musical.webp"
 }

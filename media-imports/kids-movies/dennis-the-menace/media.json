@@ -11,11 +11,12 @@
   ],
   "duration": 5756,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Dennis The Menace (1993)\\Dennis The Menace [720p].mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\dennis-the-menace\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\dennis-the-menace\\thumbnail-fa7e4d6a1548.webp",
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Dennis The Menace (1993)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Dennis The Menace (1993)\\Dennis The Menace [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Dennis_the_Menace_(film)",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/dennis_the_menace"
+  "ratingSource": "https://www.rottentomatoes.com/m/dennis_the_menace",
+  "thumbnailSource": "Dennis the Menace.jpg"
 }

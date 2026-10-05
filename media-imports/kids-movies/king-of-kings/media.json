@@ -12,11 +12,12 @@
   ],
   "duration": 10259,
   "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\king-of-kings\\king-of-kings.mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\king-of-kings\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\king-of-kings\\thumbnail-056b354da45c.webp",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\king-of-kings",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\King.Of.Kings.1961.720p.BRRip.x264-x0r\\King.Of.Kings.1961.720p.BRRip.x264-x0r.mkv",
   "processing": "remux",
   "metadataSource": "https://en.wikipedia.org/wiki/King_of_Kings_(1961_film)",
   "rating": "PG-13",
-  "ratingSource": "https://www.rottentomatoes.com/m/king_of_kings"
+  "ratingSource": "https://www.rottentomatoes.com/m/king_of_kings",
+  "thumbnailSource": "King of Kings.png"
 }

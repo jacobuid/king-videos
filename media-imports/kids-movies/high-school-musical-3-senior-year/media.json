@@ -11,11 +11,12 @@
   ],
   "duration": 7003,
   "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\high-school-musical-3-senior-year\\high-school-musical-3-senior-year.mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\high-school-musical-3-senior-year\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\high-school-musical-3-senior-year\\thumbnail-03387fe82797.webp",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\high-school-musical-3-senior-year",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\High School Musical 3 (2008)\\High School Musical 3 [720p].mkv",
   "processing": "remux",
   "metadataSource": "https://en.wikipedia.org/wiki/High_School_Musical_3%3A_Senior_Year",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/high-school-musical-3-senior-year"
+  "ratingSource": "https://movies.disney.com/high-school-musical-3-senior-year",
+  "thumbnailSource": "highschool musical 3.webp"
 }

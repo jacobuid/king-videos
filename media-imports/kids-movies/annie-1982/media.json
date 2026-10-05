@@ -12,11 +12,12 @@
   ],
   "duration": 7644,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Annie (1982)\\Annie [720p].mp4",
-  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\annie-1982\\thumbnail.webp",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\annie-1982\\thumbnail-fe32695028d0.webp",
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Annie (1982)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Annie (1982)\\Annie [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Annie_(1982_film)",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/annie"
+  "ratingSource": "https://www.rottentomatoes.com/m/annie",
+  "thumbnailSource": "annie.png"
 }
