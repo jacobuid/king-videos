@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s02e18",
+  "title": "iDate a Bad Boy",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 2,
+  "episodeNumber": 18,
+  "episodeEnd": 19,
+  "year": 2009,
+  "date": "2009-05-09",
+  "description": "Carly and Spencer become upset when their new neighbor Griffin steals the motorcycle that Carly bought for Spencer. Spencer lets Griffin off the hook, but Carly becomes upset. However, when Spencer later goes out to get smoothies, he returns to find Carly and Griffin kissing on the couch. Spencer becomes furious, forces Griffin to leave, and forbids Carly to see him, though he eventually allows them to resume dating. Meanwhile, Sam pays Freddie $50 to make a website and has a lawyer write them a contract.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 2777,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s02e18\\icarly-s02e18.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S02E18-E19 iDate a Bad Boy.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72590/icarly-2x16-idate-a-bad-boy",
+  "processing": "Video stream copy; web-ready MP4"
+}

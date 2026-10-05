@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s03e06",
+  "title": "iFind Lewbert's Lost Love",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 3,
+  "episodeNumber": 6,
+  "episodeEnd": 6,
+  "year": 2009,
+  "date": "2009-11-14",
+  "description": "After a \"Messin' With Lewbert\" sketch, Sam finds out that Lewbert had a relatively normal life at one time that included no wart, a modeling career, and a girlfriend. This convinces the iCarly crew that reuniting Lewbert with his ex-girlfriend will make him happy, and stop him from hassling everyone at Bushwell Apartments. Boy, are they mistaken!",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1423,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s03e06\\icarly-s03e06.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S03E06 iFind Lewbert's Lost Love.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72601/icarly-3x06-ifind-lewberts-lost-love",
+  "processing": "Video stream copy; web-ready MP4"
+}

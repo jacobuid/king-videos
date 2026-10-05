@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s05e04",
+  "title": "iLove You",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 5,
+  "episodeNumber": 4,
+  "episodeEnd": 4,
+  "year": 2011,
+  "date": "2011-09-24",
+  "description": "Carly tells Sam and Freddie to try each other's favorite hobbies. Meanwhile, Spencer bumps into his old babysitter and asks her to dinner. After reverting to their old roles, will they stay together?",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1418,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s05e04\\icarly-s05e04.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S05E04 iLove You.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72626/icarly-5x04-ilove-you",
+  "processing": "Video stream copy; web-ready MP4"
+}

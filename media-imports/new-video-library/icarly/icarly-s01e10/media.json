@@ -1,0 +1,31 @@
+{
+  "id": "icarly-s01e10",
+  "title": "iWant a World Record",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 1,
+  "episodeNumber": 10,
+  "episodeEnd": 10,
+  "year": 2007,
+  "date": "2007-11-17",
+  "description": "Carly and Sam try to break the world record for the longest web-cast.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1423,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s01e10\\icarly-s01e10.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S01E10 iWant a World Record.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "479:270",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72560/icarly-1x10-iwant-a-world-record",
+  "processing": "H.264 video and AAC audio copied unchanged into fast-start MP4",
+  "outputBytes": 535776911
+}

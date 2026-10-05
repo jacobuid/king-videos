@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s01e20",
+  "title": "iStakeout",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 1,
+  "episodeNumber": 20,
+  "episodeEnd": 20,
+  "year": 2008,
+  "date": "2008-04-05",
+  "description": "The Seattle Police Department uses Carly and Spencer's apartment for surveillance when a suspected video pirate is seen in the background of an iCarly webcast. One of the cops turns out to be a former bully that Spencer knew at summer camp, who sadly hasn't change that much since he was a kid.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1422,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s01e20\\icarly-s01e20.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S01E20 iStakeout.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "479:270",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72570/icarly-1x20-istakeout",
+  "processing": "Video stream copy; web-ready MP4"
+}

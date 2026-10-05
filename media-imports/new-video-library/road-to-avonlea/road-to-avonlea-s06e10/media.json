@@ -1,0 +1,30 @@
+{
+  "id": "road-to-avonlea-s06e10",
+  "title": "Home is Where the Heart is",
+  "category": "tv",
+  "seriesId": "road-to-avonlea",
+  "seriesTitle": "Road to Avonlea",
+  "seasonNumber": 6,
+  "episodeNumber": 10,
+  "episodeEnd": 10,
+  "year": 1995,
+  "date": "1995-03-06",
+  "description": "Young Sara Stanley joins her relatives in Avonlea, a close-knit community on Prince Edward Island.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": null,
+  "ratingSource": null,
+  "duration": 2697,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\road-to-avonlea-s06e10\\road-to-avonlea-s06e10.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\road-to-avonlea\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Anne Collection\\Road To Avonlea\\Road to Avonlea - 6x10 - Home is Where the Heart is.avi",
+  "sourceWidth": 512,
+  "sourceHeight": 384,
+  "sourceAspect": "4:3",
+  "sourceVideoCodec": "mpeg4",
+  "sourceAudioCodec": "mp3",
+  "metadataSource": "https://www.tvmaze.com/episodes/438547/road-to-avonlea-6x10-home-is-where-the-heart-is",
+  "processing": "Conversion pending quality selection"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s03e04",
+  "title": "iCarly Awards",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 3,
+  "episodeNumber": 4,
+  "episodeEnd": 4,
+  "year": 2009,
+  "date": "2009-10-03",
+  "description": "The iCarly awards for best fan-made videos is put at risk when Spencer messes up on the award design and has to ask a group of Russian swimsuit models who barely speak English to help him finish them - while the gang are doing the show.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1424,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s03e04\\icarly-s03e04.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S03E04 iCarly Awards.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72599/icarly-3x04-icarly-awards",
+  "processing": "Video stream copy; web-ready MP4"
+}

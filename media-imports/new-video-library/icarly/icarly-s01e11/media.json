@@ -1,0 +1,31 @@
+{
+  "id": "icarly-s01e11",
+  "title": "iRue the Day",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 1,
+  "episodeNumber": 11,
+  "episodeEnd": 11,
+  "year": 2007,
+  "date": "2007-12-01",
+  "description": "Nevel Papperman is back, and instead of trashing iCarly in his articles, he has directly sabotaged the website itself. Meanwhile Spencer persuades the Plain White T's to perform on Carly's show as a favor for preventing lead singer Tom Higgenson from being hit by a falling sign at the mall. But how do they expect the band to perform on a show nobody can see?",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1423,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s01e11\\icarly-s01e11.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S01E11 iRue the Day.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "479:270",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72561/icarly-1x11-irue-the-day",
+  "processing": "H.264 video and AAC audio copied unchanged into fast-start MP4",
+  "outputBytes": 502652780
+}

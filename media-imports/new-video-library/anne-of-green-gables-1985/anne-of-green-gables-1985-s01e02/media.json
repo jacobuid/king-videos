@@ -1,0 +1,31 @@
+{
+  "id": "anne-of-green-gables-1985-s01e02",
+  "title": "Part 2",
+  "category": "tv",
+  "seriesId": "anne-of-green-gables-1985",
+  "seriesTitle": "Anne of Green Gables",
+  "seasonNumber": 1,
+  "episodeNumber": 2,
+  "episodeEnd": 2,
+  "year": 1985,
+  "date": null,
+  "description": "An imaginative orphan finds a home with Matthew and Marilla Cuthbert on Prince Edward Island.",
+  "genres": [
+    "Live Action",
+    "Family",
+    "Classic"
+  ],
+  "rating": null,
+  "ratingSource": null,
+  "duration": 5920,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\anne-of-green-gables-1985-s01e02\\anne-of-green-gables-1985-s01e02.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\anne-of-green-gables-1985\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Anne Collection\\Anne of Green Gables\\Anne of Green Gables (Part 2).avi",
+  "sourceWidth": 512,
+  "sourceHeight": 368,
+  "sourceAspect": "32:23",
+  "sourceVideoCodec": "mpeg4",
+  "sourceAudioCodec": "mp3",
+  "metadataSource": "https://www.sullivanmovies.com/productions/anne-of-green-gables",
+  "processing": "Conversion pending quality selection"
+}

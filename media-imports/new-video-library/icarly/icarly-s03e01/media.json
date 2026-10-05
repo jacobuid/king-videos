@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s03e01",
+  "title": "iThink They Kissed",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 3,
+  "episodeNumber": 1,
+  "episodeEnd": 1,
+  "year": 2009,
+  "date": "2009-09-12",
+  "description": "A broken tooth for Sam and a trip to the dentist requiring an excessive amount of nitrous oxide, leads to the revelation of a deep, dark secret that shakes the relationship of the entire iCarly cast and crew. Meanwhile Spencer offers to teach art to some prisoners in the hope of weaning them away from a life of crime... with disastrous results.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1424,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s03e01\\icarly-s03e01.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S03E01 iThink They Kissed.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "959:540",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72596/icarly-3x01-ithink-they-kissed",
+  "processing": "Video stream copy; web-ready MP4"
+}

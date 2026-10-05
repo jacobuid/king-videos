@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s03e20",
+  "title": "iBeat the Heat",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 3,
+  "episodeNumber": 20,
+  "episodeEnd": 20,
+  "year": 2010,
+  "date": "2010-06-26",
+  "description": "When a heat wave hits Seattle and knocks out the power, Spencer activates an exotic air conditioning unit, providing the only cool air in the city. His and Carly's apartment is soon overrun with neighbors looking to take advantage of the opportunity.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1424,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s03e20\\icarly-s03e20.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S03E20 iBeat the Heat.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "959:540",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72612/icarly-3x18-ibeat-the-heat",
+  "processing": "Video stream copy; web-ready MP4"
+}

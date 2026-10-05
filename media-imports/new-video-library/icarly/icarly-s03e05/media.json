@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s03e05",
+  "title": "iHave My Principals",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 3,
+  "episodeNumber": 5,
+  "episodeEnd": 5,
+  "year": 2009,
+  "date": "2009-10-17",
+  "description": "Principal Franklin is fired after appearing as a guest on iCarly and is replaced by Mr. Howard, the math teacher, and Miss Briggs, the English teacher as co-principals. Spencer hires a rodeo star to teach him how to ride a mechanical bull.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1424,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s03e05\\icarly-s03e05.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S03E05 iHave My Principals.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72600/icarly-3x05-ihave-my-principals",
+  "processing": "Video stream copy; web-ready MP4"
+}

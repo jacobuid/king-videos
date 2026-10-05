@@ -1,0 +1,30 @@
+{
+  "id": "road-to-avonlea-s06e04",
+  "title": "Fools and Kings",
+  "category": "tv",
+  "seriesId": "road-to-avonlea",
+  "seriesTitle": "Road to Avonlea",
+  "seasonNumber": 6,
+  "episodeNumber": 4,
+  "episodeEnd": 4,
+  "year": 1995,
+  "date": "1995-01-29",
+  "description": "Young Sara Stanley joins her relatives in Avonlea, a close-knit community on Prince Edward Island.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": null,
+  "ratingSource": null,
+  "duration": 2696,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\road-to-avonlea-s06e04\\road-to-avonlea-s06e04.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\road-to-avonlea\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Anne Collection\\Road To Avonlea\\Road to Avonlea - 6x04 - Fools and Kings.avi",
+  "sourceWidth": 512,
+  "sourceHeight": 384,
+  "sourceAspect": "4:3",
+  "sourceVideoCodec": "mpeg4",
+  "sourceAudioCodec": "mp3",
+  "metadataSource": "https://www.tvmaze.com/episodes/438541/road-to-avonlea-6x04-fools-and-kings",
+  "processing": "Conversion pending quality selection"
+}

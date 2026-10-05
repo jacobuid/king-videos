@@ -1,0 +1,31 @@
+{
+  "id": "icarly-s01e06",
+  "title": "iNevel",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 1,
+  "episodeNumber": 6,
+  "episodeEnd": 6,
+  "year": 2007,
+  "date": "2007-10-06",
+  "description": "Carly, Sam and Freddie think it will be good for their show if it is critiqued; Carly insults an 11-year-old critic, and is worried he will give a bad review.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1424,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s01e06\\icarly-s01e06.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S01E06 iNevel.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "479:270",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72556/icarly-1x06-inevel",
+  "processing": "H.264 video and AAC audio copied unchanged into fast-start MP4",
+  "outputBytes": 522374005
+}

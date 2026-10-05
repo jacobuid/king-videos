@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s05e02",
+  "title": "iDate Sam & Freddie",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 5,
+  "episodeNumber": 2,
+  "episodeEnd": 2,
+  "year": 2007,
+  "date": null,
+  "description": "Carly Shay led a pretty normal life... until she and her friends started their own web show. When iCarly becomes an instant hit, Carly and her pals have to balance their newfound success with the problems of everyday life. With her parents overseas, Carly relies on the help of her best friend/co-star, Sam, her longtime pal/technical producer, Freddie, and her eccentric older brother/guardian, Spencer, to keep it all together. Sam and Freddie's constant bickering and Spencer's odd habits make for a lot of good material...but is it enough to fill a new show every week?",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1419,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s05e02\\icarly-s05e02.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S05E02 iDate Sam & Freddie.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/shows/808/icarly",
+  "processing": "Video stream copy; web-ready MP4"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s02e22",
+  "title": "iMust Have Locker 239",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 2,
+  "episodeNumber": 22,
+  "episodeEnd": 22,
+  "year": 2009,
+  "date": "2009-06-27",
+  "description": "Sam and Freddie are forced to share a locker, while Carly seeks art lessons from Spencer.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1424,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s02e22\\icarly-s02e22.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S02E22 iMust Have Locker 239.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72593/icarly-2x19-imust-have-locker-239",
+  "processing": "Video stream copy; web-ready MP4"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s04e03",
+  "title": "iGet Pranky",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 4,
+  "episodeNumber": 3,
+  "episodeEnd": 3,
+  "year": 2010,
+  "date": "2010-09-25",
+  "description": "After some fans submit a video of a prank to the web-show, Carly, Sam and Freddie discuss pranks they've pulled in the past, and Carly begins to feel self-conscious about never having pulled any of her own. When she asks Spencer to help her pull one on Sam and Freddie, it sends him on a pranking rampage the likes of which Seattle hasn't experienced since he was in Junior High School.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1417,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s04e03\\icarly-s04e03.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S04E03 iGet Pranky.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72615/icarly-4x03-iget-pranky",
+  "processing": "Video stream copy; web-ready MP4"
+}

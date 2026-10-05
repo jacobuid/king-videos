@@ -1,0 +1,31 @@
+{
+  "id": "icarly-s01e05",
+  "title": "iWanna Stay With Spencer",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 1,
+  "episodeNumber": 5,
+  "episodeEnd": 5,
+  "year": 2007,
+  "date": "2007-09-29",
+  "description": "Carly gets caught in a custody battle between her brother and grandfather.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1424,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s01e05\\icarly-s01e05.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S01E05 iWanna Stay With Spencer.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "479:270",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72555/icarly-1x05-iwanna-stay-with-spencer",
+  "processing": "H.264 video and AAC audio copied unchanged into fast-start MP4",
+  "outputBytes": 472540778
+}

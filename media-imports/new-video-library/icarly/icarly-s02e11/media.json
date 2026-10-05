@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s02e11",
+  "title": "iGive Away A Car",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 2,
+  "episodeNumber": 11,
+  "episodeEnd": 11,
+  "year": 2009,
+  "date": "2009-01-17",
+  "description": "A car-giveaway contest on the Web show turns into a problem when the dealership supplying the vehicle expresses no knowledge of the contest. Carly asks Spencer for help, but he's focused on a new movie prop he purchased.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1424,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s02e11\\icarly-s02e11.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S02E11 iGive Away A Car.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72583/icarly-2x09-igive-away-a-car",
+  "processing": "Video stream copy; web-ready MP4"
+}

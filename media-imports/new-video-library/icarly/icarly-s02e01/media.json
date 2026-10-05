@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s02e01",
+  "title": "iSaw Him First",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 2,
+  "episodeNumber": 1,
+  "episodeEnd": 1,
+  "year": 2008,
+  "date": "2008-09-27",
+  "description": "Carly and Sam both develop a crush on a friend of Freddie's named Shane.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1423,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s02e01\\icarly-s02e01.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S02E01 iSaw Him First.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72576/icarly-2x01-isaw-him-first",
+  "processing": "Video stream copy; web-ready MP4"
+}

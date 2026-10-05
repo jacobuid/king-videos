@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s02e15",
+  "title": "iWant My Website Back",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 2,
+  "episodeNumber": 15,
+  "episodeEnd": 15,
+  "year": 2009,
+  "date": "2009-03-21",
+  "description": "Due to a mishap with Spencer's credit card, Spencer inadvertently orders 200 pillows, and Carly loses access to her domain name, only to find that it's now owned by obsessed iCarly fan Mandy Valdez (see \"iAm Your Biggest Fan,\" episode #1.13.). To make matters worse, after struggling to negotiate the return of the rights to her website, Mandy ends up being tricked into signing it over to Carly's nemesis, Nevel Papperman. Now Carly and her friends must do all they can to take it back from Nevel, who's willing to give it back to her... in exchange for a kiss.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1424,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s02e15\\icarly-s02e15.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S02E15 iWant My Website Back.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72587/icarly-2x13-iwant-my-website-back",
+  "processing": "Video stream copy; web-ready MP4"
+}

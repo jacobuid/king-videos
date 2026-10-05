@@ -1,0 +1,30 @@
+{
+  "id": "road-to-avonlea-s07e02",
+  "title": "Love May Be Blind... But the Neighbors Aint",
+  "category": "tv",
+  "seriesId": "road-to-avonlea",
+  "seriesTitle": "Road to Avonlea",
+  "seasonNumber": 7,
+  "episodeNumber": 2,
+  "episodeEnd": 2,
+  "year": 1990,
+  "date": null,
+  "description": "Young Sara Stanley joins her relatives in Avonlea, a close-knit community on Prince Edward Island.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": null,
+  "ratingSource": null,
+  "duration": 2676,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\road-to-avonlea-s07e02\\road-to-avonlea-s07e02.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\road-to-avonlea\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Anne Collection\\Road To Avonlea\\Road to Avonlea - 7x02 - Love May Be Blind... But the Neighbors Aint.avi",
+  "sourceWidth": 640,
+  "sourceHeight": 480,
+  "sourceAspect": "4:3",
+  "sourceVideoCodec": "mpeg4",
+  "sourceAudioCodec": "mp3",
+  "metadataSource": "https://www.sullivanmovies.com/productions/road-to-avonlea",
+  "processing": "Conversion pending quality selection"
+}

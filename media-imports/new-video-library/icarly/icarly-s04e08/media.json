@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s04e08",
+  "title": "iHire An Idiot",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 4,
+  "episodeNumber": 8,
+  "episodeEnd": 8,
+  "year": 2011,
+  "date": "2011-02-12",
+  "description": "The gang decides to hire an intern for the web series. Carly and Sam hire a guy they think is cute, but the new intern proves to be more trouble than he's worth. Freddie has to prove to Carly and Sam that they're better off without an intern.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1416,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s04e08\\icarly-s04e08.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S04E08 iHire An Idiot.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72619/icarly-4x07-ihire-an-idiot",
+  "processing": "Video stream copy; web-ready MP4"
+}

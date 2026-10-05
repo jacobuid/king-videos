@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s02e10",
+  "title": "iKiss",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 2,
+  "episodeNumber": 10,
+  "episodeEnd": 10,
+  "year": 2009,
+  "date": "2009-01-03",
+  "description": "When Sam overhears Freddie admit he has never been kissed, she decides it would be fun to expose this confession on Carly's web show, until the rampant humiliation he receives at school makes her regret her decision.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1423,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s02e10\\icarly-s02e10.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S02E10 iKiss.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72582/icarly-2x08-ikiss",
+  "processing": "Video stream copy; web-ready MP4"
+}

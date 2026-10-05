@@ -1,0 +1,31 @@
+{
+  "id": "icarly-s01e19",
+  "title": "iGot Detention",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 1,
+  "episodeNumber": 19,
+  "episodeEnd": 19,
+  "year": 2008,
+  "date": "2008-03-22",
+  "description": "Plans for the landmark 50th web cast of iCarly are at risk of being curtailed when Sam gets detention. Realizing she can't do the show without her co-host, Carly and Freddie try to get in trouble themselves, so they can do the live web cast from their school's detention room. However, deliberately trying to get detention proves to be far more difficult than Carly can imagine, and even harder for Freddie.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1423,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s01e19\\icarly-s01e19.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S01E19 iGot Detention.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72569/icarly-1x19-igot-detention",
+  "processing": "H.264 video and AAC audio copied unchanged into fast-start MP4",
+  "outputBytes": 524657035
+}

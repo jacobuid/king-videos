@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s03e17",
+  "title": "iBelieve in Bigfoot",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 3,
+  "episodeNumber": 17,
+  "episodeEnd": 17,
+  "year": 2010,
+  "date": "2010-05-08",
+  "description": "Bigfoot fever hits Seattle when hikers take some fuzzy footage of a suspicious figure in the woods. After an expert validates the footage on the web show, Carly convinces the gang to take Socko's RV upstate and join the search for Bigfoot.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1424,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s03e17\\icarly-s03e17.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S03E17 iBelieve in Bigfoot.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72610/icarly-3x16-ibelieve-in-bigfoot",
+  "processing": "Video stream copy; web-ready MP4"
+}

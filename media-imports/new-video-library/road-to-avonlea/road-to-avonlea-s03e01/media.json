@@ -1,0 +1,30 @@
+{
+  "id": "road-to-avonlea-s03e01",
+  "title": "Ties That Bind",
+  "category": "tv",
+  "seriesId": "road-to-avonlea",
+  "seriesTitle": "Road to Avonlea",
+  "seasonNumber": 3,
+  "episodeNumber": 1,
+  "episodeEnd": 1,
+  "year": 1990,
+  "date": null,
+  "description": "Young Sara Stanley joins her relatives in Avonlea, a close-knit community on Prince Edward Island.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": null,
+  "ratingSource": null,
+  "duration": 3073,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\road-to-avonlea-s03e01\\road-to-avonlea-s03e01.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\road-to-avonlea\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Anne Collection\\Road To Avonlea\\Road to Avonlea - 3x01 - Ties That Bind.avi",
+  "sourceWidth": 512,
+  "sourceHeight": 384,
+  "sourceAspect": "4:3",
+  "sourceVideoCodec": "mpeg4",
+  "sourceAudioCodec": "mp3",
+  "metadataSource": "https://www.sullivanmovies.com/productions/road-to-avonlea",
+  "processing": "Conversion pending quality selection"
+}

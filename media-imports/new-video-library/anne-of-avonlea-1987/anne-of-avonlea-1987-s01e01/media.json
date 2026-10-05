@@ -1,0 +1,31 @@
+{
+  "id": "anne-of-avonlea-1987-s01e01",
+  "title": "Part 1",
+  "category": "tv",
+  "seriesId": "anne-of-avonlea-1987",
+  "seriesTitle": "Anne of Avonlea",
+  "seasonNumber": 1,
+  "episodeNumber": 1,
+  "episodeEnd": 1,
+  "year": 1987,
+  "date": null,
+  "description": "Anne Shirley begins her teaching career and finds friendship, romance, and new challenges beyond Green Gables.",
+  "genres": [
+    "Live Action",
+    "Family",
+    "Classic"
+  ],
+  "rating": null,
+  "ratingSource": null,
+  "duration": 6324,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\anne-of-avonlea-1987-s01e01\\anne-of-avonlea-1987-s01e01.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\anne-of-avonlea-1987\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Anne Collection\\Anne of Green Gables\\Anne of Green Gables - The Sequel (Part 1).avi",
+  "sourceWidth": 480,
+  "sourceHeight": 352,
+  "sourceAspect": "15:11",
+  "sourceVideoCodec": "mpeg4",
+  "sourceAudioCodec": "mp3",
+  "metadataSource": "https://www.anneofgreengables.com/behind-the-scenes",
+  "processing": "Conversion pending quality selection"
+}

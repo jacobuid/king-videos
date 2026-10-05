@@ -1,0 +1,31 @@
+{
+  "id": "icarly-s01e12",
+  "title": "iPromise Not To Tell",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 1,
+  "episodeNumber": 12,
+  "episodeEnd": 12,
+  "year": 2008,
+  "date": "2008-01-12",
+  "description": "A ridiculous technicality costs Carly her streak of straight A's. The next day as Sam is being punished, she manages to fix Carly's grades with the school computers(and for some reason, Freddie's), and makes her promise not to tell anybody. Because Sam's scheme involves Freddie, Carly decided to tell only him about it, and Carly can't decide whether the guilt over Sam's amateur hacking or Freddie's sophisticated effort to undo the fix will gnaw away at her conscience first.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1423,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s01e12\\icarly-s01e12.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S01E12 iPromise Not To Tell.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "479:270",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72562/icarly-1x12-ipromise-not-to-tell",
+  "processing": "H.264 video and AAC audio copied unchanged into fast-start MP4",
+  "outputBytes": 458617484
+}

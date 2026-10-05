@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s01e22",
+  "title": "iFence",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 1,
+  "episodeNumber": 22,
+  "episodeEnd": 22,
+  "year": 2008,
+  "date": "2008-05-10",
+  "description": "Realizing that his time with Carly and Sam has become too girly(despite his lingering crush on Carly), Freddie seeks some \"guy time\" with Spencer, which happens to be a fencing class for which Freddie turns out to be quite the swordsman. During this period, Freddie gets caught up in the rivalry between Spencer and a snobbish posse of fencers lead by Doug Toder, and finds himself competing with him in a duel. When his fretful mother finds out, she reveals a family secret in a last-ditch effort to try to talk him out of the competition. In the meantime, Carly is forced to endure and prepare for an upcoming visit from some embarrassing, ultra-geeky relatives.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1423,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s01e22\\icarly-s01e22.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S01E22 iFence.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72572/icarly-1x22-ifence",
+  "processing": "Video stream copy; web-ready MP4"
+}

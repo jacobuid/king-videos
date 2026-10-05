@@ -1,0 +1,25 @@
+{
+  "id": "road-to-avonlea-s00e01",
+  "title": "Road to Avonlea: Bonus Feature",
+  "category": "short",
+  "episodeEnd": 1,
+  "year": 1990,
+  "date": null,
+  "description": "A bonus feature accompanying Road to Avonlea.",
+  "genres": [
+    "Documentary"
+  ],
+  "rating": null,
+  "ratingSource": null,
+  "duration": 690,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\road-to-avonlea-s00e01\\road-to-avonlea-s00e01.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\road-to-avonlea\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Anne Collection\\Road To Avonlea\\Road to Avonlea - Bonus Feature.avi",
+  "sourceWidth": 640,
+  "sourceHeight": 480,
+  "sourceAspect": "4:3",
+  "sourceVideoCodec": "mpeg4",
+  "sourceAudioCodec": "mp3",
+  "metadataSource": "https://www.sullivanmovies.com/productions/road-to-avonlea",
+  "processing": "Conversion pending quality selection"
+}

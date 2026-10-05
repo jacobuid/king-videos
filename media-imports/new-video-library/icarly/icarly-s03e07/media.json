@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s03e07",
+  "title": "iMove Out",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 3,
+  "episodeNumber": 7,
+  "episodeEnd": 7,
+  "year": 2009,
+  "date": "2009-11-28",
+  "description": "Freddie finally moves out of his apartment when his mother takes her doting nature way too far. Carly & Sam's grooming of Gibby's dog on an iCarly segment leads to a side job for the girls as pet groomers, and some fierce competition from a pair of pet-photographers.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1425,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s03e07\\icarly-s03e07.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S03E07 iMove Out.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72602/icarly-3x07-imove-out",
+  "processing": "Video stream copy; web-ready MP4"
+}

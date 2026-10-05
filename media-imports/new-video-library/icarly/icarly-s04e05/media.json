@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s04e05",
+  "title": "iDo",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 4,
+  "episodeNumber": 5,
+  "episodeEnd": 5,
+  "year": 2010,
+  "date": "2010-10-11",
+  "description": "A young adult iCarly fan wants to use the site to ask his girlfriend to marry him and the happy couple invite Carly and her friends to the wedding, which falls apart when the bride-to-be falls for Spencer. Now Carly and Sam must struggle to convince her to marry the man she was engaged to in the first place. Meanwhile, Gibby and his little brother Guppy try to grab a $5 bill that's stuck up in a tree.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1418,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s04e05\\icarly-s04e05.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S04E05 iDo.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72617/icarly-4x05-ido",
+  "processing": "Video stream copy; web-ready MP4"
+}

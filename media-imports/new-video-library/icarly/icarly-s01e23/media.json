@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s01e23",
+  "title": "iCarly Saves TV",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 1,
+  "episodeNumber": 23,
+  "episodeEnd": 23,
+  "year": 2008,
+  "date": "2008-06-13",
+  "description": "A television programming director realizes that iCarly is funnier than anything his network currently has available for the upcoming fall lineup. Unfortunatley, upon acquiring the show, the network takes it further and further away from Carly's original vision, and exploits and torments Freddie more than Sam and his mother combined.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1423,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s01e23\\icarly-s01e23.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S01E23 iCarly Saves TV.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "479:270",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72573/icarly-1x23-icarly-saves-tv",
+  "processing": "Video stream copy; web-ready MP4"
+}

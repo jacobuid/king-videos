@@ -1,0 +1,30 @@
+{
+  "id": "road-to-avonlea-s03e03",
+  "title": "Another Point of View",
+  "category": "tv",
+  "seriesId": "road-to-avonlea",
+  "seriesTitle": "Road to Avonlea",
+  "seasonNumber": 3,
+  "episodeNumber": 3,
+  "episodeEnd": 3,
+  "year": 1992,
+  "date": "1992-01-26",
+  "description": "Young Sara Stanley joins her relatives in Avonlea, a close-knit community on Prince Edward Island.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": null,
+  "ratingSource": null,
+  "duration": 2912,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\road-to-avonlea-s03e03\\road-to-avonlea-s03e03.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\road-to-avonlea\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Anne Collection\\Road To Avonlea\\Road to Avonlea - 3x03 - Another Point of View.avi",
+  "sourceWidth": 512,
+  "sourceHeight": 384,
+  "sourceAspect": "4:3",
+  "sourceVideoCodec": "mpeg4",
+  "sourceAudioCodec": "mp3",
+  "metadataSource": "https://www.tvmaze.com/episodes/438501/road-to-avonlea-3x03-another-point-of-view",
+  "processing": "Conversion pending quality selection"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "icarly-s03e03",
+  "title": "iSpeed Date",
+  "category": "tv",
+  "seriesId": "icarly",
+  "seriesTitle": "iCarly",
+  "seasonNumber": 3,
+  "episodeNumber": 3,
+  "episodeEnd": 3,
+  "year": 2009,
+  "date": "2009-09-26",
+  "description": "Carly, Sam, and Freddie hold a speed-dating contest when so many boys want to escort Carly to a dance.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": "TV-G",
+  "ratingSource": "https://www.paramountplus.com/shows/icarly/",
+  "duration": 1424,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\icarly-s03e03\\icarly-s03e03.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\icarly\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\ICarly\\iCarly S03E03 iSpeed Date.mkv",
+  "sourceWidth": 1280,
+  "sourceHeight": 720,
+  "sourceAspect": "16:9",
+  "sourceVideoCodec": "h264",
+  "sourceAudioCodec": "aac",
+  "metadataSource": "https://www.tvmaze.com/episodes/72598/icarly-3x03-ispeed-date",
+  "processing": "Video stream copy; web-ready MP4"
+}

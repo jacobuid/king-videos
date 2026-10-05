@@ -1,0 +1,30 @@
+{
+  "id": "road-to-avonlea-s02e11",
+  "title": "It's Just a Stage",
+  "category": "tv",
+  "seriesId": "road-to-avonlea",
+  "seriesTitle": "Road to Avonlea",
+  "seasonNumber": 2,
+  "episodeNumber": 11,
+  "episodeEnd": 11,
+  "year": 1991,
+  "date": "1991-02-10",
+  "description": "Young Sara Stanley joins her relatives in Avonlea, a close-knit community on Prince Edward Island.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "rating": null,
+  "ratingSource": null,
+  "duration": 2773,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\road-to-avonlea-s02e11\\road-to-avonlea-s02e11.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\new-video-library\\road-to-avonlea\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Anne Collection\\Road To Avonlea\\Road to Avonlea - 2x11 - It's Just a Stage.avi",
+  "sourceWidth": 512,
+  "sourceHeight": 384,
+  "sourceAspect": "4:3",
+  "sourceVideoCodec": "mpeg4",
+  "sourceAudioCodec": "mp3",
+  "metadataSource": "https://www.tvmaze.com/episodes/438496/road-to-avonlea-2x11-its-just-a-stage",
+  "processing": "Conversion pending quality selection"
+}
