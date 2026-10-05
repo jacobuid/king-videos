@@ -39,7 +39,7 @@ const changes={
 const slug=s=>s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const onlyAt=process.argv.indexOf('--only'),only=onlyAt<0?null:process.argv[onlyAt+1];
 const statusPath=only?`logs/kids-${only}-retry-status.json`:'logs/kids-movies-status.json';
-const jobs=review.pending.map(row=>{const c=changes[row.title]||[row.title,row.year];let id=slug(c[0]);if(['Peter Pan','The Star','The Secret Garden','The Borrowers','Annie','Inspector Gadget','Sonic The Hedgehog'].includes(c[0]))id+='-'+c[1];return {...row,title:c[0],year:c[1],wiki:c[2],id,mode:extname(row.path).toLowerCase()==='.mp4'&&row.codec==='h264'&&row.audio.every(a=>a.codec==='aac')?'unchanged':row.codec==='h264'?'remux':'encode'};}).filter(row=>row.id!=='anne-of-green-gables'&&(!only||row.id===only));
+const jobs=review.pending.map(row=>{const c=changes[row.title]||[row.title,row.year];let id=slug(c[0]);if(['Peter Pan','The Star','The Secret Garden','The Borrowers','Annie','Inspector Gadget','Sonic The Hedgehog'].includes(c[0]))id+='-'+c[1];return {...row,title:c[0],year:c[1],wiki:c[2],id,mode:extname(row.path).toLowerCase()==='.mp4'&&row.codec==='h264'&&row.audio.every(a=>a.codec==='aac')?'unchanged':row.codec==='h264'?'remux':'encode'};}).filter(row=>!['anne-of-green-gables','dr-dolittle'].includes(row.id)&&(!only||row.id===only));
 if(new Set(jobs.map(j=>j.id)).size!==jobs.length)throw Error('Duplicate IDs in queue');
 jobs.sort((a,b)=>({encode:0,remux:1,unchanged:2}[a.mode])-({encode:0,remux:1,unchanged:2}[b.mode]));
 const state={startedAt:new Date().toISOString(),total:jobs.length,completed:0,uploaded:0,failures:[],review:[],workers:[{id:1,status:'idle'},{id:2,status:'idle'}]};
