@@ -1,0 +1,21 @@
+{
+  "id": "high-school-musical-2",
+  "title": "High School Musical 2",
+  "category": "movie",
+  "year": 2007,
+  "date": null,
+  "description": "High School Musical 2 is a 2007 American musical television film directed by Kenny Ortega and written by Peter Barsocchini.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "duration": 6661,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\high-school-musical-2\\high-school-musical-2.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\high-school-musical-2\\thumbnail.webp",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\high-school-musical-2",
+  "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\High School Musical 2 (2007)\\High School Musical 2 [720p].mkv",
+  "processing": "remux",
+  "metadataSource": "https://en.wikipedia.org/wiki/High_School_Musical_2",
+  "rating": "TV-G",
+  "ratingSource": "https://www.rottentomatoes.com/m/high_school_musical_2"
+}

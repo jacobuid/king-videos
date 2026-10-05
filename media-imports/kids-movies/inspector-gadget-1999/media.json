@@ -1,0 +1,21 @@
+{
+  "id": "inspector-gadget-1999",
+  "title": "Inspector Gadget",
+  "category": "movie",
+  "year": 1999,
+  "date": null,
+  "description": "Inspector Gadget is a 1999 superhero comedy film directed by David Kellogg and written by Kerry Ehrin and Zak Penn from a story by Ehrin and Dana Olsen.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "duration": 4512,
+  "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Inspector Gadget (1999)\\Inspector Gadget [720p].mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\inspector-gadget-1999\\thumbnail.webp",
+  "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Inspector Gadget (1999)",
+  "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Inspector Gadget (1999)\\Inspector Gadget [720p].mp4",
+  "processing": "unchanged",
+  "metadataSource": "https://en.wikipedia.org/wiki/Inspector_Gadget_(film)",
+  "rating": "PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/inspector_gadget"
+}

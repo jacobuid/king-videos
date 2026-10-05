@@ -1,0 +1,19 @@
+{
+  "id": "peter-pan-2003",
+  "title": "Peter Pan",
+  "category": "movie",
+  "year": 2003,
+  "date": null,
+  "description": "Peter Pan is a 2003 fantasy adventure film directed by P.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "duration": 6802,
+  "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Peter Pan (2003)\\Peter Pan [720p].mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\peter-pan-2003\\thumbnail.webp",
+  "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Peter Pan (2003)",
+  "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Peter Pan (2003)\\Peter Pan [720p].mp4",
+  "processing": "unchanged",
+  "metadataSource": "https://en.wikipedia.org/wiki/Peter_Pan_(2003_film)"
+}

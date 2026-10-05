@@ -1,0 +1,22 @@
+{
+  "id": "spy-kids",
+  "title": "Spy Kids",
+  "category": "movie",
+  "year": 2001,
+  "date": null,
+  "description": "Spy Kids is a 2001 American spy action comedy film written and directed by Robert Rodriguez.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "duration": 5451,
+  "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Spy Kids (2001)\\Spy Kids [720p].mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\spy-kids\\thumbnail.webp",
+  "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Spy Kids (2001)",
+  "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Spy Kids (2001)\\Spy Kids [720p].mp4",
+  "processing": "unchanged",
+  "metadataSource": "https://en.wikipedia.org/wiki/Spy_Kids_(film)",
+  "rating": "PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/spy_kids",
+  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Spy Kids (2001)\\Spy Kids [720p].srt"
+}

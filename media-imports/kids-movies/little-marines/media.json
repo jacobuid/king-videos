@@ -1,0 +1,20 @@
+{
+  "id": "little-marines",
+  "title": "Little Marines",
+  "category": "movie",
+  "year": 1990,
+  "date": null,
+  "description": "",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "duration": 5244,
+  "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Marines\\Little.Marines(1991).mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\little-marines\\thumbnail.webp",
+  "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Marines",
+  "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Marines\\Little.Marines(1991).mp4",
+  "processing": "unchanged",
+  "metadataSource": null,
+  "metadataReview": true
+}

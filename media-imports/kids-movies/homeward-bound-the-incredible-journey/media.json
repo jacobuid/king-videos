@@ -1,0 +1,21 @@
+{
+  "id": "homeward-bound-the-incredible-journey",
+  "title": "Homeward Bound: The Incredible Journey",
+  "category": "movie",
+  "year": 1993,
+  "date": null,
+  "description": "Homeward Bound: The Incredible Journey is a 1993 American adventure comedy film and a remake of the 1963 film The Incredible Journey, which was based on the 1961 novel of the same name by Sheila Burnford.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "duration": 4861,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\homeward-bound-the-incredible-journey\\homeward-bound-the-incredible-journey.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\homeward-bound-the-incredible-journey\\thumbnail.webp",
+  "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\homeward-bound-the-incredible-journey",
+  "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Homeward Bound (1993)\\Homeward Bound [720p].avi",
+  "processing": "encode",
+  "metadataSource": "https://en.wikipedia.org/wiki/Homeward_Bound%3A_The_Incredible_Journey",
+  "rating": "G",
+  "ratingSource": "https://www.rottentomatoes.com/m/homeward_bound_the_incredible_journey"
+}

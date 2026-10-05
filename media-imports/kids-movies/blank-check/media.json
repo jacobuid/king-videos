@@ -1,0 +1,21 @@
+{
+  "id": "blank-check",
+  "title": "Blank Check",
+  "category": "movie",
+  "year": 1994,
+  "date": null,
+  "description": "Blank Check is a 1994 American comedy film directed by Rupert Wainwright and starring Brian Bonsall, Karen Duffy, Miguel Ferrer, James Rebhorn, Tone Lōc, Jayne Atkinson and Michael Lerner.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "duration": 5594,
+  "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Blank Check (1994)\\Blank Check [720p].mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\kids-movies\\blank-check\\thumbnail.webp",
+  "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Blank Check (1994)",
+  "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Blank Check (1994)\\Blank Check [720p].mp4",
+  "processing": "unchanged",
+  "metadataSource": "https://en.wikipedia.org/wiki/Blank_Check_(film)",
+  "rating": "PG",
+  "ratingSource": "https://www.rottentomatoes.com/m/blank_check"
+}
