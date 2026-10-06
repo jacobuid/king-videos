@@ -62,7 +62,7 @@ function LoadingScreen({active=true}){
 }
 
 function App(){
-  const{getToken}=useAuth()
+  const{getToken,userId}=useAuth()
   const[profiles,setProfiles]=useState([]),[profile,setProfile]=useState(null),[profileToken,setProfileToken]=useState('')
   const[view,setView]=useState('select'),[pending,setPending]=useState(null),[pin,setPin]=useState('')
   const[manageToken,setManageToken]=useState('')
@@ -72,6 +72,9 @@ function App(){
   const[error,setError]=useState(''),[busy,setBusy]=useState(false),[profilesLoading,setProfilesLoading]=useState(true),[libraryLoading,setLibraryLoading]=useState(false)
   const[unlockLoading,setUnlockLoading]=useState(false)
   const[birthdayProfile,setBirthdayProfile]=useState(null)
+  const profileSessionKey='kingflix-profile-session-'+userId
+  function clearProfileSession(){try{localStorage.removeItem(profileSessionKey)}catch{}}
+  function rememberProfileSession(item,result){try{localStorage.setItem(profileSessionKey,JSON.stringify({profileId:item.id,token:result.token,expires:result.expires}))}catch{}}
   async function request(path,options={}){const token=await getToken();const response=await fetch(`${api}${path}`,{...options,headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json',...(profileToken?{'X-Profile-Token':profileToken}:{}),...(manageToken?{'X-Manage-Token':manageToken}:{}),...options.headers}});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(data.error||`Request failed: ${response.status}`);return data}
   async function loadLibrary(profileId){const items=[];for(let offset=0;;offset+=50){const page=await request(`/api/library?profileId=${encodeURIComponent(profileId)}&limit=50&offset=${offset}`);items.push(...page);if(page.length<50)return items}}
   const enterManage=useReverification(async()=>{const token=await getToken();const response=await fetch(`${api}/api/manage-access`,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'}});return response.json()})
@@ -79,7 +82,31 @@ function App(){
   async function updateManagedSeries(id,body){const token=await getToken();const response=await fetch(`${api}/api/manage-series/${encodeURIComponent(id)}`,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json','X-Manage-Token':manageToken},body:JSON.stringify(body)});const data=await response.json();if(!response.ok)throw new Error(data.error||'Could not save series.');return data}
   const updateProfile=useReverification(async(id,body)=>{const token=await getToken();const response=await fetch(`${api}/api/profiles/${id}`,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json','X-Profile-Token':profileToken},body:JSON.stringify(body)});return response.json()})
   async function openManage(target='manage'){try{setError('');const result=await enterManage();if(result?.ok){setManageToken(result.token||'');setView(target)}}catch(e){if(e?.name!=='ClerkRuntimeError')setError(e.message||'Password verification was cancelled.')}}
-  useEffect(()=>{const startedAt=Date.now();request('/api/profiles').then(setProfiles).catch(e=>setError(e.message)).finally(()=>finishLoading(setProfilesLoading,startedAt))},[])
+  useEffect(()=>{
+    if(!userId)return
+    let cancelled=false
+    const startedAt=Date.now()
+    async function restore(){
+      const items=await request('/api/profiles')
+      if(cancelled)return
+      setProfiles(items)
+      let session
+      try{session=JSON.parse(localStorage.getItem(profileSessionKey)||'null')}catch{clearProfileSession();return}
+      if(!session)return
+      const item=items.find(item=>item.id===session.profileId)
+      if(!item||!session.token||!Number.isFinite(session.expires)||session.expires<=Date.now()){clearProfileSession();return}
+      try{await request('/api/progress?profileId='+encodeURIComponent(item.id),{headers:{'X-Profile-Token':session.token}})}catch{clearProfileSession();return}
+      if(cancelled)return
+      setProfileToken(session.token)
+      setProfile(item)
+      setLibraryLoading(true)
+      setView('library')
+      const birthdayKey='kingflix-birthday-'+item.id+'-'+localDateInputValue()
+      if(birthdayAvailable(item.dateOfBirth)&&localStorage.getItem(birthdayKey)!=='dismissed')setBirthdayProfile(item)
+    }
+    restore().catch(e=>{if(!cancelled)setError(e.message)}).finally(()=>{if(!cancelled)finishLoading(setProfilesLoading,startedAt)})
+    return()=>{cancelled=true}
+  },[userId])
   useEffect(()=>{if(profile&&profileToken){const startedAt=Date.now();setLibraryLoading(true);Promise.all([loadLibrary(profile.id),request(`/api/progress?profileId=${encodeURIComponent(profile.id)}`),request(`/api/favorites?profileId=${encodeURIComponent(profile.id)}`)]).then(([items,positions,saved])=>{setMedia(items);setProgress(positions);setFavorites(saved.map(item=>item.mediaId))}).catch(e=>setError(e.message)).finally(()=>finishLoading(setLibraryLoading,startedAt))}},[profile,profileToken])
   function resetForm(){setForm({name:'',dateOfBirth:'',pin:'',removePin:false,homeVideosOnly:false,avatar:'bluey.png'})}
   function begin(item,action){setError('');if(item.hasPin){setPending({profile:item,action});setPin('')}else unlock(item,'',action)}
@@ -98,6 +125,7 @@ function App(){
         setForm({name:item.name,dateOfBirth:item.dateOfBirth||'',homeVideosOnly:Boolean(item.homeVideosOnly),pin:'',removePin:false,avatar:item.avatar||'bluey.png'})
         setView('edit')
       }else{
+        rememberProfileSession(item,result)
         setLibraryLoading(true)
         setView('library')
         const birthdayKey=`kingflix-birthday-${item.id}-${localDateInputValue()}`
@@ -113,15 +141,15 @@ function App(){
     }
   }
   async function addProfile(event){event.preventDefault();try{setBusy(true);setError('');const created=await request('/api/profiles',{method:'POST',body:JSON.stringify({name:form.name,dateOfBirth:form.dateOfBirth,homeVideosOnly:form.homeVideosOnly,pin:form.pin,avatar:form.avatar})});setProfiles(current=>[...current,created]);resetForm();setView('manage')}catch(e){setError(e.message)}finally{setBusy(false)}}
-  async function saveProfile(event){event.preventDefault();try{setBusy(true);setError('');const saved=await updateProfile(profile.id,{name:form.name,dateOfBirth:form.dateOfBirth,homeVideosOnly:form.homeVideosOnly,avatar:form.avatar});if(saved?.error)throw new Error(saved.error);let hasPin=profile.hasPin;if(form.pin||form.removePin){const result=await request(`/api/profiles/${profile.id}/pin`,{method:'POST',body:JSON.stringify({pin:form.removePin?'':form.pin})});hasPin=result.hasPin}const updated={...profile,name:form.name.trim(),dateOfBirth:form.dateOfBirth,homeVideosOnly:form.homeVideosOnly,avatar:form.avatar,hasPin};setProfiles(current=>current.map(item=>item.id===profile.id?updated:item));setProfile(null);setProfileToken('');resetForm();setView('manage')}catch(e){setError(e.message||'Password verification was cancelled.')}finally{setBusy(false)}}
-  async function deleteProfile(){try{setBusy(true);setError('');await request(`/api/profiles/${profile.id}`,{method:'DELETE'});setProfiles(current=>current.filter(item=>item.id!==profile.id));setProfile(null);setProfileToken('');resetForm();setView('manage')}catch(e){setError(e.message)}finally{setBusy(false)}}
+  async function saveProfile(event){event.preventDefault();try{setBusy(true);setError('');const saved=await updateProfile(profile.id,{name:form.name,dateOfBirth:form.dateOfBirth,homeVideosOnly:form.homeVideosOnly,avatar:form.avatar});if(saved?.error)throw new Error(saved.error);let hasPin=profile.hasPin;if(form.pin||form.removePin){const result=await request(`/api/profiles/${profile.id}/pin`,{method:'POST',body:JSON.stringify({pin:form.removePin?'':form.pin})});hasPin=result.hasPin}const updated={...profile,name:form.name.trim(),dateOfBirth:form.dateOfBirth,homeVideosOnly:form.homeVideosOnly,avatar:form.avatar,hasPin};setProfiles(current=>current.map(item=>item.id===profile.id?updated:item));clearProfileSession();setProfile(null);setProfileToken('');resetForm();setView('manage')}catch(e){setError(e.message||'Password verification was cancelled.')}finally{setBusy(false)}}
+  async function deleteProfile(){try{setBusy(true);setError('');await request(`/api/profiles/${profile.id}`,{method:'DELETE'});setProfiles(current=>current.filter(item=>item.id!==profile.id));clearProfileSession();setProfile(null);setProfileToken('');resetForm();setView('manage')}catch(e){setError(e.message)}finally{setBusy(false)}}
   async function play(item,startAt=0){if(item.blocked)return;try{setError('');setSelected({...item,...await request(`/api/media/${item.id}/play`,{method:'POST',body:JSON.stringify({profileId:profile.id})}),startAt})}catch(e){setError(e.message)}}
   async function saveProgress(value){const currentTime=typeof value==='number'?value:value?.target?.currentTime;if(!selected||!profile||!Number.isFinite(currentTime))return;const positionSeconds=Math.floor(currentTime),updatedAt=new Date().toISOString();setProgress(current=>[{mediaId:selected.id,positionSeconds,updatedAt},...current.filter(item=>item.mediaId!==selected.id)]);try{await request('/api/progress',{method:'POST',body:JSON.stringify({profileId:profile.id,mediaId:selected.id,positionSeconds})})}catch(e){setError(e.message)}}
   async function toggleFavorite(mediaId){const saved=favorites.includes(mediaId);setFavorites(current=>saved?current.filter(id=>id!==mediaId):[...current,mediaId]);try{await request('/api/favorites',{method:saved?'DELETE':'POST',body:JSON.stringify({profileId:profile.id,mediaId})})}catch(e){setFavorites(current=>saved?[...current,mediaId]:current.filter(id=>id!==mediaId));setError(e.message)}}
   async function reorderFavorites(fromIndex,toIndex){if(fromIndex===toIndex||fromIndex<0||toIndex<0||fromIndex>=favorites.length||toIndex>=favorites.length)return;const previous=favorites.slice(),next=favorites.slice(),[moved]=next.splice(fromIndex,1);next.splice(toIndex,0,moved);setFavorites(next);try{await request('/api/favorites/reorder',{method:'POST',body:JSON.stringify({profileId:profile.id,mediaIds:next})})}catch(e){setFavorites(previous);setError(e.message)}}
   function choosePicture(item=null){setError('');setPicturePicker({profile:item,value:item?.avatar||form.avatar||'bluey.png'})}
   async function savePicture(){try{setBusy(true);setError('');if(picturePicker.profile){const result=await request(`/api/profiles/${picturePicker.profile.id}/avatar`,{method:'POST',body:JSON.stringify({avatar:picturePicker.value}),headers:{'X-Profile-Token':''}});setProfiles(current=>current.map(item=>item.id===picturePicker.profile.id?{...item,avatar:result.avatar}:item));if(profile?.id===picturePicker.profile.id)setProfile(current=>({...current,avatar:result.avatar}))}else setForm(current=>({...current,avatar:picturePicker.value}));setPicturePicker(null)}catch(e){setError(e.message)}finally{setBusy(false)}}
-  function switchProfile(){setProfile(null);setProfileToken('');setSelected(null);setMedia([]);setProgress([]);setFavorites([]);setError('');setView('select')}
+  function switchProfile(){clearProfileSession();setProfile(null);setProfileToken('');setSelected(null);setMedia([]);setProgress([]);setFavorites([]);setError('');setView('select')}
   function dismissBirthday(){if(birthdayProfile)localStorage.setItem(`kingflix-birthday-${birthdayProfile.id}-${localDateInputValue()}`,'dismissed');setBirthdayProfile(null)}
   const profilePicker=<div className="profile-groups">{[false,true].map(minor=>{const group=profiles.filter(item=>(profileAge(item.dateOfBirth)??18)<18===minor);return group.length?<div className="profile-grid" key={minor?'minors':'adults'}>{group.map(item=><div className="profile-card-wrap" key={item.id}><button className="profile-card" onClick={()=>begin(item,view==='manage'?'edit':'watch')}><span className="avatar-wrap"><Avatar profile={item}/>{item.hasPin&&<span className="profile-corner" title="PIN protected"><FontAwesomeIcon icon={faLock}/></span>}<strong className="profile-age" title={`${profileAge(item.dateOfBirth)??'Unknown'} years old`}>{profileAge(item.dateOfBirth)??'—'}</strong>{view==='manage'&&<span className="edit-mark"><FontAwesomeIcon icon={faPen}/></span>}</span><span className="profile-name">{item.name}</span></button>{view==='select'&&<button className="avatar-change" type="button" onClick={()=>choosePicture(item)} aria-label={`Change ${item.name}'s profile picture`} title="Change profile picture"><FontAwesomeIcon icon={faCamera}/></button>}</div>)}</div>:null})}</div>
   const loading=profilesLoading||unlockLoading||(view==='library'&&libraryLoading)
