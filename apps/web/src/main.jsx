@@ -27,6 +27,7 @@ const profilePictureGroups=[
   ["Disney Princess",["disney-princess--ariel.png","disney-princess--aurora.png","disney-princess--belle.png","disney-princess--cinderella.png","disney-princess--mulan.png","disney-princess--pocahontas.png","disney-princess--snow-white.png"]],
   ['Drake & Josh',['drake-and-josh--drake.png','drake-and-josh--josh.png']],
   ['Fleischer Superman',['fleischer-superman--superman.png']],
+  ['iCarly',['icarly--carly.png','icarly--sam.png']],
   ['Ice Age',['ice-age--diego.png','ice-age--manny.png','ice-age--peaches.png','ice-age--sid.png']],
   ['Magical Princess Gigi',['magical-princess-gigi--gigi.png']],
   ['Mickey & Friends',['mickey-and-friends--donald.png','mickey-and-friends--goofy.png','mickey-and-friends--max.png','mickey-and-friends--mickey.png','mickey-and-friends--p-j.png']],
