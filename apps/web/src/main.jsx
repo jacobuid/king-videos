@@ -24,11 +24,12 @@ const birthdaySnowColors=['#ff7090','#fff06a','#64ecff','#b8ff68','#d79aff','#ff
 const profilePictureGroups=[
   ['Bluey',['bluey--bingo.png','bluey--bluey.png']],
   ["Blue's Clues",['blues-clues--blue.png','blues-clues--bucket-and-shovel.png','blues-clues--magenta.png','blues-clues--mailbox.png','blues-clues--salt-and-pepper.png','blues-clues--slippery-soap.png']],
+  ["Disney Princess",["disney-princess--ariel.png","disney-princess--aurora.png","disney-princess--belle.png","disney-princess--cinderella.png","disney-princess--mulan.png","disney-princess--pocahontas.png","disney-princess--snow-white.png"]],
   ['Drake & Josh',['drake-and-josh--drake.png','drake-and-josh--josh.png']],
   ['Fleischer Superman',['fleischer-superman--superman.png']],
   ['Ice Age',['ice-age--diego.png','ice-age--manny.png','ice-age--peaches.png','ice-age--sid.png']],
   ['Magical Princess Gigi',['magical-princess-gigi--gigi.png']],
-  ['Mickey & Friends',['mickey-and-friends--donald.png','mickey-and-friends--goofy.png','mickey-and-friends--max.png','mickey-and-friends--mickey.png']],
+  ['Mickey & Friends',['mickey-and-friends--donald.png','mickey-and-friends--goofy.png','mickey-and-friends--max.png','mickey-and-friends--mickey.png','mickey-and-friends--p-j.png']],
   ['My Little Pony',['my-little-pony--apple-jack.png','my-little-pony--fluttershy.png','my-little-pony--pinkie-pie.png','my-little-pony--rainbow-dash.png','my-little-pony--rarity.png','my-little-pony--twilight-sparkle.png']],
   ["Peanuts",["peanuts--charlie-brown.png","peanuts--charlie-brown-2.png","peanuts--franklin.png","peanuts--linus.png","peanuts--lucy.png","peanuts--marcie.png","peanuts--peppermint-patty.png","peanuts--pig-pen.png","peanuts--sally.png","peanuts--schroeder.png","peanuts--snoopy.png","peanuts--snoopy-cool.png","peanuts--violet.png","peanuts--woodstock.png"]],
   ['Scooby-Doo',['scooby-doo--daphne.png','scooby-doo--fred.png','scooby-doo--scooby-doo.png','scooby-doo--shaggy.png','scooby-doo--velma.png']],
