@@ -8,6 +8,7 @@ const protectedKeys=new Set(rows.flatMap(r=>[r.video_key,r.thumbnail_key,r.subti
 // This video is served directly by the API and has no media catalog row.
 protectedKeys.add('movies/specials/happy-birthday/happy-birthday.mp4');
 const pending=new Set();
+if(existsSync('logs/anne-bluray-scan.json'))for(const id of ['anne-of-green-gables','anne-of-avonlea','anne-of-green-gables-the-continuing-story'])for(const key of [`movies/${id}/${id}.mp4`,`movies/${id}/thumbnail.webp`,`movies/${id}/${id}.en.vtt`]){protectedKeys.add(key);pending.add(key);}
 if(existsSync('logs/new-video-library-jobs.json'))for(const j of JSON.parse(readFileSync('logs/new-video-library-jobs.json'))){if(j.seriesId!=='icarly')continue;for(const key of [`movies/${j.id}/${j.id}.mp4`,`movies/${j.id}/thumbnail.webp`,`movies/${j.id}/${j.id}.en.vtt`]){protectedKeys.add(key);pending.add(key);}}
 const auth=await json('https://api.backblazeb2.com/b2api/v4/b2_authorize_account',{headers:{Authorization:'Basic '+Buffer.from(process.env.B2_BOOTSTRAP_KEY_ID+':'+process.env.B2_BOOTSTRAP_APPLICATION_KEY).toString('base64')}});
 const b2=(op,body)=>json(auth.apiInfo.storageApi.apiUrl+'/b2api/v4/'+op,{method:'POST',headers:{Authorization:auth.authorizationToken,'Content-Type':'application/json'},body:JSON.stringify(body)});
