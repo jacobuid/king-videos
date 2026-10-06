@@ -132,7 +132,7 @@ sub onApiResult(event as object)
             if m.video.visible then m.video.control = "STOP"
             m.video.visible = false
             beginPairing()
-        else if result.status = 403 and kind <> "unlock"
+        else if result.status = 403 and kind <> "unlock" and (result.error = "Profile is locked." or result.error = "Unlock this profile first.")
             m.profileToken = ""
             registryOperation("delete", "profile")
             m.video.control = "STOP"
@@ -610,7 +610,7 @@ sub onActionSelected()
         else
             m.favorites[m.detailItem.id] = true
         end if
-        api("favorite-save", "/api/favorites", method, {profileId: m.profile.id, mediaId: m.detailItem.id})
+        api("favorite-save", "/api/favorites", method, profileRequestBody(m.detailItem.id))
     else
         goBack()
     end if
@@ -620,14 +620,14 @@ sub startPlayback(item as object)
     if item.blocked then return
     m.playingItem = item
     m.status.text = "Loading video..."
-    api("play", "/api/media/" + escaped(item.id) + "/play", "POST", {profileId: m.profile.id})
+    api("play", "/api/media/" + escaped(item.id) + "/play", "POST", profileRequestBody())
 end sub
 
 sub savePosition()
     if m.playingItem = invalid then return
     position = int(m.playbackPosition)
     m.positions[m.playingItem.id] = position
-    api("progress-save", "/api/progress", "POST", {profileId: m.profile.id, mediaId: m.playingItem.id, positionSeconds: position})
+    api("progress-save", "/api/progress", "POST", profileRequestBody(m.playingItem.id, position))
 end sub
 
 sub onVideoPosition()
@@ -738,3 +738,12 @@ sub showPairCode(code as string)
         letter.font = font
     end for
 end sub
+
+' API JSON field names must retain their case. Literal/dot keys are lowercased by BrightScript.
+function profileRequestBody(mediaId = invalid as dynamic, position = invalid as dynamic) as object
+    body = {}
+    body["profileId"] = m.profile.id
+    if mediaId <> invalid then body["mediaId"] = mediaId
+    if position <> invalid then body["positionSeconds"] = position
+    return body
+end function
