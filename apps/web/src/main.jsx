@@ -192,10 +192,25 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   },[media,positions,profile.id])
   const filtered=media
   const searchMatches=media.filter(item=>[item.title,item.seriesTitle,...(item.genres||[])].filter(Boolean).some(value=>value.toLowerCase().includes(query.toLowerCase())))
-  const continuing=filtered.filter(item=>positions.has(item.id))
   const categories=[...new Set(filtered.map(item=>item.category).filter(category=>category&&!/tv|series|show|short/i.test(category)))]
   const tvItems=filtered.filter(item=>/tv|series|show/i.test(item.category))
   const series=useMemo(()=>{const groups=new Map();for(const item of media.filter(item=>/tv|series|show/i.test(item.category)&&item.seriesId)){const group=groups.get(item.seriesId)||[];group.push(item);groups.set(item.seriesId,group)}return groups},[media])
+  const continuing=useMemo(()=>{
+    const complete=item=>item.durationSeconds>0&&(positions.get(item.id)||0)>=item.durationSeconds*.98
+    const orderedSeries=new Map([...series].map(([id,episodes])=>[id,episodes.slice().sort((a,b)=>(a.seasonNumber||0)-(b.seasonNumber||0)||(a.episodeNumber||0)-(b.episodeNumber||0)||a.title.localeCompare(b.title))]))
+    const cards=new Map()
+    for(const item of filtered){
+      if(!positions.has(item.id))continue
+      let candidate=item
+      if(series.has(item.seriesId)&&complete(item)){
+        const episodes=orderedSeries.get(item.seriesId)
+        const index=episodes.findIndex(episode=>episode.id===item.id)
+        candidate=episodes.slice(index+1).find(episode=>!complete(episode))
+      }
+      if(candidate)cards.set(candidate.id,candidate)
+    }
+    return [...cards.values()]
+  },[filtered,positions,series])
   const nextEpisode=useMemo(()=>{if(!selected?.seriesId)return null;const ordered=(series.get(selected.seriesId)||[]).slice().sort((a,b)=>(a.seasonNumber||0)-(b.seasonNumber||0)||(a.episodeNumber||0)-(b.episodeNumber||0)||a.title.localeCompare(b.title));const index=ordered.findIndex(item=>item.id===selected.id);return index>=0?ordered[index+1]||null:null},[selected,series])
   useEffect(()=>setShowNextCard(false),[selected?.id])
   useEffect(()=>{if(!playerOpen)return;const body=document.body,root=document.documentElement,scrollY=window.scrollY,previous={position:body.style.position,top:body.style.top,width:body.style.width,overflow:body.style.overflow,rootOverflow:root.style.overflow};body.style.position='fixed';body.style.top=`-${scrollY}px`;body.style.width='100%';body.style.overflow='hidden';root.style.overflow='hidden';return()=>{body.style.position=previous.position;body.style.top=previous.top;body.style.width=previous.width;body.style.overflow=previous.overflow;root.style.overflow=previous.rootOverflow;window.scrollTo(0,scrollY)}},[playerOpen])
