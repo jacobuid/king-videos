@@ -50,3 +50,5 @@
 @keyframes loading-fade-in{from{opacity:0}to{opacity:1}}
 @keyframes loading-fade-out{from{opacity:1}to{opacity:0}}
 @media(prefers-reduced-motion:reduce){.loading-screen{animation:none}.loading-screen.loading-screen-exiting{opacity:0}}
+
+.roku-link-stage{justify-content:flex-start;padding-top:24px}.roku-link-logo{display:block;width:min(440px,85vw);height:auto;object-fit:contain;margin:0 auto 24px}.roku-link-stage .profile-form{margin-top:0}
