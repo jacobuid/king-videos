@@ -16,7 +16,10 @@ sub init()
     m.history = []
     m.menu = m.top.findNode("menu")
     m.rows = m.top.findNode("rows")
+    m.pairing = m.top.findNode("pairing")
+    m.pairStatus = m.top.findNode("pairStatus")
     m.status = m.top.findNode("status")
+    m.status.observeField("text", "onStatusText")
     m.heading = m.top.findNode("heading")
     m.actions = m.top.findNode("actions")
     m.video = m.top.findNode("video")
@@ -84,6 +87,10 @@ end sub
 
 sub beginPairing()
     m.screen = "pairing"
+    m.pairing.visible = true
+    m.top.findNode("pairUrl").text = m.config.web.replace("https://", "")
+    codeGroup = m.top.findNode("pairCode")
+    codeGroup.removeChildrenIndex(codeGroup.getChildCount(), 0)
     m.status.height = 600
     m.menu.visible = false
     m.rows.visible = false
@@ -106,6 +113,7 @@ sub onPoll()
 end sub
 
 sub loadProfiles()
+    m.pairing.visible = false
     m.screen = "loading"
     m.status.text = "Loading profiles..."
     api("profiles", "/api/profiles")
@@ -148,7 +156,8 @@ sub onApiResult(event as object)
         m.deviceToken = data.token
         m.pairExpires = data.expires
         m.pollPending = false
-        m.status.text = "On your phone or computer, open:" + chr(10) + m.config.web + "?roku=" + data.code + chr(10) + "Sign in and link this TV. Code: " + data.code
+        showPairCode(data.code)
+        m.status.text = "Scan the QR code to open KINGFLIX, sign in, and enter your TV code."
         m.poll.control = "START"
     else if kind = "poll"
         if data.status = "linked"
@@ -703,3 +712,29 @@ function onKeyEvent(key as string, press as boolean) as boolean
     end if
     return false
 end function
+
+sub onStatusText()
+    if m.pairing.visible then m.pairStatus.text = m.status.text
+end sub
+
+sub showPairCode(code as string)
+    group = m.top.findNode("pairCode")
+    group.removeChildrenIndex(group.getChildCount(), 0)
+    for i = 0 to len(code) - 1
+        codeBox = group.createChild("Poster")
+        codeBox.translation = [i * 66, 0]
+        codeBox.width = 64
+        codeBox.height = 116
+        codeBox.uri = "pkg:/images/code-codeBox.png"
+        letter = group.createChild("Label")
+        letter.translation = [i * 66, 0]
+        letter.width = 64
+        letter.height = 116
+        letter.text = mid(code, i + 1, 1)
+        letter.horizAlign = "center"
+        letter.vertAlign = "center"
+        font = CreateObject("roSGNode", "Font")
+        font.size = 48
+        letter.font = font
+    end for
+end sub

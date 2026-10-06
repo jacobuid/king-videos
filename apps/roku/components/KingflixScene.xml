@@ -8,6 +8,28 @@
     <LabelList id="menu" translation="[80,250]" itemSize="[260,60]" numRows="9" visible="false"/>
     <RowList id="rows" translation="[400,270]" itemComponentName="MediaTile" itemSize="[1430,310]" rowItemSize="[[332,244]]" itemSpacing="[0,18]" rowItemSpacing="[[24,0]]" numRows="2" showRowLabel="[true]" rowLabelOffset="[0,12]" visible="false"/>
     <ButtonGroup id="actions" translation="[400,640]" visible="false"/>
+    <Group id="pairing" visible="false">
+      <Rectangle width="1920" height="1080" color="#000000"/>
+      <Poster translation="[460,48]" width="1000" height="420" uri="pkg:/images/pairing-logo.png" loadDisplayMode="scaleToFit"/>
+      <Rectangle translation="[690,510]" width="2" height="340" color="#594619"/>
+      <Rectangle translation="[1260,510]" width="2" height="340" color="#594619"/>
+      <Label translation="[70,506]" width="70" height="80" text="1" color="#eec052"><Font role="font" size="64"/></Label>
+      <Label translation="[740,506]" width="70" height="80" text="2" color="#eec052"><Font role="font" size="64"/></Label>
+      <Label translation="[1310,506]" width="70" height="80" text="3" color="#eec052"><Font role="font" size="64"/></Label>
+      <Label translation="[150,521]" width="510" height="50" text="Go to this URL"><Font role="font" size="36"/></Label>
+      <Label translation="[150,575]" width="510" height="35" text="ON YOUR PHONE OR COMPUTER" color="#a7b6c5"><Font role="font" size="22"/></Label>
+      <Label translation="[820,521]" width="430" height="50" text="Enter this code"><Font role="font" size="36"/></Label>
+      <Label translation="[820,575]" width="430" height="35" text="ON THE WEBSITE" color="#a7b6c5"><Font role="font" size="22"/></Label>
+      <Label translation="[1390,521]" width="460" height="50" text="Click Link Roku"><Font role="font" size="36"/></Label>
+      <Label translation="[1390,575]" width="460" height="35" text="ON THE WEBSITE" color="#a7b6c5"><Font role="font" size="22"/></Label>
+      <Rectangle translation="[68,648]" width="244" height="244" color="#eec052"/>
+      <Poster translation="[70,650]" width="240" height="240" uri="pkg:/images/link-qr.png"/>
+      <Label id="pairUrl" translation="[332,650]" width="330" height="240" wrap="true" vertAlign="center" color="#eec052"><Font role="font" size="24"/></Label>
+      <Group id="pairCode" translation="[724,694]"/>
+      <Poster translation="[1320,682]" width="460" height="140" uri="pkg:/images/link-button.png"/>
+      <Label translation="[1320,682]" width="460" height="140" text="Link Roku  ?" horizAlign="center" vertAlign="center"><Font role="font" size="44"/></Label>
+      <Label id="pairStatus" translation="[100,950]" width="1720" height="65" horizAlign="center" color="#a7b6c5" wrap="true"><Font role="font" size="26"/></Label>
+    </Group>
     <Video id="video" width="1920" height="1080" visible="false" notificationInterval="15"/>
     <Timer id="poll" duration="5" repeat="true"/>
   </children>
