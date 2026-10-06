@@ -30,6 +30,7 @@ const profilePictureGroups=[
   ['Magical Princess Gigi',['magical-princess-gigi--gigi.png']],
   ['Mickey & Friends',['mickey-and-friends--donald.png','mickey-and-friends--goofy.png','mickey-and-friends--max.png','mickey-and-friends--mickey.png']],
   ['My Little Pony',['my-little-pony--apple-jack.png','my-little-pony--fluttershy.png','my-little-pony--pinkie-pie.png','my-little-pony--rainbow-dash.png','my-little-pony--rarity.png','my-little-pony--twilight-sparkle.png']],
+  ["Peanuts",["peanuts--charlie-brown.png","peanuts--charlie-brown-2.png","peanuts--franklin.png","peanuts--linus.png","peanuts--lucy.png","peanuts--marcie.png","peanuts--peppermint-patty.png","peanuts--pig-pen.png","peanuts--sally.png","peanuts--schroeder.png","peanuts--snoopy.png","peanuts--snoopy-cool.png","peanuts--violet.png","peanuts--woodstock.png"]],
   ['Scooby-Doo',['scooby-doo--daphne.png','scooby-doo--fred.png','scooby-doo--scooby-doo.png','scooby-doo--shaggy.png','scooby-doo--velma.png']],
   ['Sonic',['sonic--amy.png','sonic--blaze.png','sonic--bunnie.png','sonic--julie-su.png','sonic--knuckles.png','sonic--rotor.png','sonic--sally.png','sonic--shadow.png','sonic--sonic.png','sonic--tails.png']],
   ['Sonic Underground',['sonic-underground--manic.png','sonic-underground--sonia.png']],
