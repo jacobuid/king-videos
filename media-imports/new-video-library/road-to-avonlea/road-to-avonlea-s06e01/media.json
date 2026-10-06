@@ -26,5 +26,7 @@
   "sourceVideoCodec": "mpeg4",
   "sourceAudioCodec": "mp3",
   "metadataSource": "https://www.tvmaze.com/episodes/438538/road-to-avonlea-6x01-the-return-of-gus-pike",
-  "processing": "Conversion pending quality selection"
+  "processing": "Conversion pending quality selection",
+  "excludeFromUploads": true,
+  "exclusionReason": "User rejected source video quality"
 }

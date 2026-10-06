@@ -26,5 +26,8 @@
   "sourceVideoCodec": "mpeg4",
   "sourceAudioCodec": "mp3",
   "metadataSource": "https://www.tvmaze.com/episodes/438491/road-to-avonlea-2x06-may-the-best-man-win",
-  "processing": "Conversion pending quality selection"
+  "processing": "Native-resolution H.264 NVENC CQ 16, preset p7; AAC audio 192 kbps",
+  "outputBytes": 713707158,
+  "excludeFromUploads": true,
+  "exclusionReason": "User rejected source video quality"
 }

@@ -26,5 +26,7 @@
   "sourceVideoCodec": "mpeg4",
   "sourceAudioCodec": "mp3",
   "metadataSource": "https://www.tvmaze.com/episodes/438504/road-to-avonlea-3x06-aunt-janet-rebels",
-  "processing": "Conversion pending quality selection"
+  "processing": "Conversion pending quality selection",
+  "excludeFromUploads": true,
+  "exclusionReason": "User rejected source video quality"
 }

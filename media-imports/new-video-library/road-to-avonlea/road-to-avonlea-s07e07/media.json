@@ -26,5 +26,7 @@
   "sourceVideoCodec": "mpeg4",
   "sourceAudioCodec": "mp3",
   "metadataSource": "https://www.tvmaze.com/episodes/438557/road-to-avonlea-7x07-king-of-the-great-white-way",
-  "processing": "Conversion pending quality selection"
+  "processing": "Conversion pending quality selection",
+  "excludeFromUploads": true,
+  "exclusionReason": "User rejected source video quality"
 }

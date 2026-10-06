@@ -26,5 +26,7 @@
   "sourceVideoCodec": "mpeg4",
   "sourceAudioCodec": "mp3",
   "metadataSource": "https://www.tvmaze.com/episodes/438562/road-to-avonlea-7x12-the-last-hurrah",
-  "processing": "Conversion pending quality selection"
+  "processing": "Conversion pending quality selection",
+  "excludeFromUploads": true,
+  "exclusionReason": "User rejected source video quality"
 }

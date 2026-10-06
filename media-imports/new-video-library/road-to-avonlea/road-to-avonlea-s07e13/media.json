@@ -26,5 +26,7 @@
   "sourceVideoCodec": "mpeg4",
   "sourceAudioCodec": "mp3",
   "metadataSource": "https://www.tvmaze.com/episodes/438563/road-to-avonlea-7x13-so-dear-to-my-heart",
-  "processing": "Conversion pending quality selection"
+  "processing": "Conversion pending quality selection",
+  "excludeFromUploads": true,
+  "exclusionReason": "User rejected source video quality"
 }

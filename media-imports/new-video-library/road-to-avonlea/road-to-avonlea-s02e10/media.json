@@ -26,5 +26,8 @@
   "sourceVideoCodec": "mpeg4",
   "sourceAudioCodec": "mp3",
   "metadataSource": "https://www.tvmaze.com/episodes/438495/road-to-avonlea-2x10-dreamer-of-dreams",
-  "processing": "Conversion pending quality selection"
+  "processing": "Native-resolution H.264 NVENC CQ 16, preset p7; AAC audio 192 kbps",
+  "outputBytes": 688625515,
+  "excludeFromUploads": true,
+  "exclusionReason": "User rejected source video quality"
 }

@@ -26,5 +26,8 @@
   "sourceVideoCodec": "mpeg4",
   "sourceAudioCodec": "mp3",
   "metadataSource": "https://www.tvmaze.com/episodes/438478/road-to-avonlea-1x06-proof-of-the-pudding",
-  "processing": "Conversion pending quality selection"
+  "processing": "Native-resolution H.264 NVENC CQ 16, preset p7; AAC audio 192 kbps",
+  "outputBytes": 809600354,
+  "excludeFromUploads": true,
+  "exclusionReason": "User rejected source video quality"
 }
