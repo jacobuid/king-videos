@@ -22,7 +22,8 @@ const colors=['#e50914','#0f9d8f','#6b38d1','#1773e8','#e67e22','#27952c','#c218
 const birthdayColors=['#ff3158','#ffd43b','#23d5f7','#8ef02d','#a855f7','#ff7a18']
 const birthdaySnowColors=['#ff7090','#fff06a','#64ecff','#b8ff68','#d79aff','#ffb95c']
 const profilePictureGroups=[
-  ['Smileys',["smileys--boy-blue.png","smileys--boy-green.png","smileys--boy-grey.png","smileys--boy-red.png","smileys--girl-grey.png","smileys--girl-pink.png","smileys--girl-purple.png","smileys--girl-teal.png"]],
+  ["Boys",["smileys--boy-blue.png","smileys--boy-green.png","smileys--boy-grey.png","smileys--boy-red.png"]],
+  ["Girls",["smileys--girl-grey.png","smileys--girl-pink.png","smileys--girl-purple.png","smileys--girl-teal.png"]],
   ['Bluey',['bluey--bingo.png','bluey--bluey.png']],
   ["Blue's Clues",['blues-clues--blue.png','blues-clues--bucket-and-shovel.png','blues-clues--magenta.png','blues-clues--mailbox.png','blues-clues--salt-and-pepper.png','blues-clues--slippery-soap.png']],
   ["Disney Princess",["disney-princess--ariel.png","disney-princess--aurora.png","disney-princess--belle.png","disney-princess--cinderella.png","disney-princess--mulan.png","disney-princess--pocahontas.png","disney-princess--snow-white.png"]],
