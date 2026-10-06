@@ -1,0 +1,8 @@
+{
+  "rootDir": ".",
+  "files": ["manifest", "source/**/*", "components/**/*", "images/**/*", "config.json"],
+  "stagingDir": "../../logs/roku-staging",
+  "outFile": "dist/kingflix-roku.zip",
+  "createPackage": true,
+  "sourceMap": false
+}

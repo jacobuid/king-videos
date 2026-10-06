@@ -36,5 +36,6 @@ jobs:
         env:
           D1_DATABASE_ID: ${{ steps.pulumi.outputs.databaseId }}
       - run: npm run check -w services/api
+      - run: npm run test:roku -w services/api
       - run: npx wrangler d1 migrations apply DB --remote --config services/api/wrangler.jsonc
       - run: npm run deploy -w services/api

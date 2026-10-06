@@ -1,14 +1,22 @@
 {
   "name": "king-videos",
   "private": true,
-  "workspaces": ["apps/web", "services/api", "infrastructure/pulumi"],
+  "workspaces": [
+    "apps/web",
+    "services/api",
+    "infrastructure/pulumi",
+    "apps/roku"
+  ],
   "scripts": {
     "build": "npm run build -w apps/web",
     "dev:web": "npm run dev -w apps/web",
     "dev:api": "npm run dev -w services/api",
     "handbrake:check": "node scripts/check-handbrake.mjs",
     "check": "npm run build && npm run check -w services/api",
-    "thumbnails:optimize": "node scripts/optimize-thumbnails.mjs"
+    "thumbnails:optimize": "node scripts/optimize-thumbnails.mjs",
+    "build:roku": "npm run build -w apps/roku",
+    "check:roku": "npm run check -w apps/roku",
+    "test:roku": "node --test services/api/test/roku.test.mjs"
   },
   "devDependencies": {
     "sharp": "^0.35.4"

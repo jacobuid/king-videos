@@ -1,0 +1,27 @@
+name: Roku
+on:
+  push:
+    branches: [main]
+    paths: ['apps/roku/**', 'scripts/prepare-roku.mjs', 'apps/web/src/collections.js', 'apps/web/src/main.jsx', 'apps/web/public/logo-kingflix.png', 'package.json', 'package-lock.json', '.github/workflows/roku.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:roku
+      - run: npm run build:roku
+        env:
+          VITE_API_URL: ${{ vars.VITE_API_URL }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kingflix-roku
+          path: apps/roku/dist/kingflix-roku.zip
+          if-no-files-found: error

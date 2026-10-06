@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MediaTile" extends="Group">
+  <interface>
+    <field id="itemContent" type="node" onChange="updateContent"/>
+    <field id="focusPercent" type="float" onChange="updateFocus"/>
+    <field id="rowFocusPercent" type="float"/>
+  </interface>
+  <script type="text/brightscript" uri="MediaTile.brs"/>
+  <children>
+    <Rectangle id="border" width="332" height="244" color="#3c3c3c"/>
+    <Poster id="art" translation="[4,4]" width="324" height="182" loadDisplayMode="scaleToFit"/>
+    <Label id="title" translation="[10,193]" width="312" height="38" font="font:SmallSystemFont"/>
+  </children>
+</component>

@@ -149,3 +149,8 @@ vite.config.ts.timestamp-*
 .wrangler/
 services/api/.deployment-secrets.json
 .handbrake-current.json
+
+# Generated Roku package and public endpoint configuration
+apps/roku/config.json
+apps/roku/dist/
+apps/roku/images/

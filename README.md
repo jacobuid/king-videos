@@ -34,7 +34,7 @@ Private Backblaze media is delivered through signed Cloudflare Worker URLs. The 
 
 ## Current scope
 
-The repository includes the initial web catalog, Clerk sign-in, profile selection, playback, progress writes, D1 schema, B2 signed playback, and deployment workflows. Roku, richer browsing, favorites UI, and automatic media import remain later phases of the plan.
+The repository includes the initial web catalog, Clerk sign-in, profile selection, playback, progress writes, D1 schema, B2 signed playback, and deployment workflows. A private Roku SceneGraph app is available in `apps/roku`; see [Roku setup](docs/roku.md) for building, linking, and testing it on a TV.
 # Upload a local TV series
 
 Local video folders must be uploaded from the computer that contains the files.

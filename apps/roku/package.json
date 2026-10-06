@@ -1,0 +1,13 @@
+{
+  "name": "@king-videos/roku",
+  "private": true,
+  "scripts": {
+    "prebuild": "node ../../scripts/prepare-roku.mjs",
+    "build": "bsc --project bsconfig.json",
+    "precheck": "node ../../scripts/prepare-roku.mjs",
+    "check": "bsc --project bsconfig.json --createPackage false --copyToStaging false"
+  },
+  "devDependencies": {
+    "brighterscript": "^0.73.5"
+  }
+}

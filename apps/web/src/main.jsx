@@ -8,6 +8,7 @@ import { defaultLayoutIcons, DefaultVideoLayout } from '@vidstack/react/player/l
 import '@vidstack/react/player/styles/default/theme.css'
 import '@vidstack/react/player/styles/default/layouts/video.css'
 import { collections } from './collections'
+import RokuDevices from './RokuDevices'
 import './style.css'
 import './profile-picker.css'
 import './player.css'
@@ -66,7 +67,7 @@ function LoadingScreen({active=true}){
 function App(){
   const{getToken,userId}=useAuth()
   const[profiles,setProfiles]=useState([]),[profile,setProfile]=useState(null),[profileToken,setProfileToken]=useState('')
-  const[view,setView]=useState('select'),[pending,setPending]=useState(null),[pin,setPin]=useState('')
+  const[view,setView]=useState(()=>new URLSearchParams(window.location.search).has('roku')?'roku':'select'),[pending,setPending]=useState(null),[pin,setPin]=useState('')
   const[manageToken,setManageToken]=useState('')
   const[picturePicker,setPicturePicker]=useState(null)
   const[form,setForm]=useState({name:'',dateOfBirth:'',pin:'',removePin:false,homeVideosOnly:false,avatar:'bluey.png'})
@@ -92,6 +93,7 @@ function App(){
       const items=await request('/api/profiles')
       if(cancelled)return
       setProfiles(items)
+      if(new URLSearchParams(window.location.search).has('roku'))return
       let session
       try{session=JSON.parse(localStorage.getItem(profileSessionKey)||'null')}catch{clearProfileSession();return}
       if(!session)return
@@ -158,7 +160,8 @@ function App(){
   return <><LoadingScreen active={loading}/>{!loading&&<main className={view==='library'?'home-page':'profile-shell'}>
     {view==='select'&&<header className="site-header"><Logo/><UserButton/></header>}
     {error&&<p role="alert">{error}</p>}
-    {view==='select'&&<section className="profile-stage"><h2>Who's watching?</h2>{profilePicker}<div className="manage-buttons"><button className="outline-button icon-button" onClick={()=>openManage('manage')}><FontAwesomeIcon icon={faUsersGear}/>Manage Profiles</button><button className="outline-button icon-button" onClick={()=>openManage('manage-videos')}><FontAwesomeIcon icon={faVideo}/>Manage Videos</button></div></section>}
+    {view==='select'&&<section className="profile-stage"><h2>Who's watching?</h2>{profilePicker}<div className="manage-buttons"><button className="outline-button icon-button" onClick={()=>openManage('manage')}><FontAwesomeIcon icon={faUsersGear}/>Manage Profiles</button><button className="outline-button icon-button" onClick={()=>openManage('manage-videos')}><FontAwesomeIcon icon={faVideo}/>Manage Videos</button><button className="outline-button" onClick={()=>setView('roku')}>Link Roku</button></div></section>}
+    {view==='roku'&&<RokuDevices request={request} onDone={()=>{const url=new URL(window.location.href);url.searchParams.delete('roku');window.history.replaceState(window.history.state,'',url);setView(profile?'library':'select')}}/>}
     {view==='manage'&&<section className="profile-stage"><h2>Manage Profiles</h2>{profilePicker}<button className="profile-card add-card" onClick={()=>{resetForm();setError('');setView('create')}}><Avatar add/><span className="profile-name">Add Profile</span></button><div className="stage-actions"><button className="primary-button" onClick={()=>setView('select')}>Done</button></div></section>}
     {view==='create'&&<ProfileForm title="Add Profile" form={form} setForm={setForm} onSubmit={addProfile} onCancel={()=>{resetForm();setError('');setView('manage')}} onChooseAvatar={()=>choosePicture()} busy={busy}/>}
     {view==='edit'&&<ProfileForm title={`Edit ${profile.name}`} form={form} setForm={setForm} onSubmit={saveProfile} onCancel={()=>{setProfile(null);setProfileToken('');resetForm();setError('');setView('manage')}} onDelete={deleteProfile} onChooseAvatar={()=>choosePicture()} hasPin={profile.hasPin} busy={busy}/>}
