@@ -6,9 +6,9 @@
   "year": 2000,
   "date": null,
   "genres": [
-    "Cartoon",
+    "Action",
     "Adventure",
-    "Comedy"
+    "Cartoon"
   ],
   "duration": 4186,
   "video": "Buzz Lightyear Of Star Command, The Adventure Begins.mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Buzz_Lightyear_of_Star_Command%3A_The_Adventure_Begins",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "NR",
-  "ratingSource": "https://disney.go.com/disneyvideos/newsletter/sep2002/spotlight_03.html"
+  "ratingSource": "https://disney.go.com/disneyvideos/newsletter/sep2002/spotlight_03.html",
+  "imdbId": "tt0181196",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0181196/",
+  "animationStyle": "2d"
 }

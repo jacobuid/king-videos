@@ -6,7 +6,9 @@
   "year": 2014,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Cartoon",
+    "Drama",
+    "Family"
   ],
   "duration": 5997,
   "video": "20 - When Marnie Was There (2014).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/When_Marnie_Was_There_(film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/when_marnie_was_there"
+  "ratingSource": "https://www.rottentomatoes.com/m/when_marnie_was_there",
+  "imdbId": "tt3398268",
+  "imdbGenres": [
+    "Animation",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt3398268/",
+  "animationStyle": "2d"
 }

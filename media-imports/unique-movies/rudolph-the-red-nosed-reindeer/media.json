@@ -6,8 +6,9 @@
   "year": 1964,
   "date": null,
   "genres": [
+    "Adventure",
     "Animation",
-    "Fantasy"
+    "Comedy"
   ],
   "duration": 3106,
   "video": "Rudolph the Red-Nosed Reindeer (1964).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Rudolph_the_Red-Nosed_Reindeer_(TV_special)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "TV-G",
-  "ratingSource": "https://play.google.com/store/tv/show/Rudolph_the_Red_Nosed_Reindeer?hl=en_US&id=dvZnYgLbk2g"
+  "ratingSource": "https://play.google.com/store/tv/show/Rudolph_the_Red_Nosed_Reindeer?hl=en_US&id=dvZnYgLbk2g",
+  "imdbId": "tt0058536",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0058536/",
+  "animationStyle": "3d"
 }

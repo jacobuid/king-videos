@@ -6,8 +6,9 @@
   "date": null,
   "description": "Anne Shirley begins her teaching career and finds friendship, romance, and new challenges beyond Green Gables.",
   "genres": [
-    "Live Action",
+    "Drama",
     "Family",
+    "Romance",
     "Classic"
   ],
   "duration": 13720,
@@ -21,5 +22,12 @@
     "source": "Embedded English PGS, OCR with Tesseract",
     "lastCueSeconds": 13626.509,
     "dialogueProofread": false
-  }
+  },
+  "imdbId": "tt0092571",
+  "imdbGenres": [
+    "Drama",
+    "Family",
+    "Romance"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0092571/"
 }

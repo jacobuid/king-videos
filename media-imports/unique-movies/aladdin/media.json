@@ -6,8 +6,9 @@
   "year": 1992,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Comedy"
   ],
   "duration": 5203,
   "video": "Aladdin (1992).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Aladdin_(1992_Disney_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/aladdin"
+  "ratingSource": "https://movies.disney.com/aladdin",
+  "imdbId": "tt0103639",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0103639/",
+  "animationStyle": "2d"
 }

@@ -6,8 +6,9 @@
   "year": 1990,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Adventure"
+    "Comedy"
   ],
   "duration": 4628,
   "video": "The Rescuers Down Under (1990).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Rescuers_Down_Under",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-rescuers-down-under"
+  "ratingSource": "https://movies.disney.com/the-rescuers-down-under",
+  "imdbId": "tt0100477",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0100477/",
+  "animationStyle": "2d"
 }

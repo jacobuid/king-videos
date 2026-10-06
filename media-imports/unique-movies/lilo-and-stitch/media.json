@@ -6,6 +6,7 @@
   "year": 2002,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
     "Comedy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Lilo_%26_Stitch",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://movies.disney.com/lilo-and-stitch"
+  "ratingSource": "https://movies.disney.com/lilo-and-stitch",
+  "imdbId": "tt0275847",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0275847/",
+  "animationStyle": "2d"
 }

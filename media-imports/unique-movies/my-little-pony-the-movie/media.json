@@ -6,8 +6,9 @@
   "year": 2017,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Comedy"
   ],
   "duration": 5918,
   "video": "My Little Pony - The Movie (2017).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/My_Little_Pony%3A_The_Movie_(2017_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/my_little_pony_the_movie_2017"
+  "ratingSource": "https://www.rottentomatoes.com/m/my_little_pony_the_movie_2017",
+  "imdbId": "tt4131800",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt4131800/",
+  "animationStyle": "2d"
 }

@@ -6,10 +6,9 @@
   "year": 2024,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Family",
-    "Fantasy"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Moana.2.2024.720p.WEBRip.x264.AAC-[YTS.MX].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Moana_2",
-  "sourceFolder": "Moana 2 (2024) [720p] [WEBRip] [YTS.MX]"
+  "sourceFolder": "Moana 2 (2024) [720p] [WEBRip] [YTS.MX]",
+  "imdbId": "tt13622970",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt13622970/",
+  "animationStyle": "3d"
 }

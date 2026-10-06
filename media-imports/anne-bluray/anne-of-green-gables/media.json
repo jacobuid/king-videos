@@ -6,7 +6,7 @@
   "date": null,
   "description": "An imaginative orphan finds a home with Matthew and Marilla Cuthbert on Prince Edward Island.",
   "genres": [
-    "Live Action",
+    "Drama",
     "Family",
     "Classic"
   ],
@@ -21,5 +21,11 @@
     "source": "Embedded English PGS, OCR with Tesseract",
     "lastCueSeconds": 11677.02,
     "dialogueProofread": false
-  }
+  },
+  "imdbId": "tt0088727",
+  "imdbGenres": [
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0088727/"
 }

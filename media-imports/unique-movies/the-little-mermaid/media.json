@@ -6,8 +6,9 @@
   "year": 1989,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Family"
   ],
   "duration": 4950,
   "video": "The Little Mermaid (1989).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Little_Mermaid_(1989_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-little-mermaid"
+  "ratingSource": "https://movies.disney.com/the-little-mermaid",
+  "imdbId": "tt0097757",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0097757/",
+  "animationStyle": "2d"
 }

@@ -6,10 +6,9 @@
   "year": 2006,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Comedy",
-    "Fantasy"
+    "Cartoon",
+    "Comedy"
   ],
   "duration": 4218,
   "video": "Brother Bear 2.mp4",
@@ -19,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Brother_Bear_2",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/brother-bear-2"
+  "ratingSource": "https://movies.disney.com/brother-bear-2",
+  "imdbId": "tt0465925",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0465925/",
+  "animationStyle": "2d"
 }

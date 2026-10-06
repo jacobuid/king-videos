@@ -6,6 +6,7 @@
   "year": 1995,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
     "Comedy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/A_Goofy_Movie",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/a-goofy-movie"
+  "ratingSource": "https://movies.disney.com/a-goofy-movie",
+  "imdbId": "tt0113198",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0113198/",
+  "animationStyle": "2d"
 }

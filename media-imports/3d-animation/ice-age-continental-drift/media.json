@@ -6,10 +6,9 @@
   "year": 2012,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Ice.Age.Continental.Drift.2012.720p.BluRay.x264.YIFY.mp4",
   "thumbnail": "8yMYN8.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Ice_Age:_Continental_Drift",
-  "sourceFolder": "Ice Age 4 - Continental Drift (2012)"
+  "sourceFolder": "Ice Age 4 - Continental Drift (2012)",
+  "imdbId": "tt1667889",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1667889/",
+  "animationStyle": "3d"
 }

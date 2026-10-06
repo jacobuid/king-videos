@@ -6,7 +6,9 @@
   "year": 1995,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Adventure",
+    "Cartoon",
+    "Drama"
   ],
   "duration": 4869,
   "video": "Pocahontas (1995).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Pocahontas_(1995_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/pocahontas"
+  "ratingSource": "https://movies.disney.com/pocahontas",
+  "imdbId": "tt0114148",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0114148/",
+  "animationStyle": "2d"
 }

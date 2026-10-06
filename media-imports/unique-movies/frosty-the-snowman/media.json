@@ -6,7 +6,9 @@
   "year": 1969,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Cartoon",
+    "Comedy",
+    "Drama"
   ],
   "duration": 1522,
   "video": "Frosty the Snowman (1969).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Frosty_the_Snowman_(TV_special)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "TV-G",
-  "ratingSource": "https://www.disneyplus.com/es-us/browse/entity-d45c7fcd-1b93-4634-bf27-b6d30e3c3ec3"
+  "ratingSource": "https://www.disneyplus.com/es-us/browse/entity-d45c7fcd-1b93-4634-bf27-b6d30e3c3ec3",
+  "imdbId": "tt0064349",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0064349/",
+  "animationStyle": "2d"
 }

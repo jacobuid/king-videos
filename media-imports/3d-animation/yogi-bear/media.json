@@ -6,10 +6,9 @@
   "year": 2010,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Yogi Bear [720p].mp4",
   "thumbnail": "1200x675.jpg",
   "metadataSource": "https://en.wikipedia.org/wiki/Yogi_Bear_(film)",
-  "sourceFolder": "Yogi Bear (2010)"
+  "sourceFolder": "Yogi Bear (2010)",
+  "imdbId": "tt1302067",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1302067/",
+  "animationStyle": "3d"
 }

@@ -6,6 +6,7 @@
   "year": 2004,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
     "Comedy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Lion_King_1%C2%BD",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-lion-king-1-1-2"
+  "ratingSource": "https://movies.disney.com/the-lion-king-1-1-2",
+  "imdbId": "tt0318403",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0318403/",
+  "animationStyle": "2d"
 }

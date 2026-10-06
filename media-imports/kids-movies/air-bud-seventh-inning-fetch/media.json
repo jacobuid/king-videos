@@ -6,7 +6,8 @@
   "date": null,
   "description": "Air Bud: Seventh Inning Fetch is a 2002 sports comedy film directed by Robert Vince.",
   "genres": [
-    "Live Action",
+    "Comedy",
+    "Drama",
     "Family"
   ],
   "duration": 5566,
@@ -17,5 +18,12 @@
   "processing": "encode",
   "metadataSource": "https://en.wikipedia.org/wiki/Air_Bud%3A_Seventh_Inning_Fetch",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/air_bud_seventh_inning_fetch"
+  "ratingSource": "https://www.rottentomatoes.com/m/air_bud_seventh_inning_fetch",
+  "imdbId": "tt0288415",
+  "imdbGenres": [
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0288415/"
 }

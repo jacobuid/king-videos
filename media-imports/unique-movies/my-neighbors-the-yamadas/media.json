@@ -7,7 +7,8 @@
   "date": null,
   "genres": [
     "Cartoon",
-    "Comedy"
+    "Comedy",
+    "Family"
   ],
   "duration": 6220,
   "video": "09 - My Neighbors the Yamadas (1999).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/My_Neighbors_the_Yamadas",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://movies.disney.com/my-neighbors-the-yamadas"
+  "ratingSource": "https://movies.disney.com/my-neighbors-the-yamadas",
+  "imdbId": "tt0206013",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0206013/",
+  "animationStyle": "2d"
 }

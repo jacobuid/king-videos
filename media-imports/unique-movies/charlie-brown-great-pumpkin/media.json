@@ -6,7 +6,9 @@
   "year": 1966,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Cartoon",
+    "Comedy",
+    "Family"
   ],
   "duration": 1517,
   "video": "Charlie Brown - Great Pumpkin.mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/It's_the_Great_Pumpkin%2C_Charlie_Brown",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "TV-G",
-  "ratingSource": "https://tv.apple.com/us/movie/its-the-great-pumpkin-charlie-brown/umc.cmc.1c5nvp802hos5t3u0umlukkwh"
+  "ratingSource": "https://tv.apple.com/us/movie/its-the-great-pumpkin-charlie-brown/umc.cmc.1c5nvp802hos5t3u0umlukkwh",
+  "imdbId": "tt0060550",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0060550/",
+  "animationStyle": "2d"
 }

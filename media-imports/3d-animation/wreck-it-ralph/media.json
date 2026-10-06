@@ -6,11 +6,9 @@
   "year": 2012,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family",
-    "Fantasy"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -18,5 +16,13 @@
   "video": "Wreck it Ralph[720p].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Wreck-It_Ralph",
-  "sourceFolder": "Wreck-It Ralph (2012)"
+  "sourceFolder": "Wreck-It Ralph (2012)",
+  "imdbId": "tt1772341",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1772341/",
+  "animationStyle": "3d"
 }

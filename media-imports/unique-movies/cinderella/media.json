@@ -7,6 +7,7 @@
   "date": null,
   "genres": [
     "Cartoon",
+    "Family",
     "Fantasy"
   ],
   "duration": 4469,
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Cinderella_(1950_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/cinderella"
+  "ratingSource": "https://www.rottentomatoes.com/m/cinderella",
+  "imdbId": "tt0042332",
+  "imdbGenres": [
+    "Animation",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0042332/",
+  "animationStyle": "2d"
 }

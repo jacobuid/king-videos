@@ -8,7 +8,7 @@
   "genres": [
     "Cartoon",
     "Comedy",
-    "Action"
+    "Family"
   ],
   "duration": 4415,
   "video": "The Reluctant Dragon.mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Reluctant_Dragon_(1941_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-reluctant-dragon"
+  "ratingSource": "https://movies.disney.com/the-reluctant-dragon",
+  "imdbId": "tt0034091",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0034091/",
+  "animationStyle": "2d"
 }

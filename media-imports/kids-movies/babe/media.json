@@ -6,7 +6,8 @@
   "date": null,
   "description": "Babe is a 1995 comedy-drama film directed by Chris Noonan, who co-wrote it with George Miller.",
   "genres": [
-    "Live Action",
+    "Comedy",
+    "Drama",
     "Family"
   ],
   "duration": 5516,
@@ -16,5 +17,12 @@
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Babe (1995)\\Babe [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Babe_(film)",
-  "thumbnailSource": "babe.jpg"
+  "thumbnailSource": "babe.jpg",
+  "imdbId": "tt0112431",
+  "imdbGenres": [
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0112431/"
 }

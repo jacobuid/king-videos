@@ -6,8 +6,9 @@
   "year": 2001,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Family"
   ],
   "duration": 7475,
   "video": "01- Spirited Away (2001).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Spirited_Away",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/spirited_away"
+  "ratingSource": "https://www.rottentomatoes.com/m/spirited_away",
+  "imdbId": "tt0245429",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0245429/",
+  "animationStyle": "2d"
 }

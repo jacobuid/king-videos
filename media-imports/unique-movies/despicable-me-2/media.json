@@ -6,6 +6,7 @@
   "year": 2013,
   "date": null,
   "genres": [
+    "Adventure",
     "Animation",
     "Comedy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Despicable_Me_2",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/despicable_me_2"
+  "ratingSource": "https://www.rottentomatoes.com/m/despicable_me_2",
+  "imdbId": "tt1690953",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1690953/",
+  "animationStyle": "3d"
 }

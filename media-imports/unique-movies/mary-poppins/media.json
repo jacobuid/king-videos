@@ -6,10 +6,10 @@
   "year": 1964,
   "date": null,
   "genres": [
-    "Cartoon",
     "Comedy",
     "Family",
-    "Action"
+    "Fantasy",
+    "Classic"
   ],
   "duration": 8346,
   "video": "mary-poppins.mp4",
@@ -21,5 +21,12 @@
   "rating": "G",
   "ratingSource": "https://www.rottentomatoes.com/m/mary_poppins",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Mary Poppins\\Mary Poppins 1964.mp4",
-  "processing": "Original H.264/AAC MP4 preserved without re-encoding"
+  "processing": "Original H.264/AAC MP4 preserved without re-encoding",
+  "imdbId": "tt0058331",
+  "imdbGenres": [
+    "Comedy",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0058331/"
 }

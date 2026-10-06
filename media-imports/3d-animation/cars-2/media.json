@@ -6,10 +6,9 @@
   "year": 2011,
   "category": "movie",
   "genres": [
+    "Adventure",
     "Animation",
-    "Action",
-    "Comedy",
-    "Family"
+    "Comedy"
   ],
   "rating": "G",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Cars.2.2011.720p.BrRip.264.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Cars_2",
-  "sourceFolder": "Cars 2 (2011)"
+  "sourceFolder": "Cars 2 (2011)",
+  "imdbId": "tt1216475",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1216475/",
+  "animationStyle": "3d"
 }

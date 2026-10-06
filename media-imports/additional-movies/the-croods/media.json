@@ -6,8 +6,8 @@
   "year": 2013,
   "date": "2013-03-22",
   "genres": [
-    "Animation",
     "Adventure",
+    "Animation",
     "Comedy"
   ],
   "duration": 5917,
@@ -16,5 +16,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Croods",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\encoded-videos\\the-croods",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/the_croods"
+  "ratingSource": "https://www.rottentomatoes.com/m/the_croods",
+  "imdbId": "tt0481499",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0481499/",
+  "animationStyle": "3d"
 }

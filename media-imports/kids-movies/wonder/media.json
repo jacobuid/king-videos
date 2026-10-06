@@ -6,7 +6,7 @@
   "date": null,
   "description": "Wonder is a 2017 American coming-of-age family comedy drama film directed by Stephen Chbosky, who co-wrote the screenplay with Steven Conrad and Jack Thorne.",
   "genres": [
-    "Live Action",
+    "Drama",
     "Family"
   ],
   "duration": 6791,
@@ -17,5 +17,11 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Wonder_(film)",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/wonder"
+  "ratingSource": "https://www.rottentomatoes.com/m/wonder",
+  "imdbId": "tt2543472",
+  "imdbGenres": [
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt2543472/"
 }

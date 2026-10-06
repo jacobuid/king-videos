@@ -6,7 +6,6 @@
   "year": 1960,
   "date": null,
   "genres": [
-    "Live Action",
     "Adventure",
     "Family",
     "Classic"
@@ -19,5 +18,11 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Swiss_Family_Robinson_(1960_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/swiss-family-robinson"
+  "ratingSource": "https://movies.disney.com/swiss-family-robinson",
+  "imdbId": "tt0054357",
+  "imdbGenres": [
+    "Adventure",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0054357/"
 }

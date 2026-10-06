@@ -6,8 +6,9 @@
   "year": 1994,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Comedy"
   ],
   "duration": 4146,
   "video": "The Return of Jafar (1994).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Return_of_Jafar",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/the_return_of_jafar"
+  "ratingSource": "https://www.rottentomatoes.com/m/the_return_of_jafar",
+  "imdbId": "tt0107952",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0107952/",
+  "animationStyle": "2d"
 }

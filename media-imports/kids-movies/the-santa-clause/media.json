@@ -6,7 +6,8 @@
   "date": null,
   "description": "The Santa Clause is a 1994 American Christmas fantasy comedy film directed by John Pasquin, produced by Brian Reilly, Jeffrey Silver, and Robert Newmyer, and written by the writing team of Leo Benvenuti and Steve Rudnick.",
   "genres": [
-    "Live Action",
+    "Comedy",
+    "Drama",
     "Family"
   ],
   "duration": 5828,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Santa_Clause",
   "rating": "PG",
   "ratingSource": "https://movies.disney.com/the-santa-clause",
-  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Santa Clause (1994) [1080p]\\The.Santa.Clause.1994.1080p.BrRip.x264.YIFY.srt"
+  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Santa Clause (1994) [1080p]\\The.Santa.Clause.1994.1080p.BrRip.x264.YIFY.srt",
+  "imdbId": "tt0111070",
+  "imdbGenres": [
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0111070/"
 }

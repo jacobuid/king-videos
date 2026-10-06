@@ -6,9 +6,9 @@
   "year": 1999,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Family"
+    "Cartoon",
+    "Comedy"
   ],
   "duration": 5511,
   "video": "Tarzan (1999).mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Tarzan_(1999_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/tarzan"
+  "ratingSource": "https://movies.disney.com/tarzan",
+  "imdbId": "tt0120855",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0120855/",
+  "animationStyle": "2d"
 }

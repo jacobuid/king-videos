@@ -6,8 +6,8 @@
   "year": 1985,
   "category": "movie",
   "genres": [
-    "Adventure",
     "Cartoon",
+    "Family",
     "Fantasy"
   ],
   "rating": "TV-Y7",
@@ -16,5 +16,13 @@
   "thumbnail": "thumb.png",
   "blocked": false,
   "metadataSource": "https://en.wikipedia.org/wiki/Magical_Princess_Minky_Momo",
-  "imdb": "https://www.imdb.com/title/tt0160507/"
+  "imdb": "https://www.imdb.com/title/tt0160507/",
+  "imdbId": "tt0160507",
+  "imdbGenres": [
+    "Animation",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0160507/",
+  "animationStyle": "2d"
 }

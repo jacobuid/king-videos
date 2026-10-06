@@ -15,5 +15,13 @@
   "duration": 3272,
   "video": "Sonic the Hedgehog - The Movie (1996 OVA - 720p WebRip).mp4",
   "thumbnail": "thumb.webp",
-  "metadataSource": "https://en.wikipedia.org/wiki/Sonic_the_Hedgehog:_The_Movie"
+  "metadataSource": "https://en.wikipedia.org/wiki/Sonic_the_Hedgehog:_The_Movie",
+  "imdbId": "tt0237765",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0237765/",
+  "animationStyle": "2d"
 }

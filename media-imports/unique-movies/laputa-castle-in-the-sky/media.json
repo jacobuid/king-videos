@@ -6,9 +6,9 @@
   "year": 1986,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Fantasy"
+    "Cartoon",
+    "Family"
   ],
   "duration": 7473,
   "video": "05 - Laputa Castle in the Sky (1986).mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Castle_in_the_Sky",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/castle_in_the_sky"
+  "ratingSource": "https://www.rottentomatoes.com/m/castle_in_the_sky",
+  "imdbId": "tt0092067",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0092067/",
+  "animationStyle": "2d"
 }

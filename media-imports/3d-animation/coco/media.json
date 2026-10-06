@@ -6,10 +6,9 @@
   "year": 2017,
   "category": "movie",
   "genres": [
+    "Adventure",
     "Animation",
-    "Fantasy",
-    "Family",
-    "Music"
+    "Drama"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Coco [720p].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Coco_(2017_film)",
-  "sourceFolder": "Coco (2017)"
+  "sourceFolder": "Coco (2017)",
+  "imdbId": "tt2380307",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt2380307/",
+  "animationStyle": "3d"
 }

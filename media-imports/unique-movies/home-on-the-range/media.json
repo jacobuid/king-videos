@@ -6,7 +6,9 @@
   "year": 2004,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Adventure",
+    "Cartoon",
+    "Comedy"
   ],
   "duration": 4571,
   "video": "Home On The Range.mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Home_on_the_Range_(2004_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://movies.disney.com/home-on-the-range"
+  "ratingSource": "https://movies.disney.com/home-on-the-range",
+  "imdbId": "tt0299172",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0299172/",
+  "animationStyle": "2d"
 }

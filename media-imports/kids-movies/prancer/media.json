@@ -6,8 +6,9 @@
   "date": null,
   "description": "Prancer is a 1989 Christmas fantasy drama film directed by John Hancock, written by Greg Taylor, and starring Rebecca Harrell, Sam Elliott, Cloris Leachman, Abe Vigoda, Rutanya Alda, John Joseph Duda, and Ariana Richards.  The plot follows a young girl who finds a reindeer she believes is Prancer, one of Santa Claus ’s fabled helpers.",
   "genres": [
-    "Live Action",
+    "Drama",
     "Family",
+    "Fantasy",
     "Classic"
   ],
   "duration": 6191,
@@ -18,5 +19,12 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Prancer_(film)",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/prancer"
+  "ratingSource": "https://www.rottentomatoes.com/m/prancer",
+  "imdbId": "tt0098115",
+  "imdbGenres": [
+    "Drama",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0098115/"
 }

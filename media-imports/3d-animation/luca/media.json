@@ -6,10 +6,9 @@
   "year": 2021,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Luca.2021.720p.BluRay.x264.AAC-[YTS.MX].mp4",
   "thumbnail": "luca.jpg",
   "metadataSource": "https://en.wikipedia.org/wiki/Luca_(2021_film)",
-  "sourceFolder": "Luca (2021)"
+  "sourceFolder": "Luca (2021)",
+  "imdbId": "tt12801262",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt12801262/",
+  "animationStyle": "3d"
 }

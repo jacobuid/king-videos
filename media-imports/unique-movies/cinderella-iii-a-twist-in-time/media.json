@@ -6,8 +6,9 @@
   "year": 2007,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Family"
   ],
   "duration": 4256,
   "video": "Cinderella III - A Twist in Time.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Cinderella_III%3A_A_Twist_in_Time",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/cinderella_iii_a_twist_in_time"
+  "ratingSource": "https://www.rottentomatoes.com/m/cinderella_iii_a_twist_in_time",
+  "imdbId": "tt0465940",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0465940/",
+  "animationStyle": "2d"
 }

@@ -6,8 +6,9 @@
   "year": 1974,
   "date": null,
   "genres": [
-    "Live Action",
     "Comedy",
+    "Family",
+    "Fantasy",
     "Classic"
   ],
   "duration": 5093,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Herbie_Rides_Again",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/herbie-rides-again"
+  "ratingSource": "https://movies.disney.com/herbie-rides-again",
+  "imdbId": "tt0071607",
+  "imdbGenres": [
+    "Comedy",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0071607/"
 }

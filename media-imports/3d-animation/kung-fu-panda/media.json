@@ -6,10 +6,9 @@
   "year": 2008,
   "category": "movie",
   "genres": [
-    "Animation",
     "Action",
-    "Comedy",
-    "Family"
+    "Adventure",
+    "Animation"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Kung.Fu.Panda.2008.720p.BrRip.x264.YIFY.mp4",
   "thumbnail": "1120940.jpg",
   "metadataSource": "https://en.wikipedia.org/wiki/Kung_Fu_Panda_(film)",
-  "sourceFolder": "Kung Fu Panda (2008)"
+  "sourceFolder": "Kung Fu Panda (2008)",
+  "imdbId": "tt0441773",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0441773/",
+  "animationStyle": "3d"
 }

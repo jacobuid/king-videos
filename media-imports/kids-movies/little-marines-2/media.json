@@ -6,7 +6,8 @@
   "date": null,
   "description": "The young adventurers return for another adventure.",
   "genres": [
-    "Live Action",
+    "Action",
+    "Adventure",
     "Family"
   ],
   "duration": 5214,
@@ -16,5 +17,12 @@
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Marines\\LittleMarines2.mp4",
   "processing": "unchanged",
   "metadataSource": "https://www.imdb.com/title/tt0380501/",
-  "thumbnailSource": "Little Marines 2.png"
+  "thumbnailSource": "Little Marines 2.png",
+  "imdbId": "tt0380501",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0380501/"
 }

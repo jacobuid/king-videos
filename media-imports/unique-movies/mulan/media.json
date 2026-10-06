@@ -6,9 +6,9 @@
   "year": 1998,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Action"
+    "Cartoon",
+    "Comedy"
   ],
   "duration": 5270,
   "video": "Mulan (1998).mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Mulan_(1998_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/mulan"
+  "ratingSource": "https://movies.disney.com/mulan",
+  "imdbId": "tt0120762",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0120762/",
+  "animationStyle": "2d"
 }

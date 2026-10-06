@@ -6,7 +6,8 @@
   "date": null,
   "description": "Three young martial artists travel to Japan and help their grandfather face an old rival.",
   "genres": [
-    "Live Action",
+    "Action",
+    "Comedy",
     "Family"
   ],
   "duration": 5608,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/3_Ninjas_Kick_Back",
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/3_ninjas_kick_back",
-  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\3 Ninjas Kick Back (1994)\\3 Ninjas Kick Back [720p].srt"
+  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\3 Ninjas Kick Back (1994)\\3 Ninjas Kick Back [720p].srt",
+  "imdbId": "tt0109015",
+  "imdbGenres": [
+    "Action",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0109015/"
 }

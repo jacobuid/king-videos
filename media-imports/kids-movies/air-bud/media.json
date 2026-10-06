@@ -6,7 +6,8 @@
   "date": null,
   "description": "Air Bud is a 1997 sports comedy-drama film directed by Charles Martin Smith and written by Paul Tamasy and Aaron Mendelsohn.",
   "genres": [
-    "Live Action",
+    "Comedy",
+    "Drama",
     "Family"
   ],
   "duration": 5870,
@@ -17,5 +18,12 @@
   "processing": "encode",
   "metadataSource": "https://en.wikipedia.org/wiki/Air_Bud",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/air_bud"
+  "ratingSource": "https://www.rottentomatoes.com/m/air_bud",
+  "imdbId": "tt0118570",
+  "imdbGenres": [
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0118570/"
 }

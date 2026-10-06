@@ -6,9 +6,9 @@
   "year": 2000,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Comedy",
-    "Family"
+    "Comedy"
   ],
   "duration": 4624,
   "video": "The Tigger Movie.mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Tigger_Movie",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-tigger-movie"
+  "ratingSource": "https://movies.disney.com/the-tigger-movie",
+  "imdbId": "tt0220099",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0220099/",
+  "animationStyle": "2d"
 }

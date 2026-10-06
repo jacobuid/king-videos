@@ -6,8 +6,9 @@
   "year": 2008,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Comedy"
   ],
   "duration": 4653,
   "video": "The Little Mermaid - Ariel's Beginning.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Little_Mermaid%3A_Ariel's_Beginning",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-little-mermaid-ariels-beginning"
+  "ratingSource": "https://movies.disney.com/the-little-mermaid-ariels-beginning",
+  "imdbId": "tt0969647",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0969647/",
+  "animationStyle": "2d"
 }

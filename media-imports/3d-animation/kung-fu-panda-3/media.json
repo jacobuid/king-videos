@@ -6,10 +6,9 @@
   "year": 2016,
   "category": "movie",
   "genres": [
-    "Animation",
     "Action",
-    "Comedy",
-    "Family"
+    "Adventure",
+    "Animation"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Kung.Fu.Panda.3.2016.720p.BluRay.x264-[YTS.AG].mp4",
   "thumbnail": "kfpanda3.jpg",
   "metadataSource": "https://en.wikipedia.org/wiki/Kung_Fu_Panda_3",
-  "sourceFolder": "Kung Fu Panda 3 (2016)"
+  "sourceFolder": "Kung Fu Panda 3 (2016)",
+  "imdbId": "tt2267968",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt2267968/",
+  "animationStyle": "3d"
 }

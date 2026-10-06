@@ -6,9 +6,9 @@
   "year": 1953,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Fantasy"
+    "Cartoon",
+    "Family"
   ],
   "duration": 4607,
   "video": "Peter Pan (1953).mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Peter_Pan_(1953_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/peter-pan"
+  "ratingSource": "https://movies.disney.com/peter-pan",
+  "imdbId": "tt0046183",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0046183/",
+  "animationStyle": "2d"
 }

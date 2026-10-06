@@ -6,7 +6,8 @@
   "date": null,
   "description": "3 Ninjas is a 1992 American martial arts comedy film directed by Jon Turteltaub and starring Victor Wong, Michael Treanor, Max Elliott Slade and Chad Power.",
   "genres": [
-    "Live Action",
+    "Action",
+    "Comedy",
     "Family"
   ],
   "duration": 5745,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/3_Ninjas_(film)",
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/3_ninjas",
-  "thumbnailSource": "3 Ninjas.png"
+  "thumbnailSource": "3 Ninjas.png",
+  "imdbId": "tt0103596",
+  "imdbGenres": [
+    "Action",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0103596/"
 }

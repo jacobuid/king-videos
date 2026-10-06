@@ -6,6 +6,7 @@
   "year": 2005,
   "date": null,
   "genres": [
+    "Adventure",
     "Animation",
     "Comedy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Chicken_Little_(2005_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/chicken-little"
+  "ratingSource": "https://movies.disney.com/chicken-little",
+  "imdbId": "tt0371606",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0371606/",
+  "animationStyle": "3d"
 }

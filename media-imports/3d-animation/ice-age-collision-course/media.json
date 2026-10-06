@@ -6,10 +6,9 @@
   "year": 2016,
   "category": "movie",
   "genres": [
-    "Animation",
+    "Action",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Ice.Age.Collision.Course.2016.720p.BluRay.x264-[YTS.AG].mp4",
   "thumbnail": "0w2ogl.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Ice_Age:_Collision_Course",
-  "sourceFolder": "Ice Age 5 - Collision Course (2016)"
+  "sourceFolder": "Ice Age 5 - Collision Course (2016)",
+  "imdbId": "tt3416828",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt3416828/",
+  "animationStyle": "3d"
 }

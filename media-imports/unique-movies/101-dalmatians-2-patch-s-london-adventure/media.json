@@ -6,10 +6,9 @@
   "year": 2003,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Cartoon",
+    "Comedy"
   ],
   "duration": 4247,
   "video": "101 Dalmatians 2 - Patch's London Adventure.mp4",
@@ -19,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/101_Dalmatians_II%3A_Patch's_London_Adventure",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/101_dalmatians_ii_patchs_london_adventure"
+  "ratingSource": "https://www.rottentomatoes.com/m/101_dalmatians_ii_patchs_london_adventure",
+  "imdbId": "tt0324941",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0324941/",
+  "animationStyle": "2d"
 }

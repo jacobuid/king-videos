@@ -6,7 +6,8 @@
   "date": null,
   "description": "The Sound of Music is a 1965 American musical drama film produced and directed by Robert Wise from a screenplay written by Ernest Lehman.",
   "genres": [
-    "Live Action",
+    "Biography",
+    "Drama",
     "Family",
     "Classic"
   ],
@@ -18,5 +19,12 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Sound_of_Music_(film)",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Sound of Music (1965)\\The.Sound.of.Music.1965.1080p.BRrip.x264.YIFY.srt",
-  "thumbnailSource": "The Sound of Music (1965).jpg"
+  "thumbnailSource": "The Sound of Music (1965).jpg",
+  "imdbId": "tt0059742",
+  "imdbGenres": [
+    "Biography",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0059742/"
 }

@@ -6,7 +6,8 @@
   "date": null,
   "description": "Annie is a 1982 American musical comedy-drama film based on the 1977 Broadway musical of the same name by Charles Strouse, Martin Charnin and Thomas Meehan, which in turn is based on the Little Orphan Annie comic strip created by Harold Gray.",
   "genres": [
-    "Live Action",
+    "Comedy",
+    "Drama",
     "Family",
     "Classic"
   ],
@@ -19,5 +20,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Annie_(1982_film)",
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/annie",
-  "thumbnailSource": "annie.png"
+  "thumbnailSource": "annie.png",
+  "imdbId": "tt0083564",
+  "imdbGenres": [
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0083564/"
 }

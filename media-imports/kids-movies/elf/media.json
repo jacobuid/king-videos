@@ -6,7 +6,8 @@
   "date": null,
   "description": "Elf is a 2003 American Christmas comedy film directed by Jon Favreau and written by David Berenbaum.",
   "genres": [
-    "Live Action",
+    "Adventure",
+    "Comedy",
     "Family"
   ],
   "duration": 5803,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Elf_(film)",
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/elf",
-  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Elf (2003)\\Elf [720p].srt"
+  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Elf (2003)\\Elf [720p].srt",
+  "imdbId": "tt0319343",
+  "imdbGenres": [
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0319343/"
 }

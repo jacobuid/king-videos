@@ -6,7 +6,8 @@
   "date": null,
   "description": "The Mighty Ducks is a 1992 American sports comedy drama film directed by Stephen Herek and written by Steven Brill.",
   "genres": [
-    "Live Action",
+    "Comedy",
+    "Drama",
     "Family"
   ],
   "duration": 5957,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Mighty_Ducks_(film)",
   "rating": "PG",
   "ratingSource": "https://movies.disney.com/the-mighty-ducks",
-  "thumbnailSource": "The Mighty Ducks (1992).webp"
+  "thumbnailSource": "The Mighty Ducks (1992).webp",
+  "imdbId": "tt0104868",
+  "imdbGenres": [
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0104868/"
 }

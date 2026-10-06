@@ -6,10 +6,9 @@
   "year": 2006,
   "category": "movie",
   "genres": [
+    "Adventure",
     "Animation",
-    "Comedy",
-    "Family",
-    "Sports"
+    "Comedy"
   ],
   "rating": "G",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Cars.2006.720p.BrRip.x264.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Cars_(film)",
-  "sourceFolder": "Cars (2006)"
+  "sourceFolder": "Cars (2006)",
+  "imdbId": "tt0317219",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0317219/",
+  "animationStyle": "3d"
 }

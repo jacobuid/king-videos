@@ -6,10 +6,9 @@
   "year": 2000,
   "date": null,
   "genres": [
-    "Animation",
     "Adventure",
-    "Family",
-    "Action"
+    "Animation",
+    "Drama"
   ],
   "duration": 4723,
   "video": "Dinosaur.mp4",
@@ -19,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Dinosaur_(2000_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://movies.disney.com/dinosaur"
+  "ratingSource": "https://movies.disney.com/dinosaur",
+  "imdbId": "tt0130623",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0130623/",
+  "animationStyle": "3d"
 }

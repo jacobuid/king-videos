@@ -6,7 +6,9 @@
   "year": 1957,
   "date": null,
   "genres": [
-    "Live Action",
+    "Adventure",
+    "Drama",
+    "Family",
     "Classic"
   ],
   "duration": 5035,
@@ -17,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Old_Yeller",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/old-yeller"
+  "ratingSource": "https://movies.disney.com/old-yeller",
+  "imdbId": "tt0050798",
+  "imdbGenres": [
+    "Adventure",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0050798/"
 }

@@ -6,9 +6,9 @@
   "year": 1990,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Fantasy"
+    "Cartoon",
+    "Comedy"
   ],
   "duration": 4198,
   "video": "Duck Tales - The Movie.mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/DuckTales_the_Movie%3A_Treasure_of_the_Lost_Lamp",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/ducktales-the-movie-treasure-of-the-lost-lamp"
+  "ratingSource": "https://movies.disney.com/ducktales-the-movie-treasure-of-the-lost-lamp",
+  "imdbId": "tt0099472",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0099472/",
+  "animationStyle": "2d"
 }

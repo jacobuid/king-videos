@@ -6,8 +6,9 @@
   "date": null,
   "description": "Alvin and the Chipmunks: The Squeakquel is a 2009 American musical comedy film directed by Betty Thomas and written by Jon Vitti, Jonathan Aibel, and Glenn Berger.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Adventure",
+    "Animation",
+    "Comedy"
   ],
   "duration": 5098,
   "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\alvin-and-the-chipmunks-the-squeakquel\\alvin-and-the-chipmunks-the-squeakquel.mp4",
@@ -16,5 +17,13 @@
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Alvin and the Chipmunks 2 - The Squeakquel (2009)\\Alvin and the Chipmunks 2 - The Squeakquel [720p].avi",
   "processing": "encode",
   "metadataSource": "https://en.wikipedia.org/wiki/Alvin_and_the_Chipmunks%3A_The_Squeakquel",
-  "thumbnailSource": "alvin2.webp"
+  "thumbnailSource": "alvin2.webp",
+  "imdbId": "tt1231580",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1231580/",
+  "animationStyle": "3d"
 }

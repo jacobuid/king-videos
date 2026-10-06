@@ -6,8 +6,9 @@
   "year": 1954,
   "date": null,
   "genres": [
-    "Live Action",
     "Adventure",
+    "Drama",
+    "Family",
     "Classic"
   ],
   "duration": 7614,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/20%2C000_Leagues_Under_the_Sea_(1954_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/20000-leagues-under-the-sea"
+  "ratingSource": "https://movies.disney.com/20000-leagues-under-the-sea",
+  "imdbId": "tt0046672",
+  "imdbGenres": [
+    "Adventure",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0046672/"
 }

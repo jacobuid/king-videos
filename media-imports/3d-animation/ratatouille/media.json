@@ -6,10 +6,9 @@
   "year": 2007,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "G",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Ratatouille.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Ratatouille_(film)",
-  "sourceFolder": "Ratatouille (2007)"
+  "sourceFolder": "Ratatouille (2007)",
+  "imdbId": "tt0382932",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0382932/",
+  "animationStyle": "3d"
 }

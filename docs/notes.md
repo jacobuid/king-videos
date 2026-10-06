@@ -1,6 +1,8 @@
 
 Purpose is to get the new movies encoded and uploaded to backblaze B2.
 
+Movie story genres come from the title and year matched IMDb title dataset, using its supplied genres (up to three). Do not guess additional story genres or truncate metadata during sync. Keep IMDb IDs and source URLs in manifests. Map IMDb `Sci-Fi` to `Science Fiction`, `Sport` to `Sports`, and its `Animation` to the reviewed 3D/2D classification below. `Classic` remains a separate KINGFLIX classification.
+
 KINGFLIX genre definitions: `Animation` is for 3D animation; `Cartoon` is for 2D animation. Classify hybrid titles by their main animation style and preserve other genre tags. Documentary featurettes use `Documentary`.
 
 `Classic` replaces `Classic Television` and applies to non-animated movies and TV shows released before 1990. Titles tagged `Animation` or `Cartoon` do not qualify.

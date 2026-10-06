@@ -6,10 +6,9 @@
   "year": 2016,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Family",
-    "Fantasy"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Moana[720p].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Moana_(2016_film)",
-  "sourceFolder": "Moana (2016)"
+  "sourceFolder": "Moana (2016)",
+  "imdbId": "tt3521164",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt3521164/",
+  "animationStyle": "3d"
 }

@@ -6,8 +6,9 @@
   "date": null,
   "description": "Spy Kids 3-D: Game Over is a 2003 American 3D spy action comedy film co-produced, written, shot, edited, composed, and directed by Robert Rodriguez.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Action",
+    "Adventure",
+    "Comedy"
   ],
   "duration": 4957,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Spy Kids 3 Game Over (2003)\\Spy Kids 3 Game Over [720p].mp4",
@@ -17,5 +18,12 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Spy_Kids_3-D%3A_Game_Over",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Spy Kids 3 Game Over (2003)\\Spy Kids 3 Game Over [720p].srt",
-  "thumbnailSource": "Spy Kids 3.jpg"
+  "thumbnailSource": "Spy Kids 3.jpg",
+  "imdbId": "tt0338459",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0338459/"
 }

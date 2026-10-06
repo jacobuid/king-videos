@@ -6,6 +6,7 @@
   "year": 1998,
   "date": null,
   "genres": [
+    "Adventure",
     "Animation",
     "Comedy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/A_Bug's_Life",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/a-bugs-life"
+  "ratingSource": "https://movies.disney.com/a-bugs-life",
+  "imdbId": "tt0120623",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0120623/",
+  "animationStyle": "3d"
 }

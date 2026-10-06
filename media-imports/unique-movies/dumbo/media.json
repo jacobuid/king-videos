@@ -6,8 +6,9 @@
   "year": 1941,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Drama"
   ],
   "duration": 3837,
   "video": "Dumbo (1941).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Dumbo",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/dumbo"
+  "ratingSource": "https://movies.disney.com/dumbo",
+  "imdbId": "tt0033563",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0033563/",
+  "animationStyle": "2d"
 }

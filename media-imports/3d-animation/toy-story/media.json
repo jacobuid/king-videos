@@ -6,10 +6,9 @@
   "year": 1995,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "G",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Toy.Story.1995.720p.BluRay.x264.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Toy_Story",
-  "sourceFolder": "Toy Story (1995)"
+  "sourceFolder": "Toy Story (1995)",
+  "imdbId": "tt0114709",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0114709/",
+  "animationStyle": "3d"
 }

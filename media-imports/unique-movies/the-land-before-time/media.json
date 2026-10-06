@@ -6,8 +6,9 @@
   "year": 1988,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Adventure"
+    "Drama"
   ],
   "duration": 4129,
   "video": "The Land Before Time (1988).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Land_Before_Time_(film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/land_before_time"
+  "ratingSource": "https://www.rottentomatoes.com/m/land_before_time",
+  "imdbId": "tt0095489",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0095489/",
+  "animationStyle": "2d"
 }

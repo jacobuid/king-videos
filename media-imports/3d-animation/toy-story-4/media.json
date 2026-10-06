@@ -6,10 +6,9 @@
   "year": 2019,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "G",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Toy.Story.4.2019.720p.BluRay.x264-[YTS.LT].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Toy_Story_4",
-  "sourceFolder": "Toy Story 4 (2019) [BluRay] [720p] [YTS.LT]"
+  "sourceFolder": "Toy Story 4 (2019) [BluRay] [720p] [YTS.LT]",
+  "imdbId": "tt1979376",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1979376/",
+  "animationStyle": "3d"
 }

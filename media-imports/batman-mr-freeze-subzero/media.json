@@ -6,10 +6,9 @@
   "year": 1998,
   "category": "movie",
   "genres": [
-    "Cartoon",
     "Action",
-    "Adventure",
-    "Superhero"
+    "Cartoon",
+    "Crime"
   ],
   "rating": "NR",
   "minAge": 12,
@@ -18,5 +17,13 @@
   "video": "Batman and Mr. Freeze - Sub-Zero (1998 - 1080p BluRay).mp4",
   "thumbnail": "thumb.jpg",
   "metadataSource": "https://en.wikipedia.org/wiki/Batman_%26_Mr._Freeze:_SubZero",
-  "sourceFolder": "Batman and Mr. Freeze"
+  "sourceFolder": "Batman and Mr. Freeze",
+  "imdbId": "tt0143127",
+  "imdbGenres": [
+    "Action",
+    "Animation",
+    "Crime"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0143127/",
+  "animationStyle": "2d"
 }

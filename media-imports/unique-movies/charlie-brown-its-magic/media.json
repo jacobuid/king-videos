@@ -6,7 +6,9 @@
   "year": 1981,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Cartoon",
+    "Comedy",
+    "Family"
   ],
   "duration": 1460,
   "video": "Charlie Brown - Its Magic.mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/It's_Magic%2C_Charlie_Brown",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "NR",
-  "ratingSource": "https://newportlibraryri.org/wp-content/uploads/2020/09/unlv_av_cataloging.pdf"
+  "ratingSource": "https://newportlibraryri.org/wp-content/uploads/2020/09/unlv_av_cataloging.pdf",
+  "imdbId": "tt0082570",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0082570/",
+  "animationStyle": "2d"
 }

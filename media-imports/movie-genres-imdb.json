@@ -1,0 +1,4299 @@
+{
+  "sonic-the-hedgehog-ova": {
+    "imdbId": "tt0237765",
+    "type": "tvMiniSeries",
+    "title": "Sonic the Hedgehog: The Movie",
+    "originalTitle": "Sonikku za hejjihoggu",
+    "year": 1996,
+    "runtime": 60,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0237765/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.835Z",
+    "animationStyle": "2d"
+  },
+  "rainbow-brite-and-the-star-stealer": {
+    "imdbId": "tt0089877",
+    "type": "movie",
+    "title": "Rainbow Brite and the Star Stealer",
+    "originalTitle": "Rainbow Brite and the Star Stealer",
+    "year": 1985,
+    "runtime": 85,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0089877/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.836Z",
+    "animationStyle": "2d"
+  },
+  "animalympics": {
+    "imdbId": "tt0078780",
+    "type": "movie",
+    "title": "Animalympics",
+    "originalTitle": "Animalympics",
+    "year": 1980,
+    "runtime": 78,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0078780/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.836Z",
+    "animationStyle": "2d"
+  },
+  "gigi-and-the-fountain-of-youth": {
+    "imdbId": "tt0160507",
+    "type": "video",
+    "title": "Gigi and the Fountain of Youth",
+    "originalTitle": "Mahô no purinsesu Minkî Momo: Yume no naka no rondo",
+    "year": 1985,
+    "runtime": 80,
+    "genres": [
+      "Animation",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0160507/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.836Z",
+    "animationStyle": "2d"
+  },
+  "mickeys-christmas-carol": {
+    "imdbId": "tt0085936",
+    "type": "short",
+    "title": "Mickey's Christmas Carol",
+    "originalTitle": "Mickey's Christmas Carol",
+    "year": 1983,
+    "runtime": 26,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0085936/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.836Z",
+    "animationStyle": "2d"
+  },
+  "the-prince-and-the-pauper-1990": {
+    "imdbId": "tt0100409",
+    "type": "short",
+    "title": "The Prince and the Pauper",
+    "originalTitle": "The Prince and the Pauper",
+    "year": 1990,
+    "runtime": 25,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0100409/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.836Z",
+    "animationStyle": "2d"
+  },
+  "epic-2013": {
+    "imdbId": "tt0848537",
+    "type": "movie",
+    "title": "Epic",
+    "originalTitle": "Epic",
+    "year": 2013,
+    "runtime": 102,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0848537/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "cars-2": {
+    "imdbId": "tt1216475",
+    "type": "movie",
+    "title": "Cars 2",
+    "originalTitle": "Cars 2",
+    "year": 2011,
+    "runtime": 106,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1216475/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "big-hero-6": {
+    "imdbId": "tt2245084",
+    "type": "movie",
+    "title": "Big Hero 6",
+    "originalTitle": "Big Hero 6",
+    "year": 2014,
+    "runtime": 102,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt2245084/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "brave": {
+    "imdbId": "tt1217209",
+    "type": "movie",
+    "title": "Brave",
+    "originalTitle": "Brave",
+    "year": 2012,
+    "runtime": 93,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt1217209/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "cars": {
+    "imdbId": "tt0317219",
+    "type": "movie",
+    "title": "Cars",
+    "originalTitle": "Cars",
+    "year": 2006,
+    "runtime": 116,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0317219/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "how-to-train-your-dragon": {
+    "imdbId": "tt0892769",
+    "type": "movie",
+    "title": "How to Train Your Dragon",
+    "originalTitle": "How to Train Your Dragon",
+    "year": 2010,
+    "runtime": 98,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0892769/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "finding-dory": {
+    "imdbId": "tt2277860",
+    "type": "movie",
+    "title": "Finding Dory",
+    "originalTitle": "Finding Dory",
+    "year": 2016,
+    "runtime": 97,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt2277860/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "finding-nemo": {
+    "imdbId": "tt0266543",
+    "type": "movie",
+    "title": "Finding Nemo",
+    "originalTitle": "Finding Nemo",
+    "year": 2003,
+    "runtime": 100,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0266543/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "horton-hears-a-who": {
+    "imdbId": "tt0451079",
+    "type": "movie",
+    "title": "Horton Hears a Who!",
+    "originalTitle": "Horton Hears a Who!",
+    "year": 2008,
+    "runtime": 86,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0451079/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "frozen-2": {
+    "imdbId": "tt4520988",
+    "type": "movie",
+    "title": "Frozen II",
+    "originalTitle": "Frozen II",
+    "year": 2019,
+    "runtime": 103,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt4520988/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "frozen": {
+    "imdbId": "tt2294629",
+    "type": "movie",
+    "title": "Frozen",
+    "originalTitle": "Frozen",
+    "year": 2013,
+    "runtime": 102,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt2294629/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "ice-age": {
+    "imdbId": "tt0268380",
+    "type": "movie",
+    "title": "Ice Age",
+    "originalTitle": "Ice Age",
+    "year": 2002,
+    "runtime": 81,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0268380/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "ice-age-the-meltdown": {
+    "imdbId": "tt0438097",
+    "type": "movie",
+    "title": "Ice Age: The Meltdown",
+    "originalTitle": "Ice Age: The Meltdown",
+    "year": 2006,
+    "runtime": 91,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0438097/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "ice-age-collision-course": {
+    "imdbId": "tt3416828",
+    "type": "movie",
+    "title": "Ice Age: Collision Course",
+    "originalTitle": "Ice Age: Collision Course",
+    "year": 2016,
+    "runtime": 94,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt3416828/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "ice-age-continental-drift": {
+    "imdbId": "tt1667889",
+    "type": "movie",
+    "title": "Ice Age: Continental Drift",
+    "originalTitle": "Ice Age: Continental Drift",
+    "year": 2012,
+    "runtime": 88,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1667889/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "ice-age-dawn-of-the-dinosaurs": {
+    "imdbId": "tt1080016",
+    "type": "movie",
+    "title": "Ice Age: Dawn of the Dinosaurs",
+    "originalTitle": "Ice Age: Dawn of the Dinosaurs",
+    "year": 2009,
+    "runtime": 94,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1080016/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "how-to-train-your-dragon-2": {
+    "imdbId": "tt1646971",
+    "type": "movie",
+    "title": "How to Train Your Dragon 2",
+    "originalTitle": "How to Train Your Dragon 2",
+    "year": 2014,
+    "runtime": 102,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt1646971/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "kung-fu-panda": {
+    "imdbId": "tt0441773",
+    "type": "movie",
+    "title": "Kung Fu Panda",
+    "originalTitle": "Kung Fu Panda",
+    "year": 2008,
+    "runtime": 92,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0441773/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "leap-2016": {
+    "imdbId": "tt2261287",
+    "type": "movie",
+    "title": "Leap!",
+    "originalTitle": "Ballerina",
+    "year": 2016,
+    "runtime": 89,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt2261287/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "kung-fu-panda-2": {
+    "imdbId": "tt1302011",
+    "type": "movie",
+    "title": "Kung Fu Panda 2",
+    "originalTitle": "Kung Fu Panda 2",
+    "year": 2011,
+    "runtime": 90,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt1302011/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "kung-fu-panda-3": {
+    "imdbId": "tt2267968",
+    "type": "movie",
+    "title": "Kung Fu Panda 3",
+    "originalTitle": "Kung Fu Panda 3",
+    "year": 2016,
+    "runtime": 95,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt2267968/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "inside-out": {
+    "imdbId": "tt2096673",
+    "type": "movie",
+    "title": "Inside Out",
+    "originalTitle": "Inside Out",
+    "year": 2015,
+    "runtime": 95,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt2096673/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "kung-fu-panda-4": {
+    "imdbId": "tt21692408",
+    "type": "movie",
+    "title": "Kung Fu Panda 4",
+    "originalTitle": "Kung Fu Panda 4",
+    "year": 2024,
+    "runtime": 94,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt21692408/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "luca": {
+    "imdbId": "tt12801262",
+    "type": "movie",
+    "title": "Luca",
+    "originalTitle": "Luca",
+    "year": 2021,
+    "runtime": 95,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt12801262/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "coco": {
+    "imdbId": "tt2380307",
+    "type": "movie",
+    "title": "Coco",
+    "originalTitle": "Coco",
+    "year": 2017,
+    "runtime": 105,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt2380307/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "monsters-inc": {
+    "imdbId": "tt0198781",
+    "type": "movie",
+    "title": "Monsters, Inc.",
+    "originalTitle": "Monsters, Inc.",
+    "year": 2001,
+    "runtime": 92,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0198781/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "planes": {
+    "imdbId": "tt1691917",
+    "type": "movie",
+    "title": "Planes",
+    "originalTitle": "Planes",
+    "year": 2013,
+    "runtime": 92,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1691917/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "monsters-university": {
+    "imdbId": "tt1453405",
+    "type": "movie",
+    "title": "Monsters University",
+    "originalTitle": "Monsters University",
+    "year": 2013,
+    "runtime": 104,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1453405/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "raya-and-the-last-dragon": {
+    "imdbId": "tt5109280",
+    "type": "movie",
+    "title": "Raya and the Last Dragon",
+    "originalTitle": "Raya and the Last Dragon",
+    "year": 2021,
+    "runtime": 107,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt5109280/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "moana-2": {
+    "imdbId": "tt13622970",
+    "type": "movie",
+    "title": "Moana 2",
+    "originalTitle": "Moana 2",
+    "year": 2024,
+    "runtime": 100,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt13622970/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "rio-2": {
+    "imdbId": "tt2357291",
+    "type": "movie",
+    "title": "Rio 2",
+    "originalTitle": "Rio 2",
+    "year": 2014,
+    "runtime": 101,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt2357291/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "rio": {
+    "imdbId": "tt1436562",
+    "type": "movie",
+    "title": "Rio",
+    "originalTitle": "Rio",
+    "year": 2011,
+    "runtime": 96,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1436562/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "moana": {
+    "imdbId": "tt3521164",
+    "type": "movie",
+    "title": "Moana",
+    "originalTitle": "Moana",
+    "year": 2016,
+    "runtime": 107,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt3521164/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "the-good-dinosaur": {
+    "imdbId": "tt1979388",
+    "type": "movie",
+    "title": "The Good Dinosaur",
+    "originalTitle": "The Good Dinosaur",
+    "year": 2015,
+    "runtime": 93,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt1979388/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "the-lego-movie": {
+    "imdbId": "tt1490017",
+    "type": "movie",
+    "title": "The Lego Movie",
+    "originalTitle": "The LEGO Movie",
+    "year": 2014,
+    "runtime": 100,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt1490017/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "the-croods-a-new-age": {
+    "imdbId": "tt2850386",
+    "type": "movie",
+    "title": "The Croods: A New Age",
+    "originalTitle": "The Croods: A New Age",
+    "year": 2020,
+    "runtime": 95,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt2850386/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "the-incredibles": {
+    "imdbId": "tt0317705",
+    "type": "movie",
+    "title": "The Incredibles",
+    "originalTitle": "The Incredibles",
+    "year": 2004,
+    "runtime": 115,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0317705/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "the-lorax": {
+    "imdbId": "tt1482459",
+    "type": "movie",
+    "title": "The Lorax",
+    "originalTitle": "The Lorax",
+    "year": 2012,
+    "runtime": 86,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1482459/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "tangled": {
+    "imdbId": "tt0398286",
+    "type": "movie",
+    "title": "Tangled",
+    "originalTitle": "Tangled",
+    "year": 2010,
+    "runtime": 100,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0398286/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "the-lego-movie-2": {
+    "imdbId": "tt3513498",
+    "type": "movie",
+    "title": "The Lego Movie 2: The Second Part",
+    "originalTitle": "The LEGO Movie 2: The Second Part",
+    "year": 2019,
+    "runtime": 107,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt3513498/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "toy-story-2": {
+    "imdbId": "tt0120363",
+    "type": "movie",
+    "title": "Toy Story 2",
+    "originalTitle": "Toy Story 2",
+    "year": 1999,
+    "runtime": 92,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0120363/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "the-tale-of-despereaux": {
+    "imdbId": "tt0420238",
+    "type": "movie",
+    "title": "The Tale of Despereaux",
+    "originalTitle": "The Tale of Despereaux",
+    "year": 2008,
+    "runtime": 93,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0420238/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "toy-story-3": {
+    "imdbId": "tt0435761",
+    "type": "movie",
+    "title": "Toy Story 3",
+    "originalTitle": "Toy Story 3",
+    "year": 2010,
+    "runtime": 103,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0435761/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "wall-e": {
+    "imdbId": "tt0910970",
+    "type": "movie",
+    "title": "WALL·E",
+    "originalTitle": "WALL·E",
+    "year": 2008,
+    "runtime": 98,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0910970/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "toy-story-4": {
+    "imdbId": "tt1979376",
+    "type": "movie",
+    "title": "Toy Story 4",
+    "originalTitle": "Toy Story 4",
+    "year": 2019,
+    "runtime": 100,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1979376/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "up": {
+    "imdbId": "tt1049413",
+    "type": "movie",
+    "title": "Up",
+    "originalTitle": "Up",
+    "year": 2009,
+    "runtime": 96,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1049413/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "yogi-bear": {
+    "imdbId": "tt1302067",
+    "type": "movie",
+    "title": "Yogi Bear",
+    "originalTitle": "Yogi Bear",
+    "year": 2010,
+    "runtime": 80,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1302067/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "wreck-it-ralph": {
+    "imdbId": "tt1772341",
+    "type": "movie",
+    "title": "Wreck-It Ralph",
+    "originalTitle": "Wreck-It Ralph",
+    "year": 2012,
+    "runtime": 101,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1772341/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "zootopia": {
+    "imdbId": "tt2948356",
+    "type": "movie",
+    "title": "Zootopia",
+    "originalTitle": "Zootopia",
+    "year": 2016,
+    "runtime": 108,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt2948356/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "ratatouille": {
+    "imdbId": "tt0382932",
+    "type": "movie",
+    "title": "Ratatouille",
+    "originalTitle": "Ratatouille",
+    "year": 2007,
+    "runtime": 111,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0382932/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "monsters-vs-aliens": {
+    "imdbId": "tt0892782",
+    "type": "movie",
+    "title": "Monsters vs. Aliens",
+    "originalTitle": "Monsters vs Aliens",
+    "year": 2009,
+    "runtime": 94,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0892782/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "how-to-train-your-dragon-the-hidden-world": {
+    "imdbId": "tt2386490",
+    "type": "movie",
+    "title": "How to Train Your Dragon: The Hidden World",
+    "originalTitle": "How to Train Your Dragon: The Hidden World",
+    "year": 2019,
+    "runtime": 104,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt2386490/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "superman-doomsday": {
+    "imdbId": "tt0934706",
+    "type": "video",
+    "title": "Superman: Doomsday",
+    "originalTitle": "Superman: Doomsday",
+    "year": 2007,
+    "runtime": 75,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0934706/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "2d"
+  },
+  "superman-brainiac-attacks": {
+    "imdbId": "tt0800226",
+    "type": "video",
+    "title": "Superman: Brainiac Attacks",
+    "originalTitle": "Superman: Brainiac Attacks",
+    "year": 2006,
+    "runtime": 76,
+    "genres": [
+      "Action",
+      "Animation",
+      "Sci-Fi"
+    ],
+    "source": "https://www.imdb.com/title/tt0800226/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "2d"
+  },
+  "batman-mr-freeze-subzero": {
+    "imdbId": "tt0143127",
+    "type": "video",
+    "title": "Batman & Mr. Freeze: SubZero",
+    "originalTitle": "Batman & Mr. Freeze: SubZero",
+    "year": 1998,
+    "runtime": 70,
+    "genres": [
+      "Action",
+      "Animation",
+      "Crime"
+    ],
+    "source": "https://www.imdb.com/title/tt0143127/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "2d"
+  },
+  "batman-mask-of-the-phantasm": {
+    "imdbId": "tt0106364",
+    "type": "movie",
+    "title": "Batman: Mask of the Phantasm",
+    "originalTitle": "Batman: Mask of the Phantasm",
+    "year": 1993,
+    "runtime": 76,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0106364/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "2d"
+  },
+  "ralph-breaks-the-internet": {
+    "imdbId": "tt5848272",
+    "type": "movie",
+    "title": "Ralph Breaks the Internet",
+    "originalTitle": "Ralph Breaks the Internet",
+    "year": 2018,
+    "runtime": 112,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt5848272/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "madagascar": {
+    "imdbId": "tt0351283",
+    "type": "movie",
+    "title": "Madagascar",
+    "originalTitle": "Madagascar",
+    "year": 2005,
+    "runtime": 86,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0351283/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "cars-3": {
+    "imdbId": "tt3606752",
+    "type": "movie",
+    "title": "Cars 3",
+    "originalTitle": "Cars 3",
+    "year": 2017,
+    "runtime": 102,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt3606752/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "meet-the-robinsons": {
+    "imdbId": "tt0396555",
+    "type": "movie",
+    "title": "Meet the Robinsons",
+    "originalTitle": "Meet the Robinsons",
+    "year": 2007,
+    "runtime": 95,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0396555/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "the-pirate-fairy": {
+    "imdbId": "tt2483260",
+    "type": "video",
+    "title": "Tinker Bell and the Pirate Fairy",
+    "originalTitle": "The Pirate Fairy",
+    "year": 2014,
+    "runtime": 78,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt2483260/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "inside-out-2": {
+    "imdbId": "tt22022452",
+    "type": "movie",
+    "title": "Inside Out 2",
+    "originalTitle": "Inside Out 2",
+    "year": 2024,
+    "runtime": 96,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt22022452/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "toy-story": {
+    "imdbId": "tt0114709",
+    "type": "movie",
+    "title": "Toy Story",
+    "originalTitle": "Toy Story",
+    "year": 1995,
+    "runtime": 81,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0114709/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "tinker-bell": {
+    "imdbId": "tt0823671",
+    "type": "video",
+    "title": "Tinker Bell",
+    "originalTitle": "Tinker Bell",
+    "year": 2008,
+    "runtime": 78,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0823671/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "tinker-bell-great-fairy-rescue": {
+    "imdbId": "tt1216515",
+    "type": "video",
+    "title": "Tinker Bell and the Great Fairy Rescue",
+    "originalTitle": "Tinker Bell and the Great Fairy Rescue",
+    "year": 2010,
+    "runtime": 76,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt1216515/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "tinker-bell-lost-treasure": {
+    "imdbId": "tt1216516",
+    "type": "video",
+    "title": "Tinker Bell and the Lost Treasure",
+    "originalTitle": "Tinker Bell and the Lost Treasure",
+    "year": 2009,
+    "runtime": 81,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt1216516/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "toy-story-5": {
+    "imdbId": "tt29355505",
+    "type": "movie",
+    "title": "Toy Story 5",
+    "originalTitle": "Toy Story 5",
+    "year": 2026,
+    "runtime": 102,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt29355505/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.837Z",
+    "animationStyle": "3d"
+  },
+  "peanuts-we-need-a-blockbuster-charlie-brown": {
+    "imdbId": "tt9381350",
+    "type": "video",
+    "title": "We Need a Blockbuster, Charlie Brown",
+    "originalTitle": "We Need a Blockbuster, Charlie Brown",
+    "year": 2008,
+    "runtime": 14,
+    "genres": [
+      "Documentary",
+      "Short"
+    ],
+    "source": "https://www.imdb.com/title/tt9381350/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z"
+  },
+  "charlie-brown-christmastime-again": {
+    "imdbId": "tt0104534",
+    "title": "It's Christmastime Again, Charlie Brown",
+    "year": 1992,
+    "type": "tvShort",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0104534/",
+    "dataset": null,
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "charlie-brown-its-magic": {
+    "imdbId": "tt0082570",
+    "title": "It's Magic, Charlie Brown",
+    "year": 1981,
+    "type": "tvShort",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0082570/",
+    "dataset": null,
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "charlie-brown-great-pumpkin": {
+    "imdbId": "tt0060550",
+    "type": "tvMovie",
+    "title": "It's the Great Pumpkin, Charlie Brown",
+    "originalTitle": "It's the Great Pumpkin, Charlie Brown",
+    "year": 1966,
+    "runtime": 25,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0060550/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "charlie-brown-thanksgiving": {
+    "imdbId": "tt0068359",
+    "title": "A Charlie Brown Thanksgiving",
+    "year": 1973,
+    "type": "tvShort",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0068359/",
+    "dataset": null,
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "frosty-the-snowman": {
+    "imdbId": "tt0064349",
+    "title": "Frosty the Snowman",
+    "year": 1969,
+    "type": "tvShort",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0064349/",
+    "dataset": null,
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "charlie-brown-christmas": {
+    "imdbId": "tt0059026",
+    "type": "tvMovie",
+    "title": "A Charlie Brown Christmas",
+    "originalTitle": "A Charlie Brown Christmas",
+    "year": 1965,
+    "runtime": 25,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0059026/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "rudolph-the-red-nosed-reindeer": {
+    "imdbId": "tt0058536",
+    "type": "tvMovie",
+    "title": "Rudolph the Red-Nosed Reindeer",
+    "originalTitle": "Rudolph the Red-Nosed Reindeer",
+    "year": 1964,
+    "runtime": 47,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0058536/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "3d"
+  },
+  "disney-princess-enchanted-tales-follow-your-dreams": {
+    "imdbId": "tt1135924",
+    "type": "video",
+    "title": "Disney Princess Enchanted Tales: Follow Your Dreams",
+    "originalTitle": "Disney Princess Enchanted Tales: Follow Your Dreams",
+    "year": 2007,
+    "runtime": 56,
+    "genres": [
+      "Animation",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt1135924/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "winnie-the-pooh": {
+    "imdbId": "tt1449283",
+    "type": "movie",
+    "title": "Winnie the Pooh",
+    "originalTitle": "Winnie the Pooh",
+    "year": 2011,
+    "runtime": 63,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1449283/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "dumbo": {
+    "imdbId": "tt0033563",
+    "type": "movie",
+    "title": "Dumbo",
+    "originalTitle": "Dumbo",
+    "year": 1941,
+    "runtime": 64,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0033563/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "lady-and-the-tramp-ii-scamp-s-adventure": {
+    "imdbId": "tt0249677",
+    "type": "video",
+    "title": "Lady and the Tramp II: Scamp's Adventure",
+    "originalTitle": "Lady and the Tramp II: Scamp's Adventure",
+    "year": 2001,
+    "runtime": 69,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0249677/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "beauty-and-the-beast-the-enchanted-christmas": {
+    "imdbId": "tt0118692",
+    "type": "video",
+    "title": "Beauty and the Beast: The Enchanted Christmas",
+    "originalTitle": "Beauty and the Beast: The Enchanted Christmas",
+    "year": 1997,
+    "runtime": 72,
+    "genres": [
+      "Animation",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0118692/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "lilo-and-stitch-2-stitch-has-a-glitch": {
+    "imdbId": "tt0457993",
+    "type": "video",
+    "title": "Lilo & Stitch 2: Stitch Has a Glitch",
+    "originalTitle": "Lilo & Stitch 2: Stitch Has a Glitch",
+    "year": 2005,
+    "runtime": 68,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0457993/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-return-of-jafar": {
+    "imdbId": "tt0107952",
+    "type": "video",
+    "title": "The Return of Jafar",
+    "originalTitle": "The Return of Jafar",
+    "year": 1994,
+    "runtime": 69,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0107952/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-land-before-time": {
+    "imdbId": "tt0095489",
+    "type": "movie",
+    "title": "The Land Before Time",
+    "originalTitle": "The Land Before Time",
+    "year": 1988,
+    "runtime": 69,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0095489/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-jungle-book-2": {
+    "imdbId": "tt0283426",
+    "type": "movie",
+    "title": "The Jungle Book 2",
+    "originalTitle": "The Jungle Book 2",
+    "year": 2003,
+    "runtime": 72,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0283426/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-fox-and-the-hound-2": {
+    "imdbId": "tt0465997",
+    "type": "video",
+    "title": "The Fox and the Hound 2",
+    "originalTitle": "The Fox and the Hound 2",
+    "year": 2006,
+    "runtime": 69,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0465997/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "return-to-never-land": {
+    "imdbId": "tt0280030",
+    "type": "movie",
+    "title": "Return to Never Land",
+    "originalTitle": "Return to Never Land",
+    "year": 2002,
+    "runtime": 72,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0280030/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "buzz-lightyear-of-star-command-the-adventure-begins": {
+    "imdbId": "tt0181196",
+    "type": "video",
+    "title": "Buzz Lightyear of Star Command: The Adventure Begins",
+    "originalTitle": "Buzz Lightyear of Star Command: The Adventure Begins",
+    "year": 2000,
+    "runtime": 70,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0181196/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "leroy-stitch": {
+    "imdbId": "tt0486761",
+    "type": "video",
+    "title": "Leroy & Stitch",
+    "originalTitle": "Leroy & Stitch",
+    "year": 2006,
+    "runtime": 73,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0486761/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "bambi": {
+    "imdbId": "tt0034492",
+    "type": "movie",
+    "title": "Bambi",
+    "originalTitle": "Bambi",
+    "year": 1942,
+    "runtime": 69,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0034492/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "pocahontas-ii-journey-to-a-new-world": {
+    "imdbId": "tt0143808",
+    "type": "video",
+    "title": "Pocahontas 2: Journey to a New World",
+    "originalTitle": "Pocahontas II: Journey to a New World",
+    "year": 1998,
+    "runtime": 73,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0143808/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "ducktales-the-movie-treasure-of-the-lost-lamp": {
+    "imdbId": "tt0099472",
+    "type": "movie",
+    "title": "DuckTales: The Movie - Treasure of the Lost Lamp",
+    "originalTitle": "DuckTales: The Movie - Treasure of the Lost Lamp",
+    "year": 1990,
+    "runtime": 74,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0099472/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "brother-bear-2": {
+    "imdbId": "tt0465925",
+    "type": "video",
+    "title": "Brother Bear 2",
+    "originalTitle": "Brother Bear 2",
+    "year": 2006,
+    "runtime": 74,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0465925/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "cinderella-ii-dreams-come-true": {
+    "imdbId": "tt0291082",
+    "type": "video",
+    "title": "Cinderella II: Dreams Come True",
+    "originalTitle": "Cinderella II: Dreams Come True",
+    "year": 2002,
+    "runtime": 73,
+    "genres": [
+      "Animation",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0291082/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "oliver-company": {
+    "imdbId": "tt0095776",
+    "type": "movie",
+    "title": "Oliver & Company",
+    "originalTitle": "Oliver & Company",
+    "year": 1988,
+    "runtime": 74,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0095776/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "101-dalmatians-2-patch-s-london-adventure": {
+    "imdbId": "tt0324941",
+    "type": "video",
+    "title": "101 Dalmatians 2: Patch's London Adventure",
+    "originalTitle": "101 Dalmatians II: Patch's London Adventure",
+    "year": 2002,
+    "runtime": 74,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0324941/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "cinderella-iii-a-twist-in-time": {
+    "imdbId": "tt0465940",
+    "type": "video",
+    "title": "Cinderella 3: A Twist in Time",
+    "originalTitle": "Cinderella III: A Twist in Time",
+    "year": 2007,
+    "runtime": 73,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0465940/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "tarzan-ii": {
+    "imdbId": "tt0437503",
+    "type": "video",
+    "title": "Tarzan 2: The Legend Begins",
+    "originalTitle": "Tarzan II",
+    "year": 2005,
+    "runtime": 72,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0437503/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "tarzan-jane": {
+    "imdbId": "tt0313680",
+    "type": "video",
+    "title": "Tarzan & Jane",
+    "originalTitle": "Tarzan & Jane",
+    "year": 2002,
+    "runtime": 75,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0313680/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "bambi-ii": {
+    "imdbId": "tt0447854",
+    "type": "video",
+    "title": "Bambi II",
+    "originalTitle": "Bambi II",
+    "year": 2006,
+    "runtime": 75,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0447854/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "winnie-the-pooh-s-most-grand-adventure": {
+    "imdbId": "tt0119918",
+    "type": "video",
+    "title": "Pooh's Grand Adventure: The Search for Christopher Robin",
+    "originalTitle": "Pooh's Grand Adventure: The Search for Christopher Robin",
+    "year": 1997,
+    "runtime": 76,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0119918/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-reluctant-dragon": {
+    "imdbId": "tt0034091",
+    "type": "movie",
+    "title": "The Reluctant Dragon",
+    "originalTitle": "The Reluctant Dragon",
+    "year": 1941,
+    "runtime": 74,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0034091/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-many-adventures-of-winnie-the-pooh": {
+    "imdbId": "tt0076363",
+    "type": "movie",
+    "title": "The Many Adventures of Winnie the Pooh",
+    "originalTitle": "The Many Adventures of Winnie the Pooh",
+    "year": 1977,
+    "runtime": 74,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0076363/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-great-mouse-detective": {
+    "imdbId": "tt0091149",
+    "type": "movie",
+    "title": "The Great Mouse Detective",
+    "originalTitle": "The Great Mouse Detective",
+    "year": 1986,
+    "runtime": 74,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0091149/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-rescuers": {
+    "imdbId": "tt0076618",
+    "type": "movie",
+    "title": "The Rescuers",
+    "originalTitle": "The Rescuers",
+    "year": 1977,
+    "runtime": 77,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0076618/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "cinderella": {
+    "imdbId": "tt0042332",
+    "type": "movie",
+    "title": "Cinderella",
+    "originalTitle": "Cinderella",
+    "year": 1950,
+    "runtime": 74,
+    "genres": [
+      "Animation",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0042332/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "sleeping-beauty": {
+    "imdbId": "tt0053285",
+    "type": "movie",
+    "title": "Sleeping Beauty",
+    "originalTitle": "Sleeping Beauty",
+    "year": 1959,
+    "runtime": 75,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0053285/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-emperor-s-new-groove": {
+    "imdbId": "tt0120917",
+    "type": "movie",
+    "title": "The Emperor's New Groove",
+    "originalTitle": "The Emperor's New Groove",
+    "year": 2000,
+    "runtime": 78,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0120917/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "alice-in-wonderland": {
+    "imdbId": "tt0043274",
+    "type": "movie",
+    "title": "Alice in Wonderland",
+    "originalTitle": "Alice in Wonderland",
+    "year": 1951,
+    "runtime": 75,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0043274/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-little-mermaid-2-return-to-the-sea": {
+    "imdbId": "tt0240684",
+    "type": "video",
+    "title": "The Little Mermaid 2: Return to the Sea",
+    "originalTitle": "The Little Mermaid II: Return to the Sea",
+    "year": 2000,
+    "runtime": 75,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0240684/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "lady-and-the-tramp": {
+    "imdbId": "tt0048280",
+    "type": "movie",
+    "title": "Lady and the Tramp",
+    "originalTitle": "Lady and the Tramp",
+    "year": 1955,
+    "runtime": 76,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0048280/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-jungle-book": {
+    "imdbId": "tt0061852",
+    "type": "movie",
+    "title": "The Jungle Book",
+    "originalTitle": "The Jungle Book",
+    "year": 1967,
+    "runtime": 78,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0061852/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-pagemaster": {
+    "imdbId": "tt0110763",
+    "type": "movie",
+    "title": "The Pagemaster",
+    "originalTitle": "The Pagemaster",
+    "year": 1994,
+    "runtime": 75,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0110763/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "mulan-ii": {
+    "imdbId": "tt0279967",
+    "type": "video",
+    "title": "Mulan II",
+    "originalTitle": "Mulan II",
+    "year": 2004,
+    "runtime": 79,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0279967/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-aristocats": {
+    "imdbId": "tt0065421",
+    "type": "movie",
+    "title": "The Aristocats",
+    "originalTitle": "The AristoCats",
+    "year": 1970,
+    "runtime": 78,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0065421/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "charlie-brown-bon-voyage": {
+    "imdbId": "tt0080461",
+    "type": "movie",
+    "title": "Bon Voyage, Charlie Brown (and Don't Come Back!!)",
+    "originalTitle": "Bon Voyage, Charlie Brown (and Don't Come Back!!)",
+    "year": 1980,
+    "runtime": 75,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0080461/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "home-on-the-range": {
+    "imdbId": "tt0299172",
+    "type": "movie",
+    "title": "Home on the Range",
+    "originalTitle": "Home on the Range",
+    "year": 2004,
+    "runtime": 76,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0299172/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "101-dalmatians": {
+    "imdbId": "tt0055254",
+    "type": "movie",
+    "title": "One Hundred and One Dalmatians",
+    "originalTitle": "One Hundred and One Dalmatians",
+    "year": 1961,
+    "runtime": 79,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0055254/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-sword-in-the-stone": {
+    "imdbId": "tt0057546",
+    "type": "movie",
+    "title": "The Sword in the Stone",
+    "originalTitle": "The Sword in the Stone",
+    "year": 1963,
+    "runtime": 79,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0057546/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-lion-king-1-1-5-hakuna-matata": {
+    "imdbId": "tt0318403",
+    "type": "video",
+    "title": "The Lion King 1½",
+    "originalTitle": "The Lion King 1½",
+    "year": 2004,
+    "runtime": 77,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0318403/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "peter-pan": {
+    "imdbId": "tt0046183",
+    "type": "movie",
+    "title": "Peter Pan",
+    "originalTitle": "Peter Pan",
+    "year": 1953,
+    "runtime": 77,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0046183/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-tigger-movie": {
+    "imdbId": "tt0220099",
+    "type": "movie",
+    "title": "The Tigger Movie",
+    "originalTitle": "The Tigger Movie",
+    "year": 2000,
+    "runtime": 77,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0220099/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-rescuers-down-under": {
+    "imdbId": "tt0100477",
+    "type": "movie",
+    "title": "The Rescuers Down Under",
+    "originalTitle": "The Rescuers Down Under",
+    "year": 1990,
+    "runtime": 77,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0100477/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "atlantis-2-milo-s-return": {
+    "imdbId": "tt0344864",
+    "type": "video",
+    "title": "Atlantis: Milo's Return",
+    "originalTitle": "Atlantis: Milo's Return",
+    "year": 2003,
+    "runtime": 70,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0344864/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-little-mermaid-ariel-s-beginning": {
+    "imdbId": "tt0969647",
+    "type": "video",
+    "title": "The Little Mermaid: Ariel's Beginning",
+    "originalTitle": "The Little Mermaid: Ariel's Beginning",
+    "year": 2008,
+    "runtime": 77,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0969647/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "a-goofy-movie": {
+    "imdbId": "tt0113198",
+    "type": "movie",
+    "title": "A Goofy Movie",
+    "originalTitle": "A Goofy Movie",
+    "year": 1995,
+    "runtime": 78,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0113198/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "dinosaur": {
+    "imdbId": "tt0130623",
+    "type": "movie",
+    "title": "Dinosaur",
+    "originalTitle": "Dinosaur",
+    "year": 2000,
+    "runtime": 82,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0130623/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "3d"
+  },
+  "the-fox-and-the-hound": {
+    "imdbId": "tt0082406",
+    "type": "movie",
+    "title": "The Fox and the Hound",
+    "originalTitle": "The Fox and the Hound",
+    "year": 1981,
+    "runtime": 83,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0082406/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "an-extremely-goofy-movie": {
+    "imdbId": "tt0208185",
+    "type": "video",
+    "title": "An Extremely Goofy Movie",
+    "originalTitle": "An Extremely Goofy Movie",
+    "year": 2000,
+    "runtime": 79,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0208185/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-lion-king-ii-simba-s-pride": {
+    "imdbId": "tt0120131",
+    "type": "video",
+    "title": "The Lion King II: Simba's Pride",
+    "originalTitle": "The Lion King II: Simba's Pride",
+    "year": 1998,
+    "runtime": 82,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0120131/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "chicken-little": {
+    "imdbId": "tt0371606",
+    "type": "movie",
+    "title": "Chicken Little",
+    "originalTitle": "Chicken Little",
+    "year": 2005,
+    "runtime": 81,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0371606/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "3d"
+  },
+  "pocahontas": {
+    "imdbId": "tt0114148",
+    "type": "movie",
+    "title": "Pocahontas",
+    "originalTitle": "Pocahontas",
+    "year": 1995,
+    "runtime": 81,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0114148/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "the-little-mermaid": {
+    "imdbId": "tt0097757",
+    "type": "movie",
+    "title": "The Little Mermaid",
+    "originalTitle": "The Little Mermaid",
+    "year": 1989,
+    "runtime": 83,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0097757/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.838Z",
+    "animationStyle": "2d"
+  },
+  "robin-hood": {
+    "imdbId": "tt0070608",
+    "type": "movie",
+    "title": "Robin Hood",
+    "originalTitle": "Robin Hood",
+    "year": 1973,
+    "runtime": 83,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0070608/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "aladdin-and-the-king-of-thieves": {
+    "imdbId": "tt0115491",
+    "type": "video",
+    "title": "Aladdin and the King of Thieves",
+    "originalTitle": "Aladdin and the King of Thieves",
+    "year": 1996,
+    "runtime": 81,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0115491/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "snow-white-and-the-seven-dwarves": {
+    "imdbId": "tt0029583",
+    "type": "movie",
+    "title": "Snow White and the Seven Dwarfs",
+    "originalTitle": "Snow White and the Seven Dwarfs",
+    "year": 1937,
+    "runtime": 83,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0029583/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "lilo-and-stitch": {
+    "imdbId": "tt0275847",
+    "type": "movie",
+    "title": "Lilo & Stitch",
+    "originalTitle": "Lilo & Stitch",
+    "year": 2002,
+    "runtime": 85,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0275847/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "old-yeller": {
+    "imdbId": "tt0050798",
+    "type": "movie",
+    "title": "Old Yeller",
+    "originalTitle": "Old Yeller",
+    "year": 1957,
+    "runtime": 83,
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0050798/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "pinocchio": {
+    "imdbId": "tt0032910",
+    "type": "movie",
+    "title": "Pinocchio",
+    "originalTitle": "Pinocchio",
+    "year": 1940,
+    "runtime": 88,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0032910/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "herbie-rides-again": {
+    "imdbId": "tt0071607",
+    "type": "movie",
+    "title": "Herbie Rides Again",
+    "originalTitle": "Herbie Rides Again",
+    "year": 1974,
+    "runtime": 88,
+    "genres": [
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0071607/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "brother-bear": {
+    "imdbId": "tt0328880",
+    "type": "movie",
+    "title": "Brother Bear",
+    "originalTitle": "Brother Bear",
+    "year": 2003,
+    "runtime": 85,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0328880/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "the-transformers-the-movie": {
+    "imdbId": "tt0092106",
+    "type": "movie",
+    "title": "The Transformers: The Movie",
+    "originalTitle": "The Transformers: The Movie",
+    "year": 1986,
+    "runtime": 85,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0092106/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "my-neighbor-totoro": {
+    "imdbId": "tt0096283",
+    "type": "movie",
+    "title": "My Neighbor Totoro",
+    "originalTitle": "Tonari no Totoro",
+    "year": 1988,
+    "runtime": 86,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0096283/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "aladdin": {
+    "imdbId": "tt0103639",
+    "type": "movie",
+    "title": "Aladdin",
+    "originalTitle": "Aladdin",
+    "year": 1992,
+    "runtime": 90,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0103639/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "darby-o-gill-and-the-little-people": {
+    "imdbId": "tt0052722",
+    "type": "movie",
+    "title": "Darby O'Gill and the Little People",
+    "originalTitle": "Darby O'Gill and the Little People",
+    "year": 1959,
+    "runtime": 93,
+    "genres": [
+      "Adventure",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0052722/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "mulan": {
+    "imdbId": "tt0120762",
+    "type": "movie",
+    "title": "Mulan",
+    "originalTitle": "Mulan",
+    "year": 1998,
+    "runtime": 87,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0120762/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "belle-s-magical-world": {
+    "imdbId": "tt0167038",
+    "type": "video",
+    "title": "Belle's Magical World",
+    "originalTitle": "Beauty and the Beast: Belle's Magical World",
+    "year": 1998,
+    "runtime": 92,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0167038/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "the-lion-king": {
+    "imdbId": "tt0110357",
+    "type": "movie",
+    "title": "The Lion King",
+    "originalTitle": "The Lion King",
+    "year": 1994,
+    "runtime": 88,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0110357/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "despicable-me-3": {
+    "imdbId": "tt3469046",
+    "type": "movie",
+    "title": "Despicable Me 3",
+    "originalTitle": "Despicable Me 3",
+    "year": 2017,
+    "runtime": 90,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt3469046/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "3d"
+  },
+  "a-bug-s-life": {
+    "imdbId": "tt0120623",
+    "type": "movie",
+    "title": "A Bug's Life",
+    "originalTitle": "A Bug's Life",
+    "year": 1998,
+    "runtime": 95,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0120623/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "3d"
+  },
+  "from-up-on-poppy-hill": {
+    "imdbId": "tt1798188",
+    "type": "movie",
+    "title": "From Up on Poppy Hill",
+    "originalTitle": "Kokurikozaka kara",
+    "year": 2011,
+    "runtime": 90,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt1798188/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "beauty-and-the-beast": {
+    "imdbId": "tt0101414",
+    "type": "movie",
+    "title": "Beauty and the Beast",
+    "originalTitle": "Beauty and the Beast",
+    "year": 1991,
+    "runtime": 84,
+    "genres": [
+      "Animation",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0101414/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "tarzan": {
+    "imdbId": "tt0120855",
+    "type": "movie",
+    "title": "Tarzan",
+    "originalTitle": "Tarzan",
+    "year": 1999,
+    "runtime": 88,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0120855/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "hercules": {
+    "imdbId": "tt0119282",
+    "type": "movie",
+    "title": "Hercules",
+    "originalTitle": "Hercules",
+    "year": 1997,
+    "runtime": 93,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0119282/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "porco-rosso": {
+    "imdbId": "tt0104652",
+    "type": "movie",
+    "title": "Porco Rosso",
+    "originalTitle": "Kurenai no buta",
+    "year": 1992,
+    "runtime": 94,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0104652/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "g-i-joe-the-movie": {
+    "imdbId": "tt0093066",
+    "type": "video",
+    "title": "G.I. Joe: The Movie",
+    "originalTitle": "G.I. Joe: The Movie",
+    "year": 1987,
+    "runtime": 93,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0093066/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "despicable-me": {
+    "imdbId": "tt1323594",
+    "type": "movie",
+    "title": "Despicable Me",
+    "originalTitle": "Despicable Me",
+    "year": 2010,
+    "runtime": 95,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1323594/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "3d"
+  },
+  "treasure-planet": {
+    "imdbId": "tt0133240",
+    "type": "movie",
+    "title": "Treasure Planet",
+    "originalTitle": "Treasure Planet",
+    "year": 2002,
+    "runtime": 95,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0133240/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "bolt": {
+    "imdbId": "tt0397892",
+    "type": "movie",
+    "title": "Bolt",
+    "originalTitle": "Bolt",
+    "year": 2008,
+    "runtime": 96,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0397892/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "3d"
+  },
+  "atlantis-the-lost-empire": {
+    "imdbId": "tt0230011",
+    "type": "movie",
+    "title": "Atlantis: The Lost Empire",
+    "originalTitle": "Atlantis: The Lost Empire",
+    "year": 2001,
+    "runtime": 95,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt0230011/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "despicable-me-2": {
+    "imdbId": "tt1690953",
+    "type": "movie",
+    "title": "Despicable Me 2",
+    "originalTitle": "Despicable Me 2",
+    "year": 2013,
+    "runtime": 98,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1690953/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "3d"
+  },
+  "my-little-pony-the-movie": {
+    "imdbId": "tt4131800",
+    "type": "movie",
+    "title": "My Little Pony: The Movie",
+    "originalTitle": "My Little Pony: The Movie",
+    "year": 2017,
+    "runtime": 99,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt4131800/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "polar-express": {
+    "imdbId": "tt0338348",
+    "type": "movie",
+    "title": "The Polar Express",
+    "originalTitle": "The Polar Express",
+    "year": 2004,
+    "runtime": 100,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0338348/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "3d"
+  },
+  "when-marnie-was-there": {
+    "imdbId": "tt3398268",
+    "type": "movie",
+    "title": "When Marnie Was There",
+    "originalTitle": "Omoide no Mânî",
+    "year": 2014,
+    "runtime": 103,
+    "genres": [
+      "Animation",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt3398268/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "ponyo": {
+    "imdbId": "tt0876563",
+    "type": "movie",
+    "title": "Ponyo",
+    "originalTitle": "Gake no ue no Ponyo",
+    "year": 2008,
+    "runtime": 101,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0876563/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "the-love-bug": {
+    "imdbId": "tt0064603",
+    "type": "movie",
+    "title": "The Love Bug",
+    "originalTitle": "The Love Bug",
+    "year": 1968,
+    "runtime": 108,
+    "genres": [
+      "Comedy",
+      "Family",
+      "Sport"
+    ],
+    "source": "https://www.imdb.com/title/tt0064603/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "kiki-s-delivery-service": {
+    "imdbId": "tt0097814",
+    "type": "movie",
+    "title": "Kiki's Delivery Service",
+    "originalTitle": "Majo no takkyûbin",
+    "year": 1989,
+    "runtime": 103,
+    "genres": [
+      "Animation",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0097814/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "enchanted": {
+    "imdbId": "tt0461770",
+    "type": "movie",
+    "title": "Enchanted",
+    "originalTitle": "Enchanted",
+    "year": 2007,
+    "runtime": 107,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0461770/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "my-neighbors-the-yamadas": {
+    "imdbId": "tt0206013",
+    "type": "movie",
+    "title": "My Neighbors the Yamadas",
+    "originalTitle": "Hôhokekyo tonari no Yamada-kun",
+    "year": 1999,
+    "runtime": 104,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0206013/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "whisper-of-the-heart": {
+    "imdbId": "tt0113824",
+    "type": "movie",
+    "title": "Whisper of the Heart",
+    "originalTitle": "Mimi o sumaseba",
+    "year": 1995,
+    "runtime": 111,
+    "genres": [
+      "Animation",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0113824/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "the-legend-of-tarzan": {
+    "imdbId": "tt0918940",
+    "type": "movie",
+    "title": "The Legend of Tarzan",
+    "originalTitle": "The Legend of Tarzan",
+    "year": 2016,
+    "runtime": 110,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0918940/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "that-darn-cat": {
+    "imdbId": "tt0059793",
+    "type": "movie",
+    "title": "That Darn Cat!",
+    "originalTitle": "That Darn Cat!",
+    "year": 1965,
+    "runtime": 116,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0059793/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "tales-from-earthsea": {
+    "imdbId": "tt0495596",
+    "type": "movie",
+    "title": "Tales from Earthsea",
+    "originalTitle": "Gedo senki",
+    "year": 2006,
+    "runtime": 115,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0495596/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "nausicaa-of-the-valley-of-the-wind": {
+    "imdbId": "tt0087544",
+    "type": "movie",
+    "title": "Nausicaä of the Valley of the Wind",
+    "originalTitle": "Kaze no tani no Naushika",
+    "year": 1984,
+    "runtime": 117,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Sci-Fi"
+    ],
+    "source": "https://www.imdb.com/title/tt0087544/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "howl-s-moving-castle": {
+    "imdbId": "tt0347149",
+    "type": "movie",
+    "title": "Howl's Moving Castle",
+    "originalTitle": "Hauru no ugoku shiro",
+    "year": 2004,
+    "runtime": 119,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0347149/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "pom-poko": {
+    "imdbId": "tt0110008",
+    "type": "movie",
+    "title": "Pom Poko",
+    "originalTitle": "Heisei tanuki gassen ponpoko",
+    "year": 1994,
+    "runtime": 119,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0110008/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "only-yesterday": {
+    "imdbId": "tt0102587",
+    "type": "movie",
+    "title": "Only Yesterday",
+    "originalTitle": "Omohide poro poro",
+    "year": 1991,
+    "runtime": 119,
+    "genres": [
+      "Animation",
+      "Drama",
+      "Romance"
+    ],
+    "source": "https://www.imdb.com/title/tt0102587/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "laputa-castle-in-the-sky": {
+    "imdbId": "tt0092067",
+    "type": "movie",
+    "title": "Castle in the Sky",
+    "originalTitle": "Tenkû no shiro Rapyuta",
+    "year": 1986,
+    "runtime": 124,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0092067/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "spirited-away": {
+    "imdbId": "tt0245429",
+    "type": "movie",
+    "title": "Spirited Away",
+    "originalTitle": "Sen to Chihiro no kamikakushi",
+    "year": 2001,
+    "runtime": 124,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0245429/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "swiss-family-robinson": {
+    "imdbId": "tt0054357",
+    "type": "movie",
+    "title": "Swiss Family Robinson",
+    "originalTitle": "Swiss Family Robinson",
+    "year": 1960,
+    "runtime": 126,
+    "genres": [
+      "Adventure",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0054357/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "the-wind-rises": {
+    "imdbId": "tt2013293",
+    "type": "movie",
+    "title": "The Wind Rises",
+    "originalTitle": "Kaze tachinu",
+    "year": 2013,
+    "runtime": 126,
+    "genres": [
+      "Animation",
+      "Biography",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt2013293/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "20-000-leagues-under-the-sea": {
+    "imdbId": "tt0046672",
+    "type": "movie",
+    "title": "20,000 Leagues Under the Sea",
+    "originalTitle": "20,000 Leagues Under the Sea",
+    "year": 1954,
+    "runtime": 127,
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0046672/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "princess-mononoke": {
+    "imdbId": "tt0119698",
+    "type": "movie",
+    "title": "Princess Mononoke",
+    "originalTitle": "Mononoke-hime",
+    "year": 1997,
+    "runtime": 133,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0119698/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "2d"
+  },
+  "mary-poppins": {
+    "imdbId": "tt0058331",
+    "type": "movie",
+    "title": "Mary Poppins",
+    "originalTitle": "Mary Poppins",
+    "year": 1964,
+    "runtime": 139,
+    "genres": [
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0058331/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "the-croods": {
+    "imdbId": "tt0481499",
+    "type": "movie",
+    "title": "The Croods",
+    "originalTitle": "The Croods",
+    "year": 2013,
+    "runtime": 98,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0481499/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "3d"
+  },
+  "the-lego-batman-movie": {
+    "imdbId": "tt4116284",
+    "type": "movie",
+    "title": "The Lego Batman Movie",
+    "originalTitle": "The LEGO Batman Movie",
+    "year": 2017,
+    "runtime": 104,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "source": "https://www.imdb.com/title/tt4116284/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "3d"
+  },
+  "3-ninjas": {
+    "imdbId": "tt0103596",
+    "type": "movie",
+    "title": "3 Ninjas",
+    "originalTitle": "3 Ninjas",
+    "year": 1992,
+    "runtime": 84,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0103596/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "3-ninjas-kick-back": {
+    "imdbId": "tt0109015",
+    "type": "movie",
+    "title": "3 Ninjas Kick Back",
+    "originalTitle": "3 Ninjas Kick Back",
+    "year": 1994,
+    "runtime": 93,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0109015/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "air-bud": {
+    "imdbId": "tt0118570",
+    "type": "movie",
+    "title": "Air Bud",
+    "originalTitle": "Air Bud",
+    "year": 1997,
+    "runtime": 98,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0118570/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "air-bud-golden-receiver": {
+    "imdbId": "tt0140796",
+    "type": "movie",
+    "title": "Air Bud: Golden Receiver",
+    "originalTitle": "Air Bud: Golden Receiver",
+    "year": 1998,
+    "runtime": 90,
+    "genres": [
+      "Comedy",
+      "Family",
+      "Sport"
+    ],
+    "source": "https://www.imdb.com/title/tt0140796/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "air-bud-seventh-inning-fetch": {
+    "imdbId": "tt0288415",
+    "type": "video",
+    "title": "Air Bud: Seventh Inning Fetch",
+    "originalTitle": "Air Bud: Seventh Inning Fetch",
+    "year": 2002,
+    "runtime": 93,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0288415/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "air-bud-spikes-back": {
+    "imdbId": "tt0337812",
+    "type": "video",
+    "title": "Air Bud: Spikes Back",
+    "originalTitle": "Air Bud: Spikes Back",
+    "year": 2003,
+    "runtime": 87,
+    "genres": [
+      "Comedy",
+      "Family",
+      "Sport"
+    ],
+    "source": "https://www.imdb.com/title/tt0337812/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "air-bud-world-pup": {
+    "imdbId": "tt0161220",
+    "type": "video",
+    "title": "Air Bud: World Pup",
+    "originalTitle": "Air Bud 3: World Pup",
+    "year": 2000,
+    "runtime": 83,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0161220/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z"
+  },
+  "alvin-and-the-chipmunks": {
+    "imdbId": "tt0952640",
+    "type": "movie",
+    "title": "Alvin and the Chipmunks",
+    "originalTitle": "Alvin and the Chipmunks",
+    "year": 2007,
+    "runtime": 92,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0952640/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.839Z",
+    "animationStyle": "3d"
+  },
+  "alvin-and-the-chipmunks-the-squeakquel": {
+    "imdbId": "tt1231580",
+    "type": "movie",
+    "title": "Alvin and the Chipmunks: The Squeakquel",
+    "originalTitle": "Alvin and the Chipmunks: The Squeakquel",
+    "year": 2009,
+    "runtime": 88,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1231580/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z",
+    "animationStyle": "3d"
+  },
+  "annie-1982": {
+    "imdbId": "tt0083564",
+    "type": "movie",
+    "title": "Annie",
+    "originalTitle": "Annie",
+    "year": 1982,
+    "runtime": 127,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0083564/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "babe": {
+    "imdbId": "tt0112431",
+    "type": "movie",
+    "title": "Babe",
+    "originalTitle": "Babe",
+    "year": 1995,
+    "runtime": 91,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0112431/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "blank-check": {
+    "imdbId": "tt0109287",
+    "type": "movie",
+    "title": "Blank Check",
+    "originalTitle": "Blank Check",
+    "year": 1994,
+    "runtime": 93,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0109287/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "christmas-under-wraps": {
+    "imdbId": "tt4180032",
+    "type": "tvMovie",
+    "title": "Christmas Under Wraps",
+    "originalTitle": "Christmas Under Wraps",
+    "year": 2014,
+    "runtime": 88,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "source": "https://www.imdb.com/title/tt4180032/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "dennis-the-menace": {
+    "imdbId": "tt0106701",
+    "type": "movie",
+    "title": "Dennis the Menace",
+    "originalTitle": "Dennis the Menace",
+    "year": 1993,
+    "runtime": 94,
+    "genres": [
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0106701/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "disenchanted": {
+    "imdbId": "tt1596342",
+    "type": "movie",
+    "title": "Disenchanted",
+    "originalTitle": "Disenchanted",
+    "year": 2022,
+    "runtime": 119,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1596342/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z",
+    "animationStyle": "2d"
+  },
+  "elf": {
+    "imdbId": "tt0319343",
+    "type": "movie",
+    "title": "Elf",
+    "originalTitle": "Elf",
+    "year": 2003,
+    "runtime": 97,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0319343/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "high-school-musical": {
+    "imdbId": "tt0475293",
+    "type": "tvMovie",
+    "title": "High School Musical",
+    "originalTitle": "High School Musical",
+    "year": 2006,
+    "runtime": 98,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0475293/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "high-school-musical-2": {
+    "imdbId": "tt0810900",
+    "type": "tvMovie",
+    "title": "High School Musical 2",
+    "originalTitle": "High School Musical 2",
+    "year": 2007,
+    "runtime": 104,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0810900/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "high-school-musical-3-senior-year": {
+    "imdbId": "tt0962726",
+    "type": "movie",
+    "title": "High School Musical 3: Senior Year",
+    "originalTitle": "High School Musical 3: Senior Year",
+    "year": 2008,
+    "runtime": 112,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0962726/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "home-alone": {
+    "imdbId": "tt0099785",
+    "type": "movie",
+    "title": "Home Alone",
+    "originalTitle": "Home Alone",
+    "year": 1990,
+    "runtime": 103,
+    "genres": [
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0099785/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "home-alone-2-lost-in-new-york": {
+    "imdbId": "tt0104431",
+    "type": "movie",
+    "title": "Home Alone 2: Lost in New York",
+    "originalTitle": "Home Alone 2: Lost in New York",
+    "year": 1992,
+    "runtime": 120,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Crime"
+    ],
+    "source": "https://www.imdb.com/title/tt0104431/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "homeward-bound-the-incredible-journey": {
+    "imdbId": "tt0107131",
+    "type": "movie",
+    "title": "Homeward Bound: The Incredible Journey",
+    "originalTitle": "Homeward Bound: The Incredible Journey",
+    "year": 1993,
+    "runtime": 84,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0107131/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "honey-i-blew-up-the-kid": {
+    "imdbId": "tt0104437",
+    "type": "movie",
+    "title": "Honey, I Blew Up the Kid",
+    "originalTitle": "Honey, I Blew Up the Kid",
+    "year": 1992,
+    "runtime": 89,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0104437/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "honey-i-shrunk-the-kids": {
+    "imdbId": "tt0097523",
+    "type": "movie",
+    "title": "Honey, I Shrunk the Kids",
+    "originalTitle": "Honey, I Shrunk the Kids",
+    "year": 1989,
+    "runtime": 93,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0097523/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "inspector-gadget-1999": {
+    "imdbId": "tt0141369",
+    "type": "movie",
+    "title": "Inspector Gadget",
+    "originalTitle": "Inspector Gadget",
+    "year": 1999,
+    "runtime": 78,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0141369/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "it-s-a-wonderful-life": {
+    "imdbId": "tt0038650",
+    "type": "movie",
+    "title": "It's a Wonderful Life",
+    "originalTitle": "It's a Wonderful Life",
+    "year": 1946,
+    "runtime": 130,
+    "genres": [
+      "Drama",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0038650/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "jumanji": {
+    "imdbId": "tt0113497",
+    "type": "movie",
+    "title": "Jumanji",
+    "originalTitle": "Jumanji",
+    "year": 1995,
+    "runtime": 104,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0113497/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "king-of-kings": {
+    "imdbId": "tt0055047",
+    "type": "movie",
+    "title": "King of Kings",
+    "originalTitle": "King of Kings",
+    "year": 1961,
+    "runtime": 168,
+    "genres": [
+      "Biography",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0055047/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "little-giants": {
+    "imdbId": "tt0110364",
+    "type": "movie",
+    "title": "Little Giants",
+    "originalTitle": "Little Giants",
+    "year": 1994,
+    "runtime": 107,
+    "genres": [
+      "Comedy",
+      "Family",
+      "Sport"
+    ],
+    "source": "https://www.imdb.com/title/tt0110364/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "little-marines": {
+    "imdbId": "tt0380500",
+    "type": "video",
+    "title": "Little Marines",
+    "originalTitle": "Little Marines",
+    "year": 1990,
+    "runtime": 87,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0380500/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "little-marines-2": {
+    "imdbId": "tt0380501",
+    "type": "video",
+    "title": "Little Marines 2",
+    "originalTitle": "Little Marines 2",
+    "year": 1992,
+    "runtime": 86,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0380501/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "my-fair-lady": {
+    "imdbId": "tt0058385",
+    "type": "movie",
+    "title": "My Fair Lady",
+    "originalTitle": "My Fair Lady",
+    "year": 1964,
+    "runtime": 170,
+    "genres": [
+      "Drama",
+      "Musical",
+      "Romance"
+    ],
+    "source": "https://www.imdb.com/title/tt0058385/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "night-at-the-museum": {
+    "imdbId": "tt0477347",
+    "type": "movie",
+    "title": "Night at the Museum",
+    "originalTitle": "Night at the Museum",
+    "year": 2006,
+    "runtime": 108,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0477347/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "night-at-the-museum-battle-of-the-smithsonian": {
+    "imdbId": "tt1078912",
+    "type": "movie",
+    "title": "Night at the Museum: Battle of the Smithsonian",
+    "originalTitle": "Night at the Museum: Battle of the Smithsonian",
+    "year": 2009,
+    "runtime": 105,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt1078912/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "night-at-the-museum-secret-of-the-tomb": {
+    "imdbId": "tt2692250",
+    "type": "movie",
+    "title": "Night at the Museum: Secret of the Tomb",
+    "originalTitle": "Night at the Museum: Secret of the Tomb",
+    "year": 2014,
+    "runtime": 98,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt2692250/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "pan": {
+    "imdbId": "tt3332064",
+    "type": "movie",
+    "title": "Pan",
+    "originalTitle": "Pan",
+    "year": 2015,
+    "runtime": 111,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt3332064/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "peter-pan-2003": {
+    "imdbId": "tt0316396",
+    "type": "movie",
+    "title": "Peter Pan",
+    "originalTitle": "Peter Pan",
+    "year": 2003,
+    "runtime": 113,
+    "genres": [
+      "Adventure",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0316396/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "prancer": {
+    "imdbId": "tt0098115",
+    "type": "movie",
+    "title": "Prancer",
+    "originalTitle": "Prancer",
+    "year": 1989,
+    "runtime": 103,
+    "genres": [
+      "Drama",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0098115/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "prehysteria": {
+    "imdbId": "tt0107870",
+    "type": "video",
+    "title": "Prehysteria!",
+    "originalTitle": "Prehysteria!",
+    "year": 1993,
+    "runtime": 84,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0107870/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "richie-rich": {
+    "imdbId": "tt0110989",
+    "type": "movie",
+    "title": "Richie Rich",
+    "originalTitle": "Ri¢hie Ri¢h",
+    "year": 1994,
+    "runtime": 95,
+    "genres": [
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0110989/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "rookie-of-the-year": {
+    "imdbId": "tt0107985",
+    "type": "movie",
+    "title": "Rookie of the Year",
+    "originalTitle": "Rookie of the Year",
+    "year": 1993,
+    "runtime": 103,
+    "genres": [
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0107985/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "sonic-the-hedgehog-2020": {
+    "imdbId": "tt3794354",
+    "type": "movie",
+    "title": "Sonic the Hedgehog",
+    "originalTitle": "Sonic the Hedgehog",
+    "year": 2020,
+    "runtime": 99,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt3794354/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "space-jam": {
+    "imdbId": "tt0117705",
+    "type": "movie",
+    "title": "Space Jam",
+    "originalTitle": "Space Jam",
+    "year": 1996,
+    "runtime": 88,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0117705/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z",
+    "animationStyle": "2d"
+  },
+  "spirit-stallion-of-the-cimarron": {
+    "imdbId": "tt0166813",
+    "type": "movie",
+    "title": "Spirit: Stallion of the Cimarron",
+    "originalTitle": "Spirit: Stallion of the Cimarron",
+    "year": 2002,
+    "runtime": 83,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Drama"
+    ],
+    "source": "https://www.imdb.com/title/tt0166813/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z",
+    "animationStyle": "2d"
+  },
+  "spy-kids": {
+    "imdbId": "tt0227538",
+    "type": "movie",
+    "title": "Spy Kids",
+    "originalTitle": "Spy Kids",
+    "year": 2001,
+    "runtime": 88,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0227538/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "spy-kids-2-the-island-of-lost-dreams": {
+    "imdbId": "tt0287717",
+    "title": "Spy Kids 2: Island of Lost Dreams",
+    "year": 2002,
+    "type": "movie",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0287717/",
+    "dataset": null,
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "spy-kids-3-d-game-over": {
+    "imdbId": "tt0338459",
+    "title": "Spy Kids 3: Game Over",
+    "year": 2003,
+    "type": "movie",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0338459/",
+    "dataset": null,
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "spy-kids-all-the-time-in-the-world": {
+    "imdbId": "tt1517489",
+    "type": "movie",
+    "title": "Spy Kids 4: All the Time in the World",
+    "originalTitle": "Spy Kids: All the Time in the World",
+    "year": 2011,
+    "runtime": 89,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt1517489/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "the-borrowers-1997": {
+    "imdbId": "tt0118755",
+    "type": "movie",
+    "title": "The Borrowers",
+    "originalTitle": "The Borrowers",
+    "year": 1997,
+    "runtime": 89,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0118755/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "the-little-rascals": {
+    "imdbId": "tt0110366",
+    "type": "movie",
+    "title": "The Little Rascals",
+    "originalTitle": "The Little Rascals",
+    "year": 1994,
+    "runtime": 82,
+    "genres": [
+      "Comedy",
+      "Family",
+      "Romance"
+    ],
+    "source": "https://www.imdb.com/title/tt0110366/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "the-mighty-ducks": {
+    "imdbId": "tt0104868",
+    "type": "movie",
+    "title": "The Mighty Ducks",
+    "originalTitle": "The Mighty Ducks",
+    "year": 1992,
+    "runtime": 104,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0104868/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "the-princess-diaries": {
+    "imdbId": "tt0247638",
+    "type": "movie",
+    "title": "The Princess Diaries",
+    "originalTitle": "The Princess Diaries",
+    "year": 2001,
+    "runtime": 115,
+    "genres": [
+      "Comedy",
+      "Family",
+      "Romance"
+    ],
+    "source": "https://www.imdb.com/title/tt0247638/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "the-princess-diaries-2-royal-engagement": {
+    "imdbId": "tt0368933",
+    "type": "movie",
+    "title": "The Princess Diaries 2: Royal Engagement",
+    "originalTitle": "The Princess Diaries 2: Royal Engagement",
+    "year": 2004,
+    "runtime": 113,
+    "genres": [
+      "Comedy",
+      "Family",
+      "Romance"
+    ],
+    "source": "https://www.imdb.com/title/tt0368933/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "the-sandlot": {
+    "imdbId": "tt0108037",
+    "type": "movie",
+    "title": "The Sandlot",
+    "originalTitle": "The Sandlot",
+    "year": 1993,
+    "runtime": 101,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0108037/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "the-santa-clause": {
+    "imdbId": "tt0111070",
+    "type": "movie",
+    "title": "The Santa Clause",
+    "originalTitle": "The Santa Clause",
+    "year": 1994,
+    "runtime": 97,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0111070/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "the-secret-garden-1993": {
+    "imdbId": "tt0108071",
+    "type": "movie",
+    "title": "The Secret Garden",
+    "originalTitle": "The Secret Garden",
+    "year": 1993,
+    "runtime": 101,
+    "genres": [
+      "Drama",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0108071/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "the-smurfs": {
+    "imdbId": "tt0472181",
+    "type": "movie",
+    "title": "The Smurfs",
+    "originalTitle": "The Smurfs",
+    "year": 2011,
+    "runtime": 103,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt0472181/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z",
+    "animationStyle": "3d"
+  },
+  "the-smurfs-2": {
+    "imdbId": "tt2017020",
+    "type": "movie",
+    "title": "The Smurfs 2",
+    "originalTitle": "The Smurfs 2",
+    "year": 2013,
+    "runtime": 105,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt2017020/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z",
+    "animationStyle": "3d"
+  },
+  "the-sound-of-music": {
+    "imdbId": "tt0059742",
+    "type": "movie",
+    "title": "The Sound of Music",
+    "originalTitle": "The Sound of Music",
+    "year": 1965,
+    "runtime": 174,
+    "genres": [
+      "Biography",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0059742/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "the-star-2017": {
+    "imdbId": "tt4587656",
+    "type": "movie",
+    "title": "The Star",
+    "originalTitle": "The Star",
+    "year": 2017,
+    "runtime": 86,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "source": "https://www.imdb.com/title/tt4587656/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z",
+    "animationStyle": "3d"
+  },
+  "the-ten-commandments": {
+    "imdbId": "tt0049833",
+    "type": "movie",
+    "title": "The Ten Commandments",
+    "originalTitle": "The Ten Commandments",
+    "year": 1956,
+    "runtime": 220,
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0049833/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "the-wizard-of-oz": {
+    "imdbId": "tt0032138",
+    "type": "movie",
+    "title": "The Wizard of Oz",
+    "originalTitle": "The Wizard of Oz",
+    "year": 1939,
+    "runtime": 102,
+    "genres": [
+      "Adventure",
+      "Family",
+      "Fantasy"
+    ],
+    "source": "https://www.imdb.com/title/tt0032138/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "white-christmas": {
+    "imdbId": "tt0047673",
+    "type": "movie",
+    "title": "White Christmas",
+    "originalTitle": "White Christmas",
+    "year": 1954,
+    "runtime": 120,
+    "genres": [
+      "Comedy",
+      "Musical",
+      "Romance"
+    ],
+    "source": "https://www.imdb.com/title/tt0047673/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "wonder": {
+    "imdbId": "tt2543472",
+    "type": "movie",
+    "title": "Wonder",
+    "originalTitle": "Wonder",
+    "year": 2017,
+    "runtime": 113,
+    "genres": [
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt2543472/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "anne-of-avonlea": {
+    "imdbId": "tt0092571",
+    "type": "tvMiniSeries",
+    "title": "Anne of Avonlea",
+    "originalTitle": "Anne of Green Gables: The Sequel",
+    "year": 1987,
+    "runtime": 58,
+    "genres": [
+      "Drama",
+      "Family",
+      "Romance"
+    ],
+    "source": "https://www.imdb.com/title/tt0092571/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "anne-of-green-gables": {
+    "imdbId": "tt0088727",
+    "type": "tvMiniSeries",
+    "title": "Anne of Green Gables",
+    "originalTitle": "Anne of Green Gables",
+    "year": 1985,
+    "runtime": 100,
+    "genres": [
+      "Drama",
+      "Family"
+    ],
+    "source": "https://www.imdb.com/title/tt0088727/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  },
+  "anne-of-green-gables-the-continuing-story": {
+    "imdbId": "tt0158466",
+    "type": "tvMiniSeries",
+    "title": "Anne of Green Gables: The Continuing Story",
+    "originalTitle": "Anne of Green Gables: The Continuing Story",
+    "year": 2000,
+    "runtime": 93,
+    "genres": [
+      "Drama",
+      "Family",
+      "Romance"
+    ],
+    "source": "https://www.imdb.com/title/tt0158466/",
+    "dataset": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "checkedAt": "2026-10-06T17:42:11.840Z"
+  }
+}

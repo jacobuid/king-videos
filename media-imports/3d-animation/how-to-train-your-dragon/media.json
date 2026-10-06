@@ -6,10 +6,9 @@
   "year": 2010,
   "category": "movie",
   "genres": [
-    "Animation",
     "Action",
     "Adventure",
-    "Family"
+    "Animation"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "How To Train Your Dragon [720p].mp4",
   "thumbnail": "HowToTrainYourDragon2010_keyart_mobile_3840x2160.jpg",
   "metadataSource": "https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(film)",
-  "sourceFolder": "How To Train Your Dragon (2010)"
+  "sourceFolder": "How To Train Your Dragon (2010)",
+  "imdbId": "tt0892769",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0892769/",
+  "animationStyle": "3d"
 }

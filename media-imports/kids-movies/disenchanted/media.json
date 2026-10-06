@@ -6,8 +6,9 @@
   "date": null,
   "description": "Giselle’s wish for a fairy-tale life transforms her new suburban home and puts her family in danger.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Adventure",
+    "Cartoon",
+    "Comedy"
   ],
   "duration": 7097,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Disenchanted (2022)\\Disenchanted[720p].mp4",
@@ -17,5 +18,13 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Disenchanted_(film)",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Disenchanted (2022)\\English.srt",
-  "thumbnailSource": "disenchanted.webp"
+  "thumbnailSource": "disenchanted.webp",
+  "imdbId": "tt1596342",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1596342/",
+  "animationStyle": "2d"
 }

@@ -6,7 +6,9 @@
   "year": 2010,
   "date": null,
   "genres": [
-    "Animation"
+    "Adventure",
+    "Animation",
+    "Comedy"
   ],
   "duration": 5682,
   "video": "Despicable Me (2010).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Despicable_Me",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/despicable_me"
+  "ratingSource": "https://www.rottentomatoes.com/m/despicable_me",
+  "imdbId": "tt1323594",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1323594/",
+  "animationStyle": "3d"
 }

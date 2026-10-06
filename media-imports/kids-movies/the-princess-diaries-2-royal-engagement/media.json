@@ -6,8 +6,9 @@
   "date": null,
   "description": "The Princess Diaries 2: Royal Engagement is a 2004 American romantic comedy film directed by Garry Marshall.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Comedy",
+    "Family",
+    "Romance"
   ],
   "duration": 6598,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Princess Diaries 2\\The.Princess.Diaries.2.Royal.Engagement.2004.BluRay.720p.H264.mp4",
@@ -19,5 +20,12 @@
   "rating": "G",
   "ratingSource": "https://www.rottentomatoes.com/m/the_princess_diaries_2_royal_engagement",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Princess Diaries 2\\The.Princess.Diaries.2.Royal.Engagement.2004.BluRay.720p.H264.eng.srt",
-  "thumbnailSource": "The Princess Diaries 2.webp"
+  "thumbnailSource": "The Princess Diaries 2.webp",
+  "imdbId": "tt0368933",
+  "imdbGenres": [
+    "Comedy",
+    "Family",
+    "Romance"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0368933/"
 }

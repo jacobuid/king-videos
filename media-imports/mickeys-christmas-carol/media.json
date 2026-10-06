@@ -7,8 +7,7 @@
   "category": "movie",
   "genres": [
     "Cartoon",
-    "Christmas",
-    "Fantasy",
+    "Comedy",
     "Family"
   ],
   "rating": "G",
@@ -16,5 +15,13 @@
   "duration": 1527,
   "video": "Special - Mickey's Christmas Carol [720p].mp4",
   "thumbnail": "thumb.jpg",
-  "metadataSource": "https://en.wikipedia.org/wiki/Mickey%27s_Christmas_Carol"
+  "metadataSource": "https://en.wikipedia.org/wiki/Mickey%27s_Christmas_Carol",
+  "imdbId": "tt0085936",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0085936/",
+  "animationStyle": "2d"
 }

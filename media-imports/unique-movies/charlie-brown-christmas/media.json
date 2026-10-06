@@ -6,7 +6,9 @@
   "year": 1965,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Cartoon",
+    "Comedy",
+    "Drama"
   ],
   "duration": 1529,
   "video": "Charlie Brown - Christmas.mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/A_Charlie_Brown_Christmas",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://tv.apple.com/us/movie/a-charlie-brown-christmas/umc.cmc.mbxalimrwrtq72wj4h601pyf"
+  "ratingSource": "https://tv.apple.com/us/movie/a-charlie-brown-christmas/umc.cmc.mbxalimrwrtq72wj4h601pyf",
+  "imdbId": "tt0059026",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0059026/",
+  "animationStyle": "2d"
 }

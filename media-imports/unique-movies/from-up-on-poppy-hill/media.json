@@ -6,7 +6,9 @@
   "year": 2011,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Cartoon",
+    "Comedy",
+    "Drama"
   ],
   "duration": 5490,
   "video": "18 - From Up on Poppy Hill (2011).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/From_Up_on_Poppy_Hill",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/from_up_on_poppy_hill"
+  "ratingSource": "https://www.rottentomatoes.com/m/from_up_on_poppy_hill",
+  "imdbId": "tt1798188",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1798188/",
+  "animationStyle": "2d"
 }

@@ -6,11 +6,9 @@
   "year": 2012,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family",
-    "Fantasy"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -18,5 +16,13 @@
   "video": "The.Lorax.2012.720p.BluRay.x264.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Lorax_(film)",
-  "sourceFolder": "The Lorax (2012)"
+  "sourceFolder": "The Lorax (2012)",
+  "imdbId": "tt1482459",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1482459/",
+  "animationStyle": "3d"
 }

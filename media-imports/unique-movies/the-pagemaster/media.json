@@ -6,10 +6,9 @@
   "year": 1994,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Fantasy",
-    "Action"
+    "Cartoon",
+    "Comedy"
   ],
   "duration": 4528,
   "video": "The Pagemaster (1994).mp4",
@@ -19,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Pagemaster",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/pagemaster"
+  "ratingSource": "https://www.rottentomatoes.com/m/pagemaster",
+  "imdbId": "tt0110763",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0110763/",
+  "animationStyle": "2d"
 }

@@ -6,8 +6,9 @@
   "year": 2000,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Comedy"
   ],
   "duration": 4522,
   "video": "The Little Mermaid 2-Return to the Sea.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Little_Mermaid_II%3A_Return_to_the_Sea",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-little-mermaid-2-return-to-the-sea"
+  "ratingSource": "https://movies.disney.com/the-little-mermaid-2-return-to-the-sea",
+  "imdbId": "tt0240684",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0240684/",
+  "animationStyle": "2d"
 }

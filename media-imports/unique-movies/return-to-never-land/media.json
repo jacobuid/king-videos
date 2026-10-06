@@ -6,9 +6,9 @@
   "year": 2002,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Fantasy"
+    "Cartoon",
+    "Family"
   ],
   "duration": 4175,
   "video": "Return to Never Land.mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Return_to_Never_Land",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/return-to-never-land"
+  "ratingSource": "https://movies.disney.com/return-to-never-land",
+  "imdbId": "tt0280030",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0280030/",
+  "animationStyle": "2d"
 }

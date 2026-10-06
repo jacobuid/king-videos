@@ -6,8 +6,9 @@
   "year": 1984,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Science Fiction"
   ],
   "duration": 7022,
   "video": "10 - Nausicaa of the Valley of the Wind (1984).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Nausica%C3%A4_of_the_Valley_of_the_Wind_(film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/nausicaa_of_the_valley_of_the_wind"
+  "ratingSource": "https://www.rottentomatoes.com/m/nausicaa_of_the_valley_of_the_wind",
+  "imdbId": "tt0087544",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Sci-Fi"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0087544/",
+  "animationStyle": "2d"
 }

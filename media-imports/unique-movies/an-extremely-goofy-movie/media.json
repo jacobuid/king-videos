@@ -7,7 +7,8 @@
   "date": null,
   "genres": [
     "Cartoon",
-    "Comedy"
+    "Comedy",
+    "Family"
   ],
   "duration": 4747,
   "video": "An Extremely Goofy Movie (2000).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/An_Extremely_Goofy_Movie",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/an-extremely-goofy-movie"
+  "ratingSource": "https://movies.disney.com/an-extremely-goofy-movie",
+  "imdbId": "tt0208185",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0208185/",
+  "animationStyle": "2d"
 }

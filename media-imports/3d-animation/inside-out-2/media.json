@@ -6,10 +6,9 @@
   "year": 2024,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Inside Out 2 2024 MULTi VF2 1080p WEB H265-FW.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Inside_Out_2",
-  "sourceFolder": "www.SceneTime.com - Inside Out 2 2024 MULTi VF2 1080p WEB H265-FW"
+  "sourceFolder": "www.SceneTime.com - Inside Out 2 2024 MULTi VF2 1080p WEB H265-FW",
+  "imdbId": "tt22022452",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt22022452/",
+  "animationStyle": "3d"
 }

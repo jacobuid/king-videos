@@ -6,7 +6,8 @@
   "date": null,
   "description": "Night at the Museum: Battle of the Smithsonian is a 2009 American fantasy comedy film directed by Shawn Levy, and written by Robert Ben Garant and Thomas Lennon.",
   "genres": [
-    "Live Action",
+    "Adventure",
+    "Comedy",
     "Family"
   ],
   "duration": 6283,
@@ -17,5 +18,12 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Night_at_the_Museum%3A_Battle_of_the_Smithsonian",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Night at the Museum 3 - Battle of the Smithsonian (2009)\\Night at the Museum Battle of the Smithsonian [720p].srt",
-  "thumbnailSource": "Night at the Museum2.jpg"
+  "thumbnailSource": "Night at the Museum2.jpg",
+  "imdbId": "tt1078912",
+  "imdbGenres": [
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1078912/"
 }

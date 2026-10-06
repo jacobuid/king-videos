@@ -6,7 +6,9 @@
   "year": 2006,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Adventure",
+    "Cartoon",
+    "Drama"
   ],
   "duration": 4342,
   "video": "Bambi II.mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Bambi_II",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/bambi_ii"
+  "ratingSource": "https://www.rottentomatoes.com/m/bambi_ii",
+  "imdbId": "tt0447854",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0447854/",
+  "animationStyle": "2d"
 }

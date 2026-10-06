@@ -6,9 +6,9 @@
   "year": 1996,
   "date": "1996-08-13",
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Fantasy"
+    "Cartoon",
+    "Comedy"
   ],
   "duration": 4902,
   "video": "Aladdin and the King of Thieves (1996).mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Aladdin_and_the_King_of_Thieves",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/aladdin-and-the-king-of-thieves"
+  "ratingSource": "https://movies.disney.com/aladdin-and-the-king-of-thieves",
+  "imdbId": "tt0115491",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0115491/",
+  "animationStyle": "2d"
 }

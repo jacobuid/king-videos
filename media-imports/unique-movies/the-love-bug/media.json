@@ -6,9 +6,9 @@
   "year": 1968,
   "date": null,
   "genres": [
-    "Live Action",
-    "Adventure",
     "Comedy",
+    "Family",
+    "Sports",
     "Classic"
   ],
   "duration": 6194,
@@ -19,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Love_Bug",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-love-bug"
+  "ratingSource": "https://movies.disney.com/the-love-bug",
+  "imdbId": "tt0064603",
+  "imdbGenres": [
+    "Comedy",
+    "Family",
+    "Sport"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0064603/"
 }

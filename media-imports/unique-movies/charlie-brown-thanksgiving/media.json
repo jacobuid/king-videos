@@ -6,7 +6,9 @@
   "year": 1973,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Cartoon",
+    "Comedy",
+    "Family"
   ],
   "duration": 1522,
   "video": "Charlie Brown - Thanksgiving.mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/A_Charlie_Brown_Thanksgiving",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "TV-G",
-  "ratingSource": "https://www.rottentomatoes.com/m/charlie_brown_thanksgiving"
+  "ratingSource": "https://www.rottentomatoes.com/m/charlie_brown_thanksgiving",
+  "imdbId": "tt0068359",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0068359/",
+  "animationStyle": "2d"
 }

@@ -6,8 +6,9 @@
   "date": null,
   "description": "Little Giants is a 1994 American family sports comedy film directed by Duwayne Dunham and written by James Ferguson, Robert Shallcross, Tommy Swerdlow, Michael Goldberg from the story by Ferguson and Robert Shallcross.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Comedy",
+    "Family",
+    "Sports"
   ],
   "duration": 6362,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Little Giants (1994)\\Little Giants [720p].mp4",
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Little_Giants",
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/little_giants",
-  "thumbnailSource": "Little Giants (1994).jpg"
+  "thumbnailSource": "Little Giants (1994).jpg",
+  "imdbId": "tt0110364",
+  "imdbGenres": [
+    "Comedy",
+    "Family",
+    "Sport"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0110364/"
 }

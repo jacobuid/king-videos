@@ -6,11 +6,9 @@
   "year": 2007,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family",
-    "Science Fiction"
+    "Animation",
+    "Comedy"
   ],
   "rating": "G",
   "blocked": false,
@@ -18,5 +16,13 @@
   "video": "Meet.The.Robinsons.2007.720p.BRrip.x264.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Meet_the_Robinsons",
-  "sourceFolder": "Meet The Robinsons (2007)"
+  "sourceFolder": "Meet The Robinsons (2007)",
+  "imdbId": "tt0396555",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0396555/",
+  "animationStyle": "3d"
 }

@@ -6,10 +6,9 @@
   "year": 2013,
   "category": "movie",
   "genres": [
-    "Animation",
+    "Action",
     "Adventure",
-    "Fantasy",
-    "Family"
+    "Animation"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Epic.2013.720p.BluRay.x264.YIFY.mp4",
   "thumbnail": "thumb.png",
   "metadataSource": "https://en.wikipedia.org/wiki/Epic_(2013_film)",
-  "sourceFolder": "Epic (2013)"
+  "sourceFolder": "Epic (2013)",
+  "imdbId": "tt0848537",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0848537/",
+  "animationStyle": "3d"
 }

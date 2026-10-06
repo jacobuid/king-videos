@@ -6,8 +6,9 @@
   "year": 1998,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Family"
   ],
   "duration": 5285,
   "video": "Belle's Magical World.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Belle's_Magical_World",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/belles_magical_world"
+  "ratingSource": "https://www.rottentomatoes.com/m/belles_magical_world",
+  "imdbId": "tt0167038",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0167038/",
+  "animationStyle": "2d"
 }

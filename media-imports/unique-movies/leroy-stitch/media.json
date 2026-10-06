@@ -6,8 +6,9 @@
   "year": 2006,
   "date": null,
   "genres": [
-    "Cartoon",
-    "Comedy"
+    "Action",
+    "Adventure",
+    "Cartoon"
   ],
   "duration": 4186,
   "video": "Leroy & Stitch.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Leroy_%26_Stitch",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/leroy-and-stitch"
+  "ratingSource": "https://movies.disney.com/leroy-and-stitch",
+  "imdbId": "tt0486761",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0486761/",
+  "animationStyle": "2d"
 }

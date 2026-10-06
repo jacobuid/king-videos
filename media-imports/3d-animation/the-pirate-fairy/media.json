@@ -5,12 +5,24 @@
   "date": "2014-04-01",
   "year": 2014,
   "category": "movie",
-  "genres": ["Animation", "Adventure", "Family", "Fantasy"],
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
   "rating": "G",
   "blocked": false,
   "duration": 4683,
   "video": "Tinker Bell and the Pirate Fairy 2014 1080p MA WEB-DL H 264 DDP5 1-HHWEB.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Pirate_Fairy",
-  "sourceFolder": "Tinker Bell and the Pirate Fairy"
+  "sourceFolder": "Tinker Bell and the Pirate Fairy",
+  "imdbId": "tt2483260",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt2483260/",
+  "animationStyle": "3d"
 }

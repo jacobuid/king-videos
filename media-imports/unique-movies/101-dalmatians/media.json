@@ -6,8 +6,8 @@
   "year": 1961,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
+    "Cartoon",
     "Comedy"
   ],
   "duration": 4576,
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/One_Hundred_and_One_Dalmatians",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/101-dalmatians-1961"
+  "ratingSource": "https://movies.disney.com/101-dalmatians-1961",
+  "imdbId": "tt0055254",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0055254/",
+  "animationStyle": "2d"
 }

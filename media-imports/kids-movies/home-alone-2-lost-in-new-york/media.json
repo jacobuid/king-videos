@@ -6,8 +6,9 @@
   "date": null,
   "description": "Home Alone 2: Lost in New York is a 1992 American Christmas comedy film directed by Chris Columbus and written and produced by John Hughes.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Adventure",
+    "Comedy",
+    "Crime"
   ],
   "duration": 7201,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Home Alone 2 Lost in New York (1992)\\Home Alone 2 Lost in New York [720p].mp4",
@@ -17,5 +18,12 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Home_Alone_2%3A_Lost_in_New_York",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/home_alone_2_lost_in_new_york"
+  "ratingSource": "https://www.rottentomatoes.com/m/home_alone_2_lost_in_new_york",
+  "imdbId": "tt0104431",
+  "imdbGenres": [
+    "Adventure",
+    "Comedy",
+    "Crime"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0104431/"
 }

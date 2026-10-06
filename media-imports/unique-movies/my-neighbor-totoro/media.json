@@ -6,8 +6,9 @@
   "year": 1988,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Comedy"
   ],
   "duration": 5185,
   "video": "03 - My Neighbor Totoro (1988).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/My_Neighbor_Totoro",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/my_neighbor_totoro"
+  "ratingSource": "https://www.rottentomatoes.com/m/my_neighbor_totoro",
+  "imdbId": "tt0096283",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0096283/",
+  "animationStyle": "2d"
 }

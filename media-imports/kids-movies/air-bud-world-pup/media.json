@@ -6,7 +6,8 @@
   "date": null,
   "description": "Air Bud: World Pup, also known as Air Bud 3, is a 2000 sports comedy film directed by Bill Bannerman.",
   "genres": [
-    "Live Action",
+    "Comedy",
+    "Drama",
     "Family"
   ],
   "duration": 4955,
@@ -17,5 +18,12 @@
   "processing": "encode",
   "metadataSource": "https://en.wikipedia.org/wiki/Air_Bud%3A_World_Pup",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/air-bud-world-pup"
+  "ratingSource": "https://movies.disney.com/air-bud-world-pup",
+  "imdbId": "tt0161220",
+  "imdbGenres": [
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0161220/"
 }

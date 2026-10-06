@@ -6,6 +6,7 @@
   "year": 2017,
   "date": null,
   "genres": [
+    "Adventure",
     "Animation",
     "Comedy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Despicable_Me_3",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/despicable_me_3"
+  "ratingSource": "https://www.rottentomatoes.com/m/despicable_me_3",
+  "imdbId": "tt3469046",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt3469046/",
+  "animationStyle": "3d"
 }

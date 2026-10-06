@@ -6,6 +6,7 @@
   "year": 2006,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
     "Fantasy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Tales_from_Earthsea_(film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG-13",
-  "ratingSource": "https://www.rottentomatoes.com/m/tales_from_earthsea"
+  "ratingSource": "https://www.rottentomatoes.com/m/tales_from_earthsea",
+  "imdbId": "tt0495596",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0495596/",
+  "animationStyle": "2d"
 }

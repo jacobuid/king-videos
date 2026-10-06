@@ -6,8 +6,8 @@
   "year": 2005,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
+    "Cartoon",
     "Comedy"
   ],
   "duration": 4269,
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Tarzan_II",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/tarzan_ii"
+  "ratingSource": "https://www.rottentomatoes.com/m/tarzan_ii",
+  "imdbId": "tt0437503",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0437503/",
+  "animationStyle": "2d"
 }

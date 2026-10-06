@@ -6,7 +6,9 @@
   "year": 1991,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Cartoon",
+    "Drama",
+    "Romance"
   ],
   "duration": 7155,
   "video": "13 - Only Yesterday (1991).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Only_Yesterday_(1991_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/only_yesterday_1991"
+  "ratingSource": "https://www.rottentomatoes.com/m/only_yesterday_1991",
+  "imdbId": "tt0102587",
+  "imdbGenres": [
+    "Animation",
+    "Drama",
+    "Romance"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0102587/",
+  "animationStyle": "2d"
 }

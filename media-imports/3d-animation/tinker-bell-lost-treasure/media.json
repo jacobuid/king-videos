@@ -5,12 +5,24 @@
   "date": "2009-10-27",
   "year": 2009,
   "category": "movie",
-  "genres": ["Animation", "Adventure", "Family", "Fantasy"],
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
   "rating": "G",
   "blocked": false,
   "duration": 4815,
   "video": "Tinker.Bell.And.The.Lost.Treasure.2009.720p.BRrip.x264.GAZ.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Tinker_Bell_and_the_Lost_Treasure",
-  "sourceFolder": "Tinker Bell And The Lost Treasure (2009)"
+  "sourceFolder": "Tinker Bell And The Lost Treasure (2009)",
+  "imdbId": "tt1216516",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1216516/",
+  "animationStyle": "3d"
 }

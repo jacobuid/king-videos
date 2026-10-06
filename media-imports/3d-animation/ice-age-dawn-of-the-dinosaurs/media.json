@@ -6,10 +6,9 @@
   "year": 2009,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Ice Age Dawn of the Dinosaurs.2009.720p.BrRip.x264.YIFY.mp4",
   "thumbnail": "dqxm93.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Ice_Age:_Dawn_of_the_Dinosaurs",
-  "sourceFolder": "Ice Age 3 - Dawn of the Dinosaurs (2009)"
+  "sourceFolder": "Ice Age 3 - Dawn of the Dinosaurs (2009)",
+  "imdbId": "tt1080016",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1080016/",
+  "animationStyle": "3d"
 }

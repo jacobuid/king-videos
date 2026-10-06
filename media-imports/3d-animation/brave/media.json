@@ -6,10 +6,9 @@
   "year": 2012,
   "category": "movie",
   "genres": [
-    "Animation",
+    "Action",
     "Adventure",
-    "Fantasy",
-    "Family"
+    "Animation"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Brave[720p].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Brave_(2012_film)",
-  "sourceFolder": "Brave (2012)"
+  "sourceFolder": "Brave (2012)",
+  "imdbId": "tt1217209",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1217209/",
+  "animationStyle": "3d"
 }

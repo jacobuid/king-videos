@@ -6,11 +6,9 @@
   "year": 2019,
   "category": "movie",
   "genres": [
-    "Animation",
-    "Action",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -18,5 +16,13 @@
   "video": "The.Lego.Movie.2.The.Second.Part.2019.720p.WEBRip.x264-[YTS.AM].mp4",
   "thumbnail": "opengraph-review_The_LEGO_Movie_2.jpg",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Lego_Movie_2:_The_Second_Part",
-  "sourceFolder": "The Lego Movie 2 The Second Part (2019) [WEBRip] [720p] [YTS.AM]"
+  "sourceFolder": "The Lego Movie 2 The Second Part (2019) [WEBRip] [720p] [YTS.AM]",
+  "imdbId": "tt3513498",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt3513498/",
+  "animationStyle": "3d"
 }

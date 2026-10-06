@@ -13,7 +13,7 @@ async function visit(folder){
     if(entry.isDirectory()){await visit(path);continue}
     if(entry.name!=='media.json')continue
     const manifest=JSON.parse((await readFile(path,'utf8')).replace(/^\uFEFF/,''))
-    const isThreeD=path.replaceAll('\\','/').includes('/3d-animation/')||threeDExceptions.has(manifest.id)
+    const isThreeD=manifest.animationStyle==='3d'||path.replaceAll('\\','/').includes('/3d-animation/')||threeDExceptions.has(manifest.id)
     function update(item,inheritedId,inheritedYear){
       const id=item.id||inheritedId
       const year=item.year||Number((item.date||'').slice(0,4))||inheritedYear

@@ -6,8 +6,9 @@
   "year": 1987,
   "date": null,
   "genres": [
-    "Cartoon",
-    "Action"
+    "Action",
+    "Adventure",
+    "Cartoon"
   ],
   "duration": 5603,
   "video": "G.I. Joe The Movie (1987).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/G.I._Joe%3A_The_Movie",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "TV-PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/gi_joe_the_movie"
+  "ratingSource": "https://www.rottentomatoes.com/m/gi_joe_the_movie",
+  "imdbId": "tt0093066",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0093066/",
+  "animationStyle": "2d"
 }

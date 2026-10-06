@@ -6,7 +6,8 @@
   "date": null,
   "description": "The first Prehysteria! was co-directed by Charles and Albert Band and it was released in 1993 direct to video.",
   "genres": [
-    "Live Action",
+    "Adventure",
+    "Comedy",
     "Family"
   ],
   "duration": 5003,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Prehysteria",
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/prehysteria",
-  "thumbnailSource": "Prehysteria (1993).jpg"
+  "thumbnailSource": "Prehysteria (1993).jpg",
+  "imdbId": "tt0107870",
+  "imdbGenres": [
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0107870/"
 }

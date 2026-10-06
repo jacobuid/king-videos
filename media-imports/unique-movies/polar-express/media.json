@@ -6,7 +6,9 @@
   "year": 2004,
   "date": null,
   "genres": [
-    "Live Action"
+    "Adventure",
+    "Animation",
+    "Family"
   ],
   "duration": 5997,
   "video": "Polar Express (2004).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Polar_Express",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/polar_express"
+  "ratingSource": "https://www.rottentomatoes.com/m/polar_express",
+  "imdbId": "tt0338348",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0338348/",
+  "animationStyle": "3d"
 }

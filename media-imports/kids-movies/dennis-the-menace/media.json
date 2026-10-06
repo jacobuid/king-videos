@@ -6,7 +6,7 @@
   "date": null,
   "description": "Mischievous young Dennis Mitchell causes endless trouble for his grumpy neighbor, Mr. Wilson.",
   "genres": [
-    "Live Action",
+    "Comedy",
     "Family"
   ],
   "duration": 5756,
@@ -18,5 +18,11 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Dennis_the_Menace_(film)",
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/dennis_the_menace",
-  "thumbnailSource": "Dennis the Menace.jpg"
+  "thumbnailSource": "Dennis the Menace.jpg",
+  "imdbId": "tt0106701",
+  "imdbGenres": [
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0106701/"
 }

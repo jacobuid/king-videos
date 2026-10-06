@@ -6,7 +6,7 @@
   "date": null,
   "description": "Richie Rich is a 1994 American adventure comedy film directed by Donald Petrie.",
   "genres": [
-    "Live Action",
+    "Comedy",
     "Family"
   ],
   "duration": 5671,
@@ -18,5 +18,11 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Richie_Rich_(film)",
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/richie_rich",
-  "thumbnailSource": "Richie Rich (1994).jpg"
+  "thumbnailSource": "Richie Rich (1994).jpg",
+  "imdbId": "tt0110989",
+  "imdbGenres": [
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0110989/"
 }

@@ -6,6 +6,7 @@
   "year": 2011,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
     "Comedy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Winnie_the_Pooh_(2011_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/winnie-the-pooh"
+  "ratingSource": "https://movies.disney.com/winnie-the-pooh",
+  "imdbId": "tt1449283",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1449283/",
+  "animationStyle": "2d"
 }

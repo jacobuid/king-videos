@@ -6,8 +6,9 @@
   "date": null,
   "description": "The Princess Diaries is a 2001 American comedy film directed by Garry Marshall from a screenplay by Gina Wendkos.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Comedy",
+    "Family",
+    "Romance"
   ],
   "duration": 6709,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Princess Diaries\\The.Princess.Diaries.2001.BluRay.720p.H264.mp4",
@@ -19,5 +20,12 @@
   "rating": "G",
   "ratingSource": "https://movies.disney.com/the-princess-diaries",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Princess Diaries\\The.Princess.Diaries.2001.BluRay.720p.H264.eng.srt",
-  "thumbnailSource": "The Princess Diaries (2001).webp"
+  "thumbnailSource": "The Princess Diaries (2001).webp",
+  "imdbId": "tt0247638",
+  "imdbGenres": [
+    "Comedy",
+    "Family",
+    "Romance"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0247638/"
 }

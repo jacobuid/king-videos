@@ -6,10 +6,9 @@
   "year": 2003,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Comedy",
-    "Fantasy"
+    "Cartoon",
+    "Comedy"
   ],
   "duration": 5107,
   "video": "Brother Bear.mp4",
@@ -19,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Brother_Bear",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/brother-bear"
+  "ratingSource": "https://movies.disney.com/brother-bear",
+  "imdbId": "tt0328880",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0328880/",
+  "animationStyle": "2d"
 }

@@ -6,7 +6,8 @@
   "date": null,
   "description": "Night at the Museum: Secret of the Tomb is a 2014 American fantasy comedy film directed by Shawn Levy and written by David Guion and Michael Handelman.",
   "genres": [
-    "Live Action",
+    "Adventure",
+    "Comedy",
     "Family"
   ],
   "duration": 5869,
@@ -19,5 +20,12 @@
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/night_at_the_museum_secret_of_the_tomb",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Night at the Museum 2 - Secret of the Tomb (2014)\\Night at the Museum - Secret of the Tomb [1080p].srt",
-  "thumbnailSource": "night at the museum 3.png"
+  "thumbnailSource": "night at the museum 3.png",
+  "imdbId": "tt2692250",
+  "imdbGenres": [
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt2692250/"
 }

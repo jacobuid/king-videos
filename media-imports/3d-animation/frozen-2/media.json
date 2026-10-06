@@ -6,10 +6,9 @@
   "year": 2019,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Fantasy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Frozen II [720p].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Frozen_II",
-  "sourceFolder": "Frozen II (2019)"
+  "sourceFolder": "Frozen II (2019)",
+  "imdbId": "tt4520988",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt4520988/",
+  "animationStyle": "3d"
 }

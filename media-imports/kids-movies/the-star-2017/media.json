@@ -6,9 +6,9 @@
   "date": null,
   "description": "The Star is a 2017 American animated biblical film directed by Timothy Reckart, and written by Carlos Kotkin from a story by Kotkin and Simon Moore.",
   "genres": [
-    "Animation",
     "Adventure",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "duration": 5166,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Star (2017)\\The Star [720p].mp4",
@@ -17,5 +17,13 @@
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Star (2017)\\The Star [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Star_(2017_film)",
-  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Star (2017)\\The Star [720p].srt"
+  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Star (2017)\\The Star [720p].srt",
+  "imdbId": "tt4587656",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt4587656/",
+  "animationStyle": "3d"
 }

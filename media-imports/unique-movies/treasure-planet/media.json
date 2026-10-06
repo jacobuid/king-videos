@@ -6,8 +6,9 @@
   "year": 2002,
   "date": null,
   "genres": [
-    "Cartoon",
-    "Adventure"
+    "Action",
+    "Adventure",
+    "Cartoon"
   ],
   "duration": 5724,
   "video": "Treasure Planet.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Treasure_Planet",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://movies.disney.com/treasure-planet"
+  "ratingSource": "https://movies.disney.com/treasure-planet",
+  "imdbId": "tt0133240",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0133240/",
+  "animationStyle": "2d"
 }

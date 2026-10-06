@@ -6,8 +6,9 @@
   "year": 1986,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Adventure"
+    "Family"
   ],
   "duration": 4452,
   "video": "The Great Mouse Detective.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Great_Mouse_Detective",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-great-mouse-detective"
+  "ratingSource": "https://movies.disney.com/the-great-mouse-detective",
+  "imdbId": "tt0091149",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0091149/",
+  "animationStyle": "2d"
 }

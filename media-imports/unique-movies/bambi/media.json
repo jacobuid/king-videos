@@ -6,7 +6,9 @@
   "year": 1942,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Adventure",
+    "Cartoon",
+    "Drama"
   ],
   "duration": 4191,
   "video": "Bambi (1942).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Bambi",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/bambi"
+  "ratingSource": "https://movies.disney.com/bambi",
+  "imdbId": "tt0034492",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0034492/",
+  "animationStyle": "2d"
 }

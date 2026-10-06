@@ -6,10 +6,9 @@
   "year": 2009,
   "category": "movie",
   "genres": [
-    "Animation",
     "Action",
-    "Comedy",
-    "Family"
+    "Adventure",
+    "Animation"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Monsters vs Aliens [720p].mp4",
   "thumbnail": "1144482.jpg",
   "metadataSource": "https://en.wikipedia.org/wiki/Monsters_vs._Aliens",
-  "sourceFolder": "Monsters vs Aliens (2009) [1080p]"
+  "sourceFolder": "Monsters vs Aliens (2009) [1080p]",
+  "imdbId": "tt0892782",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0892782/",
+  "animationStyle": "3d"
 }

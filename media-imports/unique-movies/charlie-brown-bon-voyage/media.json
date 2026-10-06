@@ -6,6 +6,7 @@
   "year": 1980,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
     "Comedy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Bon_Voyage%2C_Charlie_Brown_(and_Don't_Come_Back!!)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://static.rottentomatoes.com/m/bon_voyage_charlie_brown_1980"
+  "ratingSource": "https://static.rottentomatoes.com/m/bon_voyage_charlie_brown_1980",
+  "imdbId": "tt0080461",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0080461/",
+  "animationStyle": "2d"
 }

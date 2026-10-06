@@ -6,6 +6,7 @@
   "year": 1997,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
     "Fantasy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Princess_Mononoke",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG-13",
-  "ratingSource": "https://www.rottentomatoes.com/m/princess_mononoke"
+  "ratingSource": "https://www.rottentomatoes.com/m/princess_mononoke",
+  "imdbId": "tt0119698",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0119698/",
+  "animationStyle": "2d"
 }

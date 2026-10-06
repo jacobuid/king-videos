@@ -6,7 +6,8 @@
   "date": null,
   "description": "High School Musical 3: Senior Year is a 2008 American teen musical film directed and co-choreographed by Kenny Ortega, produced by Bill Borden and Barry Rosenbush, and written by Peter Barsocchini.",
   "genres": [
-    "Live Action",
+    "Comedy",
+    "Drama",
     "Family"
   ],
   "duration": 7003,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/High_School_Musical_3%3A_Senior_Year",
   "rating": "G",
   "ratingSource": "https://movies.disney.com/high-school-musical-3-senior-year",
-  "thumbnailSource": "highschool musical 3.webp"
+  "thumbnailSource": "highschool musical 3.webp",
+  "imdbId": "tt0962726",
+  "imdbGenres": [
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0962726/"
 }

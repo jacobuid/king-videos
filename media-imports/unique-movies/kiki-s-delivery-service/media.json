@@ -7,6 +7,7 @@
   "date": null,
   "genres": [
     "Cartoon",
+    "Family",
     "Fantasy"
   ],
   "duration": 6183,
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Kiki's_Delivery_Service",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/kikis_delivery_service"
+  "ratingSource": "https://www.rottentomatoes.com/m/kikis_delivery_service",
+  "imdbId": "tt0097814",
+  "imdbGenres": [
+    "Animation",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0097814/",
+  "animationStyle": "2d"
 }

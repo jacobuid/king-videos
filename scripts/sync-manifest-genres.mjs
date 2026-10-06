@@ -5,7 +5,7 @@ import process from 'node:process'
 for(const name of ['CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID'])if(!process.env[name])throw new Error(`${name} is required`)
 const root=resolve('media-imports'),directories=await readdir(root,{withFileTypes:true}),manifests=[]
 for(const directory of directories){if(!directory.isDirectory())continue;try{manifests.push(JSON.parse((await readFile(join(root,directory.name,'media.json'),'utf8')).replace(/^\uFEFF/,'')))}catch(error){if(error.code!=='ENOENT')throw error}}
-for(const manifest of manifests)if(!Array.isArray(manifest.genres)||manifest.genres.length>3)throw new Error(`${manifest.id} must have between zero and three genres`)
+for(const manifest of manifests)if(!Array.isArray(manifest.genres)||manifest.genres.some(genre=>typeof genre!=='string'||!genre.trim()))throw new Error(`${manifest.id} must have a list of non-empty genres`)
 
 const headers={Authorization:`Bearer ${process.env.CLOUDFLARE_API_TOKEN}`,'Content-Type':'application/json'},databaseName=process.env.D1_DATABASE||'king-videos-prod'
 const databasesResponse=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/d1/database`,{headers}),databases=await databasesResponse.json(),database=databases.result?.find(item=>item.name===databaseName)

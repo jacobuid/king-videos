@@ -6,8 +6,9 @@
   "year": 2002,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Adventure"
+    "Family"
   ],
   "duration": 4338,
   "video": "Tarzan & Jane.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Tarzan_%26_Jane",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/tarzan_and_jane"
+  "ratingSource": "https://www.rottentomatoes.com/m/tarzan_and_jane",
+  "imdbId": "tt0313680",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0313680/",
+  "animationStyle": "2d"
 }

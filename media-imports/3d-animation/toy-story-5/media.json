@@ -5,12 +5,24 @@
   "date": "2026-06-19",
   "year": 2026,
   "category": "movie",
-  "genres": ["Animation", "Adventure", "Comedy", "Family"],
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
   "rating": "PG",
   "blocked": false,
   "duration": 6207,
   "video": "Toy Story 5 2026 720p AMZN WEB-DL DDP5 1 H 264-KyoGo.mp4",
   "thumbnail": "thumbnail.jpg",
   "metadataSource": "https://www.pixar.com/toy-story-5",
-  "sourceFolder": "Toy Story 5"
+  "sourceFolder": "Toy Story 5",
+  "imdbId": "tt29355505",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt29355505/",
+  "animationStyle": "3d"
 }

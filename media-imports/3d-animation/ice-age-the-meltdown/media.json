@@ -6,10 +6,9 @@
   "year": 2006,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Ice Age The Meltdown.2006.720p.BrRip.x264.YIFY.mp4",
   "thumbnail": "W1MRGr.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Ice_Age:_The_Meltdown",
-  "sourceFolder": "Ice Age 2 - The Meltdown (2006)"
+  "sourceFolder": "Ice Age 2 - The Meltdown (2006)",
+  "imdbId": "tt0438097",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0438097/",
+  "animationStyle": "3d"
 }

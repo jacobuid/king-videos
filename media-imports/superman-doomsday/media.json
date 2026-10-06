@@ -6,10 +6,9 @@
   "year": 2007,
   "category": "movie",
   "genres": [
-    "Cartoon",
     "Action",
-    "Science Fiction",
-    "Superhero"
+    "Adventure",
+    "Cartoon"
   ],
   "rating": "PG-13",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "SUPERMAN T.A.S. - S00 E02 - Doomsday (2006 - 720p BluRay).mp4",
   "thumbnail": "thumb (2).jpg",
   "metadataSource": "https://en.wikipedia.org/wiki/Superman:_Doomsday",
-  "sourceFolder": "Specials (2006-08)"
+  "sourceFolder": "Specials (2006-08)",
+  "imdbId": "tt0934706",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0934706/",
+  "animationStyle": "2d"
 }

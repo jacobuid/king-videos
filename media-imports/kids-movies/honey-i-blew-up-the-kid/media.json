@@ -6,7 +6,8 @@
   "date": null,
   "description": "Honey, I Blew Up the Kid is a 1992 American science fiction comedy film directed by Randal Kleiser and released by Walt Disney Pictures.",
   "genres": [
-    "Live Action",
+    "Adventure",
+    "Comedy",
     "Family"
   ],
   "duration": 5369,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Honey%2C_I_Blew_Up_the_Kid",
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/honey_i_blew_up_the_kid",
-  "thumbnailSource": "Honey, I Blew Up the Kid.jpg"
+  "thumbnailSource": "Honey, I Blew Up the Kid.jpg",
+  "imdbId": "tt0104437",
+  "imdbGenres": [
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0104437/"
 }

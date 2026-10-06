@@ -6,8 +6,9 @@
   "date": null,
   "description": "Anne and Gilbert face separation and uncertainty as the First World War changes their lives.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Drama",
+    "Family",
+    "Romance"
   ],
   "duration": 10969,
   "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\anne-of-green-gables-the-continuing-story\\anne-of-green-gables-the-continuing-story.mp4",
@@ -20,5 +21,12 @@
     "source": "Embedded English PGS, OCR with Tesseract",
     "lastCueSeconds": 10873.8,
     "dialogueProofread": false
-  }
+  },
+  "imdbId": "tt0158466",
+  "imdbGenres": [
+    "Drama",
+    "Family",
+    "Romance"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0158466/"
 }

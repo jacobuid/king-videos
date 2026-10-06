@@ -6,7 +6,8 @@
   "date": null,
   "description": "The Borrowers is a 1997 British fantasy comedy film directed by Peter Hewitt and starring John Goodman, Jim Broadbent, Celia Imrie, Mark Williams, Hugh Laurie and Bradley Pierce.",
   "genres": [
-    "Live Action",
+    "Adventure",
+    "Comedy",
     "Family"
   ],
   "duration": 5218,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Borrowers_(1997_film)",
   "rating": "TV-PG",
   "ratingSource": "https://www.rottentomatoes.com/m/the_borrowers",
-  "thumbnailSource": "The Borrowers.png"
+  "thumbnailSource": "The Borrowers.png",
+  "imdbId": "tt0118755",
+  "imdbGenres": [
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0118755/"
 }

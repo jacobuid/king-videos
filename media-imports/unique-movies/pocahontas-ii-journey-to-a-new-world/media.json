@@ -6,7 +6,9 @@
   "year": 1998,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Adventure",
+    "Cartoon",
+    "Drama"
   ],
   "duration": 4212,
   "video": "Pocahontas II - Journey to a New World.mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Pocahontas_II%3A_Journey_to_a_New_World",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/pocahontas-2-journey-to-a-new-world"
+  "ratingSource": "https://movies.disney.com/pocahontas-2-journey-to-a-new-world",
+  "imdbId": "tt0143808",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0143808/",
+  "animationStyle": "2d"
 }

@@ -6,7 +6,8 @@
   "date": null,
   "description": "The Sandlot is a 1993 American coming-of-age sports comedy film written by David Mickey Evans and Robert Gunter.",
   "genres": [
-    "Live Action",
+    "Comedy",
+    "Drama",
     "Family"
   ],
   "duration": 6068,
@@ -17,5 +18,12 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Sandlot",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Sandlot (1993)\\The Sandlot [720p].srt",
-  "thumbnailSource": "The Sandlot (1993).jpg"
+  "thumbnailSource": "The Sandlot (1993).jpg",
+  "imdbId": "tt0108037",
+  "imdbGenres": [
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0108037/"
 }

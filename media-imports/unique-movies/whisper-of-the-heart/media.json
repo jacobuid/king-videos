@@ -6,7 +6,9 @@
   "year": 1995,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Cartoon",
+    "Drama",
+    "Family"
   ],
   "duration": 6651,
   "video": "17 - Whisper of the Heart (1995).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Whisper_of_the_Heart",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/whisper_of_the_heart"
+  "ratingSource": "https://www.rottentomatoes.com/m/whisper_of_the_heart",
+  "imdbId": "tt0113824",
+  "imdbGenres": [
+    "Animation",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0113824/",
+  "animationStyle": "2d"
 }

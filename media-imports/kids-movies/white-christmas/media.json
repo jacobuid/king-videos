@@ -6,8 +6,9 @@
   "date": null,
   "description": "White Christmas is a 1954 American Christmas musical film directed by Michael Curtiz and starring Bing Crosby, Danny Kaye, Rosemary Clooney, and Vera-Ellen.",
   "genres": [
-    "Live Action",
-    "Family",
+    "Comedy",
+    "Musical",
+    "Romance",
     "Classic"
   ],
   "duration": 7202,
@@ -16,5 +17,12 @@
   "sourceFolder": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\White Christmas (1954)",
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\White Christmas (1954)\\White Christmas [1080p].mp4",
   "processing": "unchanged",
-  "metadataSource": "https://en.wikipedia.org/wiki/White_Christmas_(1954_film)"
+  "metadataSource": "https://en.wikipedia.org/wiki/White_Christmas_(1954_film)",
+  "imdbId": "tt0047673",
+  "imdbGenres": [
+    "Comedy",
+    "Musical",
+    "Romance"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0047673/"
 }

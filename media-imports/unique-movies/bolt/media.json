@@ -6,8 +6,8 @@
   "year": 2008,
   "date": null,
   "genres": [
-    "Animation",
     "Adventure",
+    "Animation",
     "Comedy"
   ],
   "duration": 5780,
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Bolt_(2008_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://movies.disney.com/bolt"
+  "ratingSource": "https://movies.disney.com/bolt",
+  "imdbId": "tt0397892",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0397892/",
+  "animationStyle": "3d"
 }

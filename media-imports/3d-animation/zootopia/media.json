@@ -6,10 +6,9 @@
   "year": 2016,
   "category": "movie",
   "genres": [
-    "Animation",
+    "Action",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Zootopia.2016.720p.BluRay.x264-[YTS.AG].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Zootopia",
-  "sourceFolder": "Zootopia (2016) [YTS.AG]"
+  "sourceFolder": "Zootopia (2016) [YTS.AG]",
+  "imdbId": "tt2948356",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt2948356/",
+  "animationStyle": "3d"
 }

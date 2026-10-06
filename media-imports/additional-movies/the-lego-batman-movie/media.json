@@ -6,9 +6,9 @@
   "year": 2017,
   "date": "2017-02-10",
   "genres": [
-    "Animation",
     "Action",
-    "Comedy"
+    "Adventure",
+    "Animation"
   ],
   "duration": 6270,
   "video": "the-lego-batman-movie.mp4",
@@ -16,5 +16,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Lego_Batman_Movie",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\encoded-videos\\the-lego-batman-movie",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/the_lego_batman_movie"
+  "ratingSource": "https://www.rottentomatoes.com/m/the_lego_batman_movie",
+  "imdbId": "tt4116284",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt4116284/",
+  "animationStyle": "3d"
 }

@@ -6,7 +6,9 @@
   "year": 2013,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Cartoon",
+    "Biography",
+    "Drama"
   ],
   "duration": 7591,
   "video": "14 - The Wind Rises (2013).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Wind_Rises",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG-13",
-  "ratingSource": "https://www.rottentomatoes.com/m/the_wind_rises"
+  "ratingSource": "https://www.rottentomatoes.com/m/the_wind_rises",
+  "imdbId": "tt2013293",
+  "imdbGenres": [
+    "Animation",
+    "Biography",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt2013293/",
+  "animationStyle": "2d"
 }

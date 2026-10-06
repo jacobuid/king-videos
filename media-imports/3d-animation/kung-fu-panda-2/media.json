@@ -6,10 +6,9 @@
   "year": 2011,
   "category": "movie",
   "genres": [
-    "Animation",
     "Action",
-    "Comedy",
-    "Family"
+    "Adventure",
+    "Animation"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Kung Fu Panda 2.x264.BrRip.YIFY.mp4",
   "thumbnail": "1144464.jpg",
   "metadataSource": "https://en.wikipedia.org/wiki/Kung_Fu_Panda_2",
-  "sourceFolder": "Kung Fu Panda 2"
+  "sourceFolder": "Kung Fu Panda 2",
+  "imdbId": "tt1302011",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1302011/",
+  "animationStyle": "3d"
 }

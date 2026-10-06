@@ -6,8 +6,9 @@
   "year": 1986,
   "date": null,
   "genres": [
-    "Cartoon",
-    "Action"
+    "Action",
+    "Adventure",
+    "Cartoon"
   ],
   "duration": 5101,
   "video": "The Transformers The Movie (1986).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Transformers%3A_The_Movie",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://catalog.afi.com/Catalog/MovieDetails/57500"
+  "ratingSource": "https://catalog.afi.com/Catalog/MovieDetails/57500",
+  "imdbId": "tt0092106",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0092106/",
+  "animationStyle": "2d"
 }

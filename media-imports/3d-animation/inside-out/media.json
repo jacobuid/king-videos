@@ -6,10 +6,9 @@
   "year": 2015,
   "category": "movie",
   "genres": [
+    "Adventure",
     "Animation",
-    "Comedy",
-    "Drama",
-    "Family"
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Inside Out [720p].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Inside_Out_(2015_film)",
-  "sourceFolder": "Inside Out (2015)"
+  "sourceFolder": "Inside Out (2015)",
+  "imdbId": "tt2096673",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt2096673/",
+  "animationStyle": "3d"
 }

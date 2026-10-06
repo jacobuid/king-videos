@@ -6,7 +6,9 @@
   "year": 1994,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Adventure",
+    "Cartoon",
+    "Drama"
   ],
   "duration": 5304,
   "video": "The Lion King (1994).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Lion_King",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/lion_king"
+  "ratingSource": "https://www.rottentomatoes.com/m/lion_king",
+  "imdbId": "tt0110357",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0110357/",
+  "animationStyle": "2d"
 }

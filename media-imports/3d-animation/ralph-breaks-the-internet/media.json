@@ -6,10 +6,9 @@
   "year": 2018,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Ralph.Breaks.The.Internet.2018.720p.WEBRip.x264-[YTS.AM].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Ralph_Breaks_the_Internet",
-  "sourceFolder": "Ralph Breaks The Internet (2018) [WEBRip] [720p] [YTS.AM]"
+  "sourceFolder": "Ralph Breaks The Internet (2018) [WEBRip] [720p] [YTS.AM]",
+  "imdbId": "tt5848272",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt5848272/",
+  "animationStyle": "3d"
 }

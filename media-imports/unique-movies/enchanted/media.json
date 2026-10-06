@@ -6,10 +6,9 @@
   "year": 2007,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Comedy",
-    "Fantasy",
-    "Action"
+    "Comedy"
   ],
   "duration": 6447,
   "video": "Enchanted.mp4",
@@ -19,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Enchanted_(film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://movies.disney.com/enchanted"
+  "ratingSource": "https://movies.disney.com/enchanted",
+  "imdbId": "tt0461770",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0461770/",
+  "animationStyle": "2d"
 }

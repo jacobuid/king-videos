@@ -6,8 +6,8 @@
   "date": null,
   "description": "King of Kings is a 1961 American epic religious film directed by Nicholas Ray and produced by Samuel Bronston for Metro-Goldwyn-Mayer (MGM).",
   "genres": [
-    "Live Action",
-    "Family",
+    "Biography",
+    "Drama",
     "Classic"
   ],
   "duration": 10259,
@@ -19,5 +19,11 @@
   "metadataSource": "https://en.wikipedia.org/wiki/King_of_Kings_(1961_film)",
   "rating": "PG-13",
   "ratingSource": "https://www.rottentomatoes.com/m/king_of_kings",
-  "thumbnailSource": "King of Kings.png"
+  "thumbnailSource": "King of Kings.png",
+  "imdbId": "tt0055047",
+  "imdbGenres": [
+    "Biography",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0055047/"
 }

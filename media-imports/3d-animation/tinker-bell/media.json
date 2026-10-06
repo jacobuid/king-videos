@@ -6,10 +6,9 @@
   "year": 2008,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Family",
-    "Fantasy"
+    "Animation",
+    "Family"
   ],
   "rating": "G",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Tinker.Bell.2008.720p.BRrip.x264.GAZ.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Tinker_Bell_(film)",
-  "sourceFolder": "Tinker Bell (2008)"
+  "sourceFolder": "Tinker Bell (2008)",
+  "imdbId": "tt0823671",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0823671/",
+  "animationStyle": "3d"
 }

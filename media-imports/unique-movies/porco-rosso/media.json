@@ -6,9 +6,9 @@
   "year": 1992,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Fantasy"
+    "Cartoon",
+    "Comedy"
   ],
   "duration": 5596,
   "video": "04 - Porco Rosso (1992).mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Porco_Rosso",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/porco_rosso"
+  "ratingSource": "https://www.rottentomatoes.com/m/porco_rosso",
+  "imdbId": "tt0104652",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0104652/",
+  "animationStyle": "2d"
 }

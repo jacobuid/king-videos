@@ -6,10 +6,9 @@
   "year": 2016,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Leap!.2016.720p.BluRay.x264-[YTS.AG].mp4",
   "thumbnail": "thumb.png",
   "metadataSource": "https://en.wikipedia.org/wiki/Ballerina_(2016_film)",
-  "sourceFolder": "Leap! (2016)"
+  "sourceFolder": "Leap! (2016)",
+  "imdbId": "tt2261287",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt2261287/",
+  "animationStyle": "3d"
 }

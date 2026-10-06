@@ -6,10 +6,9 @@
   "year": 2004,
   "category": "movie",
   "genres": [
-    "Animation",
     "Action",
     "Adventure",
-    "Family"
+    "Animation"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "The Incredibles 2004.720p.BrRip.x264.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Incredibles",
-  "sourceFolder": "The Incredibles (2004)"
+  "sourceFolder": "The Incredibles (2004)",
+  "imdbId": "tt0317705",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0317705/",
+  "animationStyle": "3d"
 }

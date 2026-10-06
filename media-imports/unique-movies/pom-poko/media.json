@@ -7,7 +7,8 @@
   "date": null,
   "genres": [
     "Cartoon",
-    "Fantasy"
+    "Comedy",
+    "Drama"
   ],
   "duration": 7151,
   "video": "07 - Pom Poko (1994).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Pom_Poko",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/pom_poko"
+  "ratingSource": "https://www.rottentomatoes.com/m/pom_poko",
+  "imdbId": "tt0110008",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0110008/",
+  "animationStyle": "2d"
 }

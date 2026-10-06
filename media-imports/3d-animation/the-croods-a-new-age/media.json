@@ -6,10 +6,9 @@
   "year": 2020,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "The Croods A New Age [720p].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Croods:_A_New_Age",
-  "sourceFolder": "The Croods A New Age (2020)"
+  "sourceFolder": "The Croods A New Age (2020)",
+  "imdbId": "tt2850386",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt2850386/",
+  "animationStyle": "3d"
 }

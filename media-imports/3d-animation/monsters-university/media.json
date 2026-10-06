@@ -6,9 +6,9 @@
   "year": 2013,
   "category": "movie",
   "genres": [
+    "Adventure",
     "Animation",
-    "Comedy",
-    "Family"
+    "Comedy"
   ],
   "rating": "G",
   "blocked": false,
@@ -16,5 +16,13 @@
   "video": "Monsters.University.2013.720p.BluRay.x264.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Monsters_University",
-  "sourceFolder": "Monsters University (2013)"
+  "sourceFolder": "Monsters University (2013)",
+  "imdbId": "tt1453405",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1453405/",
+  "animationStyle": "3d"
 }

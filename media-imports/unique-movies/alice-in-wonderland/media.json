@@ -6,9 +6,9 @@
   "year": 1951,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Comedy",
-    "Fantasy"
+    "Comedy"
   ],
   "duration": 4516,
   "video": "Alice in Wonderland (1951).mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Alice_in_Wonderland_(1951_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/alice-in-wonderland-1951"
+  "ratingSource": "https://movies.disney.com/alice-in-wonderland-1951",
+  "imdbId": "tt0043274",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0043274/",
+  "animationStyle": "2d"
 }

@@ -6,8 +6,9 @@
   "year": 1967,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Adventure"
+    "Comedy"
   ],
   "duration": 4707,
   "video": "The Jungle Book (1967) [YTS.AG].mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Jungle_Book_(1967_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/the_jungle_book_1967"
+  "ratingSource": "https://www.rottentomatoes.com/m/the_jungle_book_1967",
+  "imdbId": "tt0061852",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0061852/",
+  "animationStyle": "2d"
 }

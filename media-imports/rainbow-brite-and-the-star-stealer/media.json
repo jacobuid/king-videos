@@ -6,14 +6,22 @@
   "year": 1985,
   "category": "movie",
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Family",
-    "Fantasy"
+    "Family"
   ],
   "rating": "G",
   "blocked": false,
   "duration": 5100,
   "video": "Rainbow Brite And The Star Stealer.mp4",
   "thumbnail": "thumb.png",
-  "metadataSource": "https://en.wikipedia.org/wiki/Rainbow_Brite_and_the_Star_Stealer"
+  "metadataSource": "https://en.wikipedia.org/wiki/Rainbow_Brite_and_the_Star_Stealer",
+  "imdbId": "tt0089877",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0089877/",
+  "animationStyle": "2d"
 }

@@ -6,7 +6,8 @@
   "date": null,
   "description": "High School Musical 2 is a 2007 American musical television film directed by Kenny Ortega and written by Peter Barsocchini.",
   "genres": [
-    "Live Action",
+    "Comedy",
+    "Drama",
     "Family"
   ],
   "duration": 6661,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/High_School_Musical_2",
   "rating": "TV-G",
   "ratingSource": "https://www.rottentomatoes.com/m/high_school_musical_2",
-  "thumbnailSource": "highschool musical 2.webp"
+  "thumbnailSource": "highschool musical 2.webp",
+  "imdbId": "tt0810900",
+  "imdbGenres": [
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0810900/"
 }

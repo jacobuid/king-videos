@@ -6,9 +6,9 @@
   "date": null,
   "description": "Spirit: Stallion of the Cimarron is a 2002 American animated Western film directed by Kelly Asbury and Lorna Cook, written by John Fusco, from an idea by Jeffrey Katzenberg, who produced with Mireille Soria.",
   "genres": [
-    "Cartoon",
     "Adventure",
-    "Family"
+    "Cartoon",
+    "Drama"
   ],
   "duration": 5006,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Spirit Stallion Of The Cimarron (2002)\\Spirit.Stallion.Of.The.Cimarron.720p.HDTV.x264.YIFY.mp4",
@@ -19,5 +19,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Spirit%3A_Stallion_of_the_Cimarron",
   "rating": "G",
   "ratingSource": "https://www.rottentomatoes.com/m/spirit_stallion_of_the_cimarron",
-  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Spirit Stallion Of The Cimarron (2002)\\Spirit.Stallion.Of.The.Cimarron.720p.HDTV.x264.YIFY.srt"
+  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Spirit Stallion Of The Cimarron (2002)\\Spirit.Stallion.Of.The.Cimarron.720p.HDTV.x264.YIFY.srt",
+  "imdbId": "tt0166813",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0166813/",
+  "animationStyle": "2d"
 }

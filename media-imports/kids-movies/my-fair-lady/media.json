@@ -6,8 +6,9 @@
   "date": null,
   "description": "My Fair Lady is a 1964 American musical comedy drama film adapted from Lerner and Loewe's 1956 stage musical based on George Bernard Shaw's 1913 stage play Pygmalion.",
   "genres": [
-    "Live Action",
-    "Family",
+    "Drama",
+    "Musical",
+    "Romance",
     "Classic"
   ],
   "duration": 10379,
@@ -19,5 +20,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/My_Fair_Lady_(film)",
   "rating": "G",
   "ratingSource": "https://www.rottentomatoes.com/m/my_fair_lady",
-  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\My Fair Lady (1964)\\My Fair Lady [1080p].srt"
+  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\My Fair Lady (1964)\\My Fair Lady [1080p].srt",
+  "imdbId": "tt0058385",
+  "imdbGenres": [
+    "Drama",
+    "Musical",
+    "Romance"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0058385/"
 }

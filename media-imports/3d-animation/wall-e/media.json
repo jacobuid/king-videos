@@ -6,10 +6,9 @@
   "year": 2008,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Family",
-    "Science Fiction"
+    "Animation",
+    "Family"
   ],
   "rating": "G",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "WALL-E [720p].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/WALL-E",
-  "sourceFolder": "WALL-E (2008)"
+  "sourceFolder": "WALL-E (2008)",
+  "imdbId": "tt0910970",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0910970/",
+  "animationStyle": "3d"
 }

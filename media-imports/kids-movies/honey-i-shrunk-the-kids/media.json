@@ -6,7 +6,8 @@
   "date": null,
   "description": "Honey, I Shrunk the Kids is a 1989 American science fiction comedy film.",
   "genres": [
-    "Live Action",
+    "Adventure",
+    "Comedy",
     "Family",
     "Classic"
   ],
@@ -20,5 +21,12 @@
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/honey_i_shrunk_the_kids",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Honey, I Shrunk The Kids (1989)\\Honey, I Shrunk The Kids [720p].srt",
-  "thumbnailSource": "Honey, I Shrunk the Kids.webp"
+  "thumbnailSource": "Honey, I Shrunk the Kids.webp",
+  "imdbId": "tt0097523",
+  "imdbGenres": [
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0097523/"
 }

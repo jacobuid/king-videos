@@ -6,6 +6,7 @@
   "year": 2000,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
     "Comedy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Emperor's_New_Groove",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-emperors-new-groove"
+  "ratingSource": "https://movies.disney.com/the-emperors-new-groove",
+  "imdbId": "tt0120917",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0120917/",
+  "animationStyle": "2d"
 }

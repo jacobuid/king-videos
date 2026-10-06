@@ -7,7 +7,8 @@
   "date": null,
   "genres": [
     "Cartoon",
-    "Comedy"
+    "Comedy",
+    "Drama"
   ],
   "duration": 4088,
   "video": "Lilo and Stitch 2 - Stitch has a Glitch.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Lilo_%26_Stitch_2%3A_Stitch_Has_a_Glitch",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://movies.disney.com/lilo-stitch-2-stitch-has-a-glitch"
+  "ratingSource": "https://movies.disney.com/lilo-stitch-2-stitch-has-a-glitch",
+  "imdbId": "tt0457993",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0457993/",
+  "animationStyle": "2d"
 }

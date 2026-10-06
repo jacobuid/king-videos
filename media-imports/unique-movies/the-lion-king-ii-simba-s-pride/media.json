@@ -6,7 +6,9 @@
   "year": 1998,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Adventure",
+    "Cartoon",
+    "Drama"
   ],
   "duration": 4850,
   "video": "The Lion King 2 (1998).mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Lion_King_II%3A_Simba's_Pride",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/the_lion_king_ii_simbas_pride"
+  "ratingSource": "https://www.rottentomatoes.com/m/the_lion_king_ii_simbas_pride",
+  "imdbId": "tt0120131",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0120131/",
+  "animationStyle": "2d"
 }

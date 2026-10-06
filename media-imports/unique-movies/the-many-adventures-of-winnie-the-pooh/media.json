@@ -7,7 +7,8 @@
   "date": null,
   "genres": [
     "Cartoon",
-    "Fantasy"
+    "Comedy",
+    "Family"
   ],
   "duration": 4440,
   "video": "The Many Adventures of Winnie the Pooh.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Many_Adventures_of_Winnie_the_Pooh",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "TV-G",
-  "ratingSource": "https://www.rottentomatoes.com/m/the_many_adventures_of_winnie_the_pooh"
+  "ratingSource": "https://www.rottentomatoes.com/m/the_many_adventures_of_winnie_the_pooh",
+  "imdbId": "tt0076363",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0076363/",
+  "animationStyle": "2d"
 }

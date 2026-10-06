@@ -6,10 +6,9 @@
   "year": 2001,
   "category": "movie",
   "genres": [
+    "Adventure",
     "Animation",
-    "Comedy",
-    "Family",
-    "Fantasy"
+    "Comedy"
   ],
   "rating": "G",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Monsters Inc. [720p].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Monsters,_Inc.",
-  "sourceFolder": "Monsters Inc (2001)"
+  "sourceFolder": "Monsters Inc (2001)",
+  "imdbId": "tt0198781",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0198781/",
+  "animationStyle": "3d"
 }

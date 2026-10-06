@@ -6,7 +6,7 @@
   "date": null,
   "description": "Home Alone is a 1990 American Christmas comedy film directed by Chris Columbus and written and produced by John Hughes.",
   "genres": [
-    "Live Action",
+    "Comedy",
     "Family"
   ],
   "duration": 6174,
@@ -17,5 +17,11 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Home_Alone",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/home_alone"
+  "ratingSource": "https://www.rottentomatoes.com/m/home_alone",
+  "imdbId": "tt0099785",
+  "imdbGenres": [
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0099785/"
 }

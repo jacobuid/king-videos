@@ -6,8 +6,9 @@
   "date": null,
   "description": "Wendy and her brothers travel to Neverland, where Peter Pan and the Lost Boys battle Captain Hook.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Adventure",
+    "Family",
+    "Fantasy"
   ],
   "duration": 6802,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Peter Pan (2003)\\Peter Pan [720p].mp4",
@@ -16,5 +17,12 @@
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Peter Pan (2003)\\Peter Pan [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Peter_Pan_(2003_film)",
-  "thumbnailSource": "peterpan 2003.png"
+  "thumbnailSource": "peterpan 2003.png",
+  "imdbId": "tt0316396",
+  "imdbGenres": [
+    "Adventure",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0316396/"
 }

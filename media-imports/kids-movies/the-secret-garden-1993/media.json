@@ -6,8 +6,9 @@
   "date": null,
   "description": "The Secret Garden is a 1993 fantasy drama film directed by Agnieszka Holland, executive-produced by Francis Ford Coppola and distributed by Warner Bros. under their Family Entertainment imprint.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Drama",
+    "Family",
+    "Fantasy"
   ],
   "duration": 5843,
   "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\the-secret-garden-1993\\the-secret-garden-1993.mp4",
@@ -19,5 +20,12 @@
   "rating": "G",
   "ratingSource": "https://www.rottentomatoes.com/m/the_secret_garden",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Secret Garden (1993)\\The Secret Garden [720p].srt",
-  "thumbnailSource": "The Secret Garden (1993).jpg"
+  "thumbnailSource": "The Secret Garden (1993).jpg",
+  "imdbId": "tt0108071",
+  "imdbGenres": [
+    "Drama",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0108071/"
 }

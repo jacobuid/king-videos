@@ -6,15 +6,22 @@
   "year": 1990,
   "category": "movie",
   "genres": [
-    "Cartoon",
+    "Action",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Cartoon"
   ],
   "rating": "G",
   "blocked": false,
   "duration": 1463,
   "video": "Special - The Prince and the Pauper [720p-1600k-30fps-test].mp4",
   "thumbnail": "thumb.jpg",
-  "metadataSource": "https://en.wikipedia.org/wiki/The_Prince_and_the_Pauper_(1990_film)"
+  "metadataSource": "https://en.wikipedia.org/wiki/The_Prince_and_the_Pauper_(1990_film)",
+  "imdbId": "tt0100409",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Animation"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0100409/",
+  "animationStyle": "2d"
 }

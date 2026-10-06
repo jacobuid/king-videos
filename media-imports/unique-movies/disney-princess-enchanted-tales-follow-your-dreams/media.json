@@ -6,7 +6,9 @@
   "year": 2007,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Cartoon",
+    "Family",
+    "Fantasy"
   ],
   "duration": 3201,
   "video": "Disney Princess Enchanted Tales - Follow Your Dreams.mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Disney_Princess_Enchanted_Tales%3A_Follow_Your_Dreams",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "NR",
-  "ratingSource": "https://movies.disney.com/disney-princess-enchanted-tales-follow-your-dreams"
+  "ratingSource": "https://movies.disney.com/disney-princess-enchanted-tales-follow-your-dreams",
+  "imdbId": "tt1135924",
+  "imdbGenres": [
+    "Animation",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1135924/",
+  "animationStyle": "2d"
 }

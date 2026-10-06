@@ -6,8 +6,9 @@
   "date": null,
   "description": "It's a Wonderful Life is a 1946 American Christmas fantasy drama film directed and produced by Frank Capra.",
   "genres": [
-    "Live Action",
+    "Drama",
     "Family",
+    "Fantasy",
     "Classic"
   ],
   "duration": 7839,
@@ -19,5 +20,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/It's_a_Wonderful_Life",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\It's a Wonderful Life (1946)\\It's a Wonderful Life [720p].srt",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/its_a_wonderful_life"
+  "ratingSource": "https://www.rottentomatoes.com/m/its_a_wonderful_life",
+  "imdbId": "tt0038650",
+  "imdbGenres": [
+    "Drama",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0038650/"
 }

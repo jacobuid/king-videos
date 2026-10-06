@@ -6,8 +6,9 @@
   "date": null,
   "description": "The Wizard of Oz is a 1939 American musical fantasy film produced by Metro-Goldwyn-Mayer.",
   "genres": [
-    "Live Action",
+    "Adventure",
     "Family",
+    "Fantasy",
     "Classic"
   ],
   "duration": 6108,
@@ -18,5 +19,12 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Wizard_of_Oz",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Wizard of Oz (1939)\\the-wizard-of-oz-yify-english.srt",
-  "thumbnailSource": "The Wizard of Oz (1939).jpg"
+  "thumbnailSource": "The Wizard of Oz (1939).jpg",
+  "imdbId": "tt0032138",
+  "imdbGenres": [
+    "Adventure",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0032138/"
 }

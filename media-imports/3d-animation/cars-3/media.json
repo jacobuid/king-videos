@@ -6,11 +6,9 @@
   "year": 2017,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family",
-    "Sports"
+    "Animation",
+    "Comedy"
   ],
   "rating": "G",
   "blocked": false,
@@ -18,5 +16,13 @@
   "video": "Cars.3.2017.1080p.WEBRip.x264.AAC-Ozlem.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Cars_3",
-  "sourceFolder": "Cars 3"
+  "sourceFolder": "Cars 3",
+  "imdbId": "tt3606752",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt3606752/",
+  "animationStyle": "3d"
 }

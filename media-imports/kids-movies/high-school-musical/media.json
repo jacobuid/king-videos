@@ -6,7 +6,8 @@
   "date": null,
   "description": "High School Musical is a 2006 American musical television film produced by and aired on Disney Channel as part of the network's slate of original television films.",
   "genres": [
-    "Live Action",
+    "Comedy",
+    "Drama",
     "Family"
   ],
   "duration": 5875,
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/High_School_Musical",
   "rating": "TV-G",
   "ratingSource": "https://www.rottentomatoes.com/m/high_school_musical",
-  "thumbnailSource": "highschool musical.webp"
+  "thumbnailSource": "highschool musical.webp",
+  "imdbId": "tt0475293",
+  "imdbGenres": [
+    "Comedy",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0475293/"
 }

@@ -6,7 +6,9 @@
   "year": 1981,
   "date": null,
   "genres": [
-    "Cartoon"
+    "Adventure",
+    "Cartoon",
+    "Drama"
   ],
   "duration": 4758,
   "video": "The Fox and the Hound.mp4",
@@ -16,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Fox_and_the_Hound",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-fox-and-the-hound"
+  "ratingSource": "https://movies.disney.com/the-fox-and-the-hound",
+  "imdbId": "tt0082406",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0082406/",
+  "animationStyle": "2d"
 }

@@ -6,8 +6,9 @@
   "date": null,
   "description": "Spy Kids 2: The Island of Lost Dreams is a 2002 American spy action comedy film co-produced, written, shot, edited, co-composed, and directed by Robert Rodriguez.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Action",
+    "Adventure",
+    "Comedy"
   ],
   "duration": 6018,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Spy Kids 2 Island of Lost Dreams (2002)\\Spy Kids 2 Island of Lost Dreams [720p].mp4",
@@ -17,5 +18,12 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Spy_Kids_2%3A_The_Island_of_Lost_Dreams",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Spy Kids 2 Island of Lost Dreams (2002)\\Spy Kids 2 Island of Lost Dreams [720p].srt",
-  "thumbnailSource": "Spy Kids 2.jpg"
+  "thumbnailSource": "Spy Kids 2.jpg",
+  "imdbId": "tt0287717",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0287717/"
 }

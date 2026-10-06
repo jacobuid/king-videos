@@ -6,9 +6,9 @@
   "year": 1970,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Comedy",
-    "Family"
+    "Comedy"
   ],
   "duration": 4536,
   "video": "The Aristocats.mp4",
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Aristocats",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/the-aristocats"
+  "ratingSource": "https://movies.disney.com/the-aristocats",
+  "imdbId": "tt0065421",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0065421/",
+  "animationStyle": "2d"
 }

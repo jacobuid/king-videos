@@ -6,10 +6,9 @@
   "year": 2002,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Ice Age.2002.720p.BrRip.x264.YIFY.mp4",
   "thumbnail": "g7x2El.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Ice_Age_(2002_film)",
-  "sourceFolder": "Ice Age (2002)"
+  "sourceFolder": "Ice Age (2002)",
+  "imdbId": "tt0268380",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0268380/",
+  "animationStyle": "3d"
 }

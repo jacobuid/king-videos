@@ -6,7 +6,8 @@
   "date": null,
   "description": "Jumanji is a 1995 American fantasy adventure film directed by Joe Johnston from a screenplay by Jonathan Hensleigh, Greg Taylor, and Jim Strain, based on the 1981 children's picture book by Chris Van Allsburg.",
   "genres": [
-    "Live Action",
+    "Adventure",
+    "Comedy",
     "Family"
   ],
   "duration": 6246,
@@ -16,5 +17,12 @@
   "sourceVideo": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Jumanji (1995) (1)\\Jumanji [720p].mp4",
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/Jumanji_(1995_film)",
-  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Jumanji (1995) (1)\\Jumanji [720p].srt"
+  "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Jumanji (1995) (1)\\Jumanji [720p].srt",
+  "imdbId": "tt0113497",
+  "imdbGenres": [
+    "Adventure",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0113497/"
 }

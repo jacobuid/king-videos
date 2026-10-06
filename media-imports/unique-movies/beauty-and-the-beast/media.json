@@ -7,6 +7,7 @@
   "date": null,
   "genres": [
     "Cartoon",
+    "Family",
     "Fantasy"
   ],
   "duration": 5505,
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Beauty_and_the_Beast_(1991_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/beauty-and-the-beast"
+  "ratingSource": "https://movies.disney.com/beauty-and-the-beast",
+  "imdbId": "tt0101414",
+  "imdbGenres": [
+    "Animation",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0101414/",
+  "animationStyle": "2d"
 }

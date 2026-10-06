@@ -6,7 +6,8 @@
   "date": null,
   "description": "Moses discovers his heritage and leads the Hebrew people out of slavery in Egypt.",
   "genres": [
-    "Live Action",
+    "Adventure",
+    "Drama",
     "Family",
     "Classic"
   ],
@@ -18,5 +19,12 @@
   "processing": "unchanged",
   "metadataSource": "https://en.wikipedia.org/wiki/The_Ten_Commandments_(1956_film)",
   "subtitleSource": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\The Ten Commandments (1956) [1080p]\\The.Ten.Commandments.1956.1080p.BrRip.x264.BOKUTOX.YIFY.srt",
-  "thumbnailSource": "The Ten Commandments (1956).jpg"
+  "thumbnailSource": "The Ten Commandments (1956).jpg",
+  "imdbId": "tt0049833",
+  "imdbGenres": [
+    "Adventure",
+    "Drama",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0049833/"
 }

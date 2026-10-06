@@ -6,8 +6,9 @@
   "year": 1940,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Comedy"
   ],
   "duration": 5044,
   "video": "Pinocchio.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Pinocchio_(1940_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/pinocchio"
+  "ratingSource": "https://movies.disney.com/pinocchio",
+  "imdbId": "tt0032910",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0032910/",
+  "animationStyle": "2d"
 }

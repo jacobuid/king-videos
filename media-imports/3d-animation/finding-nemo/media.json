@@ -6,10 +6,9 @@
   "year": 2003,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "G",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Finding.Nemo.2003.720p.BluRay.x264.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Finding_Nemo",
-  "sourceFolder": "Finding Nemo (2003)"
+  "sourceFolder": "Finding Nemo (2003)",
+  "imdbId": "tt0266543",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0266543/",
+  "animationStyle": "3d"
 }

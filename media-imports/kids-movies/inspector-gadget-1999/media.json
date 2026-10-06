@@ -6,8 +6,9 @@
   "date": null,
   "description": "Inspector Gadget is a 1999 superhero comedy film directed by David Kellogg and written by Kerry Ehrin and Zak Penn from a story by Ehrin and Dana Olsen.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Action",
+    "Adventure",
+    "Comedy"
   ],
   "duration": 4512,
   "video": "G:\\Other computers\\My PC\\Google - WD Sync\\01 - Movies\\00 - Kids\\Inspector Gadget (1999)\\Inspector Gadget [720p].mp4",
@@ -18,5 +19,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Inspector_Gadget_(film)",
   "rating": "PG",
   "ratingSource": "https://www.rottentomatoes.com/m/inspector_gadget",
-  "thumbnailSource": "Inspector Gadget (1999).jpg"
+  "thumbnailSource": "Inspector Gadget (1999).jpg",
+  "imdbId": "tt0141369",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0141369/"
 }

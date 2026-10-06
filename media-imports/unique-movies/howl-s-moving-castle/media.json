@@ -6,8 +6,9 @@
   "year": 2004,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Fantasy"
+    "Family"
   ],
   "duration": 7149,
   "video": "06 - Howl's Moving Castle (2004).mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Howl's_Moving_Castle_(film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG",
-  "ratingSource": "https://www.rottentomatoes.com/m/howls_moving_castle"
+  "ratingSource": "https://www.rottentomatoes.com/m/howls_moving_castle",
+  "imdbId": "tt0347149",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0347149/",
+  "animationStyle": "2d"
 }

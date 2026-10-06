@@ -6,6 +6,7 @@
   "year": 1988,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
     "Comedy"
   ],
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Oliver_%26_Company",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/oliver-and-company"
+  "ratingSource": "https://movies.disney.com/oliver-and-company",
+  "imdbId": "tt0095776",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0095776/",
+  "animationStyle": "2d"
 }

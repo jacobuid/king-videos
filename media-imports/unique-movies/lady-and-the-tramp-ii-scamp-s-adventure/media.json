@@ -6,8 +6,8 @@
   "year": 2001,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
+    "Cartoon",
     "Comedy"
   ],
   "duration": 3973,
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Lady_and_the_Tramp_II%3A_Scamp's_Adventure",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/lady_and_the_tramp_ii_scamps_adventure"
+  "ratingSource": "https://www.rottentomatoes.com/m/lady_and_the_tramp_ii_scamps_adventure",
+  "imdbId": "tt0249677",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0249677/",
+  "animationStyle": "2d"
 }

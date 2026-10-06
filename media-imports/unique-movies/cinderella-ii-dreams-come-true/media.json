@@ -7,6 +7,7 @@
   "date": null,
   "genres": [
     "Cartoon",
+    "Family",
     "Fantasy"
   ],
   "duration": 4228,
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Cinderella_II%3A_Dreams_Come_True",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/cinderella_ii_dreams_come_true"
+  "ratingSource": "https://www.rottentomatoes.com/m/cinderella_ii_dreams_come_true",
+  "imdbId": "tt0291082",
+  "imdbGenres": [
+    "Animation",
+    "Family",
+    "Fantasy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0291082/",
+  "animationStyle": "2d"
 }

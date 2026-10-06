@@ -6,10 +6,9 @@
   "year": 2013,
   "category": "movie",
   "genres": [
+    "Adventure",
     "Animation",
-    "Fantasy",
-    "Family",
-    "Music"
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Frozen[720p].mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Frozen_(2013_film)",
-  "sourceFolder": "Frozen (2013) [1080p]"
+  "sourceFolder": "Frozen (2013) [1080p]",
+  "imdbId": "tt2294629",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt2294629/",
+  "animationStyle": "3d"
 }

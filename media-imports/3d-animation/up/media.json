@@ -6,10 +6,9 @@
   "year": 2009,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "PG",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Up.2009.720p.BluRay.x264.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Up_(2009_film)",
-  "sourceFolder": "Up (2009)"
+  "sourceFolder": "Up (2009)",
+  "imdbId": "tt1049413",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt1049413/",
+  "animationStyle": "3d"
 }

@@ -7,13 +7,21 @@
   "category": "movie",
   "genres": [
     "Cartoon",
-    "Sports",
-    "Comedy"
+    "Comedy",
+    "Family"
   ],
   "rating": "TV-G",
   "blocked": false,
   "duration": 4688,
   "video": "Animalympics.mp4",
   "thumbnail": "thumb.png",
-  "metadataSource": "https://en.wikipedia.org/wiki/Animalympics"
+  "metadataSource": "https://en.wikipedia.org/wiki/Animalympics",
+  "imdbId": "tt0078780",
+  "imdbGenres": [
+    "Animation",
+    "Comedy",
+    "Family"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0078780/",
+  "animationStyle": "2d"
 }

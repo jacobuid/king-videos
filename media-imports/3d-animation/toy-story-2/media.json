@@ -6,10 +6,9 @@
   "year": 1999,
   "category": "movie",
   "genres": [
-    "Animation",
     "Adventure",
-    "Comedy",
-    "Family"
+    "Animation",
+    "Comedy"
   ],
   "rating": "G",
   "blocked": false,
@@ -17,5 +16,13 @@
   "video": "Toy.Story.2.1999.720p.BluRay.x264.YIFY.mp4",
   "thumbnail": "compose.webp",
   "metadataSource": "https://en.wikipedia.org/wiki/Toy_Story_2",
-  "sourceFolder": "Toy Story 2 (1999)"
+  "sourceFolder": "Toy Story 2 (1999)",
+  "imdbId": "tt0120363",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0120363/",
+  "animationStyle": "3d"
 }

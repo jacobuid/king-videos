@@ -6,8 +6,9 @@
   "year": 2004,
   "date": null,
   "genres": [
+    "Adventure",
     "Cartoon",
-    "Adventure"
+    "Comedy"
   ],
   "duration": 4529,
   "video": "Mulan II.mp4",
@@ -17,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Mulan_II",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/mulan_ii"
+  "ratingSource": "https://www.rottentomatoes.com/m/mulan_ii",
+  "imdbId": "tt0279967",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0279967/",
+  "animationStyle": "2d"
 }

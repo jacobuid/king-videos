@@ -6,8 +6,9 @@
   "date": null,
   "description": "Air Bud: Spikes Back is a 2003 sports comedy film directed by Mike Southon.",
   "genres": [
-    "Live Action",
-    "Family"
+    "Comedy",
+    "Family",
+    "Sports"
   ],
   "duration": 5246,
   "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\kids-movies\\air-bud-spikes-back\\air-bud-spikes-back.mp4",
@@ -17,5 +18,12 @@
   "processing": "encode",
   "metadataSource": "https://en.wikipedia.org/wiki/Air_Bud%3A_Spikes_Back",
   "rating": "G",
-  "ratingSource": "https://www.rottentomatoes.com/m/air_bud_spikes_back"
+  "ratingSource": "https://www.rottentomatoes.com/m/air_bud_spikes_back",
+  "imdbId": "tt0337812",
+  "imdbGenres": [
+    "Comedy",
+    "Family",
+    "Sport"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0337812/"
 }

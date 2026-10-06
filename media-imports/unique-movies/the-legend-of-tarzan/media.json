@@ -6,9 +6,9 @@
   "year": 2016,
   "date": null,
   "genres": [
-    "Live Action",
+    "Action",
     "Adventure",
-    "Action"
+    "Drama"
   ],
   "duration": 6599,
   "video": "The Legend Of Tarzan (2016).mp4",
@@ -18,5 +18,12 @@
   "metadataSource": "https://en.wikipedia.org/wiki/The_Legend_of_Tarzan_(film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "PG-13",
-  "ratingSource": "https://www.rottentomatoes.com/m/the_legend_of_tarzan"
+  "ratingSource": "https://www.rottentomatoes.com/m/the_legend_of_tarzan",
+  "imdbId": "tt0918940",
+  "imdbGenres": [
+    "Action",
+    "Adventure",
+    "Drama"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0918940/"
 }

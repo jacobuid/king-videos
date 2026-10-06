@@ -6,8 +6,8 @@
   "year": 1973,
   "date": null,
   "genres": [
-    "Cartoon",
     "Adventure",
+    "Cartoon",
     "Comedy"
   ],
   "duration": 4985,
@@ -18,5 +18,13 @@
   "metadataSource": "https://en.wikipedia.org/wiki/Robin_Hood_(1973_film)",
   "sourceFolder": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\unique-movies",
   "rating": "G",
-  "ratingSource": "https://movies.disney.com/robin-hood"
+  "ratingSource": "https://movies.disney.com/robin-hood",
+  "imdbId": "tt0070608",
+  "imdbGenres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "genresSource": "https://www.imdb.com/title/tt0070608/",
+  "animationStyle": "2d"
 }
