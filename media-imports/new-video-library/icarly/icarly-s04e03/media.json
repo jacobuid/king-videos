@@ -26,5 +26,6 @@
   "sourceVideoCodec": "h264",
   "sourceAudioCodec": "aac",
   "metadataSource": "https://www.tvmaze.com/episodes/72615/icarly-4x03-iget-pranky",
-  "processing": "Video stream copy; web-ready MP4"
+  "processing": "H.264 video and AAC audio copied unchanged into fast-start MP4",
+  "outputBytes": 512646145
 }

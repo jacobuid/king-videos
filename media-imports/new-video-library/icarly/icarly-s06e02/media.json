@@ -26,5 +26,6 @@
   "sourceVideoCodec": "h264",
   "sourceAudioCodec": "aac",
   "metadataSource": "https://www.tvmaze.com/episodes/72634/icarly-6x02-igo-one-direction",
-  "processing": "Video stream copy; web-ready MP4"
+  "processing": "H.264 video and AAC audio copied unchanged into fast-start MP4",
+  "outputBytes": 445345254
 }

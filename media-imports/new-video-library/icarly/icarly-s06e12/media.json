@@ -26,5 +26,6 @@
   "sourceVideoCodec": "h264",
   "sourceAudioCodec": "aac",
   "metadataSource": "https://www.tvmaze.com/episodes/72643/icarly-6x11-ilost-my-head-in-vegas",
-  "processing": "Video stream copy; web-ready MP4"
+  "processing": "H.264 video and AAC audio copied unchanged into fast-start MP4",
+  "outputBytes": 485705355
 }

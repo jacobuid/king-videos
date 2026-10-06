@@ -1,0 +1,25 @@
+{
+  "id": "anne-of-green-gables",
+  "title": "Anne of Green Gables",
+  "category": "movie",
+  "year": 1985,
+  "date": null,
+  "description": "An imaginative orphan finds a home with Matthew and Marilla Cuthbert on Prince Edward Island.",
+  "genres": [
+    "Live Action",
+    "Family",
+    "Classic"
+  ],
+  "duration": 11749,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\anne-of-green-gables\\anne-of-green-gables.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\anne-bluray\\anne-of-green-gables\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Anne of Green Gables\\Anne of Green Gables 1985 720p BluRay x264 [i_c].mkv",
+  "metadataSource": "https://www.sullivanmovies.com/productions/anne-of-green-gables",
+  "processing": "Original 720p H.264 video and main English AAC audio preserved without re-encoding; fast-start MP4",
+  "captions": {
+    "cues": 3050,
+    "source": "Embedded English PGS, OCR with Tesseract",
+    "lastCueSeconds": 11677.02,
+    "dialogueProofread": false
+  }
+}

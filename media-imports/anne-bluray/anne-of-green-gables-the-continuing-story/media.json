@@ -1,0 +1,24 @@
+{
+  "id": "anne-of-green-gables-the-continuing-story",
+  "title": "Anne of Green Gables: The Continuing Story",
+  "category": "movie",
+  "year": 2000,
+  "date": null,
+  "description": "Anne and Gilbert face separation and uncertainty as the First World War changes their lives.",
+  "genres": [
+    "Live Action",
+    "Family"
+  ],
+  "duration": 10969,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\anne-of-green-gables-the-continuing-story\\anne-of-green-gables-the-continuing-story.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\anne-bluray\\anne-of-green-gables-the-continuing-story\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Anne of Green Gables\\Anne of Green Gables 2000 The Continuing Story 720p BluRay x264 [i_c].mkv",
+  "metadataSource": "https://lmmonline.org/screen/anne-of-green-gables-the-continuing-story-2000/",
+  "processing": "Original 720p H.264 video and main English AAC audio preserved without re-encoding; fast-start MP4",
+  "captions": {
+    "cues": 2969,
+    "source": "Embedded English PGS, OCR with Tesseract",
+    "lastCueSeconds": 10873.8,
+    "dialogueProofread": false
+  }
+}
