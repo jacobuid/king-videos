@@ -237,19 +237,85 @@ end sub
 sub showProfiles()
     m.screen = "profiles"
     m.status.height = 100
-    m.heading.text = "Who's watching?"
-    m.status.text = "Choose a profile."
+    m.status.text = ""
+    m.heading.visible = false
     m.menu.visible = false
     m.actions.visible = false
-    profiles = []
+    m.rows.visible = false
+    m.profileStage = m.top.findNode("profileStage")
+    m.profileStage.visible = true
+    grid = m.top.findNode("profileGrid")
+    grid.removeChildrenIndex(grid.getChildCount(), 0)
+    m.profileTiles = []
+    count = m.profiles.count()
+    rowCount = int((count + 3) / 4)
+    if rowCount < 1 then rowCount = 1
+    firstRow = count - (rowCount - 1) * 4
+    row = 0
+    column = 0
+    rowSize = firstRow
     for each profile in m.profiles
         avatar = profile.avatar
         if avatar = invalid then avatar = "bluey--bluey.png"
         if m.config.legacyAvatars[avatar] <> invalid then avatar = m.config.legacyAvatars[avatar]
-        profiles.push({id: profile.id, title: profile.name, thumbnailUrl: m.config.web + "profiles/" + escaped(avatar), kind: "profile", profile: profile})
+        tile = grid.createChild("ProfileTile")
+        tile.translation = [(1920 - (rowSize * 270 - 40)) / 2 + column * 270, 280 + row * 320]
+        tile.title = profile.name
+        tile.uri = m.config.web + "profiles/" + escaped(avatar)
+        m.profileTiles.push({node: tile, profile: profile, row: row, column: column, rowSize: rowSize})
+        column++
+        if column >= rowSize
+            row++
+            column = 0
+            rowSize = 4
+        end if
     end for
-    showRows([{title: "Profiles", items: profiles}])
+    m.profileIndex = 0
+    updateProfileFocus()
+    m.top.setFocus(true)
 end sub
+
+sub updateProfileFocus()
+    for i = 0 to m.profileTiles.count() - 1
+        m.profileTiles[i].node.selected = (i = m.profileIndex)
+    end for
+end sub
+
+sub selectProfile()
+    m.profile = m.profileTiles[m.profileIndex].profile
+    if m.profile.hasPin then showPin() else api("unlock", "/api/profiles/" + escaped(m.profile.id) + "/unlock", "POST", {pin: ""})
+end sub
+
+function profileKey(key as string) as boolean
+    if m.profileTiles.count() = 0 then return false
+    if key = "OK"
+        selectProfile()
+        return true
+    end if
+    current = m.profileTiles[m.profileIndex]
+    targetRow = current.row
+    targetColumn = current.column
+    if key = "left" then targetColumn--
+    if key = "right" then targetColumn++
+    if key = "up" then targetRow--
+    if key = "down" then targetRow++
+    if key <> "left" and key <> "right" and key <> "up" and key <> "down" then return false
+    closest = -1
+    distance = 9999
+    for i = 0 to m.profileTiles.count() - 1
+        candidate = m.profileTiles[i]
+        if candidate.row = targetRow
+            delta = abs(candidate.column - targetColumn)
+            if delta < distance
+                distance = delta
+                closest = i
+            end if
+        end if
+    end for
+    if closest >= 0 then m.profileIndex = closest
+    updateProfileFocus()
+    return true
+end function
 
 sub showPin()
     dialog = CreateObject("roSGNode", "StandardPinPadDialog")
@@ -270,11 +336,13 @@ sub onPinSelected(event as object)
         api("unlock", "/api/profiles/" + escaped(m.profile.id) + "/unlock", "POST", {pin: pin})
     else
         m.top.dialog = invalid
-        m.rows.setFocus(true)
+        m.top.setFocus(true)
     end if
 end sub
 
 sub loadLibrary()
+    m.top.findNode("profileStage").visible = false
+    m.heading.visible = true
     m.screen = "loading"
     m.heading.text = "KINGFLIX"
     m.status.text = "Loading your library..."
@@ -687,6 +755,7 @@ function onKeyEvent(key as string, press as boolean) as boolean
         api(retry.kind, mid(retry.url, len(m.config.api) + 1), retry.method, retry.body)
         return true
     end if
+    if m.screen = "profiles" then return profileKey(key)
     if m.screen = "pairing" and key = "OK"
         m.poll.control = "STOP"
         beginPairing()

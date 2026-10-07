@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="ProfileTile" extends="Group">
+  <interface>
+    <field id="title" type="string" alias="name.text"/>
+    <field id="uri" type="string" alias="portrait.uri"/>
+    <field id="selected" type="boolean" onChange="updateSelection"/>
+  </interface>
+  <script type="text/brightscript" uri="ProfileTile.brs"/>
+  <children>
+    <Rectangle id="outline" width="230" height="230" color="#444444"/>
+    <Poster id="portrait" translation="[4,4]" width="222" height="222" loadDisplayMode="scaleToFill"/>
+    <Label id="name" translation="[-15,245]" width="260" height="50" horizAlign="center" color="#888888"><Font role="font" size="28"/></Label>
+  </children>
+</component>
