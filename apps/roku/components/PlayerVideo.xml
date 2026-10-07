@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component name="PlayerVideo" extends="Video">
-  <interface><field id="remoteKey" type="string" alwaysNotify="true"/></interface>
-  <script type="text/brightscript" uri="PlayerVideo.brs"/>
-</component>
