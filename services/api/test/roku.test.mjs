@@ -61,3 +61,13 @@ test('Roku caption conversion handles cue IDs, settings, comments, and hourless 
   assert.equal(vttToSrt(vtt),'1\n00:00:01,250 --> 00:00:02,500\nHello\n\n2\n00:01:03,100 --> 00:01:04,200\nWorld\n')
   assert.equal(vttToSrt('1\n00:00:01,000 --> 00:00:02,000\nText'),'1\n00:00:01,000 --> 00:00:02,000\nText')
 })
+
+test('Roku delivery preserves open-ended and explicit ranges while browser chunks remain bounded',async()=>{
+  const {videoOriginRange}=await import('../src/video-delivery.ts')
+  assert.equal(videoOriginRange('bytes=0-',true),'bytes=0-')
+  assert.equal(videoOriginRange('bytes=20000000-50000000',true),'bytes=20000000-50000000')
+  assert.equal(videoOriginRange('bytes=0-',false),'bytes=0-16777215')
+  assert.equal(videoOriginRange('bytes=10-20',false),'bytes=10-20')
+  assert.equal(videoOriginRange('bytes=-1024',true),'bytes=-1024')
+  assert.equal(videoOriginRange(null,true),null)
+})

@@ -53,3 +53,9 @@ Network requests and registry access run in Task nodes. The render thread only b
 Roku requests the existing signed video URLs. The API converts signed private WebVTT sidecars to SRT on request, without changing the stored subtitle files or browser playback.
 
 Sources: [Roku SceneGraph](https://developer.roku.com/dev/docs/scenegraph), [Task threads](https://developer.roku.com/dev/docs/threads), [Video node](https://developer.roku.com/dev/docs/video), [caption metadata](https://developer.roku.com/dev/docs/content-metadata), [Developer Mode installation](https://developer.roku.com/dev/docs/developer-setup).
+
+## Playback troubleshooting
+
+Roku video links preserve the original HTTP byte range, including open-ended requests, instead of using the browser delivery limit of 16 MB. Push the API changes as well as installing the rebuilt app to enable this fix. The player uses Roku's built-in controls, logs state/error information without signed URLs, and returns to the title if playback makes no progress for sixty seconds. Back restores the app immediately rather than waiting for a stopped event. Temporary progress-save failures retain the latest pending position for retry.
+
+A read-only B2 check of Rainbow Brite and the Star Stealer found H.264 Main level 3.1, 854 ? 480, 8-bit 4:2:0, stereo HE-AAC, and a valid thirty-second decode around ten minutes. Its MP4 metadata is at the end of the file rather than fast-start. These checks do not prove uninterrupted playback on the TV or certify the rest of the catalog.

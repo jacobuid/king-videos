@@ -11,6 +11,7 @@ sub init()
     m.sequence = 0
     m.lastSaved = 0
     m.playbackPosition = 0
+    m.progressRevision = 0
     m.media = []
     m.progressOrder = []
     m.positions = {}
@@ -35,6 +36,7 @@ sub init()
     m.video.observeField("position", "onVideoPosition")
     m.video.observeField("state", "onVideoState")
     m.poll.observeField("fire", "onPoll")
+    m.top.findNode("playbackWatchdog").observeField("fire", "checkPlaybackStall")
     m.top.findNode("progressTimer").observeField("fire", "refreshHomeProgress")
     m.top.setFocus(true)
     registryOperation("load")
@@ -83,7 +85,7 @@ sub api(kind as string, path as string, method = "GET" as string, body = invalid
     m.sequence++
     tag = m.sequence.toStr()
     task = CreateObject("roSGNode", "ApiTask")
-    task.input = { url: m.config.api + path, method: method, body: body, token: m.deviceToken, profileToken: m.profileToken, tag: tag, kind: kind }
+    task.input = { url: m.config.api + path, method: method, body: body, token: m.deviceToken, profileToken: m.profileToken, progressRevision: m.progressRevision, tag: tag, kind: kind }
     m.tasks[tag] = task
     task.observeField("result", "onApiResult")
     task.control = "RUN"
@@ -133,7 +135,13 @@ sub onApiResult(event as object)
     if kind = "poll" then m.pollPending = false
     if kind = "progress-refresh" then m.progressRefreshing = false
     if kind = "progress-save" then m.progressSaving = false
+    if (kind = "progress-save" or kind = "progress-refresh") and failedRequest.profileToken <> m.profileToken then return
     if result.error <> ""
+        print "KINGFLIX request failed: "; kind; " HTTP "; result.status; " "; result.error
+        if kind = "progress-save" and result.status <> 401 and result.status <> 403
+            if m.pendingProgress = invalid then m.pendingProgress = failedRequest.body
+            return
+        end if
         m.top.findNode("loadingArtwork").visible = false
         if result.status = 401
             registryOperation("delete", "deviceToken")
@@ -213,7 +221,7 @@ sub onApiResult(event as object)
         end for
         api("favorites", "/api/favorites?profileId=" + escaped(m.profile.id))
     else if kind = "progress-refresh"
-        if failedRequest.profileToken <> m.profileToken or m.progressSaving then return
+        if failedRequest.profileToken <> m.profileToken or m.progressSaving or failedRequest.progressRevision <> m.progressRevision then return
         m.positions = {}
         m.progressOrder = []
         for each position in data
@@ -250,6 +258,12 @@ sub onApiResult(event as object)
         m.video.content = content
         m.video.visible = true
         m.video.setFocus(true)
+        m.video.enableUI = true
+        m.video.enableTrickPlay = true
+        m.playbackActivity = CreateObject("roTimespan")
+        m.playbackActivity.Mark()
+        m.top.findNode("playbackWatchdog").control = "START"
+        print "KINGFLIX playback started: "; m.playingItem.id
         m.video.control = "PLAY"
         m.lastSaved = content.playStart
         m.playbackPosition = content.playStart
@@ -263,6 +277,7 @@ sub onApiResult(event as object)
 end sub
 
 sub showProfiles()
+    m.pendingProgress = invalid
     m.top.findNode("loadingArtwork").visible = false
     m.screen = "profiles"
     m.status.height = 100
@@ -456,6 +471,8 @@ sub onMenuSelected()
     title = m.menu.content.getChild(m.menu.itemSelected).title
     m.history = []
     if title = "Profiles"
+        m.profileSelectionGuard = CreateObject("roTimespan")
+        m.profileSelectionGuard.Mark()
         registryOperation("delete", "profile")
         m.profileToken = ""
         showProfiles()
@@ -747,6 +764,7 @@ end sub
 
 sub savePosition()
     if m.playingItem = invalid then return
+    m.progressRevision = m.progressRevision + 1
     position = int(m.playbackPosition)
     if position <= 0 then return
     m.positions[m.playingItem.id] = position
@@ -768,6 +786,7 @@ sub sendPendingProgress()
 end sub
 
 sub refreshHomeProgress()
+    sendPendingProgress()
     if m.screen <> "browse" or m.section <> "Home" or m.video.visible then return
     if m.progressSaving or m.progressRefreshing or m.pendingProgress <> invalid then return
     m.progressRefreshing = true
@@ -776,6 +795,7 @@ end sub
 
 sub onVideoPosition()
     if not m.video.visible then return
+    if m.video.position <> m.playbackPosition and m.playbackActivity <> invalid then m.playbackActivity.Mark()
     m.playbackPosition = m.video.position
     if abs(m.video.position - m.lastSaved) >= 15
         m.lastSaved = m.video.position
@@ -784,18 +804,41 @@ sub onVideoPosition()
 end sub
 
 sub onVideoState()
+    if not m.video.visible then return
     state = m.video.state
+    print "KINGFLIX player state: "; state; " position: "; m.playbackPosition
     if state = "paused"
         m.playbackPosition = m.video.position
         savePosition()
     end if
+    if state = "playing" and m.playbackActivity <> invalid then m.playbackActivity.Mark()
     if state = "finished" and m.playingItem.durationSeconds <> invalid then m.playbackPosition = m.playingItem.durationSeconds
-    if state = "finished" or state = "error" or state = "stopped"
-        if not m.video.visible then return
-        savePosition()
-        m.video.visible = false
-        if m.screen = "details" then showDetails(m.detailItem) else showSection(m.section)
-        if state = "error" then m.status.text = "Video could not be played. Please try again."
+    if state = "error"
+        message = "Playback failed (" + m.video.errorCode.toStr() + "). " + m.video.errorMsg
+        print "KINGFLIX "; message
+        closePlayback(message)
+    else if state = "finished" or state = "stopped"
+        closePlayback()
+    end if
+end sub
+
+sub closePlayback(message = "" as string)
+    savePosition()
+    m.top.findNode("playbackWatchdog").control = "STOP"
+    m.video.visible = false
+    m.video.control = "STOP"
+    if m.screen = "details" then showDetails(m.detailItem) else showSection(m.section)
+    if message <> "" then m.status.text = message + " Select Watch to retry."
+end sub
+
+sub checkPlaybackStall()
+    sendPendingProgress()
+    if not m.video.visible or m.playbackActivity = invalid then return
+    state = m.video.state
+    if state = "paused" then m.playbackActivity.Mark()
+    if (state = "playing" or state = "buffering") and m.playbackActivity.TotalMilliseconds() >= 60000
+        print "KINGFLIX stalled: "; m.playingItem.id; " at "; m.playbackPosition; " state "; state
+        closePlayback("Playback stalled for a minute. Your viewing position was saved locally.")
     end if
 end sub
 
@@ -818,9 +861,8 @@ function onKeyEvent(key as string, press as boolean) as boolean
     if not press then return false
     if m.video.visible
         if key = "back"
-            m.playbackPosition = m.video.position
-            savePosition()
-            m.video.control = "STOP"
+            if m.video.position > 0 then m.playbackPosition = m.video.position
+            closePlayback()
             return true
         end if
         return false
@@ -831,7 +873,13 @@ function onKeyEvent(key as string, press as boolean) as boolean
         api(retry.kind, mid(retry.url, len(m.config.api) + 1), retry.method, retry.body)
         return true
     end if
-    if m.screen = "profiles" then return profileKey(key)
+    if m.screen = "profiles"
+        if key = "OK" and m.profileSelectionGuard <> invalid
+            if m.profileSelectionGuard.TotalMilliseconds() < 350 then return true
+            m.profileSelectionGuard = invalid
+        end if
+        return profileKey(key)
+    end if
     if m.screen = "pairing" and key = "OK"
         m.poll.control = "STOP"
         beginPairing()
