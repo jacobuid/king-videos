@@ -539,8 +539,6 @@ sub showSection(title as string)
             if m.favorites[item.id] <> invalid then favorites.push(item)
         end for
         rows.push({title: "My List", items: favorites})
-        rows.push({title: "Movies", items: movies})
-        rows.push({title: "TV Shows", items: shows})
     else if title = "TV"
         items = shows
     else if title = "Series"
