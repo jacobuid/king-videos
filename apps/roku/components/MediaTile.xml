@@ -13,6 +13,10 @@
     <Poster translation="[2,90]" width="328" height="96" uri="pkg:/images/card-shade.png"/>
     <Label id="title" translation="[14,148]" width="304" height="34" font="font:MediumSystemFont"/>
     <Rectangle translation="[2,186]" width="328" height="1" color="#393939"/>
+    <Group id="progress" translation="[2,183]" visible="false">
+      <Rectangle width="328" height="4" color="#555555"/>
+      <Rectangle id="progressFill" width="0" height="4" color="#eec052"/>
+    </Group>
     <Label id="metadata" translation="[14,201]" width="270" height="30" font="font:MediumSystemFont"/>
     <Label id="captions" translation="[294,202]" width="28" height="28" text="CC" visible="false" color="#dddddd" font="font:MediumSystemFont"/>
     <Label id="description" translation="[14,241]" width="304" height="62" wrap="true" maxLines="2" color="#aaaaaa" font="font:MediumSystemFont"/>

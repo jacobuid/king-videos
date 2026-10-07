@@ -7,6 +7,10 @@ sub updateContent()
     if item = invalid then return
     m.top.findNode("title").text = item.title
     m.top.findNode("art").uri = item.hdPosterUrl
+    fraction = 0.0
+    if item.watchedFraction <> invalid then fraction = item.watchedFraction
+    m.top.findNode("progress").visible = fraction > 0
+    m.top.findNode("progressFill").width = int(328 * fraction)
     media = item.media
     metadata = ""
     description = ""
@@ -21,7 +25,7 @@ sub updateContent()
                 runtime = int(minutes / 60).toStr() + "h"
                 if minutes mod 60 > 0 then runtime += " " + (minutes mod 60).toStr() + "m"
             end if
-            if metadata <> "" then metadata += " ? "
+            if metadata <> "" then metadata += " / "
             metadata += runtime
         end if
         if media.rating <> invalid and media.rating <> ""

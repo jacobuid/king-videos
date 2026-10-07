@@ -576,7 +576,7 @@ sub showRows(rows as object)
                 child = node.createChild("ContentNode")
                 child.title = item.title
                 if item.thumbnailUrl <> invalid then child.hdPosterUrl = item.thumbnailUrl
-                child.addFields({media: item})
+                child.addFields({media: item, watchedFraction: watchedFraction(item)})
             end for
         end if
     end for
@@ -833,3 +833,20 @@ sub initializeFonts()
     m.top.findNode("sizedLabel11").font.size = 44
     m.top.findNode("pairStatus").font.size = 26
 end sub
+
+function watchedFraction(item as object) as float
+    duration = 0.0
+    watched = 0.0
+    items = [item]
+    if item.kind <> invalid and item.kind = "show" and m.groups[item.seriesId] <> invalid then items = m.groups[item.seriesId]
+    for each video in items
+        if video.durationSeconds <> invalid and video.durationSeconds > 0
+            duration += video.durationSeconds
+            position = positionFor(video.id)
+            if position > video.durationSeconds then position = video.durationSeconds
+            if position > 0 then watched += position
+        end if
+    end for
+    if duration <= 0 then return 0
+    return watched / duration
+end function
