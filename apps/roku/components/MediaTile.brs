@@ -1,3 +1,7 @@
+sub init()
+    initializeFonts()
+end sub
+
 sub updateContent()
     item = m.top.itemContent
     if item = invalid then return
@@ -38,4 +42,12 @@ sub updateFocus()
     color = "#3c3c3c"
     if m.top.focusPercent > 0.5 then color = "#ffffff"
     m.top.findNode("border").color = color
+end sub
+
+sub initializeFonts()
+    m.top.findNode("title").font.size = 22
+    m.top.findNode("metadata").font.size = 18
+    m.top.findNode("captions").font.size = 17
+    m.top.findNode("description").font.size = 18
+    m.top.findNode("sizedLabel1").font.size = 18
 end sub

@@ -9,6 +9,6 @@
   <children>
     <Rectangle id="outline" width="230" height="230" color="#444444"/>
     <Poster id="portrait" translation="[4,4]" width="222" height="222" loadDisplayMode="scaleToFill"/>
-    <Label id="name" translation="[-15,245]" width="260" height="50" horizAlign="center" color="#888888"><Font role="font" size="28"/></Label>
+    <Label id="name" translation="[-15,245]" width="260" height="50" horizAlign="center" color="#888888" font="font:MediumSystemFont"/>
   </children>
 </component>

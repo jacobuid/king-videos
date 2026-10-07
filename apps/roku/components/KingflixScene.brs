@@ -1,4 +1,6 @@
 sub init()
+    initializeFonts()
+    m.top.backgroundURI = ""
     m.top.backgroundColor = "#000000"
     m.config = ParseJson(ReadAsciiFile("pkg:/config.json"))
     m.registryQueue = []
@@ -802,9 +804,8 @@ sub showPairCode(code as string)
         letter.text = mid(code, i + 1, 1)
         letter.horizAlign = "center"
         letter.vertAlign = "center"
-        font = CreateObject("roSGNode", "Font")
-        font.size = 48
-        letter.font = font
+        letter.font = "font:LargeBoldSystemFont"
+        letter.font.size = 48
     end for
 end sub
 
@@ -816,3 +817,19 @@ function profileRequestBody(mediaId = invalid as dynamic, position = invalid as 
     if position <> invalid then body["positionSeconds"] = position
     return body
 end function
+
+sub initializeFonts()
+    m.top.findNode("sizedLabel1").font.size = 76
+    m.top.findNode("sizedLabel2").font.size = 64
+    m.top.findNode("sizedLabel3").font.size = 64
+    m.top.findNode("sizedLabel4").font.size = 64
+    m.top.findNode("sizedLabel5").font.size = 36
+    m.top.findNode("sizedLabel6").font.size = 22
+    m.top.findNode("sizedLabel7").font.size = 36
+    m.top.findNode("sizedLabel8").font.size = 22
+    m.top.findNode("sizedLabel9").font.size = 36
+    m.top.findNode("sizedLabel10").font.size = 22
+    m.top.findNode("pairUrl").font.size = 24
+    m.top.findNode("sizedLabel11").font.size = 44
+    m.top.findNode("pairStatus").font.size = 26
+end sub
