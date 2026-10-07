@@ -19,7 +19,7 @@ mkdirSync(root+'/images',{recursive:true})
 const logo=webRoot+'/public/logo-kingflix.png'
 await sharp(root+'/assets/roku-tile.png').resize(336,210,{fit:'contain',background:'#000000'}).png().toFile(root+'/images/channel-icon.png')
 await sharp(logo).resize(336,210,{fit:'contain',background:'#101010'}).png().toFile(root+'/images/header-logo.png')
-await sharp(logo).resize(1920,1080,{fit:'contain',background:'#101010'}).png().toFile(root+'/images/splash.png')
+await sharp(root+'/assets/roku-loading.png').resize(1920,1080,{fit:'contain',background:'#000000'}).png().toFile(root+'/images/splash.png')
 const trimmed=await sharp(logo).trim().png().toBuffer()
 const logoInfo=await sharp(trimmed).metadata()
 const crownWidth=Math.round(logoInfo.width*0.22),wordStart=Math.round(logoInfo.width*0.24)
