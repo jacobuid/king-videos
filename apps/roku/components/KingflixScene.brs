@@ -88,6 +88,7 @@ sub api(kind as string, path as string, method = "GET" as string, body = invalid
 end sub
 
 sub beginPairing()
+    m.top.findNode("loadingArtwork").visible = false
     m.screen = "pairing"
     m.pairing.visible = true
     m.top.findNode("pairUrl").text = m.config.web.replace("https://", "")
@@ -115,6 +116,7 @@ sub onPoll()
 end sub
 
 sub loadProfiles()
+    m.top.findNode("loadingArtwork").visible = true
     m.pairing.visible = false
     m.screen = "loading"
     m.status.text = "Loading profiles..."
@@ -128,6 +130,7 @@ sub onApiResult(event as object)
     kind = result.kind
     if kind = "poll" then m.pollPending = false
     if result.error <> ""
+        m.top.findNode("loadingArtwork").visible = false
         if result.status = 401
             registryOperation("delete", "deviceToken")
             registryOperation("delete", "profile")
@@ -237,6 +240,7 @@ sub onApiResult(event as object)
 end sub
 
 sub showProfiles()
+    m.top.findNode("loadingArtwork").visible = false
     m.screen = "profiles"
     m.status.height = 100
     m.status.text = ""
@@ -353,6 +357,7 @@ sub onPinSelected(event as object)
 end sub
 
 sub loadLibrary()
+    m.top.findNode("loadingArtwork").visible = true
     m.top.findNode("profileStage").visible = false
     m.heading.visible = true
     m.screen = "loading"
@@ -477,6 +482,7 @@ function showCards() as object
 end function
 
 sub showSection(title as string)
+    m.top.findNode("loadingArtwork").visible = false
     m.screen = "browse"
     m.status.height = 100
     m.section = title

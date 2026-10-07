@@ -35,6 +35,7 @@
       <Label translation="[1320,682]" width="460" height="140" text="Link Roku  ?" horizAlign="center" vertAlign="center" id="sizedLabel11" font="font:MediumSystemFont"/>
       <Label id="pairStatus" translation="[100,950]" width="1720" height="65" horizAlign="center" color="#a7b6c5" wrap="true" font="font:MediumSystemFont"/>
     </Group>
+    <Poster id="loadingArtwork" width="1920" height="1080" uri="pkg:/images/splash.png" loadDisplayMode="scaleToFit" visible="true"/>
     <Video id="video" width="1920" height="1080" visible="false" notificationInterval="15"/>
     <Timer id="poll" duration="5" repeat="true"/>
   </children>
