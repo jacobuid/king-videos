@@ -12,6 +12,7 @@ sub init()
     m.lastSaved = 0
     m.playbackPosition = 0
     m.media = []
+    m.progressOrder = []
     m.positions = {}
     m.favorites = {}
     m.groups = {}
@@ -34,6 +35,7 @@ sub init()
     m.video.observeField("position", "onVideoPosition")
     m.video.observeField("state", "onVideoState")
     m.poll.observeField("fire", "onPoll")
+    m.top.findNode("progressTimer").observeField("fire", "refreshHomeProgress")
     m.top.setFocus(true)
     registryOperation("load")
 end sub
@@ -129,6 +131,8 @@ sub onApiResult(event as object)
     m.tasks.delete(result.tag)
     kind = result.kind
     if kind = "poll" then m.pollPending = false
+    if kind = "progress-refresh" then m.progressRefreshing = false
+    if kind = "progress-save" then m.progressSaving = false
     if result.error <> ""
         m.top.findNode("loadingArtwork").visible = false
         if result.status = 401
@@ -201,11 +205,30 @@ sub onApiResult(event as object)
             api("progress", "/api/progress?profileId=" + escaped(m.profile.id))
         end if
     else if kind = "progress"
-        m.positions = {}
+        m.progressOrder = []
+    m.positions = {}
         for each position in data
             m.positions[position.mediaId] = position.positionSeconds
+            m.progressOrder.push(position.mediaId)
         end for
         api("favorites", "/api/favorites?profileId=" + escaped(m.profile.id))
+    else if kind = "progress-refresh"
+        if failedRequest.profileToken <> m.profileToken or m.progressSaving then return
+        m.positions = {}
+        m.progressOrder = []
+        for each position in data
+            m.positions[position.mediaId] = position.positionSeconds
+            m.progressOrder.push(position.mediaId)
+        end for
+        if m.screen = "browse" and m.section = "Home" and not m.video.visible
+            focused = m.rows.rowItemFocused
+            menuFocused = m.menu.hasFocus()
+            showSection("Home")
+            if focused <> invalid then m.rows.jumpToRowItem = focused
+            if menuFocused then m.menu.setFocus(true)
+        end if
+    else if kind = "progress-save"
+        sendPendingProgress()
     else if kind = "favorites"
         m.favorites = {}
         for each favorite in data
@@ -442,6 +465,7 @@ sub onMenuSelected()
         showSearch()
     else
         showSection(title)
+        if title = "Home" then refreshHomeProgress()
     end if
 end sub
 
@@ -485,6 +509,7 @@ sub showSection(title as string)
     m.top.findNode("loadingArtwork").visible = false
     m.screen = "browse"
     m.status.height = 100
+    m.top.findNode("progressTimer").control = "START"
     m.section = title
     m.heading.text = title
     m.status.text = ""
@@ -496,26 +521,39 @@ sub showSection(title as string)
         continuing = []
         seen = {}
         movies = []
-        for each item in m.media
-            if item.category = "movie" then movies.push(item)
-            if m.positions[item.id] <> invalid
-                candidate = item
-                if isTv(item) and completed(item) and m.groups[item.seriesId] <> invalid
-                    candidate = invalid
-                    found = false
-                    for each episode in m.groups[item.seriesId]
-                        if found and not completed(episode)
-                            candidate = episode
-                            exit for
-                        end if
-                        if episode.id = item.id then found = true
-                    end for
+        for each media in m.media
+            if media.category = "movie" then movies.push(media)
+        end for
+        for each mediaId in m.progressOrder
+            item = invalid
+            for each media in m.media
+                if media.id = mediaId
+                    item = media
+                    exit for
                 end if
-                if candidate <> invalid
-                    if seen[candidate.id] = invalid
-                        continuing.push(candidate)
-                        seen[candidate.id] = true
+            end for
+            if item <> invalid and positionFor(mediaId) > 0
+                candidate = item
+                identity = item.id
+                if isTv(item)
+                    identity = "series:" + item.seriesId
+                    if completed(item) and m.groups[item.seriesId] <> invalid
+                        candidate = invalid
+                        found = false
+                        for each episode in m.groups[item.seriesId]
+                            if found and not completed(episode)
+                                candidate = episode
+                                exit for
+                            end if
+                            if episode.id = item.id then found = true
+                        end for
                     end if
+                else if completed(item)
+                    candidate = invalid
+                end if
+                if seen[identity] = invalid
+                    seen[identity] = true
+                    if candidate <> invalid then continuing.push(candidate)
                 end if
             end if
         end for
@@ -710,8 +748,30 @@ end sub
 sub savePosition()
     if m.playingItem = invalid then return
     position = int(m.playbackPosition)
+    if position <= 0 then return
     m.positions[m.playingItem.id] = position
-    api("progress-save", "/api/progress", "POST", profileRequestBody(m.playingItem.id, position))
+    ordered = [m.playingItem.id]
+    for each id in m.progressOrder
+        if id <> m.playingItem.id then ordered.push(id)
+    end for
+    m.progressOrder = ordered
+    m.pendingProgress = profileRequestBody(m.playingItem.id, position)
+    sendPendingProgress()
+end sub
+
+sub sendPendingProgress()
+    if m.progressSaving or m.pendingProgress = invalid then return
+    body = m.pendingProgress
+    m.pendingProgress = invalid
+    m.progressSaving = true
+    api("progress-save", "/api/progress", "POST", body)
+end sub
+
+sub refreshHomeProgress()
+    if m.screen <> "browse" or m.section <> "Home" or m.video.visible then return
+    if m.progressSaving or m.progressRefreshing or m.pendingProgress <> invalid then return
+    m.progressRefreshing = true
+    api("progress-refresh", "/api/progress?profileId=" + escaped(m.profile.id))
 end sub
 
 sub onVideoPosition()
