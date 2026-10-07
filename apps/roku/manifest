@@ -6,5 +6,5 @@ ui_resolutions=fhd
 mm_icon_focus_hd=pkg:/images/channel-icon.png
 mm_icon_side_hd=pkg:/images/channel-icon.png
 splash_screen_fhd=pkg:/images/splash.png
-splash_color=#101010
+splash_color=#000000
 splash_min_time=0

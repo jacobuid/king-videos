@@ -1,5 +1,5 @@
 sub init()
-    m.top.backgroundColor = "#101010"
+    m.top.backgroundColor = "#000000"
     m.config = ParseJson(ReadAsciiFile("pkg:/config.json"))
     m.registryQueue = []
     m.registryBusy = false
