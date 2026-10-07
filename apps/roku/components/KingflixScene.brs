@@ -35,6 +35,8 @@ sub init()
     m.video.getHttpAgent().SetCertificatesFile("common:/certs/ca-bundle.crt")
     m.video.observeField("position", "onVideoPosition")
     m.video.observeField("state", "onVideoState")
+    m.video.observeField("remoteKey", "onPlayerRemote")
+    m.top.findNode("hudTimer").observeField("fire", "hidePlayerHud")
     m.poll.observeField("fire", "onPoll")
     m.top.findNode("playbackWatchdog").observeField("fire", "checkPlaybackStall")
     m.top.findNode("progressTimer").observeField("fire", "refreshHomeProgress")
@@ -146,7 +148,7 @@ sub onApiResult(event as object)
         if result.status = 401
             registryOperation("delete", "deviceToken")
             registryOperation("delete", "profile")
-            if m.video.visible then m.video.control = "STOP"
+            if m.video.visible then m.video.control = "stop"
             m.video.visible = false
             beginPairing()
         else if result.status = 403 and kind <> "unlock" and (result.error = "Profile is locked." or result.error = "Unlock this profile first.")
@@ -264,7 +266,7 @@ sub onApiResult(event as object)
         m.playbackActivity.Mark()
         m.top.findNode("playbackWatchdog").control = "START"
         print "KINGFLIX playback started: "; m.playingItem.id
-        m.video.control = "PLAY"
+        m.video.control = "play"
         m.lastSaved = content.playStart
         m.playbackPosition = content.playStart
     else if kind = "signout"
@@ -826,7 +828,9 @@ sub closePlayback(message = "" as string)
     savePosition()
     m.top.findNode("playbackWatchdog").control = "STOP"
     m.video.visible = false
-    m.video.control = "STOP"
+    m.top.findNode("playerHud").visible = false
+    m.top.findNode("hudTimer").control = "STOP"
+    m.video.control = "stop"
     if m.screen = "details" then showDetails(m.detailItem) else showSection(m.section)
     if message <> "" then m.status.text = message + " Select Watch to retry."
 end sub
@@ -859,14 +863,7 @@ end sub
 
 function onKeyEvent(key as string, press as boolean) as boolean
     if not press then return false
-    if m.video.visible
-        if key = "back"
-            if m.video.position > 0 then m.playbackPosition = m.video.position
-            closePlayback()
-            return true
-        end if
-        return false
-    end if
+    if m.video.visible then return handlePlayerKey(lcase(key))
     if key = "OK" and m.retry <> invalid
         retry = m.retry
         m.retry = invalid
@@ -972,3 +969,55 @@ function watchedFraction(item as object) as float
     if duration <= 0 then return 0
     return watched / duration
 end function
+
+sub onPlayerRemote(event as object)
+    if m.video.visible then handlePlayerKey(event.GetData())
+end sub
+
+function handlePlayerKey(key as string) as boolean
+    print "KINGFLIX player remote: "; key
+    if key = "back"
+        if m.video.position > 0 then m.playbackPosition = m.video.position
+        closePlayback()
+        return true
+    end if
+    if key = "play" or key = "ok" or key = "pause" or key = "playonly"
+        if key = "pause" or (key <> "playonly" and m.video.state <> "paused")
+            m.video.control = "pause"
+        else
+            m.video.control = "resume"
+        end if
+        showPlayerHud()
+        return true
+    end if
+    delta = 0
+    if key = "left" or key = "replay" then delta = -10
+    if key = "right" then delta = 10
+    if key = "rewind" then delta = -30
+    if key = "fastforward" then delta = 30
+    if delta <> 0
+        target = m.video.position + delta
+        if target < 0 then target = 0
+        duration = m.video.duration
+        if duration > 0 and target >= duration then target = duration - 1
+        m.video.seek = target
+        if m.playbackActivity <> invalid then m.playbackActivity.Mark()
+        showPlayerHud()
+        return true
+    end if
+    if key = "up" or key = "down"
+        showPlayerHud()
+        return true
+    end if
+    return false
+end function
+
+sub showPlayerHud()
+    m.top.findNode("playerHudText").text = m.playingItem.title + "   " + int(m.video.position / 60).toStr() + " min / " + int(m.video.duration / 60).toStr() + " min"
+    m.top.findNode("playerHud").visible = true
+    m.top.findNode("hudTimer").control = "START"
+end sub
+
+sub hidePlayerHud()
+    m.top.findNode("playerHud").visible = false
+end sub

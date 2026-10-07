@@ -36,7 +36,13 @@
       <Label id="pairStatus" translation="[100,950]" width="1720" height="65" horizAlign="center" color="#a7b6c5" wrap="true" font="font:MediumSystemFont"/>
     </Group>
     <Poster id="loadingArtwork" width="1920" height="1080" uri="pkg:/images/splash.png" loadDisplayMode="scaleToFit" visible="true"/>
-    <Video id="video" width="1920" height="1080" visible="false" notificationInterval="15"/>
+    <PlayerVideo id="video" width="1920" height="1080" visible="false" notificationInterval="15"/>
+    <Group id="playerHud" visible="false" translation="[80,865]">
+      <Rectangle width="1760" height="150" color="#000000dd"/>
+      <Label id="playerHudText" translation="[24,18]" width="1712" height="54" font="font:MediumSystemFont"/>
+      <Label translation="[24,82]" width="1712" height="40" text="OK / Play: pause or resume    ? / ?: 10 seconds    Rewind / Forward: 30 seconds    Back: exit" font="font:SmallSystemFont"/>
+    </Group>
+    <Timer id="hudTimer" duration="4" repeat="false"/>
     <Timer id="playbackWatchdog" duration="5" repeat="true"/>
     <Timer id="progressTimer" duration="30" repeat="true"/>
     <Timer id="poll" duration="5" repeat="true"/>
