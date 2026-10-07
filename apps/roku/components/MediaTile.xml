@@ -7,8 +7,18 @@
   </interface>
   <script type="text/brightscript" uri="MediaTile.brs"/>
   <children>
-    <Rectangle id="border" width="332" height="244" color="#3c3c3c"/>
-    <Poster id="art" translation="[4,4]" width="324" height="182" loadDisplayMode="scaleToFit"/>
-    <Label id="title" translation="[10,193]" width="312" height="38" font="font:SmallSystemFont"/>
+    <Rectangle id="border" width="332" height="320" color="#3c3c3c"/>
+    <Rectangle translation="[2,2]" width="328" height="316" color="#191919"/>
+    <Poster id="art" translation="[2,2]" width="328" height="184" loadDisplayMode="scaleToFill"/>
+    <Poster translation="[2,90]" width="328" height="96" uri="pkg:/images/card-shade.png"/>
+    <Label id="title" translation="[14,148]" width="304" height="34"><Font role="font" size="22"/></Label>
+    <Rectangle translation="[2,186]" width="328" height="1" color="#393939"/>
+    <Label id="metadata" translation="[14,201]" width="270" height="30"><Font role="font" size="18"/></Label>
+    <Label id="captions" translation="[294,202]" width="28" height="28" text="CC" visible="false" color="#dddddd"><Font role="font" size="17"/></Label>
+    <Label id="description" translation="[14,241]" width="304" height="62" wrap="true" maxLines="2" color="#aaaaaa"><Font role="font" size="18"/></Label>
+    <Group id="blocked" translation="[12,12]" visible="false">
+      <Rectangle width="105" height="30" color="#721523"/>
+      <Label width="105" height="30" text="Blocked" horizAlign="center" vertAlign="center"><Font role="font" size="18"/></Label>
+    </Group>
   </children>
 </component>

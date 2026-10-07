@@ -31,3 +31,5 @@ const box=(width,height,stroke,fill,radius)=>Buffer.from('<svg width="'+width+'"
 await sharp(box(64,116,'#eec052','#101419',12)).png().toFile(root+'/images/code-box.png')
 await sharp(box(460,140,'#a55be2','#630bb2',20)).png().toFile(root+'/images/link-button.png')
 console.log('Prepared public Roku configuration and KINGFLIX artwork.')
+
+await sharp(Buffer.from('<svg width="328" height="96" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="black" stop-opacity="0"/><stop offset="1" stop-color="black" stop-opacity="0.95"/></linearGradient></defs><rect width="328" height="96" fill="url(#fade)"/></svg>')).png().toFile(root+'/images/card-shade.png')
