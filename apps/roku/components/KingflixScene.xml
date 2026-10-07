@@ -5,7 +5,7 @@
     <Rectangle width="1920" height="1080" color="#000000"/>
     <Poster id="logo" translation="[72,35]" width="270" height="90" uri="pkg:/images/header-logo.png" loadDisplayMode="scaleToFit"/>
     <Label id="heading" translation="[400,52]" width="1400" height="55" font="font:LargeSystemFont"/>
-    <Label id="status" translation="[80,135]" width="1740" height="100" wrap="true" font="font:MediumSystemFont"/>
+    <Label id="status" translation="[400,135]" width="1430" height="100" wrap="true" font="font:MediumSystemFont"/>
     <LabelList id="menu" translation="[80,250]" itemSize="[260,60]" numRows="9" visible="false"/>
     <RowList id="rows" translation="[400,270]" itemComponentName="MediaTile" itemSize="[1430,370]" rowItemSize="[[332,320]]" itemSpacing="[0,18]" rowItemSpacing="[[24,0]]" numRows="2" showRowLabel="[true]" rowLabelOffset="[[0,12]]" visible="false"/>
     <ButtonGroup id="actions" translation="[400,640]" visible="false"/>
