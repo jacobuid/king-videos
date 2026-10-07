@@ -265,9 +265,9 @@ sub showProfiles()
         tile.title = profile.name
         tile.uri = m.config.web + "profiles/" + escaped(avatar)
         m.profileTiles.push({node: tile, profile: profile, row: row, column: column, rowSize: rowSize})
-        column++
+        column = column + 1
         if column >= rowSize
-            row++
+            row = row + 1
             column = 0
             rowSize = 4
         end if
@@ -289,32 +289,42 @@ sub selectProfile()
 end sub
 
 function profileKey(key as string) as boolean
-    if m.profileTiles.count() = 0 then return false
+    count = m.profileTiles.count()
+    if count = 0 then return false
     if key = "OK"
         selectProfile()
         return true
     end if
-    current = m.profileTiles[m.profileIndex]
-    targetRow = current.row
-    targetColumn = current.column
-    if key = "left" then targetColumn--
-    if key = "right" then targetColumn++
-    if key = "up" then targetRow--
-    if key = "down" then targetRow++
-    if key <> "left" and key <> "right" and key <> "up" and key <> "down" then return false
-    closest = -1
-    distance = 9999
-    for i = 0 to m.profileTiles.count() - 1
-        candidate = m.profileTiles[i]
-        if candidate.row = targetRow
-            delta = abs(candidate.column - targetColumn)
-            if delta < distance
-                distance = delta
-                closest = i
-            end if
+    direction = lcase(key)
+    firstRow = count - (int((count + 3) / 4) - 1) * 4
+    index = m.profileIndex
+    if index < firstRow
+        rowStart = 0
+        rowSize = firstRow
+        column = index
+    else
+        rowStart = firstRow + int((index - firstRow) / 4) * 4
+        rowSize = 4
+        column = index - rowStart
+    end if
+    nextIndex = index
+    if direction = "left" and column > 0 then nextIndex = index - 1
+    if direction = "right" and column < rowSize - 1 and index < count - 1 then nextIndex = index + 1
+    if direction = "down"
+        nextStart = rowStart + rowSize
+        if nextStart < count then nextIndex = nextStart + column
+        if nextIndex >= count then nextIndex = count - 1
+    end if
+    if direction = "up" and rowStart > 0
+        if rowStart = firstRow
+            nextIndex = column
+            if nextIndex >= firstRow then nextIndex = firstRow - 1
+        else
+            nextIndex = index - 4
         end if
-    end for
-    if closest >= 0 then m.profileIndex = closest
+    end if
+    if direction <> "left" and direction <> "right" and direction <> "up" and direction <> "down" then return false
+    m.profileIndex = nextIndex
     updateProfileFocus()
     return true
 end function
