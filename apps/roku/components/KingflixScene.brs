@@ -101,6 +101,8 @@ sub api(kind as string, path as string, method = "GET" as string, body = invalid
 end sub
 
 sub beginPairing()
+    m.top.findNode("detailThumbnail").visible = false
+    m.status.width = 1430
     m.top.findNode("loadingArtwork").visible = false
     m.screen = "pairing"
     m.pairing.visible = true
@@ -286,6 +288,8 @@ sub onApiResult(event as object)
 end sub
 
 sub showProfiles()
+    m.top.findNode("detailThumbnail").visible = false
+    m.status.width = 1430
     m.pendingProgress = invalid
     m.top.findNode("loadingArtwork").visible = false
     m.screen = "profiles"
@@ -532,6 +536,8 @@ function showCards() as object
 end function
 
 sub showSection(title as string)
+    m.top.findNode("detailThumbnail").visible = false
+    m.status.width = 1430
     m.top.findNode("loadingArtwork").visible = false
     m.screen = "browse"
     m.status.height = 100
@@ -722,6 +728,15 @@ end function
 sub showDetails(item as object)
     m.screen = "details"
     m.detailItem = item
+    thumbnail = m.top.findNode("detailThumbnail")
+    thumbnail.uri = ""
+    thumbnail.visible = false
+    m.status.width = 1430
+    if item.thumbnailUrl <> invalid and item.thumbnailUrl <> ""
+        thumbnail.uri = item.thumbnailUrl
+        thumbnail.visible = true
+        m.status.width = 810
+    end if
     m.heading.text = item.title
     text = ""
     if item.year <> invalid then text += item.year.toStr() + "  "
@@ -853,6 +868,8 @@ sub checkPlaybackStall()
 end sub
 
 sub goBack()
+    m.top.findNode("detailThumbnail").visible = false
+    m.status.width = 1430
     m.status.height = 100
     m.actions.visible = false
     if m.history.count() > 0
