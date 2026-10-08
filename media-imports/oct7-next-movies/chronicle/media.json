@@ -1,0 +1,28 @@
+{
+  "id": "chronicle",
+  "title": "Chronicle",
+  "category": "movie",
+  "year": 2012,
+  "duration": 5371,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-next-movies\\chronicle\\chronicle.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-next-movies\\chronicle\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Chronicle (2012)\\Chronicle [1080p].mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 1341345400,
+  "preparedBytes": 1342844327,
+  "metadataPending": false,
+  "imdbId": "tt1706593",
+  "rating": "PG-13",
+  "description": "Three teenagers gain telekinetic abilities after discovering a mysterious object, but their new powers soon test their friendship.",
+  "genres": [
+    "Drama",
+    "Science Fiction",
+    "Thriller"
+  ],
+  "minAge": 16,
+  "kids": false,
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt1706593/"
+  ]
+}

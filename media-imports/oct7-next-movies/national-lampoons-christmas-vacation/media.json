@@ -1,0 +1,27 @@
+{
+  "id": "national-lampoons-christmas-vacation",
+  "title": "National Lampoon’s Christmas Vacation",
+  "category": "movie",
+  "year": 1989,
+  "duration": 5832,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-next-movies\\national-lampoons-christmas-vacation\\national-lampoons-christmas-vacation.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-next-movies\\national-lampoons-christmas-vacation\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Christmas Vacation (1989)\\National Lampoons Christmas Vacation [720p].mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 683372058,
+  "preparedBytes": 684096501,
+  "metadataPending": false,
+  "imdbId": "tt0097958",
+  "rating": "PG-13",
+  "description": "Clark Griswold plans a perfect family Christmas, but visiting relatives and a string of disasters derail his holiday.",
+  "genres": [
+    "Comedy",
+    "Classic"
+  ],
+  "minAge": 16,
+  "kids": false,
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0097958/"
+  ]
+}

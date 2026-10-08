@@ -63,3 +63,5 @@ Parallel Backblaze B2 deployment configuration
 Note: B2 upload can be running in bakground while you are creating metadata and checking that in.
 
 Movie access ages: PG-13 movies are 16+; R-rated movies are 21+. Apply these ages during imports and rating edits. Other ratings and TV show age settings retain their existing rules.
+
+Library thumbnails in B2 must be exactly 1280x720 pixels. Preserve the complete artwork with black padding when its aspect ratio differs. Compress thumbnails (normally WebP quality 80; target around 200 KB) and accept AVIF source images. Profile avatars retain their square format.

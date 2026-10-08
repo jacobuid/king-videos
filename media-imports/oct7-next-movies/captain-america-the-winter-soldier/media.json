@@ -1,0 +1,28 @@
+{
+  "id": "captain-america-the-winter-soldier",
+  "title": "Captain America: The Winter Soldier",
+  "category": "movie",
+  "year": 2014,
+  "duration": 8154,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-next-movies\\captain-america-the-winter-soldier\\captain-america-the-winter-soldier.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-next-movies\\captain-america-the-winter-soldier\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Captain America The Winter Soldier (2014) [1080p]\\Captain.America.The.Winter.Soldier.2014.1080p.BluRay.x264.YIFY.mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 2103503304,
+  "preparedBytes": 2104925515,
+  "metadataPending": false,
+  "imdbId": "tt1843866",
+  "rating": "PG-13",
+  "description": "Steve Rogers and Natasha Romanoff uncover a conspiracy within S.H.I.E.L.D. while facing the mysterious Winter Soldier.",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "minAge": 16,
+  "kids": false,
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt1843866/"
+  ]
+}

@@ -31,7 +31,7 @@ for(const manifestPath of manifestPaths){
   const manifestText=await readFile(manifestPath,'utf8'),manifest=JSON.parse(manifestText.replace(/^\uFEFF/,''));if(!manifest.thumbnail)continue
   const folder=resolve(manifest.localFolder||dirname(manifestPath)),source=resolve(folder,manifest.thumbnail),oldKey=`movies/${manifest.id}/${basename(manifest.thumbnail)}`
   let input,hasLocal=true;try{input=await readFile(source)}catch{hasLocal=false;const response=await fetch(`${storage.downloadUrl}/file/${bucketName}/${oldKey.split('/').map(encodeURIComponent).join('/')}`,{headers:{Authorization:auth.authorizationToken}});if(!response.ok){console.warn(`Skipping ${manifest.title}: local and B2 thumbnails were not found`);continue}input=Buffer.from(await response.arrayBuffer())}
-  const before=input.length,bytes=await sharp(input).rotate().resize({width:1280,height:720,fit:'inside',withoutEnlargement:true}).webp({quality:80,effort:5}).toBuffer(),output=resolve(folder,'thumb.webp')
+  const before=input.length,bytes=await sharp(input).rotate().resize(1280,720,{fit:'contain',background:'#000000'}).webp({quality:80,effort:5}).toBuffer(),output=resolve(folder,'thumb.webp')
   if(hasLocal)await writeFile(output,bytes)
   const key=`movies/${manifest.id}/thumb.webp`;await upload(bytes,key);await query('UPDATE media SET thumbnail_key=? WHERE id=? OR series_id=?',[key,manifest.id,manifest.id])
   if(manifest.thumbnail!=='thumb.webp')await writeFile(manifestPath,manifestText.replace(/("thumbnail"\s*:\s*")[^"]+("\s*[,}])/,`$1thumb.webp$2`))

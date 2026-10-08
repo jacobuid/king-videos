@@ -42,7 +42,7 @@ while(published.size<jobs.length){
   try{
    const job=jobs.find(j=>j.id===item.id),folder=resolve(`media-imports/oct7-next-movies/${item.id}`),path=join(folder,'media.json'),m=JSON.parse(readFileSync(path,'utf8'));
    const thumbnail=join(folder,'thumbnail.webp');
-   if(!existsSync(thumbnail)){const images=readdirSync(dirname(job.path)).filter(f=>/\.(png|webp|jpe?g)$/i.test(f)&&!/^www\./i.test(f));if(images.length!==1)continue;await sharp(join(dirname(job.path),images[0])).resize({width:1280,withoutEnlargement:true}).webp({quality:88}).toFile(thumbnail);}
+   if(!existsSync(thumbnail)){const images=readdirSync(dirname(job.path)).filter(f=>/\.(png|webp|avif|jpe?g)$/i.test(f)&&!/^www\./i.test(f));if(images.length!==1)continue;await sharp(join(dirname(job.path),images[0])).resize(1280,720,{fit:'contain',background:'#000000'}).webp({quality:80,effort:5}).toFile(thumbnail);}
    Object.assign(m,metadata.find(d=>d.id===item.id));writeFileSync(path,JSON.stringify(m,null,2)+'\n');
    const r=spawnSync(process.execPath,['--env-file=.env','--import','./scripts/b2-upload-agent.mjs','scripts/import-b2-movie.mjs',path,'--folder',dirname(m.video),'--resume','--concurrency','2'],{encoding:'utf8',windowsHide:true});
    if(r.status!==0)throw Error(r.stderr||r.stdout||'Import failed');console.log(r.stdout.trim());published.add(item.id);report.published.push({id:item.id,title:m.title,publishedAt:new Date().toISOString()});report.completed=published.size;report.updatedAt=new Date().toISOString();writeFileSync(reportPath,JSON.stringify(report,null,2)+'\n');

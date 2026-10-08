@@ -10,5 +10,18 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 1322622329,
   "preparedBytes": 1328502808,
-  "metadataPending": true
+  "metadataPending": false,
+  "imdbId": "tt3498820",
+  "rating": "PG-13",
+  "description": "Political pressure divides the Avengers into opposing teams led by Steve Rogers and Tony Stark.",
+  "genres": [
+    "Action",
+    "Science Fiction"
+  ],
+  "minAge": 16,
+  "kids": false,
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt3498820/"
+  ]
 }

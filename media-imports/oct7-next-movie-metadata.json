@@ -1,0 +1,267 @@
+[
+  {
+    "id": "casablanca",
+    "imdbId": "tt0034583",
+    "rating": "PG",
+    "description": "In wartime Casablanca, nightclub owner Rick Blaine must decide whether to help his former love and her husband escape the Nazis.",
+    "year": 1942,
+    "genres": [
+      "Drama",
+      "Romance",
+      "War",
+      "Classic"
+    ],
+    "minAge": 0,
+    "kids": true,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt0034583/"
+    ]
+  },
+  {
+    "id": "national-lampoons-christmas-vacation",
+    "imdbId": "tt0097958",
+    "rating": "PG-13",
+    "description": "Clark Griswold plans a perfect family Christmas, but visiting relatives and a string of disasters derail his holiday.",
+    "year": 1989,
+    "genres": [
+      "Comedy",
+      "Classic"
+    ],
+    "minAge": 16,
+    "kids": false,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt0097958/"
+    ]
+  },
+  {
+    "id": "d2-the-mighty-ducks",
+    "imdbId": "tt0109520",
+    "rating": "PG",
+    "description": "Coach Gordon Bombay reunites the Ducks to represent the United States in an international youth hockey tournament.",
+    "year": 1994,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "minAge": 0,
+    "kids": true,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt0109520/"
+    ]
+  },
+  {
+    "id": "d3-the-mighty-ducks",
+    "imdbId": "tt0116000",
+    "rating": "PG",
+    "description": "The Ducks receive scholarships to a prestigious school, where a new coach and a rival varsity team challenge their unity.",
+    "year": 1996,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama"
+    ],
+    "minAge": 0,
+    "kids": true,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt0116000/"
+    ]
+  },
+  {
+    "id": "contact",
+    "imdbId": "tt0118884",
+    "rating": "PG",
+    "description": "Astronomer Ellie Arroway discovers a signal from another civilization and joins an effort to make first contact.",
+    "year": 1997,
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Science Fiction"
+    ],
+    "minAge": 0,
+    "kids": true,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt0118884/"
+    ]
+  },
+  {
+    "id": "daredevil",
+    "imdbId": "tt0287978",
+    "rating": "R",
+    "description": "Blind lawyer Matt Murdock fights crime as Daredevil, confronting the Kingpin, the assassin Bullseye and a dangerous new romance.",
+    "year": 2003,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "minAge": 21,
+    "kids": false,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt0287978/"
+    ],
+    "edition": "Director’s cut",
+    "ratingSource": "https://en.wikipedia.org/wiki/Daredevil_(film)"
+  },
+  {
+    "id": "christmas-with-the-kranks",
+    "imdbId": "tt0388419",
+    "rating": "PG",
+    "description": "A couple decides to skip Christmas and take a cruise, only to scramble when their daughter announces a surprise holiday visit.",
+    "year": 2004,
+    "genres": [
+      "Comedy",
+      "Family"
+    ],
+    "minAge": 0,
+    "kids": true,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt0388419/"
+    ]
+  },
+  {
+    "id": "captain-america-the-first-avenger",
+    "imdbId": "tt0458339",
+    "rating": "PG-13",
+    "description": "During World War II, Steve Rogers becomes a super soldier and confronts the Red Skull and HYDRA.",
+    "year": 2011,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "minAge": 16,
+    "kids": false,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt0458339/"
+    ]
+  },
+  {
+    "id": "contagion",
+    "imdbId": "tt1598778",
+    "rating": "PG-13",
+    "description": "As a deadly virus spreads worldwide, scientists race to find a vaccine while communities struggle with fear and misinformation.",
+    "year": 2011,
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "minAge": 16,
+    "kids": false,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt1598778/"
+    ]
+  },
+  {
+    "id": "chronicle",
+    "imdbId": "tt1706593",
+    "rating": "PG-13",
+    "description": "Three teenagers gain telekinetic abilities after discovering a mysterious object, but their new powers soon test their friendship.",
+    "year": 2012,
+    "genres": [
+      "Drama",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "minAge": 16,
+    "kids": false,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt1706593/"
+    ]
+  },
+  {
+    "id": "captain-america-the-winter-soldier",
+    "imdbId": "tt1843866",
+    "rating": "PG-13",
+    "description": "Steve Rogers and Natasha Romanoff uncover a conspiracy within S.H.I.E.L.D. while facing the mysterious Winter Soldier.",
+    "year": 2014,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "minAge": 16,
+    "kids": false,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt1843866/"
+    ]
+  },
+  {
+    "id": "deepwater-horizon",
+    "imdbId": "tt1860357",
+    "rating": "PG-13",
+    "description": "Workers aboard the Deepwater Horizon drilling rig struggle to survive a catastrophic blowout in the Gulf of Mexico.",
+    "year": 2016,
+    "genres": [
+      "Action",
+      "Drama",
+      "History"
+    ],
+    "minAge": 16,
+    "kids": false,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt1860357/"
+    ]
+  },
+  {
+    "id": "captain-america-civil-war",
+    "imdbId": "tt3498820",
+    "rating": "PG-13",
+    "description": "Political pressure divides the Avengers into opposing teams led by Steve Rogers and Tony Stark.",
+    "year": 2016,
+    "genres": [
+      "Action",
+      "Science Fiction"
+    ],
+    "minAge": 16,
+    "kids": false,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt3498820/"
+    ]
+  },
+  {
+    "id": "despicable-me-4",
+    "imdbId": "tt7510222",
+    "rating": "PG",
+    "description": "Gru and his family enter witness protection when escaped villain Maxime Le Mal sets out for revenge.",
+    "year": 2024,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy"
+    ],
+    "minAge": 0,
+    "kids": true,
+    "metadataPending": false,
+    "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+    "metadataSources": [
+      "https://www.imdb.com/title/tt7510222/"
+    ]
+  }
+]

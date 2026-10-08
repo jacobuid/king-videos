@@ -1,0 +1,28 @@
+{
+  "id": "despicable-me-4",
+  "title": "Despicable Me 4",
+  "category": "movie",
+  "year": 2024,
+  "duration": 5662,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-next-movies\\despicable-me-4\\despicable-me-4.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-next-movies\\despicable-me-4\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Despicable Me 4 (2024) [720p] [WEBRip] [YTS.MX]\\Despicable.Me.4.2024.720p.WEBRip.x264.AAC-[YTS.MX].mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 910234020,
+  "preparedBytes": 910234882,
+  "metadataPending": false,
+  "imdbId": "tt7510222",
+  "rating": "PG",
+  "description": "Gru and his family enter witness protection when escaped villain Maxime Le Mal sets out for revenge.",
+  "genres": [
+    "Adventure",
+    "Animation",
+    "Comedy"
+  ],
+  "minAge": 0,
+  "kids": true,
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt7510222/"
+  ]
+}

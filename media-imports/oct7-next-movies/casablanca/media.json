@@ -1,0 +1,29 @@
+{
+  "id": "casablanca",
+  "title": "Casablanca",
+  "category": "movie",
+  "year": 1942,
+  "duration": 6155,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-next-movies\\casablanca\\casablanca.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-next-movies\\casablanca\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Casablanca (1942)\\Casablanca [720p].mkv",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 631209143,
+  "preparedBytes": 634467412,
+  "metadataPending": false,
+  "imdbId": "tt0034583",
+  "rating": "PG",
+  "description": "In wartime Casablanca, nightclub owner Rick Blaine must decide whether to help his former love and her husband escape the Nazis.",
+  "genres": [
+    "Drama",
+    "Romance",
+    "War",
+    "Classic"
+  ],
+  "minAge": 0,
+  "kids": true,
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0034583/"
+  ]
+}

@@ -20,7 +20,7 @@ try{
   await run(join(bin,'ffmpeg.exe'),['-hide_banner','-v','error','-y','-i',input.source,'-map','0:v:0','-map','0:a:0','-map','0:a:0','-c:v','copy','-c:a:0','aac','-b:a:0','192k','-ac:a:0','2','-c:a:1','copy','-disposition:a:0','default','-disposition:a:1','0','-movflags','+faststart','-progress','pipe:1',partial],data=>{const m=data.match(/out_time_us=(\d+)/);if(m){status.progress=Math.min(99,Number(m[1])/1e6/Number(input.format.duration)*100);save();}});
   validate(partial);renameSync(partial,video);
  }else validate(video);
- const thumbnail=join(manifestFolder,'thumbnail.webp');await sharp('C:/Users/jacob/Downloads/KINGFLIX/thumbnails/avatar 2 the way of water.jpg').resize({width:1280,withoutEnlargement:true}).webp({quality:88}).toFile(thumbnail);
+ const thumbnail=join(manifestFolder,'thumbnail.webp');await sharp('C:/Users/jacob/Downloads/KINGFLIX/thumbnails/avatar 2 the way of water.jpg').resize(1280,720,{fit:'contain',background:'#000000'}).webp({quality:80,effort:5}).toFile(thumbnail);
  copyFileSync('C:/Users/jacob/Downloads/KINGFLIX/videos/Avatar.The.Way.Of.Water.2022.1080p.WEBRip.x264.AAC5.1-[YTS.MX].srt',join(folder,id+'.en.srt'));
  status.stage='metadata';status.progress=0;save();
  const cachedPath=join(manifestFolder,'media.json');let genres=existsSync(cachedPath)?JSON.parse(readFileSync(cachedPath,'utf8')).genres:null;

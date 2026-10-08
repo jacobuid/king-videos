@@ -1,0 +1,30 @@
+{
+  "id": "daredevil",
+  "title": "Daredevil",
+  "category": "movie",
+  "year": 2003,
+  "duration": 7988,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-next-movies\\daredevil\\daredevil.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-next-movies\\daredevil\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Daredevil (2003)\\Daredevil [1080p].mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 1831891237,
+  "preparedBytes": 2029427539,
+  "metadataPending": false,
+  "imdbId": "tt0287978",
+  "rating": "R",
+  "description": "Blind lawyer Matt Murdock fights crime as Daredevil, confronting the Kingpin, the assassin Bullseye and a dangerous new romance.",
+  "genres": [
+    "Action",
+    "Crime",
+    "Drama"
+  ],
+  "minAge": 21,
+  "kids": false,
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0287978/"
+  ],
+  "edition": "Director’s cut",
+  "ratingSource": "https://en.wikipedia.org/wiki/Daredevil_(film)"
+}
