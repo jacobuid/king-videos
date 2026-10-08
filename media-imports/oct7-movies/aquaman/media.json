@@ -1,0 +1,14 @@
+{
+  "id": "aquaman",
+  "title": "Aquaman",
+  "category": "movie",
+  "year": 2018,
+  "duration": 8601,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\aquaman\\aquaman.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\aquaman\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Aquaman\\Aquaman [720p].mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 1589258125,
+  "preparedBytes": 1802163419,
+  "metadataPending": true
+}

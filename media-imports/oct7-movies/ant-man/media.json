@@ -1,0 +1,14 @@
+{
+  "id": "ant-man",
+  "title": "Ant-Man",
+  "category": "movie",
+  "year": 2015,
+  "duration": 7027,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\ant-man\\ant-man.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\ant-man\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Ant-Man (2015) - 720p\\Ant-Man.2015.720p.BluRay.x264.VPPV.mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 1490142573,
+  "preparedBytes": 1664545352,
+  "metadataPending": true
+}

@@ -4,8 +4,9 @@ import { readFile, readdir, stat } from 'node:fs/promises'
 import { basename, dirname, extname, relative, resolve } from 'node:path'
 import process from 'node:process'
 
-const manifestPath=resolve(process.argv[2]||''),folderArg=process.argv.indexOf('--folder'),concurrencyArg=process.argv.indexOf('--concurrency'),uploadOnly=process.argv.includes('--upload-only'),metadataOnly=process.argv.includes('--metadata-only'),subtitlesOnly=process.argv.includes('--subtitles-only'),resume=process.argv.includes('--resume')
+const manifestPath=resolve(process.argv[2]||''),folderArg=process.argv.indexOf('--folder'),concurrencyArg=process.argv.indexOf('--concurrency'),uploadOnly=process.argv.includes('--upload-only'),videoOnly=process.argv.includes('--video-only'),metadataOnly=process.argv.includes('--metadata-only'),subtitlesOnly=process.argv.includes('--subtitles-only'),resume=process.argv.includes('--resume')
 if(!process.argv[2]||(folderArg>=0&&!process.argv[folderArg+1])||(concurrencyArg>=0&&!process.argv[concurrencyArg+1]))throw new Error('Usage: node scripts/import-b2-movie.mjs <media.json> [--folder <media-folder>] [--concurrency <workers>] [--resume]')
+if(videoOnly&&!uploadOnly)throw new Error('--video-only requires --upload-only; publish after thumbnails and metadata are ready')
 const concurrency=Math.max(1,Number(concurrencyArg>=0?process.argv[concurrencyArg+1]:1)||1)
 const manifest=JSON.parse((await readFile(manifestPath,'utf8')).replace(/^\uFEFF/,'')),folder=resolve(folderArg>=0?process.argv[folderArg+1]:dirname(manifestPath))
 for(const name of ['B2_BOOTSTRAP_KEY_ID','B2_BOOTSTRAP_APPLICATION_KEY','CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID'])if(!process.env[name])throw new Error(`${name} is required`)
@@ -58,7 +59,7 @@ const subtitleFiles=(await filesUnder(folder)).filter(path=>['.srt','.vtt'].incl
 const videoStem=basename(manifest.video,extname(manifest.video)).toLowerCase(),rankSubtitle=path=>{const name=basename(path).toLowerCase(),stem=basename(path,extname(path)).toLowerCase();return (stem===videoStem?100:0)+(name.includes('english')||name.includes('.en.')?40:0)-(name.includes('sdh')||name.includes('hi.')?20:0)-(name.includes('(2)')?10:0)}
 const subtitlePath=subtitleFiles.sort((a,b)=>rankSubtitle(b)-rankSubtitle(a)||a.localeCompare(b))[0]||null,subtitleKey=subtitlePath?`${prefix}${manifest.id}.en.vtt`:null
 const videoKey=`${prefix}${manifest.id}.mp4`,thumbnailKey=`${prefix}${basename(manifest.thumbnail)}`,thumbnailExtension=extname(manifest.thumbnail).toLowerCase(),thumbnailType=thumbnailExtension==='.png'?'image/png':thumbnailExtension==='.webp'?'image/webp':'image/jpeg'
-if(!metadataOnly&&!subtitlesOnly){const tasks=[[manifest.thumbnail,thumbnailKey,thumbnailType],[manifest.video,videoKey,'video/mp4']],workers=Array.from({length:Math.min(concurrency,tasks.length)},async()=>{while(tasks.length){const task=tasks.shift();if(task)await uploadFile(...task)}});await Promise.all(workers)}
+if(!metadataOnly&&!subtitlesOnly){const tasks=[...(videoOnly?[]:[[manifest.thumbnail,thumbnailKey,thumbnailType]]),[manifest.video,videoKey,'video/mp4']],workers=Array.from({length:Math.min(concurrency,tasks.length)},async()=>{while(tasks.length){const task=tasks.shift();if(task)await uploadFile(...task)}});await Promise.all(workers)}
 if(subtitlePath&&!metadataOnly){const source=await readFile(subtitlePath),value=extname(subtitlePath).toLowerCase()==='.srt'?Buffer.from(srtToVtt(source.toString('utf8')),'utf8'):source;await uploadBytes(value,subtitleKey,'text/vtt; charset=utf-8');console.log(`Selected subtitle: ${relative(folder,subtitlePath)}`)}
 else if(subtitlesOnly){console.log(`No subtitles found for ${manifest.title}`);process.exit(0)}
 

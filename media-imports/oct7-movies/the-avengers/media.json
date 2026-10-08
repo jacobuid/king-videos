@@ -1,0 +1,14 @@
+{
+  "id": "the-avengers",
+  "title": "The Avengers",
+  "category": "movie",
+  "year": 2012,
+  "duration": 8575,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\the-avengers\\the-avengers.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\the-avengers\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Avengers (2012) [1080p]\\The.Avengers.2012.1080p.BluRay.x264.YIFY.mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 2358359343,
+  "preparedBytes": 2360751710,
+  "metadataPending": true
+}

@@ -1,0 +1,14 @@
+{
+  "id": "avatar",
+  "title": "Avatar",
+  "category": "movie",
+  "year": 2009,
+  "duration": 10689,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\avatar\\avatar.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\avatar\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Avatar (2009)\\Avatar [1080p].mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 4295413012,
+  "preparedBytes": 4291763552,
+  "metadataPending": true
+}

@@ -1,0 +1,14 @@
+{
+  "id": "avengers-age-of-ultron",
+  "title": "Avengers: Age of Ultron",
+  "category": "movie",
+  "year": 2015,
+  "duration": 8479,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\avengers-age-of-ultron\\avengers-age-of-ultron.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\avengers-age-of-ultron\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Avengers Age of Ultron (2015) [1080p]\\Avengers.Age.of.Ultron.2015.1080p.BluRay.x264.YIFY.mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 2205622818,
+  "preparedBytes": 2207101617,
+  "metadataPending": true
+}
