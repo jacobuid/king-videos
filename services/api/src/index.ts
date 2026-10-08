@@ -1,3 +1,4 @@
+import {bulkMediaUpdates} from './bulk-media'
 import {movieRatingAge} from './movie-ratings'
 import {videoOriginRange} from './video-delivery'
 import {vttToSrt} from './roku-captions'
@@ -82,6 +83,20 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
       const rows=await env.DB.prepare("SELECT * FROM media WHERE (title LIKE ? OR COALESCE(series_title,'') LIKE ?) AND (?='' OR (?='missing' AND COALESCE(TRIM(rating),'')='') OR rating=?) AND (?='' OR min_age>=?) AND (?='' OR min_age<=?) ORDER BY created_at DESC LIMIT ? OFFSET ?").bind(`%${search}%`,`%${search}%`,rating,rating,rating,ageFrom,Number(ageFrom),ageTo,Number(ageTo),limit,offset).all<Media>()
       const imageExpires=(Math.floor(Date.now()/15552000000)+2)*15552000000,result=await Promise.all(rows.results.map(async m=>({id:m.id,title:m.title,description:m.description,category:m.category,seriesId:m.series_id,seriesTitle:m.series_title,seasonNumber:m.season_number,episodeNumber:m.episode_number,year:m.year,genres:JSON.parse(m.genres||'[]'),rating:m.rating,blocked:Boolean(m.blocked),minAge:m.min_age,thumbnailUrl:m.thumbnail_key&&allowedKey(m.thumbnail_key)?await contentUrl(request,env,m.thumbnail_key,'image',imageExpires):null})))
       return withCors(json(result),cors)
+    }
+    if(path==='/api/manage-media/bulk'&&request.method==='POST'){
+      if(!await authorizedManage(request,env,userId))return withCors(json({error:'Enter your password to manage videos.'},403),cors)
+      const body=await request.json()as{ids?:unknown;seriesIds?:unknown;settings?:unknown}
+      const validIds=(value:unknown)=>Array.isArray(value)&&value.every(id=>typeof id==='string'&&id.length>0&&id.length<=200)
+      if(!validIds(body.ids??[])||!validIds(body.seriesIds??[]))return withCors(json({error:'Choose valid videos.'},400),cors)
+      const ids=[...new Set(body.ids as string[]||[])],seriesIds=[...new Set(body.seriesIds as string[]||[])]
+      if(!ids.length&&!seriesIds.length||ids.length+seriesIds.length>500)return withCors(json({error:'Select between 1 and 500 videos or shows.'},400),cors)
+      let update:ReturnType<typeof bulkMediaUpdates>
+      try{update=bulkMediaUpdates(body.settings)}catch(error){return withCors(json({error:(error as Error).message},400),cors)}
+      const statements=[]
+      for(const [column,values]of [['id',ids],['series_id',seriesIds]]as const){for(let offset=0;offset<values.length;offset+=60){const chunk=values.slice(offset,offset+60);statements.push(env.DB.prepare('UPDATE media SET '+update.assignments.join(',')+' WHERE '+column+' IN ('+chunk.map(()=>'?').join(',')+')').bind(...update.params,...chunk))}}
+      await env.DB.batch(statements)
+      return withCors(json({success:true,settings:update.settings}),cors)
     }
     const manageSeriesMatch=path.match(/^\/api\/manage-series\/([^/]+)$/)
     if(manageSeriesMatch&&request.method==='POST'){
