@@ -470,8 +470,8 @@ function completed(item as object) as boolean
 end function
 
 sub buildMenu()
-    titles = ["Home", "Movies", "TV", "Series", "Home Videos", "Search", "Profiles", "Unlink Roku"]
-    if m.profile.homeVideosOnly then titles = ["Home Videos", "Search", "Profiles", "Unlink Roku"]
+    titles = ["Home", "Movies", "TV", "Series", "Home Videos", "Search", "Switch Profile", "Unlink Roku"]
+    if m.profile.homeVideosOnly then titles = ["Home Videos", "Search", "Switch Profile", "Unlink Roku"]
     content = CreateObject("roSGNode", "ContentNode")
     for each title in titles
         content.createChild("ContentNode").title = title
@@ -483,7 +483,7 @@ end sub
 sub onMenuSelected()
     title = m.menu.content.getChild(m.menu.itemSelected).title
     m.history = []
-    if title = "Profiles"
+    if title = "Switch Profile"
         m.profileSelectionGuard = CreateObject("roTimespan")
         m.profileSelectionGuard.Mark()
         registryOperation("delete", "profile")

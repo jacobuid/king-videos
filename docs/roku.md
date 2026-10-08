@@ -1,5 +1,7 @@
 # KINGFLIX on Roku
 
+
+Roku is a viewing-only app. Device linking/unlinking is its only configuration. Switch Profile chooses an existing profile; it does not create, edit or manage profiles. Profile management, video editing and bulk editing belong on the website and must never be exposed in the Roku UI or allowed through Roku device credentials.
 The first version is a private SceneGraph/BrightScript app installed through Roku Developer Mode. It shares the web catalog, profile access restrictions, captions, favorites, and playback progress. A Roku hardware test is still required; compiler validation does not verify playback or the TV layout.
 
 ## Build

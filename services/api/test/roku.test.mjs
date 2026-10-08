@@ -52,7 +52,7 @@ test('pairing creation is limited and unlinking is account scoped',async()=>{
 })
 
 test('device permissions exclude management, PIN changes, and linking other devices',()=>{
-  for(const [path,method] of [['/api/manage-access','POST'],['/api/manage-media','GET'],['/api/profiles/p1','DELETE'],['/api/profiles/p1/pin','POST'],['/api/roku/link','POST'],['/api/roku/devices','GET']])assert.equal(rokuPathAllowed(path,method),false)
+  for(const [path,method] of [['/api/manage-access','POST'],['/api/manage-media','GET'],['/api/manage-media/bulk','POST'],['/api/manage-series/show','POST'],['/api/profiles/p1','DELETE'],['/api/profiles/p1/pin','POST'],['/api/roku/link','POST'],['/api/roku/devices','GET']])assert.equal(rokuPathAllowed(path,method),false)
   for(const [path,method] of [['/api/library','GET'],['/api/profiles/p1/unlock','POST'],['/api/media/movie/play','POST'],['/api/progress','POST'],['/api/favorites','DELETE']])assert.equal(rokuPathAllowed(path,method),true)
 })
 
