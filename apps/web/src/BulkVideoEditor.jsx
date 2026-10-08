@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import React, {useState} from 'react'
 
 export default function BulkVideoEditor({count,genres,saving,onApply,onClear}){
   const[rating,setRating]=useState('keep'),[age,setAge]=useState('keep'),[blocked,setBlocked]=useState('keep'),[replaceGenres,setReplaceGenres]=useState(false),[chosenGenres,setChosenGenres]=useState([])
