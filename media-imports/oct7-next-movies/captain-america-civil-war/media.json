@@ -1,0 +1,14 @@
+{
+  "id": "captain-america-civil-war",
+  "title": "Captain America: Civil War",
+  "category": "movie",
+  "year": 2016,
+  "duration": 8862,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-next-movies\\captain-america-civil-war\\captain-america-civil-war.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-next-movies\\captain-america-civil-war\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Captain America - Civil War (2016)\\Captain.America.Civil.War.2016.720p.BluRay.x264.VPPV.mkv",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 1322622329,
+  "preparedBytes": 1328502808,
+  "metadataPending": true
+}

@@ -1,0 +1,30 @@
+{
+  "id": "avatar-the-way-of-water",
+  "title": "Avatar: The Way of Water",
+  "category": "movie",
+  "year": 2022,
+  "date": "2022-12-16",
+  "duration": 11558,
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Fantasy"
+  ],
+  "description": "Jake Sully and Neytiri seek refuge with their children among Pandora’s ocean clans, but a returning threat forces the family to fight for their new home.",
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\avatar-the-way-of-water\\avatar-the-way-of-water.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\avatar-the-way-of-water\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Avatar.The.Way.Of.Water.2022.1080p.WEBRip.x264.AAC5.1-[YTS.MX]-001.mp4",
+  "originalBytes": 3812546616,
+  "preparedBytes": 4097255099,
+  "processing": "Original 1920x1036 H.264 video copied without re-encoding; original 5.1 AAC retained plus stereo AAC compatibility track; fast-start MP4",
+  "imdbId": "tt1630029",
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt1630029/",
+    "https://movies.disney.com/avatar-the-way-of-water"
+  ],
+  "metadataPending": false
+}

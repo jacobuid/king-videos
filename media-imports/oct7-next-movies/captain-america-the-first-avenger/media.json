@@ -1,0 +1,14 @@
+{
+  "id": "captain-america-the-first-avenger",
+  "title": "Captain America: The First Avenger",
+  "category": "movie",
+  "year": 2011,
+  "duration": 7452,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-next-movies\\captain-america-the-first-avenger\\captain-america-the-first-avenger.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-next-movies\\captain-america-the-first-avenger\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Captain America - The First Avenger (2011)\\Captain.America.The.First.Avenger.1080p.BrRip.x264.YIFY.mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 1713875628,
+  "preparedBytes": 1715143359,
+  "metadataPending": true
+}
