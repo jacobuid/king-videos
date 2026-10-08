@@ -1,0 +1,29 @@
+{
+  "id": "ben-hur-1959",
+  "title": "Ben-Hur",
+  "category": "movie",
+  "year": 1959,
+  "duration": 13347,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\ben-hur-1959\\ben-hur-1959.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\ben-hur-1959\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Ben-Hur (1959)\\Ben-Hur [1080p].mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 3625717285,
+  "preparedBytes": 3625717394,
+  "metadataPending": false,
+  "description": "Betrayed by his childhood friend and condemned to slavery, Judah Ben-Hur returns to seek justice in Roman-occupied Judea.",
+  "rating": "G",
+  "minAge": 0,
+  "kids": true,
+  "genres": [
+    "Adventure",
+    "Drama",
+    "Classic"
+  ],
+  "imdbId": "tt0052618",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0052618/",
+    "https://en.wikipedia.org/wiki/Ben-Hur_(1959_film)"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
+}

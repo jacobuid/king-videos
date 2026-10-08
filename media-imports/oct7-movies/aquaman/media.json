@@ -10,6 +10,21 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 1589258125,
   "preparedBytes": 1802163419,
-  "metadataPending": true,
-  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\aquaman.png"
+  "metadataPending": false,
+  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\aquaman.png",
+  "description": "Arthur Curry must embrace his Atlantean heritage and prevent a war between the underwater kingdoms and the surface world.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Fantasy"
+  ],
+  "imdbId": "tt1477834",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt1477834/",
+    "https://en.wikipedia.org/wiki/Aquaman_(film)"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

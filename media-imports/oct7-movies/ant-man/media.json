@@ -10,6 +10,21 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 1490142573,
   "preparedBytes": 1664545352,
-  "metadataPending": true,
-  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\ant-man.jpg"
+  "metadataPending": false,
+  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\ant-man.jpg",
+  "description": "Scott Lang joins scientist Hank Pym on a dangerous heist using a suit that lets him shrink in size while gaining extraordinary strength.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Action",
+    "Comedy",
+    "Science Fiction"
+  ],
+  "imdbId": "tt0478970",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0478970/",
+    "https://en.wikipedia.org/wiki/Ant-Man_(film)"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

@@ -10,5 +10,19 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 2662526944,
   "preparedBytes": 2664249988,
-  "metadataPending": true
+  "metadataPending": false,
+  "description": "Years after retreating from public life, Bruce Wayne returns as Batman when Bane threatens to destroy Gotham.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Crime",
+    "Thriller"
+  ],
+  "imdbId": "tt1345836",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt1345836/",
+    "https://en.wikipedia.org/wiki/The_Dark_Knight_Rises"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

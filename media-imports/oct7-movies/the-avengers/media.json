@@ -10,6 +10,20 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 2358359343,
   "preparedBytes": 2360751710,
-  "metadataPending": true,
-  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\avengers.jpg"
+  "metadataPending": false,
+  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\avengers.jpg",
+  "description": "Nick Fury brings together Earth’s mightiest heroes to stop Loki and an alien army from conquering the planet.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Action",
+    "Science Fiction"
+  ],
+  "imdbId": "tt0848228",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0848228/",
+    "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

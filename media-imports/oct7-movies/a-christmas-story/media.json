@@ -10,6 +10,21 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 683014947,
   "preparedBytes": 683711058,
-  "metadataPending": true,
-  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\ChristmasStory_Edit.jpg"
+  "metadataPending": false,
+  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\ChristmasStory_Edit.jpg",
+  "description": "Young Ralphie dreams of receiving a Red Ryder BB gun for Christmas, despite repeated warnings from the adults around him.",
+  "rating": "PG",
+  "minAge": 0,
+  "kids": true,
+  "genres": [
+    "Comedy",
+    "Family",
+    "Classic"
+  ],
+  "imdbId": "tt0085334",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0085334/",
+    "https://en.wikipedia.org/wiki/A_Christmas_Story"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

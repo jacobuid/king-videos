@@ -10,6 +10,21 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 2205622818,
   "preparedBytes": 2207101617,
-  "metadataPending": true,
-  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\Avengers Age of Ultron .webp"
+  "metadataPending": false,
+  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\Avengers Age of Ultron .webp",
+  "description": "The Avengers reunite when an artificial intelligence created to protect humanity becomes a threat to its survival.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "imdbId": "tt2395427",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt2395427/",
+    "https://en.wikipedia.org/wiki/Avengers:_Age_of_Ultron"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

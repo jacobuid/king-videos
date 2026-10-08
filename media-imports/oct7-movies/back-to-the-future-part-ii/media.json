@@ -10,5 +10,21 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 1135045541,
   "preparedBytes": 1135045634,
-  "metadataPending": true
+  "metadataPending": false,
+  "description": "Marty and Doc travel into the future, then race to repair a changed timeline after a sports almanac falls into the wrong hands.",
+  "rating": "PG",
+  "minAge": 0,
+  "kids": true,
+  "genres": [
+    "Adventure",
+    "Comedy",
+    "Science Fiction",
+    "Classic"
+  ],
+  "imdbId": "tt0096874",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0096874/",
+    "https://en.wikipedia.org/wiki/Back_to_the_Future_Part_II"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

@@ -1,0 +1,165 @@
+[
+  {
+    "imdbId": "tt0052618",
+    "title": "Ben-Hur",
+    "year": 1959,
+    "genres": [
+      "Adventure",
+      "Drama"
+    ]
+  },
+  {
+    "imdbId": "tt0085334",
+    "title": "A Christmas Story",
+    "year": 1983,
+    "genres": [
+      "Comedy",
+      "Family"
+    ]
+  },
+  {
+    "imdbId": "tt0088763",
+    "title": "Back to the Future",
+    "year": 1985,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdbId": "tt0096874",
+    "title": "Back to the Future Part II",
+    "year": 1989,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdbId": "tt0372784",
+    "title": "Batman Begins",
+    "year": 2005,
+    "genres": [
+      "Crime"
+    ]
+  },
+  {
+    "imdbId": "tt0468569",
+    "title": "The Dark Knight",
+    "year": 2008,
+    "genres": [
+      "Crime",
+      "Thriller"
+    ]
+  },
+  {
+    "imdbId": "tt0478970",
+    "title": "Ant-Man",
+    "year": 2015,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdbId": "tt0499549",
+    "title": "Avatar",
+    "year": 2009,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ]
+  },
+  {
+    "imdbId": "tt0848228",
+    "title": "The Avengers",
+    "year": 2012,
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdbId": "tt1217613",
+    "title": "Battle Los Angeles",
+    "year": 2011,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdbId": "tt1345836",
+    "title": "The Dark Knight Rises",
+    "year": 2012,
+    "genres": [
+      "Crime",
+      "Thriller"
+    ]
+  },
+  {
+    "imdbId": "tt1440129",
+    "title": "Battleship",
+    "year": 2012,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdbId": "tt1477834",
+    "title": "Aquaman",
+    "year": 2018,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ]
+  },
+  {
+    "imdbId": "tt2395427",
+    "title": "Avengers: Age of Ultron",
+    "year": 2015,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdbId": "tt2638144",
+    "title": "Ben-Hur",
+    "year": 2016,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ]
+  },
+  {
+    "imdbId": "tt4154756",
+    "title": "Avengers: Infinity War",
+    "year": 2018,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ]
+  },
+  {
+    "imdbId": "tt4154796",
+    "title": "Avengers: Endgame",
+    "year": 2019,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ]
+  }
+]

@@ -10,6 +10,21 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 4295413012,
   "preparedBytes": 4291763552,
-  "metadataPending": true,
-  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\avatar.jpg"
+  "metadataPending": false,
+  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\avatar.jpg",
+  "description": "On Pandora, former Marine Jake Sully becomes part of the Na’vi world and faces a choice between his mission and the people he has come to love.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Fantasy"
+  ],
+  "imdbId": "tt0499549",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0499549/",
+    "https://en.wikipedia.org/wiki/Avatar_(2009_film)"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

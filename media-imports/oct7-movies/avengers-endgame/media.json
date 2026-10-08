@@ -10,5 +10,20 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 3234022377,
   "preparedBytes": 3504089166,
-  "metadataPending": true
+  "metadataPending": false,
+  "description": "After Thanos’s devastating victory, the surviving Avengers undertake a final mission to bring back those they lost.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "imdbId": "tt4154796",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt4154796/",
+    "https://en.wikipedia.org/wiki/Avengers:_Endgame"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

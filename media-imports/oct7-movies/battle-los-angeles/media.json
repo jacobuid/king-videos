@@ -10,5 +10,20 @@
   "processing": "Original dimensions retained; H.264 NVENC CQ18 compatibility conversion",
   "originalBytes": 3395914483,
   "preparedBytes": 3471216470,
-  "metadataPending": true
+  "metadataPending": false,
+  "description": "A squad of Marines fights to rescue civilians in Los Angeles during a devastating alien invasion.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "imdbId": "tt1217613",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt1217613/",
+    "https://en.wikipedia.org/wiki/Battle:_Los_Angeles"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

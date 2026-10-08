@@ -10,5 +10,20 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 2569178835,
   "preparedBytes": 2569178875,
-  "metadataPending": true
+  "metadataPending": false,
+  "description": "The Avengers and their allies battle Thanos as he searches for the Infinity Stones and the power to reshape the universe.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Science Fiction"
+  ],
+  "imdbId": "tt4154756",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt4154756/",
+    "https://en.wikipedia.org/wiki/Avengers:_Infinity_War"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

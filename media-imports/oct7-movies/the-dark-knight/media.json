@@ -10,5 +10,19 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 1828285704,
   "preparedBytes": 1829839427,
-  "metadataPending": true
+  "metadataPending": false,
+  "description": "Batman, Jim Gordon and Harvey Dent fight organized crime in Gotham as the Joker pushes the city toward chaos.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Crime",
+    "Thriller"
+  ],
+  "imdbId": "tt0468569",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0468569/",
+    "https://en.wikipedia.org/wiki/The_Dark_Knight"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

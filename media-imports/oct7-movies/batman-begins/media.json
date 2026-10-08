@@ -10,5 +10,18 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 1724042076,
   "preparedBytes": 1725471619,
-  "metadataPending": true
+  "metadataPending": false,
+  "description": "Bruce Wayne returns to Gotham and becomes Batman, confronting the corruption and fear that threaten his city.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "genres": [
+    "Crime"
+  ],
+  "imdbId": "tt0372784",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0372784/",
+    "https://en.wikipedia.org/wiki/Batman_Begins"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }

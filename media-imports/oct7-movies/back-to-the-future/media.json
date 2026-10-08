@@ -10,5 +10,21 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 1296074854,
   "preparedBytes": 1468725782,
-  "metadataPending": true
+  "metadataPending": false,
+  "description": "Teenager Marty McFly travels to 1955 in Doc Brown’s time machine and must reunite his future parents before he can return home.",
+  "rating": "PG",
+  "minAge": 0,
+  "kids": true,
+  "genres": [
+    "Adventure",
+    "Comedy",
+    "Science Fiction",
+    "Classic"
+  ],
+  "imdbId": "tt0088763",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0088763/",
+    "https://en.wikipedia.org/wiki/Back_to_the_Future"
+  ],
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz"
 }
