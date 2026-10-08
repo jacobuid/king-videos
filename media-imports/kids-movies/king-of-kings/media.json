@@ -25,5 +25,6 @@
     "Biography",
     "Drama"
   ],
-  "genresSource": "https://www.imdb.com/title/tt0055047/"
+  "genresSource": "https://www.imdb.com/title/tt0055047/",
+  "minAge": 16
 }

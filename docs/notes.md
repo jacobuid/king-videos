@@ -61,3 +61,5 @@ Parallel Backblaze B2 deployment configuration
 3. check in and push.
 
 Note: B2 upload can be running in bakground while you are creating metadata and checking that in.
+
+Movie access ages: PG-13 movies are 16+; R-rated movies are 21+. Apply these ages during imports and rating edits. Other ratings and TV show age settings retain their existing rules.

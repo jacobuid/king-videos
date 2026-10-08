@@ -1,0 +1,14 @@
+{
+  "id": "battle-los-angeles",
+  "title": "Battle: Los Angeles",
+  "category": "movie",
+  "year": 2011,
+  "duration": 6971,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\battle-los-angeles\\battle-los-angeles.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\battle-los-angeles\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Battle - Los Angeles (2011)\\Battle Los Angeles [1080p].mp4",
+  "processing": "Original dimensions retained; H.264 NVENC CQ18 compatibility conversion",
+  "originalBytes": 3395914483,
+  "preparedBytes": 3471216470,
+  "metadataPending": true
+}

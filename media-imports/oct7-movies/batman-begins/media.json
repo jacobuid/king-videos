@@ -1,0 +1,14 @@
+{
+  "id": "batman-begins",
+  "title": "Batman Begins",
+  "category": "movie",
+  "year": 2005,
+  "duration": 8403,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\batman-begins\\batman-begins.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\batman-begins\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Batman - 1 Begins (2005)\\Batman.Begins.2005.1080p.BluRay.x264.YIFY.mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 1724042076,
+  "preparedBytes": 1725471619,
+  "metadataPending": true
+}

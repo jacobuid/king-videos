@@ -26,5 +26,6 @@
     "Fantasy"
   ],
   "genresSource": "https://www.imdb.com/title/tt0119698/",
-  "animationStyle": "2d"
+  "animationStyle": "2d",
+  "minAge": 16
 }

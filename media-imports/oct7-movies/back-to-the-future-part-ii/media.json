@@ -1,0 +1,14 @@
+{
+  "id": "back-to-the-future-part-ii",
+  "title": "Back to the Future Part II",
+  "category": "movie",
+  "year": 1989,
+  "duration": 6486,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\back-to-the-future-part-ii\\back-to-the-future-part-ii.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\back-to-the-future-part-ii\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Back to the Future 2 (1989)\\Back to the Future 2 [720p].mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 1135045541,
+  "preparedBytes": 1135045634,
+  "metadataPending": true
+}

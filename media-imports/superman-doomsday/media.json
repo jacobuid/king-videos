@@ -24,5 +24,6 @@
     "Animation"
   ],
   "genresSource": "https://www.imdb.com/title/tt0934706/",
-  "animationStyle": "2d"
+  "animationStyle": "2d",
+  "minAge": 16
 }

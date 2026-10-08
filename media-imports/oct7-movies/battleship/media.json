@@ -1,0 +1,14 @@
+{
+  "id": "battleship",
+  "title": "Battleship",
+  "category": "movie",
+  "year": 2012,
+  "duration": 7875,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\battleship\\battleship.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\battleship\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Battleship (2012)\\Battleship.2012.BluRay.1080p.x264.YIFY.mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 2147316396,
+  "preparedBytes": 2149513783,
+  "metadataPending": true
+}

@@ -71,3 +71,11 @@ test('Roku delivery preserves open-ended and explicit ranges while browser chunk
   assert.equal(videoOriginRange('bytes=-1024',true),'bytes=-1024')
   assert.equal(videoOriginRange(null,true),null)
 })
+
+test('movie rating ages enforce PG-13 at 16 and R at 21 without changing other types',async()=>{
+  const {movieRatingAge}=await import('../src/movie-ratings.ts')
+  assert.equal(movieRatingAge('movie','PG-13',0),16)
+  assert.equal(movieRatingAge('movie',' r ',0),21)
+  assert.equal(movieRatingAge('movie','G',8),8)
+  assert.equal(movieRatingAge('tv','PG-13',0),0)
+})

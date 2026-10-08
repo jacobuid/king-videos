@@ -10,5 +10,6 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 683014947,
   "preparedBytes": 683711058,
-  "metadataPending": true
+  "metadataPending": true,
+  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\ChristmasStory_Edit.jpg"
 }

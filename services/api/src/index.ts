@@ -1,3 +1,4 @@
+import {movieRatingAge} from './movie-ratings'
 import {videoOriginRange} from './video-delivery'
 import {vttToSrt} from './roku-captions'
 import {authorizeRoku,publicRokuRoute,browserRokuRoute,rokuPathAllowed,revokeRoku} from './roku'
@@ -94,11 +95,14 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
     const manageMediaMatch=path.match(/^\/api\/manage-media\/([^/]+)$/)
     if(manageMediaMatch&&request.method==='POST'){
       if(!await authorizedManage(request,env,userId))return withCors(json({error:'Enter your password to manage videos.'},403),cors)
-      const body=await request.json()as{title?:string;description?:string;rating?:string|null;blocked?:boolean;minAge?:number;genres?:string[]},title=body.title?.trim(),description=body.description?.trim()||'',rating=body.rating?.trim()||null,minAge=Number(body.minAge??0)
+      const body=await request.json()as{title?:string;description?:string;rating?:string|null;blocked?:boolean;minAge?:number;genres?:string[]},title=body.title?.trim(),description=body.description?.trim()||'',rating=body.rating?.trim()||null,requestedAge=Number(body.minAge??0)
       if(!title||title.length>200)return withCors(json({error:'Enter a title up to 200 characters.'},400),cors)
       if(description.length>4000)return withCors(json({error:'Description must be 4,000 characters or less.'},400),cors)
       if(rating&&rating.length>20)return withCors(json({error:'Choose a valid rating.'},400),cors)
-      if(!Number.isInteger(minAge)||minAge<0||minAge>21)return withCors(json({error:'Minimum age must be a whole number from 0 to 21.'},400),cors)
+      if(!Number.isInteger(requestedAge)||requestedAge<0||requestedAge>21)return withCors(json({error:'Minimum age must be a whole number from 0 to 21.'},400),cors)
+      const existing=await env.DB.prepare('SELECT category FROM media WHERE id=?').bind(manageMediaMatch[1]).first<{category:string}>()
+      if(!existing)return withCors(json({error:'Not found'},404),cors)
+      const minAge=movieRatingAge(existing.category,rating,requestedAge)
       const cleanGenres=Array.isArray(body.genres)?[...new Set(body.genres.map(value=>String(value).trim()).filter(value=>value&&value.length<=40))].slice(0,20):[]
       await env.DB.prepare('UPDATE media SET title=?,description=?,rating=?,genres=?,blocked=?,min_age=? WHERE id=?').bind(title,description,rating,JSON.stringify(cleanGenres),body.blocked?1:0,minAge,manageMediaMatch[1]).run()
       return withCors(json({id:manageMediaMatch[1],title,description,rating,genres:cleanGenres,blocked:Boolean(body.blocked),minAge}),cors)

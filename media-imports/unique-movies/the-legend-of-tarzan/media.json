@@ -25,5 +25,6 @@
     "Adventure",
     "Drama"
   ],
-  "genresSource": "https://www.imdb.com/title/tt0918940/"
+  "genresSource": "https://www.imdb.com/title/tt0918940/",
+  "minAge": 16
 }

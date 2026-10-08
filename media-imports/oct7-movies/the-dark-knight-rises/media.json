@@ -1,0 +1,14 @@
+{
+  "id": "the-dark-knight-rises",
+  "title": "The Dark Knight Rises",
+  "category": "movie",
+  "year": 2012,
+  "duration": 9873,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\the-dark-knight-rises\\the-dark-knight-rises.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\the-dark-knight-rises\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Batman - 3 The Dark Knight Rises (2012)\\The.Dark.Knight.Rises.2012.1080p.BluRay.x264.YIFY.mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 2662526944,
+  "preparedBytes": 2664249988,
+  "metadataPending": true
+}

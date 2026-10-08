@@ -1,0 +1,14 @@
+{
+  "id": "avengers-endgame",
+  "title": "Avengers: Endgame",
+  "category": "movie",
+  "year": 2019,
+  "duration": 10871,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct7-movies\\avengers-endgame\\avengers-endgame.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct7-movies\\avengers-endgame\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Avengers Endgame (2019) [BluRay] [1080p] [YTS.LT]\\Avengers.Endgame.2019.1080p.BluRay.x264-[YTS.LT].mp4",
+  "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
+  "originalBytes": 3234022377,
+  "preparedBytes": 3504089166,
+  "metadataPending": true
+}

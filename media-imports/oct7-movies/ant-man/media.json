@@ -10,5 +10,6 @@
   "processing": "Original H.264 video preserved without re-encoding; fast-start MP4",
   "originalBytes": 1490142573,
   "preparedBytes": 1664545352,
-  "metadataPending": true
+  "metadataPending": true,
+  "thumbnailSource": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\thumbnails\\ant-man.jpg"
 }

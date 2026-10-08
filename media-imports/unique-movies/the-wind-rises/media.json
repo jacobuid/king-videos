@@ -26,5 +26,6 @@
     "Drama"
   ],
   "genresSource": "https://www.imdb.com/title/tt2013293/",
-  "animationStyle": "2d"
+  "animationStyle": "2d",
+  "minAge": 16
 }
