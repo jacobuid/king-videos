@@ -1,0 +1,30 @@
+{
+  "id": "fantastic-four-2005",
+  "title": "Fantastic Four",
+  "category": "movie",
+  "year": 2005,
+  "duration": 6329,
+  "video": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\web-ready\\oct8-movies\\fantastic-four-2005\\fantastic-four-2005.mp4",
+  "thumbnail": "C:\\Users\\jacob\\Code\\king-videos\\media-imports\\oct8-movies\\fantastic-four-2005\\thumbnail.webp",
+  "sourceVideo": "C:\\Users\\jacob\\Downloads\\KINGFLIX\\videos\\Fantastic Four (2005)\\Fantastic Four 2005.720p.BrRip.x264.YIFY.mp4",
+  "processing": "Original h264 video and bit depth preserved without re-encoding; fast-start MP4",
+  "sourceCodec": "h264",
+  "pixelFormat": "yuv420p",
+  "originalBytes": 680626817,
+  "preparedBytes": 681703548,
+  "metadataPending": false,
+  "imdbId": "tt0120667",
+  "rating": "PG-13",
+  "description": "Four astronauts gain extraordinary powers after exposure to cosmic radiation and must unite against Doctor Doom.",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Fantasy"
+  ],
+  "minAge": 16,
+  "kids": false,
+  "genreSource": "https://datasets.imdbws.com/title.basics.tsv.gz",
+  "metadataSources": [
+    "https://www.imdb.com/title/tt0120667/"
+  ]
+}
