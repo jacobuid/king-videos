@@ -1,0 +1,15 @@
+{
+  "id": "example-movie",
+  "title": "Example Movie",
+  "category": "movie",
+  "year": 2026,
+  "description": "Template only. Replace every example value with verified movie information before importing.",
+  "rating": "PG-13",
+  "minAge": 16,
+  "kids": false,
+  "blocked": false,
+  "genres": ["Adventure"],
+  "duration": 7200,
+  "video": "C:/Users/jacob/Downloads/KINGFLIX/web-ready/example-movie/example-movie.mp4",
+  "thumbnail": "C:/Users/jacob/Downloads/KINGFLIX/web-ready/example-movie/thumbnail.webp"
+}

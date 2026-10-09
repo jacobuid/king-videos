@@ -1,4 +1,7 @@
 # Logs
+media-imports/*
+!media-imports/example/
+!media-imports/quality-references.json
 logs
 *.log
 *.log.err

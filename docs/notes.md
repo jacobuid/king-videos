@@ -1,9 +1,14 @@
+Local import housekeeping (user instruction, 2026-10-09):
+- Use media-imports/example/media.json as the single tracked movie manifest template. Replace its example fields with verified metadata and real local paths; it is not a real movie to publish. The B2 movie importer also discovers SRT/VTT sidecars in the folder supplied with --folder.
+- Local import manifests, generated thumbnails, metadata caches and logs are preparation artifacts, not website runtime dependencies. After a batch finishes successfully, remove its generated artifacts; preserve files needed by running or unfinished jobs until resolved. Do not delete source videos, B2 objects, D1 records, app source, secrets or Roku installation packages as part of repository housekeeping.
+- Keep media-imports/quality-references.json as persistent quality memory. Keep generated batch artifacts out of future commits. Historical batch scripts may require a new scan/manifest after their generated inputs have been cleaned.
+
 Quality screening before future movie imports (user instruction, 2026-10-09):
 - Consult media-imports/quality-references.json before approving sources. Iron Man (2008), 1280x544 H.264 at 764,687 bps video, 785,805,683 bytes for 126 minutes, was watched and rejected by the user. It was copied without video re-encoding; preserving an already poor source did not make it acceptable.
 - Do not automatically upload similarly low-bitrate HD H.264 sources. Flag approximately 1 Mbps or lower for visual review and obtain the user's decision before uploading those candidates. This is a screening warning, not a universal quality cutoff; do not apply the same bitrate threshold blindly to HEVC/AV1 or use filenames/resolution alone as proof of quality.
 - Prefer a better source when the picture is already poor. Upscaling, remuxing or increasing bitrate cannot restore lost source detail. Compare candidate replacements visually in detailed and moving scenes before approving them.
 - Preserve original resolution and video quality for acceptable sources. Compress only files demonstrably oversized for their resolution and content; do not apply the older blanket 720p/480p targets below to these blockbuster batches.
-- Iron Man replacement is still downloading. Leave the current website/B2 movie in place and wait for the user to say the replacement is ready before replacing it.
+- On 2026-10-09 the user authorized the new Iron Man replacement: 1920x800 H.264 at 1,781,421 bps video. Preserve its video without re-encoding, retain catalog metadata and watch history, and delete superseded B2 video versions only after verifying the replacement upload.
 
 
 Purpose is to get the new movies encoded and uploaded to backblaze B2.

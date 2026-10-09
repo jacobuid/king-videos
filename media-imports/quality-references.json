@@ -16,7 +16,17 @@
       "sourceBytes": 785805683,
       "preparedBytes": 787372522,
       "processing": "Video copied without re-encoding; poor quality was present in the source.",
-      "replacementStatus": "Downloading; do not replace or upload until the user says the replacement is ready."
+      "replacementStatus": "Replacement uploaded and verified"
     }
-  ]
+  ],
+  "acceptedReplacement": {
+    "id": "iron-man",
+    "sourceFilename": "Iron.Man.2008.1080p.BrRip.x264.YIFY.mp4",
+    "width": 1920,
+    "height": 800,
+    "videoBitrateBps": 1781421,
+    "sourceBytes": 1773975793,
+    "videoCopiedWithoutReencoding": true,
+    "completedAt": "2026-10-09T20:33:26.489Z"
+  }
 }
