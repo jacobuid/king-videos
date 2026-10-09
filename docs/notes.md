@@ -1,3 +1,10 @@
+Quality screening before future movie imports (user instruction, 2026-10-09):
+- Consult media-imports/quality-references.json before approving sources. Iron Man (2008), 1280x544 H.264 at 764,687 bps video, 785,805,683 bytes for 126 minutes, was watched and rejected by the user. It was copied without video re-encoding; preserving an already poor source did not make it acceptable.
+- Do not automatically upload similarly low-bitrate HD H.264 sources. Flag approximately 1 Mbps or lower for visual review and obtain the user's decision before uploading those candidates. This is a screening warning, not a universal quality cutoff; do not apply the same bitrate threshold blindly to HEVC/AV1 or use filenames/resolution alone as proof of quality.
+- Prefer a better source when the picture is already poor. Upscaling, remuxing or increasing bitrate cannot restore lost source detail. Compare candidate replacements visually in detailed and moving scenes before approving them.
+- Preserve original resolution and video quality for acceptable sources. Compress only files demonstrably oversized for their resolution and content; do not apply the older blanket 720p/480p targets below to these blockbuster batches.
+- Iron Man replacement is still downloading. Leave the current website/B2 movie in place and wait for the user to say the replacement is ready before replacing it.
+
 
 Purpose is to get the new movies encoded and uploaded to backblaze B2.
 

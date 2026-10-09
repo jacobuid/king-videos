@@ -1,0 +1,22 @@
+{
+  "rejectedSources": [
+    {
+      "id": "iron-man",
+      "title": "Iron Man",
+      "year": 2008,
+      "recordedOn": "2026-10-09",
+      "reason": "User watched the movie and found the picture quality unacceptable.",
+      "sourceFilename": "Iron Man 2008.720p.BrRip.x264.YIFY.mp4",
+      "width": 1280,
+      "height": 544,
+      "videoCodec": "h264",
+      "videoBitrateBps": 764687,
+      "pixelFormat": "yuv420p",
+      "durationSeconds": 7561.810431,
+      "sourceBytes": 785805683,
+      "preparedBytes": 787372522,
+      "processing": "Video copied without re-encoding; poor quality was present in the source.",
+      "replacementStatus": "Downloading; do not replace or upload until the user says the replacement is ready."
+    }
+  ]
+}
