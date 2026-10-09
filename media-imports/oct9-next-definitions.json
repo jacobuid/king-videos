@@ -1,0 +1,72 @@
+[
+  {
+    "id": "john-carter",
+    "title": "John Carter",
+    "year": 2012,
+    "imdbId": "tt0401729",
+    "description": "A Civil War veteran is transported to Mars, where he becomes caught in a conflict among its inhabitants.",
+    "rating": "PG-13",
+    "folder": "John Carter (2012)",
+    "thumbnail": "compose.webp"
+  },
+  {
+    "id": "jurassic-park",
+    "title": "Jurassic Park",
+    "year": 1993,
+    "imdbId": "tt0107290",
+    "description": "Visitors to a dinosaur theme park fight to survive when its security systems fail.",
+    "rating": "PG-13",
+    "folder": "Jurassic Park (1993)",
+    "thumbnail": "thumb.jpg"
+  },
+  {
+    "id": "jurassic-park-iii",
+    "title": "Jurassic Park III",
+    "year": 2001,
+    "imdbId": "tt0163025",
+    "description": "Alan Grant joins a rescue expedition on an island inhabited by dangerous dinosaurs.",
+    "rating": "PG-13",
+    "folder": "Jurassic Park III (2001) [1080p]",
+    "thumbnail": "thumb.jpg"
+  },
+  {
+    "id": "the-lost-world-jurassic-park",
+    "title": "The Lost World: Jurassic Park",
+    "year": 1997,
+    "imdbId": "tt0119567",
+    "description": "A research team visits a second dinosaur island while another expedition plans to capture its animals.",
+    "rating": "PG-13",
+    "folder": "Jurassic Park ll The Lost World (1997)",
+    "thumbnail": "thumb (1).jpg"
+  },
+  {
+    "id": "jurassic-world",
+    "title": "Jurassic World",
+    "year": 2015,
+    "imdbId": "tt0369610",
+    "description": "A genetically engineered dinosaur escapes its enclosure at a thriving island theme park.",
+    "rating": "PG-13",
+    "folder": "Jurassic World (2015)",
+    "thumbnail": "thumb.jpg"
+  },
+  {
+    "id": "jurassic-world-dominion",
+    "title": "Jurassic World Dominion",
+    "year": 2022,
+    "imdbId": "tt8041270",
+    "description": "Familiar heroes reunite as dinosaurs live alongside humans and a biotechnology company threatens the global food supply.",
+    "rating": "PG-13",
+    "folder": "Jurassic World Dominion (2022) [REPACK] [1080p] [WEBRip] [5.1] [YTS.MX]",
+    "thumbnail": "thumb (1).jpg"
+  },
+  {
+    "id": "jurassic-world-fallen-kingdom",
+    "title": "Jurassic World: Fallen Kingdom",
+    "year": 2018,
+    "imdbId": "tt4881806",
+    "description": "A mission to rescue dinosaurs from a volcanic eruption uncovers a dangerous conspiracy.",
+    "rating": "PG-13",
+    "folder": "Jurassic World Fallen Kingdom (2018) [WEBRip] [1080p] [YTS.AM]",
+    "thumbnail": "thumb.jpg"
+  }
+]
