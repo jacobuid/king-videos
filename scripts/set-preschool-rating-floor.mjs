@@ -13,7 +13,7 @@ if (!database) throw new Error('Database not found');
 async function query(sql) {
   return (await request(`${base}/${database.uuid}/query`, { method: 'POST', body: JSON.stringify({ sql, params: [] }) })).result[0].results;
 }
-const predicate = "UPPER(TRIM(rating)) IN ('PG','PG-13','R','NC-17','TV-Y7','TV-Y7-FV','TV-PG','TV-14','TV-MA') AND COALESCE(min_age,0)<6";
+const predicate = "UPPER(TRIM(rating)) IN ('PG','PG-13','R','NC-17','TV-Y7','TV-Y7-FV','TV-PG','TV-14','TV-MA') AND COALESCE(min_age,0)<6 AND NOT (category='movie' AND (id LIKE 'paw-patrol-%' OR UPPER(title) LIKE 'PAW PATROL%'))";
 const items = await query(`SELECT id,title,category,rating,min_age FROM media WHERE ${predicate} ORDER BY rating,title`);
 console.log(JSON.stringify({ needingUpdate: items.length, ratings: await query('SELECT rating,COUNT(*) AS count FROM media GROUP BY rating ORDER BY rating') }));
 if (process.argv.includes('--apply')) {
