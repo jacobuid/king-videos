@@ -78,6 +78,6 @@ Parallel Backblaze B2 deployment configuration
 
 Note: B2 upload can be running in bakground while you are creating metadata and checking that in.
 
-Movie access ages: PG-13 movies are 16+; R-rated movies are 21+. Apply these ages during imports and rating edits. Other ratings and TV show age settings retain their existing rules. User exception (2026-10-10): all PAW Patrol movies are all ages (min_age 0), retaining their actual ratings; exclude them from the PG/TV-Y7 minimum-age-6 bulk update.
+Movie access ages: PG-13 movies are 16+; R-rated movies are 21+. Apply these ages during imports and rating edits. Other ratings and TV show age settings retain their existing rules. User exceptions (2026-10-10): all PAW Patrol movies and Big Hero 6 (2014) are all ages (min_age 0); Planes (2013) and My Little Pony: The Movie (2017) are 5+. Retain their actual ratings and exclude these titles from the PG/TV-Y7 minimum-age-6 bulk update.
 
 Library thumbnails in B2 must be exactly 1280x720 pixels. Preserve the complete artwork with black padding when its aspect ratio differs. Compress thumbnails (normally WebP quality 80; target around 200 KB) and accept AVIF source images. Profile avatars retain their square format.
