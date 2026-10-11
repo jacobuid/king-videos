@@ -28,7 +28,44 @@
 .retro-television{position:absolute;left:66.3%;top:29.7%;width:22.4%;height:27.2%;overflow:hidden;border-radius:10% / 12%;background:#18245b}
 .retro-tv-idle{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1em;padding:5%;color:#dcecff;text-align:center;font-family:"Courier New",monospace;text-shadow:0 0 8px #55bfff;font-size:1.25cqw;background:repeating-linear-gradient(0deg,#050c2522 0px,#050c2522 1px,transparent 1px,transparent 3px)}
 .retro-tv-idle strong{font-size:1.1cqw}.retro-tv-idle small{font-size:.85cqw}
-.retro-tv-static{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,#e6ecffb0 0px,#14275b 2px,#7d9bdb88 3px,#030914 5px);animation:retro-flicker .11s steps(2,end) infinite}
+.retro-tv-static{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,#e6ecffb0 0px,#14275b 2px,#7d9bdb88 3px,#030914 5px);animation:retro-flicker .4s steps(2,end) infinite}
 @keyframes retro-flicker{0%{opacity:.9;transform:translateY(-2%)}50%{opacity:.25;filter:brightness(1.6)}100%{opacity:.7;transform:translateY(2%)}}
 @media(max-width:600px){.retro-dialog-actions{gap:8px}.retro-dialog-actions button{min-width:125px;min-height:48px;padding:9px 14px;font-size:16px}.retro-flight{height:min(64svh,520px)}}
 @media(prefers-reduced-motion:reduce){.retro-flipper,.retro-tape{transition:none}.retro-tv-static{animation:none;opacity:.25}}
+.retro-empty{position:absolute;left:13%;top:18%;width:43%;margin:0;padding:10px;color:#ffe3ac;text-align:center;font-size:clamp(12px,1.5vw,20px);text-shadow:0 2px 4px #000}
+.retro-pagination{position:absolute;left:24%;bottom:3%;display:flex;align-items:center;gap:16px;padding:4px 12px;border-radius:8px;background:#10162ce8;color:#ffdf93}.retro-pagination button{min-width:44px;min-height:44px;border-radius:5px;background:transparent;color:inherit}.retro-pagination button:disabled{opacity:.35;cursor:default}
+.retro-dialog-error{max-width:400px;margin:0;padding:10px 14px;border-radius:6px;background:#361b21;color:#ffe7d6;text-align:center;font-size:14px}
+.retro-player-overlay{position:fixed;z-index:140;inset:0;display:grid;place-items:center;overflow:hidden;background:#02030bd9}
+.retro-crt-shell{display:flex;flex-direction:column;width:80vw;height:80vh;height:80svh;padding:8px 18px 10px;border:3px solid #5a5b67;border-radius:32px;background:linear-gradient(135deg,#393b47,#20212b 30%,#14151e 70%,#343643);box-shadow:inset 0 2px 3px #ffffff36,inset 0 -5px 10px #000c,0 24px 90px #000d,0 0 0 5px #0d0e16;transform-origin:top left;will-change:transform}
+.retro-crt-toolbar{display:flex;flex:0 0 auto;align-items:center;gap:12px;min-height:48px;padding:0 0 6px;color:#e8dfcc}.retro-crt-toolbar strong{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:"Courier New",monospace;font-size:clamp(12px,1.5vw,18px)}
+.retro-crt-toolbar button{display:grid;flex:0 0 auto;place-items:center;width:44px;height:44px;padding:0;border:1px solid #6b6c75;border-radius:10px;background:linear-gradient(#42434e,#252630);box-shadow:0 2px 2px #0009;color:#f9e6b5;touch-action:manipulation}.retro-crt-toolbar button:hover{background:#555764}
+.retro-crt-screen{position:relative;flex:1;min-height:0;overflow:hidden;border:3px solid #06080f;border-radius:7% / 10%;background:#000;box-shadow:0 0 0 4px #090b13,0 0 0 7px #41434f,inset 0 0 25px #000}
+.retro-crt-screen video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
+.retro-crt-glass{position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 22px 5px #0008,inset 2px 2px 3px #d7e5ff38;background:linear-gradient(125deg,#dce9ff0d,transparent 28%,transparent 80%,#131c3517);pointer-events:none}
+.retro-crt-footer{display:flex;align-items:center;justify-content:flex-end;gap:8px;min-height:26px;padding:8px 6px 0;color:#a4a5ac;font:10px "Courier New",monospace;letter-spacing:.15em}.retro-power-light{width:5px;height:5px;border-radius:50%;background:#7cfb87;box-shadow:0 0 6px #4dfc72}
+.retro-player-start{position:absolute;top:50%;left:50%;display:flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:14px 28px;border:2px solid #f4d895;border-radius:12px;background:#202a43ed;color:#ffe6aa;font-size:20px;transform:translate(-50%,-50%)}
+.retro-player-status,.retro-player-error{position:absolute;top:12%;left:10%;right:10%;margin:0;padding:12px;border-radius:8px;background:#11182ae8;color:#fce6b8;text-align:center;font-size:14px;pointer-events:none}
+.retro-crt-shell:fullscreen{width:100vw;height:100vh;height:100dvh;border:0;border-radius:0;padding:8px 12px;background:#000}.retro-crt-shell:fullscreen .retro-crt-screen{border-radius:0;box-shadow:none}.retro-crt-shell:fullscreen .retro-crt-glass{display:none}
+@media(max-width:600px){.retro-crt-shell{padding:6px 10px 8px;border-radius:20px}.retro-crt-toolbar{gap:6px}.retro-crt-toolbar strong{font-size:12px}}
+
+/* The illustrated TV and its transparent screen share one fixed aspect ratio. */
+.retro-crt-shell{position:relative;display:block;width:min(80vw,calc(80vh * 1436 / 942));width:min(80vw,calc(80svh * 1436 / 942));height:auto;aspect-ratio:1436/942;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.retro-tv-frame{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;user-select:none}
+.retro-crt-screen{position:absolute;left:12%;top:12%;width:77%;height:67%;border:0;border-radius:9% / 12%;box-shadow:none;z-index:1}
+.retro-crt-glass{display:none}
+.retro-crt-toolbar{position:absolute;inset:0;z-index:3;display:block;padding:0;pointer-events:none}
+.retro-crt-toolbar button{position:absolute;pointer-events:auto}
+.retro-crt-toolbar button:first-child{right:.5%;top:.5%;width:8%;height:12%;border:0;border-radius:50%;background:transparent;box-shadow:none;color:transparent}
+.retro-crt-toolbar button:first-child:hover{background:#ffffff18}
+.retro-crt-toolbar button:first-child:focus-visible{outline:3px solid #ffe08a;outline-offset:2px}
+.retro-crt-toolbar button:last-child{right:27%;bottom:7%;width:5%;height:7%;min-width:30px;min-height:30px;border-radius:50%;font-size:clamp(12px,1.4vw,20px)}
+.retro-crt-toolbar strong{position:absolute;left:27%;bottom:8%;width:40%;font-size:clamp(10px,1.2vw,16px);text-align:center}
+.retro-crt-footer{display:none}
+.retro-crt-shell:fullscreen{display:flex;aspect-ratio:auto}
+.retro-crt-shell:fullscreen .retro-tv-frame{display:none}
+.retro-crt-shell:fullscreen .retro-crt-screen{position:relative;inset:auto;width:100%;height:auto;flex:1}
+.retro-crt-shell:fullscreen .retro-crt-toolbar{position:relative;display:flex;min-height:48px;pointer-events:auto}
+.retro-crt-shell:fullscreen .retro-crt-toolbar button,.retro-crt-shell:fullscreen .retro-crt-toolbar strong{position:static;width:auto;height:auto;color:#f9e6b5}
+.retro-crt-shell:fullscreen .retro-crt-toolbar button{width:44px;height:44px;background:#252630;border:1px solid #6b6c75;border-radius:10px}
+.retro-crt-toolbar button:last-child{right:17%;bottom:7%}
+.retro-crt-shell:fullscreen .retro-crt-toolbar{justify-content:space-between}
