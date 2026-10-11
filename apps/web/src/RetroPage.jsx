@@ -85,7 +85,7 @@ export default function RetroPage(){
     <div className="retro-television" role="status"><div className="retro-tv-idle"><span>KINGFLIX</span><strong>{tv==='idle'?'INSERT A VHS TAPE':tv==='starting'?'PLAY ▶':'COMING SOON'}</strong><small>{tv==='preview'?'Your special movie collection':'Be kind. Rewind.'}</small></div>{tv==='starting'&&<div className="retro-tv-static" aria-hidden="true"/>}</div>
     <div className="retro-shelves" aria-label="VHS collection preview">
       {shelfBottoms.map((bottom,row)=><div className="retro-shelf" key={bottom} style={{bottom:`${100-bottom}%`}} aria-label={`Shelf ${row+1}`}>
-        {tapes.slice(row*tapesPerShelf,(row+1)*tapesPerShelf).map(item=><button key={item.id} className={`retro-tape${chosen?.id===item.id?' is-selected':''}`} type="button" onClick={event=>choose(item,event.currentTarget)} aria-label={`Pick up ${item.title}`}><VhsCase item={item}/></button>)}
+        {tapes.slice(row*tapesPerShelf,(row+1)*tapesPerShelf).map(item=><button key={item.id} className={`retro-tape${chosen?.id===item.id?' is-selected':''}`} type="button" onClick={event=>choose(item,event.currentTarget)} aria-label={`Pick up ${item.title}`}><img className="retro-shelf-cover" src={`${base}${item.retroThumbnail||'vhs-placeholder.svg'}`} alt="" draggable="false"/></button>)}
       </div>)}
     </div>
   </div>{chosen!==null&&<TapeDialog item={chosen} origin={origin.current} onClose={putBack} onPlay={play}/>}</>

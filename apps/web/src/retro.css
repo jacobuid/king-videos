@@ -4,7 +4,8 @@
 .retro-back{position:absolute;z-index:2;top:1.6%;right:1.5%;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid #ffffff60;border-radius:8px;background:#080d24ed;color:#fff;text-decoration:none;font-size:14px;box-shadow:0 3px 12px #0006;touch-action:manipulation}
 .retro-back:hover{background:#1d2854}.retro-back:focus-visible{outline:3px solid #ffde78;outline-offset:3px}
 .retro-shelf{position:absolute;left:11.6%;width:47.2%;height:13.4%;display:flex;align-items:flex-end;justify-content:center;gap:1.8%;padding:0 .5%}
-.retro-tape{display:block;flex:0 0 auto;width:auto;height:100%;aspect-ratio:489/973;padding:0;border:0;border-radius:3px;background:transparent;transform-origin:bottom center;touch-action:manipulation;transition:filter .18s,transform .18s}
+.retro-tape{display:block;flex:0 0 auto;width:auto;height:100%;padding:0;border:0;border-radius:3px;background:transparent;transform-origin:bottom center;touch-action:manipulation;transition:filter .18s,transform .18s}
+.retro-shelf-cover{display:block;width:auto;height:100%;border-radius:2px;box-shadow:2px 2px 4px #0009}
 .retro-tape:hover{background:transparent;filter:brightness(1.15);transform:translateY(-4%)}.retro-tape:focus-visible{outline:3px solid #ffe08b;outline-offset:3px}.retro-tape.is-selected{visibility:hidden}
 .retro-screen{position:absolute;left:66.6%;top:31.5%;width:21.2%;height:23.6%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4em;margin:0;color:#dcecff;text-align:center;font-family:"Courier New",monospace;text-shadow:0 0 8px #55bfff;font-size:1.4cqw;transform:rotate(-1deg)}
 .retro-screen span{letter-spacing:.2em}.retro-screen strong{font-size:3.5cqw;letter-spacing:.13em}.retro-screen small{font-size:.9cqw;font-weight:400;color:#c6c7ef}
