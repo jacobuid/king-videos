@@ -10,6 +10,7 @@ import '@vidstack/react/player/styles/default/theme.css'
 import '@vidstack/react/player/styles/default/layouts/video.css'
 import { collections } from './collections'
 import RokuDevices from './RokuDevices'
+import RetroPage from './RetroPage'
 import './style.css'
 import './profile-picker.css'
 import './player.css'
@@ -68,7 +69,7 @@ function LoadingScreen({active=true}){
 function App(){
   const{getToken,userId}=useAuth()
   const[profiles,setProfiles]=useState([]),[profile,setProfile]=useState(null),[profileToken,setProfileToken]=useState('')
-  const[view,setView]=useState(()=>new URLSearchParams(window.location.search).has('roku')?'roku':'select'),[pending,setPending]=useState(null),[pin,setPin]=useState('')
+  const[view,setView]=useState(()=>new URLSearchParams(window.location.search).has('retro')?'retro':new URLSearchParams(window.location.search).has('roku')?'roku':'select'),[pending,setPending]=useState(null),[pin,setPin]=useState('')
   const[manageToken,setManageToken]=useState('')
   const[picturePicker,setPicturePicker]=useState(null)
   const[form,setForm]=useState({name:'',dateOfBirth:'',pin:'',removePin:false,homeVideosOnly:false,avatar:'bluey.png'})
@@ -94,7 +95,7 @@ function App(){
       const items=await request('/api/profiles')
       if(cancelled)return
       setProfiles(items)
-      if(new URLSearchParams(window.location.search).has('roku'))return
+      if(new URLSearchParams(window.location.search).has('roku')||new URLSearchParams(window.location.search).has('retro'))return
       let session
       try{session=JSON.parse(localStorage.getItem(profileSessionKey)||'null')}catch{clearProfileSession();return}
       if(!session)return
@@ -158,7 +159,8 @@ function App(){
   function dismissBirthday(){if(birthdayProfile)localStorage.setItem(`kingflix-birthday-${birthdayProfile.id}-${localDateInputValue()}`,'dismissed');setBirthdayProfile(null)}
   const profilePicker=<div className="profile-groups">{[false,true].map(minor=>{const group=profiles.filter(item=>(profileAge(item.dateOfBirth)??18)<18===minor);return group.length?<div className="profile-grid" key={minor?'minors':'adults'}>{group.map(item=><div className="profile-card-wrap" key={item.id}><button className="profile-card" onClick={()=>begin(item,view==='manage'?'edit':'watch')}><span className="avatar-wrap"><Avatar profile={item}/>{item.hasPin&&<span className="profile-corner" title="PIN protected"><FontAwesomeIcon icon={faLock}/></span>}<strong className="profile-age" title={`${profileAge(item.dateOfBirth)??'Unknown'} years old`}>{profileAge(item.dateOfBirth)??'—'}</strong>{view==='manage'&&<span className="edit-mark"><FontAwesomeIcon icon={faPen}/></span>}</span><span className="profile-name">{item.name}</span></button>{view==='select'&&<button className="avatar-change" type="button" onClick={()=>choosePicture(item)} aria-label={`Change ${item.name}'s profile picture`} title="Change profile picture"><FontAwesomeIcon icon={faCamera}/></button>}</div>)}</div>:null})}</div>
   const loading=profilesLoading||unlockLoading||(view==='library'&&libraryLoading)
-  return <><LoadingScreen active={loading}/>{!loading&&<main className={view==='library'?'home-page':'profile-shell'}>
+  return <><LoadingScreen active={loading}/>{!loading&&<main className={view==='retro'?'retro-page':view==='library'?'home-page':'profile-shell'}>
+    {view==='retro'&&<RetroPage/>}
     {view==='select'&&<header className="site-header"><Logo/><UserButton/></header>}
     {error&&<p role="alert">{error}</p>}
     {view==='select'&&<section className="profile-stage"><h2>Who's watching?</h2>{profilePicker}<div className="manage-buttons"><button className="outline-button icon-button" onClick={()=>openManage('manage')}><FontAwesomeIcon icon={faUsersGear}/>Manage Profiles</button><button className="outline-button icon-button" onClick={()=>openManage('manage-videos')}><FontAwesomeIcon icon={faVideo}/>Manage Videos</button><button className="outline-button" onClick={()=>setView('roku')}>Link Roku</button></div></section>}
@@ -315,7 +317,7 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   const nextInfoEpisodes=infoEpisodes.length?infoEpisodes.slice(Math.max(0,nextInfoStart),Math.max(0,nextInfoStart)+12):[]
   const similarTitles=infoItem&&!infoItem.seriesId&&!infoItem.isSeries?media.filter(item=>item.id!==infoItem.id&&(infoItem.category==='short'?item.category==='short':/movie/i.test(item.category||'movie'))).map(item=>({...item,matchCount:(item.genres||[]).filter(genre=>(infoItem.genres||[]).includes(genre)).length})).filter(item=>item.matchCount>0).sort((a,b)=>b.matchCount-a.matchCount||(b.year||0)-(a.year||0)).slice(0,12):[]
   const infoRelatedRows=infoIsSeries?[...new Set(infoEpisodes.map(item=>item.seasonNumber??1))].sort((a,b)=>a-b).map(season=>({title:season===0?'Shorts':`Season ${season}`,items:infoEpisodes.filter(item=>(item.seasonNumber??1)===season)})):[{title:infoItem?.seriesId?'Next Episodes':infoItem?.category==='short'?'Similar Shorts':'Similar Movies',items:infoItem?.seriesId?nextInfoEpisodes:similarTitles}]
-  return <><header className="home-header"><button className="home-logo" type="button" onClick={()=>navigate('home')} aria-label="Kingflix home"><Logo/></button><nav>{links.map(([path,label])=><button key={path} className={section===path?'active':''} onClick={()=>navigate(path)}>{label}</button>)}<button className={section==='search'?'active':''} onClick={()=>navigate('search')}><FontAwesomeIcon icon={faMagnifyingGlass}/> Search</button></nav><div className="profile-actions">{birthdayAvailable(profile.dateOfBirth)&&<button className="birthday-replay" type="button" onClick={replayBirthday} aria-label={`Replay ${profile.name}'s birthday celebration`} title="Replay birthday celebration"><FontAwesomeIcon icon={faGift}/></button>}<button className="active-profile" onClick={switchProfile} aria-label={`Switch from ${profile.name}`}><Avatar profile={profile}/></button></div></header>
+  return <><header className="home-header"><button className="home-logo" type="button" onClick={()=>navigate('home')} aria-label="Kingflix home"><Logo/></button><nav>{links.map(([path,label])=><button key={path} className={section===path?'active':''} onClick={()=>navigate(path)}>{label}</button>)}<button className={section==='search'?'active':''} onClick={()=>navigate('search')}><FontAwesomeIcon icon={faMagnifyingGlass}/> Search</button></nav><div className="profile-actions"><a className="header-icon-link" href={`${import.meta.env.BASE_URL}?retro=1`} aria-label="Open KINGFLIX Retro" title="KINGFLIX Retro"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m8 3 4 4 4-4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/><rect x="2" y="7" width="20" height="15" rx="3" fill="currentColor"/><rect x="4.5" y="9.5" width="12" height="10" rx="2" fill="#111"/><circle cx="19.25" cy="11.5" r="1" fill="#111"/><circle cx="19.25" cy="16" r="1" fill="#111"/></svg></a>{birthdayAvailable(profile.dateOfBirth)&&<button className="birthday-replay" type="button" onClick={replayBirthday} aria-label={`Replay ${profile.name}'s birthday celebration`} title="Replay birthday celebration"><FontAwesomeIcon icon={faGift}/></button>}<button className="active-profile" onClick={switchProfile} aria-label={`Switch from ${profile.name}`}><Avatar profile={profile}/></button></div></header>
     {section==='home'&&<><Hero featured={featured} play={play} info={openInfo}/><Shelves rows={homeRows} media={media} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} reorderFavorites={reorderFavorites} onEmptyMyList={()=>navigate('search')} play={openMedia} resume={item=>play(item,positions.get(item.id)||0)}/></>}
     {section==='movies'&&<BrowsePage key="Movies" title="Movies" sortBy={browseSort} setSortBy={setBrowseSort} items={movies} sorters={searchSorters} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/>}
     {section==='tv'&&<BrowsePage key="TV" title="TV" sortBy={browseSort} setSortBy={setBrowseSort} items={tvCards} sorters={searchSorters} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/>}

@@ -10,7 +10,8 @@
 .birthday-close{position:fixed;z-index:4;top:max(18px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right));display:grid;width:56px;height:56px;place-items:center;padding:0;border:0;background:transparent;color:#fff;font-size:2.1rem;filter:drop-shadow(0 2px 5px #000)}
 .birthday-close:hover{background:transparent;color:#ffe56d;transform:scale(1.08)}
 .profile-actions{display:flex;align-items:center;justify-content:flex-end;gap:14px}
-.birthday-replay{display:grid;width:52px;height:52px;place-items:center;padding:0;border:0;border-radius:0;background:transparent;color:#fff;font-size:1.7rem;filter:drop-shadow(0 2px 4px #000);transition:transform .18s,color .18s}
-.birthday-replay:hover,.birthday-replay:focus-visible{background:transparent;color:#e7ad35;transform:scale(1.12)}
+.birthday-replay,.header-icon-link{display:grid;width:52px;height:52px;place-items:center;padding:0;border:0;border-radius:0;background:transparent;color:#fff;font-size:1.7rem;filter:drop-shadow(0 2px 4px #000);transition:transform .18s,color .18s}
+.birthday-replay:hover,.birthday-replay:focus-visible,.header-icon-link:hover,.header-icon-link:focus-visible{background:transparent;color:#e7ad35;transform:scale(1.12)}
+.header-icon-link{text-decoration:none;flex-shrink:0}.header-icon-link svg{width:1em;height:1em}
 @media(max-width:600px){.birthday-backdrop{padding:78px 10px 24px}.birthday-dialog h2{margin-bottom:22px}.birthday-close{width:48px;height:48px;font-size:1.8rem}}
 @media(prefers-reduced-motion:reduce){.birthday-confetti,.birthday-ribbons{display:none!important}.birthday-dialog.finished .birthday-heading,.birthday-dialog.finished .birthday-video,.birthday-finale h2{animation-duration:.01ms;animation-delay:0s}}
