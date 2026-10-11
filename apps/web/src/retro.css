@@ -4,7 +4,29 @@
 .retro-back{position:absolute;z-index:2;top:1.6%;right:1.5%;display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid #ffffff60;border-radius:8px;background:#080d24ed;color:#fff;text-decoration:none;font-size:14px;box-shadow:0 3px 12px #0006;touch-action:manipulation}
 .retro-back:hover{background:#1d2854}.retro-back:focus-visible{outline:3px solid #ffde78;outline-offset:3px}
 .retro-shelf{position:absolute;left:11.6%;width:47.2%;height:13.4%;display:flex;align-items:flex-end;justify-content:center;gap:1.8%;padding:0 .5%}
-.retro-tape{display:block;flex:0 0 auto;width:auto;height:100%;aspect-ratio:3/5;object-fit:contain;transform-origin:bottom center}
+.retro-tape{display:block;flex:0 0 auto;width:auto;height:100%;aspect-ratio:489/973;padding:0;border:0;border-radius:3px;background:transparent;transform-origin:bottom center;touch-action:manipulation;transition:filter .18s,transform .18s}
+.retro-tape:hover{background:transparent;filter:brightness(1.15);transform:translateY(-4%)}.retro-tape:focus-visible{outline:3px solid #ffe08b;outline-offset:3px}.retro-tape.is-selected{visibility:hidden}
 .retro-screen{position:absolute;left:66.6%;top:31.5%;width:21.2%;height:23.6%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4em;margin:0;color:#dcecff;text-align:center;font-family:"Courier New",monospace;text-shadow:0 0 8px #55bfff;font-size:1.4cqw;transform:rotate(-1deg)}
 .retro-screen span{letter-spacing:.2em}.retro-screen strong{font-size:3.5cqw;letter-spacing:.13em}.retro-screen small{font-size:.9cqw;font-weight:400;color:#c6c7ef}
 @media(orientation:portrait) and (max-width:1100px){.retro-page{align-items:start;padding-top:env(safe-area-inset-top)}.retro-back{top:8px;right:8px}.retro-screen small{font-size:1.2cqw}}
+.retro-case{position:relative;width:100%;height:100%;aspect-ratio:489/973;filter:drop-shadow(2px 3px 3px #0009)}
+.retro-case-paper{position:absolute;inset:2% 3.8% 14.5%;overflow:hidden;background:#192952;border-radius:3%;color:#f5dfb1;text-align:center}
+.retro-case-paper>img{width:100%;height:100%;object-fit:cover}.retro-case-frame{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none;user-select:none}
+.retro-case-back .retro-case-paper{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2em;padding:12%;background:linear-gradient(#182c54,#101b32);font-family:Georgia,serif;font-size:clamp(12px,1.2vw,18px);line-height:1.5}.retro-case-back strong{font-size:1.8em}.retro-case-back small{font-size:.8em;color:#cbbd9d}.retro-case-back p{margin:0}
+.retro-modal{position:fixed;z-index:130;inset:0;display:grid;place-items:center;padding:20px;background:#02030a80;overflow:hidden}
+.retro-dialog{display:flex;flex-direction:column;align-items:center;gap:16px;max-width:100%;max-height:100%;perspective:1200px}
+.retro-flight{position:relative;height:min(68svh,620px);aspect-ratio:489/973;transform-origin:top left;will-change:transform}
+.retro-flipper{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.7,.2,1)}.retro-flipper.is-flipped{transform:rotateY(180deg)}
+.retro-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}.retro-face-back{transform:rotateY(180deg)}
+.retro-flip{position:absolute;z-index:2;top:12px;right:12px;display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid #f7da96;border-radius:50%;background:#14213dea;color:#ffe6b0;box-shadow:0 2px 8px #0008}.retro-flip:hover{background:#334464}
+.retro-dialog-actions{display:flex;gap:12px;transition:opacity .15s}.retro-dialog-actions button{display:flex;align-items:center;justify-content:center;gap:12px;min-width:145px;min-height:52px;padding:10px 22px;border:2px solid #f6dba2;border-radius:13px;font-family:"Courier New",monospace;font-size:18px;font-weight:700;box-shadow:0 4px 0 #070b16,0 7px 15px #0007;touch-action:manipulation}
+.retro-put-back{background:linear-gradient(#2c3750,#161c30);color:#f8eed8}.retro-put-back:hover{background:linear-gradient(#405174,#202b45)}
+.retro-play-tape{background:linear-gradient(#ffe9a2,#f2bb48);color:#17130b}.retro-play-tape:hover{background:linear-gradient(#fff0bc,#ffce62)}
+.retro-modal-opening .retro-dialog-actions,.retro-modal-returning .retro-dialog-actions,.retro-modal-inserting .retro-dialog-actions{opacity:0;pointer-events:none}
+.retro-television{position:absolute;left:66.3%;top:29.7%;width:22.4%;height:27.2%;overflow:hidden;border-radius:10% / 12%;background:#18245b}
+.retro-tv-idle{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1em;padding:5%;color:#dcecff;text-align:center;font-family:"Courier New",monospace;text-shadow:0 0 8px #55bfff;font-size:1.25cqw;background:repeating-linear-gradient(0deg,#050c2522 0px,#050c2522 1px,transparent 1px,transparent 3px)}
+.retro-tv-idle strong{font-size:1.1cqw}.retro-tv-idle small{font-size:.85cqw}
+.retro-tv-static{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,#e6ecffb0 0px,#14275b 2px,#7d9bdb88 3px,#030914 5px);animation:retro-flicker .11s steps(2,end) infinite}
+@keyframes retro-flicker{0%{opacity:.9;transform:translateY(-2%)}50%{opacity:.25;filter:brightness(1.6)}100%{opacity:.7;transform:translateY(2%)}}
+@media(max-width:600px){.retro-dialog-actions{gap:8px}.retro-dialog-actions button{min-width:125px;min-height:48px;padding:9px 14px;font-size:16px}.retro-flight{height:min(64svh,520px)}}
+@media(prefers-reduced-motion:reduce){.retro-flipper,.retro-tape{transition:none}.retro-tv-static{animation:none;opacity:.25}}

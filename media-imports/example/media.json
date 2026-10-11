@@ -8,6 +8,7 @@
   "minAge": 16,
   "kids": false,
   "blocked": false,
+  "retro": false,
   "genres": ["Adventure"],
   "duration": 7200,
   "video": "C:/Users/jacob/Downloads/KINGFLIX/web-ready/example-movie/example-movie.mp4",
