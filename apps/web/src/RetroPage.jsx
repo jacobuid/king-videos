@@ -11,7 +11,7 @@ const motionDuration=ms=>window.matchMedia('(prefers-reduced-motion: reduce)').m
 function VhsCase({item,back=false}){
   const base=import.meta.env.BASE_URL
   return <div className={`retro-case${back?' retro-case-back':''}`}>
-    <div className="retro-case-paper">{back?<><strong>{item.title}</strong>{item.year&&<span>{item.year}</span>}<p>{item.description}</p><small>KINGFLIX HOME VIDEO<br/>Be kind. Rewind.</small></>:<img src={`${base}${item.retroThumbnail||'vhs-placeholder.svg'}`} alt=""/>}</div>
+    <div className={`retro-case-paper${back&&item.retroBackThumbnail?' has-back-art':''}`}>{back?(item.retroBackThumbnail?<img src={`${base}${item.retroBackThumbnail}`} alt={`${item.title} back cover`}/>:<><strong>{item.title}</strong>{item.year&&<span>{item.year}</span>}<p>{item.description}</p><small>KINGFLIX HOME VIDEO<br/>Be kind. Rewind.</small></>):<img src={`${base}${item.retroThumbnail||'vhs-placeholder.svg'}`} alt=""/>}</div>
     <img className="retro-case-frame" src={`${base}vhs-${back?'back':'front'}.png`} alt="" draggable="false"/>
   </div>
 }
@@ -58,9 +58,9 @@ function TapeDialog({item,origin,onClose,onPlay}){
       <div ref={flight} className="retro-flight">
         <div className={`retro-flipper${flipped?' is-flipped':''}`}>
           <div className="retro-face" aria-hidden={flipped}><VhsCase item={item}/></div>
-          <div className="retro-face retro-face-back" aria-hidden={!flipped}><VhsCase item={item} back/></div>
+          {item.retroBackThumbnail&&<div className="retro-face retro-face-back" aria-hidden={!flipped}><VhsCase item={item} back/></div>}
         </div>
-        <button className="retro-flip" type="button" onClick={()=>setFlipped(value=>!value)} disabled={busy} aria-label={flipped?'Show front cover':'Show back cover'} title="Flip tape"><FontAwesomeIcon icon={faArrowRotateRight}/></button>
+        {item.retroBackThumbnail&&<button className="retro-flip" type="button" onClick={()=>setFlipped(value=>!value)} disabled={busy} aria-label={flipped?'Show front cover':'Show back cover'} title="Flip tape"><FontAwesomeIcon icon={faArrowRotateRight}/></button>}
       </div>
       <div className="retro-dialog-actions">
         <button ref={putBack} className="retro-put-back" type="button" onClick={close} disabled={busy}><FontAwesomeIcon icon={faRotateLeft}/> Put Back</button>
