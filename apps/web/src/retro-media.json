@@ -16,5 +16,21 @@
     "retro": true,
     "retroThumbnail": "retro-berenstain-bears-meet-bigpaw.jpg",
     "retroBackThumbnail": "retro-berenstain-bears-meet-bigpaw-back.webp"
+  },
+  {
+    "id": "the-land-before-time",
+    "title": "The Land Before Time",
+    "year": 1988,
+    "retro": true,
+    "retroThumbnail": "retro-the-land-before-time-front.webp",
+    "retroBackThumbnail": "retro-the-land-before-time-back.webp"
+  },
+  {
+    "id": "rainbow-brite-and-the-star-stealer",
+    "title": "Rainbow Brite and the Star Stealer",
+    "year": 1985,
+    "retro": true,
+    "retroThumbnail": "retro-rainbow-brite-and-the-star-stealer-front.webp",
+    "retroBackThumbnail": "retro-rainbow-brite-and-the-star-stealer-back.webp"
   }
 ]
