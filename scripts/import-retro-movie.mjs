@@ -5,7 +5,7 @@ import sharp from 'sharp';
 
 // Curated retro imports retain frame timing and originals; resizing is opt-in.
 const input=JSON.parse(readFileSync(process.argv[2],'utf8'));
-if(input.retro!==true||!/^[a-z0-9-]+$/.test(input.id))throw Error('Expected a curated retro movie with a safe id');
+if(typeof input.retro!=='boolean'||!/^[a-z0-9-]+$/.test(input.id))throw Error('Expected a movie with a boolean retro flag and a safe id');
 const id=input.id,folder=resolve(`C:/Users/jacob/Downloads/KINGFLIX/web-ready/retro/${id}`),manifestFolder=resolve('media-imports/retro',id);
 mkdirSync(folder,{recursive:true});mkdirSync(manifestFolder,{recursive:true});mkdirSync('logs',{recursive:true});
 const statusPath=`logs/retro-${id}-status.json`,state={total:1,completed:0,stage:'checking source',progress:0,failures:[]};
