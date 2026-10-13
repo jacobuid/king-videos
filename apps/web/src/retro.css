@@ -55,10 +55,8 @@
 .retro-crt-glass{display:none}
 .retro-crt-toolbar{position:absolute;inset:0;z-index:3;display:block;padding:0;pointer-events:none}
 .retro-crt-toolbar button{position:absolute;pointer-events:auto}
-.retro-crt-toolbar button:first-child{right:.5%;top:.5%;width:8%;height:12%;border:0;border-radius:50%;background:transparent;box-shadow:none;color:transparent}
-.retro-crt-toolbar button:first-child:hover{background:#ffffff18}
-.retro-crt-toolbar button:first-child:focus-visible{outline:3px solid #ffe08a;outline-offset:2px}
-.retro-crt-toolbar button:last-child{right:27%;bottom:7%;width:5%;height:7%;min-width:30px;min-height:30px;border-radius:50%;font-size:clamp(12px,1.4vw,20px)}
+.retro-crt-toolbar .retro-tv-exit:hover{background:#ffffff18}
+.retro-crt-toolbar .retro-tv-exit:focus-visible{outline:3px solid #ffe08a;outline-offset:2px}
 .retro-crt-toolbar strong{position:absolute;left:27%;bottom:8%;width:40%;font-size:clamp(10px,1.2vw,16px);text-align:center}
 .retro-crt-footer{display:none}
 .retro-crt-shell:fullscreen{display:flex;aspect-ratio:auto}
@@ -67,7 +65,6 @@
 .retro-crt-shell:fullscreen .retro-crt-toolbar{position:relative;display:flex;min-height:48px;pointer-events:auto}
 .retro-crt-shell:fullscreen .retro-crt-toolbar button,.retro-crt-shell:fullscreen .retro-crt-toolbar strong{position:static;width:auto;height:auto;color:#f9e6b5}
 .retro-crt-shell:fullscreen .retro-crt-toolbar button{width:44px;height:44px;background:#252630;border:1px solid #6b6c75;border-radius:10px}
-.retro-crt-toolbar button:last-child{right:17%;bottom:7%}
 .retro-crt-shell:fullscreen .retro-crt-toolbar{justify-content:space-between}
 
 .retro-crt-toolbar .retro-tv-exit{right:.5%;top:.5%;bottom:auto;width:8%;height:12%;min-width:0;min-height:0;border:0;border-radius:50%;background:transparent;box-shadow:none;color:transparent}
