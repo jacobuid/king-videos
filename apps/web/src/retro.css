@@ -69,3 +69,13 @@
 .retro-crt-shell:fullscreen .retro-crt-toolbar button{width:44px;height:44px;background:#252630;border:1px solid #6b6c75;border-radius:10px}
 .retro-crt-toolbar button:last-child{right:17%;bottom:7%}
 .retro-crt-shell:fullscreen .retro-crt-toolbar{justify-content:space-between}
+
+.retro-crt-toolbar .retro-tv-exit{right:.5%;top:.5%;bottom:auto;width:8%;height:12%;min-width:0;min-height:0;border:0;border-radius:50%;background:transparent;box-shadow:none;color:transparent}
+.retro-tv-controls{position:absolute;z-index:3;left:27.5%;top:85.5%;width:28%;height:7%;display:flex;align-items:center;justify-content:space-between;gap:3%}
+.retro-tv-controls button{position:relative;display:grid;place-items:center;flex:1;height:100%;min-height:30px;padding:0;border:1px solid #111522;border-radius:4px;background:linear-gradient(155deg,#8d90a9,#5c607b 48%,#3c405b);box-shadow:inset 0 1px 1px #c7b8cd99,inset 0 -2px 1px #202234,0 2px 2px #0008;color:#101424;font-size:clamp(13px,2vw,27px);text-shadow:0 1px #aaa;touch-action:manipulation}
+.retro-tv-controls button:hover{filter:brightness(1.2)}
+.retro-tv-controls button:active{box-shadow:inset 0 2px 3px #131522;transform:translateY(1px)}
+.retro-tv-controls button:focus-visible{outline:2px solid #ffe08a;outline-offset:2px}
+.retro-tv-controls button small{position:absolute;bottom:1px;right:3px;font:bold clamp(7px,.8vw,11px) monospace;color:#e7d5ac}
+.retro-tv-controls button:disabled{opacity:.5}
+.retro-crt-shell:fullscreen .retro-tv-controls{display:none}

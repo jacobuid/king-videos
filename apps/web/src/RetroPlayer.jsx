@@ -1,6 +1,6 @@
 import React,{useEffect,useLayoutEffect,useRef,useState} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faExpand,faPlay,faXmark} from '@fortawesome/free-solid-svg-icons'
+import {faExpand,faPlay,faPause,faBackward,faForward,faXmark} from '@fortawesome/free-solid-svg-icons'
 
 const duration=ms=>window.matchMedia('(prefers-reduced-motion: reduce)').matches?1:ms
 
@@ -8,6 +8,7 @@ export default function RetroPlayer({playback,television,saveProgress,onClose}){
   const shell=useRef(null),video=useRef(null),closeButton=useRef(null),animation=useRef(null),active=useRef(true)
   const initialized=useRef(false)
   const lastPosition=useRef(null),lastSaved=useRef(-1),latestSave=useRef(saveProgress)
+  const[paused,setPaused]=useState(true)
   const[phase,setPhase]=useState('opening'),[needsPlay,setNeedsPlay]=useState(false),[buffering,setBuffering]=useState(false),[error,setError]=useState('')
   latestSave.current=saveProgress
   function persist(force=false){
@@ -70,11 +71,16 @@ export default function RetroPlayer({playback,television,saveProgress,onClose}){
       else setError('Use the fullscreen control in the video player.')
     }catch{video.current.controls=false;setError('Use the fullscreen control in the video player.')}
   }
+  function skip(seconds){
+    const player=video.current
+    if(!Number.isFinite(player.duration))return
+    player.currentTime=Math.max(0,Math.min(player.duration,player.currentTime+seconds))
+  }
   function onKeyDown(event){
     if(event.key==='Escape'&&!document.fullscreenElement){event.preventDefault();void close()}
     if(event.key==='Tab'){
-      // Native video controls remain keyboard-accessible between the toolbar buttons.
-      const first=closeButton.current,last=video.current
+      const targets=[...shell.current.querySelectorAll('button:not(:disabled),video')].filter(node=>node.getClientRects().length)
+      const first=targets[0],last=targets.at(-1)
       if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}
       else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}
     }
@@ -83,16 +89,22 @@ export default function RetroPlayer({playback,television,saveProgress,onClose}){
     <section ref={shell} className="retro-crt-shell" role="dialog" aria-modal="true" aria-label={`Watching ${playback.title}`}>
       <img className="retro-tv-frame" src={`${import.meta.env.BASE_URL}tv-modal.png`} alt="" aria-hidden="true" draggable="false"/>
       <header className="retro-crt-toolbar">
-        <button ref={closeButton} type="button" onClick={close} disabled={phase!=='watching'} aria-label="Return to VHS cover" title="Return to VHS cover"><FontAwesomeIcon icon={faXmark}/></button>
-        <button type="button" onClick={fullscreen} disabled={phase!=='watching'} aria-label="Watch fullscreen" title="Fullscreen"><FontAwesomeIcon icon={faExpand}/></button>
+        <button ref={closeButton} className="retro-tv-exit" type="button" onClick={close} disabled={phase!=='watching'} aria-label="Return to VHS cover" title="Return to VHS cover"><FontAwesomeIcon icon={faXmark}/></button>
+
       </header>
+      <div className="retro-tv-controls" role="group" aria-label="TV playback controls">
+        <button type="button" onClick={()=>paused?start():video.current.pause()} disabled={phase!=='watching'} aria-label={paused?'Play':'Pause'} title={paused?'Play':'Pause'}><FontAwesomeIcon icon={paused?faPlay:faPause}/></button>
+        <button type="button" onClick={()=>skip(-30)} disabled={phase!=='watching'} aria-label="Rewind 30 seconds" title="Rewind 30 seconds"><FontAwesomeIcon icon={faBackward}/><small>30</small></button>
+        <button type="button" onClick={()=>skip(30)} disabled={phase!=='watching'} aria-label="Forward 30 seconds" title="Forward 30 seconds"><FontAwesomeIcon icon={faForward}/><small>30</small></button>
+        <button type="button" onClick={fullscreen} disabled={phase!=='watching'} aria-label="Watch fullscreen" title="Fullscreen"><FontAwesomeIcon icon={faExpand}/></button>
+      </div>
       <div className="retro-crt-screen">
         <video ref={video} playsInline preload="auto" tabIndex="0" aria-label={playback.title} onLoadedMetadata={()=>{const player=video.current;if(playback.startAt>0&&playback.startAt<player.duration){player.currentTime=playback.startAt}else initialized.current=true}}
           onTimeUpdate={()=>{lastPosition.current=Math.floor(video.current.currentTime);persist()}}
           onSeeked={()=>{initialized.current=true;lastPosition.current=Math.floor(video.current.currentTime);persist(true)}}
-          onPlaying={()=>{setNeedsPlay(false);setBuffering(false)}} onWaiting={()=>setBuffering(true)} onCanPlay={()=>setBuffering(false)}
-          onPause={()=>{lastPosition.current=Math.floor(video.current.currentTime);persist(true)}}
-          onEnded={()=>{lastPosition.current=Math.floor(video.current.currentTime);persist(true)}}
+          onPlay={()=>setPaused(false)} onPlaying={()=>{setPaused(false);setNeedsPlay(false);setBuffering(false)}} onWaiting={()=>setBuffering(true)} onCanPlay={()=>setBuffering(false)}
+          onPause={()=>{setPaused(true);lastPosition.current=Math.floor(video.current.currentTime);persist(true)}}
+          onEnded={()=>{setPaused(true);lastPosition.current=Math.floor(video.current.currentTime);persist(true)}}
           onError={()=>{setBuffering(false);setError('This tape could not play. Return to its cover and try Play again.')}}>
           <source src={playback.url} type={playback.mimeType||'video/mp4'}/>
           {playback.subtitleUrl&&<track kind="captions" src={playback.subtitleUrl} srcLang="en" label="English"/>}
