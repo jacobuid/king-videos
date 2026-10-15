@@ -1,3 +1,4 @@
+import KingflixPlayer from './KingflixPlayer'
 import React,{useEffect,useLayoutEffect,useRef,useState} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faExpand,faPlay,faPause,faBackward,faForward,faXmark} from '@fortawesome/free-solid-svg-icons'
@@ -7,6 +8,7 @@ const duration=ms=>window.matchMedia('(prefers-reduced-motion: reduce)').matches
 export default function RetroPlayer({playback,television,saveProgress,onClose}){
   const shell=useRef(null),video=useRef(null),closeButton=useRef(null),animation=useRef(null),active=useRef(true)
   const initialized=useRef(false)
+  const[fullscreenPlayback,setFullscreenPlayback]=useState(null)
   const lastPosition=useRef(null),lastSaved=useRef(-1),latestSave=useRef(saveProgress)
   const[paused,setPaused]=useState(true)
   const[phase,setPhase]=useState('opening'),[needsPlay,setNeedsPlay]=useState(false),[buffering,setBuffering]=useState(false),[error,setError]=useState('')
@@ -41,7 +43,14 @@ export default function RetroPlayer({playback,television,saveProgress,onClose}){
   },[])
   useEffect(()=>{
     const player=video.current
-    const syncControls=()=>{player.controls=Boolean(document.fullscreenElement===shell.current||document.fullscreenElement===player||player.webkitDisplayingFullscreen)}
+    const syncControls=()=>{
+      if(document.fullscreenElement)return
+      const fullscreenVideo=shell.current?.querySelector('.player-overlay video')
+      const resume=fullscreenVideo&&!fullscreenVideo.paused
+      if(fullscreenVideo)saveFullscreenProgress(fullscreenVideo.currentTime)
+      setFullscreenPlayback(null)
+      if(resume)requestAnimationFrame(()=>{if(active.current)void start()})
+    }
     const nativeEnter=()=>{player.controls=true}
     const nativeExit=()=>{player.controls=false}
     document.addEventListener('fullscreenchange',syncControls)
@@ -65,11 +74,19 @@ export default function RetroPlayer({playback,television,saveProgress,onClose}){
     }catch{if(active.current)onClose()}
   }
   async function fullscreen(){
+    const player=video.current,position=player.currentTime
+    player.pause()
+    setFullscreenPlayback({...playback,startAt:position})
     try{
       if(shell.current.requestFullscreen)await shell.current.requestFullscreen()
-      else if(video.current.webkitEnterFullscreen){video.current.controls=true;video.current.webkitEnterFullscreen()}
-      else setError('Use the fullscreen control in the video player.')
-    }catch{video.current.controls=false;setError('Use the fullscreen control in the video player.')}
+      // On iPad without element fullscreen, the normal player fills the viewport
+      // and provides the same controls and native fullscreen option as elsewhere.
+    }catch{ /* Keep the standard viewport player available. */ }
+  }
+  function saveFullscreenProgress(seconds){
+    lastPosition.current=Math.floor(seconds)
+    if(video.current&&Math.abs(video.current.currentTime-seconds)>1)video.current.currentTime=seconds
+    persist(true)
   }
   function skip(seconds){
     const player=video.current
@@ -86,7 +103,8 @@ export default function RetroPlayer({playback,television,saveProgress,onClose}){
     }
   }
   return <div className={`retro-player-overlay retro-player-${phase}`} onKeyDown={onKeyDown}>
-    <section ref={shell} className="retro-crt-shell" role="dialog" aria-modal="true" aria-label={`Watching ${playback.title}`}>
+    <section ref={shell} className={`retro-crt-shell${fullscreenPlayback?' retro-standard-player':''}`} role="dialog" aria-modal="true" aria-label={`Watching ${playback.title}`}>
+      {fullscreenPlayback&&<KingflixPlayer selected={fullscreenPlayback} saveProgress={saveFullscreenProgress} onClose={close}/>}
       <img className="retro-tv-frame" src={`${import.meta.env.BASE_URL}tv-modal.png`} alt="" aria-hidden="true" draggable="false"/>
       <header className="retro-crt-toolbar">
         <button ref={closeButton} className="retro-tv-exit" type="button" onClick={close} disabled={phase!=='watching'} aria-label="Return to VHS cover" title="Return to VHS cover"><FontAwesomeIcon icon={faXmark}/></button>
@@ -94,8 +112,8 @@ export default function RetroPlayer({playback,television,saveProgress,onClose}){
       </header>
       <div className="retro-tv-controls" role="group" aria-label="TV playback controls">
         <button type="button" onClick={()=>paused?start():video.current.pause()} disabled={phase!=='watching'} aria-label={paused?'Play':'Pause'} title={paused?'Play':'Pause'}><FontAwesomeIcon icon={paused?faPlay:faPause}/></button>
-        <button type="button" onClick={()=>skip(-30)} disabled={phase!=='watching'} aria-label="Rewind 30 seconds" title="Rewind 30 seconds"><FontAwesomeIcon icon={faBackward}/><small>30</small></button>
-        <button type="button" onClick={()=>skip(30)} disabled={phase!=='watching'} aria-label="Forward 30 seconds" title="Forward 30 seconds"><FontAwesomeIcon icon={faForward}/><small>30</small></button>
+        <button type="button" onClick={()=>skip(-30)} disabled={phase!=='watching'} aria-label="Rewind 30 seconds" title="Rewind 30 seconds"><FontAwesomeIcon icon={faBackward}/></button>
+        <button type="button" onClick={()=>skip(30)} disabled={phase!=='watching'} aria-label="Forward 30 seconds" title="Forward 30 seconds"><FontAwesomeIcon icon={faForward}/></button>
         <button type="button" onClick={fullscreen} disabled={phase!=='watching'} aria-label="Watch fullscreen" title="Fullscreen"><FontAwesomeIcon icon={faExpand}/></button>
       </div>
       <div className="retro-crt-screen">

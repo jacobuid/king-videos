@@ -4,13 +4,12 @@ import { createRoot } from 'react-dom/client'
 import { ClerkProvider, SignedIn, SignedOut, SignIn, UserButton, useAuth, useReverification } from '@clerk/clerk-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faCamera, faCheck, faChevronLeft, faChevronRight, faClosedCaptioning, faCircleInfo, faFaceSmile, faGift, faGripVertical, faLock, faMagnifyingGlass, faPause, faPen, faPlay, faPlus, faRotateLeft, faRotateRight, faTrashCan, faTriangleExclamation, faUsersGear, faVideo, faXmark } from '@fortawesome/free-solid-svg-icons'
-import { MediaPlayer as VidstackMediaPlayer, MediaProvider, Track } from '@vidstack/react'
-import { defaultLayoutIcons, DefaultVideoLayout } from '@vidstack/react/player/layouts/default'
 import '@vidstack/react/player/styles/default/theme.css'
 import '@vidstack/react/player/styles/default/layouts/video.css'
 import { collections } from './collections'
 import RokuDevices from './RokuDevices'
 import RetroPage from './RetroPage'
+import KingflixPlayer from './KingflixPlayer'
 import './style.css'
 import './profile-picker.css'
 import './player.css'
@@ -20,7 +19,6 @@ const key=import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 const api=import.meta.env.VITE_API_URL
 window.addEventListener('vite:preloadError',()=>window.location.reload())
 if('serviceWorker'in navigator)window.addEventListener('load',()=>{void navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`,{scope:import.meta.env.BASE_URL})})
-const MediaPlayer=React.forwardRef((props,ref)=><VidstackMediaPlayer ref={ref} controlsDelay={5000} {...props}/>)
 const colors=['#e50914','#0f9d8f','#6b38d1','#1773e8','#e67e22','#27952c','#c2185b','#0086a8']
 const birthdayColors=['#ff3158','#ffd43b','#23d5f7','#8ef02d','#a855f7','#ff7a18']
 const birthdaySnowColors=['#ff7090','#fff06a','#64ecff','#b8ff68','#d79aff','#ffb95c']
@@ -226,8 +224,6 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
     }else window.scrollTo({top:0,left:0,behavior:'instant'})
   },[navigationVersion])
   const playerOpen=Boolean(selected)
-  const[showNextCard,setShowNextCard]=useState(false)
-  const player=React.useRef(null),lastCheckpoint=React.useRef(0)
   useEffect(()=>{const previousRestoration=window.history.scrollRestoration;window.history.scrollRestoration='manual';window.history.replaceState({kingVideos:true,section:profile.homeVideosOnly?'home-videos':'home',series:null,season:null,info:null,scroll:{top:0,shelves:{}}},'');const restore=event=>{if(!event.state?.kingVideos)return;pendingScroll.current=event.state.scroll||{top:0,shelves:{}};const search=event.state.search;if(search){setQuery(search.query||'');setContentType(search.contentType||'');setGenre(search.genre||'');setRating(search.rating||'');setSortBy(search.sortBy||'uploaded-desc')}setBrowseSort(event.state.browseSort||'uploaded-desc');setVisibleHomeGroups(event.state.visibleHomeGroups||12);setNavigationVersion(value=>value+1);setSection(event.state.section);setSelectedSeries(event.state.series||null);setSelectedSeason(event.state.season??null);setInfoId(event.state.info||null)};window.addEventListener('popstate',restore);return()=>{window.removeEventListener('popstate',restore);window.history.scrollRestoration=previousRestoration}},[])
   const positions=useMemo(()=>new Map(progress.map(item=>[item.mediaId,item.positionSeconds])),[progress])
   const featured=useMemo(()=>{
@@ -258,7 +254,6 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
     return [...cards.values()]
   },[filtered,positions,series])
   const nextEpisode=useMemo(()=>{if(!selected?.seriesId)return null;const ordered=(series.get(selected.seriesId)||[]).slice().sort((a,b)=>(a.seasonNumber||0)-(b.seasonNumber||0)||(a.episodeNumber||0)-(b.episodeNumber||0)||a.title.localeCompare(b.title));const index=ordered.findIndex(item=>item.id===selected.id);return index>=0?ordered[index+1]||null:null},[selected,series])
-  useEffect(()=>setShowNextCard(false),[selected?.id])
   useEffect(()=>{if(!playerOpen)return;const body=document.body,root=document.documentElement,scrollY=window.scrollY,previous={position:body.style.position,top:body.style.top,width:body.style.width,overflow:body.style.overflow,rootOverflow:root.style.overflow};body.style.position='fixed';body.style.top=`-${scrollY}px`;body.style.width='100%';body.style.overflow='hidden';root.style.overflow='hidden';return()=>{body.style.position=previous.position;body.style.top=previous.top;body.style.width=previous.width;body.style.overflow=previous.overflow;root.style.overflow=previous.rootOverflow;window.scrollTo(0,scrollY)}},[playerOpen])
   const tvCards=useMemo(()=>{const grouped=new Map(),standalone=[];for(const item of tvItems){if(!item.seriesId){standalone.push(item);continue}if(!grouped.has(item.seriesId)){const episodes=series.get(item.seriesId)||[item];grouped.set(item.seriesId,{...item,id:`series:${item.seriesId}`,title:item.seriesTitle||item.seriesId,episodeCount:episodes.length,hasCaptions:episodes.some(episode=>episode.hasCaptions),isSeries:true})}}return [...grouped.values(),...standalone]},[tvItems,series])
   const favoriteSet=new Set(favorites)
@@ -282,30 +277,6 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
   function navigate(path,seriesId=null,season=null,info=null){if(profile.homeVideosOnly&&['home','movies','tv','shorts','collections'].includes(path))path='home-videos';const shelves=Object.fromEntries([...document.querySelectorAll('.shelf-track')].map(track=>[track.closest('.shelf')?.querySelector('h2')?.textContent,track.scrollLeft]));const search={query,contentType,genre,rating,sortBy};window.history.replaceState({...window.history.state,search,browseSort,visibleHomeGroups,scroll:{top:window.scrollY,shelves}},'');window.history.pushState({kingVideos:true,section:path,series:seriesId,season,info,search,browseSort,visibleHomeGroups,scroll:{top:0,shelves:{}}},'');pendingScroll.current={top:0,shelves:{}};setNavigationVersion(value=>value+1);setSelectedSeries(seriesId);setSelectedSeason(season);setInfoId(info);setSection(path)}
   function openMedia(item){navigate('info',null,null,item.id)}
   function openInfo(item){navigate('info',null,null,item.isSeries?item.id:item.id)}
-  function checkpoint(){const second=Math.floor(player.current?.currentTime||0);if(second-lastCheckpoint.current>=15){lastCheckpoint.current=second;saveProgress(second)}}
-  function savePlayerProgress(){if(player.current)saveProgress(player.current.currentTime)}
-  function togglePlayerControls(event){if(event.target.closest?.('.vds-controls,button,input,select,[role="menu"]'))return;player.current?.remoteControl?.toggleControls(event.nativeEvent)}
-  async function togglePlayback(event){const button=event?.currentTarget;if(button){window.clearTimeout(button._playFeedbackTimer);button.classList.remove('play-feedback');void button.offsetWidth;button.classList.add('play-feedback');button._playFeedbackTimer=window.setTimeout(()=>button.classList.remove('play-feedback'),550)}try{if(player.current?.paused)await player.current.play();else await player.current?.pause()}catch{}}
-  function skipPlayer(seconds,event){if(!player.current)return;const button=event?.currentTarget;if(button){window.clearTimeout(button._skipFeedbackTimer);button._skipFeedbackTotal=(button._skipFeedbackTotal||0)+seconds;button.dataset.feedback=`${button._skipFeedbackTotal>0?'+':''}${button._skipFeedbackTotal}`;button.classList.remove('skip-feedback');void button.offsetWidth;button.classList.add('skip-feedback');button._skipFeedbackTimer=window.setTimeout(()=>{button.classList.remove('skip-feedback');button._skipFeedbackTotal=0;button.dataset.feedback=seconds>0?'+10':'−10'},700)}player.current.remoteControl?.pauseControls(event?.nativeEvent);player.current.remoteControl?.resumeControls(event?.nativeEvent);const duration=Number.isFinite(player.current.duration)?player.current.duration:Infinity;player.current.currentTime=Math.max(0,Math.min(duration,player.current.currentTime+seconds));savePlayerProgress()}
-  async function exitPlayerFullscreen(){
-    const video=player.current?.querySelector?.('video')
-    const nativeFullscreen=Boolean(video?.webkitDisplayingFullscreen||video?.webkitPresentationMode==='fullscreen')
-    const nativeExit=nativeFullscreen?new Promise(resolve=>{let finished=false;const done=()=>{if(finished)return;finished=true;video?.removeEventListener?.('webkitendfullscreen',done);resolve()};video?.addEventListener?.('webkitendfullscreen',done,{once:true});window.setTimeout(done,1200)}):Promise.resolve()
-    try{
-      if(typeof player.current?.exitFullscreen==='function')await player.current.exitFullscreen('prefer-media')
-    }catch{}
-    try{
-      if(video?.webkitDisplayingFullscreen&&typeof video.webkitExitFullscreen==='function')video.webkitExitFullscreen()
-      else if(video?.webkitPresentationMode==='fullscreen'&&typeof video.webkitSetPresentationMode==='function')video.webkitSetPresentationMode('inline')
-    }catch{}
-    try{
-      if(document.fullscreenElement&&typeof document.exitFullscreen==='function')await document.exitFullscreen()
-      else if(document.webkitFullscreenElement&&typeof document.webkitExitFullscreen==='function')await document.webkitExitFullscreen()
-    }catch{}
-    await nativeExit
-  }
-  async function finishPlayback(){savePlayerProgress();await exitPlayerFullscreen();setShowNextCard(Boolean(nextEpisode))}
-  async function closePlayer(){savePlayerProgress();await exitPlayerFullscreen();setSelected(null)}
   const episodes=(series.get(selectedSeries)||[]).slice().sort((a,b)=>(a.seasonNumber||0)-(b.seasonNumber||0)||(a.episodeNumber||0)-(b.episodeNumber||0)||a.title.localeCompare(b.title))
   const infoItem=tvCards.find(item=>item.id===infoId)||media.find(item=>item.id===infoId)
   const infoIsSeries=Boolean(infoItem&&(infoItem.isSeries||String(infoItem.id).startsWith('series:')))
@@ -327,7 +298,7 @@ function Home({media,progress,favorites,toggleFavorite,reorderFavorites,profile,
     {section==='series'&&<SeriesPage series={episodes} selectedSeason={selectedSeason} positions={positions} play={openMedia} onBack={()=>window.history.back()} onSelectSeason={season=>navigate('series',selectedSeries,season)}/>}
     {section==='info'&&infoItem&&<DetailsPage item={infoItem} playable={infoPlayable} position={infoPosition} relatedRows={infoRelatedRows} positions={positions} favorites={favoriteSet} saved={favoriteSet.has(infoItem.id)} play={play} openDetails={openMedia} openSeries={()=>navigate('series',infoItem.seriesId)} toggleFavorite={toggleFavorite} onBack={()=>window.history.back()}/>}
     {section==='search'&&<><section className="search-page"><div className="home-search"><FontAwesomeIcon icon={faMagnifyingGlass}/><input autoFocus aria-label="Search videos" placeholder="Search titles" value={query} onChange={event=>setQuery(event.target.value)}/></div><div className="search-filters"><label>Type<select value={contentType} onChange={event=>setContentType(event.target.value)}><option value="">All titles</option>{!profile.homeVideosOnly&&<><option value="movies">Movies</option><option value="tv">TV</option><option value="shorts">Shorts</option></>}<option value="home-videos">Home Videos</option></select></label><label>Genre<select value={genre} onChange={event=>setGenre(event.target.value)}><option value="">All genres</option>{availableGenres.map(item=><option key={item} value={item}>{item}</option>)}</select></label><label>Rating<select value={rating} onChange={event=>setRating(event.target.value)}><option value="">All ratings</option>{availableRatings.map(item=><option key={item} value={item}>{item}</option>)}</select></label><SortControl value={sortBy} onChange={setSortBy}/></div></section><SearchGrid title={searchRows[0].title} query={`${query}|${contentType}|${genre}|${rating}|${sortBy}`} items={searchItems} positions={positions} favorites={favoriteSet} toggleFavorite={toggleFavorite} play={openMedia}/></>}
-    {selected&&<section className="player-overlay"><div className="player-stage"><MediaPlayer key={selected.id} ref={player} title={selected.title} src={{src:selected.url,type:selected.mimeType||'video/mp4'}} autoPlay playsInline load="eager" crossOrigin={mediaCrossOrigin(selected.url)} onClick={togglePlayerControls} onLoadedMetadata={()=>{if(player.current)player.current.currentTime=selected.startAt||0;lastCheckpoint.current=Math.floor(selected.startAt||0)}} onTimeUpdate={checkpoint} onPlay={()=>setShowNextCard(false)} onPause={savePlayerProgress} onEnded={finishPlayback} onSeeked={savePlayerProgress}><MediaProvider>{selected.subtitleUrl&&<Track default src={selected.subtitleUrl} kind="subtitles" label="English" lang="en" type="vtt"/>}</MediaProvider><DefaultVideoLayout icons={defaultLayoutIcons} noGestures slots={{playButton:null}}/><div className="player-pause-info"><Logo/><strong>{selected.title}</strong><span>{[selected.year,selected.rating,formatDuration(selected.durationSeconds)].filter(Boolean).join(' · ')}</span></div><button className="player-close" onClick={closePlayer} aria-label="Close video" title="Close video"><FontAwesomeIcon icon={faXmark}/></button><div className="player-center-controls"><button className="player-skip" data-feedback="−10" onClick={event=>skipPlayer(-10,event)} aria-label="Go back 10 seconds"><FontAwesomeIcon icon={faRotateLeft}/><b>10</b></button><button className="player-center-play" onClick={togglePlayback} aria-label="Play or pause video"><FontAwesomeIcon className="center-play-icon" icon={faPlay}/><FontAwesomeIcon className="center-pause-icon" icon={faPause}/></button><button className="player-skip" data-feedback="+10" onClick={event=>skipPlayer(10,event)} aria-label="Go forward 10 seconds"><FontAwesomeIcon icon={faRotateRight}/><b>10</b></button></div>{showNextCard&&nextEpisode&&<button className="next-episode-card" onClick={()=>play(nextEpisode)} aria-label={`Play next episode: ${nextEpisode.title}`}><span className="next-episode-label">Up next</span>{nextEpisode.thumbnailUrl?<img src={nextEpisode.thumbnailUrl} alt=""/>:<span className="next-episode-placeholder"><FontAwesomeIcon icon={faPlay}/></span>}<span className="next-episode-copy"><small>{nextEpisode.seasonNumber?`Season ${nextEpisode.seasonNumber} · `:''}Episode {nextEpisode.episodeNumber||''}</small><strong>{nextEpisode.title}</strong><span><FontAwesomeIcon icon={faPlay}/> Play next episode</span></span></button>}</MediaPlayer></div></section>}
+    {selected&&<KingflixPlayer selected={selected} saveProgress={saveProgress} onClose={()=>setSelected(null)} nextEpisode={nextEpisode} play={play}/>}
   </>
 }
 

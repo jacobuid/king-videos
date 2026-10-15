@@ -76,3 +76,7 @@
 .retro-tv-controls button small{position:absolute;bottom:1px;right:3px;font:bold clamp(7px,.8vw,11px) monospace;color:#e7d5ac}
 .retro-tv-controls button:disabled{opacity:.5}
 .retro-crt-shell:fullscreen .retro-tv-controls{display:none}
+
+/* Fullscreen reuses the normal KINGFLIX player, including its caption renderer. */
+.retro-crt-shell.retro-standard-player{position:fixed;inset:0;width:100vw;height:100dvh;aspect-ratio:auto;padding:0;background:#000;transform:none}
+.retro-standard-player>.retro-tv-frame,.retro-standard-player>.retro-crt-toolbar,.retro-standard-player>.retro-tv-controls,.retro-standard-player>.retro-crt-screen,.retro-standard-player>.retro-crt-footer{display:none}
