@@ -1,0 +1,70 @@
+{
+  "keyboardWidthFHD": 420,
+  "keyboardHeightFHD": 240,
+  "keyboardWidthHD": 280,
+  "keyboardHeightHD": 160,
+  "sections": [
+    {
+      "grids": [
+        {
+          "rows": [
+            {
+              "keys": [
+                {
+                  "label": "1"
+                },
+                {
+                  "label": "2"
+                },
+                {
+                  "label": "3"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "4"
+                },
+                {
+                  "label": "5"
+                },
+                {
+                  "label": "6"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "7"
+                },
+                {
+                  "label": "8"
+                },
+                {
+                  "label": "9"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "Clear",
+                  "strOut": "clear"
+                },
+                {
+                  "label": "0"
+                },
+                {
+                  "label": "⌫",
+                  "strOut": "backspace"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

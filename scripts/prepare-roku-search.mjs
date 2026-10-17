@@ -3,6 +3,7 @@ import sharp from 'sharp'
 
 export async function prepareRokuSearch(root){
   mkdirSync(root+'/data',{recursive:true})
+  writeFileSync(root+'/data/profile-pin-keyboard.json',JSON.stringify({keyboardWidthFHD:420,keyboardHeightFHD:240,keyboardWidthHD:280,keyboardHeightHD:160,sections:[{grids:[{rows:[{keys:[{label:'1'},{label:'2'},{label:'3'}]},{keys:[{label:'4'},{label:'5'},{label:'6'}]},{keys:[{label:'7'},{label:'8'},{label:'9'}]},{keys:[{label:'Clear',strOut:'clear'},{label:'0'},{label:'⌫',strOut:'backspace'}]}]}]}]},null,2))
   const modes={letters:'ABCDEFGHIJKLMNOPQRSTUVWXYZ',numbers:'0123456789.,!?&-+/:;()[]@#%',accents:'ÁÀÂÄÃÅÆÇÉÈÊËÍÌÎÏÑÓÒÔÖÕØÚÙÛÜÝŸßŒ'}
   const key=label=>({label})
   const grids=Object.entries(modes).map(([mode,letters])=>({modes:mode,rows:[

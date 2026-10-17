@@ -42,6 +42,7 @@
     <DetailPage id="detailPage" visible="false"/>
     <CatalogPage id="catalogPage" visible="false"/>
     <MainMenu id="menu" visible="false"/>
+    <ProfilePinPage id="pinPage" visible="false"/>
     <Video id="video" width="1920" height="1080" visible="false" notificationInterval="15"/>
     <Timer id="playbackWatchdog" duration="5" repeat="true"/>
     <Timer id="progressTimer" duration="30" repeat="true"/>

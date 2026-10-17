@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="ProfilePinKeyboard" extends="DynamicCustomKeyboard">
+  <interface><function name="keySelected"/></interface>
+  <script type="text/brightscript" uri="ProfilePinKeyboard.brs"/>
+</component>

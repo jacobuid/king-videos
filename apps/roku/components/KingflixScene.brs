@@ -49,6 +49,9 @@ sub init()
     m.homeHero.observeField("action", "onHomeHeroAction")
     m.homeHero.observeField("menuRequested", "onSearchMenuRequested")
     m.homeHero.observeField("shelvesRequested", "onHomeShelvesRequested")
+    m.pinPage = m.top.findNode("pinPage")
+    m.pinPage.observeField("submittedPin", "onPinSelected")
+    m.pinPage.observeField("cancelled", "onPinCancelled")
     m.menu = m.top.findNode("menu")
     m.rows = m.top.findNode("rows")
     m.pairing = m.top.findNode("pairing")
@@ -130,6 +133,8 @@ sub api(kind as string, path as string, method = "GET" as string, body = invalid
 end sub
 
 sub beginPairing()
+    m.pinPage.visible = false
+    m.pinPage.callFunc("clearPin")
     m.homeHero.visible = false
     m.catalogPage.visible = false
     m.detailPage.visible = false
@@ -208,7 +213,7 @@ sub onApiResult(event as object)
             m.status.text = result.error + " Press OK to retry."
             if kind = "unlock"
                 m.retry = invalid
-                showPin()
+                showPin(result.error)
             end if
             if kind = "poll" then m.poll.control = "STOP"
         end if
@@ -334,6 +339,8 @@ sub onApiResult(event as object)
 end sub
 
 sub showProfiles()
+    m.pinPage.visible = false
+    m.pinPage.callFunc("clearPin")
     m.homeFeatured = invalid
     m.homeHero.visible = false
     m.catalogPage.visible = false
@@ -452,31 +459,36 @@ function profileKey(key as string) as boolean
     return true
 end function
 
-sub showPin()
-    dialog = CreateObject("roSGNode", "StandardPinPadDialog")
-    dialog.title = "Enter " + m.profile.name + "'s PIN"
-    dialog.buttons = ["Unlock", "Cancel"]
-    dialog.textEditBox.maxTextLength = 4
-    dialog.observeField("buttonSelected", "onPinSelected")
-    m.top.dialog = dialog
+sub showPin(message = "" as string)
+    m.screen = "pin"
+    m.profileStage.visible = false
+    m.menu.visible = false
+    m.profileBusy = false
+    m.pinPage.profileName = m.profile.name
+    m.pinPage.message = message
+    m.pinPage.visible = true
+    m.pinPage.callFunc("activate")
 end sub
 
 sub onPinSelected(event as object)
-    dialog = m.top.dialog
-    if event.GetData() = 0
-        pin = dialog.pin
-        if len(pin) <> 4 then return
-        m.top.dialog = invalid
-        m.status.text = "Opening your profile..."
-        m.profileBusy = true
-        api("unlock", "/api/profiles/" + escaped(m.profile.id) + "/unlock", "POST", {pin: pin})
-    else
-        m.top.dialog = invalid
-        m.profileStage.setFocus(true)
-    end if
+    pin = event.GetData()
+    if m.screen <> "pin" or m.profileBusy or len(pin) <> 4 then return
+    m.profileBusy = true
+    m.pinPage.submittedPin = ""
+    api("unlock", "/api/profiles/" + escaped(m.profile.id) + "/unlock", "POST", {pin: pin})
+end sub
+
+sub onPinCancelled()
+    index = m.profileIndex
+    showProfiles()
+    m.profileOpeningOk = false
+    m.profileIndex = index
+    updateProfileFocus()
 end sub
 
 sub loadLibrary()
+    m.pinPage.visible = false
+    m.pinPage.callFunc("clearPin")
     m.homeHero.visible = false
     m.catalogPage.visible = false
     m.detailPage.visible = false

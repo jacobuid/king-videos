@@ -34,6 +34,7 @@ Browsing pages share one MainMenu component, including the proportional KINGFLIX
 
 - Up/Down: change shelf or menu entry. Left/Right: move between cards; Left at the first card opens the menu, Right returns to cards.
 - OK: select, play, or enter a profile PIN. Back: return to the previous shelf and card, or stop playback.
+- Locked profiles use a full-screen PIN page with four masked boxes and an embedded numeric keypad. The fourth digit submits automatically; there is no X or Unlock button. Back returns to the selected profile tile and invalidates an outstanding unlock request. Failed attempts display the server error and reset entry; server PIN validation and lockouts remain in force. Verify correct/incorrect PINs, deletion, phone typing, and Back during an unlock request on hardware.
 - Roku's standard video UI handles pause, fast-forward, rewind, and the `*` captions menu.
 - Continue Watching resumes the selected episode. Episodes watched at least 98% advance to the next incomplete episode, including across seasons.
 - Featured Presentation selects an unwatched unblocked movie, falling back to any unblocked movie.
