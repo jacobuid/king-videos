@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="CatalogTile" extends="Group">
+  <interface>
+    <field id="itemContent" type="node" alias="tile.itemContent"/>
+    <field id="focusPercent" type="float" alias="tile.focusPercent"/>
+  </interface>
+  <children><MediaTile id="tile" scale="[0.92,0.92]"/></children>
+</component>

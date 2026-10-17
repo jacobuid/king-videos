@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="SearchPage" extends="Group">
+  <interface>
+    <field id="visible" type="boolean" onChange="onVisibilityChanged"/>
+    <field id="catalog" type="array" onChange="refreshResults"/>
+    <field id="recent" type="array" onChange="renderRecent"/>
+    <field id="query" type="string" value="" onChange="setQuery"/>
+    <field id="menuRequested" type="boolean" alwaysNotify="true"/>
+    <field id="selectedMedia" type="assocarray" alwaysNotify="true"/>
+    <field id="navigation" type="string" alwaysNotify="true"/>
+    <field id="submittedQuery" type="string" alwaysNotify="true"/>
+    <function name="activate"/>
+  </interface>
+  <script type="text/brightscript" uri="SearchPage.brs"/>
+  <children>
+    <Rectangle width="1920" height="1080" color="#060708"/>
+    <Poster width="1920" height="1080" uri="pkg:/images/search-backdrop.png"/>
+    <Poster translation="[385,99]" width="1460" height="88" uri="pkg:/images/search-field.png"/>
+    <Poster translation="[410,122]" width="38" height="38" uri="pkg:/images/search-icon.png"/>
+    <Label id="queryText" translation="[470,99]" width="1335" height="88" vertAlign="center" text="Search for movies or shows..." color="#a4a4a4" font="font:MediumSystemFont"/>
+    <Label id="recentHeading" translation="[390,224]" width="310" height="40" text="Recent" font="font:MediumBoldSystemFont"/>
+    <Group id="recentItems"/>
+    <SearchKeyboard id="keyboard" translation="[735,212]"/>
+    <Label id="popularHeading" translation="[385,529]" width="1450" height="42" text="Popular Searches" font="font:MediumBoldSystemFont"/>
+    <Group id="genres"/>
+    <Label id="resultsHeading" translation="[385,659]" width="1450" height="42" text="Explore KINGFLIX" font="font:MediumBoldSystemFont"/>
+    <Group id="cards"/>
+    <Label id="empty" translation="[390,740]" width="1380" height="90" text="No titles match. Try another title or genre." color="#a9a9a9" wrap="true" visible="false" font="font:MediumSystemFont"/>
+    <Label id="hint" translation="[390,1008]" width="1450" height="35" text="Type here with your remote or the keyboard in the Roku mobile app." color="#8e8e8e" font="font:SmallSystemFont"/>
+  </children>
+</component>

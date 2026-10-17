@@ -2,11 +2,14 @@ import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs'
 import sharp from 'sharp'
 import QRCode from 'qrcode'
 import {collections} from '../apps/web/src/collections.js'
+import {prepareRokuSearch} from './prepare-roku-search.mjs'
+import {validateRokuComponents} from './validate-roku-components.mjs'
 
 // Only public URLs and curated collection metadata are packaged on the TV.
 if(existsSync('.env'))process.loadEnvFile('.env')
 else if(existsSync('../../.env'))process.loadEnvFile('../../.env')
 const root=existsSync('apps/roku/manifest')?'apps/roku':'.'
+validateRokuComponents(root)
 const webRoot=root==='.'?'../web':'apps/web'
 const api=process.env.VITE_API_URL
 if(!api||!/^https:\/\//.test(api))throw Error('Set VITE_API_URL to the deployed HTTPS API before building Roku.')
@@ -26,10 +29,13 @@ const crownWidth=Math.round(logoInfo.width*0.22),wordStart=Math.round(logoInfo.w
 const crown=await sharp(trimmed).extract({left:0,top:0,width:crownWidth,height:logoInfo.height}).resize(300,190,{fit:'contain',background:'#000000'}).png().toBuffer()
 const wordmark=await sharp(trimmed).extract({left:wordStart,top:0,width:logoInfo.width-wordStart,height:logoInfo.height}).resize(900,180,{fit:'contain',background:'#000000'}).png().toBuffer()
 await sharp({create:{width:1000,height:420,channels:3,background:'#000000'}}).composite([{input:crown,left:350,top:12},{input:wordmark,left:50,top:205}]).png().toFile(root+'/images/pairing-logo.png')
+// Bake proportional containment into the exact display canvas; Roku need not resize it.
+await sharp(root+'/images/pairing-logo.png').resize(280,195,{fit:'contain',background:'#030405'}).png().toFile(root+'/images/search-logo.png')
 await QRCode.toFile(root+'/images/link-qr.png',web+'?roku=',{width:240,margin:3,errorCorrectionLevel:'M'})
 const box=(width,height,stroke,fill,radius)=>Buffer.from('<svg width="'+width+'" height="'+height+'" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="'+(width-2)+'" height="'+(height-2)+'" rx="'+radius+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="2"/></svg>')
 await sharp(box(64,116,'#eec052','#101419',12)).png().toFile(root+'/images/code-box.png')
 await sharp(box(460,140,'#a55be2','#630bb2',20)).png().toFile(root+'/images/link-button.png')
 console.log('Prepared public Roku configuration and KINGFLIX artwork.')
+await prepareRokuSearch(root)
 
 await sharp(Buffer.from('<svg width="328" height="96" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="black" stop-opacity="0"/><stop offset="1" stop-color="black" stop-opacity="0.95"/></linearGradient></defs><rect width="328" height="96" fill="url(#fade)"/></svg>')).png().toFile(root+'/images/card-shade.png')

@@ -20,6 +20,9 @@ sub init()
     m.playingItem = invalid
     m.playbackActivity = invalid
     m.screen = "loading"
+    m.profileOpeningOk = false
+    m.profileEpoch = 0
+    m.profileBusy = false
     m.section = "Home"
     m.media = []
     m.progressOrder = []
@@ -27,6 +30,25 @@ sub init()
     m.favorites = {}
     m.groups = {}
     m.history = []
+    m.searches = {}
+    m.dailyFeatured = {}
+    m.searchQuery = ""
+    m.searchPage = m.top.findNode("searchPage")
+    m.searchPage.observeField("selectedMedia", "onSearchMediaSelected")
+    m.searchPage.observeField("navigation", "onSearchNavigation")
+    m.searchPage.observeField("submittedQuery", "onSearchSubmitted")
+    m.detailPage = m.top.findNode("detailPage")
+    m.detailPage.observeField("action", "onDetailAction")
+    m.detailPage.observeField("selectedMedia", "onSimilarMediaSelected")
+    m.detailPage.observeField("menuRequested", "onSearchMenuRequested")
+    m.detailPage.observeField("backRequested", "goBack")
+    m.catalogPage = m.top.findNode("catalogPage")
+    m.catalogPage.observeField("selectedMedia", "onCatalogSelected")
+    m.catalogPage.observeField("menuRequested", "onSearchMenuRequested")
+    m.homeHero = m.top.findNode("homeHero")
+    m.homeHero.observeField("action", "onHomeHeroAction")
+    m.homeHero.observeField("menuRequested", "onSearchMenuRequested")
+    m.homeHero.observeField("shelvesRequested", "onHomeShelvesRequested")
     m.menu = m.top.findNode("menu")
     m.rows = m.top.findNode("rows")
     m.pairing = m.top.findNode("pairing")
@@ -37,9 +59,12 @@ sub init()
     m.actions = m.top.findNode("actions")
     m.video = m.top.findNode("video")
     m.poll = m.top.findNode("poll")
-    m.menu.observeField("itemSelected", "onMenuSelected")
+    m.menu.observeField("selectedTitle", "onMenuSelected")
+    m.menu.observeField("exitRequested", "onMenuExit")
+    m.searchPage.observeField("menuRequested", "onSearchMenuRequested")
     m.rows.observeField("rowItemSelected", "onItemSelected")
     m.rows.observeField("rowItemFocused", "onItemFocused")
+    m.rows.observeField("menuRequested", "onSearchMenuRequested")
     m.actions.observeField("buttonSelected", "onActionSelected")
     m.video.getHttpAgent().SetCertificatesFile("common:/certs/ca-bundle.crt")
     m.video.observeField("position", "onVideoPosition")
@@ -76,6 +101,10 @@ sub onRegistryResult(event as object)
     if result.operation = "load"
         m.deviceToken = result.deviceToken
         m.savedProfile = ParseJson(result.profile)
+        savedSearches = ParseJson(result.searches)
+        if type(savedSearches) = "roAssociativeArray" then m.searches = savedSearches
+        savedFeatured = ParseJson(result.featured)
+        if type(savedFeatured) = "roAssociativeArray" then m.dailyFeatured = savedFeatured
         if m.deviceToken = "" then beginPairing() else loadProfiles()
     end if
     processRegistryQueue()
@@ -94,13 +123,17 @@ sub api(kind as string, path as string, method = "GET" as string, body = invalid
     m.sequence++
     tag = m.sequence.toStr()
     task = CreateObject("roSGNode", "ApiTask")
-    task.input = { url: m.config.api + path, method: method, body: body, token: m.deviceToken, profileToken: m.profileToken, progressRevision: m.progressRevision, tag: tag, kind: kind }
+    task.input = { url: m.config.api + path, method: method, body: body, token: m.deviceToken, profileToken: m.profileToken, profileEpoch: m.profileEpoch, progressRevision: m.progressRevision, tag: tag, kind: kind }
     m.tasks[tag] = task
     task.observeField("result", "onApiResult")
     task.control = "RUN"
 end sub
 
 sub beginPairing()
+    m.homeHero.visible = false
+    m.catalogPage.visible = false
+    m.detailPage.visible = false
+    m.searchPage.visible = false
     m.top.findNode("detailThumbnail").visible = false
     m.status.width = 1430
     m.top.findNode("loadingArtwork").visible = false
@@ -143,6 +176,9 @@ sub onApiResult(event as object)
     failedRequest = m.tasks[result.tag].input
     m.tasks.delete(result.tag)
     kind = result.kind
+    profileRequest = includes(["unlock", "library", "progress", "favorites", "play", "favorite-save", "progress-save", "progress-refresh"], kind)
+    if profileRequest and failedRequest.profileEpoch <> m.profileEpoch then return
+    if kind = "unlock" then m.profileBusy = false
     if kind = "poll" then m.pollPending = false
     if kind = "progress-refresh" then m.progressRefreshing = false
     if kind = "progress-save" then m.progressSaving = false
@@ -242,8 +278,18 @@ sub onApiResult(event as object)
         if m.screen = "browse" and m.section = "Home" and not m.video.visible
             focused = m.rows.rowItemFocused
             menuFocused = m.menu.hasFocus()
+            shelvesFocused = m.rows.hasFocus()
+            heroItem = m.homeHero.item
+            oldFeaturedId = ""
+            if m.homeFeatured <> invalid then oldFeaturedId = m.homeFeatured.id
             showSection("Home")
             if focused <> invalid then m.rows.jumpToRowItem = focused
+            if shelvesFocused
+                m.rows.setFocus(true)
+                updateHomeHero()
+            else if heroItem <> invalid
+                if heroItem.id <> oldFeaturedId then m.homeHero.item = heroItem
+            end if
             if menuFocused then m.menu.setFocus(true)
         end if
     else if kind = "progress-save"
@@ -283,11 +329,24 @@ sub onApiResult(event as object)
         registryOperation("delete", "profile")
         beginPairing()
     else if kind = "favorite-save"
-        showDetails(m.detailItem)
+        if m.screen = "details" then m.detailPage.favorite = m.favorites[m.detailItem.id] <> invalid
     end if
 end sub
 
 sub showProfiles()
+    m.homeFeatured = invalid
+    m.homeHero.visible = false
+    m.catalogPage.visible = false
+    m.detailPage.visible = false
+    m.profileEpoch++
+    m.profileBusy = false
+    m.progressSaving = false
+    m.progressRefreshing = false
+    ' Hiding a node does not transfer its remote focus. Focus the picker itself,
+    ' not the Scene, which is already an ancestor of the focused menu/keyboard.
+    m.menu.setFocus(false)
+    m.searchPage.visible = false
+    m.searchQuery = ""
     m.top.findNode("detailThumbnail").visible = false
     m.status.width = 1430
     m.pendingProgress = invalid
@@ -329,7 +388,8 @@ sub showProfiles()
     end for
     m.profileIndex = 0
     updateProfileFocus()
-    m.top.setFocus(true)
+    m.profileStage.setFocus(true)
+    print "KINGFLIX profile picker focus: "; m.profileStage.hasFocus(); " menu: "; m.menu.hasFocus()
 end sub
 
 sub updateProfileFocus()
@@ -339,11 +399,19 @@ sub updateProfileFocus()
 end sub
 
 sub selectProfile()
+    if m.profileBusy then return
+    m.profileOpeningOk = false
     m.profile = m.profileTiles[m.profileIndex].profile
-    if m.profile.hasPin then showPin() else api("unlock", "/api/profiles/" + escaped(m.profile.id) + "/unlock", "POST", {pin: ""})
+    if m.profile.hasPin
+        showPin()
+    else
+        m.profileBusy = true
+        api("unlock", "/api/profiles/" + escaped(m.profile.id) + "/unlock", "POST", {pin: ""})
+    end if
 end sub
 
 function profileKey(key as string) as boolean
+    if m.profileBusy then return true
     count = m.profileTiles.count()
     if count = 0 then return false
     if key = "OK"
@@ -400,14 +468,19 @@ sub onPinSelected(event as object)
         if len(pin) <> 4 then return
         m.top.dialog = invalid
         m.status.text = "Opening your profile..."
+        m.profileBusy = true
         api("unlock", "/api/profiles/" + escaped(m.profile.id) + "/unlock", "POST", {pin: pin})
     else
         m.top.dialog = invalid
-        m.top.setFocus(true)
+        m.profileStage.setFocus(true)
     end if
 end sub
 
 sub loadLibrary()
+    m.homeHero.visible = false
+    m.catalogPage.visible = false
+    m.detailPage.visible = false
+    m.menu.visible = false
     m.top.findNode("loadingArtwork").visible = true
     m.top.findNode("profileStage").visible = false
     m.heading.visible = true
@@ -470,27 +543,50 @@ function completed(item as object) as boolean
 end function
 
 sub buildMenu()
-    titles = ["Home", "Movies", "TV", "Series", "Home Videos", "Search", "Switch Profile", "Unlink Roku"]
-    if m.profile.homeVideosOnly then titles = ["Home Videos", "Search", "Switch Profile", "Unlink Roku"]
-    content = CreateObject("roSGNode", "ContentNode")
-    for each title in titles
-        content.createChild("ContentNode").title = title
-    end for
-    m.menu.content = content
+    m.menu.homeVideosOnly = m.profile.homeVideosOnly
+    m.menu.linked = m.deviceToken <> ""
     m.menu.visible = true
 end sub
 
-sub onMenuSelected()
-    title = m.menu.content.getChild(m.menu.itemSelected).title
+sub onSearchMenuRequested()
+    m.menu.setFocus(true)
+end sub
+
+sub onMenuExit()
+    if m.screen = "search"
+        m.searchPage.callFunc("activate")
+    else if m.screen = "catalog"
+        m.catalogPage.callFunc("activate")
+    else if m.screen = "details"
+        m.detailPage.callFunc("activate")
+    else if m.rows.visible
+        m.rows.setFocus(true)
+    end if
+end sub
+
+sub switchProfile()
+    ' Require the opening OK to be released before selecting a profile.
+    m.profileOpeningOk = true
     m.history = []
-    if title = "Switch Profile"
-        m.profileSelectionGuard = CreateObject("roTimespan")
-        m.profileSelectionGuard.Mark()
-        registryOperation("delete", "profile")
-        m.profileToken = ""
-        showProfiles()
+    m.retry = invalid
+    m.detailItem = invalid
+    m.top.findNode("progressTimer").control = "STOP"
+    registryOperation("delete", "profile")
+    m.profileToken = ""
+    showProfiles()
+end sub
+
+sub onMenuSelected()
+    if m.screen = "search" then m.searchQuery = m.searchPage.query
+    title = m.menu.selectedTitle
+    if title = "Shows" then title = "TV"
+    m.history = []
+    if title = "Switch Profile" or title = "Profile"
+        switchProfile()
     else if title = "Unlink Roku"
         api("signout", "/api/roku/signout", "DELETE", {})
+    else if title = "Link Roku"
+        beginPairing()
     else if title = "Search"
         showSearch()
     else
@@ -500,24 +596,87 @@ sub onMenuSelected()
 end sub
 
 sub showSearch()
-    dialog = CreateObject("roSGNode", "StandardKeyboardDialog")
-    dialog.title = "Search KINGFLIX"
-    dialog.buttons = ["Search", "Cancel"]
-    if m.searchQuery <> invalid then dialog.text = m.searchQuery
-    dialog.observeField("buttonSelected", "onSearchSelected")
-    m.top.dialog = dialog
+    m.homeHero.visible = false
+    m.catalogPage.visible = false
+    m.detailPage.visible = false
+    m.screen = "search"
+    m.section = "Search"
+    m.menu.activeTitle = "Search"
+    m.menu.visible = true
+    m.top.findNode("detailThumbnail").visible = false
+    m.actions.visible = false
+    m.rows.visible = false
+    m.searchPage.catalog = searchCatalog()
+    recent = m.searches[m.profile.id]
+    if recent = invalid then recent = []
+    m.searchPage.recent = recent
+    m.searchPage.query = m.searchQuery
+    m.searchPage.visible = true
+    m.searchPage.callFunc("activate")
 end sub
 
-sub onSearchSelected(event as object)
-    if event.GetData() = 0
-        m.searchQuery = m.top.dialog.text
-        m.top.dialog = invalid
-        showSection("Search")
+sub onSearchSubmitted(event as object)
+    term = event.GetData()
+    recent = [term]
+    previous = m.searches[m.profile.id]
+    if previous <> invalid
+        for each entry in previous
+            if lcase(entry) <> lcase(term) and recent.count() < 4 then recent.push(entry)
+        end for
+    end if
+    m.searches[m.profile.id] = recent
+    m.searchPage.recent = recent
+    registryOperation("write", "searches", FormatJson(m.searches))
+end sub
+
+sub onSearchNavigation(event as object)
+    title = event.GetData()
+    m.searchQuery = m.searchPage.query
+    m.searchPage.visible = false
+    if title = "Unlink Roku"
+        api("signout", "/api/roku/signout", "DELETE", {})
+    else if title = "Link Roku"
+        beginPairing()
+    else if title = "Profile"
+        switchProfile()
     else
-        m.top.dialog = invalid
-        m.menu.setFocus(true)
+        if title = "Shows" then title = "TV"
+        if m.profile.homeVideosOnly and title <> "Search" and title <> "My List" then title = "Home Videos"
+        showSection(title)
     end if
 end sub
+
+sub onSearchMediaSelected(event as object)
+    item = event.GetData()
+    m.searchQuery = m.searchPage.query
+    m.searchPage.visible = false
+    m.history.push({screen: "search", section: "Search"})
+    if item.kind <> invalid and item.kind = "show"
+        showDetails(item)
+    else
+        showDetails(item)
+    end if
+end sub
+
+function searchCatalog() as object
+    items = []
+    for each item in m.media
+        if not isTv(item) then items.push(item)
+    end for
+    for each show in showCards()
+        first = m.groups[show.seriesId][0]
+        show.genres = first.genres
+        show.rating = first.rating
+        show.year = first.year
+        show.minAge = first.minAge
+        show.searchText = ""
+        for each episode in m.groups[show.seriesId]
+            show.searchText += " " + episode.title
+        end for
+        items.push(show)
+    end for
+    return items
+end function
 
 function showCards() as object
     cards = []
@@ -529,6 +688,9 @@ function showCards() as object
         seen[id] = true
         first = m.groups[id][0]
         card = {id: "series:" + id, title: first.seriesTitle, thumbnailUrl: first.thumbnailUrl, kind: "show", seriesId: id}
+        for each key in ["year", "rating", "description", "genres", "minAge", "hasCaptions"]
+            card[key] = first[key]
+        end for
         if card.title = invalid then card.title = id
         cards.push(card)
     end for
@@ -536,6 +698,13 @@ function showCards() as object
 end function
 
 sub showSection(title as string)
+    m.homeHero.visible = false
+    m.catalogPage.visible = false
+    m.detailPage.visible = false
+    if title = "Search" then showSearch() : return
+    m.searchPage.visible = false
+    m.menu.activeTitle = title
+    m.menu.visible = true
     m.top.findNode("detailThumbnail").visible = false
     m.status.width = 1430
     m.top.findNode("loadingArtwork").visible = false
@@ -599,7 +768,7 @@ sub showSection(title as string)
         end for
         choices = unwatched
         if choices.count() = 0 then choices = available
-        if choices.count() > 0 then rows.push({title: "Featured Presentation", items: [choices[Rnd(choices.count()) - 1]]})
+        m.homeFeatured = dailyFeaturedMovie(choices, available)
         rows.push({title: "Continue Watching", items: continuing, resume: true})
         favorites = []
         for each item in movies
@@ -609,6 +778,14 @@ sub showSection(title as string)
             if m.favorites[item.id] <> invalid then favorites.push(item)
         end for
         rows.push({title: "My List", items: favorites})
+        rows.push({title: "Movies", items: movies})
+    else if title = "My List"
+        for each item in m.media
+            if not isTv(item) and m.favorites[item.id] <> invalid then items.push(item)
+        end for
+        for each item in shows
+            if m.favorites[item.id] <> invalid then items.push(item)
+        end for
     else if title = "TV"
         items = shows
     else if title = "Series"
@@ -637,23 +814,148 @@ sub showSection(title as string)
         end for
     end if
     if title = "Movies" or title = "TV"
-        latest = []
+        showCatalogPage(title, items)
+        return
+    end if
+    if title = "Home Videos"
+        byYear = {}
+        years = []
+        undated = []
         for each item in items
-            if latest.count() = 10 then exit for
-            latest.push(item)
+            if item.year <> invalid and item.year > 0
+                year = item.year.toStr()
+                if byYear[year] = invalid
+                    byYear[year] = []
+                    years.push(item.year)
+                end if
+                byYear[year].push(item)
+            else
+                undated.push(item)
+            end if
         end for
-        rows.push({title: "Latest Added", items: latest})
+        years.sort("r")
+        for each year in years
+            rows.push({title: year.toStr(), items: byYear[year.toStr()]})
+        end for
+        if undated.count() > 0 then rows.push({title: "Undated", items: undated})
+        showRows(rows)
+        return
     end if
     if title <> "Home" then rows.push({title: title, items: items})
     showRows(rows)
+    if title = "Home" and m.homeFeatured <> invalid
+        m.heading.text = ""
+        m.status.text = ""
+        m.homeHero.item = m.homeFeatured
+        m.homeHero.visible = true
+        m.homeHero.callFunc("activate")
+    end if
+end sub
+
+function dailyFeaturedMovie(choices as object, available as object) as dynamic
+    if choices.count() = 0 then return invalid
+    saved = m.dailyFeatured[m.profile.id]
+    if saved <> invalid
+        if saved.expires <> invalid and saved.expires > nowMillis()
+            for each movie in available
+                if movie.id = saved.id then return movie
+            end for
+        end if
+    end if
+    candidates = []
+    for each movie in choices
+        if saved = invalid
+            candidates.push(movie)
+        else if movie.id <> saved.id
+            candidates.push(movie)
+        end if
+    end for
+    if candidates.count() = 0 then candidates = choices
+    movie = candidates[Rnd(candidates.count()) - 1]
+    m.dailyFeatured[m.profile.id] = {id: movie.id, expires: nowMillis() + 86400000.0#}
+    registryOperation("write", "featured", FormatJson(m.dailyFeatured))
+    return movie
+end function
+
+sub onHomeShelvesRequested()
+    if m.rows.visible then m.rows.setFocus(true)
+    updateHomeHero()
+end sub
+
+sub updateHomeHero()
+    if m.section <> "Home" or not m.rows.visible then return
+    selected = m.rows.rowItemFocused
+    if selected = invalid then return
+    row = m.rows.content.getChild(selected[0])
+    if row = invalid then return
+    child = row.getChild(selected[1])
+    if child = invalid then return
+    item = {}
+    item.append(child.media)
+    if item.kind <> invalid and item.kind = "show"
+        first = m.groups[item.seriesId][0]
+        for each key in ["description", "year", "rating", "genres"]
+            item[key] = first[key]
+        end for
+    end if
+    m.homeHero.item = item
+end sub
+
+sub onHomeHeroAction(event as object)
+    item = m.homeHero.item
+    m.history.push({screen: "browse", section: "Home", rows: m.visibleRows, focus: m.rows.rowItemFocused, hero: item})
+    showDetails(item)
+    if event.GetData() = "play" then startPlayback(m.detailPlayItem)
+end sub
+
+sub showCatalogPage(title as string, items as object, index = 0 as integer)
+    m.screen = "catalog"
+    m.section = title
+    m.rows.visible = false
+    content = CreateObject("roSGNode", "ContentNode")
+    for each item in items
+        display = {}
+        display.append(item)
+        if item.kind <> invalid and item.kind = "show"
+            first = m.groups[item.seriesId][0]
+            for each key in ["description", "year", "rating", "genres", "minAge"]
+                display[key] = first[key]
+            end for
+        end if
+        child = content.createChild("ContentNode")
+        child.title = display.title
+        if display.thumbnailUrl <> invalid then child.hdPosterUrl = display.thumbnailUrl
+        child.addFields({media: display, watchedFraction: watchedFraction(display)})
+    end for
+    m.catalogPage.content = content
+    m.catalogPage.visible = true
+    m.catalogPage.callFunc("activate", index)
+end sub
+
+sub onCatalogSelected(event as object)
+    m.history.push({screen: "catalog", section: m.section, content: m.catalogPage.content, focus: m.catalogPage.focusedIndex})
+    showDetails(event.GetData())
 end sub
 
 sub showRows(rows as object)
+    m.rows.translation = [400,270]
+    m.rows.numRows = 2
+    if m.screen = "browse" and m.section = "Home"
+        m.rows.translation = [400,540]
+        m.rows.numRows = 1
+    end if
     m.visibleRows = []
+    itemSizes = []
+    rowHeights = []
     content = CreateObject("roSGNode", "ContentNode")
     for each row in rows
         if row.items.count() > 0
             m.visibleRows.push(row)
+            height = 320
+            first = row.items[0]
+            if first.kind <> invalid and first.kind = "collection" then height = 188
+            itemSizes.push([332, height])
+            rowHeights.push(height + 50)
             node = content.createChild("ContentNode")
             node.title = row.title
             for each item in row.items
@@ -664,6 +966,8 @@ sub showRows(rows as object)
             end for
         end if
     end for
+    m.rows.rowItemSize = itemSizes
+    m.rows.rowHeights = rowHeights
     m.rows.content = content
     m.rows.visible = content.getChildCount() > 0
     if m.rows.visible then m.rows.setFocus(true) else m.menu.setFocus(true)
@@ -672,6 +976,10 @@ end sub
 
 sub onItemFocused()
     if m.screen <> "browse" and m.screen <> "episodes" then return
+    if m.section = "Home" and m.screen = "browse"
+        if m.rows.hasFocus() then updateHomeHero()
+        return
+    end if
     selected = m.rows.rowItemFocused
     item = m.rows.content.getChild(selected[0]).getChild(selected[1]).media
     description = ""
@@ -693,15 +1001,9 @@ sub onItemSelected()
         end if
         return
     end if
-    if m.visibleRows[selected[0]].resume <> invalid and m.visibleRows[selected[0]].resume
-        startPlayback(item)
-        return
-    end if
     m.history.push({screen: m.screen, section: m.section, rows: m.visibleRows, focus: selected})
     if item.kind = "show"
-        m.screen = "episodes"
-        m.heading.text = item.title
-        showRows([{title: "Episodes", items: m.groups[item.seriesId]}])
+        showDetails(item)
     else if item.kind = "collection"
         m.screen = "episodes"
         m.heading.text = item.title
@@ -724,60 +1026,6 @@ function includes(values as object, value as dynamic) as boolean
     end for
     return false
 end function
-
-sub showDetails(item as object)
-    m.screen = "details"
-    m.detailItem = item
-    thumbnail = m.top.findNode("detailThumbnail")
-    thumbnail.uri = ""
-    thumbnail.visible = false
-    m.status.width = 1430
-    if item.thumbnailUrl <> invalid and item.thumbnailUrl <> ""
-        thumbnail.uri = item.thumbnailUrl
-        thumbnail.visible = true
-        m.status.width = 810
-    end if
-    m.heading.text = item.title
-    text = ""
-    if item.year <> invalid then text += item.year.toStr() + "  "
-    if item.rating <> invalid then text += item.rating + "  "
-    if item.durationSeconds <> invalid then text += int(item.durationSeconds / 60).toStr() + " min  "
-    if item.hasCaptions <> invalid and item.hasCaptions then text += "CC"
-    if item.genres <> invalid then text += chr(10) + item.genres.join(" / ")
-    if item.description <> invalid then text += chr(10) + item.description
-    m.status.height = 420
-    m.status.text = text
-    m.rows.visible = false
-    buttons = ["Watch", "Back"]
-    if positionFor(item.id) > 0 then buttons[0] = "Continue"
-    if item.blocked then buttons[0] = "Blocked"
-    if item.category = "movie"
-        label = "Add to My List"
-        if m.favorites[item.id] <> invalid then label = "Remove from My List"
-        buttons = [buttons[0], label, "Back"]
-    end if
-    m.actions.buttons = buttons
-    m.actions.visible = true
-    m.actions.setFocus(true)
-end sub
-
-sub onActionSelected()
-    index = m.actions.buttonSelected
-    if index = 0
-        startPlayback(m.detailItem)
-    else if index = 1 and m.detailItem.category = "movie"
-        method = "POST"
-        if m.favorites[m.detailItem.id] <> invalid
-            method = "DELETE"
-            m.favorites.delete(m.detailItem.id)
-        else
-            m.favorites[m.detailItem.id] = true
-        end if
-        api("favorite-save", "/api/favorites", method, profileRequestBody(m.detailItem.id))
-    else
-        goBack()
-    end if
-end sub
 
 sub startPlayback(item as object)
     if item.blocked then return
@@ -868,23 +1116,55 @@ sub checkPlaybackStall()
 end sub
 
 sub goBack()
+    m.detailPage.visible = false
     m.top.findNode("detailThumbnail").visible = false
     m.status.width = 1430
     m.status.height = 100
     m.actions.visible = false
     if m.history.count() > 0
         previous = m.history.pop()
+        if previous.screen = "search" then showSearch() : return
+        if previous.screen = "details" then showDetails(previous.item) : return
+        if previous.screen = "catalog"
+            m.screen = "catalog"
+            m.section = previous.section
+            m.menu.activeTitle = previous.section
+            m.catalogPage.content = previous.content
+            m.catalogPage.visible = true
+            m.catalogPage.callFunc("activate", previous.focus)
+            return
+        end if
         m.screen = previous.screen
         m.section = previous.section
+        m.menu.activeTitle = previous.section
         m.heading.text = previous.section
         showRows(previous.rows)
         m.rows.jumpToRowItem = previous.focus
+        if previous.section = "Home"
+            m.homeHero.visible = true
+            m.heading.text = ""
+            m.status.text = ""
+            updateHomeHero()
+            if previous.hero <> invalid
+                m.homeHero.item = previous.hero
+                m.homeHero.callFunc("activate")
+            end if
+        end if
     else
         if m.profile.homeVideosOnly then showSection("Home Videos") else showSection("Home")
     end if
 end sub
 
 function onKeyEvent(key as string, press as boolean) as boolean
+    if m.screen = "profiles"
+        if not press
+            if key = "OK" then m.profileOpeningOk = false
+            return false
+        end if
+        if key = "OK" and m.profileOpeningOk then return true
+        if key = "up" or key = "down" or key = "left" or key = "right" then m.profileOpeningOk = false
+        return profileKey(key)
+    end if
     if not press then return false
     if m.video.visible
         if key = "back"
@@ -900,17 +1180,16 @@ function onKeyEvent(key as string, press as boolean) as boolean
         api(retry.kind, mid(retry.url, len(m.config.api) + 1), retry.method, retry.body)
         return true
     end if
-    if m.screen = "profiles"
-        if key = "OK" and m.profileSelectionGuard <> invalid
-            if m.profileSelectionGuard.TotalMilliseconds() < 350 then return true
-            m.profileSelectionGuard = invalid
-        end if
-        return profileKey(key)
-    end if
     if m.screen = "pairing" and key = "OK"
         m.poll.control = "STOP"
         beginPairing()
         return true
+    end if
+    if key = "up" and m.rows.hasFocus() and m.section = "Home" and m.screen = "browse"
+        if m.rows.rowItemFocused[0] = 0
+            m.homeHero.callFunc("activate")
+            return true
+        end if
     end if
     if key = "back"
         if m.screen = "details" or m.screen = "episodes"
@@ -935,6 +1214,7 @@ end function
 
 sub onStatusText()
     if m.pairing.visible then m.pairStatus.text = m.status.text
+    if m.screen = "details" then m.detailPage.notice = m.status.text
 end sub
 
 sub showPairCode(code as string)

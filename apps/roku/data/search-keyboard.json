@@ -1,0 +1,498 @@
+{
+  "keyboardWidthFHD": 1105,
+  "keyboardHeightFHD": 300,
+  "keyboardWidthHD": 737,
+  "keyboardHeightHD": 200,
+  "sections": [
+    {
+      "grids": [
+        {
+          "modes": "letters",
+          "rows": [
+            {
+              "keys": [
+                {
+                  "label": "A"
+                },
+                {
+                  "label": "B"
+                },
+                {
+                  "label": "C"
+                },
+                {
+                  "label": "D"
+                },
+                {
+                  "label": "E"
+                },
+                {
+                  "label": "F"
+                },
+                {
+                  "label": "G"
+                },
+                {
+                  "label": "H"
+                },
+                {
+                  "label": "I"
+                },
+                {
+                  "label": "J"
+                },
+                {
+                  "label": "K"
+                },
+                {
+                  "label": "L"
+                },
+                {
+                  "label": "M"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "N"
+                },
+                {
+                  "label": "O"
+                },
+                {
+                  "label": "P"
+                },
+                {
+                  "label": "Q"
+                },
+                {
+                  "label": "R"
+                },
+                {
+                  "label": "S"
+                },
+                {
+                  "label": "T"
+                },
+                {
+                  "label": "U"
+                },
+                {
+                  "label": "V"
+                },
+                {
+                  "label": "W"
+                },
+                {
+                  "label": "X"
+                },
+                {
+                  "label": "Y"
+                },
+                {
+                  "label": "Z"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "1"
+                },
+                {
+                  "label": "2"
+                },
+                {
+                  "label": "3"
+                },
+                {
+                  "label": "4"
+                },
+                {
+                  "label": "5"
+                },
+                {
+                  "label": "6"
+                },
+                {
+                  "label": "7"
+                },
+                {
+                  "label": "8"
+                },
+                {
+                  "label": "9"
+                },
+                {
+                  "label": "0"
+                },
+                {
+                  "label": "⌫",
+                  "strOut": "backspace",
+                  "autoRepeat": 1
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "ABC",
+                  "strOut": "letters",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                },
+                {
+                  "label": "123",
+                  "strOut": "numbers",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                },
+                {
+                  "label": "áéü",
+                  "strOut": "accents",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                },
+                {
+                  "label": "Space",
+                  "strOut": "space"
+                },
+                {
+                  "label": "Clear",
+                  "strOut": "clear",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modes": "numbers",
+          "rows": [
+            {
+              "keys": [
+                {
+                  "label": "0"
+                },
+                {
+                  "label": "1"
+                },
+                {
+                  "label": "2"
+                },
+                {
+                  "label": "3"
+                },
+                {
+                  "label": "4"
+                },
+                {
+                  "label": "5"
+                },
+                {
+                  "label": "6"
+                },
+                {
+                  "label": "7"
+                },
+                {
+                  "label": "8"
+                },
+                {
+                  "label": "9"
+                },
+                {
+                  "label": "."
+                },
+                {
+                  "label": ","
+                },
+                {
+                  "label": "!"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "?"
+                },
+                {
+                  "label": "&"
+                },
+                {
+                  "label": "-"
+                },
+                {
+                  "label": "+"
+                },
+                {
+                  "label": "/"
+                },
+                {
+                  "label": ":"
+                },
+                {
+                  "label": ";"
+                },
+                {
+                  "label": "("
+                },
+                {
+                  "label": ")"
+                },
+                {
+                  "label": "["
+                },
+                {
+                  "label": "]"
+                },
+                {
+                  "label": "@"
+                },
+                {
+                  "label": "#"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "1"
+                },
+                {
+                  "label": "2"
+                },
+                {
+                  "label": "3"
+                },
+                {
+                  "label": "4"
+                },
+                {
+                  "label": "5"
+                },
+                {
+                  "label": "6"
+                },
+                {
+                  "label": "7"
+                },
+                {
+                  "label": "8"
+                },
+                {
+                  "label": "9"
+                },
+                {
+                  "label": "0"
+                },
+                {
+                  "label": "⌫",
+                  "strOut": "backspace",
+                  "autoRepeat": 1
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "ABC",
+                  "strOut": "letters",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                },
+                {
+                  "label": "123",
+                  "strOut": "numbers",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                },
+                {
+                  "label": "áéü",
+                  "strOut": "accents",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                },
+                {
+                  "label": "Space",
+                  "strOut": "space"
+                },
+                {
+                  "label": "Clear",
+                  "strOut": "clear",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modes": "accents",
+          "rows": [
+            {
+              "keys": [
+                {
+                  "label": "Á"
+                },
+                {
+                  "label": "À"
+                },
+                {
+                  "label": "Â"
+                },
+                {
+                  "label": "Ä"
+                },
+                {
+                  "label": "Ã"
+                },
+                {
+                  "label": "Å"
+                },
+                {
+                  "label": "Æ"
+                },
+                {
+                  "label": "Ç"
+                },
+                {
+                  "label": "É"
+                },
+                {
+                  "label": "È"
+                },
+                {
+                  "label": "Ê"
+                },
+                {
+                  "label": "Ë"
+                },
+                {
+                  "label": "Í"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "Ì"
+                },
+                {
+                  "label": "Î"
+                },
+                {
+                  "label": "Ï"
+                },
+                {
+                  "label": "Ñ"
+                },
+                {
+                  "label": "Ó"
+                },
+                {
+                  "label": "Ò"
+                },
+                {
+                  "label": "Ô"
+                },
+                {
+                  "label": "Ö"
+                },
+                {
+                  "label": "Õ"
+                },
+                {
+                  "label": "Ø"
+                },
+                {
+                  "label": "Ú"
+                },
+                {
+                  "label": "Ù"
+                },
+                {
+                  "label": "Û"
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "1"
+                },
+                {
+                  "label": "2"
+                },
+                {
+                  "label": "3"
+                },
+                {
+                  "label": "4"
+                },
+                {
+                  "label": "5"
+                },
+                {
+                  "label": "6"
+                },
+                {
+                  "label": "7"
+                },
+                {
+                  "label": "8"
+                },
+                {
+                  "label": "9"
+                },
+                {
+                  "label": "0"
+                },
+                {
+                  "label": "⌫",
+                  "strOut": "backspace",
+                  "autoRepeat": 1
+                }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "label": "ABC",
+                  "strOut": "letters",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                },
+                {
+                  "label": "123",
+                  "strOut": "numbers",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                },
+                {
+                  "label": "áéü",
+                  "strOut": "accents",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                },
+                {
+                  "label": "Space",
+                  "strOut": "space"
+                },
+                {
+                  "label": "Clear",
+                  "strOut": "clear",
+                  "keyWidthFHD": 110,
+                  "keyWidthHD": 73
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

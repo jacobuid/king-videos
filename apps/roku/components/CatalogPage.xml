@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="CatalogPage" extends="Group">
+  <interface>
+    <field id="content" type="node" alias="grid.content"/>
+    <field id="selectedMedia" type="assocarray" alwaysNotify="true"/>
+    <field id="menuRequested" type="boolean" alwaysNotify="true"/>
+    <field id="focusedIndex" type="integer" value="0"/>
+    <function name="activate"/>
+  </interface>
+  <script type="text/brightscript" uri="CatalogPage.brs"/>
+  <children>
+    <Rectangle translation="[335,0]" width="1585" height="1080" color="#060708"/>
+    <Poster translation="[335,0]" width="1585" height="1080" uri="pkg:/images/search-backdrop.png"/>
+    <Poster id="previewArt" translation="[400,40]" width="660" height="371" loadDisplayMode="scaleToFit"/>
+    <Label id="previewTitle" translation="[1100,50]" width="740" height="110" wrap="true" maxLines="2" color="#f3cc57" font="font:LargeBoldSystemFont"/>
+    <Label id="previewDescription" translation="[1100,175]" width="740" height="160" wrap="true" maxLines="5" color="#dddddd" font="font:MediumSystemFont"/>
+    <Label id="previewMetadata" translation="[1100,355]" width="740" height="42" color="#bfbfbf" font="font:MediumBoldSystemFont"/>
+    <MenuGrid id="grid" translation="[400,460]" itemComponentName="CatalogTile" itemSize="[306,295]" itemSpacing="[60,22]" numColumns="4" numRows="2" drawFocusFeedback="false" horizFocusAnimationStyle="floatingFocus" vertFocusAnimationStyle="floatingFocus"/>
+    <Label id="empty" translation="[400,510]" width="1400" height="60" text="Nothing here yet." visible="false" font="font:MediumSystemFont"/>
+  </children>
+</component>

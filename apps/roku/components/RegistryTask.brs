@@ -5,7 +5,7 @@ sub execute()
     registry = CreateObject("roRegistrySection", "kingflix")
     input = m.top.input
     if input.operation = "load"
-        m.top.result = {operation: "load", deviceToken: registry.Read("deviceToken"), profile: registry.Read("profile")}
+        m.top.result = {operation: "load", deviceToken: registry.Read("deviceToken"), profile: registry.Read("profile"), searches: registry.Read("searches"), featured: registry.Read("featured")}
         return
     end if
     if input.operation = "write" then registry.Write(input.key, input.value)

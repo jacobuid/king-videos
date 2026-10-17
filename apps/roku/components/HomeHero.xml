@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="HomeHero" extends="Group">
+  <interface>
+    <field id="item" type="assocarray" onChange="renderItem"/>
+    <field id="action" type="string" alwaysNotify="true"/>
+    <field id="shelvesRequested" type="boolean" alwaysNotify="true"/>
+    <field id="menuRequested" type="boolean" alwaysNotify="true"/>
+    <function name="activate"/>
+  </interface>
+  <script type="text/brightscript" uri="HomeHero.brs"/>
+  <children>
+    <Poster id="art" translation="[400,40]" width="660" height="371" loadDisplayMode="scaleToFit"/>
+    <Label id="eyebrow" translation="[1100,35]" width="740" height="35" text="Featured Presentation" color="#bfbfbf" font="font:SmallSystemFont"/>
+    <Label id="title" translation="[1100,80]" width="740" height="105" wrap="true" maxLines="2" color="#f3cc57" font="font:LargeBoldSystemFont"/>
+    <Label id="metadata" translation="[1100,195]" width="740" height="35" color="#cccccc" font="font:MediumSystemFont"/>
+    <Label id="description" translation="[1100,245]" width="740" height="120" wrap="true" maxLines="4" color="#dddddd" font="font:MediumSystemFont"/>
+    <Group id="buttons"/>
+  </children>
+</component>

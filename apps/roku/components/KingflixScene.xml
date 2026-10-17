@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component name="KingflixScene" extends="Scene">
   <script type="text/brightscript" uri="KingflixScene.brs"/>
+  <script type="text/brightscript" uri="DetailsController.brs"/>
   <children>
     <Rectangle width="1920" height="1080" color="#000000"/>
     <Poster id="logo" translation="[72,35]" width="270" height="90" uri="pkg:/images/header-logo.png" loadDisplayMode="scaleToFit"/>
     <Label id="heading" translation="[400,52]" width="1400" height="55" font="font:LargeSystemFont"/>
     <Label id="status" translation="[400,135]" width="1430" height="100" wrap="true" font="font:MediumSystemFont"/>
-    <LabelList id="menu" translation="[80,250]" itemSize="[260,60]" numRows="9" visible="false"/>
-    <RowList id="rows" translation="[400,270]" itemComponentName="MediaTile" itemSize="[1430,370]" rowItemSize="[[332,320]]" itemSpacing="[0,18]" rowItemSpacing="[[24,0]]" numRows="2" showRowLabel="[true]" rowLabelOffset="[[0,12]]" visible="false"/>
+    <HomeHero id="homeHero" visible="false"/>
+    <MenuRowList id="rows" translation="[400,270]" itemComponentName="MediaTile" itemSize="[1430,370]" rowItemSize="[[332,320]]" itemSpacing="[0,18]" rowItemSpacing="[[24,0]]" numRows="2" showRowLabel="[true]" rowLabelOffset="[[0,12]]" visible="false"/>
     <Poster id="detailThumbnail" translation="[1260,150]" width="560" height="315" loadDisplayMode="scaleToFit" visible="false"/>
     <ButtonGroup id="actions" translation="[400,640]" visible="false"/>
     <Group id="profileStage" visible="false">
@@ -37,6 +38,10 @@
       <Label id="pairStatus" translation="[100,950]" width="1720" height="65" horizAlign="center" color="#a7b6c5" wrap="true" font="font:MediumSystemFont"/>
     </Group>
     <Poster id="loadingArtwork" width="1920" height="1080" uri="pkg:/images/splash.png" loadDisplayMode="scaleToFit" visible="true"/>
+    <SearchPage id="searchPage" visible="false"/>
+    <DetailPage id="detailPage" visible="false"/>
+    <CatalogPage id="catalogPage" visible="false"/>
+    <MainMenu id="menu" visible="false"/>
     <Video id="video" width="1920" height="1080" visible="false" notificationInterval="15"/>
     <Timer id="playbackWatchdog" duration="5" repeat="true"/>
     <Timer id="progressTimer" duration="30" repeat="true"/>

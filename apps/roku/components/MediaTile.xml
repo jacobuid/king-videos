@@ -8,11 +8,11 @@
   <script type="text/brightscript" uri="MediaTile.brs"/>
   <children>
     <Rectangle id="border" width="332" height="320" color="#3c3c3c"/>
-    <Rectangle translation="[2,2]" width="328" height="316" color="#191919"/>
+    <Rectangle id="background" translation="[2,2]" width="328" height="316" color="#191919"/>
     <Poster id="art" translation="[2,2]" width="328" height="184" loadDisplayMode="scaleToFill"/>
-    <Poster translation="[2,90]" width="328" height="96" uri="pkg:/images/card-shade.png"/>
+    <Poster id="shade" translation="[2,90]" width="328" height="96" uri="pkg:/images/card-shade.png"/>
     <Label id="title" translation="[14,148]" width="304" height="34" font="font:MediumSystemFont"/>
-    <Rectangle translation="[2,186]" width="328" height="1" color="#393939"/>
+    <Rectangle id="divider" translation="[2,186]" width="328" height="1" color="#393939"/>
     <Group id="progress" translation="[2,183]" visible="false">
       <Rectangle width="328" height="4" color="#555555"/>
       <Rectangle id="progressFill" width="0" height="4" color="#eec052"/>

@@ -12,12 +12,31 @@ sub updateContent()
     m.top.findNode("progress").visible = fraction > 0
     m.top.findNode("progressFill").width = int(328 * fraction)
     media = item.media
+    collection = false
+    if media <> invalid then collection = media.kind <> invalid and media.kind = "collection"
+    for each id in ["title", "shade", "divider", "metadata", "description"]
+        m.top.findNode(id).visible = not collection
+    end for
+    if collection
+        m.top.findNode("border").height = 188
+        m.top.findNode("background").height = 184
+        m.top.findNode("art").loadDisplayMode = "scaleToFit"
+        m.top.findNode("progress").visible = false
+    else
+        m.top.findNode("border").height = 320
+        m.top.findNode("background").height = 316
+        m.top.findNode("art").loadDisplayMode = "scaleToFill"
+    end if
     metadata = ""
     description = ""
     captions = false
     blocked = false
     if media <> invalid
         if media.year <> invalid then metadata = media.year.toStr()
+        if media.kind <> invalid and media.kind = "show"
+            if metadata <> "" then metadata += " / "
+            metadata += "TV Series"
+        end if
         if media.durationSeconds <> invalid and media.durationSeconds > 0
             minutes = int(media.durationSeconds / 60)
             runtime = minutes.toStr() + "m"

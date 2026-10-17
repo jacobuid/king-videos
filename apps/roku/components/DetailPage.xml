@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="DetailPage" extends="Group">
+  <interface>
+    <field id="item" type="assocarray" onChange="renderItem"/>
+    <field id="similar" type="node" alias="similarRows.content"/>
+    <field id="playLabel" type="string" value="Play" onChange="renderButtons"/>
+    <field id="favorite" type="boolean" onChange="renderButtons"/>
+    <field id="action" type="string" alwaysNotify="true"/>
+    <field id="selectedMedia" type="assocarray" alwaysNotify="true"/>
+    <field id="menuRequested" type="boolean" alwaysNotify="true"/>
+    <field id="backRequested" type="boolean" alwaysNotify="true"/>
+    <field id="notice" type="string" alias="notice.text"/>
+    <function name="activate"/>
+  </interface>
+  <script type="text/brightscript" uri="DetailPage.brs"/>
+  <children>
+    <Rectangle translation="[335,0]" width="1585" height="1080" color="#060708"/>
+    <Poster translation="[335,0]" width="1585" height="1080" uri="pkg:/images/search-backdrop.png"/>
+    <Rectangle translation="[365,55]" width="710" height="475" color="#101112"/>
+    <Poster id="art" translation="[365,55]" width="710" height="475" loadDisplayMode="scaleToFit"/>
+    <Label id="title" translation="[1120,50]" width="735" height="120" wrap="true" maxLines="2" color="#f3cc57" font="font:LargeBoldSystemFont"/>
+    <Label id="metadata" translation="[1125,178]" width="720" height="42" color="#dddddd" font="font:MediumSystemFont"/>
+    <Group id="genres"/>
+    <Label id="description" translation="[1125,300]" width="720" height="142" wrap="true" maxLines="4" color="#dddddd" font="font:MediumSystemFont"/>
+    <Label id="credits" translation="[1125,450]" width="720" height="100" wrap="true" maxLines="4" color="#bbbbbb" font="font:SmallSystemFont"/>
+    <Group id="buttons"/>
+    <MenuRowList id="similarRows" translation="[375,690]" itemComponentName="DetailTile" itemSize="[1460,330]" rowItemSize="[[279,269]]" rowItemSpacing="[[15,0]]" numRows="1" showRowLabel="[true]" rowLabelOffset="[[0,15]]"/>
+    <Label id="notice" translation="[375,1020]" width="1450" height="35" color="#aaaaaa" font="font:SmallSystemFont"/>
+  </children>
+</component>

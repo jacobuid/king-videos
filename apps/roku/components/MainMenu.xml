@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MainMenu" extends="Group">
+  <interface>
+    <field id="activeTitle" type="string" value="Home" onChange="renderMenu"/>
+    <field id="linked" type="boolean" value="true" onChange="configureMenu"/>
+    <field id="homeVideosOnly" type="boolean" value="false" onChange="configureMenu"/>
+    <field id="selectedTitle" type="string" alwaysNotify="true"/>
+    <field id="exitRequested" type="boolean" alwaysNotify="true"/>
+  </interface>
+  <script type="text/brightscript" uri="MainMenu.brs"/>
+  <children>
+    <Rectangle width="335" height="1080" color="#030405"/>
+    <Rectangle translation="[334,45]" width="1" height="990" color="#d5ad45"/>
+    <Poster translation="[30,25]" width="280" height="195" uri="pkg:/images/search-logo.png"/>
+    <Group id="items"/>
+  </children>
+</component>
