@@ -220,7 +220,13 @@ function onKeyEvent(key as string, press as boolean) as boolean
     end if
     if m.zone = "recent"
         if key = "up" then m.index = (m.index + m.recent.count() - 1) mod m.recent.count()
-        if key = "down" then m.index = (m.index + 1) mod m.recent.count()
+        if key = "down"
+            if m.index >= m.recent.count() - 1
+                focusZone("genres")
+                return true
+            end if
+            m.index++
+        end if
         if key = "right" then focusZone("keyboard") : return true
         if key = "left" then focusZone("sidebar") : return true
     else if m.zone = "genres"
