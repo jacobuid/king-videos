@@ -32,5 +32,13 @@
     "retro": true,
     "retroThumbnail": "retro-rainbow-brite-and-the-star-stealer-front.webp",
     "retroBackThumbnail": "retro-rainbow-brite-and-the-star-stealer-back.webp"
+  },
+  {
+    "id": "ringing-bell",
+    "title": "Ringing Bell",
+    "year": 1978,
+    "retro": true,
+    "retroThumbnail": "retro-ringing-bell-front.webp",
+    "retroBackThumbnail": "retro-ringing-bell-back.webp"
   }
 ]
