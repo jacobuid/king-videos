@@ -40,5 +40,53 @@
     "retro": true,
     "retroThumbnail": "retro-ringing-bell-front.webp",
     "retroBackThumbnail": "retro-ringing-bell-back.webp"
+  },
+  {
+    "id": "animalympics",
+    "title": "Animalympics",
+    "year": 1980,
+    "retro": true,
+    "retroThumbnail": "retro-animalympics-front.webp",
+    "retroBackThumbnail": "retro-animalympics-back.webp"
+  },
+  {
+    "id": "gumby-the-movie",
+    "title": "Gumby: The Movie",
+    "year": 1995,
+    "retro": true,
+    "retroThumbnail": "retro-gumby-the-movie-front.webp",
+    "retroBackThumbnail": "retro-gumby-the-movie-back.webp"
+  },
+  {
+    "id": "the-chipmunk-adventure",
+    "title": "The Chipmunk Adventure",
+    "year": 1987,
+    "retro": true,
+    "retroThumbnail": "retro-the-chipmunk-adventure-front.webp",
+    "retroBackThumbnail": "retro-the-chipmunk-adventure-back.webp"
+  },
+  {
+    "id": "alvin-and-the-chipmunks-1983-s08e004",
+    "title": "Batmunk",
+    "year": 1990,
+    "retro": true,
+    "retroThumbnail": "retro-alvin-and-the-chipmunks-1983-s08e004-front.webp",
+    "retroBackThumbnail": "retro-alvin-and-the-chipmunks-1983-s08e004-back.webp"
+  },
+  {
+    "id": "alvin-and-the-chipmunks-1983-s08e005",
+    "title": "Daytona Jones and the Pearl of Wisdom",
+    "year": 1990,
+    "retro": true,
+    "retroThumbnail": "retro-alvin-and-the-chipmunks-1983-s08e005-front.webp",
+    "retroBackThumbnail": "retro-alvin-and-the-chipmunks-1983-s08e005-back.webp"
+  },
+  {
+    "id": "alvin-and-the-chipmunks-1983-s08e007",
+    "title": "Robomunk",
+    "year": 1990,
+    "retro": true,
+    "retroThumbnail": "retro-alvin-and-the-chipmunks-1983-s08e007-front.webp",
+    "retroBackThumbnail": "retro-alvin-and-the-chipmunks-1983-s08e007-back.webp"
   }
 ]
