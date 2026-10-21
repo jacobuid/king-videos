@@ -800,7 +800,7 @@ sub showSection(title as string)
         end for
     else if title = "TV"
         items = shows
-    else if title = "Series"
+    else if title = "Collections"
         for each collection in m.config.collections
             items.push({id: collection.id, title: collection.title, thumbnailUrl: m.config.web + collection.thumbnail, kind: "collection", collection: collection})
         end for

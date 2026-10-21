@@ -5,7 +5,7 @@ sub init()
 end sub
 
 sub configureMenu()
-    m.titles = ["Home", "Search", "Home Videos", "Movies", "Shows", "Series", "Profile", "Unlink Roku"]
+    m.titles = ["Home", "Search", "Home Videos", "Movies", "Shows", "Collections", "Profile", "Unlink Roku"]
     m.icons = ["vhs", "icon", "home-videos", "movies", "shows", "shows", "profile", "link"]
     if m.top.homeVideosOnly
         m.titles = ["Home Videos", "Search", "Profile", "Unlink Roku"]
