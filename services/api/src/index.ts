@@ -142,14 +142,15 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
       await env.DB.prepare('INSERT INTO profiles(id,user_id,name,pin_hash,pin_salt,is_kids,avatar,date_of_birth,home_videos_only) VALUES(?,?,?,?,?,?,?,?,?)').bind(id,userId,name,hash,saltValue,0,avatar,dateOfBirth,body.homeVideosOnly?1:0).run()
       return withCors(json({id,name,hasPin:Boolean(pin),avatar,dateOfBirth,homeVideosOnly:Boolean(body.homeVideosOnly)},201),cors)
     }
-    const profileMatch=path.match(/^\/api\/profiles\/([^/]+)\/(unlock|pin|type|avatar)$/)
+    const profileMatch=path.match(/^\/api\/profiles\/([^/]+)\/(unlock|pin|type|avatar|avatar-access)$/)
     if(profileMatch&&request.method==='POST'){
       const profile=await env.DB.prepare('SELECT * FROM profiles WHERE id=? AND user_id=?').bind(profileMatch[1],userId).first<Profile>();if(!profile)return withCors(json({error:'Profile not found.'},404),cors)
-      const body=await request.json()as{pin?:string;avatar?:string;isKids?:boolean}
-      if(profileMatch[2]==='unlock'){
+      const body=await request.json()as{pin?:string;avatar?:string;isKids?:boolean;passwordOverride?:boolean}
+      if(profileMatch[2]==='avatar-access'||(profileMatch[2]==='avatar'&&(body.passwordOverride||!profile.pin_hash))){if(!auth.has({reverification:{level:'first_factor',afterMinutes:1}}))return withCors(reverificationErrorResponse({level:'first_factor',afterMinutes:1}),cors);if(profileMatch[2]==='avatar-access')return withCors(json({ok:true}),cors)}
+      if(profileMatch[2]==='unlock'||(profileMatch[2]==='avatar'&&profile.pin_hash&&!body.passwordOverride)){
         if(profile.locked_until&&profile.locked_until>Date.now())return withCors(json({error:'Too many attempts. Try again in five minutes.'},429),cors)
         if(profile.pin_hash){const matches=validPin(body.pin||'')&&await verifyPin(env,body.pin!,fromBase64url(profile.pin_salt!),profile.pin_hash);if(!matches){const attempts=profile.failed_attempts+1,locked=attempts>=5?Date.now()+300000:null;await env.DB.prepare('UPDATE profiles SET failed_attempts=?,locked_until=? WHERE id=?').bind(locked?0:attempts,locked,profile.id).run();return withCors(json({error:locked?'Too many attempts. Try again in five minutes.':'Incorrect PIN.'},locked?429:403),cors)}}
-        await env.DB.prepare('UPDATE profiles SET failed_attempts=0,locked_until=NULL WHERE id=?').bind(profile.id).run();const expires=Date.now()+86400000;return withCors(json({token:await encodeProfileToken(env,{userId,profileId:profile.id,version:profile.pin_version,expires}),expires}),cors)
+        await env.DB.prepare('UPDATE profiles SET failed_attempts=0,locked_until=NULL WHERE id=?').bind(profile.id).run();if(profileMatch[2]==='unlock'){const expires=Date.now()+86400000;return withCors(json({token:await encodeProfileToken(env,{userId,profileId:profile.id,version:profile.pin_version,expires}),expires}),cors)}
       }
       if(profileMatch[2]==='avatar'){const avatar=body.avatar?.trim()||'';if(!validAvatar(avatar))return withCors(json({error:'Choose a valid profile picture.'},400),cors);await env.DB.prepare('UPDATE profiles SET avatar=? WHERE id=? AND user_id=?').bind(avatar,profile.id,userId).run();return withCors(json({avatar}),cors)}
       if(!await authorizedProfile(request,env,userId,profile.id))return withCors(json({error:'Unlock this profile first.'},403),cors)
@@ -166,6 +167,8 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
       if(!name||name.length>40)return withCors(json({error:'Enter a profile name up to 40 characters.'},400),cors)
       if(!validBirthDate(dateOfBirth))return withCors(json({error:'Enter a valid date of birth.'},400),cors)
       if(!validAvatar(avatar))return withCors(json({error:'Choose a valid profile picture.'},400),cors)
+      const currentAvatar=await env.DB.prepare('SELECT avatar FROM profiles WHERE id=? AND user_id=?').bind(profileIdMatch[1],userId).first<{avatar:string|null}>()
+      if(currentAvatar?.avatar!==avatar&&!auth.has({reverification:{level:'first_factor',afterMinutes:1}}))return withCors(reverificationErrorResponse({level:'first_factor',afterMinutes:1}),cors)
       await env.DB.prepare('UPDATE profiles SET name=?,is_kids=0,avatar=?,date_of_birth=?,home_videos_only=COALESCE(?,home_videos_only) WHERE id=? AND user_id=?').bind(name,avatar,dateOfBirth,body.homeVideosOnly===undefined?null:body.homeVideosOnly?1:0,profileIdMatch[1],userId).run()
       return withCors(json({id:profileIdMatch[1],name,avatar,dateOfBirth,...(body.homeVideosOnly===undefined?{}:{homeVideosOnly:body.homeVideosOnly})}),cors)
     }
