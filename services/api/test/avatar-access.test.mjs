@@ -44,3 +44,25 @@ test('avatar changes require the target PIN, with lockout and verified Clerk ove
  assert.equal((await save(env,'dad',{passwordOverride:true},true)).status,200)
  }finally{env.sqlite.close();delete globalThis.avatarTestAuth}
 })
+
+test('verified account manager can reset an owned profile PIN without the old PIN',async()=>{
+ const env=fixture()
+ const send=(path,body={},headers={})=>api.fetch(new Request('https://test.invalid'+path,{method:'POST',headers:{'Content-Type':'application/json',...headers},body:JSON.stringify(body)}),env,{})
+ try{
+ await profile(env,'dad','1234');await profile(env,'kid','5678');await profile(env,'other','9999')
+ env.sqlite.prepare('UPDATE profiles SET user_id=? WHERE id=?').run('different-owner','other')
+ globalThis.avatarTestAuth={userId:'owner',has:()=>false}
+ assert.equal((await send('/api/manage-access')).status,403)
+ assert.equal((await send('/api/profiles/kid/pin',{pin:'2222'})).status,403)
+ const unlocked=await(await send('/api/profiles/dad/unlock',{pin:'1234'})).json()
+ assert.equal((await send('/api/profiles/kid/pin',{pin:'2222'},{'X-Manage-Token':unlocked.token})).status,403)
+ globalThis.avatarTestAuth={userId:'owner',has:()=>true}
+ const management=await(await send('/api/manage-access')).json()
+ assert.ok(management.token)
+ const headers={'X-Manage-Token':management.token}
+ assert.equal((await send('/api/profiles/kid/pin',{pin:'2222'},headers)).status,200)
+ assert.equal((await send('/api/profiles/kid/unlock',{pin:'2222'})).status,200)
+ assert.equal((await send('/api/profiles/other/pin',{pin:'2222'},headers)).status,404)
+ assert.equal(env.sqlite.prepare('SELECT pin_version FROM profiles WHERE id=?').get('kid').pin_version,1)
+ }finally{env.sqlite.close();delete globalThis.avatarTestAuth}
+})

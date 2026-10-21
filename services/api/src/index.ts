@@ -57,8 +57,10 @@ async function verifyPin(env:Env,pin:string,salt:Uint8Array,hash:string){return 
 async function encodeProfileToken(env:Env,value:ProfileToken){const body=base64url(encoder.encode(JSON.stringify(value)));const key=await crypto.subtle.importKey('raw',encoder.encode(env.CLERK_SECRET_KEY),{name:'HMAC',hash:'SHA-256'},false,['sign']);return `${body}.${base64url(new Uint8Array(await crypto.subtle.sign('HMAC',key,encoder.encode(body))))}`}
 async function decodeProfileToken(env:Env,token:string):Promise<ProfileToken|null>{try{const[body,signature]=token.split('.');const key=await crypto.subtle.importKey('raw',encoder.encode(env.CLERK_SECRET_KEY),{name:'HMAC',hash:'SHA-256'},false,['verify']);if(!await crypto.subtle.verify('HMAC',key,fromBase64url(signature),encoder.encode(body)))return null;const value=JSON.parse(new TextDecoder().decode(fromBase64url(body)))as ProfileToken;return value.expires>Date.now()?value:null}catch{return null}}
 async function encodeManageToken(env:Env,value:ManageToken){const body=base64url(encoder.encode(JSON.stringify(value)));const key=await crypto.subtle.importKey('raw',encoder.encode(env.CLERK_SECRET_KEY),{name:'HMAC',hash:'SHA-256'},false,['sign']);return `${body}.${base64url(new Uint8Array(await crypto.subtle.sign('HMAC',key,encoder.encode(body))))}`}
-async function authorizedManage(request:Request,env:Env,userId:string){try{const token=request.headers.get('X-Manage-Token')||'',body=await decodeProfileToken(env,token);return Boolean(body&&body.userId===userId)}catch{return false}}
+async function authorizedManage(request:Request,env:Env,userId:string){try{const token=request.headers.get('X-Manage-Token')||'',body=await decodeProfileToken(env,token);return Boolean(body&&body.userId===userId&&body.profileId===undefined&&body.version===undefined)}catch{return false}}
 async function authorizedProfile(request:Request,env:Env,userId:string,profileId:string|undefined|null){if(!profileId)return null;const token=await decodeProfileToken(env,request.headers.get('X-Profile-Token')||'');if(!token||token.userId!==userId||token.profileId!==profileId)return null;const profile=await env.DB.prepare('SELECT pin_version,is_kids,home_videos_only,date_of_birth FROM profiles WHERE id=? AND user_id=?').bind(profileId,userId).first<{pin_version:number;is_kids:number;home_videos_only:number;date_of_birth:string|null}>();return profile&&profile.pin_version===token.version?profile:null}
+
+async function authorizedProfileManagement(request:Request,env:Env,userId:string,profileId:string){if(await authorizedManage(request,env,userId)){const owned=await env.DB.prepare('SELECT id FROM profiles WHERE id=? AND user_id=?').bind(profileId,userId).first();return Boolean(owned)}return Boolean(await authorizedProfile(request,env,userId,profileId))}
 
 export default{async fetch(request:Request,env:Env,context:ExecutionContext):Promise<Response>{
   const origin=request.headers.get('Origin');const cors:Record<string,string>={'Access-Control-Allow-Headers':'Authorization, Content-Type, X-Profile-Token, X-Manage-Token','Access-Control-Allow-Methods':'GET, POST, DELETE, OPTIONS',Vary:'Origin'};if(origin&&origins(env).includes(origin))cors['Access-Control-Allow-Origin']=origin;if(request.method==='OPTIONS')return new Response(null,{headers:cors})
@@ -153,7 +155,7 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
         await env.DB.prepare('UPDATE profiles SET failed_attempts=0,locked_until=NULL WHERE id=?').bind(profile.id).run();if(profileMatch[2]==='unlock'){const expires=Date.now()+86400000;return withCors(json({token:await encodeProfileToken(env,{userId,profileId:profile.id,version:profile.pin_version,expires}),expires}),cors)}
       }
       if(profileMatch[2]==='avatar'){const avatar=body.avatar?.trim()||'';if(!validAvatar(avatar))return withCors(json({error:'Choose a valid profile picture.'},400),cors);await env.DB.prepare('UPDATE profiles SET avatar=? WHERE id=? AND user_id=?').bind(avatar,profile.id,userId).run();return withCors(json({avatar}),cors)}
-      if(!await authorizedProfile(request,env,userId,profile.id))return withCors(json({error:'Unlock this profile first.'},403),cors)
+      if(!await authorizedProfileManagement(request,env,userId,profile.id))return withCors(json({error:'Unlock this profile or verify your account password first.'},403),cors)
       if(profileMatch[2]==='type'){const isKids=Boolean((body as {isKids?:boolean}).isKids);await env.DB.prepare('UPDATE profiles SET is_kids=? WHERE id=?').bind(isKids?1:0,profile.id).run();return withCors(json({isKids}),cors)}
       const pin=body.pin?.trim()||'';if(pin&&!validPin(pin))return withCors(json({error:'PIN must contain exactly four digits.'},400),cors)
       let hash:string|null=null,saltValue:string|null=null;if(pin){const salt=crypto.getRandomValues(new Uint8Array(16));saltValue=base64url(salt);hash=base64url(await pinHash(env,pin,salt))}
@@ -161,7 +163,7 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
     }
     const profileIdMatch=path.match(/^\/api\/profiles\/([^/]+)$/)
     if(profileIdMatch&&request.method==='POST'){
-      if(!await authorizedProfile(request,env,userId,profileIdMatch[1]))return withCors(json({error:'Unlock this profile first.'},403),cors)
+      if(!await authorizedProfileManagement(request,env,userId,profileIdMatch[1]))return withCors(json({error:'Unlock this profile or verify your account password first.'},403),cors)
       const body=await request.json()as{name?:string;avatar?:string;dateOfBirth?:string;homeVideosOnly?:boolean};const name=body.name?.trim(),avatar=body.avatar?.trim()||'bluey.png',dateOfBirth=body.dateOfBirth?.trim()||''
       if(body.homeVideosOnly!==undefined&&typeof body.homeVideosOnly!=='boolean')return withCors(json({error:'Home videos only must be a boolean.'},400),cors)
       if(!name||name.length>40)return withCors(json({error:'Enter a profile name up to 40 characters.'},400),cors)
@@ -173,7 +175,7 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
       return withCors(json({id:profileIdMatch[1],name,avatar,dateOfBirth,...(body.homeVideosOnly===undefined?{}:{homeVideosOnly:body.homeVideosOnly})}),cors)
     }
     if(profileIdMatch&&request.method==='DELETE'){
-      if(!await authorizedProfile(request,env,userId,profileIdMatch[1]))return withCors(json({error:'Unlock this profile first.'},403),cors)
+      if(!await authorizedProfileManagement(request,env,userId,profileIdMatch[1]))return withCors(json({error:'Unlock this profile or verify your account password first.'},403),cors)
       await env.DB.batch([env.DB.prepare('DELETE FROM progress WHERE profile_id=?').bind(profileIdMatch[1]),env.DB.prepare('DELETE FROM favorites WHERE profile_id=?').bind(profileIdMatch[1]),env.DB.prepare('DELETE FROM profiles WHERE id=? AND user_id=?').bind(profileIdMatch[1],userId)])
       return withCors(json({ok:true}),cors)
     }

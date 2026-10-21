@@ -83,7 +83,7 @@ function App(){
   const enterManage=useReverification(async()=>{const token=await getToken();const response=await fetch(`${api}/api/manage-access`,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'}});return response.json()})
   async function updateManagedMedia(id,body){const token=await getToken();const response=await fetch(`${api}/api/manage-media/${encodeURIComponent(id)}`,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json','X-Manage-Token':manageToken},body:JSON.stringify(body)});const data=await response.json();if(!response.ok)throw new Error(data.error||'Could not save video.');return data}
   async function updateManagedSeries(id,body){const token=await getToken();const response=await fetch(`${api}/api/manage-series/${encodeURIComponent(id)}`,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json','X-Manage-Token':manageToken},body:JSON.stringify(body)});const data=await response.json();if(!response.ok)throw new Error(data.error||'Could not save series.');return data}
-  const updateProfile=useReverification(async(id,body)=>{const token=await getToken();const response=await fetch(`${api}/api/profiles/${id}`,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json','X-Profile-Token':profileToken},body:JSON.stringify(body)});return response.json()})
+  const updateProfile=useReverification(async(id,body)=>{const token=await getToken();const response=await fetch(`${api}/api/profiles/${id}`,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json','X-Profile-Token':profileToken,...(manageToken?{'X-Manage-Token':manageToken}:{})},body:JSON.stringify(body)});return response.json()})
   async function openManage(target='manage'){try{setError('');const result=await enterManage();if(result?.ok){setManageToken(result.token||'');setView(target)}}catch(e){if(e?.name!=='ClerkRuntimeError')setError(e.message||'Password verification was cancelled.')}}
   useEffect(()=>{
     if(!userId)return
@@ -113,7 +113,7 @@ function App(){
   },[userId])
   useEffect(()=>{if(profile&&profileToken){const startedAt=Date.now();setLibraryLoading(true);Promise.all([loadLibrary(profile.id),request(`/api/progress?profileId=${encodeURIComponent(profile.id)}`),request(`/api/favorites?profileId=${encodeURIComponent(profile.id)}`)]).then(([items,positions,saved])=>{setMedia(items);setProgress(positions);setFavorites(saved.map(item=>item.mediaId))}).catch(e=>setError(e.message)).finally(()=>finishLoading(setLibraryLoading,startedAt))}},[profile,profileToken])
   function resetForm(){setForm({name:'',dateOfBirth:'',pin:'',removePin:false,homeVideosOnly:false,avatar:'bluey.png'})}
-  function begin(item,action){setError('');if(item.hasPin){setPending({profile:item,action});setPin('')}else unlock(item,'',action)}
+  function begin(item,action){setError('');if(action==='edit'&&manageToken){setProfileToken('');setProfile(item);setForm({name:item.name,dateOfBirth:item.dateOfBirth||'',homeVideosOnly:Boolean(item.homeVideosOnly),pin:'',removePin:false,avatar:item.avatar||'bluey.png'});setView('edit');return}if(item.hasPin){setPending({profile:item,action});setPin('')}else unlock(item,'',action)}
   async function unlock(item,enteredPin,action){
     if(unlockLoading)return
     setUnlockLoading(true)
