@@ -44,3 +44,17 @@ test('manage filters preserve rating, series search and age range',()=>{
  assert.equal(managePage(rows,'','PG','8','15',50,0)[0].title,'Movie')
  assert.equal(managePage(rows,'','missing','','',50,0)[0].title,'Other')
 })
+
+test('manage upload and title sorting happen before pagination',()=>{
+ const rows=[
+  {title:'Zebra',series_title:null,rating:'PG',min_age:6,created_at:'2026-10-21 12:00:00'},
+  {title:'Apple',series_title:null,rating:'PG',min_age:6,created_at:'2026-10-20 12:00:00'},
+  {title:'Middle',series_title:null,rating:'G',min_age:0,created_at:'2026-10-19 12:00:00'},
+ ]
+ assert.equal(managePage(rows,'','','','',1,0,'uploaded-desc')[0].title,'Zebra')
+ assert.equal(managePage(rows,'','','','',1,0,'uploaded-asc')[0].title,'Middle')
+ assert.equal(managePage(rows,'','','','',1,0,'title-asc')[0].title,'Apple')
+ assert.equal(managePage(rows,'','','','',1,0,'title-desc')[0].title,'Zebra')
+ assert.equal(managePage(rows,'','PG','','',1,0,'uploaded-asc')[0].title,'Apple')
+ assert.equal(rows[0].title,'Zebra')
+})
