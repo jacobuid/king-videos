@@ -58,3 +58,10 @@ test('manage upload and title sorting happen before pagination',()=>{
  assert.equal(managePage(rows,'','PG','','',1,0,'uploaded-asc')[0].title,'Apple')
  assert.equal(rows[0].title,'Zebra')
 })
+
+test('manage quality filter applies before pagination and supports unknown quality',()=>{
+ const rows=[{title:'HD',series_title:null,rating:'PG',min_age:6,quality:'1080p'},{title:'SD',series_title:null,rating:'PG',min_age:6,quality:'480p'},{title:'Unmeasured',series_title:null,rating:null,min_age:0,quality:null}]
+ assert.equal(managePage(rows,'','','','',1,0,'uploaded-desc','480p')[0].title,'SD')
+ assert.equal(managePage(rows,'','','','',1,0,'uploaded-desc','unknown')[0].title,'Unmeasured')
+ assert.equal(managePage(rows,'','PG','','',10,0,'uploaded-desc','1080p').length,1)
+})

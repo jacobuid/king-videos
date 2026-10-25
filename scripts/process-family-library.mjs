@@ -5,6 +5,7 @@ import {Readable} from 'node:stream';
 import {createGunzip} from 'node:zlib';
 import {createInterface} from 'node:readline';
 import sharp from 'sharp';
+import {videoQuality} from './video-quality.mjs';
 import {classicGenres} from './media-genres.mjs';
 
 // Batch inputs are generated and ignored by Git. Keep originals; discard only
@@ -72,22 +73,29 @@ async function processJob(job,w){
  const before=statSync(job.path);await pause(10000);const after=statSync(job.path);if(after.size!==before.size||after.mtimeMs!==before.mtimeMs)throw Error('Source still changing');
  const disk=statfsSync('C:/');if(disk.bavail*disk.bsize<5*1024**3)throw Error('Less than 5 GiB free; source retained');
  const p=probe(job.path),v=p.streams.find(s=>s.codec_type==='video'),a=p.streams.find(s=>s.codec_type==='audio');
- const copyVideo=['h264','hevc'].includes(v.codec_name);if(!copyVideo&&v.pix_fmt!=='yuv420p')throw Error('Compatibility conversion needs bit-depth review');
+ const webCompatible=process.env.FAMILY_WEB_COMPAT==='1';
+ const copyVideo=webCompatible?v.codec_name==='h264'&&v.pix_fmt==='yuv420p':['h264','hevc'].includes(v.codec_name);
+ const outputPixelFormat=webCompatible?'yuv420p':v.pix_fmt;
+ const sourceVideoRate=Number(v.bit_rate)||Math.max(0,Number(p.format.bit_rate)-p.streams.filter(s=>s.codec_type==='audio').reduce((sum,s)=>sum+Number(s.bit_rate||128000),0));
+ const targetVideoRate=Math.round(Math.min(v.width>=1920?3200000:2200000,Math.max(1200000,sourceVideoRate*1.5))/1000)*1000;
+ if(!copyVideo&&!['yuv420p',...(webCompatible?['yuv420p10le']:[])].includes(v.pix_fmt))throw Error('Compatibility conversion needs bit-depth review');
  const folder=join(output,job.id);mkdirSync(folder,{recursive:true});
  const video=join(folder,job.id+'.mp4'),partial=join(folder,job.id+'.partial.mp4');
  const compatibleAudio=a.codec_name==='aac'&&a.channels<=2;
- function validate(file){const out=probe(file),ov=out.streams.find(s=>s.codec_type==='video');if(ov?.width!==v.width||ov.height!==v.height||ov.pix_fmt!==v.pix_fmt||ov.codec_name!==(copyVideo?v.codec_name:'h264')||(!copyVideo&&(ov.profile!=='High'||ov.level>41))||Math.abs(Number(out.format.duration)-Number(p.format.duration))>3||!out.streams.some(s=>s.codec_type==='audio'&&s.codec_name==='aac'&&s.channels<=2))throw Error('Output validation failed; original retained');}
+ function validate(file){const out=probe(file),ov=out.streams.find(s=>s.codec_type==='video');if(ov?.width!==v.width||ov.height!==v.height||ov.pix_fmt!==outputPixelFormat||ov.codec_name!==(copyVideo?v.codec_name:'h264')||(!copyVideo&&(ov.profile!=='High'||ov.level>41))||Math.abs(Number(out.format.duration)-Number(p.format.duration))>3||!out.streams.some(s=>s.codec_type==='audio'&&s.codec_name==='aac'&&s.channels<=2))throw Error('Output validation failed; original retained');}
  w.stage=copyVideo?'preserving original video':'GPU compatibility conversion';save();
  if(!existsSync(video)){
   const args=['-hide_banner','-v','error','-xerror','-y','-i',job.path,'-map','0:v:0','-map','0:a:0'];
   if(!compatibleAudio&&a.channels>2)args.push('-map','0:a:0');
   args.push('-c:v',copyVideo?'copy':'h264_nvenc');
-  if(!copyVideo)args.push('-preset','p7','-tune','hq','-rc','vbr','-cq','12','-b:v','0','-spatial-aq','1','-temporal-aq','1','-rc-lookahead','32','-bf','3','-pix_fmt',v.pix_fmt,'-profile:v','high','-level:v','4.1','-maxrate','10M','-bufsize','20M','-g','120','-fps_mode','passthrough');
-  if(v.codec_name==='hevc')args.push('-tag:v','hvc1');
+  if(!copyVideo)args.push('-preset','p7','-tune','hq','-rc','vbr','-multipass','fullres','-b:v',String(targetVideoRate),'-spatial-aq','1','-temporal-aq','1','-rc-lookahead','32','-bf','3','-pix_fmt',outputPixelFormat,'-profile:v','high','-level:v','4.1','-maxrate',String(Math.round(targetVideoRate*1.5)),'-bufsize',String(targetVideoRate*3),'-g','120','-fps_mode','passthrough');
+  if(copyVideo&&v.codec_name==='hevc')args.push('-tag:v','hvc1');
   if(compatibleAudio)args.push('-c:a','copy');else{args.push('-c:a:0','aac','-b:a:0','192k','-ac:a:0','2');if(a.channels>2)args.push('-c:a:1','copy','-disposition:a:0','default','-disposition:a:1','0');}
   args.push('-movflags','+faststart','-progress','pipe:1',partial);
   await run(join(bin,'ffmpeg.exe'),args,`logs/family-${job.id}-prepare.log`,line=>{if(line.startsWith('out_time_us=')){w.progress=Math.min(99,Number(line.slice(12))/1e6/Number(p.format.duration)*100);save();}});
-  validate(partial);renameSync(partial,video);
+  validate(partial);
+  if(!copyVideo){const allowance=Number(p.format.duration)*(targetVideoRate+1000000)/8*1.1;if(statSync(partial).size>allowance)throw Error('Converted file exceeded size budget; upload refused');}
+  renameSync(partial,video);
  }else validate(video);
  const manifestFolder=resolve(`media-imports/${batch}`,job.id);mkdirSync(manifestFolder,{recursive:true});
  const thumbnail=join(manifestFolder,'thumbnail.webp');if(!job.images.length)throw Error('Missing thumbnail');
@@ -98,12 +106,13 @@ async function processJob(job,w){
  let sub=subs.find(f=>d.type!=='tv'||basename(f).toLowerCase().startsWith(stem));
  if(!sub){const track=p.streams.filter(s=>s.codec_type==='subtitle'&&['subrip','ass','ssa','webvtt','mov_text'].includes(s.codec_name)&&!s.disposition?.forced&&(/^(eng|en)$/i.test(s.tags?.language||'')||/english/i.test(s.tags?.title||''))).sort((a,b)=>Number(/sdh/i.test(a.tags?.title||''))-Number(/sdh/i.test(b.tags?.title||'')))[0];if(track){sub=join(folder,job.id+'.en.srt');await run(join(bin,'ffmpeg.exe'),['-v','error','-y','-i',job.path,'-map',`0:${track.index}`,'-c:s','srt',sub],`logs/family-${job.id}-captions.log`);}}
  if(sub&&resolve(sub)!==resolve(join(folder,job.id+'.en'+sub.slice(-4))))copyFileSync(sub,join(folder,job.id+'.en'+sub.slice(-4)));
- const manifest={id:job.id,title:job.title,category:'movie',year:d.year,description:d.description,rating:d.rating,minAge:d.minAge,kids:d.minAge===0,video,thumbnail,duration:Math.round(Number(p.format.duration)),genres:metadata[d.imdbId].genres,imdbId:d.imdbId,metadataSources:[`https://www.imdb.com/title/${d.imdbId}/`],sourceVideo:job.path,processing:copyVideo?'Original video copied without re-encoding':'H.264 NVIDIA NVENC P7 HQ CQ 12 compatibility conversion; original resolution and frame rate retained; original source preserved'};
+ const manifest={quality:videoQuality(v.width,v.height),id:job.id,title:job.title,category:'movie',year:d.year,description:d.description,rating:d.rating,minAge:d.minAge,kids:d.minAge===0,video,thumbnail,duration:Math.round(Number(p.format.duration)),genres:metadata[d.imdbId].genres,imdbId:d.imdbId,metadataSources:[`https://www.imdb.com/title/${d.imdbId}/`],sourceVideo:job.path,processing:copyVideo?'Original video copied without re-encoding':`H.264 NVIDIA NVENC P7 HQ VBR ${targetVideoRate} bps; original resolution and frame timing retained; original source preserved`};
  const manifestPath=join(manifestFolder,'media.json');writeFileSync(manifestPath,JSON.stringify(manifest,null,2)+'\n');
  w.stage='upload';w.progress=0;save();
  await run(process.execPath,['--env-file=.env','--import','./scripts/b2-upload-agent.mjs','scripts/import-b2-movie.mjs',manifestPath,'--folder',folder,'--upload-only','--resume','--concurrency','2'],`logs/family-${job.id}-upload.log`,line=>{if(line.startsWith('KINGFLIX_UPLOAD_PROGRESS ')){const progress=JSON.parse(line.slice(24));Object.assign(w,{progress:progress.progress,bytesSent:progress.bytesSent,totalBytes:progress.totalBytes});save();}});
  w.stage='publishing';save();
  await query('INSERT INTO media(id,title,description,category,video_key,thumbnail_key,subtitle_key,mime_type,kids_allowed,series_id,series_title,season_number,episode_number,year,genres,rating,duration_seconds,blocked,min_age) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[job.id,job.title,d.description,d.type,`movies/${job.id}/${job.id}.mp4`,`movies/${job.id}/thumbnail.webp`,sub?`movies/${job.id}/${job.id}.en.vtt`:null,'video/mp4',d.minAge===0?1:0,d.type==='tv'?d.id:null,d.type==='tv'?d.title:null,job.season??null,job.episode??null,d.year,JSON.stringify(manifest.genres),d.rating,manifest.duration,0,d.minAge]);
+ await query('UPDATE media SET quality=? WHERE id=?',[manifest.quality,job.id]);
  completed.push({id:job.id,title:w.title,publishedAt:new Date().toISOString(),videoCopied:copyVideo,encoder:copyVideo?'copy':'h264_nvenc'});writeFileSync(reportPath,JSON.stringify(completed,null,2)+'\n');state.completed++;
  // The importer checks each uploaded video's SHA-1 and size before publication.
  // Only remove this generated file, never any original or another batch output.

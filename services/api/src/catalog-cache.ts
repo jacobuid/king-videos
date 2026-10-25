@@ -22,9 +22,9 @@ export function libraryPage<T extends {title:string;min_age:number;category:stri
   const term=search.toLowerCase()
   return rows.filter(m=>m.title.toLowerCase().includes(term)&&m.min_age<=age&&(!homeOnly||m.category.toLowerCase().replace(/[- ]/g,'').includes('homevideo'))).slice(offset,offset+limit)
 }
-export function managePage<T extends {title:string;series_title:string|null;rating:string|null;min_age:number;created_at?:string}>(rows:T[],search:string,rating:string,ageFrom:string,ageTo:string,limit:number,offset:number,sort='uploaded-desc'){
+export function managePage<T extends {title:string;series_title:string|null;rating:string|null;min_age:number;created_at?:string;quality?:string|null}>(rows:T[],search:string,rating:string,ageFrom:string,ageTo:string,limit:number,offset:number,sort='uploaded-desc',quality=''){
   const term=search.toLowerCase()
-  const filtered=rows.filter(m=>(m.title.toLowerCase().includes(term)||(m.series_title||'').toLowerCase().includes(term))&&(!rating||(rating==='missing'?!m.rating?.trim():m.rating===rating))&&(!ageFrom||m.min_age>=Number(ageFrom))&&(!ageTo||m.min_age<=Number(ageTo)))
+  const filtered=rows.filter(m=>(!quality||(quality==='unknown'?!m.quality:m.quality===quality))&&(m.title.toLowerCase().includes(term)||(m.series_title||'').toLowerCase().includes(term))&&(!rating||(rating==='missing'?!m.rating?.trim():m.rating===rating))&&(!ageFrom||m.min_age>=Number(ageFrom))&&(!ageTo||m.min_age<=Number(ageTo)))
   if(sort==='title-asc'||sort==='title-desc')filtered.sort((a,b)=>(sort==='title-desc'?-1:1)*(a.series_title||a.title).localeCompare(b.series_title||b.title))
   else if(sort==='uploaded-asc')filtered.sort((a,b)=>String(a.created_at||'').localeCompare(String(b.created_at||'')))
   // The cached catalog already orders newest uploads first, including stable ties.
