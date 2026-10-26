@@ -230,7 +230,9 @@ export const collections = [
     "title": "Marvel",
     "thumbnail": "series/marvel.webp",
     "description": "Marvel heroes, from the Avengers to Spider-Man.",
-    "showIds": [],
+    "showIds": [
+      "spider-man-the-animated-series"
+    ],
     "mediaIds": [
       "ant-man",
       "the-avengers",
@@ -318,8 +320,10 @@ export const collections = [
     "id": "spider-man",
     "title": "Spider-Man",
     "thumbnail": "series/spider-man.webp",
-    "description": "Peter Parker’s adventures across the Spider-Man movies.",
-    "showIds": [],
+    "description": "Peter Parker’s adventures across the Spider-Man movies and animated series.",
+    "showIds": [
+      "spider-man-the-animated-series"
+    ],
     "mediaIds": [
       "spider-man-3",
       "the-amazing-spider-man",
