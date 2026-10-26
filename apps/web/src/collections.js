@@ -351,5 +351,51 @@ export const collections = [
       "star-wars-episode-vii-the-force-awakens",
       "star-wars-episode-viii-the-last-jedi"
     ]
+  },
+  {
+    "id": "jurassic",
+    "title": "Jurassic Park & World",
+    "thumbnail": "series/jurassic.webp",
+    "description": "Explore Jurassic Park and Jurassic World across six dinosaur adventures.",
+    "showIds": [],
+    "mediaIds": [
+      "jurassic-park",
+      "the-lost-world-jurassic-park",
+      "jurassic-park-iii",
+      "jurassic-world",
+      "jurassic-world-dominion",
+      "jurassic-world-fallen-kingdom"
+    ]
+  },
+  {
+    "id": "alvin-and-the-chipmunks",
+    "title": "Alvin and the Chipmunks",
+    "thumbnail": "series/alvin-and-the-chipmunks.webp",
+    "description": "Alvin, Simon, and Theodore in their movies and classic adventures.",
+    "showIds": [],
+    "mediaIds": [
+      "alvin-and-the-chipmunks",
+      "alvin-and-the-chipmunks-the-squeakquel",
+      "the-chipmunk-adventure",
+      "alvin-and-the-chipmunks-1983-s08e004",
+      "alvin-and-the-chipmunks-1983-s08e005",
+      "alvin-and-the-chipmunks-1983-s08e007"
+    ]
+  },
+  {
+    "id": "superman",
+    "title": "Superman",
+    "thumbnail": "series/superman.webp",
+    "description": "The Man of Steel in live-action movies and animated adventures.",
+    "showIds": [
+      "max-fleischers-superman",
+      "superman-the-animated-series"
+    ],
+    "mediaIds": [
+      "superman-doomsday",
+      "superman-brainiac-attacks",
+      "superman-returns",
+      "man-of-steel"
+    ]
   }
 ]
