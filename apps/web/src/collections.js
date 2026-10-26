@@ -229,7 +229,7 @@ export const collections = [
     "id": "marvel",
     "title": "Marvel",
     "thumbnail": "series/marvel.webp",
-    "description": "Marvel heroes, from the Avengers to Spider-Man.",
+    "description": "Marvel heroes, from the Avengers and Spider-Man to the X-Men.",
     "showIds": [
       "spider-man-the-animated-series"
     ],
@@ -264,7 +264,14 @@ export const collections = [
       "fantastic-four-2005",
       "elektra",
       "fantastic-four-rise-of-the-silver-surfer",
-      "fantastic-four-2015"
+      "fantastic-four-2015",
+      "x-men",
+      "x2",
+      "x-men-the-last-stand",
+      "x-men-origins-wolverine",
+      "x-men-first-class",
+      "the-wolverine",
+      "x-men-days-of-future-past"
     ]
   },
   {
