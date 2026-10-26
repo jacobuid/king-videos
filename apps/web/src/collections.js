@@ -397,5 +397,71 @@ export const collections = [
       "superman-returns",
       "man-of-steel"
     ]
+  },
+  {
+    "id": "air-bud",
+    "title": "Air Bud",
+    "thumbnail": "series/air-bud.webp",
+    "description": "Buddy brings his talents to basketball, football, soccer, baseball, and volleyball.",
+    "showIds": [],
+    "mediaIds": [
+      "air-bud",
+      "air-bud-golden-receiver",
+      "air-bud-seventh-inning-fetch",
+      "air-bud-spikes-back",
+      "air-bud-world-pup"
+    ]
+  },
+  {
+    "id": "narnia",
+    "title": "The Chronicles of Narnia",
+    "thumbnail": "series/narnia.webp",
+    "description": "Journey through the magical world of Narnia.",
+    "showIds": [],
+    "mediaIds": [
+      "the-chronicles-of-narnia-prince-caspian",
+      "the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe",
+      "the-chronicles-of-narnia-the-voyage-of-the-dawn-treader"
+    ]
+  },
+  {
+    "id": "pirates-of-the-caribbean",
+    "title": "Pirates of the Caribbean",
+    "thumbnail": "series/pirates-of-the-caribbean.webp",
+    "description": "Jack Sparrow and friends sail into adventure.",
+    "showIds": [],
+    "mediaIds": [
+      "pirates-of-the-caribbean-on-stranger-tides",
+      "pirates-of-the-caribbean-the-curse-of-the-black-pearl",
+      "pirates-of-the-caribbean-dead-mans-chest",
+      "pirates-of-the-caribbean-at-worlds-end"
+    ]
+  },
+  {
+    "id": "spy-kids",
+    "title": "Spy Kids",
+    "thumbnail": "series/spy-kids.webp",
+    "description": "The whole family joins the mission in these spy adventures.",
+    "showIds": [],
+    "mediaIds": [
+      "spy-kids",
+      "spy-kids-2-the-island-of-lost-dreams",
+      "spy-kids-3-d-game-over",
+      "spy-kids-all-the-time-in-the-world"
+    ]
+  },
+  {
+    "id": "the-hunger-games",
+    "title": "The Hunger Games",
+    "thumbnail": "series/the-hunger-games.webp",
+    "description": "The Hunger Games saga and The Ballad of Songbirds & Snakes.",
+    "showIds": [],
+    "mediaIds": [
+      "the-hunger-games",
+      "the-hunger-games-catching-fire",
+      "the-hunger-games-mockingjay-part-1",
+      "the-hunger-games-mockingjay-part-2",
+      "the-hunger-games-the-ballad-of-songbirds-and-snakes"
+    ]
   }
 ]
