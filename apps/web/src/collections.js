@@ -271,7 +271,9 @@ export const collections = [
       "x-men-origins-wolverine",
       "x-men-first-class",
       "the-wolverine",
-      "x-men-days-of-future-past"
+      "x-men-days-of-future-past",
+      "the-punisher",
+      "punisher-war-zone"
     ]
   },
   {
