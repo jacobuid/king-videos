@@ -88,5 +88,13 @@
     "retro": true,
     "retroThumbnail": "retro-alvin-and-the-chipmunks-1983-s08e007-front.webp",
     "retroBackThumbnail": "retro-alvin-and-the-chipmunks-1983-s08e007-back.webp"
+  },
+  {
+    "id": "the-good-the-bad-and-huckleberry-hound",
+    "title": "The Good, the Bad, and Huckleberry Hound",
+    "year": 1988,
+    "retro": true,
+    "retroThumbnail": "retro-the-good-the-bad-and-huckleberry-hound-front.webp",
+    "retroBackThumbnail": "retro-the-good-the-bad-and-huckleberry-hound-back.webp"
   }
 ]
