@@ -476,5 +476,27 @@ export const collections = [
       "the-hunger-games-mockingjay-part-2",
       "the-hunger-games-the-ballad-of-songbirds-and-snakes"
     ]
+  },
+  {
+    "id": "teeny-bopper",
+    "title": "Teeny Bopper",
+    "thumbnail": "series/teeny-bopper.webp",
+    "description": "Teen comedy and musical favorites, from iCarly and Hannah Montana to High School Musical and The Princess Diaries.",
+    "showIds": [
+      "icarly",
+      "drake-and-josh",
+      "hannah-montana",
+      "lizzie-mcguire"
+    ],
+    "mediaIds": [
+      "the-lizzie-mcguire-movie",
+      "high-school-musical",
+      "high-school-musical-2",
+      "high-school-musical-3-senior-year",
+      "camp-rock",
+      "camp-rock-2-the-final-jam",
+      "the-princess-diaries",
+      "the-princess-diaries-2-royal-engagement"
+    ]
   }
 ]
