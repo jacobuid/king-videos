@@ -24,3 +24,40 @@
 .king-auth-profile-dropdown button{display:block;width:100%;margin-top:8px;text-align:left}
 .king-auth-account-dialog section{margin-top:24px}
 .king-auth-account-dialog input{max-width:100%}
+
+.signed-out.auth-screen{min-height:100svh;padding:40px 20px 48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;background:radial-gradient(ellipse at 50% 0%,#19221d 0,transparent 65%),#0c100e}
+.auth-brand .brand-logo{display:block;width:min(270px,65vw);height:auto;margin:0}
+.auth-screen .auth-panel{width:min(100%,600px);padding:46px 47px 42px;border:1px solid #303a33;border-radius:24px;background:#151b17;box-shadow:0 24px 80px #0003;text-align:left}
+.auth-panel .auth-tabs{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:5px;border-radius:11px;background:#202922}
+.auth-panel .auth-tabs button{min-height:47px;padding:10px 12px;border:0;border-radius:8px;background:transparent;color:#a3b1a8;font-size:.95rem;font-weight:500;transition:background .15s,color .15s}
+.auth-panel .auth-tabs button[aria-pressed=true]{background:#354239;color:#f4f8f5;box-shadow:0 2px 7px #0003}
+.auth-panel .auth-tabs button:hover{color:#fff;background:#2b372f}
+.auth-heading{margin:38px 0}
+.auth-screen .auth-heading h1{margin:0 0 14px;color:#f3f6f3;font-size:30px;font-weight:700;line-height:1.2;letter-spacing:-.035em}
+.auth-heading p{margin:0;color:#a3b1a8;font-size:15px;line-height:1.65}
+.auth-panel .king-auth-form{gap:0}
+.auth-panel .king-auth-form>h2:empty{display:none}
+.auth-panel .king-auth-form>h2{margin:0 0 20px;font-size:21px}
+.auth-panel .king-auth-fields{min-width:0;margin:0;padding:0;border:0;gap:24px}
+.auth-panel .king-auth-field{gap:10px;min-width:0}
+.auth-panel .king-auth-field:has(>[hidden]){display:none}
+.auth-panel .king-auth-field>label{color:#e4ece6;font-size:14px;font-weight:500}
+.auth-panel .king-auth-form input:not([type=checkbox]){height:57px;padding:15px 16px;border:1px solid #3b493f;border-radius:10px;background:#111713;color:#f3f6f3;font-size:16px;outline-offset:3px}
+.auth-panel .king-auth-form input:not([type=checkbox]):focus{border-color:#79b89a;outline:2px solid #79b89a33;outline-offset:1px}
+.auth-panel .king-auth-field>label:has(input[type=checkbox]){display:flex;align-items:flex-start;gap:10px;color:#a3b1a8;font-size:13px;font-weight:400;line-height:1.5}
+.auth-panel input[type=checkbox]{width:16px;height:16px;flex:none;margin:2px 0 0;accent-color:#71af8e}
+.auth-panel .king-auth-password{position:relative;display:block}
+.auth-panel .king-auth-password input{padding-right:52px!important}
+.auth-panel .king-auth-password-toggle{position:absolute;top:50%;right:9px;display:grid;place-items:center;width:36px;height:36px;transform:translateY(-50%);border:0;background:transparent;color:#99ad9f}
+.auth-panel .king-auth-password-toggle:hover{background:#26342b;color:#fff}
+.auth-panel .king-auth-form button[type=submit]{position:relative;width:100%;min-height:59px;margin:0;padding:16px 48px;border:1px solid #3d7c5f;border-radius:10px;background:#24563e;color:#fff;font-size:16px;font-weight:600;transition:background .15s}
+.auth-panel .king-auth-form button[type=submit]::after{margin-left:12px;content:'↗' / '';font-weight:400}
+.auth-panel .king-auth-form button[type=submit]:hover{background:#2d6a4d}
+.auth-panel .king-auth-error,.auth-panel .king-auth-status{margin:14px 0 0;font-size:14px;line-height:1.6}
+.auth-panel .king-auth-status:empty{display:none}
+.auth-panel .auth-link{display:block;width:fit-content;min-height:36px;margin:17px auto 0;padding:8px 0;border:0;border-radius:3px;background:transparent;color:#9fc7ae;font-size:14px;text-underline-offset:3px}
+.auth-panel .auth-link:hover{color:#d7eddf}
+.auth-approval-note{margin:20px 0 0;color:#a3b1a8;font-size:13px;line-height:1.6;text-align:center}
+.auth-footer{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:48px;padding-top:28px;border-top:1px solid #2d3830;color:#8b9e91;font-size:13px}
+.auth-footer svg{flex:none}
+@media(max-width:560px){.signed-out.auth-screen{padding:26px 16px 32px;gap:24px}.auth-screen .auth-panel{padding:25px 23px 28px;border-radius:19px}.auth-heading{margin:30px 0}.auth-screen .auth-heading h1{font-size:28px}.auth-panel .auth-tabs button{font-size:14px}.auth-footer{margin-top:32px;padding-top:24px}}
