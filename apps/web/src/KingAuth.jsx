@@ -11,8 +11,8 @@ export function AuthGate({children,logo}){
 function SessionGate({children,logo}){
   const {user,isSignedIn,isLoading,error,refresh}=useAuth()
   const [screen,setScreen]=useState('signin')
-  if(isLoading)return <main className="signed-out">{logo}<p role="status">Checking your account…</p></main>
-  if(error)return <main className="signed-out">{logo}<p role="alert">KingAuth is unavailable. Please try again.</p><button onClick={()=>refresh().catch(()=>{})}>Try again</button></main>
+  if(isLoading)return <main className="signed-out auth-screen"><div className="auth-brand">{logo}</div><section className="auth-panel auth-state"><p role="status">Checking your account…</p></section></main>
+  if(error)return <main className="signed-out auth-screen"><div className="auth-brand">{logo}</div><section className="auth-panel auth-state"><h1>Unable to connect.</h1><p role="alert">KingAuth is unavailable. Please try again.</p><button type="button" onClick={()=>refresh().catch(()=>{})}>Try again</button></section></main>
   if(isSignedIn)return <React.Fragment key={user.id}>{children}</React.Fragment>
   const heading=screen==='signup'?'Create your account.':screen==='reset'?'Reset your password.':'Welcome back.'
   const description=screen==='signup'?'One King Auth account for all your King apps.':screen==='reset'?'We’ll help you get back to your account.':'Sign in to your King Auth account.'
