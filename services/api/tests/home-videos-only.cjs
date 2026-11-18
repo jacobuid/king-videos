@@ -10,9 +10,9 @@ registerHooks({resolve(specifier,context,next){
 const loaded=import('../src/index.ts')
 globalThis.caches={default:{match:async()=>undefined,put:async()=>{}}}
 const secret='test-secret',body=Buffer.from(JSON.stringify({userId:'user',profileId:'profile',version:1,expires:Date.now()+60000})).toString('base64url'),token=body+'.'+createHmac('sha256',secret).update(body).digest('base64url')
-async function call(path,restricted,category,method='POST'){
+async function call(path,restricted,category,method='POST',catalogSize=120){
   const queries=[]
-  const env={APP_SIGNING_SECRET:secret,WEB_ORIGIN:'https://example.com',DB:{prepare(sql){const statement={bind(...args){queries.push({sql,args});return statement},async first(){return sql.includes('FROM profiles')?{pin_version:1,home_videos_only:restricted,date_of_birth:'1990-01-01'}:{id:'video',category,min_age:0,blocked:0,video_key:'movies/test.mp4',mime_type:'video/mp4',source_url:null,subtitle_url:null,subtitle_key:null}},async all(){return {results:Array.from({length:120},(_,i)=>({id:String(i),title:'Video '+i,category:i%2?'Home Videos':'Movies',min_age:0,genres:'[]'})),meta:{rows_read:120}}}};return statement}}}
+  const env={APP_SIGNING_SECRET:secret,WEB_ORIGIN:'https://example.com',DB:{prepare(sql){const statement={bind(...args){queries.push({sql,args});return statement},async first(){return sql.includes('FROM profiles')?{pin_version:1,home_videos_only:restricted,date_of_birth:'1990-01-01'}:{id:'video',category,min_age:0,blocked:0,video_key:'movies/test.mp4',mime_type:'video/mp4',source_url:null,subtitle_url:null,subtitle_key:null}},async all(){return {results:Array.from({length:catalogSize},(_,i)=>({id:String(i),title:'Video '+i,category:i%2?'Home Videos':'Movies',min_age:0,genres:'[]'})),meta:{rows_read:catalogSize}}}};return statement}}}
   const request=new Request('https://example.com'+path,{method,headers:{Origin:'https://example.com',Authorization:'Bearer test-credential','X-Profile-Token':token,'Content-Type':'application/json'},...(method==='POST'?{body:JSON.stringify({profileId:'profile'})}:{})})
   return {response:await (await loaded).default.fetch(request,env,{}),queries}
 }
@@ -32,4 +32,16 @@ test('catalog restriction is applied before pagination for all catalog routes',a
     assert.equal(items.length,restricted?10:50)
     if(restricted)assert.ok(items.every(item=>item.category==='Home Videos'))
   }
+})
+
+test('browser catalog batches up to 500 titles and preserves profile restrictions',async()=>{
+  const batch=await call('/api/library?profileId=profile&limit=500',0,'','GET',700)
+  assert.equal(batch.response.status,200)
+  assert.equal((await batch.response.json()).length,500)
+  const restricted=await call('/api/library?profileId=profile&limit=500',1,'','GET',700)
+  const items=await restricted.response.json()
+  assert.equal(items.length,350)
+  assert.ok(items.every(item=>item.category==='Home Videos'))
+  const capped=await call('/api/library?profileId=profile&limit=999999',0,'','GET',700)
+  assert.equal((await capped.response.json()).length,500)
 })
