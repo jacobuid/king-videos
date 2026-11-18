@@ -5,7 +5,8 @@
 .king-auth-password{display:flex;align-items:center;gap:6px}
 .king-auth-password input{flex:1}
 .king-auth-form button,.auth-dialog button,.auth-panel button{padding:10px 16px;border:1px solid #777;border-radius:4px;background:#252525;color:#fff;font:inherit;cursor:pointer}
-.king-auth-form button[type=submit]{background:#e50914;border-color:#e50914;font-weight:700}
+.king-auth-form button[type=submit]{background:#e7ad35;border-color:#e7ad35;color:#16120a;font-weight:700}
+.king-auth-form button[type=submit]:hover{background:#f5c453;border-color:#f5c453}
 .king-auth-form button:disabled{opacity:.6;cursor:wait}
 .king-auth-password-toggle{flex:none;padding:8px!important}
 .king-auth-password-icon{width:20px;height:20px}
@@ -50,9 +51,9 @@
 .auth-panel .king-auth-password input{padding-right:52px!important}
 .auth-panel .king-auth-password-toggle{position:absolute;top:50%;right:9px;display:grid;place-items:center;width:36px;height:36px;transform:translateY(-50%);border:0;background:transparent;color:#99ad9f}
 .auth-panel .king-auth-password-toggle:hover{background:#26342b;color:#fff}
-.auth-panel .king-auth-form button[type=submit]{position:relative;width:100%;min-height:59px;margin:0;padding:16px 48px;border:1px solid #3d7c5f;border-radius:10px;background:#24563e;color:#fff;font-size:16px;font-weight:600;transition:background .15s}
+.auth-panel .king-auth-form button[type=submit]{position:relative;width:100%;min-height:59px;margin:0;padding:16px 48px;border:1px solid #e7ad35;border-radius:10px;background:#e7ad35;color:#16120a;font-size:16px;font-weight:600;transition:background .15s}
 .auth-panel .king-auth-form button[type=submit]::after{margin-left:12px;content:'↗' / '';font-weight:400}
-.auth-panel .king-auth-form button[type=submit]:hover{background:#2d6a4d}
+.auth-panel .king-auth-form button[type=submit]:hover{background:#f5c453;border-color:#f5c453}
 .auth-panel .king-auth-error,.auth-panel .king-auth-status{margin:14px 0 0;font-size:14px;line-height:1.6}
 .auth-panel .king-auth-status:empty{display:none}
 .auth-panel .auth-link{display:block;width:fit-content;min-height:36px;margin:17px auto 0;padding:8px 0;border:0;border-radius:3px;background:transparent;color:#9fc7ae;font-size:14px;text-underline-offset:3px}
