@@ -1,0 +1,26 @@
+.auth-panel{width:min(100%,400px);text-align:left}
+.king-auth-form{display:grid;gap:16px;text-align:left}
+.king-auth-fields,.king-auth-field{display:grid;gap:8px}
+.king-auth-form input:not([type=checkbox]){width:100%;min-width:0;padding:12px;border:1px solid #666;border-radius:4px;background:#252525;color:#fff;font:inherit}
+.king-auth-password{display:flex;align-items:center;gap:6px}
+.king-auth-password input{flex:1}
+.king-auth-form button,.auth-dialog button,.auth-panel button{padding:10px 16px;border:1px solid #777;border-radius:4px;background:#252525;color:#fff;font:inherit;cursor:pointer}
+.king-auth-form button[type=submit]{background:#e50914;border-color:#e50914;font-weight:700}
+.king-auth-form button:disabled{opacity:.6;cursor:wait}
+.king-auth-password-toggle{flex:none;padding:8px!important}
+.king-auth-password-icon{width:20px;height:20px}
+.king-auth-error{color:#ff9393}
+.king-auth-status{color:#ddd}
+.auth-link{margin-top:18px;background:transparent!important;text-decoration:underline}
+.auth-dialog,.king-auth-account-dialog{width:min(480px,calc(100% - 32px));max-height:calc(100dvh - 40px);overflow:auto;padding:28px;border:1px solid #666;border-radius:8px;background:#181818;color:#fff}
+.auth-dialog::backdrop,.king-auth-account-dialog::backdrop{background:#000b}
+.auth-dialog h2{margin-top:0}
+.king-auth-profile{position:relative}
+.king-auth-profile-trigger{display:flex;padding:0;border:0;border-radius:50%;background:transparent;color:inherit;cursor:pointer}
+.king-auth-avatar{display:block;border-radius:50%}
+.king-auth-profile-dropdown{position:absolute;right:0;top:calc(100% + 10px);z-index:50;min-width:230px;max-width:calc(100vw - 32px);padding:16px;border:1px solid #666;border-radius:6px;background:#181818;box-shadow:0 6px 24px #0008}
+.king-auth-profile-identity{display:grid;gap:5px;margin-bottom:12px;overflow-wrap:anywhere}
+.king-auth-profile-dropdown button,.king-auth-account-dialog button{padding:9px 12px;border:1px solid #666;background:#252525;color:#fff;cursor:pointer}
+.king-auth-profile-dropdown button{display:block;width:100%;margin-top:8px;text-align:left}
+.king-auth-account-dialog section{margin-top:24px}
+.king-auth-account-dialog input{max-width:100%}

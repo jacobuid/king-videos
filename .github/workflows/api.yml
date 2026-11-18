@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
       - run: npm ci
       - name: Update D1 infrastructure
@@ -37,6 +37,8 @@ jobs:
           D1_DATABASE_ID: ${{ steps.pulumi.outputs.databaseId }}
       - run: npm run check -w services/api
       - run: npm run test:roku -w services/api
+      - run: node --test services/api/test/king-auth.test.mjs services/api/test/avatar-access.test.mjs services/api/test/kingauth-migration.test.mjs
+      - run: node --test services/api/tests/home-videos-only.cjs
       - run: node --experimental-strip-types --test services/api/test/read-efficiency.test.mjs
       - run: npx wrangler d1 migrations apply DB --remote --config services/api/wrangler.jsonc
       - run: npm run deploy -w services/api

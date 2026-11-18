@@ -9,7 +9,7 @@ function fixture(){
   const sqlite=new DatabaseSync(':memory:')
   sqlite.exec(readFileSync(new URL('../migrations/0014_roku_devices.sql',import.meta.url),'utf8'))
   const DB={prepare(sql){let params=[];return {bind(...values){params=values;return this},async run(){return sqlite.prepare(sql).run(...params)},async first(){return sqlite.prepare(sql).get(...params)||null},async all(){return {results:sqlite.prepare(sql).all(...params)}}}}}
-  return {DB,CLERK_SECRET_KEY:'test-key',sqlite}
+  return {DB,APP_SIGNING_SECRET:'test-key',sqlite}
 }
 function request(path,body,token,method='POST'){return new Request('https://example.test'+path,{method,headers:{'Content-Type':'application/json',...(token?{Authorization:'Bearer '+token}:{})},...(method==='GET'?{}:{body:JSON.stringify(body||{})})})}
 

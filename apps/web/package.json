@@ -7,10 +7,10 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@clerk/clerk-react": "^5.0.0",
     "@fortawesome/fontawesome-svg-core": "^7.3.1",
     "@fortawesome/free-solid-svg-icons": "^7.3.1",
     "@fortawesome/react-fontawesome": "^3.5.0",
+    "@jacobuid/king-auth": "github:jacobuid/king-auth#sdk",
     "@tsparticles/confetti": "^4.4.0",
     "@tsparticles/plugin-interactivity": "^4.4.0",
     "@tsparticles/ribbons": "^4.4.0",
@@ -20,5 +20,8 @@
   },
   "devDependencies": {
     "vite": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=24"
   }
 }

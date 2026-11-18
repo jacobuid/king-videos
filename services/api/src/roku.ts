@@ -1,4 +1,4 @@
-type RokuEnv={DB:D1Database;CLERK_SECRET_KEY:string}
+type RokuEnv={DB:D1Database;APP_SIGNING_SECRET:string}
 const json=(body:unknown,status=200)=>new Response(JSON.stringify(body),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}})
 const random=(size:number)=>Array.from(crypto.getRandomValues(new Uint8Array(size)),n=>n.toString(16).padStart(2,'0')).join('')
 const hash=async(value:string)=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value))),n=>n.toString(16).padStart(2,'0')).join('')
@@ -24,7 +24,7 @@ export async function authorizeRoku(request:Request,env:RokuEnv){
 export async function publicRokuRoute(request:Request,env:RokuEnv,path:string):Promise<Response|null>{
   if(request.method!=='POST')return null
   if(path==='/api/roku/pair'){
-    const now=Date.now(),requester=await hash(env.CLERK_SECRET_KEY+':roku:'+ (request.headers.get('CF-Connecting-IP')||'local'))
+    const now=Date.now(),requester=await hash(env.APP_SIGNING_SECRET+':roku:'+ (request.headers.get('CF-Connecting-IP')||'local'))
     await env.DB.prepare('DELETE FROM roku_pairings WHERE expires_at<?').bind(now).run()
     const count=await env.DB.prepare('SELECT COUNT(*) AS n FROM roku_pairings WHERE requester_hash=? AND created_at>?').bind(requester,now-600000).first<{n:number}>()
     if((count?.n||0)>=5)return json({error:'Too many linking requests. Try again in ten minutes.'},429)

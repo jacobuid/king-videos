@@ -1,5 +1,6 @@
-CLERK_SECRET_KEY=sk_test_replace_me
-CLERK_PUBLISHABLE_KEY=pk_test_replace_me
+# Existing installs: use the EXACT former CLERK_SECRET_KEY value to preserve PINs.
+# New installs: generate a random secret of at least 32 characters.
+APP_SIGNING_SECRET=replace_me
 B2_KEY_ID=replace_me
 B2_APPLICATION_KEY=replace_me
 B2_ENDPOINT=https://s3.us-west-004.backblazeb2.com

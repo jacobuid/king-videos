@@ -8,8 +8,7 @@ writeFileSync(path, `${JSON.stringify(config, null, 2)}\n`)
 
 if (process.env.WRITE_SECRETS !== 'true') process.exit(0)
 const secrets = {
-  CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
-  CLERK_PUBLISHABLE_KEY: process.env.CLERK_PUBLISHABLE_KEY,
+  APP_SIGNING_SECRET: process.env.APP_SIGNING_SECRET,
   B2_KEY_ID: process.env.B2_KEY_ID,
   B2_APPLICATION_KEY: process.env.B2_APPLICATION_KEY,
   B2_ENDPOINT: process.env.B2_ENDPOINT,

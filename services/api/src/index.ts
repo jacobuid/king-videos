@@ -4,17 +4,16 @@ import {movieRatingAge} from './movie-ratings'
 import {videoOriginRange} from './video-delivery'
 import {vttToSrt} from './roku-captions'
 import {authorizeRoku,publicRokuRoute,browserRokuRoute,rokuPathAllowed,revokeRoku} from './roku'
-import { createClerkClient } from '@clerk/backend'
-import { reverificationErrorResponse } from '@clerk/shared/authorization-errors'
+import {authorize,confirmPassword,confirmationRequired} from './auth'
 
-interface Env { DB:D1Database; CLERK_SECRET_KEY:string; CLERK_PUBLISHABLE_KEY:string; B2_KEY_ID:string; B2_APPLICATION_KEY:string; B2_ENDPOINT:string; B2_BUCKET:string; WEB_ORIGIN?:string; WEB_ORIGINS?:string }
+interface Env { DB:D1Database; APP_SIGNING_SECRET:string; B2_KEY_ID:string; B2_APPLICATION_KEY:string; B2_ENDPOINT:string; B2_BUCKET:string; WEB_ORIGIN?:string; WEB_ORIGINS?:string }
 type Media={quality:string|null;id:string;title:string;description:string;category:string;video_key:string;source_url:string|null;thumbnail_key:string|null;subtitle_key:string|null;subtitle_url:string|null;mime_type:string;created_at:string;kids_allowed:number;series_id:string|null;series_title:string|null;season_number:number|null;episode_number:number|null;release_date:string|null;year:number|null;genres:string;rating:string|null;duration_seconds:number|null;featured:number;blocked:number;min_age:number;retro:number}
 type Profile={id:string;user_id:string;name:string;pin_hash:string|null;pin_salt:string|null;pin_version:number;failed_attempts:number;locked_until:number|null;is_kids:number;home_videos_only:number;avatar:string|null;date_of_birth:string|null}
 type ProfileToken={userId:string;profileId:string;version:number;expires:number}
 type ManageToken={userId:string;expires:number}
 type ContentToken={key:string;kind:'image'|'video'|'subtitle';expires:number;roku?:boolean}
 const encoder=new TextEncoder()
-const json=(data:unknown,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json'}})
+const json=(data:unknown,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}})
 const allowedKey=(key:string)=>key.startsWith('movies/')&&!key.includes('..')
 const validPin=(pin:string)=>/^\d{4}$/.test(pin)
 const validBirthDate=(value:string)=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(value))return false;const date=new Date(`${value}T00:00:00Z`),today=new Date();return !Number.isNaN(date.getTime())&&date.toISOString().slice(0,10)===value&&value>='1900-01-01'&&date<=today}
@@ -28,8 +27,8 @@ const origins=(env:Env)=>(env.WEB_ORIGINS||env.WEB_ORIGIN||'').split(',').map(va
 let b2Authorization:{token:string;downloadUrl:string;expires:number}|null=null
 async function authorizeB2(env:Env,force=false){if(!force&&b2Authorization&&b2Authorization.expires>Date.now())return b2Authorization;const basic=btoa(`${env.B2_KEY_ID}:${env.B2_APPLICATION_KEY}`),response=await fetch('https://api.backblazeb2.com/b2api/v4/b2_authorize_account',{headers:{Authorization:`Basic ${basic}`}});if(!response.ok)throw new Error(`Backblaze authorization failed (${response.status})`);const value=await response.json()as{authorizationToken:string;apiInfo:{storageApi:{downloadUrl:string}}};return b2Authorization={token:value.authorizationToken,downloadUrl:value.apiInfo.storageApi.downloadUrl,expires:Date.now()+82800000}}
 async function fetchB2(env:Env,key:string,headers:Headers,method='GET'){for(let attempt=0;attempt<2;attempt++){const auth=await authorizeB2(env,attempt>0),requestHeaders=new Headers(headers);requestHeaders.set('Authorization',auth.token);const path=`file/${encodeURIComponent(env.B2_BUCKET)}/${key.split('/').map(encodeURIComponent).join('/')}`,response=await fetch(`${auth.downloadUrl}/${path}`,{method,headers:requestHeaders});if(response.status!==401)return response;await response.body?.cancel();b2Authorization=null}throw new Error('Backblaze authorization was rejected')}
-async function encodeContentToken(env:Env,value:ContentToken){const body=base64url(encoder.encode(JSON.stringify(value)));const key=await crypto.subtle.importKey('raw',encoder.encode(env.CLERK_SECRET_KEY),{name:'HMAC',hash:'SHA-256'},false,['sign']);return `${body}.${base64url(new Uint8Array(await crypto.subtle.sign('HMAC',key,encoder.encode(body))))}`}
-async function decodeContentToken(env:Env,token:string):Promise<ContentToken|null>{try{const[body,signature]=token.split('.');const key=await crypto.subtle.importKey('raw',encoder.encode(env.CLERK_SECRET_KEY),{name:'HMAC',hash:'SHA-256'},false,['verify']);if(!await crypto.subtle.verify('HMAC',key,fromBase64url(signature),encoder.encode(body)))return null;const value=JSON.parse(new TextDecoder().decode(fromBase64url(body)))as ContentToken;return value.expires>Date.now()&&allowedKey(value.key)&&['image','video','subtitle'].includes(value.kind)?value:null}catch{return null}}
+async function encodeContentToken(env:Env,value:ContentToken){const body=base64url(encoder.encode(JSON.stringify(value)));const key=await crypto.subtle.importKey('raw',encoder.encode(env.APP_SIGNING_SECRET),{name:'HMAC',hash:'SHA-256'},false,['sign']);return `${body}.${base64url(new Uint8Array(await crypto.subtle.sign('HMAC',key,encoder.encode(body))))}`}
+async function decodeContentToken(env:Env,token:string):Promise<ContentToken|null>{try{const[body,signature]=token.split('.');const key=await crypto.subtle.importKey('raw',encoder.encode(env.APP_SIGNING_SECRET),{name:'HMAC',hash:'SHA-256'},false,['verify']);if(!await crypto.subtle.verify('HMAC',key,fromBase64url(signature),encoder.encode(body)))return null;const value=JSON.parse(new TextDecoder().decode(fromBase64url(body)))as ContentToken;return value.expires>Date.now()&&allowedKey(value.key)&&['image','video','subtitle'].includes(value.kind)?value:null}catch{return null}}
 async function contentUrl(request:Request,env:Env,key:string,kind:ContentToken['kind'],expires:number){const token=await encodeContentToken(env,{key,kind,expires,...(kind==='video'&&request.headers.get('Authorization')?.startsWith('Bearer kfr_')?{roku:true}:{})});return `${new URL(request.url).origin}/content/${token}`}
 async function serveContent(request:Request,env:Env,context:ExecutionContext,tokenValue:string){
   const token=await decodeContentToken(env,tokenValue);if(!token)return new Response('Invalid or expired media link.',{status:403})
@@ -49,22 +48,22 @@ async function serveContent(request:Request,env:Env,context:ExecutionContext,tok
   const response=new Response(origin.body,{status:fullResponseForInitialRange?206:origin.status,statusText:fullResponseForInitialRange?'Partial Content':origin.statusText,headers});if(cacheable)context.waitUntil(edgeCache.put(cacheKey,response.clone()));return response
 }
 function externalMediaUrl(value:string|null){if(!value)return null;try{const url=new URL(value);return url.protocol==='https:'&&url.hostname==='archive.org'&&url.pathname.startsWith('/download/')?url.href:null}catch{return null}}
-async function authorize(request:Request,env:Env){const clerk=createClerkClient({secretKey:env.CLERK_SECRET_KEY,publishableKey:env.CLERK_PUBLISHABLE_KEY});return(await clerk.authenticateRequest(request,{authorizedParties:origins(env)})).toAuth()}
-async function pinKey(env:Env,usage:KeyUsage[]){return crypto.subtle.importKey('raw',encoder.encode(env.CLERK_SECRET_KEY),{name:'HMAC',hash:'SHA-256'},false,usage)}
+async function pinKey(env:Env,usage:KeyUsage[]){return crypto.subtle.importKey('raw',encoder.encode(env.APP_SIGNING_SECRET),{name:'HMAC',hash:'SHA-256'},false,usage)}
 function pinData(pin:string,salt:Uint8Array){const value=new Uint8Array(salt.length+1+pin.length);value.set(salt);value[salt.length]=58;value.set(encoder.encode(pin),salt.length+1);return value}
 async function pinHash(env:Env,pin:string,salt:Uint8Array){return new Uint8Array(await crypto.subtle.sign('HMAC',await pinKey(env,['sign']),pinData(pin,salt)))}
 async function verifyPin(env:Env,pin:string,salt:Uint8Array,hash:string){return crypto.subtle.verify('HMAC',await pinKey(env,['verify']),fromBase64url(hash),pinData(pin,salt))}
-async function encodeProfileToken(env:Env,value:ProfileToken){const body=base64url(encoder.encode(JSON.stringify(value)));const key=await crypto.subtle.importKey('raw',encoder.encode(env.CLERK_SECRET_KEY),{name:'HMAC',hash:'SHA-256'},false,['sign']);return `${body}.${base64url(new Uint8Array(await crypto.subtle.sign('HMAC',key,encoder.encode(body))))}`}
-async function decodeProfileToken(env:Env,token:string):Promise<ProfileToken|null>{try{const[body,signature]=token.split('.');const key=await crypto.subtle.importKey('raw',encoder.encode(env.CLERK_SECRET_KEY),{name:'HMAC',hash:'SHA-256'},false,['verify']);if(!await crypto.subtle.verify('HMAC',key,fromBase64url(signature),encoder.encode(body)))return null;const value=JSON.parse(new TextDecoder().decode(fromBase64url(body)))as ProfileToken;return value.expires>Date.now()?value:null}catch{return null}}
-async function encodeManageToken(env:Env,value:ManageToken){const body=base64url(encoder.encode(JSON.stringify(value)));const key=await crypto.subtle.importKey('raw',encoder.encode(env.CLERK_SECRET_KEY),{name:'HMAC',hash:'SHA-256'},false,['sign']);return `${body}.${base64url(new Uint8Array(await crypto.subtle.sign('HMAC',key,encoder.encode(body))))}`}
+async function encodeProfileToken(env:Env,value:ProfileToken){const body=base64url(encoder.encode(JSON.stringify(value)));const key=await crypto.subtle.importKey('raw',encoder.encode(env.APP_SIGNING_SECRET),{name:'HMAC',hash:'SHA-256'},false,['sign']);return `${body}.${base64url(new Uint8Array(await crypto.subtle.sign('HMAC',key,encoder.encode(body))))}`}
+async function decodeProfileToken(env:Env,token:string):Promise<ProfileToken|null>{try{const[body,signature]=token.split('.');const key=await crypto.subtle.importKey('raw',encoder.encode(env.APP_SIGNING_SECRET),{name:'HMAC',hash:'SHA-256'},false,['verify']);if(!await crypto.subtle.verify('HMAC',key,fromBase64url(signature),encoder.encode(body)))return null;const value=JSON.parse(new TextDecoder().decode(fromBase64url(body)))as ProfileToken;return value.expires>Date.now()?value:null}catch{return null}}
+async function encodeManageToken(env:Env,value:ManageToken){const body=base64url(encoder.encode(JSON.stringify(value)));const key=await crypto.subtle.importKey('raw',encoder.encode(env.APP_SIGNING_SECRET),{name:'HMAC',hash:'SHA-256'},false,['sign']);return `${body}.${base64url(new Uint8Array(await crypto.subtle.sign('HMAC',key,encoder.encode(body))))}`}
 async function authorizedManage(request:Request,env:Env,userId:string){try{const token=request.headers.get('X-Manage-Token')||'',body=await decodeProfileToken(env,token);return Boolean(body&&body.userId===userId&&body.profileId===undefined&&body.version===undefined)}catch{return false}}
 async function authorizedProfile(request:Request,env:Env,userId:string,profileId:string|undefined|null){if(!profileId)return null;const token=await decodeProfileToken(env,request.headers.get('X-Profile-Token')||'');if(!token||token.userId!==userId||token.profileId!==profileId)return null;const profile=await env.DB.prepare('SELECT pin_version,is_kids,home_videos_only,date_of_birth FROM profiles WHERE id=? AND user_id=?').bind(profileId,userId).first<{pin_version:number;is_kids:number;home_videos_only:number;date_of_birth:string|null}>();return profile&&profile.pin_version===token.version?profile:null}
 
 async function authorizedProfileManagement(request:Request,env:Env,userId:string,profileId:string){if(await authorizedManage(request,env,userId)){const owned=await env.DB.prepare('SELECT id FROM profiles WHERE id=? AND user_id=?').bind(profileId,userId).first();return Boolean(owned)}return Boolean(await authorizedProfile(request,env,userId,profileId))}
 
 export default{async fetch(request:Request,env:Env,context:ExecutionContext):Promise<Response>{
-  const origin=request.headers.get('Origin');const cors:Record<string,string>={'Access-Control-Allow-Headers':'Authorization, Content-Type, X-Profile-Token, X-Manage-Token','Access-Control-Allow-Methods':'GET, POST, DELETE, OPTIONS',Vary:'Origin'};if(origin&&origins(env).includes(origin))cors['Access-Control-Allow-Origin']=origin;if(request.method==='OPTIONS')return new Response(null,{headers:cors})
+  const origin=request.headers.get('Origin');const cors:Record<string,string>={'Access-Control-Allow-Headers':'Authorization, Content-Type, X-Profile-Token, X-Manage-Token, X-Reauthentication-Proof','Access-Control-Allow-Methods':'GET, POST, DELETE, OPTIONS',Vary:'Origin'};if(origin&&origins(env).includes(origin))cors['Access-Control-Allow-Origin']=origin;if(request.method==='OPTIONS')return new Response(null,{headers:cors})
   try{
+    if(!env.APP_SIGNING_SECRET)return withCors(json({error:'The API signing key is not configured.'},503),cors)
     const requestUrl=new URL(request.url),contentMatch=requestUrl.pathname.match(/^\/content\/([^/]+)$/);if(contentMatch&&(request.method==='GET'||request.method==='HEAD'))return serveContent(request,env,context,contentMatch[1])
     const url=new URL(request.url),path=url.pathname
     const pairingResponse=await publicRokuRoute(request,env,path);if(pairingResponse)return withCors(pairingResponse,cors)
@@ -75,7 +74,7 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
     if(!isRoku){const deviceResponse=await browserRokuRoute(request,env,path,userId);if(deviceResponse)return withCors(deviceResponse,cors)}
     if(path==='/api/birthday-video'&&request.method==='GET')return withCors(json({url:await contentUrl(request,env,'movies/specials/happy-birthday/happy-birthday.mp4','video',Date.now()+28800000),mimeType:'video/mp4'}),cors)
     if(path==='/api/manage-access'&&request.method==='POST'){
-      if(!auth.has({reverification:{level:'first_factor',afterMinutes:1}}))return withCors(reverificationErrorResponse({level:'first_factor',afterMinutes:1}),cors)
+      if(!await confirmPassword(request,env,'manage:access'))return withCors(confirmationRequired('manage:access'),cors)
       return withCors(json({ok:true,token:await encodeManageToken(env,{userId,expires:Date.now()+43200000})}),cors)
     }
     if(path==='/api/manage-media'&&request.method==='GET'){
@@ -148,7 +147,7 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
     if(profileMatch&&request.method==='POST'){
       const profile=await env.DB.prepare('SELECT * FROM profiles WHERE id=? AND user_id=?').bind(profileMatch[1],userId).first<Profile>();if(!profile)return withCors(json({error:'Profile not found.'},404),cors)
       const body=await request.json()as{pin?:string;avatar?:string;isKids?:boolean;passwordOverride?:boolean}
-      if(profileMatch[2]==='avatar-access'||(profileMatch[2]==='avatar'&&(body.passwordOverride||!profile.pin_hash))){if(!auth.has({reverification:{level:'first_factor',afterMinutes:1}}))return withCors(reverificationErrorResponse({level:'first_factor',afterMinutes:1}),cors);if(profileMatch[2]==='avatar-access')return withCors(json({ok:true}),cors)}
+      if(profileMatch[2]==='avatar-access'||(profileMatch[2]==='avatar'&&(body.passwordOverride||!profile.pin_hash))){if(!await confirmPassword(request,env,`profile:${profile.id}:avatar`))return withCors(confirmationRequired(`profile:${profile.id}:avatar`),cors);if(profileMatch[2]==='avatar-access')return withCors(json({ok:true}),cors)}
       if(profileMatch[2]==='unlock'||(profileMatch[2]==='avatar'&&profile.pin_hash&&!body.passwordOverride)){
         if(profile.locked_until&&profile.locked_until>Date.now())return withCors(json({error:'Too many attempts. Try again in five minutes.'},429),cors)
         if(profile.pin_hash){const matches=validPin(body.pin||'')&&await verifyPin(env,body.pin!,fromBase64url(profile.pin_salt!),profile.pin_hash);if(!matches){const attempts=profile.failed_attempts+1,locked=attempts>=5?Date.now()+300000:null;await env.DB.prepare('UPDATE profiles SET failed_attempts=?,locked_until=? WHERE id=?').bind(locked?0:attempts,locked,profile.id).run();return withCors(json({error:locked?'Too many attempts. Try again in five minutes.':'Incorrect PIN.'},locked?429:403),cors)}}
@@ -170,7 +169,7 @@ export default{async fetch(request:Request,env:Env,context:ExecutionContext):Pro
       if(!validBirthDate(dateOfBirth))return withCors(json({error:'Enter a valid date of birth.'},400),cors)
       if(!validAvatar(avatar))return withCors(json({error:'Choose a valid profile picture.'},400),cors)
       const currentAvatar=await env.DB.prepare('SELECT avatar FROM profiles WHERE id=? AND user_id=?').bind(profileIdMatch[1],userId).first<{avatar:string|null}>()
-      if(currentAvatar?.avatar!==avatar&&!auth.has({reverification:{level:'first_factor',afterMinutes:1}}))return withCors(reverificationErrorResponse({level:'first_factor',afterMinutes:1}),cors)
+      if(currentAvatar?.avatar!==avatar&&!await confirmPassword(request,env,`profile:${profileIdMatch[1]}:avatar`))return withCors(confirmationRequired(`profile:${profileIdMatch[1]}:avatar`),cors)
       await env.DB.prepare('UPDATE profiles SET name=?,is_kids=0,avatar=?,date_of_birth=?,home_videos_only=COALESCE(?,home_videos_only) WHERE id=? AND user_id=?').bind(name,avatar,dateOfBirth,body.homeVideosOnly===undefined?null:body.homeVideosOnly?1:0,profileIdMatch[1],userId).run()
       return withCors(json({id:profileIdMatch[1],name,avatar,dateOfBirth,...(body.homeVideosOnly===undefined?{}:{homeVideosOnly:body.homeVideosOnly})}),cors)
     }
