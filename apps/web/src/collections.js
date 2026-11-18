@@ -59,7 +59,8 @@ export const collections = [
       "laputa-castle-in-the-sky",
       "spirited-away",
       "the-wind-rises",
-      "princess-mononoke"
+      "princess-mononoke",
+      "the-secret-world-of-arrietty"
     ]
   },
   {
