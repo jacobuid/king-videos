@@ -58,10 +58,12 @@
 .king-auth-profile-dropdown button[role=menuitem]:hover{filter:brightness(1.08);border-color:#aaaaaa}
 .king-auth-profile-dropdown button[role=menuitem]:first-child:hover{border-color:#fff1b8}
 @media(max-width:420px){.king-auth-profile-identity{grid-template-columns:64px minmax(0,1fr);column-gap:14px;min-height:78px;margin-bottom:26px}.king-auth-profile-identity>.king-auth-avatar{width:64px;height:64px}.king-auth-profile-identity p:first-of-type{font-size:20px}.king-auth-profile-identity p:last-of-type:not(:first-of-type){font-size:13px}.king-auth-profile-dropdown button[role=menuitem]{gap:12px;padding:14px 16px;font-size:17px}}
-.king-auth-account-dialog{position:fixed;width:min(680px,calc(100% - 32px));padding:32px;overscroll-behavior:contain;scrollbar-color:#555555 #181818;overflow-wrap:anywhere}
-.king-auth-account-dialog>h2{margin:0 110px 26px 0;font-size:28px;line-height:1.4;letter-spacing:-.03em}
-.king-auth-account-dialog .king-auth-account-close{position:absolute;top:28px;right:28px}
-.king-auth-account-dialog>section{display:grid;min-width:0;gap:14px;margin:0}
+.king-auth-account-dialog{position:fixed;width:min(680px,calc(100% - 32px));padding:0;overflow:hidden;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto minmax(0,1fr) auto;overflow-wrap:anywhere}
+.king-auth-account-dialog[open]{display:grid}
+.king-auth-account-dialog>h2{grid-column:1;grid-row:1;align-self:center;margin:0;padding:24px 32px;font-size:28px;line-height:1.4;letter-spacing:-.03em}
+.king-auth-account-dialog .king-auth-account-close{grid-column:2;grid-row:1;position:static;align-self:center;margin:20px 24px 20px 0}
+.king-auth-account-dialog>section{grid-column:1 / -1;grid-row:2;display:grid;min-width:0;min-height:0;gap:14px;margin:0;padding:24px 32px 32px;overflow-y:auto;border-top:1px solid #333333;overscroll-behavior:contain;scrollbar-color:#555555 #181818;scrollbar-gutter:stable}
+.king-auth-account-dialog::after{content:'Secure sign-in by King Auth';grid-column:1 / -1;grid-row:3;padding:24px 24px 24px 48px;border-top:1px solid #333333;background:#181818 url('./icons/auth-shield.svg') no-repeat calc(50% - 105px) center / 15px 17px;color:#999999;font-size:13px;line-height:1.5;text-align:center}
 .king-auth-account-dialog>section>p{margin:0;color:#aaaaaa;font-size:14px;line-height:1.6}
 .king-auth-account-dialog>section>p:first-of-type{color:#f5f5f5;font-size:17px;font-weight:600}
 .king-auth-account-dialog>section>p:nth-of-type(2){font-size:12px;color:#999999}
@@ -81,7 +83,7 @@
 .king-auth-session button{margin-top:8px}
 .king-auth-account-dialog a{color:#e7ad35;text-underline-offset:3px}
 .king-auth-account-dialog a:hover{color:#f5c453}
-@media(max-width:560px){.auth-dialog,.king-auth-account-dialog{padding:24px;border-radius:20px}.king-auth-account-dialog>h2{font-size:26px;margin-right:90px}.king-auth-account-dialog .king-auth-account-close{top:20px;right:20px}.king-auth-account-dialog .king-auth-form{padding:17px;border-radius:14px}.king-auth-session{padding:16px}.king-auth-account-dialog button{max-width:100%}.king-auth-profile-dropdown{padding:22px 20px 20px;border-radius:22px}}
+@media(max-width:560px){.auth-dialog,.king-auth-account-dialog{padding:24px;border-radius:20px}.king-auth-account-dialog{padding:0}.king-auth-account-dialog>h2{font-size:26px;padding:20px 24px}.king-auth-account-dialog .king-auth-account-close{margin:16px 20px 16px 0}.king-auth-account-dialog>section{padding:22px 24px 24px}.king-auth-account-dialog .king-auth-form{padding:17px;border-radius:14px}.king-auth-session{padding:16px}.king-auth-account-dialog button{max-width:100%}.king-auth-profile-dropdown{padding:22px 20px 20px;border-radius:22px}}
 
 .signed-out.auth-screen{min-height:100svh;padding:40px 20px 48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;background:radial-gradient(ellipse at 50% 0%,#1b1b1b 0,transparent 65%),#101010}
 .auth-brand .brand-logo{display:block;width:min(270px,65vw);height:auto;margin:0}
