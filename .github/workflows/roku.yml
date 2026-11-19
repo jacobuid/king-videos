@@ -17,7 +17,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run test:roku
-        if: "!contains(github.event.head_commit.message, '[skip tests]')"
       - run: npm run build:roku
         env:
           VITE_API_URL: ${{ vars.VITE_API_URL }}
