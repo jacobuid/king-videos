@@ -5,5 +5,5 @@
     <field id="focusPercent" type="float" alias="tile.focusPercent"/>
     <field id="rowFocusPercent" type="float" alias="tile.rowFocusPercent"/>
   </interface>
-  <children><MediaTile id="tile" scale="[0.84,0.84]"/></children>
+  <children><MediaTile id="tile"/></children>
 </component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="DetailShelf" extends="Group">
+  <interface>
+    <field id="content" type="node" onChange="resetContent"/>
+    <field id="rowItemFocused" type="array" value="[0,0]" alwaysNotify="true"/>
+    <field id="rowItemSelected" type="array" alwaysNotify="true"/>
+    <field id="menuRequested" type="boolean" alwaysNotify="true"/>
+    <field id="topRequested" type="boolean" alwaysNotify="true"/>
+    <function name="activateAt"/>
+    <function name="selectEpisode"/>
+  </interface>
+  <script type="text/brightscript" uri="DetailShelf.brs"/>
+  <children>
+    <Group id="shelves"/>
+  </children>
+</component>

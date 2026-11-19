@@ -1,4 +1,13 @@
 sub showDetails(item as object)
+    if isTv(item) and (item.kind = invalid or item.kind <> "show")
+        for each show in showCards()
+            if show.seriesId = item.seriesId
+                showDetails(show)
+                selectShowEpisode(item)
+                return
+            end if
+        end for
+    end if
     m.homeHero.visible = false
     m.catalogPage.visible = false
     m.screen = "details"
@@ -13,6 +22,7 @@ sub showDetails(item as object)
     display.append(item)
     m.detailPlayItem = item
     isShow = item.kind <> invalid and item.kind = "show"
+    m.detailPage.showSeasons = isShow
     if isShow
         episodes = m.groups[item.seriesId]
         first = episodes[0]
@@ -49,12 +59,19 @@ sub showDetails(item as object)
         end for
     end if
     playLabel = "Play"
-    if positionFor(m.detailPlayItem.id) > 0 then playLabel = "Continue"
+    if positionFor(m.detailPlayItem.id) > 0 and not completed(m.detailPlayItem) then playLabel = "Continue"
     if m.detailPlayItem.blocked <> invalid and m.detailPlayItem.blocked then playLabel = "Blocked"
     m.detailPage.item = display
     m.detailPage.playLabel = playLabel
     m.detailPage.favorite = m.favorites[item.id] <> invalid
     content = CreateObject("roSGNode", "ContentNode")
+    if isShow
+        content = seasonShelves(m.groups[item.seriesId])
+        m.detailPage.similar = content
+        m.detailPage.visible = true
+        m.detailPage.callFunc("activate")
+        return
+    end if
     if not isShow and isTv(item)
         content = showEpisodeShelf(m.groups[item.seriesId], item.id)
         m.detailPage.similar = content
@@ -62,20 +79,7 @@ sub showDetails(item as object)
         m.detailPage.callFunc("activate")
         return
     end if
-    similar = []
-    for each candidate in searchCatalog()
-        candidateShow = candidate.kind <> invalid and candidate.kind = "show"
-        if candidate.id = item.id or candidateShow <> isShow then continue for
-        if not isShow and candidate.category <> item.category then continue for
-        if candidate.blocked <> invalid and candidate.blocked then continue for
-        overlap = false
-        if display.genres <> invalid and candidate.genres <> invalid
-            for each genre in display.genres
-                if includes(candidate.genres, genre) then overlap = true
-            end for
-        end if
-        if overlap and similar.count() < 30 then similar.push(candidate)
-    end for
+    similar = rankedRecommendations(item, searchCatalog())
     if similar.count() > 0
         row = content.createChild("ContentNode")
         row.title = "Similar Movies"
@@ -92,6 +96,24 @@ sub showDetails(item as object)
     m.detailPage.visible = true
     m.detailPage.callFunc("activate")
 end sub
+
+function seasonShelves(episodes as object) as object
+    content = CreateObject("roSGNode", "ContentNode")
+    rows = {}
+    for each episode in episodes
+        season = 1
+        if episode.seasonNumber <> invalid then season = episode.seasonNumber
+        key = season.toStr()
+        if rows[key] = invalid
+            row = content.createChild("ContentNode")
+            row.title = "Season " + key
+            if season = 0 then row.title = "Specials"
+            rows[key] = row
+        end if
+        addEpisodeShelfCard(rows[key], episode, "")
+    end for
+    return content
+end function
 
 function showEpisodeShelf(episodes as object, currentId as string) as object
     content = CreateObject("roSGNode", "ContentNode")
@@ -116,7 +138,8 @@ sub addEpisodeShelfCard(row as object, episode as object, label as string)
     child = row.createChild("ContentNode")
     slot = ""
     if episode.seasonNumber <> invalid and episode.episodeNumber <> invalid then slot = "S" + episode.seasonNumber.toStr() + " E" + episode.episodeNumber.toStr() + " - "
-    child.title = label + ": " + slot + episode.title
+    child.title = slot + episode.title
+    if label <> "" then child.title = label + ": " + child.title
     if episode.thumbnailUrl <> invalid then child.hdPosterUrl = episode.thumbnailUrl
     child.addFields({media: episode, watchedFraction: watchedFraction(episode)})
 end sub
@@ -138,15 +161,31 @@ sub onDetailAction(event as object)
         m.detailPage.favorite = m.favorites[m.detailItem.id] <> invalid
         api("favorite-save", "/api/favorites", method, profileRequestBody(m.detailItem.id))
     else if action = "episodes"
-        m.history.push({screen: "details", section: m.section, item: m.detailItem})
-        m.detailPage.visible = false
-        m.screen = "episodes"
-        m.heading.text = m.detailItem.title
-        showRows([{title: "Episodes", items: m.groups[m.detailItem.seriesId]}])
+        m.detailPage.callFunc("browseEpisodes")
     end if
 end sub
 
 sub onSimilarMediaSelected(event as object)
-    m.history.push({screen: "details", section: m.section, item: m.detailItem})
-    showDetails(event.GetData())
+    item = event.GetData()
+    if m.detailPage.showSeasons and isTv(item)
+        selectShowEpisode(item)
+        return
+    end if
+    m.history.push({screen: "details", section: m.section, item: m.detailItem, shelfFocus: m.detailPage.shelfFocus})
+    showDetails(item)
+end sub
+
+sub selectShowEpisode(episode as object)
+    m.detailPlayItem = episode
+    display = {}
+    display.append(episode)
+    slot = ""
+    if episode.seasonNumber <> invalid and episode.episodeNumber <> invalid then slot = "S" + episode.seasonNumber.toStr() + " E" + episode.episodeNumber.toStr() + " - "
+    display.title = slot + episode.title
+    m.detailPage.item = display
+    label = "Play"
+    if positionFor(episode.id) > 0 and not completed(episode) then label = "Continue"
+    if episode.blocked <> invalid and episode.blocked then label = "Blocked"
+    m.detailPage.playLabel = label
+    m.detailPage.callFunc("selectEpisode", episode.id)
 end sub

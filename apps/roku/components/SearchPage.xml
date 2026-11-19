@@ -10,6 +10,7 @@
     <field id="navigation" type="string" alwaysNotify="true"/>
     <field id="submittedQuery" type="string" alwaysNotify="true"/>
     <function name="activate"/>
+    <function name="deactivate"/>
   </interface>
   <script type="text/brightscript" uri="SearchPage.brs"/>
   <children>

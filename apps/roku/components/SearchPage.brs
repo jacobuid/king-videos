@@ -44,6 +44,14 @@ sub activate()
     focusZone("keyboard")
 end sub
 
+sub deactivate()
+    m.zone = "sidebar"
+    m.keyboard.callFunc("setInputFocus", false)
+    renderRecent()
+    renderGenres()
+    renderCards()
+end sub
+
 sub onVisibilityChanged()
     if m.keyboard = invalid then return
     if not m.top.visible then m.keyboard.callFunc("setInputFocus", false)
@@ -130,35 +138,14 @@ sub renderCards()
         index = m.cardOffset + i
         if index >= m.matches.count() then exit for
         item = m.matches[index]
-        x = 390 + i * 244
-        uri = "pkg:/images/search-card.png"
-        if m.zone = "cards" and m.index = index then uri = "pkg:/images/search-card-focus.png"
-        image(parent, uri, x, 710, 234, 265)
-        if item.thumbnailUrl <> invalid
-            art = image(parent, item.thumbnailUrl, x + 3, 713, 228, 128)
-            art.loadDisplayMode = "scaleToFill"
-        end if
-        text = label(parent, item.title, x + 14, 849, 207, 70, 22)
-        text.wrap = true
-        text.maxLines = 2
-        text.vertAlign = "top"
-        meta = ""
-        if item.year <> invalid then meta = item.year.toStr()
-        if item.durationSeconds <> invalid and item.durationSeconds > 0
-            mins = int(item.durationSeconds / 60)
-            runtime = mins.toStr() + "m"
-            if mins >= 60 then runtime = int(mins / 60).toStr() + "h " + (mins mod 60).toStr() + "m"
-            if meta <> "" then meta += " / "
-            meta += runtime
-        end if
-        if item.kind <> invalid and item.kind = "show" then meta = "TV Series"
-        text = label(parent, meta, x + 14, 931, 148, 28, 17)
-        text.color = "#bfbfbf"
-        if item.rating <> invalid and item.rating <> ""
-            image(parent, "pkg:/images/search-chip.png", x + 166, 932, 57, 26)
-            text = label(parent, item.rating, x + 166, 932, 57, 26, 16)
-            text.horizAlign = "center"
-        end if
+        content = CreateObject("roSGNode", "ContentNode")
+        content.title = item.title
+        if item.thumbnailUrl <> invalid then content.hdPosterUrl = item.thumbnailUrl
+        content.addFields({media: item})
+        tile = parent.createChild("MediaTile")
+        tile.translation = [390 + i * 244, 710]
+        tile.itemContent = content
+        if m.zone = "cards" and m.top.hasFocus() and m.index = index then tile.focusPercent = 1
     end for
 end sub
 

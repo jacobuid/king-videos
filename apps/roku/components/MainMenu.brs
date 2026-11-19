@@ -31,8 +31,8 @@ sub renderMenu()
         focused = m.top.hasFocus() and m.index = i
         selected = m.titles[i] = active
         uri = "pkg:/images/search-nav.png"
-        if selected then uri = "pkg:/images/search-nav-active.png"
-        if focused then uri = "pkg:/images/search-nav-gold.png"
+        if selected then uri = "pkg:/images/search-nav-gold.png"
+        if focused then uri = "pkg:/images/search-nav-active.png"
         menuImage(parent, uri, 28, 235 + i * 88, 290, 76)
         icon = menuImage(parent, "pkg:/images/search-" + m.icons[i] + ".png", 51, 253 + i * 88, 40, 40)
         text = parent.createChild("Label")
@@ -46,7 +46,6 @@ sub renderMenu()
             text.color = "#080808"
             icon.blendColor = "#080808"
         end if
-        if focused then menuImage(parent, "pkg:/images/search-nav-focus.png", 28, 235 + i * 88, 290, 76)
     end for
 end sub
 
@@ -69,8 +68,10 @@ function onKeyEvent(key as string, press as boolean) as boolean
     else if key = "OK"
         m.top.selectedTitle = m.titles[m.index]
         return true
-    else if key = "right" or key = "back"
+    else if key = "right"
         m.top.exitRequested = true
+        return true
+    else if key = "back"
         return true
     else
         return false

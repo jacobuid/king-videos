@@ -9,11 +9,11 @@
   </interface>
   <script type="text/brightscript" uri="HomeHero.brs"/>
   <children>
-    <Poster id="art" translation="[400,40]" width="660" height="371" loadDisplayMode="scaleToFit"/>
-    <Label id="eyebrow" translation="[1100,35]" width="740" height="35" text="Featured Presentation" color="#bfbfbf" font="font:SmallSystemFont"/>
-    <Label id="title" translation="[1100,80]" width="740" height="105" wrap="true" maxLines="2" color="#f3cc57" font="font:LargeBoldSystemFont"/>
-    <Label id="metadata" translation="[1100,195]" width="740" height="35" color="#cccccc" font="font:MediumSystemFont"/>
-    <Label id="description" translation="[1100,245]" width="740" height="120" wrap="true" maxLines="4" color="#dddddd" font="font:MediumSystemFont"/>
+    <Poster id="art" translation="[375,55]" width="900" height="506" loadDisplayMode="scaleToFit"/>
+    <Label id="eyebrow" translation="[1310,25]" width="535" height="30" text="Featured Presentation" color="#bfbfbf" font="font:SmallSystemFont"/>
+    <Label id="title" translation="[1310,65]" width="535" height="105" wrap="true" maxLines="2" color="#f3cc57" font="font:LargeBoldSystemFont"/>
+    <Label id="metadata" translation="[1310,180]" width="535" height="35" color="#cccccc" font="font:MediumSystemFont"/>
+    <Label id="description" translation="[1310,235]" width="535" height="225" wrap="true" maxLines="8" color="#dddddd" font="font:MediumSystemFont"/>
     <Group id="buttons"/>
   </children>
 </component>

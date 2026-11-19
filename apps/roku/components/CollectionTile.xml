@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="CollectionTile" extends="Group">
+  <interface>
+    <field id="itemContent" type="node" onChange="updateContent"/>
+    <field id="focusPercent" type="float" onChange="updateFocus"/>
+  </interface>
+  <script type="text/brightscript" uri="CollectionTile.brs"/>
+  <children>
+    <Poster id="border" width="468" height="268" uri="pkg:/images/collection-card.png"/>
+    <Poster id="art" translation="[6,6]" width="456" height="256" loadDisplayMode="scaleToFit"/>
+  </children>
+</component>

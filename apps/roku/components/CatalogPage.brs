@@ -1,11 +1,30 @@
 sub init()
     m.grid = m.top.findNode("grid")
-    m.grid.observeField("itemFocused", "updatePreview")
-    m.grid.observeField("itemSelected", "selectItem")
-    m.grid.observeField("menuRequested", "onGridMenuRequested")
+    m.mediaGrid = m.grid
+    m.collectionGrid = m.top.findNode("collectionGrid")
+    for each grid in [m.mediaGrid, m.collectionGrid]
+        grid.observeField("itemFocused", "updatePreview")
+        grid.observeField("itemSelected", "selectItem")
+        grid.observeField("menuRequested", "onGridMenuRequested")
+    end for
     m.top.findNode("previewTitle").font.size = 44
     m.top.findNode("previewDescription").font.size = 26
     m.top.findNode("previewMetadata").font.size = 26
+end sub
+
+sub configureLayout()
+    collections = m.top.collectionMode
+    for each id in ["previewArt", "previewTitle", "previewDescription", "previewMetadata"]
+        m.top.findNode(id).visible = not collections
+    end for
+    m.top.findNode("collectionHeading").visible = collections
+    m.mediaGrid.visible = not collections
+    m.collectionGrid.visible = collections
+    if collections then m.grid = m.collectionGrid else m.grid = m.mediaGrid
+end sub
+
+sub contentChanged()
+    m.grid.content = m.top.content
 end sub
 
 sub onGridMenuRequested()
@@ -39,6 +58,7 @@ sub updatePreview()
 end sub
 
 sub renderPreview(index as integer)
+    if m.top.collectionMode then return
     if m.grid.content = invalid then return
     if index < 0 or index >= m.grid.content.getChildCount() then return
     item = m.grid.content.getChild(index).media
@@ -69,7 +89,7 @@ end sub
 
 function onKeyEvent(key as string, press as boolean) as boolean
     if not m.top.visible or not press then return false
-    if key = "back" or (key = "left" and m.grid.itemFocused mod 4 = 0)
+    if key = "back" or (key = "left" and m.grid.itemFocused mod m.grid.numColumns = 0)
         m.top.menuRequested = true
         return true
     end if

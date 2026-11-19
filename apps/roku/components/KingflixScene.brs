@@ -313,6 +313,7 @@ sub onApiResult(event as object)
         content.url = data.url
         content.streamFormat = "mp4"
         content.playStart = positionFor(m.playingItem.id)
+        if completed(m.playingItem) then content.playStart = 0
         content.addFields({programID: m.playingItem.id})
         if data.subtitleUrl <> invalid and data.subtitleUrl <> ""
             content.subtitleTracks = [{TrackName: data.subtitleUrl, Language: "eng", Description: "English"}]
@@ -571,6 +572,8 @@ sub onMenuExit()
         m.catalogPage.callFunc("activate")
     else if m.screen = "details"
         m.detailPage.callFunc("activate")
+    else if m.screen = "browse" and m.section = "Home" and m.homeHero.visible
+        m.homeHero.callFunc("activate")
     else if m.rows.visible
         m.rows.setFocus(true)
     end if
@@ -600,14 +603,16 @@ sub onMenuSelected()
     else if title = "Link Roku"
         beginPairing()
     else if title = "Search"
-        showSearch()
+        showSearch(false)
+        m.menu.setFocus(true)
     else
         showSection(title)
+        m.menu.setFocus(true)
         if title = "Home" then refreshHomeProgress()
     end if
 end sub
 
-sub showSearch()
+sub showSearch(focusContent = true as boolean)
     m.homeHero.visible = false
     m.catalogPage.visible = false
     m.detailPage.visible = false
@@ -624,7 +629,7 @@ sub showSearch()
     m.searchPage.recent = recent
     m.searchPage.query = m.searchQuery
     m.searchPage.visible = true
-    m.searchPage.callFunc("activate")
+    if focusContent then m.searchPage.callFunc("activate") else m.searchPage.callFunc("deactivate")
 end sub
 
 sub onSearchSubmitted(event as object)
@@ -790,7 +795,7 @@ sub showSection(title as string)
             if m.favorites[item.id] <> invalid then favorites.push(item)
         end for
         rows.push({title: "My List", items: favorites})
-        rows.push({title: "Movies", items: movies})
+        rows.push({title: "Latest Added", items: latestAdded(shows)})
     else if title = "My List"
         for each item in m.media
             if not isTv(item) and m.favorites[item.id] <> invalid then items.push(item)
@@ -825,7 +830,7 @@ sub showSection(title as string)
             if item.category = category then items.push(item)
         end for
     end if
-    if title = "Movies" or title = "TV"
+    if title = "Movies" or title = "TV" or title = "Collections"
         showCatalogPage(title, items)
         return
     end if
@@ -864,6 +869,49 @@ sub showSection(title as string)
     end if
 end sub
 
+function latestAdded(shows as object, limit = 30 as integer) as object
+    latest = []
+    for each item in m.media
+        if item.category = "movie" and not item.blocked
+            entry = {}
+            entry.append(item)
+            if entry.createdAt = invalid then entry.createdAt = ""
+            latest.push(entry)
+        end if
+    end for
+    for each show in shows
+        added = ""
+        available = false
+        for each episode in m.groups[show.seriesId]
+            if not episode.blocked
+                available = true
+                if episode.createdAt <> invalid
+                    if episode.createdAt > added then added = episode.createdAt
+                end if
+            end if
+        end for
+        if available
+            entry = {}
+            entry.append(show)
+            entry.createdAt = added
+            latest.push(entry)
+        end if
+    end for
+    ordered = []
+    for each entry in latest
+        ordered.push(entry)
+        index = ordered.count() - 1
+        while index > 0
+            if ordered[index-1].createdAt >= entry.createdAt then exit while
+            ordered[index] = ordered[index-1]
+            index--
+        end while
+        ordered[index] = entry
+        if ordered.count() > limit then ordered.pop()
+    end for
+    return ordered
+end function
+
 function dailyFeaturedMovie(choices as object, available as object) as dynamic
     if choices.count() = 0 then return invalid
     saved = m.dailyFeatured[m.profile.id]
@@ -898,6 +946,7 @@ sub updateHomeHero()
     if m.section <> "Home" or not m.rows.visible then return
     selected = m.rows.rowItemFocused
     if selected = invalid then return
+    if selected.count() < 2 or m.rows.content = invalid then return
     row = m.rows.content.getChild(selected[0])
     if row = invalid then return
     child = row.getChild(selected[1])
@@ -924,6 +973,7 @@ sub showCatalogPage(title as string, items as object, index = 0 as integer)
     m.screen = "catalog"
     m.section = title
     m.rows.visible = false
+    m.catalogPage.collectionMode = title = "Collections"
     content = CreateObject("roSGNode", "ContentNode")
     for each item in items
         display = {}
@@ -946,14 +996,33 @@ end sub
 
 sub onCatalogSelected(event as object)
     m.history.push({screen: "catalog", section: m.section, content: m.catalogPage.content, focus: m.catalogPage.focusedIndex})
-    showDetails(event.GetData())
+    item = event.GetData()
+    if item.kind <> invalid and item.kind = "collection"
+        showCollectionContents(item)
+    else
+        showDetails(item)
+    end if
+end sub
+
+sub showCollectionContents(item as object)
+    m.catalogPage.visible = false
+    m.screen = "episodes"
+    m.heading.text = item.title
+    items = []
+    for each media in m.media
+        if not isTv(media) and includes(item.collection.mediaIds, media.id) then items.push(media)
+    end for
+    for each show in showCards()
+        if includes(item.collection.showIds, show.seriesId) then items.push(show)
+    end for
+    showRows([{title: item.title, items: items}])
 end sub
 
 sub showRows(rows as object)
     m.rows.translation = [400,270]
     m.rows.numRows = 2
     if m.screen = "browse" and m.section = "Home"
-        m.rows.translation = [400,540]
+        m.rows.translation = [400,650]
         m.rows.numRows = 1
     end if
     m.visibleRows = []
@@ -963,10 +1032,8 @@ sub showRows(rows as object)
     for each row in rows
         if row.items.count() > 0
             m.visibleRows.push(row)
-            height = 320
-            first = row.items[0]
-            if first.kind <> invalid and first.kind = "collection" then height = 188
-            itemSizes.push([332, height])
+            height = 265
+            itemSizes.push([234, height])
             rowHeights.push(height + 50)
             node = content.createChild("ContentNode")
             node.title = row.title
@@ -1017,16 +1084,7 @@ sub onItemSelected()
     if item.kind = "show"
         showDetails(item)
     else if item.kind = "collection"
-        m.screen = "episodes"
-        m.heading.text = item.title
-        items = []
-        for each media in m.media
-            if not isTv(media) and includes(item.collection.mediaIds, media.id) then items.push(media)
-        end for
-        for each show in showCards()
-            if includes(item.collection.showIds, show.seriesId) then items.push(show)
-        end for
-        showRows([{title: item.title, items: items}])
+        showCollectionContents(item)
     else
         showDetails(item)
     end if
@@ -1101,19 +1159,46 @@ sub onVideoState()
         message = "Playback failed (" + m.video.errorCode.toStr() + "). " + m.video.errorMsg
         print "KINGFLIX "; message
         closePlayback(message)
-    else if state = "finished" or state = "stopped"
+    else if state = "finished"
+        closePlayback("", true)
+    else if state = "stopped"
         closePlayback()
     end if
 end sub
 
-sub closePlayback(message = "" as string)
+sub closePlayback(message = "" as string, finished = false as boolean)
     savePosition()
     m.top.findNode("playbackWatchdog").control = "STOP"
     m.video.visible = false
     m.video.control = "stop"
-    if m.screen = "details" then showDetails(m.detailItem) else showSection(m.section)
+    nextItem = invalid
+    if finished and m.playingItem <> invalid then nextItem = nextPlayableEpisode(m.playingItem)
+    if nextItem <> invalid
+        showDetails(nextItem)
+    else if finished and m.playingItem <> invalid
+        showDetails(m.playingItem)
+    else if m.screen = "details"
+        if m.playingItem <> invalid and isTv(m.playingItem) then showDetails(m.playingItem) else showDetails(m.detailItem)
+    else
+        showSection(m.section)
+    end if
     if message <> "" then m.status.text = message + " Select Watch to retry."
 end sub
+
+function nextPlayableEpisode(item as object) as dynamic
+    if not isTv(item) then return invalid
+    if item.seriesId = invalid then return invalid
+    episodes = m.groups[item.seriesId]
+    if episodes = invalid then return invalid
+    found = false
+    for each episode in episodes
+        if found
+            if episode.blocked = invalid or not episode.blocked then return episode
+        end if
+        if episode.id = item.id then found = true
+    end for
+    return invalid
+end function
 
 sub checkPlaybackStall()
     sendPendingProgress()
@@ -1136,11 +1221,16 @@ sub goBack()
     if m.history.count() > 0
         previous = m.history.pop()
         if previous.screen = "search" then showSearch() : return
-        if previous.screen = "details" then showDetails(previous.item) : return
+        if previous.screen = "details"
+            showDetails(previous.item)
+            if previous.shelfFocus <> invalid then m.detailPage.callFunc("restoreShelfFocus", previous.shelfFocus)
+            return
+        end if
         if previous.screen = "catalog"
             m.screen = "catalog"
             m.section = previous.section
             m.menu.activeTitle = previous.section
+            m.catalogPage.collectionMode = previous.section = "Collections"
             m.catalogPage.content = previous.content
             m.catalogPage.visible = true
             m.catalogPage.callFunc("activate", previous.focus)

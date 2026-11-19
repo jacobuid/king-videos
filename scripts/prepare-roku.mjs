@@ -11,13 +11,14 @@ else if(existsSync('../../.env'))process.loadEnvFile('../../.env')
 const root=existsSync('apps/roku/manifest')?'apps/roku':'.'
 validateRokuComponents(root)
 const webRoot=root==='.'?'../web':'apps/web'
+const recommendations=JSON.parse(readFileSync(root+'/recommendation-rules.json','utf8'))
 const api=process.env.VITE_API_URL
 if(!api||!/^https:\/\//.test(api))throw Error('Set VITE_API_URL to the deployed HTTPS API before building Roku.')
 const web=process.env.ROKU_WEB_URL||'https://jacobuid.github.io/king-videos/'
 if(!/^https:\/\//.test(web))throw Error('ROKU_WEB_URL must be HTTPS')
 const main=readFileSync(webRoot+'/src/main.jsx','utf8'),legacy=main.match(/const legacyProfilePictures=(\{[^\n]+\})/)[1]
 const legacyAvatars=Function('return ('+legacy+')')()
-writeFileSync(root+'/config.json',JSON.stringify({api:api.replace(/\/$/,''),web:web.replace(/\/?$/,'/'),collections,legacyAvatars},null,2)+'\n')
+writeFileSync(root+'/config.json',JSON.stringify({api:api.replace(/\/$/,''),web:web.replace(/\/?$/,'/'),collections,legacyAvatars,recommendations},null,2)+'\n')
 mkdirSync(root+'/images',{recursive:true})
 const logo=webRoot+'/public/logo-kingflix.png'
 await sharp(root+'/assets/roku-tile.png').resize(336,210,{fit:'contain',background:'#000000'}).png().toFile(root+'/images/channel-icon.png')

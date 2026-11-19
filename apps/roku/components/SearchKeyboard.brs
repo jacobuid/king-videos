@@ -1,6 +1,6 @@
 sub init()
     palette = CreateObject("roSGNode", "RSGPalette")
-    palette.colors = {KeyboardColor: "0x242628ff", PrimaryTextColor: "0xffffffff", SecondaryTextColor: "0xa4a4a4ff", FocusColor: "0xf3cc57ff", FocusItemColor: "0x17130aff", InputFieldColor: "0x00000000"}
+    palette.colors = {KeyboardColor: "0x242628ff", PrimaryTextColor: "0xffffffff", SecondaryTextColor: "0xa4a4a4ff", FocusColor: "0xffffffff", FocusItemColor: "0x080808ff", InputFieldColor: "0x00000000"}
     m.top.keyGrid.palette = palette
     m.top.textEditBox.palette = palette
     m.top.keyGrid.keyDefinitionUri = "pkg:/data/search-keyboard.json"

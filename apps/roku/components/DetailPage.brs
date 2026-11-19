@@ -1,9 +1,12 @@
 sub init()
     m.index = 0
     m.top.observeField("focusedChild", "renderButtons")
+    m.actionFocus = m.top.findNode("buttons")
+    m.actionFocus.observeField("focusedChild", "renderButtons")
     m.rows = m.top.findNode("similarRows")
     m.rows.observeField("rowItemSelected", "onSimilarSelected")
     m.rows.observeField("menuRequested", "onRowsMenuRequested")
+    m.rows.observeField("topRequested", "activate")
     m.top.findNode("title").font.size = 48
     m.top.findNode("metadata").font.size = 26
     m.top.findNode("description").font.size = 25
@@ -17,13 +20,31 @@ end sub
 
 sub activate()
     m.index = 0
-    m.top.setFocus(true)
+    m.top.findNode("detailsBody").translation = [0,0]
+    m.rows.translation = [375,m.shelfY]
+    ' Transfer between sibling nodes, not back to the shelf's ancestor.
+    focused = m.actionFocus.setFocus(true)
+    print "KINGFLIX detail actions focused: "; focused; " hasFocus: "; m.actionFocus.hasFocus()
     renderButtons()
+end sub
+
+sub browseEpisodes()
+    m.rows.setFocus(true)
+end sub
+
+sub restoreShelfFocus(position as object)
+    m.rows.callFunc("activateAt", position)
+end sub
+
+sub selectEpisode(id as string)
+    m.rows.callFunc("selectEpisode", id)
+    activate()
 end sub
 
 sub renderItem()
     item = m.top.item
     if item = invalid then return
+    configureDetailsLayout()
     m.top.findNode("title").text = item.title
     m.top.findNode("art").uri = ""
     if item.thumbnailUrl <> invalid then m.top.findNode("art").uri = item.thumbnailUrl
@@ -54,21 +75,62 @@ sub renderItem()
         end if
     end for
     m.top.findNode("credits").text = credits
-    m.buttonY = 460
-    if credits <> "" then m.buttonY = 560
+    m.buttonY = 515
+    m.shelfY = 650
+    if credits <> ""
+        m.buttonY = 590
+        m.shelfY = 690
+    end if
     group = m.top.findNode("genres")
     group.removeChildrenIndex(group.getChildCount(), 0)
-    x = 1125
+    x = m.infoX
+    genreY = 225
     if item.genres <> invalid
         for each genre in item.genres
-            width = int(len(genre) * 13 + 38)
-            if x + width > 1850 then exit for
-            detailImage(group, "pkg:/images/search-chip.png", x, 240, width, 46)
-            detailLabel(group, genre, x, 240, width, 46, 22, "#dddddd")
+            width = int(len(genre) * 11 + 30)
+            if x + width > m.infoX + m.infoWidth
+                if genreY > 225 then exit for
+                x = m.infoX
+                genreY = 272
+            end if
+            detailImage(group, "pkg:/images/search-chip.png", x, genreY, width, 40)
+            detailLabel(group, genre, x, genreY, width, 40, 20, "#dddddd")
             x += width + 12
         end for
     end if
+    descriptionY = genreY + 56
+    m.top.findNode("description").translation = [m.infoX,descriptionY]
+    m.top.findNode("description").height = 497 - descriptionY
     renderButtons()
+end sub
+
+sub configureDetailsLayout()
+    m.infoX = 1310
+    m.infoWidth = 535
+    artX = 375
+    artWidth = 900
+    artHeight = 506
+    titleSize = 40
+    textSize = 23
+    descriptionY = 330
+    creditsY = 500
+    for each id in ["art", "artFrame"]
+        node = m.top.findNode(id)
+        node.translation = [artX,55]
+        node.width = artWidth
+        node.height = artHeight
+    end for
+    for each id in ["title", "metadata", "description", "credits"]
+        node = m.top.findNode(id)
+        node.width = m.infoWidth
+    end for
+    m.top.findNode("title").translation = [m.infoX,50]
+    m.top.findNode("title").font.size = titleSize
+    m.top.findNode("metadata").translation = [m.infoX,178]
+    m.top.findNode("metadata").font.size = textSize
+    m.top.findNode("description").translation = [m.infoX,descriptionY]
+    m.top.findNode("description").font.size = textSize
+    m.top.findNode("credits").translation = [m.infoX,creditsY]
 end sub
 
 function detailImage(parent as object, uri as string, x as integer, y as integer, width as integer, height as integer) as object
@@ -95,13 +157,10 @@ end sub
 sub renderButtons()
     item = m.top.item
     if item = invalid then return
-    m.names = [m.top.playLabel, "Back"]
-    m.actions = ["play", "back"]
+    m.names = [m.top.playLabel]
+    m.actions = ["play"]
     if m.top.playLabel = "Blocked" then m.actions[0] = "blocked"
-    if item.kind <> invalid and item.kind = "show"
-        m.names.push("Episodes")
-        m.actions.push("episodes")
-    else if item.category = "movie"
+    if not m.top.showSeasons and item.category = "movie"
         name = "My List"
         if m.top.favorite then name = "In My List"
         m.names.push(name)
@@ -110,17 +169,17 @@ sub renderButtons()
     group = m.top.findNode("buttons")
     group.removeChildrenIndex(group.getChildCount(), 0)
     for i = 0 to m.names.count() - 1
-        uri = "pkg:/images/search-nav.png"
-        color = "#ffffff"
+        uri = "pkg:/images/search-nav-outline-gold.png"
+        color = "#f3cc57"
         if i = 0 then uri = "pkg:/images/search-nav-gold.png" : color = "#080808"
         if i = 0 and m.top.playLabel = "Blocked"
             uri = "pkg:/images/detail-blocked.png"
             color = "#ffffff"
         end if
-        x = 1125 + i * 245
+        x = m.infoX + i * 245
+        focused = m.actionFocus.hasFocus() and m.index = i
+        if focused then uri = "pkg:/images/search-nav-active.png" : color = "#080808"
         detailImage(group, uri, x, m.buttonY, 230, 74)
-        if i > 0 then detailImage(group, "pkg:/images/search-nav-focus.png", x, m.buttonY, 230, 74)
-        if m.top.hasFocus() and m.index = i then detailImage(group, "pkg:/images/search-nav-focus.png", x - 3, m.buttonY - 3, 236, 80)
         iconName = m.actions[i]
         if iconName = "favorite"
             iconName = "plus"
@@ -145,8 +204,7 @@ function onKeyEvent(key as string, press as boolean) as boolean
     end if
     if m.rows.hasFocus()
         if key = "up"
-            m.top.setFocus(true)
-            renderButtons()
+            activate()
             return true
         else if key = "left" and m.rows.rowItemFocused[1] = 0
             m.top.menuRequested = true
@@ -162,7 +220,7 @@ function onKeyEvent(key as string, press as boolean) as boolean
     else if key = "right"
         if m.index < m.names.count() - 1 then m.index++
     else if key = "down"
-        if m.rows.content <> invalid and m.rows.content.getChildCount() > 0 then m.rows.setFocus(true)
+        if m.rows.content <> invalid and m.rows.content.getChildCount() > 0 then browseEpisodes()
     else
         return false
     end if

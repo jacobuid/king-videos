@@ -2,9 +2,9 @@ sub init()
     m.index = 0
     m.top.observeField("focusedChild", "renderButtons")
     m.top.findNode("eyebrow").font.size = 22
-    m.top.findNode("title").font.size = 44
-    m.top.findNode("metadata").font.size = 25
-    m.top.findNode("description").font.size = 25
+    m.top.findNode("title").font.size = 40
+    m.top.findNode("metadata").font.size = 23
+    m.top.findNode("description").font.size = 23
 end sub
 
 sub activate()
@@ -42,21 +42,23 @@ sub renderButtons()
     blocked = m.top.item.blocked <> invalid and m.top.item.blocked
     if blocked then names[0] = "Blocked"
     for i = 0 to 1
-        x = 1100 + i * 250
+        x = 1310 + i * 250
         uri = "pkg:/images/search-nav-gold.png"
         color = "#080808"
         if i = 0 and blocked then uri = "pkg:/images/detail-blocked.png" : color = "#ffffff"
-        if i = 1 then uri = "pkg:/images/search-nav.png" : color = "#ffffff"
-        heroImage(group, uri, x, 390, 235, 74)
-        if i = 1 or (m.top.hasFocus() and m.index = i) then heroImage(group, "pkg:/images/search-nav-focus.png", x - 3, 387, 241, 80)
+        if i = 1 then uri = "pkg:/images/search-nav-outline-gold.png" : color = "#f3cc57"
+        focused = m.top.hasFocus() and m.index = i
+        if focused then uri = "pkg:/images/search-nav-active.png" : color = "#080808"
+        heroImage(group, uri, x, 495, 235, 74)
+        uri = "pkg:/images/search-detail-info.png"
         if i = 0
             uri = "pkg:/images/search-detail-play.png"
             if blocked then uri = "pkg:/images/search-detail-blocked.png"
-            icon = heroImage(group, uri, x + 23, 412, 30, 30)
-            icon.blendColor = color
         end if
+        icon = heroImage(group, uri, x + 23, 517, 30, 30)
+        icon.blendColor = color
         text = group.createChild("Label")
-        text.translation = [x + 55,390]
+        text.translation = [x + 55,495]
         text.width = 165
         text.height = 74
         text.vertAlign = "center"

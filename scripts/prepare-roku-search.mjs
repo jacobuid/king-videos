@@ -23,12 +23,16 @@ export async function prepareRokuSearch(root){
   await output('nav-active',290,76,rounded(290,76,'#ffffff','#ffffff',10))
   await sharp(svg(230,74,rounded(230,74,'#a5202c','#d84a55',10))).png().toFile(`${root}/images/detail-blocked.png`)
   await output('nav-focus',290,76,rounded(290,76,'none','#ffffff',10,3))
+  await output('nav-outline-gold',290,76,rounded(290,76,'transparent','#f3cc57',10,3))
   await output('chip',280,46,rounded(280,46,'#1a1c1e','#727272',23))
   await output('chip-focus',280,46,rounded(280,46,'#342a13','#f3cc57',23,3))
-  await output('card',234,265,rounded(234,265,'#101112','#383838',7))
-  await output('card-focus',234,265,rounded(234,265,'#17150f','#f3cc57',7,3))
+  await output('card',234,265,rounded(234,265,'#101112','#f3cc57',7))
+  await output('card-focus',234,265,rounded(234,265,'#101112','#ffffff',7,3))
+  await sharp(svg(468,268,rounded(468,268,'#101112','#f3cc57',10,3))).png().toFile(`${root}/images/collection-card.png`)
+  await sharp(svg(468,268,rounded(468,268,'#101112','#ffffff',10,3))).png().toFile(`${root}/images/collection-card-focus.png`)
   const paths={
     'detail-play':'<path d="M10 5 34 20 10 35Z" fill="white" stroke="none"/>',
+    'detail-info':'<circle cx="20" cy="20" r="16"/><path d="M20 18v12"/><circle cx="20" cy="11" r="1.5" fill="white" stroke="none"/>',
     'detail-back':'<path d="M23 7 10 20l13 13 M11 20h25"/>',
     'detail-plus':'<path d="M20 5v30 M5 20h30"/>',
     'detail-check':'<path d="m6 21 9 9L35 9"/>',
